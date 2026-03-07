@@ -18,11 +18,21 @@ def get_transcript():
         else:
             return jsonify({"error": "Invalid YouTube URL format"}), 400
             
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'hi'])
+        try:
+            transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'hi', 'en-IN', 'hi-IN'])
+        except Exception as transcript_err:
+            error_msg = str(transcript_err).lower()
+            if "subtitles are disabled" in error_msg or "no transcript" in error_msg or "could not retrieve a transcript" in error_msg:
+                return jsonify({
+                    "error": "no_captions",
+                    "message": "This video has no subtitles available"
+                }), 400
+            raise transcript_err
+            
         full_text = ' '.join([t['text'] for t in transcript])
         return jsonify({"transcript": full_text})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": str(e), "message": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

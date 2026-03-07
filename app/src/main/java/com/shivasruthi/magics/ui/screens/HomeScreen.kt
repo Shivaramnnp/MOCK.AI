@@ -13,10 +13,12 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -672,6 +674,32 @@ fun HomeScreen(
                         singleLine = true,
                         keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = KeyboardType.Uri)
                     )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        "💡 Works best with: Physics Wallah, Khan Academy, NPTEL, Unacademy lectures",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        SuggestionChip(
+                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=YEzF9VW-RbY" },
+                            label = { Text("Physics Wallah") }
+                        )
+                        SuggestionChip(
+                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=XhG5s4OIQaU" },
+                            label = { Text("Khan Academy") }
+                        )
+                        SuggestionChip(
+                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=sI3CjU_Jg0Q" },
+                            label = { Text("NPTEL") }
+                        )
+                    }
                 }
             },
             confirmButton = {

@@ -42,11 +42,16 @@ class SupadataService(private val backendUrl: String) {
                 )
             }
 
-            // Expected schema: {"transcript": "full text"} or {"error": "error message"}
+            // Expected schema: {"transcript": "full text"} or {"error": "error message", "message": "friendly message"}
             val rootObj = jsonParser.parseToJsonElement(responseString).jsonObject
             
             if (rootObj.containsKey("error")) {
-                val errorMsg = rootObj["error"]?.jsonPrimitive?.content ?: "Unknown backend error"
+                val errorCode = rootObj["error"]?.jsonPrimitive?.content ?: "unknown"
+                val errorMsg = rootObj["message"]?.jsonPrimitive?.content ?: "Unknown backend error"
+                
+                if (errorCode == "no_captions") {
+                    return@withContext Result.failure(IOException("This video has no subtitles. Try Physics Wallah, Khan Academy or NPTEL videos — they work great! \uD83C\uDF93"))
+                }
                 return@withContext Result.failure(IOException("Backend Error: $errorMsg"))
             }
 
