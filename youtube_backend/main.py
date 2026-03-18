@@ -18,7 +18,7 @@ def extract_video_id(url):
 
 @app.route('/health')
 def health():
-    return jsonify({"status": "ok", "version": "0.6.2"})
+    return jsonify({"status": "ok", "version": "0.6.2", "note": "YouTube blocking detected"})
 
 @app.route('/transcript')
 def get_transcript():
