@@ -18,7 +18,7 @@ def extract_video_id(url):
 
 @app.route('/health')
 def health():
-    return jsonify({"status": "ok"})
+    return jsonify({"status": "ok", "version": "1.0.1"})
 
 @app.route('/transcript')
 def get_transcript():
