@@ -30,7 +30,7 @@ def get_transcript():
     if not video_id:
         return jsonify({
             "error": "invalid_url",
-            "message": "Invalid YouTube URL. Use youtube.com/watch?v=... or youtu.be/..."
+            "message": "Invalid YouTube URL."
         }), 400
 
     try:
@@ -41,25 +41,24 @@ def get_transcript():
             VideoUnavailable
         )
 
-        # Try languages in priority order
+        # v1.0 API — create an instance first
+        ytt_api = YouTubeTranscriptApi()
+
         transcript_list = None
         lang_used = None
-        priority_langs = ['en', 'hi', 'en-IN', 'hi-IN']
 
         try:
-            # First try manual + auto in priority languages
-            transcript_list = YouTubeTranscriptApi.get_transcript(
-                video_id,
-                languages=priority_langs
-            )
-            lang_used = 'en'  # approximate
+            # Try priority languages first
+            fetched = ytt_api.fetch(video_id, languages=['en', 'hi', 'en-IN', 'hi-IN'])
+            transcript_list = fetched.snippets  # list of FetchedTranscriptSnippet
+            lang_used = 'en'
         except NoTranscriptFound:
             # Fall back to any available language
             try:
-                all_transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
-                # Try auto-generated first (more common)
-                for t in all_transcripts:
-                    transcript_list = t.fetch()
+                available = ytt_api.list(video_id)
+                for t in available:
+                    fetched = t.fetch()
+                    transcript_list = fetched.snippets
                     lang_used = t.language_code
                     break
             except Exception:
@@ -71,11 +70,18 @@ def get_transcript():
                 "message": "This video has no subtitles. Try Khan Academy, NPTEL, or TED Talk videos."
             }), 400
 
-        # Join all transcript segments into full text
+        # Join transcript text
         full_text = " ".join([
-            entry.get('text', '') if isinstance(entry, dict) else str(entry)
-            for entry in transcript_list
+            snippet.text for snippet in transcript_list
+            if hasattr(snippet, 'text') and snippet.text.strip()
         ]).strip()
+
+        if not full_text:
+            # Fallback: try dict access
+            full_text = " ".join([
+                entry.get('text', '') if isinstance(entry, dict) else str(entry)
+                for entry in transcript_list
+            ]).strip()
 
         if not full_text:
             return jsonify({
@@ -83,7 +89,7 @@ def get_transcript():
                 "message": "Could not extract text from subtitles."
             }), 400
 
-        # Try to get video title (optional, don't fail if unavailable)
+        # Get title (optional)
         title = f"YouTube Video ({video_id})"
         try:
             import urllib.request
@@ -93,7 +99,7 @@ def get_transcript():
                 data = jsonlib.loads(response.read())
                 title = data.get('title', title)
         except Exception:
-            pass  # Title is optional
+            pass
 
         return jsonify({
             "transcript": full_text,
@@ -105,7 +111,7 @@ def get_transcript():
     except TranscriptsDisabled:
         return jsonify({
             "error": "disabled",
-            "message": "Subtitles are disabled for this video. Try another video."
+            "message": "Subtitles are disabled for this video."
         }), 400
     except VideoUnavailable:
         return jsonify({
