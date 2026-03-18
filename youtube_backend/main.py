@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import re
 import os
+import urllib.request
+import json as jsonlib
 
 app = Flask(__name__)
 
@@ -16,9 +18,18 @@ def extract_video_id(url):
             return match.group(1)
     return None
 
+def get_title(video_id):
+    try:
+        oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
+        with urllib.request.urlopen(oembed_url, timeout=5) as response:
+            data = jsonlib.loads(response.read())
+            return data.get('title', f'YouTube Video ({video_id})')
+    except Exception:
+        return f'YouTube Video ({video_id})'
+
 @app.route('/health')
 def health():
-    return jsonify({"status": "ok", "version": "0.6.2", "note": "YouTube blocking detected"})
+    return jsonify({"status": "ok"})
 
 @app.route('/transcript')
 def get_transcript():
@@ -33,6 +44,9 @@ def get_transcript():
             "message": "Invalid YouTube URL."
         }), 400
 
+    # Get proxy from environment variable (set in Render dashboard)
+    proxy_url = os.environ.get('PROXY_URL', None)
+
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         from youtube_transcript_api._errors import (
@@ -41,59 +55,70 @@ def get_transcript():
             VideoUnavailable
         )
 
-        # v0.6.2 API — use static methods
-        transcript_list = None
+        # Build proxies dict if proxy is configured
+        proxies = None
+        if proxy_url:
+            proxies = {
+                "http": proxy_url,
+                "https": proxy_url
+            }
+
+        ytt_api = YouTubeTranscriptApi()
+
+        full_text = None
         lang_used = None
-        priority_langs = ['en', 'hi', 'en-IN', 'hi-IN']
 
         try:
-            # First try manual + auto in priority languages
-            transcript_list = YouTubeTranscriptApi.get_transcript(
-                video_id,
-                languages=priority_langs
-            )
-            lang_used = 'en'  # approximate
-        except NoTranscriptFound:
-            # Fall back to any available language
+            # Try with proxy if available
+            if proxies:
+                fetched = ytt_api.fetch(
+                    video_id,
+                    languages=['en', 'hi', 'en-IN', 'hi-IN'],
+                    proxies=proxies
+                )
+            else:
+                fetched = ytt_api.fetch(
+                    video_id,
+                    languages=['en', 'hi', 'en-IN', 'hi-IN']
+                )
+
+            raw_data = fetched.to_raw_data()
+            full_text = " ".join([
+                entry.get('text', '') for entry in raw_data
+                if entry.get('text', '').strip()
+            ]).strip()
+            lang_used = 'en'
+
+        except (NoTranscriptFound, TranscriptsDisabled):
+            # Try listing all available transcripts
             try:
-                all_transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
-                # Try auto-generated first (more common)
-                for t in all_transcripts:
-                    transcript_list = t.fetch()
+                available = ytt_api.list(video_id)
+                for t in available:
+                    if proxies:
+                        fetched = t.fetch(proxies=proxies)
+                    else:
+                        fetched = t.fetch()
+                    raw_data = fetched.to_raw_data()
+                    full_text = " ".join([
+                        entry.get('text', '') for entry in raw_data
+                        if entry.get('text', '').strip()
+                    ]).strip()
                     lang_used = t.language_code
-                    break
-            except Exception:
-                pass
-
-        if not transcript_list:
-            return jsonify({
-                "error": "no_captions",
-                "message": "This video has no subtitles. Try Khan Academy, NPTEL, or TED Talk videos."
-            }), 400
-
-        # Join all transcript segments into full text
-        full_text = " ".join([
-            entry.get('text', '') if isinstance(entry, dict) else str(entry)
-            for entry in transcript_list
-        ]).strip()
+                    if full_text:
+                        break
+            except Exception as e:
+                return jsonify({
+                    "error": "no_captions",
+                    "message": f"This video has no accessible subtitles. Error: {str(e)}"
+                }), 400
 
         if not full_text:
             return jsonify({
                 "error": "no_captions",
-                "message": "Could not extract text from subtitles."
+                "message": "Could not extract transcript text. Try another video."
             }), 400
 
-        # Try to get video title (optional, don't fail if unavailable)
-        title = f"YouTube Video ({video_id})"
-        try:
-            import urllib.request
-            import json as jsonlib
-            oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
-            with urllib.request.urlopen(oembed_url, timeout=5) as response:
-                data = jsonlib.loads(response.read())
-                title = data.get('title', title)
-        except Exception:
-            pass  # Title is optional
+        title = get_title(video_id)
 
         return jsonify({
             "transcript": full_text,
@@ -102,11 +127,6 @@ def get_transcript():
             "chars": len(full_text)
         })
 
-    except TranscriptsDisabled:
-        return jsonify({
-            "error": "disabled",
-            "message": "Subtitles are disabled for this video."
-        }), 400
     except VideoUnavailable:
         return jsonify({
             "error": "unavailable",

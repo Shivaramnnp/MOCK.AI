@@ -7,3 +7,5 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+      - key: PROXY_URL
+        value: "http://rotate.proxyscrape.com:7777"  # Free rotating proxy
