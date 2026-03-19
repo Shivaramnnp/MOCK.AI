@@ -99,25 +99,39 @@ def get_transcript():
     except Exception as e:
         print(f"youtube-transcript-api error: {e}")
 
-    # Method 2: Supadata fallback (works from cloud IPs)
+    # Method 2: Supadata fallback (works from cloud IPs, correct endpoint)
     supadata_key = os.environ.get('SUPADATA_API_KEY', '')
     if supadata_key:
         try:
             import urllib.parse
             encoded_url = urllib.parse.quote(video_url)
-            api_url = f"https://api.supadata.ai/v1/transcript?url={encoded_url}"
+            # ✅ Correct endpoint: /v1/youtube/transcript with text=true
+            api_url = f"https://api.supadata.ai/v1/youtube/transcript?url={encoded_url}&text=true"
             req = urllib.request.Request(
                 api_url,
                 headers={"x-api-key": supadata_key}
             )
+            print(f"Trying Supadata: {api_url}")
             with urllib.request.urlopen(req, timeout=30) as response:
                 data = jsonlib.loads(response.read())
-                content = data.get('content', [])
-                if content:
+                print(f"Supadata response: {str(data)[:200]}")
+                
+                # With text=true, content is a plain string
+                content = data.get('content', '')
+                if isinstance(content, str) and content.strip():
+                    title = get_title(video_id)
+                    return jsonify({
+                        "transcript": content.strip(),
+                        "title": title,
+                        "language": data.get('lang', 'en'),
+                        "chars": len(content)
+                    })
+                # Fallback: content might be array format
+                elif isinstance(content, list):
                     full_text = " ".join([
                         item.get('text', '').strip()
                         for item in content
-                        if item.get('text', '').strip()
+                        if isinstance(item, dict) and item.get('text', '').strip()
                     ])
                     if full_text:
                         title = get_title(video_id)
