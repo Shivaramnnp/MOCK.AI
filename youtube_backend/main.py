@@ -39,55 +39,63 @@ def get_transcript():
 
     video_id = extract_video_id(video_url)
     if not video_id:
-        return jsonify({"error": "invalid_url", "message": "Invalid YouTube URL."}), 400
+        return jsonify({
+            "error": "invalid_url",
+            "message": "Invalid YouTube URL."
+        }), 400
 
-    # Try Method 1: youtube-transcript-api (compatible with v0.6.2 and v1.x)
+    print(f"Fetching transcript for video_id: {video_id}")
+
+    # ─── Method 1: youtube-transcript-api ───────────────────────────
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         from youtube_transcript_api._errors import (
             TranscriptsDisabled, NoTranscriptFound,
-            VideoUnavailable, IpBlocked
+            VideoUnavailable
         )
 
+        ytt_api = YouTubeTranscriptApi()
         full_text = None
         lang_used = None
 
         try:
-            # Try v0.6.2 static method first (more reliable)
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+            fetched = ytt_api.fetch(video_id)
+            raw_data = fetched.to_raw_data()
             full_text = " ".join([
-                entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
-                for entry in transcript_list
-                if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+                entry.get('text', '').strip()
+                for entry in raw_data
+                if entry.get('text', '').strip()
             ])
             lang_used = 'en'
-
-        except (NoTranscriptFound, TranscriptsDisabled, IpBlocked) as e:
-            # Try listing available transcripts
+            print(f"Method 1 success: {len(full_text)} chars")
+        except Exception as e1:
+            print(f"Method 1 fetch failed: {e1}, trying list...")
             try:
-                available = YouTubeTranscriptApi.list_transcripts(video_id)
+                available = ytt_api.list(video_id)
                 for transcript in available:
                     try:
-                        transcript_list = transcript.fetch()
+                        fetched = transcript.fetch()
+                        raw_data = fetched.to_raw_data()
                         full_text = " ".join([
-                            entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
-                            for entry in transcript_list
-                            if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+                            entry.get('text', '').strip()
+                            for entry in raw_data
+                            if entry.get('text', '').strip()
                         ])
                         lang_used = transcript.language_code
                         if full_text:
+                            print(f"Method 1 list success: {len(full_text)} chars, lang={lang_used}")
                             break
                     except Exception:
                         continue
-            except Exception:
-                pass
+            except Exception as e2:
+                print(f"Method 1 list also failed: {e2}")
 
         if full_text and full_text.strip():
             title = get_title(video_id)
             return jsonify({
                 "transcript": full_text.strip(),
                 "title": title,
-                "language": lang_used or "unknown",
+                "language": lang_used or "en",
                 "chars": len(full_text)
             })
 
@@ -97,54 +105,60 @@ def get_transcript():
             "message": "This video is unavailable or private."
         }), 400
     except Exception as e:
-        print(f"youtube-transcript-api error: {e}")
+        print(f"Method 1 exception: {e}")
 
-    # Method 2: Supadata fallback (works from cloud IPs, correct endpoint)
+    # ─── Method 2: Supadata SDK ─────────────────────────────────────
     supadata_key = os.environ.get('SUPADATA_API_KEY', '')
+    print(f"Supadata key present: {bool(supadata_key)}")
+
     if supadata_key:
         try:
-            import urllib.parse
-            encoded_url = urllib.parse.quote(video_url)
-            # ✅ Correct endpoint: /v1/youtube/transcript with text=true
-            api_url = f"https://api.supadata.ai/v1/youtube/transcript?url={encoded_url}&text=true"
-            req = urllib.request.Request(
-                api_url,
-                headers={"x-api-key": supadata_key}
+            from supadata import Supadata, SupadataError
+
+            client = Supadata(api_key=supadata_key)
+
+            # Use youtube.transcript with video_id for best results
+            transcript = client.youtube.transcript(
+                video_id=video_id,
+                lang="en",
+                text=True   # returns plain text string instead of chunks
             )
-            print(f"Trying Supadata: {api_url}")
-            with urllib.request.urlopen(req, timeout=30) as response:
-                data = jsonlib.loads(response.read())
-                print(f"Supadata response: {str(data)[:200]}")
-                
-                # With text=true, content is a plain string
-                content = data.get('content', '')
+
+            content = transcript.content if hasattr(transcript, 'content') else None
+            print(f"Supadata response content type: {type(content)}")
+            print(f"Supadata content preview: {str(content)[:200]}")
+
+            if content:
+                # text=True returns a plain string
                 if isinstance(content, str) and content.strip():
                     title = get_title(video_id)
                     return jsonify({
                         "transcript": content.strip(),
                         "title": title,
-                        "language": data.get('lang', 'en'),
+                        "language": getattr(transcript, 'lang', 'en'),
                         "chars": len(content)
                     })
-                # Fallback: content might be array format
+                # Fallback: content might be list of chunks
                 elif isinstance(content, list):
                     full_text = " ".join([
-                        item.get('text', '').strip()
-                        for item in content
-                        if isinstance(item, dict) and item.get('text', '').strip()
-                    ])
+                        chunk.get('text', '') if isinstance(chunk, dict) else str(chunk)
+                        for chunk in content
+                    ]).strip()
                     if full_text:
                         title = get_title(video_id)
                         return jsonify({
                             "transcript": full_text,
                             "title": title,
-                            "language": data.get('lang', 'en'),
+                            "language": getattr(transcript, 'lang', 'en'),
                             "chars": len(full_text)
                         })
+
         except Exception as e:
             print(f"Supadata error: {e}")
+    else:
+        print("No SUPADATA_API_KEY set in environment")
 
-    # All methods failed
+    # ─── All methods failed ──────────────────────────────────────────────────
     return jsonify({
         "error": "no_captions",
         "message": "Could not fetch transcript. Try a video with English captions like Khan Academy or TED Talks."
