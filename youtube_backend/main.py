@@ -41,7 +41,7 @@ def get_transcript():
     if not video_id:
         return jsonify({"error": "invalid_url", "message": "Invalid YouTube URL."}), 400
 
-    # Try Method 1: youtube-transcript-api (correct v1.2 API)
+    # Try Method 1: youtube-transcript-api (compatible with v0.6.2 and v1.x)
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         from youtube_transcript_api._errors import (
@@ -49,38 +49,58 @@ def get_transcript():
             VideoUnavailable, IpBlocked
         )
 
-        ytt_api = YouTubeTranscriptApi()
         full_text = None
         lang_used = None
 
         try:
-            # v1.2 correct usage — no languages param, fetch defaults to English
-            fetched = ytt_api.fetch(video_id)
-            raw_data = fetched.to_raw_data()
-            full_text = " ".join([
-                entry.get('text', '').strip()
-                for entry in raw_data
-                if entry.get('text', '').strip()
-            ])
-            lang_used = 'en'
+            # Try v1.x static method first
+            if hasattr(YouTubeTranscriptApi, 'fetch'):
+                ytt_api = YouTubeTranscriptApi()
+                fetched = ytt_api.fetch(video_id)
+                raw_data = fetched.to_raw_data()
+                full_text = " ".join([
+                    entry.get('text', '').strip()
+                    for entry in raw_data
+                    if entry.get('text', '').strip()
+                ])
+                lang_used = 'en'
+            else:
+                # Fallback to v0.6.2 static method
+                transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+                full_text = " ".join([
+                    entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
+                    for entry in transcript_list
+                    if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+                ])
+                lang_used = 'en'
+
         except (NoTranscriptFound, TranscriptsDisabled, IpBlocked) as e:
             # Try listing available transcripts
             try:
-                available = ytt_api.list(video_id)
-                for transcript in available:
-                    try:
-                        fetched = transcript.fetch()
-                        raw_data = fetched.to_raw_data()
-                        full_text = " ".join([
-                            entry.get('text', '').strip()
-                            for entry in raw_data
-                            if entry.get('text', '').strip()
-                        ])
-                        lang_used = transcript.language_code
-                        if full_text:
-                            break
-                    except Exception:
-                        continue
+                if hasattr(YouTubeTranscriptApi, 'list'):
+                    available = YouTubeTranscriptApi.list_transcripts(video_id)
+                    for transcript in available:
+                        try:
+                            if hasattr(transcript, 'fetch'):
+                                fetched = transcript.fetch()
+                                raw_data = fetched.to_raw_data()
+                                full_text = " ".join([
+                                    entry.get('text', '').strip()
+                                    for entry in raw_data
+                                    if entry.get('text', '').strip()
+                                ])
+                            else:
+                                transcript_list = transcript.fetch()
+                                full_text = " ".join([
+                                    entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
+                                    for entry in transcript_list
+                                    if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+                                ])
+                            lang_used = transcript.language_code
+                            if full_text:
+                                break
+                        except Exception:
+                            continue
             except Exception:
                 pass
 
