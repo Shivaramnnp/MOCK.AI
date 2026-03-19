@@ -53,54 +53,32 @@ def get_transcript():
         lang_used = None
 
         try:
-            # Try v1.x static method first
-            if hasattr(YouTubeTranscriptApi, 'fetch'):
-                ytt_api = YouTubeTranscriptApi()
-                fetched = ytt_api.fetch(video_id)
-                raw_data = fetched.to_raw_data()
-                full_text = " ".join([
-                    entry.get('text', '').strip()
-                    for entry in raw_data
-                    if entry.get('text', '').strip()
-                ])
-                lang_used = 'en'
-            else:
-                # Fallback to v0.6.2 static method
-                transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
-                full_text = " ".join([
-                    entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
-                    for entry in transcript_list
-                    if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
-                ])
-                lang_used = 'en'
+            # Try v0.6.2 static method first (more reliable)
+            transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+            full_text = " ".join([
+                entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
+                for entry in transcript_list
+                if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+            ])
+            lang_used = 'en'
 
         except (NoTranscriptFound, TranscriptsDisabled, IpBlocked) as e:
             # Try listing available transcripts
             try:
-                if hasattr(YouTubeTranscriptApi, 'list'):
-                    available = YouTubeTranscriptApi.list_transcripts(video_id)
-                    for transcript in available:
-                        try:
-                            if hasattr(transcript, 'fetch'):
-                                fetched = transcript.fetch()
-                                raw_data = fetched.to_raw_data()
-                                full_text = " ".join([
-                                    entry.get('text', '').strip()
-                                    for entry in raw_data
-                                    if entry.get('text', '').strip()
-                                ])
-                            else:
-                                transcript_list = transcript.fetch()
-                                full_text = " ".join([
-                                    entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
-                                    for entry in transcript_list
-                                    if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
-                                ])
-                            lang_used = transcript.language_code
-                            if full_text:
-                                break
-                        except Exception:
-                            continue
+                available = YouTubeTranscriptApi.list_transcripts(video_id)
+                for transcript in available:
+                    try:
+                        transcript_list = transcript.fetch()
+                        full_text = " ".join([
+                            entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip()
+                            for entry in transcript_list
+                            if (entry.get('text', '').strip() if isinstance(entry, dict) else str(entry).strip())
+                        ])
+                        lang_used = transcript.language_code
+                        if full_text:
+                            break
+                    except Exception:
+                        continue
             except Exception:
                 pass
 
