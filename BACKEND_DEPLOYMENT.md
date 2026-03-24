@@ -55,7 +55,7 @@
 Once your backend is deployed, update the URL in `ProcessingViewModel.kt`:
 
 ```kotlin
-val transcriptResult = com.shivasruthi.magics.data.remote.YoutubeBackendService(
+val transcriptResult = com.shiva.magics.data.remote.YoutubeBackendService(
     backendBaseUrl = "https://your-actual-backend-url.onrender.com"  // Replace with your URL
 ).getTranscript(url)
 ```

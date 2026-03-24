@@ -51,7 +51,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.shivasruthi.magics.provider"
+            android:authorities="com.shiva.magics.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

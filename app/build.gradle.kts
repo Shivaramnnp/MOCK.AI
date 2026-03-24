@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "com.shivasruthi.magics"
+    namespace = "com.shiva.magics"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.shivasruthi.magics"
+        applicationId = "com.shiva.magics"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
