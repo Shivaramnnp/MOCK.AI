@@ -9,8 +9,10 @@ data class TestHistoryEntity(
     val title: String,
     val category: String,
     val questionCount: Int,
+    val timeLimitSeconds: Int? = null,
     val bestScore: Int? = null,
     val bestScorePercent: Float? = null,
+    val wrongAnswers: Int? = null,
     val lastTakenAt: Long? = null,
     val createdAt: Long = System.currentTimeMillis()
 )

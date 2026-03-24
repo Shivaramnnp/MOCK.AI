@@ -1,25 +1,27 @@
 [versions]
-agp                         = "8.7.3"
-kotlin                      = "2.0.21"
-ksp                         = "2.0.21-1.0.28"
+agp                         = "8.8.2"
+kotlin                      = "2.1.0"
+ksp                         = "2.1.0-1.0.29"
 coreKtx                     = "1.15.0"
 lifecycleRuntimeKtx         = "2.8.7"
-activityCompose             = "1.9.3"
-composeBom                  = "2025.01.00"
-navigationCompose           = "2.8.5"
-room                        = "2.6.1"
+activityCompose             = "1.10.0"
+composeBom                  = "2025.02.00"
+navigationCompose           = "2.8.7"
+room                        = "2.7.0"
 okhttp                      = "4.12.0"
-kotlinxSerializationJson    = "1.7.3"
-kotlinxCoroutines           = "1.9.0"
-googleFonts                 = "1.7.6"
+kotlinxSerializationJson    = "1.8.0"
+kotlinxCoroutines           = "1.10.1"
+googleFonts                 = "1.8.0"
 coil                        = "2.7.0"
-splashscreen                = "1.0.1"
+splashscreen                = "1.2.0"
+retrofit                    = "2.11.0"
 secretsPlugin               = "2.0.1"
 kotlinxSerializationPlugin  = "2.0.21"
 jsoup                       = "1.17.2"
-mlkitTextRecognition        = "16.0.0"
+mlkitTextRecognition        = "16.0.1"
 apachePoi                   = "5.2.3"
-camerax                     = "1.4.0-alpha02"
+camerax                     = "1.4.1"
+webkit                      = "1.15.0"
 
 [plugins]
 androidApplication          = { id = "com.android.application", version.ref = "agp" }
@@ -59,3 +61,6 @@ camerax-core                      = { module = "androidx.camera:camera-core", ve
 camerax-camera2                   = { module = "androidx.camera:camera-camera2", version.ref = "camerax" }
 camerax-lifecycle                 = { module = "androidx.camera:camera-lifecycle", version.ref = "camerax" }
 camerax-view                      = { module = "androidx.camera:camera-view", version.ref = "camerax" }
+retrofit                          = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-kotlinx        = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit" }
+androidx-webkit                   = { module = "androidx.webkit:webkit", version.ref = "webkit" }

@@ -69,9 +69,14 @@ class GeminiService(private val apiKey: String) {
         mimeType: String
     ): Result<List<Question>> = withContext(Dispatchers.IO) {
         try {
+            android.util.Log.d("PDF_FLOW", "📡 GeminiService.extractQuestions()")
+            android.util.Log.d("PDF_FLOW", "  mimeType  : $mimeType")
+            android.util.Log.d("PDF_FLOW", "  fileSize  : ${fileBytes.size} bytes (${fileBytes.size / 1024} KB)")
+
             // Validate size: Gemini inline limit is ~20MB total request
             // Base64 inflates by ~33%, so cap source at 14MB
             if (fileBytes.size > 14 * 1024 * 1024) {
+                android.util.Log.e("PDF_FLOW", "❌ File too large: ${fileBytes.size / (1024 * 1024)}MB — aborting")
                 return@withContext Result.failure(
                     IllegalArgumentException(
                         "File too large (${fileBytes.size / (1024 * 1024)}MB). " +
@@ -81,6 +86,8 @@ class GeminiService(private val apiKey: String) {
             }
 
             val base64Data = Base64.encodeToString(fileBytes, Base64.NO_WRAP)
+            android.util.Log.d("PDF_FLOW", "  base64Len : ${base64Data.length} chars")
+            android.util.Log.d("PDF_FLOW", "  endpoint  : $endpoint")
 
             val requestBody = buildJsonRequestBody(base64Data, mimeType)
 
@@ -91,28 +98,39 @@ class GeminiService(private val apiKey: String) {
                 .post(requestBody.toRequestBody("application/json".toMediaType()))
                 .build()
 
+            android.util.Log.d("PDF_FLOW", "⏳ Sending request to Gemini...")
             val response = client.newCall(request).execute()
             val responseString = response.body?.string()
                 ?: return@withContext Result.failure(IOException("Empty response from Gemini"))
 
+            android.util.Log.d("PDF_FLOW", "📥 Response received")
+            android.util.Log.d("PDF_FLOW", "  httpCode  : ${response.code}")
+            android.util.Log.d("PDF_FLOW", "  bodyLen   : ${responseString.length} chars")
+
             if (!response.isSuccessful) {
+                android.util.Log.e("PDF_FLOW", "❌ Gemini API error ${response.code}")
+                android.util.Log.e("PDF_FLOW", "  body: $responseString")
                 return@withContext Result.failure(
                     IOException("Gemini API error ${response.code}: $responseString")
                 )
             }
 
             val extractedText = parseGeminiResponseText(responseString)
+            android.util.Log.d("PDF_FLOW", "  rawJsonLen: ${extractedText.length} chars")
+
             val cleanedJson = extractedText
                 .replace(Regex("```json\\s*"), "")
                 .replace(Regex("```\\s*"), "")
                 .trim()
 
             val geminiData = json.decodeFromString<GeminiQuestionResponse>(cleanedJson)
+            android.util.Log.d("PDF_FLOW", "✅ Parsed ${geminiData.questions.size} questions from Gemini JSON")
             Result.success(geminiData.questions)
 
         } catch (e: CancellationException) {
             throw e  // Always rethrow CancellationException
         } catch (e: Exception) {
+            android.util.Log.e("PDF_FLOW", "💥 Exception in GeminiService.extractQuestions()", e)
             Result.failure(e)
         }
     }

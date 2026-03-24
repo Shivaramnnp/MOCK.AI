@@ -10,10 +10,15 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class TestPlayerViewModel : ViewModel() {
+
+    private var testStartTimeMs: Long = 0L
+    private val _elapsedSeconds = MutableStateFlow(0)
+    val elapsedSeconds: StateFlow<Int> = _elapsedSeconds.asStateFlow()
 
     // IMMUTABLE — set once, never copied during test
     private var _definition: TestDefinition? = null
@@ -32,6 +37,9 @@ class TestPlayerViewModel : ViewModel() {
     private val _reviewItems = MutableStateFlow<List<ReviewItem>>(emptyList())
     val reviewItems: StateFlow<List<ReviewItem>> = _reviewItems.asStateFlow()
 
+    private val _bookmarkedQuestions = MutableStateFlow<Set<Int>>(emptySet())
+    val bookmarkedQuestions: StateFlow<Set<Int>> = _bookmarkedQuestions.asStateFlow()
+
     fun loadTest(
         definition: TestDefinition,
         timerDurationSeconds: Int = 0
@@ -39,7 +47,31 @@ class TestPlayerViewModel : ViewModel() {
         _definition = definition
         _session.value = SessionState(timerRemainingSeconds = timerDurationSeconds)
         _reviewItems.value = emptyList()
+        _elapsedSeconds.value = 0
+        testStartTimeMs = System.currentTimeMillis()
         if (timerDurationSeconds > 0) startTimer(timerDurationSeconds)
+    }
+
+    fun loadTestFromDb(
+        testId: Long,
+        repository: com.shivasruthi.magics.data.repository.TestRepository,
+        timerDurationSeconds: Int = 0
+    ) {
+        viewModelScope.launch {
+            val testWithQ = repository.getTestWithQuestions(testId).first()
+            val definitions = with(repository) {
+                testWithQ.questions.map { it.toQuestion() }
+            }
+            loadTest(
+                definition = TestDefinition(
+                    dbId = testWithQ.test.id,
+                    title = testWithQ.test.title,
+                    category = testWithQ.test.category,
+                    questions = definitions
+                ),
+                timerDurationSeconds = testWithQ.test.timeLimitSeconds ?: 0
+            )
+        }
     }
 
     private fun startTimer(durationSeconds: Int) {
@@ -58,6 +90,7 @@ class TestPlayerViewModel : ViewModel() {
     fun stopTimer() { timerJob?.cancel() }
 
     fun selectAnswer(optionIndex: Int) {
+        if (_session.value?.isSubmitted == true) return
         _session.update { s ->
             s?.copy(
                 userAnswers = s.userAnswers + (s.currentIndex to optionIndex)
@@ -87,6 +120,7 @@ class TestPlayerViewModel : ViewModel() {
         val def = _definition ?: return
         val sess = _session.value ?: return
         _session.update { it?.copy(isSubmitted = true) }
+        _elapsedSeconds.value = ((System.currentTimeMillis() - testStartTimeMs) / 1000).toInt()
         // Build review items immediately after submission
         _reviewItems.value = def.questions.mapIndexed { i, q ->
             val userAnswer = sess.userAnswers[i]
@@ -112,10 +146,16 @@ class TestPlayerViewModel : ViewModel() {
         }
     }
 
-    fun getSkippedCount(): Int {
+    fun getUnansweredCount(): Int {
         val total = _definition?.questions?.size ?: 0
         val answered = _session.value?.userAnswers?.size ?: 0
         return total - answered
+    }
+
+    fun toggleBookmark(index: Int) {
+        _bookmarkedQuestions.update { current ->
+            if (index in current) current - index else current + index
+        }
     }
 
     fun clearTest() {
@@ -124,6 +164,7 @@ class TestPlayerViewModel : ViewModel() {
         _session.value = null
         _timerSeconds.value = 0
         _reviewItems.value = emptyList()
+        _bookmarkedQuestions.value = emptySet()
     }
 
     override fun onCleared() {

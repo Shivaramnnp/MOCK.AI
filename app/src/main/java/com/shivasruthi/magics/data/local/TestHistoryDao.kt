@@ -22,12 +22,35 @@ interface TestHistoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertQuestions(questions: List<QuestionEntity>)
 
-    @Query("UPDATE test_history SET bestScore=:score, bestScorePercent=:percent, lastTakenAt=:timestamp WHERE id=:id")
-    suspend fun updateBestScore(id: Long, score: Int, percent: Float, timestamp: Long)
+    @Query("UPDATE test_history SET lastTakenAt=:timestamp WHERE id=:id")
+    suspend fun updateLastTaken(id: Long, timestamp: Long)
+
+    @Query("""UPDATE test_history 
+              SET bestScore=:score, bestScorePercent=:percent, wrongAnswers=:wrong 
+              WHERE id=:id AND (bestScore IS NULL OR :score >= bestScore)""")
+    suspend fun updateBestScoreIfBetter(id: Long, score: Int, percent: Float, wrong: Int)
+
+    @Query("UPDATE test_history SET title=:newTitle WHERE id=:id")
+    suspend fun updateTestTitle(id: Long, newTitle: String)
+
+    @Query("UPDATE test_history SET category=:newCategory WHERE id=:id")
+    suspend fun updateTestCategory(id: Long, newCategory: String)
+
+    @Query("UPDATE test_history SET questionCount=:count WHERE id=:id")
+    suspend fun updateQuestionCount(id: Long, count: Int)
+
+    @Query("SELECT * FROM questions WHERE testId = :testId ORDER BY questionIndex")
+    suspend fun getQuestionsForTest(testId: Long): List<QuestionEntity>
 
     @Query("DELETE FROM test_history WHERE id = :id")
     suspend fun deleteTest(id: Long)
 
     @Query("DELETE FROM questions WHERE testId = :testId")
     suspend fun deleteQuestionsForTest(testId: Long)
+
+    @Query("DELETE FROM test_history")
+    suspend fun deleteAllTests()
+
+    @Query("DELETE FROM questions")
+    suspend fun deleteAllQuestions()
 }

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MagicS" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MagicS" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/surface_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/surface_light</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="O_MR1">true</item>
+    </style>
+    
     <style name="SplashTheme" parent="Theme.SplashScreen">
-        <!-- warm off-white #F5F0E8 -->
-        <item name="windowSplashScreenBackground">#F5F0E8</item>
+        <!-- Light lavender-white to match compose Surface -->
+        <item name="windowSplashScreenBackground">@color/surface_light</item>
         <item name="postSplashScreenTheme">@style/Theme.MagicS</item>
     </style>
 </resources>

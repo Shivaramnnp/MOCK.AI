@@ -4,66 +4,103 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-// Primary palette — Deep Teal
-val Teal10  = Color(0xFF002019)
-val Teal20  = Color(0xFF003730)
-val Teal40  = Color(0xFF1A7A6E)   // Primary
-val Teal80  = Color(0xFF8CDDD4)
-val Teal90  = Color(0xFFC8F5EF)   // PrimaryContainer
+// ── Brand / Accent ────────────────────────────────────────────────────────────
+val Primary        = Color(0xFF4F6EF7)   // Indigo-blue — trust, focus
+val PrimaryVariant = Color(0xFF9B4DFF)   // Purple — used in gradient end
+val AccentGreen    = Color(0xFF1DB974)   // Correct answers, success, streaks
+val AccentAmber    = Color(0xFFFF9500)   // Warnings, skipped, coming-soon
+val AccentRed      = Color(0xFFFF3B4E)   // Wrong answers, errors — use SPARINGLY
 
-// Secondary palette — Warm Gold
-val Gold10  = Color(0xFF2C1900)
-val Gold40  = Color(0xFFC8922A)   // Secondary
-val Gold80  = Color(0xFFE8C86A)
-val Gold90  = Color(0xFFFDEFC8)   // SecondaryContainer
+// ── Light theme surfaces ───────────────────────────────────────────────────────
+val Surface        = Color(0xFFF5F7FF)   // App background — very light lavender-white
+val SurfaceElev1   = Color(0xFFFFFFFF)   // Cards
+val SurfaceElev2   = Color(0xFFF0F2FF)   // Elevated cards, bottom sheets
+val SurfaceElev3   = Color(0xFFE8ECF8)   // Input fills, chips, nav items
+val OnSurface      = Color(0xFF0F1320)   // Primary text
+val OnSurfaceMuted = Color(0xFF7B83A6)   // Secondary text, hints
+val Border         = Color(0xFFE0E4F4)   // Subtle dividers/strokes
 
-// Error — Warm Rust
-val Rust40  = Color(0xFFC0432A)
-val Rust90  = Color(0xFFFFDAD4)
+// ── Dark theme surfaces (kept for reference but not used by default) ───────────
+val DarkSurface     = Color(0xFF0F1117)
+val DarkSurfaceElev1 = Color(0xFF171B26)
+val DarkSurfaceElev2 = Color(0xFF1E2335)
+val DarkSurfaceElev3 = Color(0xFF252A3D)
+val DarkOnSurface   = Color(0xFFE8EAF2)
+val DarkOnSurfaceMuted = Color(0xFF8892AA)
+val DarkBorder      = Color(0xFF2A2F45)
 
-// Neutral — Warm paper tones
-val Warm10  = Color(0xFF1A1714)   // Dark ink
-val Warm20  = Color(0xFF2E2B27)
-val Warm90  = Color(0xFFF5F0E8)   // Background (warm off-white)
-val Warm95  = Color(0xFFFDFAF4)   // Surface
-val Warm99  = Color(0xFFFFFBF7)
-
-// Accent for timer danger states
-val AmberWarn  = Color(0xFFE67E22)
-val RedDanger  = Color(0xFFE74C3C)
-
+// ── Light color scheme ────────────────────────────────────────────────────────
 val LightColorScheme = lightColorScheme(
-    primary = Teal40,
-    onPrimary = Color.White,
-    primaryContainer = Teal90,
-    onPrimaryContainer = Teal10,
-    secondary = Gold40,
-    onSecondary = Color.White,
-    secondaryContainer = Gold90,
-    onSecondaryContainer = Gold10,
-    error = Rust40,
-    errorContainer = Rust90,
-    background = Warm90,
-    onBackground = Warm10,
-    surface = Warm95,
-    onSurface = Warm10,
-    surfaceVariant = Color(0xFFE6DFD7),
-    onSurfaceVariant = Color(0xFF4D4740),
-    outline = Color(0xFF7F7870),
+    primary                = Primary,
+    onPrimary              = Color.White,
+    primaryContainer       = Color(0xFFDDE4FF),
+    onPrimaryContainer     = Color(0xFF001258),
+    secondary              = PrimaryVariant,
+    onSecondary            = Color.White,
+    secondaryContainer     = Color(0xFFEFDFFF),
+    onSecondaryContainer   = Color(0xFF2A004E),
+    tertiary               = AccentGreen,
+    onTertiary             = Color.White,
+    tertiaryContainer      = Color(0xFFB7F5D5),
+    onTertiaryContainer    = Color(0xFF002115),
+    error                  = AccentRed,
+    onError                = Color.White,
+    errorContainer         = Color(0xFFFFDAD9),
+    onErrorContainer       = Color(0xFF410002),
+    background             = Surface,
+    onBackground           = OnSurface,
+    surface                = SurfaceElev1,
+    onSurface              = OnSurface,
+    surfaceVariant         = SurfaceElev2,
+    onSurfaceVariant       = OnSurfaceMuted,
+    outline                = Border,
+    outlineVariant         = SurfaceElev3,
+    scrim                  = Color(0x52000000),
+    inverseSurface         = DarkSurfaceElev1,
+    inverseOnSurface       = DarkOnSurface,
+    inversePrimary         = PrimaryVariant,
+    surfaceTint            = Primary,
+    surfaceBright          = SurfaceElev1,
+    surfaceDim             = SurfaceElev2,
+    surfaceContainer       = SurfaceElev2,
+    surfaceContainerHigh   = SurfaceElev3,
+    surfaceContainerHighest = Color(0xFFDDE4FF),
 )
 
+// ── Dark color scheme (kept for future use) ───────────────────────────────────
 val DarkColorScheme = darkColorScheme(
-    primary = Teal80,
-    onPrimary = Teal20,
-    primaryContainer = Teal40,
-    onPrimaryContainer = Teal90,
-    secondary = Gold80,
-    onSecondary = Gold10,
-    secondaryContainer = Gold40,
-    onSecondaryContainer = Gold90,
-    error = Color(0xFFFFB4AB),
-    background = Warm10,
-    onBackground = Warm90,
-    surface = Color(0xFF1F1C19),
-    onSurface = Warm90,
+    primary                = Primary,
+    onPrimary              = Color.White,
+    primaryContainer       = DarkSurfaceElev1,
+    onPrimaryContainer     = DarkOnSurface,
+    secondary              = PrimaryVariant,
+    onSecondary            = Color.White,
+    secondaryContainer     = DarkSurfaceElev2,
+    onSecondaryContainer   = DarkOnSurface,
+    tertiary               = AccentGreen,
+    onTertiary             = Color.White,
+    tertiaryContainer      = DarkSurfaceElev2,
+    onTertiaryContainer    = DarkOnSurface,
+    error                  = AccentRed,
+    onError                = Color.White,
+    errorContainer         = DarkSurfaceElev2,
+    onErrorContainer       = DarkOnSurface,
+    background             = DarkSurface,
+    onBackground           = DarkOnSurface,
+    surface                = DarkSurfaceElev1,
+    onSurface              = DarkOnSurface,
+    surfaceVariant         = DarkSurfaceElev2,
+    onSurfaceVariant       = DarkOnSurfaceMuted,
+    outline                = DarkBorder,
+    outlineVariant         = DarkSurfaceElev3,
+    scrim                  = DarkSurface,
+    inverseSurface         = DarkOnSurface,
+    inverseOnSurface       = DarkSurface,
+    inversePrimary         = DarkSurface,
+    surfaceTint            = Primary,
+    surfaceBright          = DarkSurfaceElev2,
+    surfaceDim             = DarkSurface,
+    surfaceContainer       = DarkSurfaceElev1,
+    surfaceContainerHigh   = DarkSurfaceElev2,
+    surfaceContainerHighest = DarkSurfaceElev3,
 )

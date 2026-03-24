@@ -2,7 +2,6 @@ package com.shivasruthi.magics.ui.screens
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.util.Log
 import android.view.ViewGroup
@@ -30,13 +29,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import com.google.mlkit.vision.common.InputImage
-import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
-import com.shivasruthi.magics.data.model.InputSource
 import com.shivasruthi.magics.ui.navigation.AppRoutes
 import com.shivasruthi.magics.viewmodel.ProcessingViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 import java.util.concurrent.Executors
 
@@ -51,8 +48,16 @@ fun CameraScreen(
     val scope = rememberCoroutineScope()
 
     var hasCameraPermission by remember { mutableStateOf(false) }
-    var extractedText by remember { mutableStateOf<String?>(null) }
     var isProcessing by remember { mutableStateOf(false) }
+    var captureError by remember { mutableStateOf<String?>(null) }
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    LaunchedEffect(captureError) {
+        captureError?.let {
+            snackbarHostState.showSnackbar(it)
+            captureError = null
+        }
+    }
 
     val permissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -71,34 +76,52 @@ fun CameraScreen(
     val imageCapture = remember { ImageCapture.Builder().build() }
     val cameraExecutor = remember { Executors.newSingleThreadExecutor() }
 
+    DisposableEffect(Unit) {
+        onDispose {
+            cameraExecutor.shutdown()
+            Log.d("CAMERA_FLOW", "🔌 cameraExecutor shut down")
+        }
+    }
+
     fun capturePhoto() {
-        val photoFile = File(context.cacheDir, "camera_capture.jpg")
+        val photoFile = File(context.cacheDir, "camera_${System.currentTimeMillis()}.jpg")
         val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
         isProcessing = true
+        Log.d("CAMERA_FLOW", "📸 Capturing photo → ${photoFile.name}")
+
         imageCapture.takePicture(
             outputOptions,
             ContextCompat.getMainExecutor(context),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val bitmap = BitmapFactory.decodeFile(photoFile.absolutePath)
-                    val image = InputImage.fromBitmap(bitmap, 0)
-                    val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
-                    
-                    recognizer.process(image)
-                        .addOnSuccessListener { visionText ->
-                            extractedText = visionText.text
+                    Log.d("CAMERA_FLOW", "✅ Photo saved: ${photoFile.length() / 1024}KB")
+
+                    scope.launch {
+                        try {
+                            val bytes = withContext(Dispatchers.IO) {
+                                photoFile.readBytes().also { photoFile.delete() }
+                            }
+                            Log.d("CAMERA_FLOW", "✅ ${bytes.size / 1024}KB read, navigating to Processing")
+                            
+                            if (navController.previousBackStackEntry != null) {
+                                navController.popBackStack(AppRoutes.Home, false)
+                            }
+                            navController.navigate(AppRoutes.Processing)
+                            processingViewModel.processFileBytes(bytes, "image/jpeg", "Camera Scan")
+                            isProcessing = false
+                        } catch (e: Exception) {
+                            Log.e("CAMERA_FLOW", "💥 Failed to read photo bytes", e)
+                            captureError = "Failed to process photo. Please try again."
                             isProcessing = false
                         }
-                        .addOnFailureListener { e ->
-                            Log.e("CameraScreen", "OCR failed", e)
-                            isProcessing = false
-                        }
+                    }
                 }
 
                 override fun onError(exc: ImageCaptureException) {
-                    Log.e("CameraScreen", "Photo capture failed", exc)
+                    Log.e("CAMERA_FLOW", "❌ Photo capture failed: ${exc.message}", exc)
                     isProcessing = false
+                    captureError = "Photo capture failed. Please try again."
                 }
             }
         )
@@ -109,12 +132,17 @@ fun CameraScreen(
             TopAppBar(
                 title = { Text("Scan Document") },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    IconButton(onClick = { 
+                        if (navController.previousBackStackEntry != null) {
+                            navController.popBackStack() 
+                        }
+                    }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
-        }
+        },
+        snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { paddingValues ->
         Box(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
             if (hasCameraPermission) {
@@ -171,38 +199,6 @@ fun CameraScreen(
                 Box(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator()
                 }
-            }
-
-            // Preview dialog
-            if (extractedText != null) {
-                AlertDialog(
-                    onDismissRequest = { extractedText = null },
-                    title = { Text("Extracted Text") },
-                    text = {
-                        OutlinedTextField(
-                            value = extractedText ?: "",
-                            onValueChange = { extractedText = it },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(250.dp)
-                        )
-                    },
-                    confirmButton = {
-                        Button(onClick = {
-                            val text = extractedText ?: ""
-                            if (text.isNotBlank()) {
-                                navController.popBackStack(AppRoutes.Home, false)
-                                processingViewModel.generateQuestionsFromText(text, InputSource.Camera, "Camera Scan")
-                                navController.navigate(AppRoutes.Processing)
-                            }
-                        }) {
-                            Text("Generate Questions")
-                        }
-                    },
-                    dismissButton = {
-                        TextButton(onClick = { extractedText = null }) { Text("Retake") }
-                    }
-                )
             }
         }
     }

@@ -7,20 +7,28 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.util.Consumer
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.shivasruthi.magics.data.local.AppDatabase
 import com.shivasruthi.magics.data.remote.GeminiService
-import com.shivasruthi.magics.data.remote.SupadataService
+import com.shivasruthi.magics.data.remote.YoutubeBackendService
 import com.shivasruthi.magics.data.repository.TestRepository
 import com.shivasruthi.magics.ui.navigation.AppRoutes
 import com.shivasruthi.magics.ui.screens.*
+import com.shivasruthi.magics.ui.screens.VoiceRecorderScreen
 import com.shivasruthi.magics.ui.theme.MagicSTheme
+import com.shivasruthi.magics.ui.theme.ThemePreference
 import com.shivasruthi.magics.viewmodel.EditorViewModel
 import com.shivasruthi.magics.viewmodel.HomeViewModel
 import com.shivasruthi.magics.viewmodel.ProcessingViewModel
@@ -32,10 +40,29 @@ class MainActivity : ComponentActivity() {
     private val database by lazy { AppDatabase.getDatabase(this) }
     private val repository by lazy { TestRepository(database) }
     private val geminiService by lazy { GeminiService(BuildConfig.GEMINI_API_KEY) }
-    private val supadataService by lazy { SupadataService(BuildConfig.YOUTUBE_BACKEND_URL) }
+    private val youtubeBackendService by lazy { 
+        YoutubeBackendService(
+            backendBaseUrl = BuildConfig.YOUTUBE_BACKEND_URL
+        ) 
+    }
+    
+    private val groqService by lazy { com.shivasruthi.magics.data.remote.GroqService() }
+    private val flashLiteService by lazy { 
+        com.shivasruthi.magics.data.remote.GeminiFlashLiteService(BuildConfig.GEMINI_FLASH_LITE_KEY) 
+    }
+    private val aiProviderManager by lazy {
+        com.shivasruthi.magics.data.remote.AiProviderManager(
+            geminiService = geminiService,
+            groqService = groqService,
+            flashLiteService = flashLiteService,
+            groqApiKey = BuildConfig.GROQ_API_KEY,
+            flashLiteApiKey = BuildConfig.GEMINI_FLASH_LITE_KEY
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
+        ThemePreference.applyToDelegate(ThemePreference.get(this))
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)   // Edge-to-edge
         enableEdgeToEdge()
@@ -49,18 +76,29 @@ class MainActivity : ComponentActivity() {
                     factory = HomeViewModel.Factory(repository)
                 )
                 val processingViewModel: ProcessingViewModel = viewModel(
-                    factory = ProcessingViewModel.Factory(geminiService, supadataService)
+                    factory = ProcessingViewModel.Factory(aiProviderManager, youtubeBackendService, geminiService, this)
                 )
-                val editorViewModel: EditorViewModel = viewModel()
+                val editorViewModel: EditorViewModel = viewModel(
+                    factory = EditorViewModel.Factory(geminiService)
+                )
                 val testPlayerViewModel: TestPlayerViewModel = viewModel()
 
                 DisposableEffect(Unit) {
                     val handleIntent = { intent: Intent ->
                         if (intent.action == Intent.ACTION_SEND) {
                             val type = intent.type ?: ""
-                            if (type == "text/plain") {
+                            if (type == "text/plain" || type == "application/json") {
                                 val sharedText = intent.getStringExtra(Intent.EXTRA_TEXT)
-                                if (sharedText != null) {
+                                if (sharedText != null && sharedText.trim().startsWith("{")) {
+                                    processingViewModel.generateQuestionsFromText(
+                                        sharedText,
+                                        com.shivasruthi.magics.data.model.InputSource.Json,
+                                        "Shared Test"
+                                    )
+                                    if (navController.currentDestination?.route != AppRoutes.Processing.toString()) {
+                                        navController.navigate(AppRoutes.Processing)
+                                    }
+                                } else if (sharedText != null) {
                                     val isUrl = android.util.Patterns.WEB_URL.matcher(sharedText).matches()
                                     if (isUrl && (sharedText.contains("youtube.com") || sharedText.contains("youtu.be"))) {
                                         processingViewModel.processYouTubeUrl(sharedText)
@@ -101,59 +139,83 @@ class MainActivity : ComponentActivity() {
                     onDispose { removeOnNewIntentListener(listener) }
                 }
 
-                NavHost(
-                    navController = navController,
-                    startDestination = AppRoutes.Home
+
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
                 ) {
-                    composable<AppRoutes.Home> {
-                        HomeScreen(
-                            navController = navController,
-                            homeViewModel = homeViewModel,
-                            testPlayerViewModel = testPlayerViewModel,
-                            processingViewModel = processingViewModel,
-                            editorViewModel = editorViewModel,
-                            repository = repository
-                        )
-                    }
-                    composable<AppRoutes.Processing> {
-                        ProcessingScreen(
-                            navController = navController,
-                            viewModel = processingViewModel,
-                            editorViewModel = editorViewModel
-                        )
-                    }
-                    composable<AppRoutes.Editor> {
-                        EditorScreen(
-                            navController = navController,
-                            viewModel = editorViewModel,
-                            repository = repository
-                        )
-                    }
-                    composable<AppRoutes.TestPlayer> {
-                        TestPlayerScreen(
-                            navController = navController,
-                            viewModel = testPlayerViewModel,
-                            repository = repository
-                        )
-                    }
-                    composable<AppRoutes.Results> {
-                        ResultsScreen(
-                            navController = navController,
-                            viewModel = testPlayerViewModel,
-                            repository = repository
-                        )
-                    }
-                    composable<AppRoutes.Review> {
-                        ReviewScreen(
-                            navController = navController,
-                            viewModel = testPlayerViewModel
-                        )
-                    }
-                    composable<AppRoutes.Camera> {
-                        CameraScreen(
-                            navController = navController,
-                            processingViewModel = processingViewModel
-                        )
+                    NavHost(
+                        navController = navController,
+                        startDestination = AppRoutes.Home
+                    ) {
+                        composable<AppRoutes.Home> {
+                            HomeScreen(
+                                navController = navController,
+                                homeViewModel = homeViewModel,
+                                testPlayerViewModel = testPlayerViewModel,
+                                processingViewModel = processingViewModel,
+                                editorViewModel = editorViewModel,
+                                repository = repository
+                            )
+                        }
+                        composable<AppRoutes.Processing> {
+                            ProcessingScreen(
+                                navController = navController,
+                                viewModel = processingViewModel,
+                                editorViewModel = editorViewModel,
+                                testPlayerViewModel = testPlayerViewModel
+                            )
+                        }
+                        composable<AppRoutes.Editor> {
+                            EditorScreen(
+                                navController = navController,
+                                viewModel = editorViewModel,
+                                repository = repository
+                            )
+                        }
+                        composable<AppRoutes.TestPlayerWithId> {
+                            val route = it.toRoute<AppRoutes.TestPlayerWithId>()
+                            // Load data for this ID if not already loaded (useful for direct deep links)
+                            LaunchedEffect(route.id) {
+                                testPlayerViewModel.loadTestFromDb(route.id, repository)
+                            }
+                            TestPlayerScreen(
+                                navController = navController,
+                                viewModel = testPlayerViewModel,
+                                repository = repository
+                            )
+                        }
+                        composable<AppRoutes.Results> {
+                            ResultsScreen(
+                                navController = navController,
+                                viewModel = testPlayerViewModel,
+                                repository = repository
+                            )
+                        }
+                        composable<AppRoutes.Review> {
+                            ReviewScreen(
+                                navController = navController,
+                                viewModel = testPlayerViewModel
+                            )
+                        }
+                        composable<AppRoutes.Camera> {
+                            CameraScreen(
+                                navController = navController,
+                                processingViewModel = processingViewModel
+                            )
+                        }
+                        composable<AppRoutes.VoiceRecorder> {
+                            VoiceRecorderScreen(
+                                navController = navController,
+                                processingViewModel = processingViewModel
+                            )
+                        }
+                        composable<AppRoutes.Settings> {
+                            SettingsScreen(
+                                navController = navController,
+                                repository = repository
+                            )
+                        }
                     }
                 }
             }

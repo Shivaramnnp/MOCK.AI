@@ -1,78 +1,96 @@
 package com.shivasruthi.magics.ui.screens
 
-import android.Manifest
-import android.content.pm.PackageManager
-import android.net.Uri
-import android.os.Bundle
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.slideInVertically
-import androidx.compose.foundation.Canvas
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AutoStories
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PictureAsPdf
-import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.core.content.ContextCompat
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.shivasruthi.magics.data.local.TestHistoryEntity
 import com.shivasruthi.magics.data.model.Question
 import com.shivasruthi.magics.data.model.TestDefinition
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.window.Dialog
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import com.shivasruthi.magics.data.repository.TestRepository
 import com.shivasruthi.magics.ui.navigation.AppRoutes
+import com.shivasruthi.magics.ui.theme.*
 import com.shivasruthi.magics.viewmodel.EditorViewModel
 import com.shivasruthi.magics.viewmodel.HomeViewModel
 import com.shivasruthi.magics.viewmodel.ProcessingViewModel
 import com.shivasruthi.magics.viewmodel.TestPlayerViewModel
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import android.content.Context
+import android.content.ClipboardManager
+import android.content.ClipData
 
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
-import com.shivasruthi.magics.data.model.InputSource
+fun resolveFileName(context: Context, uri: Uri): String {
+    return context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+        if (cursor.moveToFirst()) {
+            val idx = cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
+            if (idx != -1) cursor.getString(idx) else null
+        } else null
+    } ?: uri.lastPathSegment ?: "document"
+}
+
+// ─── Data model ──────────────────────────────────────────────────────────────
 
 data class InputOption(
     val title: String,
     val description: String,
-    val icon: androidx.compose.ui.graphics.vector.ImageVector,
-    val category: String,
-    val isImplemented: Boolean = false,
+    val icon: ImageVector,
+    val color: Color,
+    val emoji: String = "📄",
+    val implemented: Boolean = true,
     val onClick: () -> Unit
 )
 
-@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
+// ─── Main Screen ─────────────────────────────────────────────────────────────
+
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
     navController: NavController,
@@ -83,21 +101,22 @@ fun HomeScreen(
     repository: TestRepository
 ) {
     val tests by homeViewModel.tests.collectAsState()
-    var selectedTest by remember { mutableStateOf<TestHistoryEntity?>(null) }
-    var selectedTimerSeconds by remember { mutableIntStateOf(0) }
-    var showDeleteDialog by remember { mutableStateOf<TestHistoryEntity?>(null) }
-    
-    // Bottom Sheet State
+    val avgScore = remember(tests) {
+        if (tests.isNotEmpty()) {
+            tests.mapNotNull { it.bestScorePercent }.let { scores ->
+                if (scores.isNotEmpty()) scores.average().toInt() else 0
+            }
+        } else 0
+    }
+    val streak = remember(tests) { computeStreak(tests) }
+
     var showBottomSheet by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
-    var searchQuery by remember { mutableStateOf("") }
     
     // Dialog States
     var showJsonDialog by remember { mutableStateOf(false) }
     var showTopicDialog by remember { mutableStateOf(false) }
     var showUrlDialog by remember { mutableStateOf(false) }
     var showYouTubeDialog by remember { mutableStateOf(false) }
-    var showVoiceDialog by remember { mutableStateOf(false) }
     
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -105,7 +124,9 @@ fun HomeScreen(
     val pdfLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri: Uri? ->
         if (uri != null) {
             showBottomSheet = false
-            processingViewModel.processFile(context, uri, "application/pdf", "document.pdf")
+            val fileName = resolveFileName(context, uri)
+            val mimeType = context.contentResolver.getType(uri) ?: "application/pdf"
+            processingViewModel.processFile(context, uri, mimeType, fileName)
             navController.navigate(AppRoutes.Processing)
         }
     }
@@ -113,797 +134,923 @@ fun HomeScreen(
     val docxLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri: Uri? ->
         if (uri != null) {
             showBottomSheet = false
-            val contentResolver = context.contentResolver
-            val mimeType = contentResolver.getType(uri) ?: ""
-            val cursor = contentResolver.query(uri, null, null, null, null)
-            var name = "document"
-            cursor?.use {
-                if (it.moveToFirst()) {
-                    val index = it.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
-                    if (index != -1) {
-                        name = it.getString(index)
-                    }
-                }
-            }
-            processingViewModel.processFile(context, uri, mimeType, name)
+            val fileName = resolveFileName(context, uri)
+            val mimeType = context.contentResolver.getType(uri) ?: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            processingViewModel.processFile(context, uri, mimeType, fileName)
             navController.navigate(AppRoutes.Processing)
         }
     }
 
-    val galleryLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        if (uri != null) {
+    val imageLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetMultipleContents()) { uris: List<Uri> ->
+        if (uris.isNotEmpty()) {
             showBottomSheet = false
-            processingViewModel.processFile(context, uri, "image/jpeg", "image.jpg")
+            processingViewModel.processMultipleImages(context, uris)
             navController.navigate(AppRoutes.Processing)
         }
     }
 
-    // --- Input Options Configuration ---
     val allOptions = remember {
         listOf(
-            // From File
-            InputOption("PDF", "Upload a PDF document", Icons.Default.PictureAsPdf, "From File", true) { pdfLauncher.launch(arrayOf("application/pdf")) },
-            InputOption("Word / PPT", "Upload DOCX or PPTX", Icons.Default.AutoStories, "From File", true) { 
-                docxLauncher.launch(
-                    arrayOf(
-                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                        "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                    )
-                ) 
+            InputOption("PDF", "Upload a PDF document", Icons.Default.PictureAsPdf, AccentRed, "📄", true) {
+                pdfLauncher.launch(arrayOf("application/pdf"))
             },
-            InputOption("JSON", "Paste or upload JSON", Icons.Default.Edit, "From File", true) { showJsonDialog = true },
-            
-            // From Internet
-            InputOption("Web URL", "Scrape text from a webpage", Icons.Default.AutoStories, "From Internet", true) { showUrlDialog = true },
-            InputOption("YouTube", "Extract transcript from video", Icons.Default.AutoStories, "From Internet", true) { showYouTubeDialog = true },
-            InputOption("Topic", "Just type a topic name", Icons.Default.Edit, "From Internet", true) { showTopicDialog = true },
-
-            // From Device
-            InputOption("Image", "Upload from gallery", Icons.Default.Image, "From Device", true) { galleryLauncher.launch("image/*") },
-            InputOption("Camera", "Scan a physical page", Icons.Default.Image, "From Device", true) { 
+            InputOption("Word / PPT", "Upload DOCX or PPTX", Icons.Default.AutoStories, Color(0xFF5B8AF5), "📝", true) {
+                docxLauncher.launch(arrayOf(
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                ))
+            },
+            InputOption("Web URL", "Scrape text from webpage", Icons.Default.Search, Primary, "🌐", true) {
                 showBottomSheet = false
-                navController.navigate(AppRoutes.Camera) 
+                showUrlDialog = true
             },
-            InputOption("Voice", "Record audio or upload file", Icons.Default.AutoStories, "From Device", true) { showVoiceDialog = true },
-            InputOption("Manual Entry", "Write questions yourself", Icons.Default.Edit, "From Device", true) {
+            InputOption("YouTube", "Extract transcript from video", Icons.Default.PlayArrow, Color(0xFFFF4444), "▶️", true) {
+                showBottomSheet = false
+                showYouTubeDialog = true
+            },
+            InputOption("Topic", "Type a topic name", Icons.Default.School, AccentGreen, "🎯", true) {
+                showBottomSheet = false
+                showTopicDialog = true
+            },
+            InputOption("Image", "Upload from gallery", Icons.Default.Image, AccentAmber, "🖼️", true) {
+                imageLauncher.launch("image/*")
+            },
+            InputOption("Camera", "Scan a physical page", Icons.Default.Image, Color(0xFF5B8AF5), "📷", true) {
+                showBottomSheet = false
+                navController.navigate(AppRoutes.Camera)
+            },
+            InputOption("Voice", "Record audio", Icons.Default.Mic, Color(0xFFAA66FF), "🎙️", true) {
+                showBottomSheet = false
+                navController.navigate(AppRoutes.VoiceRecorder)
+            },
+            InputOption("Manual Entry", "Write questions yourself", Icons.Default.Edit, AccentRed, "✏️", true) {
                 showBottomSheet = false
                 editorViewModel.setQuestions(listOf(Question("", List(4) { "" }, -1)))
                 navController.navigate(AppRoutes.Editor)
-            }
+            },
+            InputOption("JSON", "Paste or upload JSON", Icons.Default.Edit, Color(0xFF22C9A5), "{ }", true) {
+                showBottomSheet = false
+                showJsonDialog = true
+            },
         )
     }
 
-    val filteredCategories = allOptions
-        .filter { it.title.contains(searchQuery, ignoreCase = true) || it.description.contains(searchQuery, ignoreCase = true) }
-        .groupBy { it.category }
+    // Input Dialogs Runtime
+    if (showTopicDialog) {
+        MagicInputDialog(title = "Enter a Topic", placeholder = "e.g. World War 2", onDismiss = { showTopicDialog = false }) { topic ->
+            showTopicDialog = false
+            processingViewModel.generateQuestionsFromText(topic, com.shivasruthi.magics.data.model.InputSource.Topic, topic)
+            navController.navigate(AppRoutes.Processing)
+        }
+    }
+    if (showUrlDialog) {
+        MagicInputDialog(title = "Enter Webpage URL", placeholder = "https://example.com/article", onDismiss = { showUrlDialog = false }) { url ->
+            showUrlDialog = false
+            processingViewModel.processWebUrl(url)
+            navController.navigate(AppRoutes.Processing)
+        }
+    }
+    if (showYouTubeDialog) {
+        MagicInputDialog(title = "Enter YouTube URL", placeholder = "https://youtube.com/watch?v=...", onDismiss = { showYouTubeDialog = false }) { url ->
+            showYouTubeDialog = false
+            processingViewModel.processYouTubeUrl(url)
+            navController.navigate(AppRoutes.Processing)
+        }
+    }
+    if (showJsonDialog) {
+        MagicInputDialog(
+            title = "Paste JSON Data",
+            placeholder = "{ \"questions\": ... }",
+            isMultiline = true,
+            showJsonExtras = true,
+            onDismiss = { showJsonDialog = false }
+        ) { jsonText ->
+            showJsonDialog = false
+            processingViewModel.generateQuestionsFromText(jsonText, com.shivasruthi.magics.data.model.InputSource.Json, "Pasted JSON")
+            navController.navigate(AppRoutes.Processing)
+        }
+    }
 
     Scaffold(
-        floatingActionButtonPosition = FabPosition.End,
-        floatingActionButton = {
-            ExtendedFloatingActionButton(
-                onClick = { showBottomSheet = true },
-                icon = { Icon(Icons.Default.Add, contentDescription = "Create") },
-                text = { Text("Create Test") }
-            )
-        }
+        containerColor = Surface,
     ) { paddingValues ->
-        Column(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
-            // Header
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.surface)
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 32.dp, bottom = 16.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.AutoStories,
-                        contentDescription = "Logo",
-                        modifier = Modifier.size(32.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(modifier = Modifier.width(16.dp))
-                    Column {
-                        Text(
-                            text = "MagicS",
-                            style = MaterialTheme.typography.displaySmall,
-                            fontWeight = FontWeight.ExtraBold
-                        )
-                        Text(
-                            text = "Turn any document into a mock test",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
-                        )
-                    }
-                }
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues),
+            contentPadding = PaddingValues(bottom = 40.dp)
+        ) {
+
+            // ── Header ────────────────────────────────────────────────────
+            item {
+                HomeHeader(
+                    navController = navController,
+                    testsCount = tests.size,
+                    avgScore = avgScore,
+                    streak = streak
+                )
             }
 
-            // Test List
-            LazyColumn(
-                modifier = Modifier.fillMaxWidth().weight(1f),
-                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 100.dp)
-            ) {
-                if (tests.isEmpty()) {
-                    item {
-                        Column(
-                            modifier = Modifier.fillMaxWidth().padding(top = 64.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally
+            // ── Hero: Create New Test ─────────────────────────────────────
+            item {
+                CreateNewTestHero(
+                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
+                    onClick = { showBottomSheet = true }
+                )
+            }
+
+            // ── Your Tests Header ─────────────────────────────────────────
+            item {
+                Spacer(modifier = Modifier.height(12.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Your Tests",
+                        style = MaterialTheme.typography.titleLarge.copy(
+                            color = OnSurface,
+                            fontWeight = FontWeight.Bold
+                        )
+                    )
+                    if (tests.isNotEmpty()) {
+                        Row(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(50))
+                                .background(SurfaceElev3)
+                                .border(1.dp, Border, RoundedCornerShape(50))
+                                .padding(horizontal = 14.dp, vertical = 5.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
-                            val surfaceVariant = MaterialTheme.colorScheme.surfaceVariant
-                            val outline = MaterialTheme.colorScheme.outline
-                            val surface = MaterialTheme.colorScheme.surface
-                            Canvas(modifier = Modifier.size(200.dp, 180.dp)) {
-                                drawRoundRect(
-                                    color = surfaceVariant,
-                                    topLeft = Offset(24f, 24f),
-                                    size = Size(size.width - 24f, size.height - 24f),
-                                    cornerRadius = CornerRadius(24f, 24f)
-                                )
-                                drawRoundRect(
-                                    color = surfaceVariant.copy(alpha = 0.8f),
-                                    topLeft = Offset(12f, 12f),
-                                    size = Size(size.width - 24f, size.height - 24f),
-                                    cornerRadius = CornerRadius(24f, 24f)
-                                )
-                                drawRoundRect(
-                                    color = surface,
-                                    topLeft = Offset(0f, 0f),
-                                    size = Size(size.width - 24f, size.height - 24f),
-                                    cornerRadius = CornerRadius(24f, 24f)
-                                )
-                                drawLine(
-                                    color = outline.copy(alpha = 0.4f),
-                                    start = Offset(40f, 60f),
-                                    end = Offset(size.width - 64f, 60f),
-                                    strokeWidth = 8f
-                                )
-                                drawLine(
-                                    color = outline.copy(alpha = 0.4f),
-                                    start = Offset(40f, 100f),
-                                    end = Offset(size.width - 100f, 100f),
-                                    strokeWidth = 8f
-                                )
-                                drawLine(
-                                    color = outline.copy(alpha = 0.4f),
-                                    start = Offset(40f, 140f),
-                                    end = Offset(size.width - 64f, 140f),
-                                    strokeWidth = 8f
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(24.dp))
-                            Text("No tests yet", style = MaterialTheme.typography.titleMedium, textAlign = TextAlign.Center)
                             Text(
-                                "Tap + to create your first test",
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
-                                textAlign = TextAlign.Center
+                                text = "${tests.size}",
+                                style = MaterialTheme.typography.labelMedium.copy(
+                                    color = OnSurface,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                            Text(
+                                text = "›",
+                                style = MaterialTheme.typography.labelMedium.copy(
+                                    color = OnSurfaceMuted,
+                                    fontWeight = FontWeight.Medium
+                                )
                             )
                         }
                     }
-                } else {
-                    item {
-                        Text(
-                            text = "Your Tests",
-                            style = MaterialTheme.typography.labelLarge,
-                            modifier = Modifier.padding(vertical = 16.dp)
-                        )
-                    }
-                    items(tests, key = { it.id }) { test ->
-                        TestHistoryCard(
-                            test = test,
-                            isSelected = selectedTest?.id == test.id,
-                            onClick = { selectedTest = if (selectedTest?.id == test.id) null else test },
-                            onLongClick = { showDeleteDialog = test },
-                            modifier = Modifier.animateItem()
-                        )
-                    }
                 }
+                Spacer(modifier = Modifier.height(12.dp))
             }
 
-            AnimatedVisibility(visible = selectedTest != null, enter = slideInVertically { it }) {
-                selectedTest?.let { test ->
-                    ElevatedCard(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        elevation = CardDefaults.elevatedCardElevation(8.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(20.dp)) {
-                            Text(test.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                AssistChip(onClick = {}, label = { Text("${test.questionCount} Questions") })
-                                AssistChip(onClick = {}, label = { Text("~${(test.questionCount * 1.5).toInt()} min") })
-                                AssistChip(
-                                    onClick = {},
-                                    label = { Text(test.bestScorePercent?.let { "Best: ${it.toInt()}%" } ?: "Not taken") }
-                                )
+            // ── Tests or Empty State ──────────────────────────────────────
+            if (tests.isEmpty()) {
+                item {
+                    EmptyTestsState(
+                        modifier = Modifier.padding(horizontal = 20.dp),
+                        onCreateClick = { showBottomSheet = true }
+                    )
+                }
+            } else {
+                items(tests, key = { it.id }) { test ->
+                    TestHistoryCard(
+                        test = test,
+                        onStartTest = {
+                            val prefs = context.getSharedPreferences("app_settings", android.content.Context.MODE_PRIVATE)
+                            val timerSec = prefs.getInt("timer_seconds", 60)
+                            testPlayerViewModel.loadTestFromDb(test.id, repository, timerDurationSeconds = timerSec)
+                            navController.navigate(AppRoutes.TestPlayerWithId(test.id))
+                        },
+                        onEditTest = {
+                            scope.launch {
+                                val questions = repository.getQuestionsForTest(test.id)
+                                editorViewModel.setQuestions(questions)
+                                navController.navigate(AppRoutes.Editor)
                             }
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Text("Timer", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
-                            Spacer(modifier = Modifier.height(8.dp))
-                            
-                            var customTimer by remember { mutableStateOf(false) }
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                item { FilterChip(selected = selectedTimerSeconds == 0 && !customTimer, onClick = { selectedTimerSeconds = 0; customTimer = false }, label = { Text("No Timer") }) }
-                                item { FilterChip(selected = selectedTimerSeconds == 1800 && !customTimer, onClick = { selectedTimerSeconds = 1800; customTimer = false }, label = { Text("30 min") }) }
-                                item { FilterChip(selected = selectedTimerSeconds == 2700 && !customTimer, onClick = { selectedTimerSeconds = 2700; customTimer = false }, label = { Text("45 min") }) }
-                                item { FilterChip(selected = selectedTimerSeconds == 3600 && !customTimer, onClick = { selectedTimerSeconds = 3600; customTimer = false }, label = { Text("60 min") }) }
-                                item { FilterChip(selected = customTimer, onClick = { customTimer = true }, label = { Text("Custom") }) }
-                            }
-                            AnimatedVisibility(visible = customTimer) {
-                                Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
-                                    var sliderValue by remember { mutableFloatStateOf(selectedTimerSeconds / 60f) }
-                                    if (sliderValue < 5f) sliderValue = 5f
-                                    Slider(
-                                        value = sliderValue,
-                                        onValueChange = { sliderValue = it; selectedTimerSeconds = (it * 60).toInt() },
-                                        valueRange = 5f..180f,
-                                        steps = 34
-                                    )
-                                    Text("${selectedTimerSeconds / 60} minutes", style = MaterialTheme.typography.labelMedium, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+                        },
+                        onShareTest = {
+                            scope.launch {
+                                val questions = repository.getQuestionsForTest(test.id)
+                                val json = repository.buildShareJson(questions, test.title)
+                                val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
+                                    type = "application/json"
+                                    putExtra(android.content.Intent.EXTRA_TEXT, json)
+                                    putExtra(android.content.Intent.EXTRA_SUBJECT, "Mock AI Test: ${test.title}")
                                 }
+                                context.startActivity(android.content.Intent.createChooser(intent, "Share Test"))
                             }
-
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Button(
-                                modifier = Modifier.fillMaxWidth(),
-                                onClick = {
-                                    scope.launch {
-                                        val testWithQ = repository.getTestWithQuestions(test.id).first()
-                                        val definitions = with(repository) {
-                                            testWithQ.questions.map { it.toQuestion() }
-                                        }
-                                        testPlayerViewModel.loadTest(
-                                            definition = TestDefinition(
-                                                dbId = test.id,
-                                                title = test.title,
-                                                category = test.category,
-                                                questions = definitions
-                                            ),
-                                            timerDurationSeconds = selectedTimerSeconds
-                                        )
-                                        navController.navigate(AppRoutes.TestPlayer)
-                                    }
-                                }
-                            ) {
-                                Text("Start Test", style = MaterialTheme.typography.titleMedium)
-                            }
-                        }
-                    }
+                        },
+                        onDeleteTest = { homeViewModel.deleteTest(test.id) },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 5.dp)
+                    )
                 }
             }
         }
     }
 
+    // ── Bottom Sheet ──────────────────────────────────────────────────────────
     if (showBottomSheet) {
         ModalBottomSheet(
-            onDismissRequest = { showBottomSheet = false; searchQuery = "" },
-            sheetState = sheetState,
-            dragHandle = { BottomSheetDefaults.DragHandle() }
+            onDismissRequest = { showBottomSheet = false },
+            sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+            containerColor = SurfaceElev1,
+            shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+            dragHandle = {
+                Box(
+                    modifier = Modifier
+                        .padding(top = 14.dp, bottom = 6.dp)
+                        .size(width = 36.dp, height = 4.dp)
+                        .background(Border, RoundedCornerShape(2.dp))
+                )
+            }
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 24.dp)
-                    .padding(bottom = 32.dp)
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 20.dp)
+                    .padding(bottom = 36.dp)
             ) {
                 Text(
-                    text = "Create Mock Test",
-                    style = MaterialTheme.typography.headlineSmall,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(bottom = 16.dp)
+                    text = "Choose Source",
+                    style = MaterialTheme.typography.headlineSmall.copy(
+                        color = OnSurface,
+                        fontWeight = FontWeight.Bold
+                    )
                 )
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(
+                    text = "How would you like to create your test?",
+                    style = MaterialTheme.typography.bodySmall.copy(color = OnSurfaceMuted)
+                )
+                Spacer(modifier = Modifier.height(24.dp))
 
-                OutlinedTextField(
-                    value = searchQuery,
-                    onValueChange = { searchQuery = it },
-                    placeholder = { Text("Search input types...") },
-                    leadingIcon = { Icon(Icons.Default.AutoStories, contentDescription = "Search") },
+                val fromFile = allOptions.filter { it.title in listOf("PDF", "Word / PPT", "JSON") }
+                val fromInternet = allOptions.filter { it.title in listOf("Web URL", "YouTube", "Topic") }
+                val fromDevice = allOptions.filter { it.title in listOf("Image", "Camera", "Voice", "Manual Entry") }
+
+                BottomSheetGroup(title = "📁  From File", options = fromFile) { option ->
+                    showBottomSheet = false
+                    if (option.implemented) option.onClick()
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+                BottomSheetGroup(title = "🌐  From Internet", options = fromInternet) { option ->
+                    showBottomSheet = false
+                    if (option.implemented) option.onClick()
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+                BottomSheetGroup(title = "📱  From Device", options = fromDevice) { option ->
+                    showBottomSheet = false
+                    if (option.implemented) option.onClick()
+                }
+            }
+        }
+    }
+}
+
+// ─── Header ──────────────────────────────────────────────────────────────────
+
+@Composable
+private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: Int, streak: Int) {
+    val hour = remember {
+        java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
+    }
+    val greeting = when {
+        hour < 12 -> "Good morning"
+        hour < 17 -> "Good afternoon"
+        else      -> "Good evening"
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 20.dp, end = 20.dp, top = 52.dp, bottom = 20.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text(
+                    text = "$greeting 👋",
+                    style = MaterialTheme.typography.bodyMedium.copy(
+                        color = OnSurfaceMuted
+                    )
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(
+                    text = "Ready to Practice?",
+                    style = MaterialTheme.typography.headlineMedium.copy(
+                        color = OnSurface,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+            }
+
+            // Home actions (Settings)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                IconButton(onClick = { navController.navigate(AppRoutes.Settings) }) {
+                    Icon(
+                        imageVector = Icons.Default.Settings,
+                        contentDescription = "Settings",
+                        tint = OnSurfaceMuted,
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.width(8.dp))
+                // App badge
+                Box(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 24.dp),
-                    singleLine = true,
-                    shape = RoundedCornerShape(12.dp)
-                )
-
-                LazyColumn(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(24.dp)
+                        .size(46.dp)
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(
+                            Brush.linearGradient(listOf(Primary, PrimaryVariant))
+                        ),
+                    contentAlignment = Alignment.Center
                 ) {
-                    filteredCategories.forEach { (category, options) ->
-                        item {
-                            Text(
-                                text = category,
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.SemiBold,
-                                color = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.padding(bottom = 8.dp)
-                            )
-                        }
-                        
-                        // We use a DIY grid here since LazyVerticalGrid inside a LazyColumn 
-                        // sometimes has measurement issues
-                        val columns = 2
-                        val chunkedOptions = options.chunked(columns)
-                        
-                        items(chunkedOptions) { rowOptions ->
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(12.dp)
-                            ) {
-                                for (option in rowOptions) {
-                                    ElevatedCard(
-                                        onClick = option.onClick,
-                                        modifier = Modifier.weight(1f),
-                                        shape = RoundedCornerShape(16.dp),
-                                        colors = CardDefaults.elevatedCardColors(
-                                            containerColor = if (option.isImplemented) 
-                                                MaterialTheme.colorScheme.surfaceColorAtElevation(2.dp) 
-                                            else 
-                                                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
-                                        )
-                                    ) {
-                                        Column(
-                                            modifier = Modifier.padding(16.dp),
-                                            horizontalAlignment = Alignment.Start
-                                        ) {
-                                            Icon(
-                                                imageVector = option.icon,
-                                                contentDescription = option.title,
-                                                tint = if (option.isImplemented) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                                                modifier = Modifier.padding(bottom = 12.dp)
-                                            )
-                                            Text(
-                                                text = option.title,
-                                                style = MaterialTheme.typography.bodyLarge,
-                                                fontWeight = FontWeight.SemiBold,
-                                                modifier = Modifier.padding(bottom = 4.dp),
-                                                color = if (!option.isImplemented) MaterialTheme.colorScheme.onSurfaceVariant else Color.Unspecified
-                                            )
-                                            Text(
-                                                text = option.description,
-                                                style = MaterialTheme.typography.bodySmall,
-                                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
-                                                maxLines = 2,
-                                                lineHeight = androidx.compose.ui.unit.TextUnit(14f, androidx.compose.ui.unit.TextUnitType.Sp)
-                                            )
-                                        }
-                                    }
-                                }
-                                // Fill empty spaces if the row isn't full
-                                val emptySpaces = columns - rowOptions.size
-                                for (i in 0 until emptySpaces) {
-                                    Spacer(modifier = Modifier.weight(1f))
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    if (showDeleteDialog != null) {
-        AlertDialog(
-            onDismissRequest = { showDeleteDialog = null },
-            title = { Text("Delete Test") },
-            text = { Text("Delete \"${showDeleteDialog!!.title}\"? This cannot be undone.") },
-            confirmButton = {
-                TextButton(onClick = {
-                    homeViewModel.deleteTest(showDeleteDialog!!.id)
-                    showDeleteDialog = null
-                    selectedTest = null
-                }) {
-                    Text("Delete", color = MaterialTheme.colorScheme.error)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showDeleteDialog = null }) { Text("Cancel") }
-            }
-        )
-    }
-
-    if (showJsonDialog) {
-        var jsonText by remember { mutableStateOf("") }
-        val jsonLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-            if (uri != null) {
-                showJsonDialog = false
-                showBottomSheet = false
-                scope.launch {
-                    val text = context.contentResolver.openInputStream(uri)?.bufferedReader()?.use { it.readText() } ?: ""
-                    processingViewModel.generateQuestionsFromText(text, InputSource.Json, "file.json")
-                    navController.navigate(AppRoutes.Processing)
-                }
-            }
-        }
-
-        AlertDialog(
-            onDismissRequest = { showJsonDialog = false },
-            title = { Text("From JSON") },
-            text = {
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    Text("Paste raw JSON below or upload a .json file.", style = MaterialTheme.typography.bodyMedium)
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = jsonText,
-                        onValueChange = { jsonText = it },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(150.dp),
-                        placeholder = { Text("{\n  \"questions\": [\n    ...\n  ]\n}") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedButton(
-                        modifier = Modifier.fillMaxWidth(),
-                        onClick = { jsonLauncher.launch(arrayOf("application/json", "*/*")) }
-                    ) {
-                        Text("Upload .json File")
-                    }
-                }
-            },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (jsonText.isNotBlank()) {
-                            showJsonDialog = false
-                            showBottomSheet = false
-                            processingViewModel.generateQuestionsFromText(jsonText, InputSource.Json, "Pasted JSON")
-                            navController.navigate(AppRoutes.Processing)
-                        }
-                    },
-                    enabled = jsonText.isNotBlank()
-                ) {
-                    Text("Parse JSON")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showJsonDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
-
-    if (showTopicDialog) {
-        var topicText by remember { mutableStateOf("") }
-
-        AlertDialog(
-            onDismissRequest = { showTopicDialog = false },
-            title = { Text("From Topic") },
-            text = {
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    Text("Enter any topic and the AI will generate questions for you.", style = MaterialTheme.typography.bodyMedium)
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = topicText,
-                        onValueChange = { topicText = it },
-                        modifier = Modifier.fillMaxWidth(),
-                        placeholder = { Text("e.g. Photosynthesis, Indian History...") },
-                        singleLine = true
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Text("Examples:", style = MaterialTheme.typography.labelMedium)
-                    LazyRow(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        modifier = Modifier.padding(top = 8.dp)
-                    ) {
-                        item { AssistChip(onClick = { topicText = "Photosynthesis" }, label = { Text("Photosynthesis") }) }
-                        item { AssistChip(onClick = { topicText = "Indian History" }, label = { Text("Indian History") }) }
-                        item { AssistChip(onClick = { topicText = "Trigonometry" }, label = { Text("Trigonometry") }) }
-                    }
-                }
-            },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (topicText.isNotBlank()) {
-                            showTopicDialog = false
-                            showBottomSheet = false
-                            processingViewModel.generateQuestionsFromText(topicText, InputSource.Topic, "Topic: $topicText")
-                            navController.navigate(AppRoutes.Processing)
-                        }
-                    },
-                    enabled = topicText.isNotBlank()
-                ) {
-                    Text("Generate")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showTopicDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
-
-    if (showUrlDialog) {
-        var urlText by remember { mutableStateOf("") }
-
-        AlertDialog(
-            onDismissRequest = { showUrlDialog = false },
-            title = { Text("From Web URL") },
-            text = {
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    Text("Paste a link to any article, blog post, or Wikipedia page.", style = MaterialTheme.typography.bodyMedium)
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = urlText,
-                        onValueChange = { urlText = it },
-                        modifier = Modifier.fillMaxWidth(),
-                        placeholder = { Text("https://example.com/article...") },
-                        singleLine = true,
-                        keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = KeyboardType.Uri)
-                    )
-                }
-            },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (urlText.isNotBlank()) {
-                            showUrlDialog = false
-                            showBottomSheet = false
-                            processingViewModel.processWebUrl(urlText)
-                            navController.navigate(AppRoutes.Processing)
-                        }
-                    },
-                    enabled = urlText.isNotBlank() && android.util.Patterns.WEB_URL.matcher(urlText).matches()
-                ) {
-                    Text("Extract")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showUrlDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
-
-    if (showYouTubeDialog) {
-        var ytUrlText by remember { mutableStateOf("") }
-
-        AlertDialog(
-            onDismissRequest = { showYouTubeDialog = false },
-            title = { Text("From YouTube") },
-            text = {
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    Text("Paste a link to any YouTube video with captions.", style = MaterialTheme.typography.bodyMedium)
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = ytUrlText,
-                        onValueChange = { ytUrlText = it },
-                        modifier = Modifier.fillMaxWidth(),
-                        placeholder = { Text("https://youtube.com/watch?v=...") },
-                        singleLine = true,
-                        keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = KeyboardType.Uri)
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        "💡 Works best with: Physics Wallah, Khan Academy, NPTEL, Unacademy lectures",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        text = "M",
+                        style = MaterialTheme.typography.headlineSmall.copy(
+                            color = Color.White,
+                            fontWeight = FontWeight.ExtraBold
+                        )
                     )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .horizontalScroll(rememberScrollState()),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        SuggestionChip(
-                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=YEzF9VW-RbY" },
-                            label = { Text("Physics Wallah") }
-                        )
-                        SuggestionChip(
-                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=XhG5s4OIQaU" },
-                            label = { Text("Khan Academy") }
-                        )
-                        SuggestionChip(
-                            onClick = { ytUrlText = "https://www.youtube.com/watch?v=sI3CjU_Jg0Q" },
-                            label = { Text("NPTEL") }
-                        )
-                    }
                 }
-            },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (ytUrlText.isNotBlank()) {
-                            showYouTubeDialog = false
-                            showBottomSheet = false
-                            processingViewModel.processYouTubeUrl(ytUrlText)
-                            navController.navigate(AppRoutes.Processing)
-                        }
-                    },
-                    enabled = ytUrlText.isNotBlank() && (ytUrlText.contains("youtube.com") || ytUrlText.contains("youtu.be"))
-                ) {
-                    Text("Extract")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showYouTubeDialog = false }) { Text("Cancel") }
             }
-        )
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // Stat pills row
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            StatPill(modifier = Modifier.weight(1f), emoji = "📚", value = "$testsCount", label = "Tests")
+            StatPill(modifier = Modifier.weight(1f), emoji = "⭐", value = "${avgScore}%", label = "Avg Score")
+            StatPill(modifier = Modifier.weight(1f), emoji = "🔥", value = "$streak", label = "Streak")
+        }
     }
+}
 
-    if (showVoiceDialog) {
-        var voiceText by remember { mutableStateOf("") }
-        var isListening by remember { mutableStateOf(false) }
-
-        val speechRecognizer = remember { android.speech.SpeechRecognizer.createSpeechRecognizer(context) }
-        val speechRecognizerIntent = remember {
-            android.content.Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-                putExtra(android.speech.RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
-            }
-        }
-
-        DisposableEffect(Unit) {
-            val listener = object : android.speech.RecognitionListener {
-                override fun onReadyForSpeech(params: Bundle?) {}
-                override fun onBeginningOfSpeech() {}
-                override fun onRmsChanged(rmsdB: Float) {}
-                override fun onBufferReceived(buffer: ByteArray?) {}
-                override fun onEndOfSpeech() { isListening = false }
-                override fun onError(error: Int) { isListening = false }
-                override fun onResults(results: Bundle?) {
-                    val matches = results?.getStringArrayList(android.speech.SpeechRecognizer.RESULTS_RECOGNITION)
-                    if (!matches.isNullOrEmpty()) {
-                        voiceText = matches[0]
-                    }
-                    isListening = false
-                }
-                override fun onPartialResults(partialResults: Bundle?) {
-                    val matches = partialResults?.getStringArrayList(android.speech.SpeechRecognizer.RESULTS_RECOGNITION)
-                    if (!matches.isNullOrEmpty()) {
-                        voiceText = matches[0]
-                    }
-                }
-                override fun onEvent(eventType: Int, params: Bundle?) {}
-            }
-            speechRecognizer.setRecognitionListener(listener)
-            onDispose {
-                speechRecognizer.destroy()
-            }
-        }
-
-        val audioPermissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) {
-                isListening = true
-                speechRecognizer.startListening(speechRecognizerIntent)
-            }
-        }
-
-        AlertDialog(
-            onDismissRequest = { 
-                if (isListening) speechRecognizer.stopListening()
-                showVoiceDialog = false 
-            },
-            title = { Text("From Voice") },
-            text = {
-                Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("Dictate text to generate questions.", style = MaterialTheme.typography.bodyMedium)
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = voiceText,
-                        onValueChange = { voiceText = it },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(150.dp),
-                        placeholder = { Text("Tap microphone to start speaking...") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    FloatingActionButton(
-                        onClick = {
-                            if (isListening) {
-                                speechRecognizer.stopListening()
-                                isListening = false
-                            } else {
-                                if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
-                                    isListening = true
-                                    speechRecognizer.startListening(speechRecognizerIntent)
-                                } else {
-                                    audioPermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
-                                }
-                            }
-                        },
-                        containerColor = if (isListening) MaterialTheme.colorScheme.errorContainer else MaterialTheme.colorScheme.primaryContainer
-                    ) {
-                        Icon(
-                            imageVector = if (isListening) Icons.Default.Stop else Icons.Default.Mic,
-                            contentDescription = if (isListening) "Stop" else "Listen",
-                            tint = if (isListening) MaterialTheme.colorScheme.onErrorContainer else MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                    }
-                }
-            },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (voiceText.isNotBlank()) {
-                            if (isListening) speechRecognizer.stopListening()
-                            showVoiceDialog = false
-                            showBottomSheet = false
-                            processingViewModel.generateQuestionsFromText(voiceText, InputSource.Audio, "Dictated Audio")
-                            navController.navigate(AppRoutes.Processing)
-                        }
-                    },
-                    enabled = voiceText.isNotBlank() && !isListening
-                ) {
-                    Text("Generate")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { 
-                    if (isListening) speechRecognizer.stopListening()
-                    showVoiceDialog = false 
-                }) { Text("Cancel") }
-            }
+@Composable
+private fun StatPill(
+    modifier: Modifier = Modifier,
+    emoji: String,
+    value: String,
+    label: String
+) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(16.dp))
+            .background(SurfaceElev1)
+            .border(1.dp, Border, RoundedCornerShape(16.dp))
+            .padding(vertical = 12.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = emoji, fontSize = 18.sp)
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(
+            text = value,
+            style = MaterialTheme.typography.titleMedium.copy(
+                color = OnSurface,
+                fontWeight = FontWeight.Bold
+            )
+        )
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelSmall.copy(color = OnSurfaceMuted),
+            maxLines = 1
         )
     }
 }
+
+private fun computeStreak(tests: List<TestHistoryEntity>): Int {
+    val calendar = java.util.Calendar.getInstance()
+    val takenDays = tests
+        .mapNotNull { it.lastTakenAt }
+        .map { ms ->
+            calendar.timeInMillis = ms
+            Triple(
+                calendar.get(java.util.Calendar.YEAR),
+                calendar.get(java.util.Calendar.MONTH),
+                calendar.get(java.util.Calendar.DAY_OF_MONTH)
+            )
+        }
+        .toSet()
+    
+    if (takenDays.isEmpty()) return 0
+    
+    var streak = 0
+    val today = java.util.Calendar.getInstance()
+    while (true) {
+        val key = Triple(
+            today.get(java.util.Calendar.YEAR),
+            today.get(java.util.Calendar.MONTH),
+            today.get(java.util.Calendar.DAY_OF_MONTH)
+        )
+        if (key !in takenDays) break
+        streak++
+        today.add(java.util.Calendar.DAY_OF_MONTH, -1)
+    }
+    return streak
+}
+
+// ─── Hero Create Button ───────────────────────────────────────────────────────
+
+@Composable
+private fun CreateNewTestHero(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    var pressed by remember { mutableStateOf(false) }
+    val scale by animateFloatAsState(
+        targetValue = if (pressed) 0.97f else 1f,
+        animationSpec = tween(100),
+        label = "heroScale"
+    )
+
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .scale(scale)
+            .clip(RoundedCornerShape(24.dp))
+            .background(
+                Brush.linearGradient(
+                    colors = listOf(Color(0xFF3D5EF5), Color(0xFF9B4DFF))
+                )
+            )
+            .clickable {
+                pressed = true
+                onClick()
+            }
+            .padding(horizontal = 24.dp, vertical = 22.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "Create New Test",
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "PDF, YouTube, Web, Topic & more",
+                    style = MaterialTheme.typography.bodySmall.copy(
+                        color = Color.White.copy(alpha = 0.78f)
+                    )
+                )
+            }
+
+            Box(
+                modifier = Modifier
+                    .size(48.dp)
+                    .clip(CircleShape)
+                    .background(Color.White.copy(alpha = 0.22f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = "Create",
+                    tint = Color.White,
+                    modifier = Modifier.size(26.dp)
+                )
+            }
+        }
+    }
+
+    LaunchedEffect(pressed) {
+        if (pressed) {
+            kotlinx.coroutines.delay(150)
+            pressed = false
+        }
+    }
+}
+
+// ─── Empty State ──────────────────────────────────────────────────────────────
+
+@Composable
+private fun EmptyTestsState(
+    modifier: Modifier = Modifier,
+    onCreateClick: () -> Unit
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(20.dp))
+            .background(SurfaceElev1)
+            .border(1.dp, Border, RoundedCornerShape(20.dp))
+            .padding(vertical = 36.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = "📚", fontSize = 40.sp)
+        Spacer(modifier = Modifier.height(12.dp))
+        Text(
+            text = "No tests yet",
+            style = MaterialTheme.typography.titleMedium.copy(
+                color = OnSurface,
+                fontWeight = FontWeight.SemiBold
+            )
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+        Text(
+            text = "Tap the button above to create\nyour first test",
+            style = MaterialTheme.typography.bodySmall.copy(color = OnSurfaceMuted),
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+// ─── Bottom Sheet Components ──────────────────────────────────────────────────
+
+@Composable
+private fun BottomSheetGroup(
+    title: String,
+    options: List<InputOption>,
+    onOptionClick: (InputOption) -> Unit
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.labelMedium.copy(
+                color = OnSurfaceMuted,
+                fontWeight = FontWeight.SemiBold,
+                letterSpacing = 0.5.sp
+            ),
+            modifier = Modifier.padding(bottom = 4.dp)
+        )
+        // 2-column grid using chunked rows
+        options.chunked(2).forEach { rowOptions ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                rowOptions.forEach { option ->
+                    Box(modifier = Modifier.weight(1f)) {
+                        BottomSheetOptionCard(
+                            option = option,
+                            onClick = { onOptionClick(option) }
+                        )
+                    }
+                }
+                // If odd number of items, fill the second column with empty space
+                if (rowOptions.size == 1) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun BottomSheetOptionRow(
+    option: InputOption,
+    onClick: () -> Unit
+) {
+    val enabled = option.implemented
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(SurfaceElev2)
+            .border(1.dp, Border, RoundedCornerShape(14.dp))
+            .clickable(enabled = enabled) { onClick() }
+            .padding(horizontal = 16.dp, vertical = 13.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            modifier = Modifier
+                .size(40.dp)
+                .clip(CircleShape)
+                .background(option.color.copy(alpha = if (enabled) 0.13f else 0.06f)),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                imageVector = option.icon,
+                contentDescription = null,
+                tint = option.color.copy(alpha = if (enabled) 1f else 0.4f),
+                modifier = Modifier.size(20.dp)
+            )
+        }
+
+        Spacer(modifier = Modifier.width(14.dp))
+
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = option.title,
+                style = MaterialTheme.typography.titleSmall.copy(
+                    color = OnSurface.copy(alpha = if (enabled) 1f else 0.45f),
+                    fontWeight = FontWeight.SemiBold
+                )
+            )
+            Text(
+                text = option.description,
+                style = MaterialTheme.typography.bodySmall.copy(
+                    color = OnSurfaceMuted.copy(alpha = if (enabled) 1f else 0.45f)
+                ),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+
+        if (!enabled) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(50))
+                    .background(AccentAmber.copy(alpha = 0.13f))
+                    .border(1.dp, AccentAmber.copy(alpha = 0.3f), RoundedCornerShape(50))
+                    .padding(horizontal = 9.dp, vertical = 3.dp)
+            ) {
+                Text(
+                    text = "Soon",
+                    style = MaterialTheme.typography.labelSmall.copy(
+                        color = AccentAmber,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun BottomSheetOptionCard(
+    option: InputOption,
+    onClick: () -> Unit
+) {
+    val enabled = option.implemented
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(SurfaceElev2)
+            .border(1.dp, Border, RoundedCornerShape(14.dp))
+            .clickable(enabled = enabled) { onClick() }
+            .padding(horizontal = 14.dp, vertical = 14.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(38.dp)
+                    .clip(CircleShape)
+                    .background(option.color.copy(alpha = if (enabled) 0.13f else 0.06f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = option.icon,
+                    contentDescription = null,
+                    tint = option.color.copy(alpha = if (enabled) 1f else 0.4f),
+                    modifier = Modifier.size(20.dp)
+                )
+            }
+
+            if (!enabled) {
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(50))
+                        .background(AccentAmber.copy(alpha = 0.13f))
+                        .border(1.dp, AccentAmber.copy(alpha = 0.3f), RoundedCornerShape(50))
+                        .padding(horizontal = 7.dp, vertical = 2.dp)
+                ) {
+                    Text(
+                        text = "Soon",
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            color = AccentAmber,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    )
+                }
+            }
+        }
+
+        Column {
+            Text(
+                text = option.title,
+                style = MaterialTheme.typography.titleSmall.copy(
+                    color = OnSurface.copy(alpha = if (enabled) 1f else 0.45f),
+                    fontWeight = FontWeight.SemiBold
+                )
+            )
+            Text(
+                text = option.description,
+                style = MaterialTheme.typography.bodySmall.copy(
+                    color = OnSurfaceMuted.copy(alpha = if (enabled) 1f else 0.45f)
+                ),
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+    }
+}
+
+// ─── Test History Card ────────────────────────────────────────────────────────
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TestHistoryCard(
     test: TestHistoryEntity,
-    isSelected: Boolean,
-    onClick: () -> Unit,
-    onLongClick: () -> Unit,
+    onStartTest: () -> Unit,
+    onEditTest: () -> Unit,
+    onShareTest: () -> Unit,
+    onDeleteTest: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    ElevatedCard(
+    var showMenu by remember { mutableStateOf(false) }
+
+    val bestScore = test.bestScore ?: 0
+    val totalCount = test.questionCount.coerceAtLeast(1)
+    val scoreFraction = (bestScore.toFloat() / totalCount.toFloat()).coerceIn(0f, 1f)
+
+    val scoreColor = when {
+        test.bestScore == null   -> OnSurfaceMuted
+        scoreFraction >= 0.8f   -> AccentGreen
+        scoreFraction >= 0.5f   -> AccentAmber
+        else                    -> AccentRed
+    }
+
+    Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 6.dp)
-            .border(
-                width = if (isSelected) 2.dp else 0.dp,
-                color = if (isSelected) MaterialTheme.colorScheme.primary else Color.Transparent,
-                shape = RoundedCornerShape(16.dp)
-            ),
-        shape = RoundedCornerShape(16.dp)
+            .clip(RoundedCornerShape(18.dp))
+            .background(SurfaceElev1)
+            .border(1.dp, Border, RoundedCornerShape(18.dp))
+            .combinedClickable(
+                onClick = onStartTest,
+                onLongClick = { showMenu = true }
+            )
     ) {
-        Row(
-            modifier = Modifier
-                .combinedClickable(onClick = onClick, onLongClick = onLongClick)
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
+        Column(modifier = Modifier.padding(16.dp)) {
+
+            // Top: title + score % + menu
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 Text(
                     text = test.title,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.titleMedium.copy(
+                        color = OnSurface,
+                        fontWeight = FontWeight.SemiBold
+                    ),
+                    modifier = Modifier.weight(1f),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "${test.questionCount} questions · ${test.category}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                SuggestionChip(
-                    onClick = {},
-                    label = {
-                        Text(
-                            text = if (test.lastTakenAt == null) "Never taken"
-                            else "Last taken: ${formatRelativeDate(test.lastTakenAt)}"
-                        )
-                    }
-                )
-            }
-            if (test.bestScorePercent != null) {
-                Box(contentAlignment = Alignment.Center, modifier = Modifier.size(52.dp)) {
-                    CircularProgressIndicator(
-                        progress = { test.bestScorePercent / 100f },
-                        modifier = Modifier.size(52.dp),
-                        color = if (test.bestScorePercent >= 60f) Color(0xFF2D7A4A) else Color(0xFFC0432A),
-                        strokeWidth = 4.dp,
-                        trackColor = MaterialTheme.colorScheme.surfaceVariant
-                    )
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                // Score badge
+                if (test.bestScorePercent != null) {
                     Text(
                         text = "${test.bestScorePercent.toInt()}%",
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Bold
+                        style = MaterialTheme.typography.titleMedium.copy(
+                            color = scoreColor,
+                            fontWeight = FontWeight.Bold
+                        )
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                }
+
+                Box {
+                    IconButton(
+                        onClick = { showMenu = !showMenu },
+                        modifier = Modifier.size(32.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.MoreVert,
+                            contentDescription = "More options",
+                            tint = OnSurfaceMuted,
+                            modifier = Modifier.size(18.dp)
+                        )
+                    }
+                    DropdownMenu(
+                        expanded = showMenu,
+                        onDismissRequest = { showMenu = false }
+                    ) {
+                        DropdownMenuItem(
+                            text = { Text(if (test.lastTakenAt != null) "Retest" else "Start") },
+                            onClick = { showMenu = false; onStartTest() }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Edit") },
+                            onClick = { showMenu = false; onEditTest() }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Delete", color = AccentRed) },
+                            onClick = { showMenu = false; onDeleteTest() }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Share Test") },
+                            leadingIcon = { Icon(Icons.Default.Share, null) },
+                            onClick = {
+                                showMenu = false
+                                onShareTest()
+                            }
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+            // Category + question count chips
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = test.category.ifBlank { "General" },
+                    style = MaterialTheme.typography.labelSmall.copy(
+                        color = OnSurfaceMuted,
+                        fontWeight = FontWeight.Medium
+                    )
+                )
+                Text(text = "•", color = OnSurfaceMuted, style = MaterialTheme.typography.labelSmall)
+                Text(
+                    text = "${test.questionCount ?: 0} questions",
+                    style = MaterialTheme.typography.labelSmall.copy(color = OnSurfaceMuted)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            // Progress bar
+            val correct  = test.bestScore ?: 0
+            val wrong    = test.wrongAnswers ?: 0
+            val skipped  = (test.questionCount - correct - wrong).coerceAtLeast(0)
+            ScoreBreakdownBar(
+                correct = correct,
+                wrong = wrong,
+                skipped = skipped,
+                total = test.questionCount,
+                neverTaken = test.lastTakenAt == null,
+                modifier = Modifier.padding(top = 6.dp, bottom = 2.dp)
+            )
+
+            if (test.lastTakenAt != null) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    modifier = Modifier.padding(top = 4.dp)
+                ) {
+                    LegendDot(color = Color(0xFF4CAF50), label = "Correct $correct")
+                    if (wrong > 0) LegendDot(color = Color(0xFFEF5350), label = "Wrong $wrong")
+                    if (skipped > 0) LegendDot(color = Color(0xFFFFA726), label = "Skipped $skipped")
+                }
+            }
+
+            Spacer(modifier = Modifier.height(14.dp))
+
+            // Action buttons
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Button(
+                    onClick = onStartTest,
+                    modifier = Modifier.weight(1f).height(40.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Primary,
+                        contentColor = Color.White
+                    ),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.PlayArrow,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = if (test.lastTakenAt != null) "Retest" else "Start",
+                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold)
+                    )
+                }
+
+                OutlinedButton(
+                    onClick = onEditTest,
+                    modifier = Modifier.weight(1f).height(40.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = OnSurface),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Text(
+                        text = "✏  Edit",
+                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Medium)
                     )
                 }
             }
@@ -911,7 +1058,233 @@ fun TestHistoryCard(
     }
 }
 
-fun formatRelativeDate(timestamp: Long): String {
-    val format = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
-    return format.format(Date(timestamp))
+// ─── Legacy helper composables kept for compatibility ─────────────────────────
+
+@Composable
+fun StatChip(icon: ImageVector, value: String, label: String) {
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(SurfaceElev2)
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(14.dp), tint = Primary)
+        Text(text = value, style = MaterialTheme.typography.labelLarge.copy(color = Primary, fontWeight = FontWeight.Bold))
+        Text(text = label, style = MaterialTheme.typography.labelSmall.copy(color = OnSurfaceMuted))
+    }
+}
+
+@Composable
+fun InputOptionCard(option: InputOption, onClick: () -> Unit) {
+    BottomSheetOptionRow(option = option, onClick = onClick)
+}
+
+@Composable
+fun InputSourceGrid(options: Map<String, List<InputOption>>, onOptionClick: (InputOption) -> Unit) {
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        options.values.flatten().forEach { option ->
+            BottomSheetOptionRow(option = option, onClick = { onOptionClick(option) })
+        }
+    }
+}
+
+@Composable
+fun MagicInputDialog(
+    title: String,
+    placeholder: String,
+    isMultiline: Boolean = false,
+    showJsonExtras: Boolean = false,
+    onDismiss: () -> Unit,
+    onSubmit: (String) -> Unit
+) {
+    var text by remember { mutableStateOf("") }
+    val context = LocalContext.current
+
+    val jsonLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        uri?.let {
+            try {
+                context.contentResolver.openInputStream(it)?.use { stream ->
+                    text = stream.bufferedReader().use { it.readText() }
+                }
+            } catch (e: Exception) {
+                // silent fail or you could add a toast here
+            }
+        }
+    }
+
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            shape = RoundedCornerShape(24.dp),
+            colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(24.dp)
+            ) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontWeight = FontWeight.Bold,
+                        color = OnSurface
+                    )
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                if (showJsonExtras) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        OutlinedButton(
+                            onClick = { jsonLauncher.launch("application/json") },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Icon(imageVector = Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text("Upload JSON", fontSize = 12.sp)
+                        }
+
+                        OutlinedButton(
+                            onClick = {
+                                val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                                val clipData = clipboard.primaryClip
+                                if (clipData != null && clipData.itemCount > 0) {
+                                    text = clipData.getItemAt(0).text?.toString() ?: ""
+                                }
+                            },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Icon(imageVector = Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text("Paste Clip", fontSize = 12.sp)
+                        }
+                    }
+                }
+                OutlinedTextField(
+                    value = text,
+                    onValueChange = { text = it },
+                    placeholder = { Text(placeholder) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(
+                            min = if (isMultiline) 150.dp else 56.dp,
+                            max = 400.dp
+                        ),
+                    shape = RoundedCornerShape(12.dp)
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.End
+                ) {
+                    TextButton(onClick = onDismiss) {
+                        Text("Cancel", color = OnSurfaceMuted)
+                    }
+                    Button(
+                        onClick = { if (text.isNotBlank()) onSubmit(text) },
+                        colors = ButtonDefaults.buttonColors(containerColor = Primary)
+                    ) {
+                        Text("Submit")
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun ScoreBreakdownBar(
+    correct: Int,
+    wrong: Int,
+    skipped: Int,
+    total: Int,
+    neverTaken: Boolean,
+    modifier: Modifier = Modifier
+) {
+    if (neverTaken || total <= 0) {
+        // Show a plain subtle track — "Not attempted yet"
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(6.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color(0xFFE0E0E0))  // light gray track
+        )
+        return
+    }
+
+    val totalF = total.toFloat()
+    val correctFraction = (correct.toFloat() / totalF).coerceIn(0f, 1f)
+    val wrongFraction   = (wrong.toFloat()   / totalF).coerceIn(0f, 1f - correctFraction)
+    val skippedFraction = (skipped.toFloat() / totalF).coerceIn(0f, 1f - correctFraction - wrongFraction)
+
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(6.dp)
+            .clip(RoundedCornerShape(50))
+    ) {
+        // Green segment — correct
+        if (correctFraction > 0f) {
+            Box(
+                modifier = Modifier
+                    .weight(correctFraction)
+                    .fillMaxHeight()
+                    .background(Color(0xFF4CAF50))
+            )
+        }
+        // Red segment — wrong
+        if (wrongFraction > 0f) {
+            Box(
+                modifier = Modifier
+                    .weight(wrongFraction)
+                    .fillMaxHeight()
+                    .background(Color(0xFFEF5350))
+            )
+        }
+        // Amber segment — skipped
+        if (skippedFraction > 0f) {
+            Box(
+                modifier = Modifier
+                    .weight(skippedFraction)
+                    .fillMaxHeight()
+                    .background(Color(0xFFFFA726))
+            )
+        }
+        // Gray segment — remainder
+        val remainFraction = (1f - correctFraction - wrongFraction - skippedFraction).coerceAtLeast(0f)
+        if (remainFraction > 0.001f) {
+            Box(
+                modifier = Modifier
+                    .weight(remainFraction)
+                    .fillMaxHeight()
+                    .background(Color(0xFFE0E0E0))
+            )
+        }
+    }
+}
+
+@Composable
+private fun LegendDot(color: Color, label: String) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Box(
+            modifier = Modifier
+                .size(6.dp)
+                .background(color, CircleShape)
+        )
+        Spacer(Modifier.width(4.dp))
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelSmall.copy(
+                fontSize = 10.sp,
+                color = OnSurfaceMuted
+            )
+        )
+    }
 }

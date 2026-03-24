@@ -12,4 +12,5 @@ sealed class InputSource {
     data object Camera : InputSource()
     data object Audio : InputSource()
     data object ShareIntent : InputSource()
+    data object PROMPT : InputSource()
 }
