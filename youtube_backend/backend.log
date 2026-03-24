@@ -1,0 +1,11 @@
+ * Serving Flask app 'main'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.117.156:5002
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [21/Mar/2026 08:25:20] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2026 08:26:19] "GET /transcript?url=https://youtu.be/6osoZUuazVI?si%3DoV_OJGLmjMXnxg-8 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2026 16:42:00] "GET /transcript?url=https://youtu.be/HN0JveCEXmE?si%3DcXMPYqS6kGBKDIOb HTTP/1.1" 200 -
+127.0.0.1 - - [23/Mar/2026 21:52:42] "GET /transcript?url=https://youtu.be/Q6Gw08pwhws?si%3DtDTSHCLYhi43xKhm HTTP/1.1" 200 -
