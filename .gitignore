@@ -1,16 +1,60 @@
+# =========================
+# Android / Gradle
+# =========================
+
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+local.properties
+secrets.properties
+
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
-secrets.properties
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+
+.idea/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# =========================
+# macOS
+# =========================
+
+.DS_Store
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+venv/
+.env/
+
+# =========================
+# Logs / Temp
+# =========================
+
+logs/
+*.out
+*.tmp
+
+# =========================
+# Node / Misc
+# =========================
+
+node_modules/
+dist/
