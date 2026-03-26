@@ -634,7 +634,7 @@ fun QuestionTextField(
         value = value,
         onValueChange = onValueChange,
         textStyle = MaterialTheme.typography.bodyLarge.copy(
-            color = OnSurface,
+            color = Color.Black,
             fontWeight = FontWeight.Normal
         ),
         cursorBrush = SolidColor(Primary),
@@ -705,7 +705,7 @@ fun OptionRow(
             value = value,
             onValueChange = onValueChange,
             textStyle = MaterialTheme.typography.bodyMedium.copy(
-                color = OnSurface,
+                color = Color.Black,
                 fontWeight = FontWeight.Normal
             ),
             cursorBrush = SolidColor(Primary),
@@ -835,7 +835,7 @@ fun SaveTestDialog(
                 placeholder = { Text("e.g. Chemistry Chapter 5 Test") },
                 modifier = Modifier.fillMaxWidth(),
                 textStyle = MaterialTheme.typography.bodyMedium.copy(
-                    color = OnSurface
+                    color = Color.Black
                 )
             )
             

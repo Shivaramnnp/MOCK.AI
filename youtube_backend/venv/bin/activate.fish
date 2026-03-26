@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /Users/shivarampatel/AndroidStudioProjects/pdf_to_mock/youtube_backend/venv
+set -gx VIRTUAL_ENV /Users/shivarampatel/AndroidStudioProjects/MOCK.AI/youtube_backend/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

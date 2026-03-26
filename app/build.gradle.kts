@@ -64,14 +64,19 @@ android {
         localProperties.load(localPropertiesFile.inputStream())
     }
 
+    fun getSafeProperty(key: String, default: String = ""): String {
+        val raw = localProperties.getProperty(key, default)
+        return raw.trim().removeSurrounding("\"").removeSurrounding("'")
+    }
+
     defaultConfig {
-        buildConfigField("String", "GEMINI_API_KEY", "\"${localProperties.getProperty("GEMINI_API_KEY", "")}\"")
-        buildConfigField("String", "SUPABASE_URL", "\"${localProperties.getProperty("SUPABASE_URL", "")}\"")
-        buildConfigField("String", "SUPABASE_ANON_KEY", "\"${localProperties.getProperty("SUPABASE_ANON_KEY", "")}\"")
-        buildConfigField("String", "GROQ_API_KEY", "\"${localProperties.getProperty("GROQ_API_KEY", "")}\"")
-        buildConfigField("String", "GEMINI_FLASH_LITE_KEY", "\"${localProperties.getProperty("GEMINI_FLASH_LITE_KEY", "")}\"")
-        buildConfigField("String", "YOUTUBE_GEMINI_KEY", "\"${localProperties.getProperty("YOUTUBE_GEMINI_KEY", "")}\"")
-        buildConfigField("String", "YOUTUBE_BACKEND_URL", "\"${localProperties.getProperty("YOUTUBE_BACKEND_URL", "http://localhost:5000")}\"")
+        buildConfigField("String", "GEMINI_API_KEY", "\"${getSafeProperty("GEMINI_API_KEY")}\"")
+        buildConfigField("String", "SUPABASE_URL", "\"${getSafeProperty("SUPABASE_URL")}\"")
+        buildConfigField("String", "SUPABASE_ANON_KEY", "\"${getSafeProperty("SUPABASE_ANON_KEY")}\"")
+        buildConfigField("String", "GROQ_API_KEY", "\"${getSafeProperty("GROQ_API_KEY")}\"")
+        buildConfigField("String", "GEMINI_FLASH_LITE_KEY", "\"${getSafeProperty("GEMINI_FLASH_LITE_KEY")}\"")
+        buildConfigField("String", "YOUTUBE_GEMINI_KEY", "\"${getSafeProperty("YOUTUBE_GEMINI_KEY")}\"")
+        buildConfigField("String", "YOUTUBE_BACKEND_URL", "\"${getSafeProperty("YOUTUBE_BACKEND_URL", "http://localhost:5000")}\"")
     }
 }
 
@@ -107,4 +112,10 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.kotlinx)
     implementation(libs.androidx.webkit)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
