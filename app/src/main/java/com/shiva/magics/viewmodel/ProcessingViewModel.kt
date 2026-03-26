@@ -67,7 +67,7 @@ class ProcessingViewModel(
     private var keepAliveJob: Job? = null
 
     private val geminiMessages = listOf(
-        "Asking Gemini AI...",
+        "Asking  AI...",
         "Extracting questions...",
         "Almost there...",
         "Preparing your test..."

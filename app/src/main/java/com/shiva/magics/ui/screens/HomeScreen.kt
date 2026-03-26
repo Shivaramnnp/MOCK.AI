@@ -1169,13 +1169,21 @@ fun MagicInputDialog(
                 OutlinedTextField(
                     value = text,
                     onValueChange = { text = it },
-                    placeholder = { Text(placeholder) },
+                    placeholder = { Text(placeholder, color = OnSurfaceMuted) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .heightIn(
                             min = if (isMultiline) 150.dp else 56.dp,
                             max = 400.dp
                         ),
+                    textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.Black),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = Color.Black,
+                        unfocusedTextColor = Color.Black,
+                        cursorColor = Primary,
+                        focusedBorderColor = Primary,
+                        unfocusedBorderColor = Border
+                    ),
                     shape = RoundedCornerShape(12.dp)
                 )
                 Spacer(modifier = Modifier.height(24.dp))
