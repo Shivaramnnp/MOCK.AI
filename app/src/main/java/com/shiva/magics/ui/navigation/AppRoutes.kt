@@ -13,4 +13,7 @@ sealed class AppRoutes {
     @Serializable data object Camera : AppRoutes()
     @Serializable data object VoiceRecorder : AppRoutes()
     @Serializable data object Settings : AppRoutes()
+    @Serializable data object Login : AppRoutes()
+    @Serializable data object ForgotPassword : AppRoutes()
+    @Serializable data class OtpVerification(val email: String) : AppRoutes()
 }

@@ -155,7 +155,7 @@ fun CameraScreen(
                                 ViewGroup.LayoutParams.MATCH_PARENT
                             )
                         }
-                        val cameraProviderFuture = ProcessCameraProvider.getInstance(ctx)
+                        val cameraProviderFuture = ProcessCameraProvider. getInstance(ctx)
                         cameraProviderFuture.addListener({
                             val cameraProvider = cameraProviderFuture.get()
                             val preview = androidx.camera.core.Preview.Builder().build().also {

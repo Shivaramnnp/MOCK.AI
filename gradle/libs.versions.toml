@@ -25,6 +25,9 @@ webkit                      = "1.15.0"
 junit                        = "4.13.2"
 androidxJunit                = "1.2.1"
 espressoCore                 = "3.6.1"
+googleServices               = "4.4.2"
+firebaseBom                  = "33.7.0"
+guava                        = "32.1.3-android"
 
 [plugins]
 androidApplication          = { id = "com.android.application", version.ref = "agp" }
@@ -33,6 +36,7 @@ kotlinSerialization         = { id = "org.jetbrains.kotlin.plugin.serialization"
 ksp                         = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlinCompose               = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 secretsGradlePlugin         = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin" }
+googleServicesPlugin        = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 
 [libraries]
 androidx-core-ktx                 = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
@@ -72,3 +76,7 @@ androidx-junit                    = { group = "androidx.test.ext", name = "junit
 androidx-espresso-core            = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-compose-ui-test-junit4   = { module = "androidx.compose.ui:ui-test-junit4" }
 androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+firebase-bom                      = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-auth                     = { module = "com.google.firebase:firebase-auth" }
+firebase-firestore                = { module = "com.google.firebase:firebase-firestore" }
+guava                             = { module = "com.google.guava:guava", version.ref = "guava" }

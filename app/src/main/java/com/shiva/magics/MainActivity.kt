@@ -8,6 +8,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.util.Consumer
 import androidx.core.view.WindowCompat
@@ -146,8 +147,48 @@ class MainActivity : ComponentActivity() {
                 ) {
                     NavHost(
                         navController = navController,
-                        startDestination = AppRoutes.Home
+                        startDestination = AppRoutes.Login
                     ) {
+                        composable<AppRoutes.Login> {
+                            val authViewModel: com.shiva.magics.ui.screens.AuthViewModel = viewModel()
+                            LoginScreen(
+                                viewModel = authViewModel,
+                                onNavigateToHome = {
+                                    navController.navigate(AppRoutes.Home) {
+                                        popUpTo(AppRoutes.Login) { inclusive = true }
+                                    }
+                                },
+                                onNavigateToForgotPassword = {
+                                    navController.navigate(AppRoutes.ForgotPassword)
+                                },
+                                onNavigateToOtpVerification = { email ->
+                                    navController.navigate(AppRoutes.OtpVerification(email))
+                                }
+                            )
+                        }
+                        composable<AppRoutes.ForgotPassword> {
+                            ForgotPasswordScreen(
+                                onNavigateBack = { navController.popBackStack() }
+                            )
+                        }
+                        composable<AppRoutes.OtpVerification> {
+                            val route = it.toRoute<AppRoutes.OtpVerification>()
+                            // Retrieve the same AuthViewModel that was created on the Login backstack entry
+                            val loginEntry = remember(it) {
+                                navController.getBackStackEntry(AppRoutes.Login)
+                            }
+                            val authViewModel: com.shiva.magics.ui.screens.AuthViewModel = viewModel(loginEntry)
+                            OtpVerificationScreen(
+                                email = route.email,
+                                viewModel = authViewModel,
+                                onNavigateToHome = {
+                                    navController.navigate(AppRoutes.Home) {
+                                        popUpTo(AppRoutes.Login) { inclusive = true }
+                                    }
+                                },
+                                onNavigateBack = { navController.popBackStack() }
+                            )
+                        }
                         composable<AppRoutes.Home> {
                             HomeScreen(
                                 navController = navController,
