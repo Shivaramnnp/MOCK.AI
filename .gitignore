@@ -8,6 +8,10 @@
 local.properties
 secrets.properties
 
+# Firebase config (contains project ID - keep private)
+google-services.json
+app/google-services.json
+
 /build
 /captures
 .externalNativeBuild
@@ -43,6 +47,14 @@ __pycache__/
 
 venv/
 .env/
+.env
+*.env
+
+# YouTube backend secrets
+youtube_backend/.env
+youtube_backend/venv/
+youtube_backend/__pycache__/
+youtube_backend/backend.log
 
 # =========================
 # Logs / Temp

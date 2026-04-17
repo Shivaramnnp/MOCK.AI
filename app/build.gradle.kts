@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.secretsGradlePlugin)
+    alias(libs.plugins.googleServicesPlugin)
 }
 
 android {
@@ -77,6 +78,8 @@ android {
         buildConfigField("String", "GEMINI_FLASH_LITE_KEY", "\"${getSafeProperty("GEMINI_FLASH_LITE_KEY")}\"")
         buildConfigField("String", "YOUTUBE_GEMINI_KEY", "\"${getSafeProperty("YOUTUBE_GEMINI_KEY")}\"")
         buildConfigField("String", "YOUTUBE_BACKEND_URL", "\"${getSafeProperty("YOUTUBE_BACKEND_URL", "http://localhost:5000")}\"")
+        buildConfigField("String", "YOUTUBE_DATA_API_KEY", "\"${getSafeProperty("YOUTUBE_DATA_API_KEY")}\"")
+        buildConfigField("String", "SUPADATA_API_KEY", "\"${getSafeProperty("SUPADATA_API_KEY")}\"")
     }
 }
 
@@ -117,5 +120,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.guava)
 }

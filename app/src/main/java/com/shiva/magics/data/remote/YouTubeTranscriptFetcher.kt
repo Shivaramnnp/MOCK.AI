@@ -1,6 +1,7 @@
 package com.shiva.magics.data.remote
 
 import android.util.Log
+import com.shiva.magics.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaType
@@ -23,7 +24,7 @@ object YouTubeTranscriptFetcher {
     private const val CLIENT_NAME = "WEB"
     private const val CLIENT_VERSION = "2.20250319.01.00" // Updated to latest version
     private const val CLIENT_NAME_INT = "1"
-    private const val API_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"
+    private val API_KEY get() = BuildConfig.YOUTUBE_DATA_API_KEY
     private const val USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
 
     fun extractVideoId(url: String): String? {
@@ -272,9 +273,8 @@ object YouTubeTranscriptFetcher {
     private suspend fun tryYouTubeDataApi(videoId: String): Result<Pair<String, String>>? {
         return try {
             Log.d("YOUTUBE_FLOW", "🔄 Trying YouTube Data API v3 captions")
-            
-            // Use a public YouTube Data API key (for demo purposes)
-            val dataApiKey = "AIzaSyAa8yy0GdcGhdtVWtQJlBvFHDhXJ9A6g2E"
+
+            val dataApiKey = BuildConfig.YOUTUBE_DATA_API_KEY
             val url = "https://www.googleapis.com/youtube/v3/captions?videoId=$videoId&key=$dataApiKey&part=snippet"
             
             val request = Request.Builder()

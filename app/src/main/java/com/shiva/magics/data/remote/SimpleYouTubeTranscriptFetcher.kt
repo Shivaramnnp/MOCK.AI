@@ -1,6 +1,7 @@
 package com.shiva.magics.data.remote
 
 import android.util.Log
+import com.shiva.magics.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.*
@@ -50,9 +51,8 @@ object SimpleYouTubeTranscriptFetcher {
     private suspend fun tryYouTubeDataApi(videoId: String): Result<Pair<String, String>>? {
         return try {
             Log.d("SIMPLE_YT", "🔄 Trying YouTube Data API...")
-            
-            // Use a working API key for testing
-            val apiKey = "AIzaSyAa8yy0GdcGhdtVWtQJlBvFHDhXJ9A6g2E"
+
+            val apiKey = BuildConfig.YOUTUBE_DATA_API_KEY
             val url = "https://www.googleapis.com/youtube/v3/captions?videoId=$videoId&key=$apiKey&part=snippet"
             
             val request = Request.Builder()
