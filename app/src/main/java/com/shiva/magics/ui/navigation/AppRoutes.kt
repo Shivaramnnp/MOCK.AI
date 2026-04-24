@@ -16,4 +16,19 @@ sealed class AppRoutes {
     @Serializable data object Login : AppRoutes()
     @Serializable data object ForgotPassword : AppRoutes()
     @Serializable data class OtpVerification(val email: String) : AppRoutes()
+    // Phase 1
+    @Serializable data object RoleSelection : AppRoutes()
+    @Serializable data object Profile : AppRoutes()
+    // Phase 2
+    @Serializable data object Classroom : AppRoutes()
+    @Serializable data class ClassDetail(val classId: String) : AppRoutes()
+    @Serializable data object TeacherDashboard : AppRoutes()
+    @Serializable data object StudentAssignments : AppRoutes()
+    // Phase 3
+    @Serializable data object Analytics : AppRoutes()
+    // Phase 4
+    @Serializable data object Marketplace : AppRoutes()
+    @Serializable data object CreatorDashboard : AppRoutes()
+    @Serializable data class ExamSimulation(val templateId: String) : AppRoutes()
+    @Serializable data class ExamResults(val examId: String) : AppRoutes()
 }

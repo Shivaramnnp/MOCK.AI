@@ -15,7 +15,12 @@ import androidx.room.Relation
         childColumns = ["testId"],
         onDelete = ForeignKey.CASCADE
     )],
-    indices = [Index("testId")]
+    indices = [
+        Index("testId"),
+        Index("pageNumber"),
+        Index("verificationStatus"),
+        Index("trustScore")
+    ]
 )
 data class QuestionEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
@@ -23,7 +28,13 @@ data class QuestionEntity(
     val questionIndex: Int,
     val questionText: String,
     val optionsJson: String,            // JSON array: ["A","B","C","D"]
-    val correctAnswerIndex: Int
+    val correctAnswerIndex: Int,
+    val topic: String? = null,
+    val citationJson: String? = null,
+    val pageNumber: Int? = null,
+    val verificationStatus: String = "UNVERIFIED",
+    val trustScore: Float = 0f,
+    val verifiedAt: Long? = null
 )
 
 data class TestWithQuestions(

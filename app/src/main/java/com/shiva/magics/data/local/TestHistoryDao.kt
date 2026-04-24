@@ -12,6 +12,9 @@ interface TestHistoryDao {
     @Query("SELECT * FROM test_history ORDER BY createdAt DESC")
     fun getAllTests(): Flow<List<TestHistoryEntity>>
 
+    @Query("SELECT * FROM test_history")
+    suspend fun getAllTestsOnce(): List<TestHistoryEntity>
+
     @Transaction
     @Query("SELECT * FROM test_history WHERE id = :id")
     fun getTestWithQuestions(id: Long): Flow<TestWithQuestions>

@@ -5,6 +5,12 @@ import androidx.lifecycle.viewModelScope
 import com.shiva.magics.data.model.ReviewItem
 import com.shiva.magics.data.model.SessionState
 import com.shiva.magics.data.model.TestDefinition
+import com.shiva.magics.util.PerformancePrediction
+import com.shiva.magics.data.local.AppDatabase
+import com.shiva.magics.data.local.PerformancePredictionEntity
+import com.shiva.magics.util.PredictionConfidence
+import com.shiva.magics.util.PredictionRiskLevel
+import com.shiva.magics.util.ReadinessStatus
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -24,6 +30,9 @@ class TestPlayerViewModel : ViewModel() {
     private var _definition: TestDefinition? = null
     val definition get() = _definition
 
+    private var _assignmentId: String? = null
+    val assignmentId get() = _assignmentId
+
     // MUTABLE SESSION — tiny object, safe to copy per interaction
     private val _session = MutableStateFlow<SessionState?>(null)
     val session: StateFlow<SessionState?> = _session.asStateFlow()
@@ -31,6 +40,7 @@ class TestPlayerViewModel : ViewModel() {
     private val _timerSeconds = MutableStateFlow(0)
     val timerSeconds: StateFlow<Int> = _timerSeconds.asStateFlow()
 
+    private var initialTimerSeconds: Int = 0
     private var timerJob: Job? = null
 
     // Built after submission, immutable
@@ -40,11 +50,17 @@ class TestPlayerViewModel : ViewModel() {
     private val _bookmarkedQuestions = MutableStateFlow<Set<Int>>(emptySet())
     val bookmarkedQuestions: StateFlow<Set<Int>> = _bookmarkedQuestions.asStateFlow()
 
+    private val _latestPrediction = MutableStateFlow<PerformancePrediction?>(null)
+    val latestPrediction: StateFlow<PerformancePrediction?> = _latestPrediction.asStateFlow()
+
     fun loadTest(
         definition: TestDefinition,
-        timerDurationSeconds: Int = 0
+        timerDurationSeconds: Int = 0,
+        assignmentId: String? = null
     ) {
         _definition = definition
+        _assignmentId = assignmentId
+        initialTimerSeconds = timerDurationSeconds
         _session.value = SessionState(timerRemainingSeconds = timerDurationSeconds)
         _reviewItems.value = emptyList()
         _elapsedSeconds.value = 0
@@ -69,9 +85,14 @@ class TestPlayerViewModel : ViewModel() {
                     category = testWithQ.test.category,
                     questions = definitions
                 ),
-                timerDurationSeconds = testWithQ.test.timeLimitSeconds ?: 0
+                timerDurationSeconds = if (timerDurationSeconds > 0) timerDurationSeconds else (testWithQ.test.timeLimitSeconds ?: 0)
             )
         }
+    }
+
+    fun retakeCurrentTest() {
+        val def = _definition ?: return
+        loadTest(def, initialTimerSeconds, _assignmentId)
     }
 
     private fun startTimer(durationSeconds: Int) {
@@ -116,6 +137,9 @@ class TestPlayerViewModel : ViewModel() {
     }
 
     fun submitTest() {
+        // Idempotency guard — prevents double-submission from timer auto-submit
+        // racing a simultaneous user tap on the Submit button.
+        if (_session.value?.isSubmitted == true) return
         timerJob?.cancel()
         val def = _definition ?: return
         val sess = _session.value ?: return
@@ -165,6 +189,22 @@ class TestPlayerViewModel : ViewModel() {
         _timerSeconds.value = 0
         _reviewItems.value = emptyList()
         _bookmarkedQuestions.value = emptySet()
+        _latestPrediction.value = null
+    }
+
+    fun loadLatestPrediction(db: AppDatabase) {
+        viewModelScope.launch {
+            val latest = db.performancePredictionDao().getLatestPredictionOnce()
+            latest?.let {
+                _latestPrediction.value = PerformancePrediction(
+                    predictedScore = it.predictedScore,
+                    confidence = PredictionConfidence.valueOf(it.confidence),
+                    riskLevel = PredictionRiskLevel.valueOf(it.riskLevel),
+                    readinessStatus = ReadinessStatus.valueOf(it.readinessStatus),
+                    generatedAt = it.generatedAt
+                )
+            }
+        }
     }
 
     override fun onCleared() {

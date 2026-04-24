@@ -34,15 +34,20 @@ import kotlin.math.min
 import com.shiva.magics.data.repository.TestRepository
 import com.shiva.magics.ui.navigation.AppRoutes
 import com.shiva.magics.ui.theme.*
+import com.shiva.magics.viewmodel.ClassroomViewModel
 import com.shiva.magics.viewmodel.TestPlayerViewModel
+import com.shiva.magics.util.PerformancePrediction
+import com.shiva.magics.data.local.AppDatabase
 import kotlinx.coroutines.launch
 
 @Composable
 fun ResultsScreen(
     navController: NavController,
     viewModel: TestPlayerViewModel,
-    repository: TestRepository
+    repository: TestRepository,
+    classroomViewModel: ClassroomViewModel
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
     val definition = viewModel.definition
     val session by viewModel.session.collectAsState()
     
@@ -63,17 +68,44 @@ fun ResultsScreen(
     val unansweredAnswers = viewModel.getUnansweredCount()
     val wrongAnswers = totalQuestions - correctAnswers - unansweredAnswers
     val elapsedSeconds by viewModel.elapsedSeconds.collectAsState()
+    
+    var hasSubmitted by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
-        if (definition.dbId > 0) {
-            repository.updateBestScore(
-                id = definition.dbId,
+        if (!hasSubmitted) {
+            hasSubmitted = true
+            if (definition.dbId > 0) {
+                repository.updateBestScore(
+                    id = definition.dbId,
+                    score = score,
+                    total = totalQuestions,
+                    wrong = wrongAnswers
+                )
+            }
+        
+        // Phase 2: If this was an assignment, submit score to Classroom
+        val assignmentId = viewModel.assignmentId
+        if (assignmentId != null) {
+            classroomViewModel.submitAssignmentResult(
+                assignmentId = assignmentId,
                 score = score,
-                total = totalQuestions,
-                wrong = wrongAnswers
+                total = totalQuestions
             )
         }
+        
+        // Sprint 2: Intelligence Engine - Calculate Topic Mastery Telemetry
+        repository.submitTestTelemetry(
+            reviewItems = viewModel.reviewItems.value,
+            elapsedSeconds = elapsedSeconds
+        )
+
+        // Week 3: Reload latest prediction after telemetry sync
+        val db = AppDatabase.getDatabase(context)
+        viewModel.loadLatestPrediction(db)
+        }
     }
+
+    val latestPrediction by viewModel.latestPrediction.collectAsState()
 
     // Handle system back button to go home safely
     BackHandler(enabled = navController.previousBackStackEntry != null) {
@@ -137,6 +169,12 @@ fun ResultsScreen(
             
             Spacer(modifier = Modifier.height(24.dp))
             
+            // Academic Forecast Section (Week 3)
+            latestPrediction?.let { prediction ->
+                AcademicForecastCard(prediction = prediction)
+                Spacer(modifier = Modifier.height(24.dp))
+            }
+            
             // Performance Insight Card
             PerformanceInsightCard(
                 percentage = percentage
@@ -147,9 +185,8 @@ fun ResultsScreen(
             // Action Buttons
             ActionButtons(
                 onRetakeTest = {
-                    val defId = definition.dbId
-                    viewModel.loadTestFromDb(defId, repository)
-                    navController.navigate(AppRoutes.TestPlayerWithId(defId)) {
+                    viewModel.retakeCurrentTest()
+                    navController.navigate(AppRoutes.TestPlayer) {
                         popUpTo(AppRoutes.Results) { inclusive = true }
                         launchSingleTop = true
                     }
@@ -594,6 +631,103 @@ fun ActionButtons(
                     fontWeight = FontWeight.Normal
                 )
             )
+        }
+    }
+}
+
+@Composable
+fun AcademicForecastCard(prediction: PerformancePrediction) {
+    val statusColor = when (prediction.readinessStatus) {
+        com.shiva.magics.util.ReadinessStatus.EXCELLENT -> AccentGreen
+        com.shiva.magics.util.ReadinessStatus.READY -> Primary
+        com.shiva.magics.util.ReadinessStatus.NEEDS_IMPROVEMENT -> AccentAmber
+        com.shiva.magics.util.ReadinessStatus.NOT_READY -> AccentRed
+    }
+
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
+        shape = RoundedCornerShape(16.dp),
+        border = androidx.compose.foundation.BorderStroke(1.dp, statusColor.copy(alpha = 0.2f))
+    ) {
+        Column(
+            modifier = Modifier.padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Academic Forecast",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = OnSurface
+                )
+                
+                Card(
+                    colors = CardDefaults.cardColors(containerColor = statusColor.copy(alpha = 0.1f)),
+                    shape = RoundedCornerShape(50)
+                ) {
+                    Text(
+                        text = prediction.readinessStatus.name.replace("_", " "),
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                        color = statusColor,
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                // Predicted Score
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = "${prediction.predictedScore.toInt()}%",
+                        style = MaterialTheme.typography.headlineLarge,
+                        fontWeight = FontWeight.Black,
+                        color = statusColor
+                    )
+                    Text("Predicted Score", style = MaterialTheme.typography.labelSmall, color = OnSurfaceMuted)
+                }
+
+                // Confidence
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = prediction.confidence.name,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = when(prediction.confidence) {
+                            com.shiva.magics.util.PredictionConfidence.HIGH -> AccentGreen
+                            com.shiva.magics.util.PredictionConfidence.MEDIUM -> AccentAmber
+                            else -> OnSurfaceMuted
+                        }
+                    )
+                    Text("Confidence", style = MaterialTheme.typography.labelSmall, color = OnSurfaceMuted)
+                }
+
+                // Risk
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = prediction.riskLevel.name,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = when(prediction.riskLevel) {
+                            com.shiva.magics.util.PredictionRiskLevel.LOW -> AccentGreen
+                            com.shiva.magics.util.PredictionRiskLevel.MEDIUM -> AccentAmber
+                            else -> AccentRed
+                        }
+                    )
+                    Text("Risk Level", style = MaterialTheme.typography.labelSmall, color = OnSurfaceMuted)
+                }
+            }
         }
     }
 }

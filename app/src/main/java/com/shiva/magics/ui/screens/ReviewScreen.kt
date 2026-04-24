@@ -10,7 +10,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.ExpandMore
@@ -30,6 +30,8 @@ import com.shiva.magics.ui.theme.*
 import com.shiva.magics.viewmodel.TestPlayerViewModel
 import com.shiva.magics.data.model.ReviewItem
 import com.shiva.magics.data.model.Question
+import com.shiva.magics.ui.components.CitationBadge
+import com.shiva.magics.ui.components.EvidenceBottomSheet
 import androidx.activity.compose.BackHandler
 
 @Composable
@@ -68,7 +70,7 @@ fun ReviewScreen(
         modifier = Modifier.background(Surface),
         topBar = {
             ReviewTopBar(
-                onBackClick = { 
+                onExit = { 
                     if (navController.previousBackStackEntry != null) {
                         navController.popBackStack() 
                     }
@@ -128,7 +130,7 @@ fun ReviewScreen(
 
 @Composable
 fun ReviewTopBar(
-    onBackClick: () -> Unit
+    onExit: () -> Unit
 ) {
     Card(
         modifier = Modifier
@@ -137,19 +139,17 @@ fun ReviewTopBar(
         colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
-        Row(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+                .padding(horizontal = 16.dp)
         ) {
             IconButton(
-                onClick = onBackClick,
-                modifier = Modifier.size(32.dp)
+                onClick = onExit,
+                modifier = Modifier.size(32.dp).align(Alignment.CenterStart)
             ) {
                 Icon(
-                    imageVector = Icons.Default.ArrowBack,
+                    Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Back",
                     tint = OnSurface,
                     modifier = Modifier.size(20.dp)
@@ -222,7 +222,17 @@ fun ReviewQuestionCard(
         isCorrect -> "✓ Correct"
         else -> "✗ Wrong"
     }
-    
+    var showEvidence by remember { mutableStateOf(false) }
+
+    if (showEvidence && question.citation != null) {
+        EvidenceBottomSheet(
+            citation = question.citation,
+            trustScore = question.trustScore,
+            status = question.verificationStatus,
+            onDismiss = { showEvidence = false }
+        )
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
@@ -343,7 +353,10 @@ fun ReviewQuestionCard(
                 enter = expandVertically() + fadeIn(),
                 exit = shrinkVertically() + fadeOut()
             ) {
-                ExplanationSection()
+                Column {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    ExplanationSection(question = question, onBadgeClick = { showEvidence = true })
+                }
             }
         }
     }
@@ -440,7 +453,10 @@ fun ReviewOptionRow(
 }
 
 @Composable
-fun ExplanationSection() {
+fun ExplanationSection(
+    question: Question,
+    onBadgeClick: () -> Unit
+) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceElev3),
@@ -477,6 +493,14 @@ fun ExplanationSection() {
                     fontWeight = FontWeight.Normal,
                     lineHeight = 18.sp
                 )
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+            
+            CitationBadge(
+                status = question.verificationStatus,
+                citation = question.citation,
+                onClick = onBadgeClick
             )
         }
     }

@@ -15,7 +15,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material3.*
@@ -34,6 +34,10 @@ import com.shiva.magics.data.model.TestDefinition
 import com.shiva.magics.data.repository.TestRepository
 import com.shiva.magics.ui.navigation.AppRoutes
 import com.shiva.magics.ui.theme.*
+import com.shiva.magics.ui.components.CitationBadge
+import com.shiva.magics.ui.components.EvidenceBottomSheet
+import com.shiva.magics.data.model.VerificationStatus
+import com.shiva.magics.data.model.Citation
 import com.shiva.magics.viewmodel.TestPlayerViewModel
 import kotlinx.coroutines.launch
 
@@ -113,7 +117,7 @@ fun TestPlayerScreen(
                         modifier = Modifier.size(32.dp).align(Alignment.CenterStart)
                     ) {
                         Icon(
-                            Icons.Default.ArrowBack, contentDescription = "Back",
+                            Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back",
                             tint = OnSurface, modifier = Modifier.size(20.dp)
                         )
                     }
@@ -253,6 +257,9 @@ fun TestPlayerScreen(
                             isSubmitted = isSubmitted,
                             correctIndex = question.correctAnswerIndex,
                             isBookmarked = currentIndex in bookmarkedQuestions,
+                            verificationStatus = question.verificationStatus,
+                            citation = question.citation,
+                            trustScore = question.trustScore,
                             onBookmarkToggle = {
                                 viewModel.toggleBookmark(currentIndex)
                             },
@@ -426,9 +433,23 @@ fun QuestionCard(
     isSubmitted: Boolean,
     correctIndex: Int,
     isBookmarked: Boolean,
+    verificationStatus: VerificationStatus? = null,
+    citation: Citation? = null,
+    trustScore: Float? = null,
     onBookmarkToggle: () -> Unit,
     onOptionSelect: (Int) -> Unit
 ) {
+    var showEvidence by remember { mutableStateOf(false) }
+
+    if (showEvidence && citation != null && trustScore != null && verificationStatus != null) {
+        EvidenceBottomSheet(
+            citation = citation,
+            trustScore = trustScore,
+            status = verificationStatus,
+            onDismiss = { showEvidence = false }
+        )
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
@@ -470,7 +491,16 @@ fun QuestionCard(
                 )
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            if (verificationStatus != null) {
+                Spacer(modifier = Modifier.height(8.dp))
+                CitationBadge(
+                    status = verificationStatus,
+                    citation = citation,
+                    onClick = { showEvidence = true }
+                )
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
 
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 options.forEachIndexed { index, option ->

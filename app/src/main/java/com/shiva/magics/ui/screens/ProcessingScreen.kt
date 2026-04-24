@@ -505,10 +505,11 @@ fun ErrorContent(
             targetValue = 1f,
             animationSpec = infiniteRepeatable(
                 animation = keyframes {
-                    0f at 0 with LinearEasing
-                    0.1f at 100 with LinearEasing
-                    -0.1f at 200 with LinearEasing
-                    0f at 300 with LinearEasing
+                    durationMillis = 300
+                    0f at 0 using LinearEasing
+                    0.1f at 100 using LinearEasing
+                    -0.1f at 200 using LinearEasing
+                    0f at 300 using LinearEasing
                 },
                 repeatMode = RepeatMode.Restart
             ),

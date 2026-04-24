@@ -12,6 +12,12 @@ secrets.properties
 google-services.json
 app/google-services.json
 
+# Keystore and certificates
+*.keystore
+*.jks
+*.pem
+*.key
+
 /build
 /captures
 .externalNativeBuild

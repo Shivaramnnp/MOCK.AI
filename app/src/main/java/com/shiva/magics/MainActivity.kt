@@ -8,7 +8,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import com.google.firebase.auth.FirebaseAuth
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.util.Consumer
 import androidx.core.view.WindowCompat
@@ -30,9 +35,15 @@ import com.shiva.magics.ui.screens.*
 import com.shiva.magics.ui.screens.VoiceRecorderScreen
 import com.shiva.magics.ui.theme.MagicSTheme
 import com.shiva.magics.ui.theme.ThemePreference
+import com.shiva.magics.util.NotificationHelper
+import com.shiva.magics.viewmodel.AnalyticsViewModel
+import com.shiva.magics.viewmodel.ClassroomViewModel
+import com.shiva.magics.viewmodel.CreatorViewModel
 import com.shiva.magics.viewmodel.EditorViewModel
 import com.shiva.magics.viewmodel.HomeViewModel
+import com.shiva.magics.viewmodel.MarketplaceViewModel
 import com.shiva.magics.viewmodel.ProcessingViewModel
+import com.shiva.magics.viewmodel.ProfileViewModel
 import com.shiva.magics.viewmodel.TestPlayerViewModel
 
 class MainActivity : ComponentActivity() {
@@ -40,7 +51,7 @@ class MainActivity : ComponentActivity() {
     // Manual DI — no Hilt needed
     private val database by lazy { AppDatabase.getDatabase(this) }
     private val repository by lazy { TestRepository(database) }
-    private val geminiService by lazy { GeminiService(BuildConfig.GEMINI_API_KEY) }
+    private val geminiService by lazy { GeminiService(BuildConfig.GEMINI_API_KEY, database.aiCostDao()) }
     private val youtubeBackendService by lazy { 
         YoutubeBackendService(
             backendBaseUrl = BuildConfig.YOUTUBE_BACKEND_URL
@@ -60,11 +71,16 @@ class MainActivity : ComponentActivity() {
             flashLiteApiKey = BuildConfig.GEMINI_FLASH_LITE_KEY
         )
     }
+    // Phase 2: classroom
+    private val classroomRepo by lazy { com.shiva.magics.data.repository.ClassroomRepository() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         ThemePreference.applyToDelegate(ThemePreference.get(this))
         super.onCreate(savedInstanceState)
+        
+        NotificationHelper.createNotificationChannel(this)
+
         WindowCompat.setDecorFitsSystemWindows(window, false)   // Edge-to-edge
         enableEdgeToEdge()
 
@@ -83,6 +99,40 @@ class MainActivity : ComponentActivity() {
                     factory = EditorViewModel.Factory(geminiService)
                 )
                 val testPlayerViewModel: TestPlayerViewModel = viewModel()
+                val profileViewModel: ProfileViewModel = viewModel(
+                    factory = ProfileViewModel.Factory(this)
+                )
+                val classroomViewModel: ClassroomViewModel = viewModel(
+                    factory = ClassroomViewModel.Factory(classroomRepo)
+                )
+                val analyticsViewModel: AnalyticsViewModel = viewModel(
+                    factory = AnalyticsViewModel.Factory(repository)
+                )
+                val creatorViewModel: CreatorViewModel = viewModel(
+                    factory = CreatorViewModel.Factory(repository)
+                )
+                val marketplaceViewModel: MarketplaceViewModel = viewModel(
+                    factory = MarketplaceViewModel.Factory(repository)
+                )
+
+                LaunchedEffect(Unit) {
+                    // Initialize Feature Flags for Launch
+                    val flags = listOf(
+                        com.shiva.magics.util.ConfigManager.FEATURE_AUTO_GENERATION,
+                        com.shiva.magics.util.ConfigManager.FEATURE_REFERRALS,
+                        com.shiva.magics.util.ConfigManager.FEATURE_MARKETPLACE,
+                        com.shiva.magics.util.ConfigManager.FEATURE_AI_COACH
+                    )
+                    flags.forEach { flag ->
+                        if (repository.getAllFeatureFlagsOnce().none { it.featureName == flag }) {
+                            repository.setFeatureFlag(flag, true)
+                        }
+                    }
+
+                    repository.syncStreak(geminiService)
+                    com.shiva.magics.util.StreakReminderWorker.schedule(this@MainActivity)
+                }
+
 
                 DisposableEffect(Unit) {
                     val handleIntent = { intent: Intent ->
@@ -113,7 +163,12 @@ class MainActivity : ComponentActivity() {
                                     }
                                 }
                             } else if (type.startsWith("image/") || type == "application/pdf") {
-                                val uri = intent.getParcelableExtra<Uri>(Intent.EXTRA_STREAM)
+                 val uri = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+                intent?.getParcelableExtra(android.content.Intent.EXTRA_STREAM, android.net.Uri::class.java)
+            } else {
+                @Suppress("DEPRECATION")
+                intent?.getParcelableExtra<android.net.Uri>(android.content.Intent.EXTRA_STREAM)
+            }
                                 if (uri != null) {
                                     val contentResolver = contentResolver
                                     val mimeType = contentResolver.getType(uri) ?: type
@@ -145,10 +200,31 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavHost(
-                        navController = navController,
-                        startDestination = AppRoutes.Login
-                    ) {
+                    // ── Session Restoration: reactive auth state listener
+                    // Defers NavHost until Firebase has finished restoring the
+                    // persisted session. Avoids the race where currentUser is
+                    // transiently null on process recreation.
+                    val auth = remember { FirebaseAuth.getInstance() }
+                    var startDestination by remember { mutableStateOf<AppRoutes?>(null) }
+
+                    DisposableEffect(auth) {
+                        val listener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+                            val user = firebaseAuth.currentUser
+                            startDestination = when {
+                                user == null -> AppRoutes.Login
+                                profileViewModel.roleSelected.value -> AppRoutes.Home
+                                else -> AppRoutes.RoleSelection
+                            }
+                        }
+                        auth.addAuthStateListener(listener)
+                        onDispose { auth.removeAuthStateListener(listener) }
+                    }
+
+                    if (startDestination != null) {
+                        NavHost(
+                            navController = navController,
+                            startDestination = startDestination!!
+                        ) {
                         composable<AppRoutes.Login> {
                             val authViewModel: com.shiva.magics.ui.screens.AuthViewModel = viewModel()
                             LoginScreen(
@@ -182,7 +258,10 @@ class MainActivity : ComponentActivity() {
                                 email = route.email,
                                 viewModel = authViewModel,
                                 onNavigateToHome = {
-                                    navController.navigate(AppRoutes.Home) {
+                                    // New user: pick role first. Existing user: go home.
+                                    val dest = if (profileViewModel.roleSelected.value)
+                                        AppRoutes.Home else AppRoutes.RoleSelection
+                                    navController.navigate(dest) {
                                         popUpTo(AppRoutes.Login) { inclusive = true }
                                     }
                                 },
@@ -190,13 +269,43 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable<AppRoutes.Home> {
-                            HomeScreen(
-                                navController = navController,
-                                homeViewModel = homeViewModel,
-                                testPlayerViewModel = testPlayerViewModel,
-                                processingViewModel = processingViewModel,
-                                editorViewModel = editorViewModel,
-                                repository = repository
+                            com.shiva.magics.ui.screens.HomeScreen(
+                                navController        = navController,
+                                homeViewModel        = homeViewModel,
+                                profileViewModel     = profileViewModel,
+                                editorViewModel      = editorViewModel,
+                                processingViewModel  = processingViewModel,
+                                testPlayerViewModel  = testPlayerViewModel,
+                                marketplaceViewModel = marketplaceViewModel,
+                                repository           = repository
+                            )
+                        }
+                        composable<AppRoutes.RoleSelection> {
+                            com.shiva.magics.ui.screens.RoleSelectionScreen(
+                                profileViewModel = profileViewModel,
+                                onRoleSelected = {
+                                    navController.navigate(AppRoutes.Home) {
+                                        popUpTo(AppRoutes.RoleSelection) { inclusive = true }
+                                    }
+                                }
+                            )
+                        }
+                        composable<AppRoutes.Profile> {
+                            val tests by homeViewModel.tests.collectAsState()
+                            val avgScore = if (tests.isNotEmpty())
+                                tests.mapNotNull { it.bestScorePercent }.let { s ->
+                                    if (s.isNotEmpty()) s.average().toInt() else 0
+                                } else 0
+                            com.shiva.magics.ui.screens.ProfileScreen(
+                                profileViewModel = profileViewModel,
+                                onNavigateBack = { navController.popBackStack() },
+                                onSignOut = {
+                                    navController.navigate(AppRoutes.Login) {
+                                        popUpTo(0) { inclusive = true }
+                                    }
+                                },
+                                testsCount = tests.size,
+                                avgScore = avgScore
                             )
                         }
                         composable<AppRoutes.Processing> {
@@ -216,10 +325,17 @@ class MainActivity : ComponentActivity() {
                         }
                         composable<AppRoutes.TestPlayerWithId> {
                             val route = it.toRoute<AppRoutes.TestPlayerWithId>()
-                            // Load data for this ID if not already loaded (useful for direct deep links)
                             LaunchedEffect(route.id) {
                                 testPlayerViewModel.loadTestFromDb(route.id, repository)
                             }
+                            TestPlayerScreen(
+                                navController = navController,
+                                viewModel = testPlayerViewModel,
+                                repository = repository
+                            )
+                        }
+                        // Assignment-based TestPlayer (questions pre-loaded into VM)
+                        composable<AppRoutes.TestPlayer> {
                             TestPlayerScreen(
                                 navController = navController,
                                 viewModel = testPlayerViewModel,
@@ -230,7 +346,8 @@ class MainActivity : ComponentActivity() {
                             ResultsScreen(
                                 navController = navController,
                                 viewModel = testPlayerViewModel,
-                                repository = repository
+                                repository = repository,
+                                classroomViewModel = classroomViewModel
                             )
                         }
                         composable<AppRoutes.Review> {
@@ -257,7 +374,60 @@ class MainActivity : ComponentActivity() {
                                 repository = repository
                             )
                         }
+                        // ── Phase 4 routes ──────────────────────────────────
+                        composable<AppRoutes.Marketplace> {
+                            com.shiva.magics.ui.screens.MarketplaceScreen(
+                                navController = navController,
+                                viewModel     = marketplaceViewModel
+                            )
+                        }
+                        composable<AppRoutes.CreatorDashboard> {
+                            com.shiva.magics.ui.screens.CreatorDashboardScreen(
+                                navController    = navController,
+                                viewModel        = creatorViewModel
+                            )
+                        }
+                        // ── Phase 2 routes ──────────────────────────────────
+                        composable<AppRoutes.Classroom> {
+                            com.shiva.magics.ui.screens.ClassroomScreen(
+                                navController      = navController,
+                                classroomViewModel = classroomViewModel,
+                                profileViewModel   = profileViewModel
+                            )
+                        }
+                        composable<AppRoutes.ClassDetail> {
+                            com.shiva.magics.ui.screens.ClassDetailScreen(
+                                navController      = navController,
+                                classroomViewModel = classroomViewModel,
+                                profileViewModel   = profileViewModel,
+                                testPlayerViewModel = testPlayerViewModel
+                            )
+                        }
+                        composable<AppRoutes.TeacherDashboard> {
+                            com.shiva.magics.ui.screens.TeacherDashboardScreen(
+                                navController      = navController,
+                                classroomViewModel = classroomViewModel,
+                                profileViewModel   = profileViewModel
+                            )
+                        }
+                        composable<AppRoutes.StudentAssignments> {
+                            com.shiva.magics.ui.screens.StudentAssignmentsScreen(
+                                navController      = navController,
+                                classroomViewModel = classroomViewModel,
+                                profileViewModel   = profileViewModel,
+                                testPlayerViewModel = testPlayerViewModel
+                            )
+                        }
+                        // ── Phase 3 routes ──────────────────────────────────
+                        composable<AppRoutes.Analytics> {
+                            com.shiva.magics.ui.screens.AnalyticsScreen(
+                                navController      = navController,
+                                analyticsViewModel = analyticsViewModel,
+                                profileViewModel   = profileViewModel
+                            )
+                        }
                     }
+                    } // end if (startDestination != null)
                 }
             }
         }

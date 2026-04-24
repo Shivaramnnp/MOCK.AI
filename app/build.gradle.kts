@@ -47,6 +47,9 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -105,7 +108,7 @@ dependencies {
     implementation(libs.compose.ui.text.google.fonts)
     implementation(libs.coil.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.jsoup)
     implementation(libs.mlkit.text.recognition)
     implementation(libs.camerax.core)
@@ -116,6 +119,8 @@ dependencies {
     implementation(libs.retrofit.converter.kotlinx)
     implementation(libs.androidx.webkit)
     testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -126,4 +131,11 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.guava)
+    // Gap #8: AES-256 encrypted storage for API keys and tokens
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+    // Required for Firestore suspend/await extension in SyncConflictResolver
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+    // Proper LocalLifecycleOwner for CameraScreen
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
+    implementation(libs.androidx.work)
 }

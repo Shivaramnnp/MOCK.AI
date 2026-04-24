@@ -30,6 +30,8 @@ import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Storefront
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -49,6 +51,11 @@ import androidx.navigation.NavController
 import com.shiva.magics.data.local.TestHistoryEntity
 import com.shiva.magics.data.model.Question
 import com.shiva.magics.data.model.TestDefinition
+import com.shiva.magics.ui.theme.OnSurface
+import com.shiva.magics.ui.theme.OnSurfaceMuted
+import com.shiva.magics.ui.theme.PrimaryVariant
+import com.shiva.magics.ui.theme.SurfaceElev1
+import com.shiva.magics.ui.theme.SurfaceElev2
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import androidx.compose.ui.platform.LocalContext
@@ -59,13 +66,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.shiva.magics.data.repository.TestRepository
 import com.shiva.magics.ui.navigation.AppRoutes
 import com.shiva.magics.ui.theme.*
+import com.shiva.magics.viewmodel.AnalyticsViewModel
 import com.shiva.magics.viewmodel.EditorViewModel
 import com.shiva.magics.viewmodel.HomeViewModel
 import com.shiva.magics.viewmodel.ProcessingViewModel
 import com.shiva.magics.viewmodel.TestPlayerViewModel
+import com.shiva.magics.viewmodel.MarketplaceViewModel
 import android.content.Context
 import android.content.ClipboardManager
 import android.content.ClipData
+import com.shiva.magics.data.model.UserRole
+import com.shiva.magics.ui.components.MockAiBottomNav
+import com.shiva.magics.viewmodel.ProfileViewModel
 
 fun resolveFileName(context: Context, uri: Uri): String {
     return context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
@@ -95,12 +107,17 @@ data class InputOption(
 fun HomeScreen(
     navController: NavController,
     homeViewModel: HomeViewModel,
-    testPlayerViewModel: TestPlayerViewModel,
-    processingViewModel: ProcessingViewModel,
+    profileViewModel: ProfileViewModel,
     editorViewModel: EditorViewModel,
+    processingViewModel: ProcessingViewModel,
+    testPlayerViewModel: TestPlayerViewModel,
+    marketplaceViewModel: MarketplaceViewModel,
     repository: TestRepository
 ) {
     val tests by homeViewModel.tests.collectAsState()
+    val activeStudyPlan by homeViewModel.activeStudyPlan.collectAsState()
+    val revisionQueue by homeViewModel.revisionQueue.collectAsState()
+    val dailyTasks by homeViewModel.dailyTasks.collectAsState()
     val avgScore = remember(tests) {
         if (tests.isNotEmpty()) {
             tests.mapNotNull { it.bestScorePercent }.let { scores ->
@@ -108,7 +125,12 @@ fun HomeScreen(
             }
         } else 0
     }
-    val streak = remember(tests) { computeStreak(tests) }
+    val studyStreak by homeViewModel.studyStreak.collectAsState()
+    val streakCount = studyStreak?.currentStreak ?: 0
+    val dailyInsight by homeViewModel.dailyInsight.collectAsState()
+    val autoTests by homeViewModel.autoTests.collectAsState()
+    val referralCount by homeViewModel.referralCount.collectAsState()
+    val isReferralEnabled by homeViewModel.isReferralEnabled.collectAsState()
 
     var showBottomSheet by remember { mutableStateOf(false) }
     
@@ -117,6 +139,7 @@ fun HomeScreen(
     var showTopicDialog by remember { mutableStateOf(false) }
     var showUrlDialog by remember { mutableStateOf(false) }
     var showYouTubeDialog by remember { mutableStateOf(false) }
+    var publishDialogTarget by remember { mutableStateOf<com.shiva.magics.data.local.TestHistoryEntity?>(null) }
     
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -231,8 +254,13 @@ fun HomeScreen(
         }
     }
 
+
     Scaffold(
         containerColor = Surface,
+        bottomBar = {
+            val profile by profileViewModel.profile.collectAsState()
+            MockAiBottomNav(navController = navController, role = profile.role)
+        }
     ) { paddingValues ->
         LazyColumn(
             modifier = Modifier
@@ -247,8 +275,30 @@ fun HomeScreen(
                     navController = navController,
                     testsCount = tests.size,
                     avgScore = avgScore,
-                    streak = streak
+                    streak = streakCount,
+                    profileViewModel = profileViewModel
                 )
+            }
+
+            // ── Daily AI Insight ──────────────────────────────────────────
+            dailyInsight?.let { insight ->
+                item {
+                    DailyInsightCard(
+                        insight = insight,
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)
+                    )
+                }
+            }
+
+            // ── Referral Card ─────────────────────────────────────────────
+            if (isReferralEnabled) {
+                item {
+                    ReferralCard(
+                        referralCount = referralCount,
+                        onInviteClick = { homeViewModel.shareReferral(context) },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)
+                    )
+                }
             }
 
             // ── Hero: Create New Test ─────────────────────────────────────
@@ -257,6 +307,32 @@ fun HomeScreen(
                     modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
                     onClick = { showBottomSheet = true }
                 )
+            }
+
+            // ── Study Coach Section (Sprint 3) ────────────────────────────
+            if (activeStudyPlan != null || revisionQueue.isNotEmpty()) {
+                item {
+                    StudyCoachSection(
+                        activePlan = activeStudyPlan,
+                        revisionQueue = revisionQueue,
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp)
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                }
+            }
+
+            // ── Today's Tasks Section (Sprint 3) ──────────────────────────
+            if (dailyTasks.isNotEmpty() || autoTests.isNotEmpty()) {
+                item {
+                    DailyTaskChecklist(
+                        tasks = dailyTasks,
+                        autoTests = autoTests,
+                        onTaskToggle = { id, done -> homeViewModel.toggleTaskCompletion(id, done) },
+                        onStartAutoTest = { id -> navController.navigate(AppRoutes.TestPlayerWithId(id)) },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
             }
 
             // ── Your Tests Header ─────────────────────────────────────────
@@ -343,6 +419,9 @@ fun HomeScreen(
                                 context.startActivity(android.content.Intent.createChooser(intent, "Share Test"))
                             }
                         },
+                        onPublishTest = {
+                            publishDialogTarget = test
+                        },
                         onDeleteTest = { homeViewModel.deleteTest(test.id) },
                         modifier = Modifier.padding(horizontal = 20.dp, vertical = 5.dp)
                     )
@@ -414,7 +493,14 @@ fun HomeScreen(
 // ─── Header ──────────────────────────────────────────────────────────────────
 
 @Composable
-private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: Int, streak: Int) {
+private fun HomeHeader(
+    navController: NavController,
+    testsCount: Int,
+    avgScore: Int,
+    streak: Int,
+    profileViewModel: ProfileViewModel
+) {
+    val profile by profileViewModel.profile.collectAsState()
     val hour = remember {
         java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
     }
@@ -422,6 +508,23 @@ private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: 
         hour < 12 -> "Good morning"
         hour < 17 -> "Good afternoon"
         else      -> "Good evening"
+    }
+
+    val initials = remember(profile.fullName, profile.email) {
+        profile.fullName
+            .split(" ")
+            .filter { it.isNotBlank() }
+            .take(2)
+            .joinToString("") { it.first().uppercaseChar().toString() }
+            .ifEmpty { profile.email.firstOrNull()?.uppercaseChar()?.toString() ?: "M" }
+    }
+
+    val roleGradient = remember(profile.role) {
+        when (profile.role) {
+            UserRole.TEACHER -> listOf(Primary, PrimaryVariant)
+            UserRole.STUDENT -> listOf(Color(0xFF1DB974), Color(0xFF0EA5E9))
+            UserRole.LEARNER -> listOf(Color(0xFFFF9500), Color(0xFFFF6B6B))
+        }
     }
 
     Column(
@@ -434,7 +537,7 @@ private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: 
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "$greeting 👋",
                     style = MaterialTheme.typography.bodyMedium.copy(
@@ -443,7 +546,9 @@ private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: 
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
-                    text = "Ready to Practice?",
+                    text = if (profile.fullName.isNotBlank())
+                               profile.fullName.split(" ").first() + "!"
+                           else "Ready to Practice?",
                     style = MaterialTheme.typography.headlineMedium.copy(
                         color = OnSurface,
                         fontWeight = FontWeight.Bold
@@ -451,7 +556,7 @@ private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: 
                 )
             }
 
-            // Home actions (Settings)
+            // Home actions (Settings + Avatar)
             Row(verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = { navController.navigate(AppRoutes.Settings) }) {
                     Icon(
@@ -461,20 +566,21 @@ private fun HomeHeader(navController: NavController, testsCount: Int, avgScore: 
                         modifier = Modifier.size(24.dp)
                     )
                 }
-                Spacer(modifier = Modifier.width(8.dp))
-                // App badge
+                Spacer(modifier = Modifier.width(4.dp))
+                // Profile avatar — tappable
                 Box(
                     modifier = Modifier
                         .size(46.dp)
                         .clip(RoundedCornerShape(14.dp))
                         .background(
-                            Brush.linearGradient(listOf(Primary, PrimaryVariant))
-                        ),
+                            Brush.linearGradient(roleGradient)
+                        )
+                        .clickable { navController.navigate(AppRoutes.Profile) },
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = "M",
-                        style = MaterialTheme.typography.headlineSmall.copy(
+                        text = initials,
+                        style = MaterialTheme.typography.titleMedium.copy(
                             color = Color.White,
                             fontWeight = FontWeight.ExtraBold
                         )
@@ -527,37 +633,6 @@ private fun StatPill(
             maxLines = 1
         )
     }
-}
-
-private fun computeStreak(tests: List<TestHistoryEntity>): Int {
-    val calendar = java.util.Calendar.getInstance()
-    val takenDays = tests
-        .mapNotNull { it.lastTakenAt }
-        .map { ms ->
-            calendar.timeInMillis = ms
-            Triple(
-                calendar.get(java.util.Calendar.YEAR),
-                calendar.get(java.util.Calendar.MONTH),
-                calendar.get(java.util.Calendar.DAY_OF_MONTH)
-            )
-        }
-        .toSet()
-    
-    if (takenDays.isEmpty()) return 0
-    
-    var streak = 0
-    val today = java.util.Calendar.getInstance()
-    while (true) {
-        val key = Triple(
-            today.get(java.util.Calendar.YEAR),
-            today.get(java.util.Calendar.MONTH),
-            today.get(java.util.Calendar.DAY_OF_MONTH)
-        )
-        if (key !in takenDays) break
-        streak++
-        today.add(java.util.Calendar.DAY_OF_MONTH, -1)
-    }
-    return streak
 }
 
 // ─── Hero Create Button ───────────────────────────────────────────────────────
@@ -867,6 +942,7 @@ fun TestHistoryCard(
     onStartTest: () -> Unit,
     onEditTest: () -> Unit,
     onShareTest: () -> Unit,
+    onPublishTest: () -> Unit,
     onDeleteTest: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -956,12 +1032,14 @@ fun TestHistoryCard(
                             onClick = { showMenu = false; onDeleteTest() }
                         )
                         DropdownMenuItem(
-                            text = { Text("Share Test") },
+                            text = { Text("Share Link") },
                             leadingIcon = { Icon(Icons.Default.Share, null) },
-                            onClick = {
-                                showMenu = false
-                                onShareTest()
-                            }
+                            onClick = { showMenu = false; onShareTest() }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Publish Make Public") },
+                            leadingIcon = { Icon(Icons.Default.Storefront, null, tint = Primary) },
+                            onClick = { showMenu = false; onPublishTest() }
                         )
                     }
                 }
@@ -1294,5 +1372,399 @@ private fun LegendDot(color: Color, label: String) {
                 color = OnSurfaceMuted
             )
         )
+    }
+}
+
+// ── Publish Dialog ────────────────────────────────────────────────────────────
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun PublishTestDialog(
+    test: com.shiva.magics.data.local.TestHistoryEntity,
+    onDismiss: () -> Unit,
+    onPublish: (title: String, desc: String, category: String, diff: String, price: Int?) -> Unit
+) {
+    var title by remember { mutableStateOf(test.title) }
+    var description by remember { mutableStateOf("A standard ${test.category} test.") }
+    var priceStr by remember { mutableStateOf("") }
+    var difficulty by remember { mutableStateOf("Medium") }
+    
+    val diffOptions = listOf("Easy", "Medium", "Hard")
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Publish to Marketplace") },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                OutlinedTextField(
+                    value = title,
+                    onValueChange = { title = it },
+                    label = { Text("Title") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = description,
+                    onValueChange = { description = it },
+                    label = { Text("Description") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = priceStr,
+                    onValueChange = { priceStr = it },
+                    label = { Text("Price (USD)") },
+                    placeholder = { Text("e.g. 1.99 or leave blank for Free") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Column {
+                    Text("Difficulty", style = MaterialTheme.typography.labelSmall)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        diffOptions.forEach { diff ->
+                            FilterChip(
+                                selected = difficulty == diff,
+                                onClick = { difficulty = diff },
+                                label = { Text(diff) }
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            Button(onClick = {
+                val parsedPrice = priceStr.toDoubleOrNull()?.let { (it * 100).toInt() }
+                onPublish(title, description, test.category, difficulty, parsedPrice)
+            }) {
+                Text("Publish")
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Cancel") }
+        }
+    )
+}
+
+@Composable
+fun StudyCoachSection(
+    activePlan: com.shiva.magics.data.local.StudyPlanEntity?,
+    revisionQueue: List<com.shiva.magics.data.local.RevisionQueueEntity>,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = SurfaceElev1),
+        shape = RoundedCornerShape(24.dp),
+        border = androidx.compose.foundation.BorderStroke(1.dp, Border)
+    ) {
+        Column(modifier = Modifier.padding(20.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column {
+                    Text(
+                        text = "Daily Study Coach",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = OnSurface
+                    )
+                    Text(
+                        text = "Your personalized roadmap",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = OnSurfaceMuted
+                    )
+                }
+                
+                Icon(
+                    imageVector = Icons.Default.AutoStories,
+                    contentDescription = null,
+                    tint = Primary,
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Revision Queue (Week 2 Indicators)
+            if (revisionQueue.isNotEmpty()) {
+                Text(
+                    text = "NEXT REVIEWS",
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.Black,
+                    color = AccentAmber,
+                    letterSpacing = 1.sp
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                revisionQueue.take(3).forEach { item ->
+                    val relativeTime = getRelativeTimeString(item.nextReviewAt)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 4.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text(
+                            text = item.topic,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = OnSurface,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Text(
+                            text = relativeTime,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = if (relativeTime == "Today") AccentRed else OnSurfaceMuted,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+            } else {
+                Text(
+                    text = "No revisions pending. Keep it up! ✨",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = OnSurfaceMuted
+                )
+            }
+
+            if (activePlan != null) {
+                Spacer(modifier = Modifier.height(20.dp))
+                Divider(color = Border, thickness = 0.5.dp)
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                Text(
+                    text = "Today's Target: ${activePlan.dailyTimeGoalMinutes} min",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = Primary,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+    }
+}
+
+fun getRelativeTimeString(timestamp: Long): String {
+    val now = System.currentTimeMillis()
+    val diffDays = ((timestamp - now) / (1000 * 60 * 60 * 24)).toInt()
+    
+    return when {
+        diffDays <= 0 -> "Today"
+        diffDays == 1 -> "Tomorrow"
+        else -> "In $diffDays days"
+    }
+}
+
+@Composable
+fun DailyTaskChecklist(
+    tasks: List<com.shiva.magics.data.local.DailyTaskEntity>,
+    autoTests: List<com.shiva.magics.data.local.AutoGeneratedTestEntity> = emptyList(),
+    onTaskToggle: (String, Boolean) -> Unit,
+    onStartAutoTest: (Long) -> Unit = {},
+    modifier: Modifier = Modifier
+) {
+    Column(modifier = modifier.fillMaxWidth()) {
+        Text(
+            text = "Today's Tasks",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold,
+            color = OnSurface,
+            modifier = Modifier.padding(bottom = 12.dp)
+        )
+
+        // Autonomous Agent: Practice Tests
+        autoTests.forEach { autoTest ->
+            AutoTestItem(
+                autoTest = autoTest,
+                onStart = { onStartAutoTest(autoTest.testId) }
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+        }
+        
+        tasks.forEach { task ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (task.completed) SurfaceElev1.copy(alpha = 0.5f) else SurfaceElev2
+                ),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Checkbox(
+                        checked = task.completed,
+                        onCheckedChange = { onTaskToggle(task.id, it) },
+                        colors = CheckboxDefaults.colors(
+                            checkedColor = AccentGreen,
+                            uncheckedColor = Border
+                        )
+                    )
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "${task.taskType} ${task.topic}",
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontWeight = FontWeight.Bold,
+                            color = if (task.completed) OnSurfaceMuted else OnSurface,
+                            textDecoration = if (task.completed) androidx.compose.ui.text.style.TextDecoration.LineThrough else null
+                        )
+                        Text(
+                            text = "Estimated: ${task.estimatedMinutes} min | ${task.priority}",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = when (task.priority) {
+                                "CRITICAL" -> AccentRed
+                                "HIGH" -> AccentAmber
+                                else -> OnSurfaceMuted
+                            }
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun DailyInsightCard(
+    insight: com.shiva.magics.data.local.DailyInsightEntity,
+    modifier: Modifier = Modifier
+) {
+    val backgroundColor = when (insight.priority) {
+        "CRITICAL" -> Color(0xFF422020)
+        "WARNING" -> Color(0xFF423720)
+        else -> SurfaceElev1
+    }
+    val borderColor = when (insight.priority) {
+        "CRITICAL" -> AccentRed.copy(alpha = 0.5f)
+        "WARNING" -> AccentAmber.copy(alpha = 0.5f)
+        else -> Border
+    }
+    val icon = when (insight.priority) {
+        "CRITICAL" -> "⚠️"
+        "WARNING" -> "📉"
+        else -> "💡"
+    }
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(20.dp))
+            .background(backgroundColor)
+            .border(1.dp, borderColor, RoundedCornerShape(20.dp))
+            .padding(16.dp)
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(text = icon, fontSize = 20.sp)
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(
+                text = "Coach Insight",
+                style = MaterialTheme.typography.labelLarge.copy(
+                    color = OnSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            )
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = insight.message,
+            style = MaterialTheme.typography.bodyMedium.copy(
+                color = OnSurface,
+                lineHeight = 20.sp
+            )
+        )
+    }
+}
+
+@Composable
+private fun AutoTestItem(
+    autoTest: com.shiva.magics.data.local.AutoGeneratedTestEntity,
+    onStart: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp),
+        colors = CardDefaults.cardColors(containerColor = SurfaceElev2),
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "🤖 AI Practice: ${autoTest.topic}",
+                    style = MaterialTheme.typography.bodyMedium.copy(
+                        fontWeight = FontWeight.SemiBold,
+                        color = OnSurface
+                    )
+                )
+                Text(
+                    text = "Auto-generated · Personalized Practice",
+                    style = MaterialTheme.typography.bodySmall.copy(color = OnSurfaceMuted)
+                )
+            }
+            Button(
+                onClick = onStart,
+                shape = RoundedCornerShape(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = PrimaryVariant),
+                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+            ) {
+                Text("Start", color = Color.White, fontWeight = FontWeight.Bold)
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReferralCard(
+    referralCount: Int,
+    onInviteClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(20.dp))
+            .background(
+                Brush.linearGradient(
+                    colors = listOf(PrimaryVariant.copy(alpha = 0.8f), PrimaryVariant.copy(alpha = 0.6f))
+                )
+            )
+            .clickable { onInviteClick() }
+            .padding(20.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = "Refer & Earn Premium",
+                style = MaterialTheme.typography.titleMedium.copy(
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold
+                )
+            )
+            Text(
+                text = if (referralCount == 0) "Invite friends and get free premium!" else "You've invited $referralCount friends!",
+                style = MaterialTheme.typography.bodySmall.copy(color = Color.White.copy(alpha = 0.8f))
+            )
+        }
+        Button(
+            onClick = onInviteClick,
+            colors = ButtonDefaults.buttonColors(containerColor = Color.White),
+            shape = RoundedCornerShape(12.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+        ) {
+            Text("Invite", color = PrimaryVariant, fontWeight = FontWeight.Bold)
+        }
     }
 }

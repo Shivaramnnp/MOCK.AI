@@ -8,6 +8,10 @@ import androidx.lifecycle.viewModelScope
 import com.shiva.magics.data.model.Question
 import com.shiva.magics.data.remote.GeminiService
 import com.shiva.magics.data.remote.YoutubeBackendService
+import com.shiva.magics.util.ErrorRecoveryManager
+import com.shiva.magics.util.PdfChunker
+import com.shiva.magics.util.QuestionQualityValidator
+import com.shiva.magics.util.RateLimiter
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -23,13 +27,21 @@ sealed interface ProcessingState {
     data object Idle : ProcessingState
     data class Loading(
         val status: String = "Processing...",
-        val currentStage: Int = 0
+        val currentStage: Int = 0,
+        // Gap #12: chunk progress for large PDFs
+        val chunkProgress: String? = null
     ) : ProcessingState
     data class Success(
         val questions: List<Question>,
         val fileName: String
     ) : ProcessingState
-    data class Error(val message: String) : ProcessingState
+    // Gap #15: error now carries a recovery plan
+    data class Error(
+        val message: String,
+        val actionLabel: String = "Retry",
+        val recoveryAction: com.shiva.magics.util.ErrorRecoveryManager.RecoveryAction =
+            com.shiva.magics.util.ErrorRecoveryManager.RecoveryAction.RETRY_IMMEDIATELY
+    ) : ProcessingState
 }
 
 // Remembers last input so retry() can re-run it
@@ -83,14 +95,20 @@ class ProcessingViewModel(
     private val lastResortMessages = listOf(
         "Trying last resort AI...",
         "Generating questions...",
-        "Almost there...",
-        "Preparing your test..."
+        "Almost there..."
     )
 
     private val defaultMessages = geminiMessages
 
     // Cycling status messages for loading UI
     val statusMessages = androidx.compose.runtime.mutableStateListOf(*defaultMessages.toTypedArray())
+
+    companion object {
+        private val jsonParser = kotlinx.serialization.json.Json {
+            ignoreUnknownKeys = true
+            isLenient = true
+        }
+    }
 
     private fun resetStatusMessages() {
         statusMessages.clear()
@@ -262,12 +280,7 @@ class ProcessingViewModel(
         processingJob = viewModelScope.launch {
             _state.value = ProcessingState.Loading("Reading document...", 0)
 
-            // ✅ LOG 1 — Job started
-            android.util.Log.d("PDF_FLOW", "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-            android.util.Log.d("PDF_FLOW", "▶ processFile() started")
-            android.util.Log.d("PDF_FLOW", "  fileName : $fileName")
-            android.util.Log.d("PDF_FLOW", "  mimeType : $mimeType")
-            android.util.Log.d("PDF_FLOW", "  uri      : $uri")
+            android.util.Log.d("PDF_FLOW", "▶ processFile() started: $fileName  mimeType=$mimeType")
 
             try {
                 val bytes = withContext(Dispatchers.IO) {
@@ -275,15 +288,12 @@ class ProcessingViewModel(
                         ?.use { it.readBytes() }
                         ?: throw IOException("Cannot read file: $fileName")
                 }
+                android.util.Log.d("PDF_FLOW", "✅ File read: ${bytes.size / 1024}KB")
 
-                // ✅ LOG 2 — File read success
-                android.util.Log.d("PDF_FLOW", "✅ File read from ContentResolver")
-                android.util.Log.d("PDF_FLOW", "  bytes    : ${bytes.size} bytes (${bytes.size / 1024} KB)")
-
-                // If DOCX or PPTX use POI to extract text, then pass to text logic
-                if (mimeType == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || 
+                // DOCX/PPTX branch
+                if (mimeType == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
                     mimeType == "application/vnd.openxmlformats-officedocument.presentationml.presentation") {
-                    android.util.Log.d("PDF_FLOW", "↪ Routing to DOCX/PPTX branch — skipping PDF/Image path")
+                    android.util.Log.d("PDF_FLOW", "↪ DOCX/PPTX branch")
                     val extractedText = withContext(Dispatchers.IO) {
                         try {
                             val sb = StringBuilder()
@@ -293,7 +303,6 @@ class ProcessingViewModel(
                                     val name = entry.name
                                     if (name.startsWith("word/document.xml") || name.startsWith("ppt/slides/slide")) {
                                         val xmlContent = zis.readBytes().toString(Charsets.UTF_8)
-                                        // Simple regex to extract text between <w:t> or <a:t>
                                         val regex = Regex("<[wa]:t[^>]*>(.*?)</[wa]:t>")
                                         regex.findAll(xmlContent).forEach { match ->
                                             sb.append(match.groupValues[1]).append(" ")
@@ -308,21 +317,19 @@ class ProcessingViewModel(
                         }
                     }
                     if (extractedText.isBlank()) {
-                        _state.value = ProcessingState.Error("Could not extract any text from this file.")
+                        val plan = ErrorRecoveryManager.handle(errorMessage = "Could not extract text")
+                        _state.value = ProcessingState.Error(plan.userMessage, plan.actionLabel, plan.action)
                         return@launch
                     }
                     val safeText = if (extractedText.length > 100000) extractedText.take(100000) else extractedText
-                    
                     val result = aiProviderManager.extractQuestionsWithFallback(
                         text = safeText,
                         source = com.shiva.magics.data.model.InputSource.Docx,
                         fileName = fileName,
                         preferredAi = prefs.getString("preferred_ai", "auto") ?: "auto"
                     )
-
                     when (result) {
                         is com.shiva.magics.data.remote.AiProviderManager.ProviderResult.Success -> {
-                            android.util.Log.d("MagicS", "Questions generated by: ${result.provider}")
                             if (result.questions.isEmpty()) {
                                 _state.value = ProcessingState.Error("No questions found in this document.")
                             } else {
@@ -330,21 +337,66 @@ class ProcessingViewModel(
                             }
                         }
                         is com.shiva.magics.data.remote.AiProviderManager.ProviderResult.AllFailed -> {
-                            _state.value = ProcessingState.Error(result.lastError)
+                            val plan = ErrorRecoveryManager.handle(errorMessage = result.lastError)
+                            _state.value = ProcessingState.Error(plan.userMessage, plan.actionLabel, plan.action)
                         }
                     }
                     return@launch
                 }
 
-                // ✅ LOG 3 — Routing decision
+                // Gap #1: Large PDF → chunked processing
+                if (mimeType == "application/pdf" && bytes.size > PdfChunker.MAX_CHUNK_SIZE_BYTES) {
+                    android.util.Log.d("PDF_FLOW", "📄 Large PDF detected (${bytes.size / 1024}KB) — chunking")
+                    _state.value = ProcessingState.Loading("Splitting large PDF into pages…", 0)
+
+                    val chunks = withContext(Dispatchers.IO) {
+                        PdfChunker.chunkPdfBytes(bytes) { progress ->
+                            // Gap #12: real-time progress indicator
+                            _state.value = ProcessingState.Loading(
+                                status = progress.status,
+                                currentStage = progress.chunkIndex,
+                                chunkProgress = "Chunk ${progress.chunkIndex + 1} of ${progress.totalChunks}"
+                            )
+                        }
+                    }
+
+                    val allQuestions = mutableListOf<Question>()
+                    for (chunk in chunks) {
+                        _state.value = ProcessingState.Loading(
+                            status = "Processing pages ${chunk.pageRange.first + 1}–${chunk.pageRange.last + 1}…",
+                            currentStage = chunk.index,
+                            chunkProgress = "Chunk ${chunk.index + 1} of ${chunk.totalChunks}"
+                        )
+                        val result = aiProviderManager.extractQuestionsWithFallback(
+                            text = "",
+                            imageData = chunk.imageData,
+                            mimeType = chunk.mimeType,
+                            source = com.shiva.magics.data.model.InputSource.PDF,
+                            fileName = "$fileName (p${chunk.pageRange.first + 1}-${chunk.pageRange.last + 1})",
+                            preferredAi = prefs.getString("preferred_ai", "auto") ?: "auto"
+                        )
+                        if (result is com.shiva.magics.data.remote.AiProviderManager.ProviderResult.Success) {
+                            allQuestions.addAll(result.questions)
+                        }
+                    }
+
+                    if (allQuestions.isEmpty()) {
+                        _state.value = ProcessingState.Error("No MCQ questions found in this document.")
+                    } else {
+                        // Deduplicate across chunks, then validate
+                        val validated = QuestionQualityValidator.validate(allQuestions).valid
+                        _state.value = ProcessingState.Success(applySettings(validated), fileName)
+                    }
+                    return@launch
+                }
+
+                // Small PDF / Image / Audio — original direct path
                 val inputSource = when {
                     mimeType == "application/pdf" -> com.shiva.magics.data.model.InputSource.PDF
                     mimeType.startsWith("image/") -> com.shiva.magics.data.model.InputSource.Image
                     mimeType.startsWith("audio/") -> com.shiva.magics.data.model.InputSource.Audio
                     else -> com.shiva.magics.data.model.InputSource.Camera
                 }
-                android.util.Log.d("PDF_FLOW", "🔀 InputSource resolved : $inputSource")
-                android.util.Log.d("PDF_FLOW", "📤 Calling AiProviderManager.extractQuestionsWithFallback()")
 
                 val result = aiProviderManager.extractQuestionsWithFallback(
                     text = "",
@@ -355,36 +407,27 @@ class ProcessingViewModel(
                     preferredAi = prefs.getString("preferred_ai", "auto") ?: "auto"
                 )
 
-                // ✅ LOG 4 — Result from AI manager
                 when (result) {
                     is com.shiva.magics.data.remote.AiProviderManager.ProviderResult.Success -> {
-                        android.util.Log.d("PDF_FLOW", "🎉 SUCCESS")
-                        android.util.Log.d("PDF_FLOW", "  provider        : ${result.provider}")
-                        android.util.Log.d("PDF_FLOW", "  questions found : ${result.questions.size}")
-                        result.questions.forEachIndexed { i, q ->
-                            android.util.Log.d("PDF_FLOW", "  Q${i + 1}: ${q.questionText.take(80)}...")
-                        }
+                        android.util.Log.d("PDF_FLOW", "🎉 ${result.questions.size} questions from ${result.provider}")
                         if (result.questions.isEmpty()) {
-                            android.util.Log.w("PDF_FLOW", "⚠ Provider succeeded but returned 0 questions")
-                            _state.value = ProcessingState.Error("No MCQ questions found in this document. Make sure it contains multiple choice questions.")
+                            _state.value = ProcessingState.Error("No MCQ questions found in this document.")
                         } else {
                             _state.value = ProcessingState.Success(applySettings(result.questions), fileName)
                         }
                     }
                     is com.shiva.magics.data.remote.AiProviderManager.ProviderResult.AllFailed -> {
-                        android.util.Log.e("PDF_FLOW", "❌ ALL PROVIDERS FAILED")
-                        android.util.Log.e("PDF_FLOW", "  error: ${result.lastError}")
-                        _state.value = ProcessingState.Error(result.lastError)
+                        val plan = ErrorRecoveryManager.handle(errorMessage = result.lastError)
+                        _state.value = ProcessingState.Error(plan.userMessage, plan.actionLabel, plan.action)
                     }
                 }
             } catch (e: CancellationException) {
-                android.util.Log.w("PDF_FLOW", "⚠ Job cancelled by user")
                 _state.value = ProcessingState.Idle
             } catch (e: Exception) {
-                android.util.Log.e("PDF_FLOW", "💥 Unexpected exception in processFile()", e)
-                _state.value = ProcessingState.Error(e.message ?: "Failed to process file")
+                android.util.Log.e("PDF_FLOW", "💥 Exception", e)
+                val plan = ErrorRecoveryManager.handle(e)
+                _state.value = ProcessingState.Error(plan.userMessage, plan.actionLabel, plan.action)
             }
-            android.util.Log.d("PDF_FLOW", "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
         }
     }
 
@@ -398,8 +441,7 @@ class ProcessingViewModel(
                 if (source == com.shiva.magics.data.model.InputSource.Json) {
                     // Fast path for raw JSON
                     try {
-                        val decoded = kotlinx.serialization.json.Json { ignoreUnknownKeys = true }
-                            .decodeFromString<com.shiva.magics.data.model.GeminiQuestionResponse>(text)
+                        val decoded = jsonParser.decodeFromString<com.shiva.magics.data.model.GeminiQuestionResponse>(text)
                         
                         if (decoded.questions.isEmpty()) {
                             _state.value = ProcessingState.Error("No questions found in this JSON.")

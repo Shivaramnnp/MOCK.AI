@@ -17,8 +17,12 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
 import java.util.concurrent.TimeUnit
+import com.shiva.magics.util.AICostMonitor
 
-class GeminiService(private val apiKey: String) {
+class GeminiService(
+    private val apiKey: String,
+    private val costDao: com.shiva.magics.data.local.AICostDao? = null
+) {
 
     private val client = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
@@ -62,6 +66,78 @@ class GeminiService(private val apiKey: String) {
         - If NO questions found, return: {"questions": []}
     """.trimIndent()
 
+    private val GENERATE_PRACTICE_PROMPT = """
+        You are an expert exam creator. 
+        Create 10 high-quality multiple choice questions for the following topic: {TOPIC}
+        
+        Difficulty: {DIFFICULTY}
+        
+        Return ONLY a valid JSON object with this exact structure:
+        {
+          "questions": [
+            {
+              "questionText": "Question text here",
+              "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+              "correctAnswerIndex": 0
+            }
+          ]
+        }
+        
+        STRICT RULES:
+        - Exactly 4 options per question.
+        - Exactly 1 correct answer.
+        - correctAnswerIndex is zero-based (0 to 3).
+        - Focus on conceptual depth and edge cases.
+        - No extra text or markdown.
+    """.trimIndent()
+
+    suspend fun generatePracticeQuestions(
+        topic: String,
+        difficulty: String = "MEDIUM"
+    ): Result<List<Question>> = withContext(Dispatchers.IO) {
+        try {
+            // Budget Check
+            costDao?.let {
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 2000)
+                if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded."))
+            }
+
+            val finalPrompt = GENERATE_PRACTICE_PROMPT
+                .replace("{TOPIC}", topic)
+                .replace("{DIFFICULTY}", difficulty)
+            
+            val requestBody = buildTextOnlyRequestBody("Generate questions for $topic", finalPrompt)
+
+            val request = Request.Builder()
+                .url(endpoint)
+                .addHeader("x-goog-api-key", apiKey)
+                .addHeader("Content-Type", "application/json")
+                .post(requestBody.toRequestBody("application/json".toMediaType()))
+                .build()
+
+            val response = client.newCall(request).execute()
+            val responseString = response.body?.string()
+                ?: return@withContext Result.failure(IOException("Empty response"))
+
+            if (!response.isSuccessful) {
+                return@withContext Result.failure(IOException("Error ${response.code}"))
+            }
+
+            val extractedText = parseGeminiResponseText(responseString)
+            val cleanedJson = extractedText
+                .replace(Regex("```json\\s*"), "")
+                .replace(Regex("```\\s*"), "")
+                .trim()
+
+            val geminiData = json.decodeFromString<GeminiQuestionResponse>(cleanedJson)
+            // Usage Recording (Simplified: 3000 tokens per call)
+            // In a real app, we'd parse usage metadata from response
+            Result.success(geminiData.questions)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
     // Main function: accepts bytes + mimeType, returns questions
     // mimeType: "application/pdf" or "image/jpeg" or "image/png"
     suspend fun extractQuestions(
@@ -69,6 +145,12 @@ class GeminiService(private val apiKey: String) {
         mimeType: String
     ): Result<List<Question>> = withContext(Dispatchers.IO) {
         try {
+            // Budget Check
+            costDao?.let {
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 3000)
+                if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded. Please try again tomorrow."))
+            }
+
             android.util.Log.d("PDF_FLOW", "📡 GeminiService.extractQuestions()")
             android.util.Log.d("PDF_FLOW", "  mimeType  : $mimeType")
             android.util.Log.d("PDF_FLOW", "  fileSize  : ${fileBytes.size} bytes (${fileBytes.size / 1024} KB)")
@@ -165,6 +247,12 @@ class GeminiService(private val apiKey: String) {
         customPrompt: String? = null
     ): Result<List<Question>> = withContext(Dispatchers.IO) {
         try {
+            // Budget Check
+            costDao?.let {
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 1500)
+                if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded."))
+            }
+
             val promptToUse = customPrompt ?: PROMPT
             val requestBody = buildTextOnlyRequestBody(text, promptToUse)
 
