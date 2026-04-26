@@ -98,7 +98,7 @@ class GeminiService(
         try {
             // Budget Check
             costDao?.let {
-                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 2000)
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: "anonymous", "gemini-2.5-flash", 2000)
                 if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded."))
             }
 
@@ -147,7 +147,7 @@ class GeminiService(
         try {
             // Budget Check
             costDao?.let {
-                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 3000)
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: "anonymous", "gemini-2.5-flash", 3000)
                 if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded. Please try again tomorrow."))
             }
 
@@ -249,7 +249,7 @@ class GeminiService(
         try {
             // Budget Check
             costDao?.let {
-                val withinBudget = AICostMonitor.recordAndCheckBudget(it, "default_user", "gemini-2.5-flash", 1500)
+                val withinBudget = AICostMonitor.recordAndCheckBudget(it, com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: "anonymous", "gemini-2.5-flash", 1500)
                 if (!withinBudget) return@withContext Result.failure(Exception("Daily AI budget exceeded."))
             }
 

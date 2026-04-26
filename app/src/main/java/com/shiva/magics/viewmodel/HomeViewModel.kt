@@ -88,14 +88,18 @@ class HomeViewModel(private val repository: TestRepository) : ViewModel() {
 
     init {
         viewModelScope.launch {
+            val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid
+                ?: run { android.util.Log.w("HomeViewModel", "getReferralCount called pre-auth"); "anonymous" }
             _studyStreak.value = repository.getStudyStreak()
-            _referralCount.value = repository.getReferralCount("default_user")
+            _referralCount.value = repository.getReferralCount(uid)
             _isReferralEnabled.value = repository.isFeatureEnabled(com.shiva.magics.util.ConfigManager.FEATURE_REFERRALS)
         }
     }
 
     fun shareReferral(context: android.content.Context) {
-        com.shiva.magics.util.ReferralManager.shareReferralLink(context, "default_user")
+        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid
+            ?: run { android.util.Log.w("HomeViewModel", "shareReferral called pre-auth"); return }
+        com.shiva.magics.util.ReferralManager.shareReferralLink(context, uid)
     }
 
     fun deleteTest(id: Long) {

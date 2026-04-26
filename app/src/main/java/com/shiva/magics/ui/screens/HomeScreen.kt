@@ -335,9 +335,56 @@ fun HomeScreen(
                 }
             }
 
+            // ── Resume Last Test (Phase 3) ───────────────────────────────────
+            val unfinishedTest = tests.firstOrNull { it.lastTakenAt == null }
+            if (unfinishedTest != null) {
+                item {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = "Resume Test",
+                        style = MaterialTheme.typography.titleLarge.copy(
+                            color = OnSurface,
+                            fontWeight = FontWeight.Bold
+                        ),
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp, bottom = 8.dp)
+                    )
+                    TestHistoryCard(
+                        test = unfinishedTest,
+                        onStartTest = {
+                            val prefs = context.getSharedPreferences("app_settings", android.content.Context.MODE_PRIVATE)
+                            val timerSec = prefs.getInt("timer_seconds", 60)
+                            testPlayerViewModel.loadTestFromDb(unfinishedTest.id, repository, timerDurationSeconds = timerSec)
+                            navController.navigate(AppRoutes.TestPlayerWithId(unfinishedTest.id))
+                        },
+                        onEditTest = {
+                            scope.launch {
+                                val questions = repository.getQuestionsForTest(unfinishedTest.id)
+                                editorViewModel.setQuestions(questions)
+                                navController.navigate(AppRoutes.Editor)
+                            }
+                        },
+                        onShareTest = {
+                            scope.launch {
+                                val questions = repository.getQuestionsForTest(unfinishedTest.id)
+                                val json = repository.buildShareJson(questions, unfinishedTest.title)
+                                val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
+                                    type = "application/json"
+                                    putExtra(android.content.Intent.EXTRA_TEXT, json)
+                                    putExtra(android.content.Intent.EXTRA_SUBJECT, "Mock AI Test: ${unfinishedTest.title}")
+                                }
+                                context.startActivity(android.content.Intent.createChooser(intent, "Share Test"))
+                            }
+                        },
+                        onPublishTest = { publishDialogTarget = unfinishedTest },
+                        onDeleteTest = { homeViewModel.deleteTest(unfinishedTest.id) },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 5.dp)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+            }
+
             // ── Your Tests Header ─────────────────────────────────────────
             item {
-                Spacer(modifier = Modifier.height(12.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -467,21 +514,27 @@ fun HomeScreen(
                 )
                 Spacer(modifier = Modifier.height(24.dp))
 
-                val fromFile = allOptions.filter { it.title in listOf("PDF", "Word / PPT", "JSON") }
-                val fromInternet = allOptions.filter { it.title in listOf("Web URL", "YouTube", "Topic") }
-                val fromDevice = allOptions.filter { it.title in listOf("Image", "Camera", "Voice", "Manual Entry") }
+                val fromImport = allOptions.filter { it.title in listOf("PDF", "Word / PPT") }
+                val fromGenerate = allOptions.filter { it.title in listOf("Topic", "YouTube", "Web URL") }
+                val fromCapture = allOptions.filter { it.title in listOf("Camera", "Image", "Voice") }
+                val fromAdvanced = allOptions.filter { it.title in listOf("JSON", "Manual Entry") }
 
-                BottomSheetGroup(title = "📁  From File", options = fromFile) { option ->
+                BottomSheetGroup(title = "IMPORT", options = fromImport) { option ->
                     showBottomSheet = false
                     if (option.implemented) option.onClick()
                 }
                 Spacer(modifier = Modifier.height(20.dp))
-                BottomSheetGroup(title = "🌐  From Internet", options = fromInternet) { option ->
+                BottomSheetGroup(title = "GENERATE", options = fromGenerate) { option ->
                     showBottomSheet = false
                     if (option.implemented) option.onClick()
                 }
                 Spacer(modifier = Modifier.height(20.dp))
-                BottomSheetGroup(title = "📱  From Device", options = fromDevice) { option ->
+                BottomSheetGroup(title = "CAPTURE", options = fromCapture) { option ->
+                    showBottomSheet = false
+                    if (option.implemented) option.onClick()
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+                BottomSheetGroup(title = "ADVANCED", options = fromAdvanced) { option ->
                     showBottomSheet = false
                     if (option.implemented) option.onClick()
                 }

@@ -197,7 +197,7 @@ object SimpleYouTubeTranscriptFetcher {
                     } catch (e: Exception) {
                         Log.e("SIMPLE_YT", "JSON parsing error: ${e.message}")
                         // Try alternative parsing method
-                        tryAlternativeParsing(captionTracksJson)
+                        tryAlternativeParsing(captionTracksJson ?: "")
                     }
                 }
             }
@@ -223,11 +223,11 @@ object SimpleYouTubeTranscriptFetcher {
             val langCodes = mutableListOf<String>()
             
             while (baseUrlMatcher.find()) {
-                baseUrls.add(baseUrlMatcher.group(1))
+                baseUrls.add(baseUrlMatcher.group(1) ?: continue)
             }
             
             while (langMatcher.find()) {
-                langCodes.add(langMatcher.group(1))
+                langCodes.add(langMatcher.group(1) ?: continue)
             }
             
             Log.d("SIMPLE_YT", "📊 Found ${baseUrls.size} baseUrls and ${langCodes.size} languages")
@@ -307,7 +307,7 @@ object SimpleYouTubeTranscriptFetcher {
         val result = StringBuilder()
         
         while (matcher.find()) {
-            val text = matcher.group(1)
+            val text = matcher.group(1).orEmpty()
                 .replace("&amp;", "&")
                 .replace("&lt;", "<")
                 .replace("&gt;", ">")

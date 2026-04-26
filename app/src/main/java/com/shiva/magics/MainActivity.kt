@@ -210,7 +210,10 @@ class MainActivity : ComponentActivity() {
                     DisposableEffect(auth) {
                         val listener = FirebaseAuth.AuthStateListener { firebaseAuth ->
                             val user = firebaseAuth.currentUser
+                            val prefs = getSharedPreferences("app_settings", android.content.Context.MODE_PRIVATE)
+                            val onboardingCompleted = prefs.getBoolean("onboarding_completed", false)
                             startDestination = when {
+                                !onboardingCompleted -> AppRoutes.Onboarding
                                 user == null -> AppRoutes.Login
                                 profileViewModel.roleSelected.value -> AppRoutes.Home
                                 else -> AppRoutes.RoleSelection
@@ -225,6 +228,9 @@ class MainActivity : ComponentActivity() {
                             navController = navController,
                             startDestination = startDestination!!
                         ) {
+                        composable<AppRoutes.Onboarding> {
+                            com.shiva.magics.ui.screens.OnboardingScreen(navController = navController)
+                        }
                         composable<AppRoutes.Login> {
                             val authViewModel: com.shiva.magics.ui.screens.AuthViewModel = viewModel()
                             LoginScreen(

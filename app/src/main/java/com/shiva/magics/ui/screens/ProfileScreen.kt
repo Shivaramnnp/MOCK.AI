@@ -21,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -215,6 +216,49 @@ fun ProfileScreen(
             }
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            // ── Profile Completion (Phase 7) ──────────────────────────────────
+            val completionScore = listOf(
+                profile.fullName.isNotBlank(),
+                profile.email.isNotBlank(),
+                profile.phoneNumber.isNotBlank()
+            ).count { it } * 33 + if (profile.fullName.isNotBlank() && profile.email.isNotBlank() && profile.phoneNumber.isNotBlank()) 1 else 0 // 33, 66, 100
+
+            if (completionScore < 100) {
+                Card(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)),
+                    shape = RoundedCornerShape(16.dp),
+                    border = BorderStroke(1.dp, Primary.copy(alpha = 0.3f))
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                            Text("Profile Completion", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface))
+                            Text("$completionScore%", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = Primary))
+                        }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LinearProgressIndicator(
+                            progress = { completionScore / 100f },
+                            modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(50)),
+                            color = Primary,
+                            trackColor = Primary.copy(alpha = 0.2f),
+                            strokeCap = StrokeCap.Round
+                        )
+                        Spacer(modifier = Modifier.height(12.dp))
+                        Text(
+                            "Complete your profile to unlock all features. Please add your ${if (profile.fullName.isBlank()) "Name" else if (profile.phoneNumber.isBlank()) "Phone Number" else "Details"}.",
+                            style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        )
+                        Spacer(modifier = Modifier.height(12.dp))
+                        com.shiva.magics.ui.components.SecondaryButton(
+                            text = "Complete Profile",
+                            onClick = { showEditDialog = true },
+                            icon = Icons.Default.Edit
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+            }
 
             // ── Stats Row ─────────────────────────────────────────────────────
             Row(

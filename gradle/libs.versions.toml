@@ -29,6 +29,7 @@ googleServices               = "4.4.2"
 firebaseBom                  = "33.7.0"
 guava                        = "32.1.3-android"
 mockk                        = "1.13.12"
+turbine                      = "1.1.0"
 workManager                  = "2.10.0"
 
 [plugins]
@@ -84,4 +85,5 @@ firebase-firestore                = { module = "com.google.firebase:firebase-fir
 guava                             = { module = "com.google.guava:guava", version.ref = "guava" }
 mockk                             = { module = "io.mockk:mockk", version.ref = "mockk" }
 kotlinx-coroutines-test           = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+turbine                           = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 androidx-work                     = { module = "androidx.work:work-runtime-ktx", version.ref = "workManager" }

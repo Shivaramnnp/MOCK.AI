@@ -142,15 +142,24 @@ fun ClassroomScreen(
             // ── Empty state ───────────────────────────────────────────────────
             if (!state.isLoading && state.classes.isEmpty()) {
                 item {
-                    ClassroomEmptyState(
-                        role = role,
-                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
-                        onAction = {
+                    val emptyStateData = if (role == UserRole.TEACHER) {
+                        Triple("No Classes Yet", "Create your first class to start managing your students.", "Create a Class")
+                    } else {
+                        Triple("Ready to join?", "Enter the 6-character code from your teacher to enroll in a class.", "Join a Class")
+                    }
+                    
+                    com.shiva.magics.ui.components.EmptyStateView(
+                        title = emptyStateData.first,
+                        message = emptyStateData.second,
+                        icon = if (role == UserRole.TEACHER) Icons.Default.School else Icons.Default.LibraryBooks,
+                        buttonText = emptyStateData.third,
+                        onButtonClick = {
                             when (role) {
                                 UserRole.TEACHER -> showCreateDialog = true
                                 else             -> showJoinDialog = true
                             }
-                        }
+                        },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 20.dp)
                     )
                 }
             }
@@ -185,27 +194,18 @@ fun ClassroomScreen(
             // ── Error ─────────────────────────────────────────────────────────
             if (state.error != null) {
                 item {
-                    Card(
-                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 6.dp).fillMaxWidth(),
-                        colors = CardDefaults.cardColors(containerColor = AccentRed.copy(alpha = 0.10f)),
-                        shape = RoundedCornerShape(14.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(14.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(10.dp)
-                        ) {
-                            Icon(Icons.Default.Error, null, tint = AccentRed, modifier = Modifier.size(18.dp))
-                            Text(
-                                state.error ?: "",
-                                style = MaterialTheme.typography.bodySmall.copy(color = AccentRed),
-                                modifier = Modifier.weight(1f)
-                            )
-                            IconButton(onClick = { classroomViewModel.clearError() }, modifier = Modifier.size(28.dp)) {
-                                Icon(Icons.Default.Close, null, tint = AccentRed, modifier = Modifier.size(16.dp))
+                    com.shiva.magics.ui.components.ErrorStateView(
+                        rawError = state.error ?: "",
+                        onRetry = {
+                            classroomViewModel.clearError()
+                            when (role) {
+                                UserRole.TEACHER -> classroomViewModel.listenTeacherClasses()
+                                UserRole.STUDENT -> classroomViewModel.listenStudentClasses()
+                                else -> {}
                             }
-                        }
-                    }
+                        },
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp)
+                    )
                 }
             }
         }
@@ -408,48 +408,7 @@ private fun InfoPill(emoji: String, text: String) {
     }
 }
 
-// ── Empty State ───────────────────────────────────────────────────────────────
-
-@Composable
-private fun ClassroomEmptyState(
-    role: UserRole,
-    modifier: Modifier = Modifier,
-    onAction: () -> Unit
-) {
-    val (emoji, title, subtitle, cta) = when (role) {
-        UserRole.TEACHER -> Quadruple("🏫", "No Classes Yet", "Create your first class\nand share the code with students", "Create a Class")
-        else             -> Quadruple("📚", "No Classes Yet", "Join a class using the code\nyour teacher shared with you", "Join a Class")
-    }
-
-    Column(
-        modifier = modifier.fillMaxWidth()
-            .clip(RoundedCornerShape(20.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(20.dp))
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(emoji, fontSize = 44.sp)
-        Spacer(modifier = Modifier.height(12.dp))
-        Text(title, style = MaterialTheme.typography.titleMedium.copy(
-            fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurface
-        ))
-        Spacer(modifier = Modifier.height(6.dp))
-        Text(subtitle, style = MaterialTheme.typography.bodySmall.copy(
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        ), textAlign = TextAlign.Center)
-        Spacer(modifier = Modifier.height(20.dp))
-        Button(
-            onClick = onAction,
-            colors = ButtonDefaults.buttonColors(containerColor = Primary),
-            shape = RoundedCornerShape(12.dp)
-        ) {
-            Icon(Icons.Default.Add, null, modifier = Modifier.size(16.dp))
-            Spacer(modifier = Modifier.width(6.dp))
-            Text(cta, fontWeight = FontWeight.SemiBold)
-        }
-    }
-}
+// ── Empty State removed as it's handled by CoreUI ─────────────────────────────
 
 // ── Create Class Dialog ───────────────────────────────────────────────────────
 
@@ -508,7 +467,7 @@ private fun CreateClassDialog(onDismiss: () -> Unit, onCreate: (String) -> Unit)
     }
 }
 
-// ── Join Class Dialog ─────────────────────────────────────────────────────────
+// ── Join Class Dialog (Walkthrough) ───────────────────────────────────────────
 
 @Composable
 private fun JoinClassDialog(
@@ -517,6 +476,7 @@ private fun JoinClassDialog(
     onJoin: (String) -> Unit
 ) {
     var code by remember { mutableStateOf("") }
+    var step by remember { mutableStateOf(1) }
     val focusManager = LocalFocusManager.current
 
     Dialog(onDismissRequest = onDismiss) {
@@ -528,36 +488,75 @@ private fun JoinClassDialog(
                             .background(Brush.linearGradient(listOf(Color(0xFF1DB974), Color(0xFF0EA5E9)))),
                         contentAlignment = Alignment.Center
                     ) { Icon(Icons.AutoMirrored.Filled.Login, null, tint = Color.White, modifier = Modifier.size(22.dp)) }
-                    Text("Join a Class", style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold))
+                    Text(
+                        if (step == 1) "Join a Class" else "Confirm Enrollment",
+                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
+                    )
                 }
 
-                OutlinedTextField(
-                    value = code,
-                    onValueChange = { if (it.length <= 6) code = it.uppercase() },
-                    label = { Text("Class Code") },
-                    placeholder = { Text("e.g. XY9Z2A") },
-                    leadingIcon = { Icon(Icons.Default.Key, null, tint = AccentGreen) },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(14.dp),
-                    singleLine = true,
-                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-                    keyboardActions = KeyboardActions(onDone = {
-                        focusManager.clearFocus()
-                        if (code.length == 6) onJoin(code)
-                    })
-                )
+                if (step == 1) {
+                    Text(
+                        "Step 1: Enter the 6-character code provided by your teacher.",
+                        style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    )
+                    OutlinedTextField(
+                        value = code,
+                        onValueChange = { if (it.length <= 6) code = it.uppercase() },
+                        label = { Text("Class Code") },
+                        placeholder = { Text("e.g. XY9Z2A") },
+                        leadingIcon = { Icon(Icons.Default.Key, null, tint = AccentGreen) },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(14.dp),
+                        singleLine = true,
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                        keyboardActions = KeyboardActions(onDone = {
+                            focusManager.clearFocus()
+                            if (code.length == 6) step = 2
+                        })
+                    )
 
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    OutlinedButton(onClick = onDismiss, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
-                        Text("Cancel")
+                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        OutlinedButton(onClick = onDismiss, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
+                            Text("Cancel")
+                        }
+                        Button(
+                            onClick = { if (code.length == 6) step = 2 },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = AccentGreen),
+                            enabled = code.length == 6
+                        ) { Text("Next", color = Color.White, fontWeight = FontWeight.SemiBold) }
                     }
-                    Button(
-                        onClick = { if (code.length == 6) onJoin(code) },
-                        modifier = Modifier.weight(1f),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = AccentGreen),
-                        enabled = code.length == 6
-                    ) { Text("Join", color = Color.White, fontWeight = FontWeight.SemiBold) }
+                } else {
+                    Text(
+                        "Step 2: You are about to join a class with code:",
+                        style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    )
+                    Box(
+                        modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(SurfaceElev2).padding(16.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = code,
+                            style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Black, color = Primary, letterSpacing = 4.sp)
+                        )
+                    }
+                    Text(
+                        "Joining as: $studentName",
+                        style = MaterialTheme.typography.labelMedium.copy(color = MaterialTheme.colorScheme.onSurface)
+                    )
+
+                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        OutlinedButton(onClick = { step = 1 }, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
+                            Text("Back")
+                        }
+                        Button(
+                            onClick = { onJoin(code) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = AccentGreen)
+                        ) { Text("Confirm", color = Color.White, fontWeight = FontWeight.SemiBold) }
+                    }
                 }
             }
         }

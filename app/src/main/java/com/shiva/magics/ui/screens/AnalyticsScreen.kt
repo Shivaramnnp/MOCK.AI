@@ -95,17 +95,86 @@ fun AnalyticsScreen(
             if (state.totalTestsTaken == 0) {
                 item {
                     Column(
-                        modifier = Modifier.fillMaxWidth().padding(48.dp),
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text("🧗", fontSize = 48.sp)
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Text("No Data Yet", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold))
-                        Text(
-                            "Complete some tests to unlock your performance insights.",
-                            style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant),
-                            textAlign = TextAlign.Center
+                        Surface(
+                            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.padding(bottom = 12.dp)
+                        ) {
+                            Text(
+                                "Preview Mode",
+                                style = MaterialTheme.typography.labelSmall.copy(color = Primary, fontWeight = FontWeight.Bold),
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                            )
+                        }
+                        Text("Complete tests to see your real data", style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant))
+                    }
+                }
+                
+                // Key Stats (Dummy)
+                item {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        StatCard(modifier = Modifier.weight(1f), label = "Tests Taken", value = "0", emoji = "📝")
+                        StatCard(modifier = Modifier.weight(1f), label = "Average", value = "0%", emoji = "🎯")
+                    }
+                }
+
+                // Performance Trend Chart (Dummy)
+                item {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        "Performance Trend (Preview)",
+                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant),
+                        modifier = Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                    )
+                    LineChartCard(
+                        data = listOf(40f, 55f, 50f, 75f, 65f, 85f),
+                        modifier = Modifier.padding(horizontal = 24.dp).height(200.dp).background(Color.Transparent, RoundedCornerShape(16.dp)).border(1.dp, Border.copy(alpha = 0.5f), RoundedCornerShape(16.dp))
+                    )
+                }
+
+                // Weak Topics (Dummy)
+                item {
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Text(
+                        "Weak Topics (Preview)",
+                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant),
+                        modifier = Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                    )
+                    listOf("Algebra", "Physics", "History").forEachIndexed { index, topic ->
+                        WeakTopicBar(
+                            topic = topic,
+                            wrongCount = 5 - index,
+                            maxCount = 5,
+                            modifier = Modifier.padding(horizontal = 24.dp, vertical = 6.dp).background(Color.Transparent)
                         )
+                    }
+                }
+                
+                // Time Usage Chart (Dummy Placeholder)
+                item {
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Text(
+                        "Time Usage (Preview)",
+                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant),
+                        modifier = Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                    )
+                    Card(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).height(120.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                        shape = RoundedCornerShape(16.dp),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f))
+                    ) {
+                        Row(modifier = Modifier.fillMaxSize(), verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.SpaceEvenly) {
+                            listOf(0.3f, 0.6f, 0.4f, 0.8f, 0.5f, 0.9f, 0.2f).forEach { heightFraction ->
+                                Box(modifier = Modifier.width(20.dp).fillMaxHeight(heightFraction).clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp)).background(Primary.copy(alpha = 0.5f)))
+                            }
+                        }
                     }
                 }
             } else {
@@ -173,6 +242,26 @@ fun AnalyticsScreen(
                             maxCount = maxWrong,
                             modifier = Modifier.padding(horizontal = 24.dp, vertical = 6.dp)
                         )
+                    }
+                }
+                
+                // Time Usage Chart Placeholder for actual data (Phase 6 request implied showing it)
+                item {
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Text(
+                        "Time Usage",
+                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface),
+                        modifier = Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                    )
+                    Card(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).height(120.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                        shape = RoundedCornerShape(16.dp),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline)
+                    ) {
+                        Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
+                            Text("Time tracking active. Keep practicing!", style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.onSurfaceVariant))
+                        }
                     }
                 }
             }

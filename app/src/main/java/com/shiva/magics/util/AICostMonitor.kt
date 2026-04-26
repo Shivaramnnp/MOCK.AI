@@ -53,19 +53,55 @@ object AICostMonitor {
         return@withContext true
     }
 
+    // ── In-memory request ledger (bounded, non-durable) ──────────────────────
+    // Primary durable accounting is in recordAndCheckBudget via AICostDao.
+    // This ledger covers callers (e.g. AiProviderManager) that don't have DAO.
+    data class RequestRecord(
+        val modelName:     String,
+        val source:        String,
+        val questionCount: Int,
+        val estimatedTokens: Int,
+        val estimatedCost:   Double,
+        val timestamp:     Long = System.currentTimeMillis()
+    )
+
+    private const val MAX_LEDGER = 200
+    private val requestLedger = ArrayDeque<RequestRecord>(MAX_LEDGER)
+    private val ledgerLock = Any()
+
     /**
-     * Legacy/Logging-only record request.
+     * Records a completed AI request in the in-memory ledger.
+     * Estimates token usage from question count (≈ 500 tokens/question average).
+     * Does NOT enforce budget — call recordAndCheckBudget() for that.
      */
-    suspend fun recordRequest(
-        modelName: String,
-        source: String,
-        count: Int
-    ) = withContext(Dispatchers.IO) {
-        // Map to budget check but ignore result for telemetry logging
-        // AICostDao is currently required, so this might need a DAO reference.
-        // For simplicity, I'll add a version that takes the DAO or just stub it if DAO isn't available.
-        // Actually, AiProviderManager doesn't seem to have the DAO.
+    fun recordRequest(modelName: String, source: String, count: Int) {
+        val estimatedTokens = count * 500
+        val estimatedCost   = estimatedTokens * COST_PER_TOKEN
+        val record = RequestRecord(
+            modelName      = modelName,
+            source         = source,
+            questionCount  = count,
+            estimatedTokens = estimatedTokens,
+            estimatedCost   = estimatedCost
+        )
+        synchronized(ledgerLock) {
+            requestLedger.addLast(record)
+            if (requestLedger.size > MAX_LEDGER) requestLedger.removeFirst()
+        }
+        android.util.Log.d(
+            "AICostMonitor",
+            "📝 recordRequest: model=$modelName src=$source qs=$count " +
+            "tokens≈$estimatedTokens cost≈\$${"%.6f".format(estimatedCost)}"
+        )
     }
+
+    /** Returns a snapshot of the in-memory ledger for debugging / dashboards. */
+    fun getLedgerSnapshot(): List<RequestRecord> =
+        synchronized(ledgerLock) { requestLedger.toList() }
+
+    /** Total estimated cost across all ledger entries. */
+    fun getLedgerTotalCost(): Double =
+        synchronized(ledgerLock) { requestLedger.sumOf { it.estimatedCost } }
 }
 
 /**

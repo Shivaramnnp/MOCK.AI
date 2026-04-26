@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.compose.ui.draw.scale
 import com.shiva.magics.data.model.UserRole
 import com.shiva.magics.ui.navigation.AppRoutes
 import com.shiva.magics.ui.theme.Primary
@@ -131,13 +132,21 @@ private fun RowScope.BottomNavItemView(
 ) {
     val iconColor by animateColorAsState(
         targetValue = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-        animationSpec = tween(200),
+        animationSpec = tween(300),
         label = "navIconColor"
     )
     val labelColor by animateColorAsState(
         targetValue = if (isSelected) Primary else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-        animationSpec = tween(200),
+        animationSpec = tween(300),
         label = "navLabelColor"
+    )
+    val iconScale by androidx.compose.animation.core.animateFloatAsState(
+        targetValue = if (isSelected) 1.2f else 1.0f,
+        animationSpec = androidx.compose.animation.core.spring(
+            dampingRatio = androidx.compose.animation.core.Spring.DampingRatioMediumBouncy,
+            stiffness = androidx.compose.animation.core.Spring.StiffnessLow
+        ),
+        label = "navIconScale"
     )
 
     NavigationBarItem(
@@ -151,23 +160,25 @@ private fun RowScope.BottomNavItemView(
                     .background(
                         Brush.linearGradient(listOf(Primary, PrimaryVariant))
                     )
-                    .padding(horizontal = 14.dp, vertical = 6.dp)
-                else Modifier.padding(horizontal = 14.dp, vertical = 6.dp),
+                    .padding(horizontal = 16.dp, vertical = 6.dp)
+                else Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = if (isSelected) item.selectedIcon else item.icon,
                     contentDescription = item.label,
                     tint = iconColor,
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier
+                        .size(22.dp)
+                        .scale(iconScale)
                 )
             }
         },
         label = {
             Text(
                 text = item.label,
-                fontSize = 10.sp,
-                fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                fontSize = 11.sp,
+                fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium,
                 color = labelColor,
                 maxLines = 1
             )
