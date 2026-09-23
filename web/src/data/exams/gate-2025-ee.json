@@ -1,0 +1,3468 @@
+{
+  "id": "gate-2025-ee",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2025,
+  "title": "GATE 2025 — Electrical Engineering (EE)",
+  "subTitle": "Official IIT Roorkee Question Paper (Single Session)",
+  "date": "2025-02-01",
+  "shift": "General",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "EE",
+  "discipline": "Electrical Engineering",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 100.0,
+  "totalQuestions": 65,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "ee_core",
+      "name": "Electrical Engineering",
+      "questionCount": 55,
+      "startIndex": 10,
+      "endIndex": 64,
+      "maxMarks": 85.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2025-ee-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Kavya _________ go to work yesterday as she __________ feeling well.\nSelect the most appropriate option to complete the above sentence.",
+      "questionType": "MCQ",
+      "options": [
+        "didn’t; isn’t",
+        "wouldn’t; wasn’t",
+        "wasn’t; wasn’t",
+        "couldn’t; wasn’t"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "didn’t; isn’t",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "wouldn’t; wasn’t",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "wasn’t; wasn’t",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "couldn’t; wasn’t",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Good : Evil :: Genuine : _______\nSelect the most appropriate option to complete the analogy.",
+      "questionType": "MCQ",
+      "options": [
+        "Counterfeit",
+        "Contraband",
+        "Counterfoil",
+        "Counterpart"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Counterfeit",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Contraband",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Counterfoil",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Counterpart",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The relationship between two variables 𝑥 and 𝑦 is given by 𝑥+ 𝑝𝑦+ 𝑞 = 0 and is\nshown in the figure. Find the values of 𝑝 and 𝑞.\nNote: The figure shown is representative.\n12\n10\n8\n6\ny\n4\n2\n0\n-4 -3 -2 -1 0 1 2 3 4\nx",
+      "questionType": "MCQ",
+      "options": [
+        "1\n𝑝 = − ; 𝑞 = 2\n2",
+        "𝑝 = 2 ; 𝑞 = −2",
+        "1\n𝑝 = ; 𝑞 = 4\n2",
+        "𝑝 = 2 ; 𝑞 = 4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1\n𝑝 = − ; 𝑞 = 2\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑝 = 2 ; 𝑞 = −2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1\n𝑝 = ; 𝑞 = 4\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑝 = 2 ; 𝑞 = 4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q3_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q3_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Each row of Column-I has three items and each item is represented by a circle in\nColumn-II. The arrangement of circles in Column-II represents the relationship\namong the items in Column-I.\nIdentify the option that has the most appropriate match between Column-I and\nColumn-II.\nNote: The figures shown are representative.\nColumn-I Column-II\n(1) Animals, Zebra, Giraffe (P)\n(2) Director, Producer, Actor (Q)\n(3) Word, Sentence, Novel (R)\n(4) Pianist, Guitarist, Instrumentalist (S)",
+      "questionType": "MCQ",
+      "options": [
+        "(1) – (Q); (2) – (P); (3) – (S); (4) – (R)",
+        "(1) – (Q); (2) – (R); (3) – (S); (4) – (P)",
+        "(1) – (S); (2) – (P); (3) – (R); (4) – (Q)",
+        "(1) – (R); (2) – (S); (3) – (Q); (4) – (P)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(1) – (Q); (2) – (P); (3) – (S); (4) – (R)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(1) – (Q); (2) – (R); (3) – (S); (4) – (P)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(1) – (S); (2) – (P); (3) – (R); (4) – (Q)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(1) – (R); (2) – (S); (3) – (Q); (4) – (P)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q4_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q4_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "1\n381\n3\nWhat is the value of ( ) ?\n274",
+      "questionType": "MCQ",
+      "options": [
+        "313",
+        "396",
+        "323",
+        "369"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "313",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "396",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "323",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "369",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. It is because deer, like most of the animals that tigers normally prey on, run\nmuch faster! It simply means, another day of empty stomach for the big cats.\nQ. Tigers spend most of their life searching for food.\nR. If they trace the scent of deer, tigers follow the trail, chase the deer for a\nmile or two in the dark, and yet may not catch them.\nS. For several nights, they relentlessly prowl through the forest, hunting for a\ntrail that may lead to their prey.",
+      "questionType": "MCQ",
+      "options": [
+        "S → P → R → Q",
+        "R → P → S → Q",
+        "Q → S → R → P",
+        "P → Q → S → R"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "S → P → R → Q",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "R → P → S → Q",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Q → S → R → P",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P → Q → S → R",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the given figure, EF and HJ are coded as 30 and 80, respectively. Which one\namong the given options is most appropriate for the entries marked (i) and (ii) ?\nEF HJ\nFG (i)\n35 (ii)\n80 30",
+      "questionType": "MCQ",
+      "options": [
+        "(i) EH; (ii) 40",
+        "(i) JK; (ii) 36",
+        "(i) EG; (ii) 42",
+        "(i) PS; (ii) 14"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i) EH; (ii) 40",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(i) JK; (ii) 36",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(i) EG; (ii) 42",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(i) PS; (ii) 14",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q7_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q7_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Scores obtained by two students P and Q in seven courses are given in the table\nbelow. Based on the information given in the table, which one of the following\nstatements is INCORRECT?\nP 22 89 50 45 78 60 39\nQ 35 65 60 56 81 45 50",
+      "questionType": "MCQ",
+      "options": [
+        "Average score of P is less than the average score of Q.",
+        "Median score of P is same as the median score of Q.",
+        "Difference between the maximum and minimum scores of P is greater than the\ndifference between the maximum and minimum scores of Q.",
+        "Median score and the average score of Q are same."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Average score of P is less than the average score of Q.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Median score of P is same as the median score of Q.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Difference between the maximum and minimum scores of P is greater than the\ndifference between the maximum and minimum scores of Q.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Median score and the average score of Q are same.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible\ninteger values.\nThe distance between two spheres is computed from the center of one sphere to the\ncenter of the other sphere. For a given sphere, x is the distance to its nearest sphere and\n𝑦\ny is the distance to its next nearest sphere. The value of is:\n𝑥",
+      "questionType": "MCQ",
+      "options": [
+        "2√2",
+        "1\n√2",
+        "√2",
+        "2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2√2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1\n√2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "√2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the triangle PQR, the lengths of PT and TR are in the ratio of 3:2.\nST is parallel to QR. Two semicircles are drawn with PS and PQ as diameters, as\nshown in the figure.\nWhich one of the following statements is true about the shaded area PQS?\nNote: The figure shown is representative.",
+      "questionType": "MCQ",
+      "options": [
+        "16\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
+        "The shaded area is equal to the area of the semicircle with the diameter PS.",
+        "14\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
+        "14\nThe shaded area is times the area of the semicircle with the diameter PQ.\n25"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "16\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The shaded area is equal to the area of the semicircle with the diameter PS.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "14\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "14\nThe shaded area is times the area of the semicircle with the diameter PQ.\n25",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q10_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q10_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q11",
+      "questionNumber": 11,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the set 𝑆 of points (𝑥, 𝑦) ∈ ℜ2 which minimize the real valued function\n𝑓(𝑥, 𝑦) = (𝑥+ 𝑦−1)2 + (𝑥+ 𝑦)2\nWhich of the following statements is true about the set 𝑆?",
+      "questionType": "MCQ",
+      "options": [
+        "The number of elements in the set 𝑆 is finite and more than one.",
+        "The number of elements in the set 𝑆 is infinite.",
+        "The set 𝑆 is empty.",
+        "The number of elements in the set 𝑆 is exactly one."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The number of elements in the set 𝑆 is finite and more than one.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The number of elements in the set 𝑆 is infinite.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The set 𝑆 is empty.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The number of elements in the set 𝑆 is exactly one.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q12",
+      "questionNumber": 12,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝒗 and 𝒗 be the two eigenvectors corresponding to distinct eigenvalues of a\n𝟏 𝟐\n3 × 3 real symmetric matrix. Which one of the following statements is true?",
+      "questionType": "MCQ",
+      "options": [
+        "𝒗𝑻𝒗 ≠ 0\n𝟏 𝟐",
+        "𝒗𝑻𝒗 = 0\n𝟏 𝟐",
+        "𝒗 + 𝒗 = 𝟎\n𝟏 𝟐",
+        "𝒗 −𝒗 = 𝟎\n𝟏 𝟐"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝒗𝑻𝒗 ≠ 0\n𝟏 𝟐",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝒗𝑻𝒗 = 0\n𝟏 𝟐",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝒗 + 𝒗 = 𝟎\n𝟏 𝟐",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝒗 −𝒗 = 𝟎\n𝟏 𝟐",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q13",
+      "questionNumber": 13,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "1 1 1 1/3\nLet 𝑨 = [−1 −1 −1], and 𝒃 = [−1/3]. Then, the system of linear equations\n0 1 −1 0\n𝑨𝒙 = 𝒃 has",
+      "questionType": "MCQ",
+      "options": [
+        "a unique solution.",
+        "infinitely many solutions.",
+        "a finite number of solutions.",
+        "no solution."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "a unique solution.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "infinitely many solutions.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "a finite number of solutions.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "no solution.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q14",
+      "questionNumber": 14,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "2 1 0\nLet 𝑃 = [−1 0 0] and let 𝐼 be the identity matrix. Then 𝑃2 is equal to\n0 0 1",
+      "questionType": "MCQ",
+      "options": [
+        "2𝑃−𝐼",
+        "𝑃",
+        "𝐼",
+        "𝑃 + 𝐼"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2𝑃−𝐼",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑃",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐼",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑃 + 𝐼",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q15",
+      "questionNumber": 15,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider discrete random variables 𝑋 and 𝑌 with probabilities as follows:\n1\n𝑃(𝑋 = 0 𝑎𝑛𝑑 𝑌 = 0) =\n4\n1\n𝑃(𝑋 = 1 𝑎𝑛𝑑 𝑌 = 0) =\n8\n1\n𝑃(𝑋 = 0 𝑎𝑛𝑑 𝑌 = 1) =\n2\n1\n𝑃(𝑋 = 1 𝑎𝑛𝑑 𝑌 = 1) =\n8\nGiven 𝑋 = 1, the expected value of 𝑌 is",
+      "questionType": "MCQ",
+      "options": [
+        "1\n4",
+        "1\n2",
+        "1\n8",
+        "1\n3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1\n4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1\n8",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1\n3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q16",
+      "questionNumber": 16,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which one of the following statements is true about the small signal voltage gain of\na MOSFET based single stage amplifier?",
+      "questionType": "MCQ",
+      "options": [
+        "Common source and common gate amplifiers are both inverting amplifiers",
+        "Common source and common gate amplifiers are both non-inverting amplifiers",
+        "Common source amplifier is inverting and common gate amplifier is non-inverting\namplifier",
+        "Common source amplifier is non-inverting and common gate amplifier is inverting\namplifier"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Common source and common gate amplifiers are both inverting amplifiers",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Common source and common gate amplifiers are both non-inverting amplifiers",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Common source amplifier is inverting and common gate amplifier is non-inverting\namplifier",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Common source amplifier is non-inverting and common gate amplifier is inverting\namplifier",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q17",
+      "questionNumber": 17,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Assuming ideal op-amps, the circuit represents a\n+V\nDD\n+V\nDD\n-V\nEE\nV\nout\nV -V\nin EE",
+      "questionType": "MCQ",
+      "options": [
+        "summing amplifier.",
+        "difference amplifier.",
+        "logarithmic amplifier.",
+        "buffer."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "summing amplifier.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "difference amplifier.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "logarithmic amplifier.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "buffer.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q17_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q17_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q18",
+      "questionNumber": 18,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The I-V characteristics of the element between the nodes X and Y is best depicted\nby\nX I\nXY\n1 A 1 kΩ\nY",
+      "questionType": "MCQ",
+      "options": [
+        "I\nXY\n1 A\n0 V\nXY",
+        "I\nXY\n1 A\n0 V\nXY",
+        "I\nXY\n1 A\n0 V\nXY",
+        "I\nXY\n1 A\n0 V\nXY"
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2025/ee/q18_opt_a.png",
+        "/exam-assets/gate/2025/ee/q18_opt_b.png",
+        "/exam-assets/gate/2025/ee/q18_opt_c.png",
+        "/exam-assets/gate/2025/ee/q18_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "I\nXY\n1 A\n0 V\nXY",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "I\nXY\n1 A\n0 V\nXY",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "I\nXY\n1 A\n0 V\nXY",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "I\nXY\n1 A\n0 V\nXY",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_d.png"
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q18_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q18_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q19",
+      "questionNumber": 19,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A nullator is defined as a circuit element where the voltage across the device and\nthe current through the device are both zero. A series combination of a nullator and\na resistor of value, R, will behave as a",
+      "questionType": "MCQ",
+      "options": [
+        "resistor of value R.",
+        "nullator.",
+        "open circuit.",
+        "short circuit."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "resistor of value R.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "nullator.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "open circuit.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "short circuit.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q20",
+      "questionNumber": 20,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider a discrete-time linear time-invariant (LTI) system 𝑺, where\n𝑦[𝑛] = 𝑺{𝑥[𝑛]}\nLet\n1, 𝑛 ∈ {0, 1, 2}\n𝑺{𝛿[𝑛]} = {\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nwhere 𝛿[𝑛] is the discrete-time unit impulse function. For an input signal 𝑥[𝑛], the\noutput 𝑦[𝑛] is",
+      "questionType": "MCQ",
+      "options": [
+        "𝑥[𝑛] + 𝑥[𝑛−1] + 𝑥[𝑛−2]",
+        "𝑥[𝑛−1] + 𝑥[𝑛] + 𝑥[𝑛+ 1]",
+        "𝑥[𝑛] + 𝑥[𝑛+ 1] + 𝑥[𝑛+ 2]",
+        "𝑥[𝑛+ 1] + 𝑥[𝑛+ 2] + 𝑥[𝑛+ 3]"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑥[𝑛] + 𝑥[𝑛−1] + 𝑥[𝑛−2]",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑥[𝑛−1] + 𝑥[𝑛] + 𝑥[𝑛+ 1]",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑥[𝑛] + 𝑥[𝑛+ 1] + 𝑥[𝑛+ 2]",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑥[𝑛+ 1] + 𝑥[𝑛+ 2] + 𝑥[𝑛+ 3]",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q21",
+      "questionNumber": 21,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider a continuous-time signal\n𝑥(𝑡) = −𝑡2{𝑢(𝑡+ 4) −𝑢(𝑡−4)}\nwhere 𝑢(𝑡) is the continuous-time unit step function. Let 𝛿(𝑡) be the continuous-\ntime unit impulse function. The value of\n∞\n∫ 𝑥(𝑡)𝛿(𝑡+ 3)𝑑𝑡\n−∞\nis",
+      "questionType": "MCQ",
+      "options": [
+        "−9",
+        "9",
+        "3",
+        "−3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−9",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "9",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "−3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q22",
+      "questionNumber": 22,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Selected data points of the step response of a stable first-order linear time-invariant\n(LTI) system are given below. The closest value of the time-constant, in sec, of the\nsystem is",
+      "questionType": "MCQ",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q23",
+      "questionNumber": 23,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The Nyquist plot of a strictly stable 𝐺(𝑠) having the numerator polynomial as\n(𝑠−3) encircles the critical point −1 once in the anti-clockwise direction. Which\none of the following statements on the closed-loop system shown in figure, is\ncorrect?\nInput + Output\nG(s)\n_",
+      "questionType": "MCQ",
+      "options": [
+        "The system stability cannot be ascertained.",
+        "The system is marginally stable.",
+        "The system is stable.",
+        "The system is unstable."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The system stability cannot be ascertained.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The system is marginally stable.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The system is stable.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The system is unstable.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q23_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q23_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q24",
+      "questionNumber": 24,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "During a power failure, a domestic household uninterruptible power supply (UPS)\nsupplies AC power to a limited number of lights and fans in various rooms. As per\na Newton-Raphson load-flow formulation, the UPS would be represented as a",
+      "questionType": "MCQ",
+      "options": [
+        "Slack bus",
+        "PV bus",
+        "PQ bus",
+        "PQV bus"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Slack bus",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "PV bus",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "PQ bus",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "PQV bus",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q25",
+      "questionNumber": 25,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which one of the following figures represents the radial electric field distribution\n𝐸 caused by a spherical cloud of electrons with a volume charge density,\n𝑅\n𝜌 = −3𝜌 for 0 ≤ 𝑅 ≤ 𝑎 (both 𝜌 , 𝑎 are positive and 𝑅 is the radial distance) and\n0 0\n𝜌 = 0 for 𝑅 > 𝑎 ?",
+      "questionType": "MCQ",
+      "options": [
+        "Fig. (i)",
+        "Fig. (ii)",
+        "Fig. (iii)",
+        "Fig. (iv)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Fig. (i)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Fig. (ii)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Fig. (iii)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Fig. (iv)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q26",
+      "questionNumber": 26,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The operating region of the developed torque (𝑇 ) and speed (𝜔) of an induction\n𝑒𝑚\nmotor drive is given by the shaded region OQRE in the figure. The load torque (𝑇 )\n𝐿\ncharacteristic is also shown. The motor drive moves from the initial operating point\nO to the final operating point S. Which one of the following trajectories will take\nthe shortest time?\nT\nem\nQ R\nP S\nT\nL\nF\nω\nO E",
+      "questionType": "MCQ",
+      "options": [
+        "𝑂−𝑄 −𝑅 −𝑆",
+        "𝑂−𝑃−𝑆",
+        "𝑂−𝐸 −𝑆",
+        "𝑂−𝐹 −𝑆"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑂−𝑄 −𝑅 −𝑆",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑂−𝑃−𝑆",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑂−𝐸 −𝑆",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑂−𝐹 −𝑆",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q26_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q26_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q27",
+      "questionNumber": 27,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The input voltage 𝑣(𝑡) and current 𝑖(𝑡) of a converter are given by,\n𝑣(𝑡) = 300 sin(𝜔𝑡) 𝑉\n𝜋 𝜋 𝜋\n𝑖(𝑡) = 10 sin (𝜔𝑡− ) + 2 sin (3𝜔𝑡+ ) + sin (5𝜔𝑡+ ) 𝐴\n6 6 2\nwhere, 𝜔 = 2𝜋× 50 rad/s. The input power factor of the converter is closest to",
+      "questionType": "MCQ",
+      "options": [
+        "0.845",
+        "0.867",
+        "0.887",
+        "1.0"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "0.845",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "0.867",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "0.887",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1.0",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q28",
+      "questionNumber": 28,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Instrument(s) required to synchronize an alternator to the grid is/are",
+      "questionType": "MSQ",
+      "options": [
+        "Voltmeter",
+        "Wattmeter",
+        "Synchroscope",
+        "Stroboscope"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Voltmeter",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Wattmeter",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Synchroscope",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Stroboscope",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q29",
+      "questionNumber": 29,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The open-loop transfer function of the system shown in the figure, is\n𝐾𝑠(𝑠+ 2)\n𝐺(𝑠) =\n(𝑠+ 5)(𝑠+ 7)\nFor 𝐾 ≥ 0, which of the following real axis point(s) is/are on the root locus?\nInput + Output\nG(s)\n_",
+      "questionType": "MSQ",
+      "options": [
+        "−1",
+        "−4",
+        "−6",
+        "−10"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "−4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "−6",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "−10",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;C.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q29_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q29_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q30",
+      "questionNumber": 30,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A continuous time periodic signal 𝑥(𝑡) is\n𝑥(𝑡) = 1 + 2 cos 2𝜋𝑡 + 2 cos 4𝜋𝑡 + 2 cos 6𝜋𝑡 .\n1 𝑇\nIf 𝑇 is the period of 𝑥(𝑡), then ∫ |𝑥(𝑡)|2𝑑𝑡 =____________ (round off to the\n𝑇 0\nnearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "7 to 7",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 7.0,
+        "max": 7.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 7 to 7.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q31",
+      "questionNumber": 31,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The maximum percentage error in the equivalent resistance of two parallel-\nconnected resistors of 100 Ω and 900 Ω with each having a maximum 5% error is\n____________ % (round off to nearest integer value).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "5 to 5",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 5 to 5.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q32",
+      "questionNumber": 32,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider a distribution feeder, with 𝑅/𝑋 ratio of 5. At the receiving end, a 350 kVA\nload is connected. The maximum voltage drop will occur from the sending end to\nthe receiving end, when the power factor of the load is ___________(round off to\nthree decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.975 to 0.985",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.975,
+        "max": 0.985
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.975 to 0.985.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q33",
+      "questionNumber": 33,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The bus impedance matrix of a 3-bus system (in pu) is\n𝑗0.059 𝑗0.061 𝑗0.038\n𝑍 = [𝑗0.061 𝑗0.093 𝑗0.066]\n𝑏𝑢𝑠\n𝑗0.038 𝑗0.066 𝑗0.110\nA symmetrical fault (through a fault impedance of 𝑗0.007 pu) occurs at bus 2.\nNeglecting pre-fault loading conditions, the voltage at bus 1, during the fault is\n________ pu (round off to three decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.380 to 0.400",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.38,
+        "max": 0.4
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.380 to 0.400.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q34",
+      "questionNumber": 34,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the circuit with ideal devices, the power MOSFET is operated with a duty cycle\nof 0.4 in a switching cycle with 𝐼 =10 A and 𝑉 =15 V. The power delivered by the\ncurrent source, in W, is ____________ (round off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "90 to 90",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 90.0,
+        "max": 90.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 90 to 90.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q34_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q34_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q35",
+      "questionNumber": 35,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The induced emf in a 3.3 kV, 4 pole, 3-phase star connected synchronous motor is\nconsidered to be equal and in phase with the terminal voltage under no load\ncondition. On application of a mechanical load, the induced emf phasor is deflected\nby an angle of 2° mechanical with respect to the terminal voltage phasor. If the\nsynchronous reactance is 2 Ω, and stator resistance is negligible, then the motor\narmature current magnitude, in ampere, during loaded condition is closest to,\n____________ (round off to two decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "66.25 to 66.75",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 66.25,
+        "max": 66.75
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 66.25 to 66.75.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q36",
+      "questionNumber": 36,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝑋 and 𝑌 be continuous random variables with probability density functions\n𝑃 (𝑥) and 𝑃 (𝑦), respectively. Further, let 𝑌 = 𝑋2 and\n𝑋 𝑌\n1, 𝑥 ∈ (0,1]\n𝑃 (𝑥) = { .\n𝑋 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nWhich one of the following options is correct?",
+      "questionType": "MCQ",
+      "options": [
+        "1\n, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {2√𝑦\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+        "1, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+        "1.5 √𝑦, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+        "2𝑦, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1\n, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {2√𝑦\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1.5 √𝑦, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2𝑦, 𝑦 ∈ (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q37",
+      "questionNumber": 37,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A Boolean function is given as\n𝑓 = (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥). (𝑢̅ + 𝑣 + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣 + 𝑤̅ + 𝑥)\nThe simplified form of this function is represented by",
+      "questionType": "MCQ",
+      "options": [
+        "u\nf\nw",
+        "u\nf\nw",
+        "v f\nx",
+        "v f\nx"
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2025/ee/q37_opt_a.png",
+        "/exam-assets/gate/2025/ee/q37_opt_b.png",
+        "/exam-assets/gate/2025/ee/q37_opt_c.png",
+        "/exam-assets/gate/2025/ee/q37_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "u\nf\nw",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "u\nf\nw",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "v f\nx",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "v f\nx",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_d.png"
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q38",
+      "questionNumber": 38,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the circuit, I is an ideal current source. The transistors M and M are assumed\nDC 1 2\nto be biased in saturation, wherein V is the input signal and V is fixed DC\nin DC\nvoltage. Both transistors have a small signal resistance of 𝑟 and trans-conductance\n𝑑𝑠\nof 𝑔 . The small signal output impedance of this circuit is\n𝑚\nV\nDD\nI\nDC\nV\nV out\nDC\nM\n2\nV\nin\nM\n1",
+      "questionType": "MCQ",
+      "options": [
+        "2𝑟\n𝑑𝑠",
+        "1\n+ 𝑟\n𝑔 𝑑𝑠\n𝑚",
+        "𝑔 𝑟2 + 2𝑟\n𝑚 𝑑𝑠 𝑑𝑠",
+        "infinity"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2𝑟\n𝑑𝑠",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1\n+ 𝑟\n𝑔 𝑑𝑠\n𝑚",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑔 𝑟2 + 2𝑟\n𝑚 𝑑𝑠 𝑑𝑠",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "infinity",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q38_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q38_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q39",
+      "questionNumber": 39,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the circuit, shown below, if the values of R and C are very large, the form of the\noutput voltage for a very high frequency square wave input, is best represented by",
+      "questionType": "MCQ",
+      "options": [
+        "V\nout\n1 V\nt\n-1 V",
+        "V\nout\n1 V\nt\n-1 V",
+        "V\nout\n1 V\nt\n-1 V",
+        "V\nout\n1 V\nt\n-1 V"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "V\nout\n1 V\nt\n-1 V",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "V\nout\n1 V\nt\n-1 V",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "V\nout\n1 V\nt\n-1 V",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "V\nout\n1 V\nt\n-1 V",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q39_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q39_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q40",
+      "questionNumber": 40,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let continuous-time signals 𝑥 (𝑡) and 𝑥 (𝑡) be\n1 2\n1, 𝑡 ∈ [0,1] 𝑡, 𝑡 ∈ [0,1]\n𝑥 (𝑡) = {2 −𝑡, 𝑡 ∈ [1,2] and 𝑥 (𝑡) = {2 −𝑡, 𝑡 ∈ [1,2]\n1 2\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\n∞\nConsider the convolution 𝑦(𝑡) = 𝑥 (𝑡) ∗𝑥 (𝑡). Then ∫ 𝑦(𝑡)𝑑𝑡 is\n1 2 −∞",
+      "questionType": "MCQ",
+      "options": [
+        "1.5",
+        "2.5",
+        "3.5",
+        "4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1.5",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2.5",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "3.5",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q41",
+      "questionNumber": 41,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "1\nLet 𝐺(𝑠) = . Then the closed-loop system shown in the figure below,\n(𝑠+1)(𝑠+2)\nis\nInput + Output\nK(s-1)G(s)\n_",
+      "questionType": "MCQ",
+      "options": [
+        "stable for all 𝐾 > 2.",
+        "unstable for all 𝐾 > 2.",
+        "unstable for all 𝐾 > 1.",
+        "stable for all 𝐾 > 1."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "stable for all 𝐾 > 2.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "unstable for all 𝐾 > 2.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "unstable for all 𝐾 > 1.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "stable for all 𝐾 > 1.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q41_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q41_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q42",
+      "questionNumber": 42,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The continuous-time unit impulse signal is applied as an input to a continuous-time\nlinear time-invariant system 𝑺. The output is observed to be the continuous-time\nunit step signal 𝑢(𝑡). Which one of the following statements is true?",
+      "questionType": "MCQ",
+      "options": [
+        "Every bounded input signal applied to 𝑺 results in a bounded output signal.",
+        "It is possible to find a bounded input signal which when applied to 𝑺 results in an\nunbounded output signal.",
+        "On applying any input signal to 𝑺, the output signal is always bounded.",
+        "On applying any input signal to 𝑺 the output signal is always unbounded."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Every bounded input signal applied to 𝑺 results in a bounded output signal.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It is possible to find a bounded input signal which when applied to 𝑺 results in an\nunbounded output signal.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "On applying any input signal to 𝑺, the output signal is always bounded.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "On applying any input signal to 𝑺 the output signal is always unbounded.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q43",
+      "questionNumber": 43,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The transformer connection given in the figure is part of a balanced 3-phase circuit\nwhere the phase sequence is “𝑎𝑏𝑐”. The primary to secondary turns ratio is 2:1. If\n(𝐼 + 𝐼 + 𝐼 = 0), then the relationship between 𝐼 and 𝐼 will be\n𝑎 𝑏 𝑐 𝐴 𝑎𝑑\nI\nA I\nA ad\na\nI\nc I\ncd\nI c\na\nI\nb\nI\nB I\nbd\nB I b\nC\nC\nprimary secondary",
+      "questionType": "MCQ",
+      "options": [
+        "|𝐼𝐴| 1\n= and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2√3\n𝑎𝑑",
+        "|𝐼𝐴| 1\n= and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2√3\n𝑎𝑑",
+        "|𝐼𝐴|\n= 2√3 and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
+        "|𝐼𝐴|\n= 2√3 and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "|𝐼𝐴| 1\n= and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2√3\n𝑎𝑑",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "|𝐼𝐴| 1\n= and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2√3\n𝑎𝑑",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "|𝐼𝐴|\n= 2√3 and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "|𝐼𝐴|\n= 2√3 and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q43_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q43_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q44",
+      "questionNumber": 44,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A DC series motor with negligible series resistance is running at a certain speed\ndriving a load, where the load torque varies as cube of the speed. The motor is fed\nfrom a 400 V DC source and draws 40 A armature current. Assume linear magnetic\ncircuit. The external resistance, in Ω, that must be connected in series with the\narmature to reduce the speed of the motor by half, is closest to",
+      "questionType": "MCQ",
+      "options": [
+        "23.28",
+        "4.82",
+        "46.7",
+        "0"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "23.28",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "4.82",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "46.7",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "0",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q45",
+      "questionNumber": 45,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A 3-phase, 400 V, 4 pole, 50 Hz star connected induction motor has the following\nparameters referred to the stator:\n𝑅′ = 1Ω, 𝑋 = 𝑋′ = 2Ω\n𝑟 𝑠 𝑟\nStator resistance, magnetizing reactance and core loss of the motor are neglected.\nThe motor is run with constant V/f control from a drive. For maximum starting\ntorque, the voltage and frequency output, respectively, from the drive, is closest to,",
+      "questionType": "MCQ",
+      "options": [
+        "400 V and 50 Hz",
+        "200 V and 25 Hz",
+        "100 V and 12.5 Hz",
+        "300 V and 37.5 Hz"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "400 V and 50 Hz",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "200 V and 25 Hz",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "100 V and 12.5 Hz",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "300 V and 37.5 Hz",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q46",
+      "questionNumber": 46,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The 3-phase modulating waveforms (𝑣 (𝑡), 𝑣 (𝑡) and 𝑣 (𝑡)), used in sinusoidal\n𝑎 𝑏 𝑐\nPWM in a Voltage Source Inverter (VSI) are\n𝑣 (𝑡) = 0.8 sin (ω𝑡) V\n𝑎\n2𝜋\n𝑣 (𝑡) = 0.8 sin (ω𝑡− ) V\n𝑏\n3\n2𝜋\n𝑣 (𝑡) = 0.8 sin (ω𝑡+ ) V\n𝑐\n3\nwhere ω = 2𝜋× 40 rad/s is the fundamental frequency. The modulating\nwaveforms are compared with a 10 kHz triangular carrier whose magnitude varies\nbetween +1 and −1. The VSI has a DC link voltage of 600 V and feeds a star\nconnected motor. The per phase fundamental RMS motor voltage, in volts, is closest\nto",
+      "questionType": "MCQ",
+      "options": [
+        "169.71",
+        "300.00",
+        "424.26",
+        "212.13"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "169.71",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "300.00",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "424.26",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "212.13",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q47",
+      "questionNumber": 47,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "An ideal sinusoidal voltage source 𝑣(𝑡) = 230√2 sin(2𝜋× 50𝑡) 𝑉 feeds an ideal\ninductor 𝐿 through an ideal SCR with firing angle 𝛼 = 0°. If 𝐿 = 100 𝑚𝐻, then the\npeak of the inductor current, in ampere, is closest to",
+      "questionType": "MCQ",
+      "options": [
+        "20.71",
+        "0",
+        "10.35",
+        "7.32"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "20.71",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "10.35",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "7.32",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q47_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q47_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q48",
+      "questionNumber": 48,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the following circuit, the average voltage\ncos 𝛼\n𝑉 = 400 (1 + ) V,\n𝑜\n3\nwhere 𝛼 is the firing angle. If the power dissipated in the resistor is 64 W, then the\nclosest value of 𝛼 in degrees is",
+      "questionType": "MCQ",
+      "options": [
+        "35.9",
+        "46.4",
+        "41.4",
+        "0"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "35.9",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "46.4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "41.4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "0",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q48_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q48_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q49",
+      "questionNumber": 49,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the system shown below, the generator was initially supplying power to the grid.\nA temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The\ncircuit breakers open to isolate the line. The fault self-clears. The circuit breakers\nreclose and restore the line. Which one of the following diagrams best indicates the\nrotor accelerating and decelerating areas?\nF\nCB1 CB2\nCB 1\nGen fault Grid\nFig. (ii)\nFig. (i)\nFig. (iii) Fig. (iv)",
+      "questionType": "MCQ",
+      "options": [
+        "Fig. (i)",
+        "Fig. (ii)",
+        "Fig. (iii)",
+        "Fig. (iv)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Fig. (i)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Fig. (ii)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Fig. (iii)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Fig. (iv)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q49_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q49_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q50",
+      "questionNumber": 50,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "An air filled cylindrical capacitor (capacitance 𝐶 ) of length L, with a and b as its\n0\ninner and outer radii, respectively, consists of two coaxial conducting surfaces. Its\ncross-sectional view is shown in Fig. (i). In order to increase the capacitance, a\ndielectric material of relative permittivity 𝜀 is inserted inside 50% of the annular\n𝑟\nregion as shown in Fig. (ii). The value of 𝜀 for which the capacitance of the\n𝑟\ncapacitor in Fig. (ii), becomes 5𝐶 is\n0\na a\nb b\n\n 0 r\n 0\n0\nFig. (i) Fig. (ii)",
+      "questionType": "MCQ",
+      "options": [
+        "4",
+        "5",
+        "9",
+        "10"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "5",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "9",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "10",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q50_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q50_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q51",
+      "questionNumber": 51,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝒂 be the unit radial vector in the spherical co-ordinate system. For which of\n𝑹\n1\nthe following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂\n𝑹 𝑅𝑛\nis independent of R?",
+      "questionType": "MSQ",
+      "options": [
+        "−2",
+        "−1",
+        "1",
+        "2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "−1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q52",
+      "questionNumber": 52,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider two coupled circuits, having self-inductances 𝐿 and 𝐿 , that carry non-\n1 2\nzero currents 𝐼 and 𝐼 , respectively. The mutual inductance between the circuits is\n1 2\nM with unity coupling coefficient. The stored magnetic energy of the coupled\n𝐼\n1\ncircuits is minimum at which of the following value(s) of ?\n𝐼\n2",
+      "questionType": "MSQ",
+      "options": [
+        "𝑀\n−\n𝐿\n1",
+        "𝑀\n−\n𝐿\n2",
+        "𝐿\n− 1\n𝑀",
+        "𝐿\n− 2\n𝑀"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑀\n−\n𝐿\n1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑀\n−\n𝐿\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐿\n− 1\n𝑀",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐿\n− 2\n𝑀",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q53",
+      "questionNumber": 53,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let (𝑥, 𝑦) ∈ ℜ2. The rate of change of the real valued function,\n𝑉(𝑥, 𝑦) = 𝑥2 + 𝑥 + 𝑦2 + 1\nat the origin in the direction of the point (1,2) is ___________ (round off to the\nnearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0 to 1",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0 to 1.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q54",
+      "questionNumber": 54,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider ordinary differential equations given by\n𝑥̇ (𝑡) = 2𝑥 (𝑡)\n1 2\n𝑥̇ (𝑡) = 𝑟(𝑡)\n2\nwith initial conditions 𝑥 (0) = 1 and 𝑥 (0) = 0.\n1 2\n1, 𝑡 ≥ 0\nIf 𝑟(𝑡) = { , then at 𝑡 = 1, 𝑥 (𝑡) =__________ (round off to the nearest\n0, 𝑡 < 0 1\ninteger).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2 to 2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 2 to 2.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q55",
+      "questionNumber": 55,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by\n|𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗 = √−1. Then,\n∮ 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).\n𝐶",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0 to 0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0 to 0.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q56",
+      "questionNumber": 56,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is\n____ (round off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2 to 2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 2 to 2.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q56_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q56_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q57",
+      "questionNumber": 57,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The switch (S) closes at 𝑡 = 0 sec. The time, in sec, the capacitor takes to charge to\n50 V is _____ (round off to one decimal place).\n5 F\nS\n100 V 25 Ω 3 A\n2 Ω",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "4.0 to 4.2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 4.0,
+        "max": 4.2
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 4.0 to 4.2.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q57_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q57_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q58",
+      "questionNumber": 58,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In an experiment to measure the active power drawn by a single-phase RL Load\nconnected to an AC source through a 2 Ω resistor, three voltmeters are connected\nas shown in the figure below. The voltmeter readings are as follows:\n𝑉 = 200 𝑉, 𝑉 = 9 𝑉, 𝑉 = 199 𝑉. Assuming perfect resistors and ideal\n𝑆𝑜𝑢𝑟𝑐𝑒 𝑅 𝐿𝑜𝑎𝑑\nvoltmeters, the Load-active power measured in this experiment, in W, is ________\n(round off to one decimal place).\n2\nV\nR\nV\nRL\nV V V Load\nV Load\nSource",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "78.0 to 81.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 78.0,
+        "max": 81.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 78.0 to 81.0.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q58_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q58_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q59",
+      "questionNumber": 59,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the Wheatstone bridge shown below, the sensitivity of the bridge in terms of\nchange in balancing voltage 𝐸 for unit change in the resistance 𝑅, in mV/Ω, is\n______________ (round off to two decimal places).\nΩ P\n5 0 = 10\n=\nR Ω\n10 V E\nS = kΩ 5 = 1 k Ω\nQ",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "-2.00 to -1.94 OR 1.94 to 2.00",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": -2.0,
+        "max": -1.94
+      },
+      "answerRanges": [
+        {
+          "min": -2.0,
+          "max": -1.94
+        },
+        {
+          "min": 1.94,
+          "max": 2.0
+        }
+      ],
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is -2.00 to -1.94 OR 1.94 to 2.00.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q59_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q59_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q60",
+      "questionNumber": 60,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The steady state capacitor current of a conventional DC-DC buck converter,\nworking in CCM, is shown in one switching cycle. If the input voltage is 30 V, the\nvalue of the inductor used, in mH, is _____________ (round off to one decimal\nplace).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.7 to 1.9",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.7,
+        "max": 1.9
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.7 to 1.9.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q60_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q60_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q61",
+      "questionNumber": 61,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "An ideal low pass filter has frequency response given by\n1, |𝜔| ≤ 200𝜋\n𝐻(𝑗𝜔) = {\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nLet ℎ(𝑡) be its time domain representation. Then ℎ(0) = ________ (round off to the\nnearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "200 to 200",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 200.0,
+        "max": 200.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 200 to 200.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q62",
+      "questionNumber": 62,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the state-space model\n𝒙̇ (𝑡) = 𝐴𝒙(𝑡) + 𝐵𝑟(𝑡),\n𝑦(𝑡) = 𝐶𝒙(𝑡)\nwhere 𝒙(𝑡), 𝑟(𝑡) , 𝑦(𝑡) are the state, input and output, respectively. The matrices\n𝐴, 𝐵, 𝐶 are given below\n0 1 0\n𝐴 = [ ], 𝐵 = [ ], 𝐶 = [1 0]\n−2 −3 1\nThe sum of the magnitudes of the poles is _______________ (round off to nearest\ninteger).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "3 to 3",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 3 to 3.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q63",
+      "questionNumber": 63,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Using shunt capacitors, the power factor of a 3-phase, 4 kV induction motor\n(drawing 390 kVA at 0.77 pf lag) is to be corrected to 0.85 pf lag. The line current\nof the capacitor bank, in A, is ____________ (round off to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "8.5 to 10.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 8.5,
+        "max": 10.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 8.5 to 10.0.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q64",
+      "questionNumber": 64,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Two units, rated at 100 MW and 150 MW, are enabled for economic load dispatch.\nWhen the overall incremental cost is 10,000 Rs./MWh, the units are dispatched to\n50 MW and 80 MW respectively. At an overall incremental cost of\n10,600 Rs./MWh, the power output of the units are 80 MW and 92 MW,\nrespectively. The total plant MW-output (without overloading any unit) at an overall\nincremental cost of 11,800 Rs./MWh is ________ (round off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "216 to 216",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 216.0,
+        "max": 216.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 216 to 216.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ee-q65",
+      "questionNumber": 65,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A controller 𝐷(𝑠) of the form (1 + 𝐾 𝑠) is to be designed for the plant\n𝐷\n1000√2\n𝐺(𝑠) = as shown in the figure. The value of 𝐾 that yields a phase margin\n𝑠(𝑠+10)2 𝐷\nof 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round\noff to one decimal place).\nInput + Output\nD(s) G(s)\n_",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.1 to 0.1",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.1,
+        "max": 0.1
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.1 to 0.1.",
+      "diagramUrl": "/exam-assets/gate/2025/ee/q65_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ee/q65_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    }
+  ]
+}

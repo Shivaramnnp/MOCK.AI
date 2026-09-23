@@ -1,0 +1,4551 @@
+{
+  "id": "gate-2024-ar",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2024,
+  "title": "GATE 2024 — Architecture and Planning (AR)",
+  "subTitle": "Official IISc Bengaluru Question Paper (Single Session)",
+  "date": "2024-02-03",
+  "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "AR",
+  "discipline": "Architecture and Planning",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 125.0,
+  "totalQuestions": 81,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "ar_common",
+      "name": "Architecture and Planning (Part A - Common)",
+      "questionCount": 39,
+      "startIndex": 10,
+      "endIndex": 48,
+      "maxMarks": 60.0
+    },
+    {
+      "id": "ar_b1",
+      "name": "Part B1: Architecture",
+      "questionCount": 16,
+      "startIndex": 49,
+      "endIndex": 64,
+      "maxMarks": 25.0
+    },
+    {
+      "id": "ar_b2",
+      "name": "Part B2: Planning",
+      "questionCount": 16,
+      "startIndex": 65,
+      "endIndex": 80,
+      "maxMarks": 25.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2024-ar-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If ‘→’ denotes increasing order of intensity, then the meaning of the words\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\nWhich one of the given options is appropriate to fill the blank?",
+      "questionType": "MCQ",
+      "options": [
+        "frown",
+        "fawn",
+        "vein",
+        "vain"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "frown",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "fawn",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "vein",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "vain",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts\nwith shared boundaries (excluding corners) have the same color. The minimum\nnumber of colors required is",
+      "questionType": "MCQ",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "5",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "6",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q2_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q2_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the\ndigits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+      "questionType": "MCQ",
+      "options": [
+        "24",
+        "48",
+        "72",
+        "12"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "24",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "48",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "72",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "12",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The sum of the following infinite series is\n1 1 1 1 1 1 1\n2 + + + + + + + + ⋯\n2 3 4 8 9 16 27",
+      "questionType": "MCQ",
+      "options": [
+        "11/3",
+        "7/2",
+        "13/4",
+        "9/2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "11/3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "7/2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "13/4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "9/2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and\nD is represented by the pie chart shown. The total number of votes cast in the\nelection were 1,15,000, out of which 5,000 were invalid.\nShare of valid votes\nD\n15%\nA\nC 40%\n20%\nB\n25%\nBased on the data provided, the total number of valid votes received by the\ncandidates B and C is",
+      "questionType": "MCQ",
+      "options": [
+        "45,000",
+        "49,500",
+        "51,750",
+        "54,000"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "45,000",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "49,500",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "51,750",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "54,000",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q5_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q5_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a\nnumber of mutations in a particular gene that resulted in these people developing\nthe ability to digest dairy milk.\nBased on the given passage, which of the following can be inferred?",
+      "questionType": "MCQ",
+      "options": [
+        "All human beings can digest dairy milk.",
+        "No human being can digest dairy milk.",
+        "Digestion of dairy milk is essential for human beings.",
+        "In human beings, digestion of dairy milk resulted from a mutated gene."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "All human beings can digest dairy milk.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "No human being can digest dairy milk.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Digestion of dairy milk is essential for human beings.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "In human beings, digestion of dairy milk resulted from a mutated gene.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The probability of a boy or a girl being born is 1/2. For a family having only\nthree children, what is the probability of having two girls and one boy?",
+      "questionType": "MCQ",
+      "options": [
+        "3/8",
+        "1/8",
+        "1/4",
+        "1/2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "3/8",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1/8",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1/4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1/2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they\ninvest in each of these mutual funds are given in the table.\nMutual fund A Mutual fund B Mutual fund C\nPerson 1 ₹10,000 ₹20,000 ₹20,000\nPerson 2 ₹20,000 ₹15,000 ₹15,000\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than\nPerson 2. The annual rate of return for the mutual funds B and C is 15% each. What\nis the annual rate of return for the mutual fund A?",
+      "questionType": "MCQ",
+      "options": [
+        "7.5%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "7.5%",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "10%",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "15%",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "20%",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Three different views of a dice are shown in the figure below.\nThe piece of paper that can be folded to make this dice is",
+      "questionType": "MCQ",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2024/ar/q9_opt_a.png",
+        "/exam-assets/gate/2024/ar/q9_opt_b.png",
+        "/exam-assets/gate/2024/ar/q9_opt_c.png",
+        "/exam-assets/gate/2024/ar/q9_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_d.png"
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q9_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q9_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Visualize two identical right circular cones such that one is inverted over the other\nand they share a common circular base. If a cutting plane passes through the vertices\nof the assembled cones, what shape does the outer boundary of the\nresulting cross-section make?",
+      "questionType": "MCQ",
+      "options": [
+        "A rhombus",
+        "A triangle",
+        "An ellipse",
+        "A hexagon"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "A rhombus",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "A triangle",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "An ellipse",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "A hexagon",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q11",
+      "questionNumber": 11,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The nature of curvature of the following structural form is",
+      "questionType": "MCQ",
+      "options": [
+        "monoclastic",
+        "synclastic",
+        "anticlastic",
+        "möbius"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "monoclastic",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "synclastic",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "anticlastic",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "möbius",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q11_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q11_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q12",
+      "questionNumber": 12,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "As per the Ekistics Logarithmic Scale, the ‘world city’ is referred as",
+      "questionType": "MCQ",
+      "options": [
+        "Megalopolis",
+        "Conurbation",
+        "Acropolis",
+        "Ecumenopolis"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Megalopolis",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Conurbation",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Acropolis",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Ecumenopolis",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q13",
+      "questionNumber": 13,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "In Mānasāra Silpasāstra, a bow-shaped town plan is known as",
+      "questionType": "MCQ",
+      "options": [
+        "Dandaka",
+        "Prastara",
+        "Kārmuka",
+        "Nandyāvarta"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Dandaka",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Prastara",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Kārmuka",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Nandyāvarta",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q14",
+      "questionNumber": 14,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The value of a property when sold at a lower price than its open market price is\ncalled",
+      "questionType": "MCQ",
+      "options": [
+        "Distress Value",
+        "Accommodation Value",
+        "Speculative Value",
+        "Replacement Value"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Distress Value",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Accommodation Value",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Speculative Value",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Replacement Value",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q15",
+      "questionNumber": 15,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "In a traffic survey, Enoscope is used to measure",
+      "questionType": "MCQ",
+      "options": [
+        "Volume to Capacity ratio",
+        "Sight distance",
+        "Spot speed",
+        "Intersection delay"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Volume to Capacity ratio",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Sight distance",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Spot speed",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Intersection delay",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q16",
+      "questionNumber": 16,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The author of the book Human Aspects of Urban Form is",
+      "questionType": "MCQ",
+      "options": [
+        "Cliff Moughtin",
+        "Amos Rapoport",
+        "Peter Katz",
+        "Lewis Mumford"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Cliff Moughtin",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Amos Rapoport",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Peter Katz",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Lewis Mumford",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q17",
+      "questionNumber": 17,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is correct for Urban Cool Island (UCI)?",
+      "questionType": "MCQ",
+      "options": [
+        "The UCI and Urban Heat Island (UHI) cannot happen in a city at the same time.",
+        "Air temperature of surrounding rural areas is warmer than that of the urban areas.",
+        "Air temperature of surrounding rural areas is cooler than that of the urban areas.",
+        "UCI happens only in a snow-clad mountain."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The UCI and Urban Heat Island (UHI) cannot happen in a city at the same time.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Air temperature of surrounding rural areas is warmer than that of the urban areas.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Air temperature of surrounding rural areas is cooler than that of the urban areas.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "UCI happens only in a snow-clad mountain.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q18",
+      "questionNumber": 18,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is correct for an oxidation pond to treat waste\nwater?",
+      "questionType": "MCQ",
+      "options": [
+        "It is an aerobic pond.",
+        "It is an anaerobic pond.",
+        "It does not require sunlight.",
+        "It does not remove Biological Oxygen Demand (BOD)."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It is an aerobic pond.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It is an anaerobic pond.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It does not require sunlight.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It does not remove Biological Oxygen Demand (BOD).",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q19",
+      "questionNumber": 19,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The conservation architect of the Maitreya Buddha Temple at Basgo, Ladakh which\nwon the 2007 UNESCO Asia-Pacific Heritage Award is",
+      "questionType": "MCQ",
+      "options": [
+        "Abha Narain Lambah",
+        "Vinod Kumar M. M.",
+        "Rahul Mehrotra",
+        "Saima Iqbal"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Abha Narain Lambah",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Vinod Kumar M. M.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Rahul Mehrotra",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Saima Iqbal",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q20",
+      "questionNumber": 20,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following options is/are the right sequence(s) in water treatment\nprocess?",
+      "questionType": "MSQ",
+      "options": [
+        "Coagulation → Flocculation → Sedimentation",
+        "Sedimentation → Filtration → Disinfection",
+        "Sedimentation → Flocculation → Coagulation",
+        "Disinfection → Filtration → Flocculation"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Coagulation → Flocculation → Sedimentation",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Sedimentation → Filtration → Disinfection",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Sedimentation → Flocculation → Coagulation",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Disinfection → Filtration → Flocculation",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q21",
+      "questionNumber": 21,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following is/are associated with Gentrification in a neighbourhood?",
+      "questionType": "MSQ",
+      "options": [
+        "Wealthier households displace poor households",
+        "Poor households displace wealthier households",
+        "Real estate value increases",
+        "Real estate value decreases"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Wealthier households displace poor households",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Poor households displace wealthier households",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Real estate value increases",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Real estate value decreases",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q22",
+      "questionNumber": 22,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following sites is/are included in the UNESCO World Heritage\nList as on December 2022?",
+      "questionType": "MSQ",
+      "options": [
+        "Capitol Complex, Chandigarh",
+        "Moth ki Masjid, Delhi",
+        "Keoladeo National Park, Bharatpur",
+        "Paradesi Synagogue, Kochi"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Capitol Complex, Chandigarh",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Moth ki Masjid, Delhi",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Keoladeo National Park, Bharatpur",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Paradesi Synagogue, Kochi",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q23",
+      "questionNumber": 23,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The reference points, lines and planes for drawing a two-point perspective of an\nobject are marked in the Figure below. Select the correct option(s) that match(es)\nwith the corresponding nomenclature.",
+      "questionType": "MSQ",
+      "options": [
+        "R – Station point, S – Picture plane",
+        "R – Vanishing point, T – Picture plane",
+        "P – Vanishing point, T – Ground line",
+        "Q – Ground line, S – Horizon line"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "R – Station point, S – Picture plane",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "R – Vanishing point, T – Picture plane",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – Vanishing point, T – Ground line",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Q – Ground line, S – Horizon line",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q23_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q23_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q24",
+      "questionNumber": 24,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "India’s intended Nationally Determined Contribution to the United Nations\nFramework Convention on Climate Change in 2022 include(s)",
+      "questionType": "MSQ",
+      "options": [
+        "reduction of emissions intensity of India’s GDP by 45% by 2030 from 2005 level",
+        "achieving about 50% cumulative electric power installed capacity from non-fossil\nfuel-based energy resources by 2030",
+        "achieving the target of net-zero emission by 2030",
+        "reduction of total projected carbon emission by one billion tonnes from 2022 to\n2025"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "reduction of emissions intensity of India’s GDP by 45% by 2030 from 2005 level",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "achieving about 50% cumulative electric power installed capacity from non-fossil\nfuel-based energy resources by 2030",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "achieving the target of net-zero emission by 2030",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "reduction of total projected carbon emission by one billion tonnes from 2022 to\n2025",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q25",
+      "questionNumber": 25,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "As per the Census of India 2011, non-notified slums is/are categorised as",
+      "questionType": "MSQ",
+      "options": [
+        "Recognised",
+        "Identified",
+        "Unrecognised",
+        "Authorised"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Recognised",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Identified",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Unrecognised",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Authorised",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q26",
+      "questionNumber": 26,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following is/are under the purview of the Energy Conservation\nBuilding Code of India 2017 ?",
+      "questionType": "MSQ",
+      "options": [
+        "Indoor Lighting",
+        "Outdoor Lighting",
+        "Plug Loads",
+        "Embodied Energy"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Indoor Lighting",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Outdoor Lighting",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Plug Loads",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Embodied Energy",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q27",
+      "questionNumber": 27,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following is/are used for municipal fiscal resource mobilisation?",
+      "questionType": "MSQ",
+      "options": [
+        "Property tax",
+        "Development charges",
+        "Income tax",
+        "Salary of municipal staff"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Property tax",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Development charges",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Income tax",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Salary of municipal staff",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q28",
+      "questionNumber": 28,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "A ramp with a slope of 1:12 is required for wheelchair access. Intermediate landings\nof length 1.5 m each have to be provided after every 9 m running length. The\nrunning length of a straight ramp including landing, to negotiate a level difference\nof 900 mm vertical height, in m, is _____________ (rounded off to two decimal\nplaces).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "12.29 to 12.35",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 12.29,
+        "max": 12.35
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 12.29 to 12.35.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q29",
+      "questionNumber": 29,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the features in Group–I with the corresponding software tools in\nGroup–II.\nGroup–I Group–II\n(P) Raster Graphics Editing (1) OpenStudio\n(Q) Energy Modeling (2) GIMP\n(R) Visual Programming Interface (3) STAAD\n(S) Structural Analysis (4) Grasshopper\n(5) Radiance",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 1, R – 2, S – 5",
+        "P – 2, Q – 1, R – 4, S – 3",
+        "P – 1, Q – 4, R – 5, S – 2",
+        "P – 2, Q – 5, R – 1, S – 3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 1, R – 2, S – 5",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 2, Q – 1, R – 4, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 1, Q – 4, R – 5, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 2, Q – 5, R – 1, S – 3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q30",
+      "questionNumber": 30,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the elements in Group–I with the corresponding buildings in Group–II.\nGroup–I Group–II\n(P) Lightweight Structure (1) Taipei 101, Taipei by Lee and Wang\nThe Gherkin, London by Foster &\n(Q) Base Isolator (2)\nPartners\nMuseum of New Zealand Te Papa\n(R) Tuned-mass Damper (3)\nTongarewa, Wellington by Ivan Mercep\nPaper Log Houses, Kobe by Shigeru\n(S) Diagrid (4)\nBan\nMetropolitan Cathedral of Christ the\n(5) King, Liverpool by Lutyens and\nGibberd",
+      "questionType": "MCQ",
+      "options": [
+        "P – 1, Q – 3, R – 5, S – 4",
+        "P – 4, Q – 3, R – 1, S – 2",
+        "P – 4, Q – 1, R – 5, S – 2",
+        "P – 3, Q – 2, R – 1, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 1, Q – 3, R – 5, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 4, Q – 3, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 4, Q – 1, R – 5, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 3, Q – 2, R – 1, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q31",
+      "questionNumber": 31,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the following concepts in Group–I with their corresponding description in\nGroup–II.\nGroup–I Group–II\nAffording a clear view of the waterfront to a\n(P) N I M B Y (1)\nplot through the abutting street\nPlanning and zoning tool to regulate\n(Q) Form based code (2)\ndevelopment primarily through urban form\nEstablishment of residential areas on the\n(R) Tactical urbanism (3)\noutskirts of a city\nShort-term, low cost, scalable interventions\n(S) Suburbanisation (4)\nand policies to change a neighbourhood\nResisting any physical intervention by public\n(5) or private enterprises within their\nneighbourhood",
+      "questionType": "MCQ",
+      "options": [
+        "P – 5, Q – 2, R – 4, S – 3",
+        "P – 5, Q – 4, R – 3, S – 2",
+        "P – 1, Q – 2, R – 4, S – 5",
+        "P – 1, Q – 5, R – 4, S – 3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 5, Q – 2, R – 4, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 5, Q – 4, R – 3, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 1, Q – 2, R – 4, S – 5",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 1, Q – 5, R – 4, S – 3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q32",
+      "questionNumber": 32,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the urban renewal projects in Group–I with the corresponding cities in\nGroup–II.\nGroup–I Group–II\n(P) Cheonggyecheon (1) New York\n(Q) The High Line (2) London\n(R) False Creek South (3) Seoul\n(S) Canary Wharf (4) Vancouver\n(5) Tokyo",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 1, R – 4, S – 2",
+        "P – 3, Q – 5, R – 1, S – 2",
+        "P – 5, Q – 1, R – 2, S – 3",
+        "P – 2, Q – 5, R – 4, S – 3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 1, R – 4, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 5, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 5, Q – 1, R – 2, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 2, Q – 5, R – 4, S – 3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q33",
+      "questionNumber": 33,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the Biosphere Reserves in Group–I with their corresponding features in\nGroup–II.\nGroup–I Group–II\n(P) Gulf of Mannar (1) Ridge, Glacier\nSub-tropical/Tropical Forest,\n(Q) Sunderbans (2)\nStepped Hill\n(R) Nanda Devi (3) Swamp forest, Mangrove\n(S) Nilgiri (4) Coral Reefs, Seagrass bed\n(5) Salt Marsh, Flat Terrain",
+      "questionType": "MCQ",
+      "options": [
+        "P – 1, Q – 3, R – 4, S – 5",
+        "P – 3, Q – 5, R – 1, S – 2",
+        "P – 4, Q – 3, R – 1, S – 2",
+        "P – 4, Q – 2, R – 3, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 1, Q – 3, R – 4, S – 5",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 5, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 4, Q – 3, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 4, Q – 2, R – 3, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q34",
+      "questionNumber": 34,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the terminologies in Group–I with their descriptions in Group–II.\nGroup–I Group–II\nRapid expansion of geographical\n(P) Edge City (1)\nareas of towns or cities\n(Q) Synekism (2) Violence against the city\nA secondary CBD on the edge of\n(R) Urbicide (3)\nthe city\n(S) Urban Sprawl (4) Rebuilding core city area\nUnion of several small urban\n(5)\nsettlements under one rule",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 5, R – 2, S – 1",
+        "P – 3, Q – 4, R – 2, S – 5",
+        "P – 2, Q – 5, R – 3, S – 1",
+        "P – 4, Q – 2, R – 3, S – 1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 5, R – 2, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 4, R – 2, S – 5",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 2, Q – 5, R – 3, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 4, Q – 2, R – 3, S – 1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q35",
+      "questionNumber": 35,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Match the items in Group–I with their corresponding items in Group–II.\nGroup–I Group–II\n(P) Floating floor (1) Overflow control\n(Q) Float valve (2) Delay not affecting a project\n(R) Metal float (3) Acoustical buffer\n(S) Free float (4) Plastering equipment\n(5) Traffic flow control",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 2, R – 4, S – 1",
+        "P – 5, Q – 1, R – 3, S – 4",
+        "P – 3, Q – 1, R – 4, S – 2",
+        "P – 1, Q – 2, R – 5, S – 4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 2, R – 4, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 5, Q – 1, R – 3, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 3, Q – 1, R – 4, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 1, Q – 2, R – 5, S – 4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q36",
+      "questionNumber": 36,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "As per the URDPFI Guidelines 2015, match the type of educational facilities in\nGroup–I with the corresponding minimum population to be served per facility\nin Group–II.\nGroup–I Group–II\n(P) Integrated school (1) 4,000\n(Q) Senior secondary school (2) 2,500\n(R) College (3) 90,000\n(S) Primary school (4) 1,25,000\n(5) 7,500",
+      "questionType": "MCQ",
+      "options": [
+        "P – 4, Q – 2, R – 3, S – 1",
+        "P – 3, Q – 5, R – 4, S – 1",
+        "P – 2, Q – 5, R – 1, S – 3",
+        "P – 3, Q – 2, R – 4, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 4, Q – 2, R – 3, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 5, R – 4, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 2, Q – 5, R – 1, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 3, Q – 2, R – 4, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q37",
+      "questionNumber": 37,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is/are true?",
+      "questionType": "MSQ",
+      "options": [
+        "Physiological Equivalent Temperature is used in outdoor thermal comfort\nevaluation.",
+        "Thermal Performance Index is computed using outside surface temperature of\nbuilding envelope.",
+        "Reynolds number less than 2000 refers to laminar wind flow.",
+        "Reynolds number greater than 4000 refers to turbulent wind flow."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Physiological Equivalent Temperature is used in outdoor thermal comfort\nevaluation.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Thermal Performance Index is computed using outside surface temperature of\nbuilding envelope.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Reynolds number less than 2000 refers to laminar wind flow.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Reynolds number greater than 4000 refers to turbulent wind flow.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q38",
+      "questionNumber": 38,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Yellow, blue-violet and red-violet are split complementary hues.",
+        "Orange, green and violet are analogous combinations.",
+        "CMYK is a subtractive colour system.",
+        "Blue, green, orange and red are tetrad combinations."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Yellow, blue-violet and red-violet are split complementary hues.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Orange, green and violet are analogous combinations.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "CMYK is a subtractive colour system.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Blue, green, orange and red are tetrad combinations.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q39",
+      "questionNumber": 39,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "The Royal Botanical Garden is in Kew, England.",
+        "The Villa d’Este is in Tivoli, Italy.",
+        "Indira Gandhi Memorial Tulip Garden is in Srinagar, J&K, India.",
+        "Shinjuku Gyoen National Garden is in Beijing, China."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The Royal Botanical Garden is in Kew, England.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The Villa d’Este is in Tivoli, Italy.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Indira Gandhi Memorial Tulip Garden is in Srinagar, J&K, India.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Shinjuku Gyoen National Garden is in Beijing, China.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q40",
+      "questionNumber": 40,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Hibiscus or china rose (Hibiscus rosa-sinensis) is a shrub which has red, pink, white,\nand yellow blossoms.",
+        "Frangipani, champa, and plumeria alba are names of the same flowering tree.",
+        "Jacaranda (Jacarenda mimisifolia), gulmohar (delonix regia), and amaltas\n(laburnum) are flowering trees.",
+        "The fruit of the Kadam/cadamba tree (Neolamarckia cadamba) is conical in shape\nand poisonous for humans."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Hibiscus or china rose (Hibiscus rosa-sinensis) is a shrub which has red, pink, white,\nand yellow blossoms.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Frangipani, champa, and plumeria alba are names of the same flowering tree.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Jacaranda (Jacarenda mimisifolia), gulmohar (delonix regia), and amaltas\n(laburnum) are flowering trees.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The fruit of the Kadam/cadamba tree (Neolamarckia cadamba) is conical in shape\nand poisonous for humans.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q41",
+      "questionNumber": 41,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "Which of the following is/are component(s) of Right of Way (RoW) of a road?",
+      "questionType": "MSQ",
+      "options": [
+        "Building line",
+        "Kerb",
+        "Carriageway",
+        "Sidewalk"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Building line",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Kerb",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Carriageway",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Sidewalk",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q42",
+      "questionNumber": 42,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "As per the National Building Code of India 2016, terminologies associated with fire\nfighting in a building is/are",
+      "questionType": "MSQ",
+      "options": [
+        "Refuge area",
+        "Water sprinkler system",
+        "Panic bar",
+        "Atrium"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Refuge area",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Water sprinkler system",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Panic bar",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Atrium",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C OR A;B;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": [
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      ],
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;C OR A;B;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q43",
+      "questionNumber": 43,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "For the beam shown below, ignoring the self-weight, the maximum hogging\nmoment (in kN⋅m) generated for the loads indicated is _____________ (rounded\noff to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "9.9 to 10.1",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 9.9,
+        "max": 10.1
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 9.9 to 10.1.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q43_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q43_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q44",
+      "questionNumber": 44,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "At present, the cost of a new office equipment is 50,000 (in Indian Rupees). It has\n15% salvage value after a useful life of 5 years. Using straight line method of\ndepreciation, the book value of the equipment 3 years from now, in Indian Rupees,\nwill be _____________ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "24500 to 24500",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 24500.0,
+        "max": 24500.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 24500 to 24500.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q45",
+      "questionNumber": 45,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The network diagram of a construction project is shown in the following Figure. The\nduration of each activity, in days, and the early start time of the project are denoted\nin the diagram. The total project duration along the critical path, in days,\nis _____________(in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "18 to 18",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 18.0,
+        "max": 18.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 18 to 18.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q45_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q45_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q46",
+      "questionNumber": 46,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "The design of a 1200 capacity concert hall considers 1/3rd female audience and\n2/3rd male audience. The Table below shows the guideline for calculating\nWater Closet requirements.\nFixture Male Female\nWater closet 1 number per 100 up to 400 and 3 numbers per 100 up to 200\nover 400, 1 number for every population and over 200,\n250 or part thereof 2 numbers for every 100 or part\nthereof\nUsing the above guideline, the number of Water Closets required for the\ntotal audience is _____________ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "16 to 16",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 16 to 16.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q47",
+      "questionNumber": 47,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "A declining Industrial Town has proposed to improve water sustainability by\nreducing stormwater runoff through change of land use land cover (LULC), as\nshown in the Table below, to attract new residents.\nRunoff Existing Area Proposed Area\nLULC\nCoefficient in hectare in hectare\nIndustrial 0.7 1500 800\nResidential 0.5 1000 1200\nPark and Playgrounds 0.25 1200 1000\nForest 0.15 300 1000\nConsidering a flat topography and zero additional runoff from the adjoining areas,\nthe reduction in run-off generation for a 400 mm rainfall event in the industrial town\nfor the proposed intervention, in cubic meters, is __________×106 (rounded off to\ntwo decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.30 to 1.38",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.3,
+        "max": 1.38
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.30 to 1.38.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q48",
+      "questionNumber": 48,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "A real estate developer is developing a township on a PPP mode. The total area of\nthe site is 2.672 hectares with an allowable FAR of 2.25, of which 20% is earmarked\nfor MIG category. The gross area of each MIG unit including common areas and\nservices is 72 m2. Assuming super built up area to be same as FAR, the\nmaximum number of MIG apartments that can be constructed\nis _____________ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "167 to 167",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 167.0,
+        "max": 167.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 167 to 167.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q49",
+      "questionNumber": 49,
+      "sectionId": "ar_common",
+      "sectionName": "Architecture and Planning (Part A - Common)",
+      "questionText": "A municipal town requires a volume of 70,000 m3 compacted solid waste to fill a\nlow lying land. The city has a total of 10,000 households.\nType of Percentage of Equivalent volume of compacted solid\nHouse Households waste generated/ household/ day\nLIG 30% 0.10 m3\nMIG 60% 0.15 m3\nHIG 10% 0.20 m3\nUsing the information as shown in the Table above, the estimated minimum number\nof days required to fill the low lying land is _____________ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "50 to 50",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 50 to 50.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q50",
+      "questionNumber": 50,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Rose window is a characteristic feature of",
+      "questionType": "MCQ",
+      "options": [
+        "Great Temple of Ammon, Karnak, Egypt",
+        "Temple of Jupiter, Baalbek, Lebanon",
+        "Notre-Dame, Paris, France",
+        "Humayun Tomb, Nizamuddin, Delhi"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Great Temple of Ammon, Karnak, Egypt",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Temple of Jupiter, Baalbek, Lebanon",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Notre-Dame, Paris, France",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Humayun Tomb, Nizamuddin, Delhi",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q51",
+      "questionNumber": 51,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "The schematic diagram of a unitary air-conditioner operating in cooling mode, is\nshown in the following Figure. The component P marked in the figure represents",
+      "questionType": "MCQ",
+      "options": [
+        "Condenser",
+        "Evaporator",
+        "Compressor",
+        "Expansion valve"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Condenser",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Evaporator",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Compressor",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Expansion valve",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q51_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q51_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q52",
+      "questionNumber": 52,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Titan Integrity Campus, Bengaluru is designed by",
+      "questionType": "MCQ",
+      "options": [
+        "Christopher C. Benninger",
+        "Sanjay Mohe",
+        "Raj Rewal",
+        "Anant Raje"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Christopher C. Benninger",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Sanjay Mohe",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Raj Rewal",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Anant Raje",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q53",
+      "questionNumber": 53,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "With reference to the Figure below, which of the following labelling is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "P – Extrados, Q – Key , R – Span",
+        "Q – Key, S – Abutment, T – Rise",
+        "P – Abutment, R – Rise, T – Extrados",
+        "Q – Key, S – Span, T – Extrados"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – Extrados, Q – Key , R – Span",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Q – Key, S – Abutment, T – Rise",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – Abutment, R – Rise, T – Extrados",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Q – Key, S – Span, T – Extrados",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q53_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q53_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q54",
+      "questionNumber": 54,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Which of the following buildings has/have pendentives as a structural element?",
+      "questionType": "MSQ",
+      "options": [
+        "St. Mark’s Basilica, Venice, Italy",
+        "Westminster Cathedral, London, UK",
+        "Dilwara Temple, Mount Abu, India",
+        "Hagia Irene Museum and Concert Hall, Istanbul"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "St. Mark’s Basilica, Venice, Italy",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Westminster Cathedral, London, UK",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Dilwara Temple, Mount Abu, India",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Hagia Irene Museum and Concert Hall, Istanbul",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q55",
+      "questionNumber": 55,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Polytetrafluroethylene (PTFE) coated fiberglass has been used as a roofing\nmembrane in",
+      "questionType": "MSQ",
+      "options": [
+        "Jawaharlal Nehru Stadium, New Delhi",
+        "Eden Gardens Stadium, Kolkata",
+        "Melbourne Cricket Ground Stadium, Melbourne",
+        "Beijing National Stadium, Beijing"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Jawaharlal Nehru Stadium, New Delhi",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Eden Gardens Stadium, Kolkata",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Melbourne Cricket Ground Stadium, Melbourne",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Beijing National Stadium, Beijing",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2024 committee.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q56",
+      "questionNumber": 56,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "A non-stop express elevator directly connects the observatory level at 80th floor of\na tower with the podium at 2nd floor level. The tower has a uniform floor-floor\nheight of 4 m. The elevator attains a maximum speed of 8 m/s. Assume 2 m/s2 as\nnet vertical acceleration and net vertical deceleration (incorporating gravity). If the\nelevator starts from a state of rest from the podium, the time taken to reach the\nobservatory, in seconds, is _____________ (rounded off to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "42 to 44",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 42.0,
+        "max": 44.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 42 to 44.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q57",
+      "questionNumber": 57,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Match the elements in Group–I with the corresponding religious buildings in\nGroup–II.\nGroup–I Group–II\n(P) Bell capital (1) Mosque\n(Q) Mehrab (2) Hindu Temple\n(R) Gopuram (3) Greek Temple\n(S) Pediment (4) Romanesque Church\n(5) Egyptian Temple",
+      "questionType": "MCQ",
+      "options": [
+        "P – 5, Q – 1, R – 2, S – 3",
+        "P – 3, Q – 1, R – 5, S – 4",
+        "P – 5, Q – 4, R – 3, S – 2",
+        "P – 4, Q – 1, R – 2, S – 3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 5, Q – 1, R – 2, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 1, R – 5, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 5, Q – 4, R – 3, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 4, Q – 1, R – 2, S – 3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q58",
+      "questionNumber": 58,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Match the museums in Group–I with their architects in Group–II.\nGroup–I Group–II\nIndira Gandhi Rashtriya\n(P) (1) Charles Correa\nManav Sangrahalaya, Bhopal\n(Q) Bihar Museum, Patna (2) Ram Sharma\nGandhi Memorial Museum,\n(R) (3) Romi Khosla\nAhmedabad\nMuseum of Art and Soumitro Ghosh & Nisha\n(S) (4)\nPhotography, Bengaluru Mathew\n(5) Fumihiko Maki",
+      "questionType": "MCQ",
+      "options": [
+        "P – 4, Q – 5, R – 3, S – 1",
+        "P – 4, Q – 3, R – 1, S – 2",
+        "P – 2, Q – 3, R – 1, S – 4",
+        "P – 2, Q – 5, R – 1, S – 4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 4, Q – 5, R – 3, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 4, Q – 3, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 2, Q – 3, R – 1, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 2, Q – 5, R – 1, S – 4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q59",
+      "questionNumber": 59,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Match the specially shaped bricks in Group–I with their corresponding\nnomenclature in Group–II.\nGroup–I Group–II\n(P) (1) Plinth Header\n(Q) (2) Bird’s mouth\n(R) (3) Squint\n(S) (4) Double cant\n(5) Plinth stretcher",
+      "questionType": "MCQ",
+      "options": [
+        "P – 4, Q – 3, R – 5, S – 1",
+        "P – 3, Q – 2, R – 4, S – 1",
+        "P – 4, Q – 3, R – 5, S – 2",
+        "P – 4, Q – 1, R – 2, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 4, Q – 3, R – 5, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 2, R – 4, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 4, Q – 3, R – 5, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 4, Q – 1, R – 2, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q59_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q59_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q60",
+      "questionNumber": 60,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Which of the following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "The unit of Lighting Power Density is W/m2.",
+        "The unit of Lighting Power Density is cd/m2.",
+        "The unit of Sound Power is W.",
+        "The unit of Energy Performance Index is kWh/m2/year."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The unit of Lighting Power Density is W/m2.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The unit of Lighting Power Density is cd/m2.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The unit of Sound Power is W.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The unit of Energy Performance Index is kWh/m2/year.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q61",
+      "questionNumber": 61,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "Which of the following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Kath-kuni construction comprises layers of stone and timber.",
+        "Nālukettu houses have a courtyard.",
+        "Ikra is a two-storeyed house with stone masonry and a flat-roof.",
+        "Bhunga has a circular plan."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Kath-kuni construction comprises layers of stone and timber.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Nālukettu houses have a courtyard.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Ikra is a two-storeyed house with stone masonry and a flat-roof.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Bhunga has a circular plan.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q62",
+      "questionNumber": 62,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "A 5 m long Aluminium tie rod of cross-section 0.20 m × 0.04 m is subjected to a\ntensile force induced by its self-weight of 21.20 kg/m considering gravitational\nacceleration of 10 m/s2. If tensile Young’s modulus of Aluminium is\n70,000 MPa, the maximum tensile strain in the rod is _____________×10–6\n(rounded off to two decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.80 to 1.90",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.8,
+        "max": 1.9
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.80 to 1.90.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q62_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q62_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q63",
+      "questionNumber": 63,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "The following Figure shows the excavation plan of a two room structure, where the\ntrench has a uniform width of 1.10 meters. If the cumulative centre line length of\nthe trench is 41.10 meters and the required depth of concrete to be poured is 0.30\nmeters, the volume of concrete in foundation, in cubic meters, will be\n_____________(rounded off to two decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "13.20 to 13.20",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 13.2,
+        "max": 13.2
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 13.20 to 13.20.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q63_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q63_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q64",
+      "questionNumber": 64,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "The decay of sound in an enclosed lecture hall of volume 3500 m3 is shown in the\nFigure below. The sound source is switched off at point P. Using the Reverberation\nTime (RT ) obtained from the figure, the calculated total sound absorption of the\n60\nhall, in Sabins, is _____________ (rounded off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "430 to 510",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 430.0,
+        "max": 510.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 430 to 510.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q64_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q64_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q65",
+      "questionNumber": 65,
+      "sectionId": "ar_b1",
+      "sectionName": "Part B1: Architecture",
+      "questionText": "A 2 TR window air-conditioner of Energy Efficiency Ratio (EER) 3.1 is catering to\na room of volume 40 m3. The air-conditioner is operational for 600 hours during\nsummer on cooling mode. The compressor is also operational for the complete\nduration. The total energy consumption of the air-conditioner during the above\nmentioned period, in kWh, is _____________ (rounded off to nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1350 to 1394",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1350.0,
+        "max": 1394.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1350 to 1394.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q66",
+      "questionNumber": 66,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Which of the following aims is set under the SVAMITVA scheme of the\nMinistry of Panchayati Raj, Government of India?",
+      "questionType": "MCQ",
+      "options": [
+        "Provide tap water connection to all households in rural areas.",
+        "Provide ‘right to work’ to the rural people falling Below Poverty Line.",
+        "Establish clear ownership of property in rural inhabited (Abadi) areas, by mapping\nof land parcels using improvised technology.",
+        "Provide effective and efficient institutional platforms to enable the rural poor to\nincrease their household income by means of sustainable livelihood enhancement."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Provide tap water connection to all households in rural areas.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Provide ‘right to work’ to the rural people falling Below Poverty Line.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Establish clear ownership of property in rural inhabited (Abadi) areas, by mapping\nof land parcels using improvised technology.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Provide effective and efficient institutional platforms to enable the rural poor to\nincrease their household income by means of sustainable livelihood enhancement.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q67",
+      "questionNumber": 67,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Mass Rapid Transit System is a",
+      "questionType": "MCQ",
+      "options": [
+        "Fixed Route and Fixed Schedule service.",
+        "Fixed Route and Flexible Schedule service.",
+        "Flexible Route and Fixed Schedule service.",
+        "Flexible Route and Flexible Schedule service."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Fixed Route and Fixed Schedule service.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Fixed Route and Flexible Schedule service.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Flexible Route and Fixed Schedule service.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Flexible Route and Flexible Schedule service.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q68",
+      "questionNumber": 68,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Which of the following initiatives of the Government of India is also known as the\nNational Master Plan for Multi-modal Connectivity?",
+      "questionType": "MCQ",
+      "options": [
+        "PM Gati Shakti",
+        "Bharatmala",
+        "Parvatmala",
+        "Sagarmala"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "PM Gati Shakti",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Bharatmala",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Parvatmala",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Sagarmala",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q69",
+      "questionNumber": 69,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "With reference to the Speed-Density diagram given below, which of the following\nstatements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Point P represents Maximum Flow",
+        "Point P represents Jam Density",
+        "Point Q represents Space Mean Speed for Free Flow condition",
+        "Point Q represents Time Mean Speed"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Point P represents Maximum Flow",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Point P represents Jam Density",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Point Q represents Space Mean Speed for Free Flow condition",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Point Q represents Time Mean Speed",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q69_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q69_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q70",
+      "questionNumber": 70,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Which of the following statements correctly represent(s) the\nDemographic dividend of a country?",
+      "questionType": "MSQ",
+      "options": [
+        "Share of working age population is larger than dependent population.",
+        "Share of working age population is lesser than dependent population.",
+        "Demographic dividend demands more job creation.",
+        "Demographic dividend can never lead to demographic disaster."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Share of working age population is larger than dependent population.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Share of working age population is lesser than dependent population.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Demographic dividend demands more job creation.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Demographic dividend can never lead to demographic disaster.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q71",
+      "questionNumber": 71,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "As per the URDPFI Guidelines 2015, choose the option(s) which indicate(s) the\nappropriate hierarchy of plans from higher to lower order.",
+      "questionType": "MSQ",
+      "options": [
+        "Perspective Plan > Development Plan > Local Area Plan",
+        "Development Plan > Special Purpose Plan > Annual Plan",
+        "Local Area Plan > Development Plan > Annual Plan",
+        "Special Purpose Plan > Perspective Plan > Local Area Plan"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Perspective Plan > Development Plan > Local Area Plan",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Development Plan > Special Purpose Plan > Annual Plan",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Local Area Plan > Development Plan > Annual Plan",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Special Purpose Plan > Perspective Plan > Local Area Plan",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q72",
+      "questionNumber": 72,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "In 2021, a city survey report revealed a sex ratio of 930 with an estimated increase\nof 2.16% over the next 20 years. In 2041, the total population of the city is projected\nto be 15,00,000. The estimated female population in the year 2041\nwill be ____________ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "730500 to 731200",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 730500.0,
+        "max": 731200.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 730500 to 731200.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q73",
+      "questionNumber": 73,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Match the terms in Group–I with their descriptions in Group–II.\nGroup–I Group–II\nDevelopment on previously\n(P) Landfill site (1)\ndeveloped site\n(Q) Greenfield development (2) Land to dispose solid waste\nDevelopment on previously\n(R) Green Belt (3)\nundeveloped land\n(S) Brownfield development (4) Policy to protect livestock\nA buffer to control urban\n(5)\ndevelopment",
+      "questionType": "MCQ",
+      "options": [
+        "P – 2, Q – 3, R – 1, S – 4",
+        "P – 3, Q – 5, R – 2, S – 1",
+        "P – 2, Q – 3, R – 5, S – 1",
+        "P – 3, Q – 4, R – 5, S – 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 2, Q – 3, R – 1, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 5, R – 2, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 2, Q – 3, R – 5, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 3, Q – 4, R – 5, S – 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q74",
+      "questionNumber": 74,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Match the following illustrations in Group–I with their corresponding concepts in\nGroup–II.\nGroup–I Group–II\n(P)\n(1) Figure Ground\nRelationship\n(Q)\n(2) Town Planning\nScheme (TPS)\n(R)\n(3) Transit Oriented\nDevelopment (TOD)\n(S)\n(4) Transferable\nDevelopment Rights\n(TDR)\n(5) Cul-de-Sac",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 4, R – 1, S – 2",
+        "P – 3, Q – 5, R – 2, S – 4",
+        "P – 1, Q – 3, R – 4, S – 2",
+        "P – 2, Q – 4, R – 1, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 4, R – 1, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 3, Q – 5, R – 2, S – 4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 1, Q – 3, R – 4, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 2, Q – 4, R – 1, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q74_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q74_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q75",
+      "questionNumber": 75,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Match the following planning theories/concepts in Group–I with their\ncorresponding proponents in Group–II.\nGroup–I Group–II\n(P) Valley Section (1) McGee and Gemburg\n(Q) Third Place Theory (2) Oscar Newman\n(R) Defensible Space (3) Ray Oldenberg\n(S) Desakota Model (4) Patrick Geddes\n(5) C. A. Doxiadis",
+      "questionType": "MCQ",
+      "options": [
+        "P – 4, Q – 3, R – 2, S – 1",
+        "P – 4, Q – 2, R – 3, S – 1",
+        "P – 1, Q – 3, R – 5, S – 2",
+        "P – 2, Q – 4, R – 1, S – 5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 4, Q – 3, R – 2, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 4, Q – 2, R – 3, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 1, Q – 3, R – 5, S – 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 2, Q – 4, R – 1, S – 5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q76",
+      "questionNumber": 76,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Which of the following methods is/are used in traffic survey to measure the Running\nSpeed and Journey Speed?",
+      "questionType": "MSQ",
+      "options": [
+        "Moving Observer Method",
+        "Registration Number Method",
+        "Elevated Observer Method",
+        "Hardy Cross Method"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Moving Observer Method",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Registration Number Method",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Elevated Observer Method",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Hardy Cross Method",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q77",
+      "questionNumber": 77,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "In the context of regional planning, which of the following terms\nrepresent(s) a region?",
+      "questionType": "MSQ",
+      "options": [
+        "Formal",
+        "Functional",
+        "Isometric",
+        "Planning"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Formal",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Functional",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Isometric",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Planning",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q78",
+      "questionNumber": 78,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "In a one-way single lane traffic stream, the observed average time headway\nis 2.5 seconds. The traffic flow of the above mentioned lane, in vehicle/hr,\nis _____________(in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1440 to 1440",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1440.0,
+        "max": 1440.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1440 to 1440.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q79",
+      "questionNumber": 79,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "The demand of a EcoCity theme park is estimated as P = 1500 − 7.5Q,\nwhere P (in Indian Rupees) is the price of a ticket for single entry, and Q (in integer)\nis the number of tickets sold per hour. The maximum revenue per hour along the\ndemand curve, in Indian Rupees, is _____________(in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "75000 to 75000",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 75000.0,
+        "max": 75000.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 75000 to 75000.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q80",
+      "questionNumber": 80,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "Labour supply and urban growth are represented in X and Y axis of the Figure\nbelow. Curve OP represents the relationship between labour supply and urban\ngrowth.\nThe ratios A:A’ and B:B’ are 1:1.2 and 3:1.2, respectively.\nIf 6 units of labour is supplied in B, then the number of units of urban growth in B’\nwill be _____________ (rounded off to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2.4 to 2.4",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.4,
+        "max": 2.4
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2.4 to 2.4.",
+      "diagramUrl": "/exam-assets/gate/2024/ar/q80_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q80_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ar-q81",
+      "questionNumber": 81,
+      "sectionId": "ar_b2",
+      "sectionName": "Part B2: Planning",
+      "questionText": "A city with a present population of 1,75,000 is expecting an annual population\ngrowth rate of 0.85%. In a traffic assessment study, the trip generation model has\nbeen developed as Y = 142 + 0.675X, where Y is the number of daily trips generated\nwithin the city and X is the population of the city. The number of daily trips to be\ngenerated within the city after 10 years is _____________(in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "128500 to 128800",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 128500.0,
+        "max": 128800.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 128500 to 128800.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "AR",
+      "discipline": "Architecture and Planning",
+      "language": "English"
+    }
+  ]
+}

@@ -1,0 +1,3576 @@
+{
+  "id": "gate-2024-cs-1",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2024,
+  "title": "GATE 2024 — Computer Science and Information Technology (CS-1)",
+  "subTitle": "Official IISc Bengaluru Question Paper (Session: Forenoon)",
+  "date": "2024-02-10",
+  "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "CS-1",
+  "discipline": "Computer Science and Information Technology",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 100.0,
+  "totalQuestions": 65,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "cs1_core",
+      "name": "Computer Science & IT (Session 1)",
+      "questionCount": 55,
+      "startIndex": 10,
+      "endIndex": 64,
+      "maxMarks": 85.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2024-cs-1-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If ‘→’ denotes increasing order of intensity, then the meaning of the words [dry → arid → parched] is analogous to [diet → fast → ________ ]. Which one of the given options is appropriate to fill the blank?",
+      "questionType": "MCQ",
+      "options": [
+        "starve",
+        "reject",
+        "feast",
+        "deny"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "starve",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "reject",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "feast",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "deny",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥−𝑦) then the value of 𝑦",
+      "questionType": "MCQ",
+      "options": [
+        "depends on 𝑥𝑦",
+        "depends only on 𝑥 and not on 𝑦",
+        "depends only on 𝑦 and not on 𝑥",
+        "is a constant"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "depends on 𝑥𝑦",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "depends only on 𝑥 and not on 𝑦",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "depends only on 𝑦 and not on 𝑥",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "is a constant",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Consider the following sample of numbers: 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 The median of the sample is",
+      "questionType": "MCQ",
+      "options": [
+        "13.5",
+        "14",
+        "11",
+        "18.7"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "13.5",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "14",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "11",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "18.7",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The number of coins of ₹1, ₹5, and ₹10 denominations that a person has are in the  \nratio 5:3:13. Of the total amount, the percentage of money in ₹5 coins is",
+      "questionType": "MCQ",
+      "options": [
+        "21%",
+        "14",
+        "10%",
+        "30%"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "21%",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "14",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "10%",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "30%",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log  (𝑝2 + 𝑞2) = log 𝑝+ log 𝑞+ 2 log 3 , 𝑝4+𝑞4 then, the value of 𝑝2𝑞2   is",
+      "questionType": "MCQ",
+      "options": [
+        "79",
+        "81",
+        "9",
+        "83"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "79",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "81",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "9",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "83",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the given text, the blanks are numbered (i)−(iv). Select the best match for all the blanks. Steve was advised to keep his head       (i)       before heading       (ii)       to bat; for, while he had a head       (iii)       batting, he could only do so with a cool head s       (iv)        his shoulders.",
+      "questionType": "MCQ",
+      "options": [
+        "(i) down    \n(ii) down    \n(iii) on    \n(iv) for",
+        "(i) on    \n(ii) down    \n(iii) for    \n(iv) on",
+        "(i) down    \n(ii) out    \n(iii) for    \n(iv) on",
+        "(i) on    \n(ii) out    \n(iii) on   \n(iv) for"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i) down    \n(ii) down    \n(iii) on    \n(iv) for",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(i) on    \n(ii) down    \n(iii) for    \n(iv) on",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(i) down    \n(ii) out    \n(iii) for    \n(iv) on",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(i) on    \n(ii) out    \n(iii) on   \n(iv) for",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A rectangular paper sheet of dimensions 54 cm × 4 cm is taken. The two longer \nedges of the sheet are joined together to create a cylindrical tube. A cube whose \nsurface area is equal to the area of the sheet is also taken. Then, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "questionType": "MCQ",
+      "options": [
+        "1/π",
+        "2/π",
+        "3/π",
+        "4/π"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1/π",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2/π",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "3/π",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "4/π",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a \ntypical 2,000 kcal diet of a person. Macronutrient energy contribution Trans fat 5% Saturated fat 20% Carbohydrates 35% Unsaturated fat 20% Proteins 20% The typical energy density (kcal/g) of these macronutrients is given in the table. Macronutrient \nEnergy density (kcal/g) \nCarbohydrates \n4 \nProteins \n4 \nUnsaturated fat \n9 \nSaturated fat \n9 \nTrans fat \n9 The total fat (all three types), in grams, this person consumes is",
+      "questionType": "MCQ",
+      "options": [
+        "44.4",
+        "77.8",
+        "100",
+        "3,600"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "44.4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "77.8",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "100",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "3,600",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/cs-1/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/cs-1/q8_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A rectangular paper of 20 cm × 8 cm is folded 3 times. Each fold is made along the \nline of symmetry, which is perpendicular to its long edge. The perimeter of the final \nfolded sheet (in cm) is",
+      "questionType": "MCQ",
+      "options": [
+        "18",
+        "24",
+        "20",
+        "21"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "18",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "24",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "20",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "21",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The least number of squares to be added in the figure to make AB a line of  \nsymmetry is",
+      "questionType": "MCQ",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "7"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "6",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "5",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "7",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/cs-1/q10_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/cs-1/q10_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q11",
+      "questionNumber": 11,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝑓: ℝ → ℝ be a function such that 𝑓(𝑥) = max{𝑥, 𝑥3}, 𝑥∈ℝ , where ℝ is the \nset \nof \nall \nreal \nnumbers. \nThe \nset \nof \nall \npoints \nwhere \n𝑓(𝑥) \nis  \nNOT differentiable is",
+      "questionType": "MCQ",
+      "options": [
+        "{−1, 1, 2}",
+        "{−2, −1, 1}",
+        "{0, 1}",
+        "{−1, 0, 1}"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "{−1, 1, 2}",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "{−2, −1, 1}",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "{0, 1}",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "{−1, 0, 1}",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q12",
+      "questionNumber": 12,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The product of all eigenvalues of the matrix  [ ]  is",
+      "questionType": "MCQ",
+      "options": [
+        "−1",
+        "0",
+        "1",
+        "2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q13",
+      "questionNumber": 13,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a system that uses 5 bits for representing signed integers in 2’s complement \nformat. In this system, two integers 𝐴 and 𝐵 are represented as 𝐴=01010 and \n𝐵=11010. Which one of the following operations will result in either an arithmetic \noverflow or an arithmetic underflow?",
+      "questionType": "MCQ",
+      "options": [
+        "𝐴+ 𝐵",
+        "𝐴−𝐵",
+        "𝐵−𝐴",
+        "2 ∗𝐵"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝐴+ 𝐵",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝐴−𝐵",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐵−𝐴",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2 ∗𝐵",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q14",
+      "questionNumber": 14,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a permutation sampled uniformly at random from the set of all \npermutations of {1, 2, 3, ⋯, 𝑛} for some 𝑛 ≥4. Let 𝑋 be the event that 1 occurs \nbefore 2 in the permutation, and 𝑌 the event that 3 occurs before 4. Which one of \nthe following statements is TRUE?",
+      "questionType": "MCQ",
+      "options": [
+        "The events 𝑋 and 𝑌 are mutually exclusive",
+        "The events 𝑋 and 𝑌 are independent",
+        "Either event 𝑋 or 𝑌 must occur",
+        "Event 𝑋 is more likely than event 𝑌"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The events 𝑋 and 𝑌 are mutually exclusive",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The events 𝑋 and 𝑌 are independent",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Either event 𝑋 or 𝑌 must occur",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Event 𝑋 is more likely than event 𝑌",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q15",
+      "questionNumber": 15,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which one of the following statements is FALSE?",
+      "questionType": "MCQ",
+      "options": [
+        "In the cycle stealing mode of DMA, one word of data is transferred between an I/O \ndevice and main memory in a stolen cycle",
+        "For bulk data transfer, the burst mode of DMA has a higher throughput than the \ncycle stealing mode",
+        "Programmed I/O mechanism has a better CPU utilization than the interrupt driven \nI/O mechanism",
+        "The CPU can start executing an interrupt service routine faster with vectored \ninterrupts than with non-vectored interrupts"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O \ndevice and main memory in a stolen cycle",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "For bulk data transfer, the burst mode of DMA has a higher throughput than the \ncycle stealing mode",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven \nI/O mechanism",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The CPU can start executing an interrupt service routine faster with vectored \ninterrupts than with non-vectored interrupts",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q16",
+      "questionNumber": 16,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "A user starts browsing a webpage hosted at a remote server. The browser opens a \nsingle TCP connection to fetch the entire webpage from the server. The webpage \nconsists of a top-level index page with multiple embedded image objects. Assume \nthat all caches (e.g., DNS cache, browser cache) are all initially empty. The \nfollowing packets leave the user’s computer in some order. (i) \nHTTP GET request for the index page \n(ii) \nDNS request to resolve the web server’s name to its IP address \n(iii) \nHTTP GET request for an image object \n(iv) \nTCP SYN to open a connection to the web server Which one of the following is the CORRECT chronological order (earliest in time \nto latest) of the packets leaving the computer ?",
+      "questionType": "MCQ",
+      "options": [
+        "(iv), (ii), (iii), (i)",
+        "(ii), (iv), (iii), (i)",
+        "(ii), (iv), (i), (iii)",
+        "(iv), (ii), (i), (iii)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(iv), (ii), (iii), (i)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(ii), (iv), (iii), (i)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(ii), (iv), (i), (iii)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(iv), (ii), (i), (iii)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q17",
+      "questionNumber": 17,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Given an integer array of size N, we want to check if the array is sorted (in either \nascending or descending order). An algorithm solves this problem by making a \nsingle pass through the array and comparing each element of the array only with its \nadjacent elements. The worst-case time complexity of this algorithm is",
+      "questionType": "MCQ",
+      "options": [
+        "both Ο(𝑁) and Ω(𝑁)",
+        "Ο(𝑁) but not Ω(𝑁)",
+        "Ω(𝑁) but not Ο(𝑁)",
+        "neither Ο(𝑁) nor Ω(𝑁)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "both Ο(𝑁) and Ω(𝑁)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Ο(𝑁) but not Ω(𝑁)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Ω(𝑁) but not Ο(𝑁)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "neither Ο(𝑁) nor Ω(𝑁)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q18",
+      "questionNumber": 18,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following C program: #include <stdio.h> int main(){ int a = 6; int b = 0; while(a < 10) { a = a / 12 + 1; a += b;} printf(”%d”, a); return 0;} Which one of the following statements is CORRECT?",
+      "questionType": "MCQ",
+      "options": [
+        "The program prints 9 as output",
+        "The program prints 10 as output",
+        "The program gets stuck in an infinite loop",
+        "The program prints 6 as output"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The program prints 9 as output",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The program prints 10 as output",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The program gets stuck in an infinite loop",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The program prints 6 as output",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q19",
+      "questionNumber": 19,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following C program: #include <stdio.h> void fX(){ void fX(); char a; int main(){ if((a=getchar()) != ’\\n’) fX(); fX(); return 0;} if(a != ’\\n’) putchar(a);} Assume that the input to the program from the command line is 1234 followed by \na newline character. Which one of the following statements is CORRECT?",
+      "questionType": "MCQ",
+      "options": [
+        "The program will not terminate",
+        "The program will terminate with no output",
+        "The program will terminate with 4321 as output",
+        "The program will terminate with 1234 as output"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The program will not terminate",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The program will terminate with no output",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The program will terminate with 4321 as output",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The program will terminate with 1234 as output",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q20",
+      "questionNumber": 20,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let S be the specification: \"Instructors teach courses. Students register for courses. \nCourses are allocated classrooms. Instructors guide students.\" Which one of the \nfollowing ER diagrams CORRECTLY represents S?",
+      "questionType": "MCQ",
+      "options": [
+        "(i)",
+        "(ii)",
+        "(iii)",
+        "(iv)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(ii)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(iii)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(iv)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q21",
+      "questionNumber": 21,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed \nfor which one of the following cases?",
+      "questionType": "MCQ",
+      "options": [
+        "Only the root node",
+        "All leaf nodes",
+        "All internal nodes",
+        "Only the leftmost leaf node"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Only the root node",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "All leaf nodes",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "All internal nodes",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Only the leftmost leaf node",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q22",
+      "questionNumber": 22,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which of the following statements about a relation R in first normal form (1NF) \nis/are TRUE ?",
+      "questionType": "MSQ",
+      "options": [
+        "R can have a multi-attribute key",
+        "R cannot have a foreign key",
+        "R cannot have a composite attribute",
+        "R cannot have more than one candidate key"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "R can have a multi-attribute key",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "R cannot have a foreign key",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "R cannot have a composite attribute",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "R cannot have more than one candidate key",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q23",
+      "questionNumber": 23,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐿1, 𝐿2 be two regular languages and 𝐿3 a language which is not regular. \nWhich of the following statements is/are always TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "𝐿1 = 𝐿2  if and only if  𝐿1 ∩ 𝐿2\n̅̅̅ = 𝜙",
+        "𝐿1 ∪𝐿3  is not regular",
+        "𝐿3\n̅̅̅  is not regular",
+        "𝐿1\n̅̅̅ ∪𝐿2\n̅̅̅ is regular"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝐿1 = 𝐿2  if and only if  𝐿1 ∩ 𝐿2\n̅̅̅ = 𝜙",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝐿1 ∪𝐿3  is not regular",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐿3\n̅̅̅  is not regular",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐿1\n̅̅̅ ∪𝐿2\n̅̅̅ is regular",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q24",
+      "questionNumber": 24,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which of the following statements about threads is/are TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "Threads can only be implemented in kernel space",
+        "Each thread has its own file descriptor table for open files",
+        "All the threads belonging to a process share a common stack",
+        "Threads belonging to a process are by default not protected from each other"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Threads can only be implemented in kernel space",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Each thread has its own file descriptor table for open files",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "All the threads belonging to a process share a common stack",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Threads belonging to a process are by default not protected from each other",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q25",
+      "questionNumber": 25,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which of the following process state transitions is/are NOT possible?",
+      "questionType": "MSQ",
+      "options": [
+        "Running to Ready",
+        "Waiting to Running",
+        "Ready to Waiting",
+        "Running to Terminated"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Running to Ready",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Waiting to Running",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Ready to Waiting",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Running to Terminated",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q26",
+      "questionNumber": 26,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which of the following is/are Bottom-Up Parser(s)?",
+      "questionType": "MSQ",
+      "options": [
+        "Shift-reduce Parser",
+        "Predictive Parser",
+        "LL(1) Parser",
+        "LR Parser"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Shift-reduce Parser",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Predictive Parser",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "LL(1) Parser",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "LR Parser",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q27",
+      "questionNumber": 27,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐴 and 𝐵 be two events in a probability space with 𝑃(𝐴) = 0.3, 𝑃(𝐵) = 0.5, \nand 𝑃(𝐴∩𝐵) = 0.1. Which of the following statements is/are TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "The two events 𝐴 and 𝐵 are independent",
+        "𝑃(𝐴∪𝐵) = 0.7",
+        "𝑃(𝐴∩𝐵𝑐) = 0.2, where 𝐵𝑐 is the complement of the event 𝐵",
+        "𝑃(𝐴𝑐∩𝐵𝑐) = 0.4, where 𝐴𝑐 and 𝐵𝑐 are the complements of the events 𝐴 and 𝐵, \nrespectively"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The two events 𝐴 and 𝐵 are independent",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑃(𝐴∪𝐵) = 0.7",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑃(𝐴∩𝐵𝑐) = 0.2, where 𝐵𝑐 is the complement of the event 𝐵",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑃(𝐴𝑐∩𝐵𝑐) = 0.4, where 𝐴𝑐 and 𝐵𝑐 are the complements of the events 𝐴 and 𝐵, \nrespectively",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q28",
+      "questionNumber": 28,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the circuit shown below where the gates may have propagation delays. \nAssume that all signal transitions occur instantaneously and that wires have no \ndelays. Which of the following statements about the circuit is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "With no propagation delays, the output 𝒀 is always logic Zero",
+        "With no propagation delays, the output 𝒀 is always logic One",
+        "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 \ntransitions from logic Zero to logic One",
+        "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 \ntransitions from logic One to logic Zero"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "With no propagation delays, the output 𝒀 is always logic Zero",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "With no propagation delays, the output 𝒀 is always logic One",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 \ntransitions from logic Zero to logic One",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 \ntransitions from logic One to logic Zero",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": "/exam-assets/gate/2024/cs-1/q28_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/cs-1/q28_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q29",
+      "questionNumber": 29,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "TCP client P successfully establishes a connection to TCP server Q. Let 𝑁𝑃 denote \nthe sequence number in the SYN sent from P to Q. Let 𝑁𝑄 denote the \nacknowledgement number in the SYN ACK from Q to P. Which of the following \nstatements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "The sequence number 𝑁𝑃 is chosen randomly by P",
+        "The sequence number 𝑁𝑃 is always 0 for a new connection",
+        "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃",
+        "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃+  1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The sequence number 𝑁𝑃 is chosen randomly by P",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The sequence number 𝑁𝑃 is always 0 for a new connection",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃+  1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q30",
+      "questionNumber": 30,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction \nDecode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) \nstages. Which of the following statements about forwarding is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "In a pipelined execution, forwarding means the result from a source stage of an \nearlier instruction is passed on to the destination stage of a later instruction",
+        "In forwarding, data from the output of the MEM stage can be passed on to the \ninput of the EX stage of the next instruction",
+        "Forwarding cannot prevent all pipeline stalls",
+        "Forwarding does not require any extra hardware to retrieve the data from the \npipeline stages"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "In a pipelined execution, forwarding means the result from a source stage of an \nearlier instruction is passed on to the destination stage of a later instruction",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "In forwarding, data from the output of the MEM stage can be passed on to the \ninput of the EX stage of the next instruction",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Forwarding cannot prevent all pipeline stalls",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Forwarding does not require any extra hardware to retrieve the data from the \npipeline stages",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q31",
+      "questionNumber": 31,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Which of the following fields is/are modified in the IP header of a packet going out \nof a network address translation (NAT) device from an internal network to an \nexternal network?",
+      "questionType": "MSQ",
+      "options": [
+        "Source IP",
+        "Destination IP",
+        "Header Checksum",
+        "Total Length"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Source IP",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Destination IP",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Header Checksum",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Total Length",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q32",
+      "questionNumber": 32,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐴 and 𝐵 be non-empty finite sets such that there exist one-to-one and onto \nfunctions (i) from 𝐴 to 𝐵 and (ii) from 𝐴× 𝐴 to 𝐴∪𝐵. The number of possible \nvalues of |𝐴| is __________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2 to 2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2 to 2.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q33",
+      "questionNumber": 33,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the operator precedence and associativity rules for the integer arithmetic \noperators given in the table below. Operator \nPrecedence \nAssociativity + \nHighest \nLeft − \nHigh \nRight ∗ \nMedium \nRight / \nLow \nRight The value of the expression  3 + 1 + 5 ∗2 / 7 + 2 −4 −7 −6 / 2  as per the \nabove rules is __________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "6 to 6",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 6.0,
+        "max": 6.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 6 to 6.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q34",
+      "questionNumber": 34,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, \nand D is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "16 to 16",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 16 to 16.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q35",
+      "questionNumber": 35,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following two relations, R(A,B) and S(A,C): 𝑹 \n \n𝑺 \n𝑨 \n𝑩 \n \n𝑨 \n𝑪 \n10 \n20 \n \n10 \n90 \n20 \n30 \n \n30 \n45 \n30 \n40 \n \n40 \n80 \n30 \n50 \n \n \n \n50 \n95 The total number of tuples obtained by evaluating the following expression 𝝈𝑩<𝑪(𝑹⋈𝑹.𝑨=𝑺.𝑨𝑺) is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2 to 2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2 to 2.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q36",
+      "questionNumber": 36,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a network path P—Q—R between nodes P and R via router Q. Node P \nsends a file of size 106 bytes to R via this path by splitting the file into chunks of \n103 bytes each. Node P sends these chunks one after the other without any wait time \nbetween the successive chunk transmissions. Assume that the size of extra headers \nadded to these chunks is negligible, and that the chunk size is less than the MTU.  \n \nEach of the links P—Q and Q—R has a bandwidth of 106 bits/sec, and negligible \npropagation latency. Router Q immediately transmits every packet it receives from \nP to R, with negligible processing and queueing delays. Router Q can \nsimultaneously receive on link P—Q and transmit on link Q—R.  \n \nAssume P starts transmitting the chunks at time 𝑡= 0.  \nWhich one of the following options gives the time (in seconds, rounded off to 3 \ndecimal places) at which R receives all the chunks of the file?",
+      "questionType": "MCQ",
+      "options": [
+        "8.000",
+        "8.008",
+        "15.992",
+        "16.000"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "8.000",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "8.008",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "15.992",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "16.000",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q37",
+      "questionNumber": 37,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following syntax-directed definition (SDD). 𝑆→𝐷𝐻𝑇𝑈 \n{ 𝑆. 𝑣𝑎𝑙 =  𝐷. 𝑣𝑎𝑙 +  𝐻. 𝑣𝑎𝑙 +  𝑇. 𝑣𝑎𝑙 +  𝑈. 𝑣𝑎𝑙; } 𝐷→\"M\"𝐷1 \n{ 𝐷. 𝑣𝑎𝑙 =  5 + 𝐷1. 𝑣𝑎𝑙; } 𝐷→𝜖 \n{ 𝐷. 𝑣𝑎𝑙 = −5; } 𝐻→\"L\"𝐻1 \n{ 𝐻. 𝑣𝑎𝑙 =  5 ∗10 + 𝐻1. 𝑣𝑎𝑙; } 𝐻→𝜖 \n{ 𝐻. 𝑣𝑎𝑙 = −10; } 𝑇→\"C\"𝑇1 \n{ 𝑇. 𝑣𝑎𝑙 =  5 ∗100 + 𝑇1. 𝑣𝑎𝑙; } 𝑇→𝜖 \n{ 𝑇. 𝑣𝑎𝑙 = −5; } 𝑈→\"K\" \n{ 𝑈. 𝑣𝑎𝑙 =  5; } Given \"MMLK\" as the input, which one of the following options is the CORRECT \nvalue computed by the SDD (in the attribute 𝑆. 𝑣𝑎𝑙)?",
+      "questionType": "MCQ",
+      "options": [
+        "45",
+        "50",
+        "55",
+        "65"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "45",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "50",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "55",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "65",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q38",
+      "questionNumber": 38,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following grammar 𝐺, with 𝑆 as the start symbol. The grammar 𝐺 has \nthree incomplete productions denoted by (1), (2), and (3). 𝑆→𝑑𝑎𝑇 |     (1)     \n𝑇→𝑎𝑆 | 𝑏𝑇 |     (2)      \n𝑅→    (3)    | 𝜖 The set of terminals is {𝑎, 𝑏, 𝑐, 𝑑, 𝑓}. The FIRST and FOLLOW sets of the different \nnon-terminals are as follows. FIRST(𝑆) = {𝑐, 𝑑, 𝑓},  FIRST(𝑇) = {𝑎, 𝑏, 𝜖},  FIRST(𝑅) = {𝑐, 𝜖} FOLLOW(𝑆) = FOLLOW(𝑇) = {𝑐, 𝑓, $},  FOLLOW(𝑅) = {𝑓} Which one of the following options CORRECTLY fills in the incomplete \nproductions?",
+      "questionType": "MCQ",
+      "options": [
+        "(1) 𝑆→𝑅𝑓    (2) 𝑇→𝜖      (3) 𝑅→𝑐𝑇𝑅",
+        "(1) 𝑆→𝑓𝑅    (2) 𝑇→𝜖      (3) 𝑅→𝑐𝑇𝑅",
+        "(1) 𝑆→𝑓𝑅    (2) 𝑇→𝑐𝑇    (3) 𝑅→𝑐𝑅",
+        "(1) 𝑆→𝑅𝑓    (2) 𝑇→𝑐𝑇    (3) 𝑅→𝑐𝑅"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(1) 𝑆→𝑅𝑓    (2) 𝑇→𝜖      (3) 𝑅→𝑐𝑇𝑅",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(1) 𝑆→𝑓𝑅    (2) 𝑇→𝜖      (3) 𝑅→𝑐𝑇𝑅",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(1) 𝑆→𝑓𝑅    (2) 𝑇→𝑐𝑇    (3) 𝑅→𝑐𝑅",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(1) 𝑆→𝑅𝑓    (2) 𝑇→𝑐𝑇    (3) 𝑅→𝑐𝑅",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q39",
+      "questionNumber": 39,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following pseudo-code. 𝐿1:               𝑡1 = −1 𝐿2:               𝑡2 =  0 𝐿3:               𝑡3 =  0 𝐿4:               𝑡4 =  4 ∗𝑡3 𝐿5:               𝑡5 =  4 ∗𝑡2 𝐿6:               𝑡6 =  𝑡5 ∗𝑀 𝐿7:               𝑡7 =  𝑡4 + 𝑡6 𝐿8:               𝑡8 =  𝑎[𝑡7] 𝐿9:               if  𝑡8 <=  𝑚𝑎𝑥 goto  𝐿11 𝐿10:             𝑡1 =  𝑡8 𝐿11:             𝑡3 =  𝑡3 + 1 𝐿12:             if  𝑡3 <  𝑀 goto  𝐿4 𝐿13:             𝑡2 =  𝑡2 + 1 𝐿14:             if  𝑡2 <  𝑁 goto  𝐿3 𝐿15:             𝑚𝑎𝑥 =  𝑡1 Which one of the following options CORRECTLY specifies the number of basic \nblocks and the number of instructions in the largest basic block, respectively ?",
+      "questionType": "MCQ",
+      "options": [
+        "6 and 6",
+        "6 and 7",
+        "7 and 7",
+        "7 and 6"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "6 and 6",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "6 and 7",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "7 and 7",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "7 and 6",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q40",
+      "questionNumber": 40,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following two threads T1 and T2 that update two shared variables  \na and b. Assume that initially a = b = 1. Though context switching between \nthreads can happen at any time, each statement of T1 or T2 is executed atomically \nwithout interruption. T1                                                          T2 a = a + 1;                 b = 2 * b;          \nb = b + 1;                 a = 2 * a; Which one of the following options lists all the possible combinations of values of  \na and b after both T1 and T2 finish execution?",
+      "questionType": "MCQ",
+      "options": [
+        "(a = 4, b = 4); (a = 3, b = 3); (a = 4, b = 3)",
+        "(a = 3, b = 4); (a = 4, b = 3); (a = 3, b = 3)",
+        "(a = 4, b = 4); (a = 4, b = 3); (a = 3, b = 4)",
+        "(a = 2, b = 2); (a = 2, b = 3); (a = 3, b = 4)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(a = 4, b = 4); (a = 3, b = 3); (a = 4, b = 3)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(a = 3, b = 4); (a = 4, b = 3); (a = 3, b = 3)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(a = 4, b = 4); (a = 4, b = 3); (a = 3, b = 4)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(a = 2, b = 2); (a = 2, b = 3); (a = 3, b = 4)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q41",
+      "questionNumber": 41,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "An array [82, 101, 90, 11, 111, 75, 33, 131, 44, 93] is heapified. Which one of the \nfollowing options represents the first three elements in the heapified array?",
+      "questionType": "MCQ",
+      "options": [
+        "82, 90, 101",
+        "82, 11, 93",
+        "131, 11, 93",
+        "131, 111, 90"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "82, 90, 101",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "82, 11, 93",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "131, 11, 93",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "131, 111, 90",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q42",
+      "questionNumber": 42,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following recurrence relation: 𝑇(𝑛) = {√𝑛𝑇(√𝑛) + 𝑛    for  𝑛≥1, 1        for  𝑛= 1. Which one of the following options is CORRECT?",
+      "questionType": "MCQ",
+      "options": [
+        "𝑇(𝑛) =  Θ(𝑛 log log 𝑛)",
+        "𝑇(𝑛) = Θ(𝑛 log 𝑛)",
+        "𝑇(𝑛) = Θ(𝑛2 log 𝑛)",
+        "𝑇(𝑛) = Θ(𝑛2 log log 𝑛)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑇(𝑛) =  Θ(𝑛 log log 𝑛)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑇(𝑛) = Θ(𝑛 log 𝑛)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑇(𝑛) = Θ(𝑛2 log 𝑛)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑇(𝑛) = Θ(𝑛2 log log 𝑛)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q43",
+      "questionNumber": 43,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a binary min-heap containing 105 distinct elements. Let 𝑘 be the index (in \nthe underlying array) of the maximum element stored in the heap. The number of \npossible values of 𝑘 is",
+      "questionType": "MCQ",
+      "options": [
+        "53",
+        "52",
+        "27",
+        "1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "53",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "52",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "27",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q44",
+      "questionNumber": 44,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The symbol → indicates functional dependency in the context of a relational \ndatabase. Which of the following options is/are TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "(𝑋, 𝑌) →(𝑍, 𝑊)  implies  𝑋→(𝑍, 𝑊)",
+        "(𝑋, 𝑌) →(𝑍, 𝑊)  implies  (𝑋, 𝑌) →𝑍",
+        "((𝑋, 𝑌) →𝑍  and  𝑊→𝑌) implies (𝑋, 𝑊) →𝑍",
+        ""
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(𝑋, 𝑌) →(𝑍, 𝑊)  implies  𝑋→(𝑍, 𝑊)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(𝑋, 𝑌) →(𝑍, 𝑊)  implies  (𝑋, 𝑌) →𝑍",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "((𝑋, 𝑌) →𝑍  and  𝑊→𝑌) implies (𝑋, 𝑊) →𝑍",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q45",
+      "questionNumber": 45,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐺 be a directed graph and 𝑇 a depth first search (DFS) spanning tree in 𝐺 that \nis rooted at a vertex 𝑣. Suppose 𝑇 is also a breadth first search (BFS) tree in 𝐺, \nrooted at 𝑣. Which of the following statements is/are TRUE for every such graph 𝐺 \nand tree 𝑇 ?",
+      "questionType": "MSQ",
+      "options": [
+        "There are no back-edges in 𝐺 with respect to the tree 𝑇",
+        "There are no cross-edges in 𝐺 with respect to the tree 𝑇",
+        "There are no forward-edges in 𝐺 with respect to the tree 𝑇",
+        "The only edges in 𝐺 are the edges in  𝑇"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "There are no back-edges in 𝐺 with respect to the tree 𝑇",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "There are no cross-edges in 𝐺 with respect to the tree 𝑇",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "There are no forward-edges in 𝐺 with respect to the tree 𝑇",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The only edges in 𝐺 are the edges in  𝑇",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q46",
+      "questionNumber": 46,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following read-write schedule 𝑆 over three transactions \n 𝑇1, 𝑇2, and 𝑇3, where the subscripts in the schedule indicate transaction IDs: 𝑆: 𝑟1(𝑧); 𝑤1(𝑧); 𝑟2(𝑥); 𝑟3(𝑦); 𝑤3(𝑦); 𝑟2(𝑦); 𝑤2(𝑥); 𝑤2(𝑦); Which of the following transaction schedules is/are conflict equivalent to 𝑆 ?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑇1𝑇2𝑇3",
+        "𝑇1𝑇3𝑇2",
+        "𝑇3𝑇2𝑇1",
+        "𝑇3𝑇1𝑇2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑇1𝑇2𝑇3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑇1𝑇3𝑇2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑇3𝑇2𝑇1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑇3𝑇1𝑇2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q47",
+      "questionNumber": 47,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a Boolean expression given by 𝐹(𝑋, 𝑌, 𝑍) = ∑(3,5,6,7). Which of the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "𝐹(𝑋, 𝑌, 𝑍) = Π(0,1,2,4)",
+        "𝐹(𝑋, 𝑌, 𝑍) = 𝑋𝑌+ 𝑌𝑍+ 𝑋𝑍",
+        "𝐹(𝑋, 𝑌, 𝑍) is independent of input 𝑌",
+        "𝐹(𝑋, 𝑌, 𝑍) is independent of input 𝑋"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝐹(𝑋, 𝑌, 𝑍) = Π(0,1,2,4)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝐹(𝑋, 𝑌, 𝑍) = 𝑋𝑌+ 𝑌𝑍+ 𝑋𝑍",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐹(𝑋, 𝑌, 𝑍) is independent of input 𝑌",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐹(𝑋, 𝑌, 𝑍) is independent of input 𝑋",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A;B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q48",
+      "questionNumber": 48,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "int f(int x, int y) { \n  for (int i=0; i<y; i++) { \n    x=x+x+y; \n  } \n  return x; \n} Which of the following statements is/are TRUE about the above function?",
+      "questionType": "MSQ",
+      "options": [
+        "If the inputs are x=20, y=10, then the return value is greater than 220",
+        "If the inputs are x=20, y=20, then the return value is greater than 220",
+        "If the inputs are x=20, y=10, then the return value is less than 210",
+        "If the inputs are x=10, y=20, then the return value is greater than 220"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "If the inputs are x=20, y=10, then the return value is greater than 220",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "If the inputs are x=20, y=20, then the return value is greater than 220",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "If the inputs are x=20, y=10, then the return value is less than 210",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "If the inputs are x=10, y=20, then the return value is greater than 220",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q49",
+      "questionNumber": 49,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐴 be any 𝑛× 𝑚 matrix, where 𝑚 > 𝑛. Which of the following statements is/are \nTRUE about the system of linear equations 𝐴𝑥= 0 ?",
+      "questionType": "MSQ",
+      "options": [
+        "There exist at least 𝑚−𝑛 linearly independent solutions to this system",
+        "There exist 𝑚−𝑛 linearly independent vectors such that every solution is a linear \ncombination of these vectors",
+        "There exists a non-zero solution in which at least 𝑚−𝑛 variables are 0",
+        "There exists a solution in which at least 𝑛 variables are non-zero"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "There exist at least 𝑚−𝑛 linearly independent solutions to this system",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "There exist 𝑚−𝑛 linearly independent vectors such that every solution is a linear \ncombination of these vectors",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "There exists a non-zero solution in which at least 𝑚−𝑛 variables are 0",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "There exists a solution in which at least 𝑛 variables are non-zero",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q50",
+      "questionNumber": 50,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the 5-state DFA  𝑀 accepting the language 𝐿(𝑀) ⊂(0 + 1)∗ shown \nbelow.  For any string 𝑤∈(0 + 1)∗ let  𝑛0(𝑤) be the number of 0′𝑠 in 𝑤 and \n𝑛1(𝑤) be the number of 1′𝑠 in 𝑤. Which of the following statements is/are FALSE?",
+      "questionType": "MSQ",
+      "options": [
+        "States 2 and 4 are distinguishable in 𝑀",
+        "States 3 and 4 are distinguishable in 𝑀",
+        "States 2 and 5 are distinguishable in 𝑀",
+        "Any string 𝑤 with  𝑛0(𝑤) = 𝑛1(𝑤) is in 𝐿(𝑀)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "States 2 and 4 are distinguishable in 𝑀",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "States 3 and 4 are distinguishable in 𝑀",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "States 2 and 5 are distinguishable in 𝑀",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Any string 𝑤 with  𝑛0(𝑤) = 𝑛1(𝑤) is in 𝐿(𝑀)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": "/exam-assets/gate/2024/cs-1/q50_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/cs-1/q50_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q51",
+      "questionNumber": 51,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The chromatic number of a graph is the minimum number of colours used in a \nproper colouring of the graph. Let 𝐺 be any graph with 𝑛 vertices and chromatic \nnumber 𝑘. Which of the following statements is/are always TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "𝐺 contains a complete subgraph with 𝑘 vertices",
+        "𝐺 contains an independent set of size at least 𝑛/𝑘",
+        "𝐺 contains at least 𝑘(𝑘−1)/2 edges",
+        "𝐺 contains a vertex of degree at least 𝑘"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝐺 contains a complete subgraph with 𝑘 vertices",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝐺 contains an independent set of size at least 𝑛/𝑘",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐺 contains at least 𝑘(𝑘−1)/2 edges",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐺 contains a vertex of degree at least 𝑘",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q52",
+      "questionNumber": 52,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the operators ◊ and □ defined by 𝑎◊𝑏= 𝑎+ 2𝑏, 𝑎□𝑏= 𝑎𝑏, for positive \nintegers. Which of the following statements is/are TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "Operator ◊ obeys the associative law",
+        "Operator □ obeys the associative law",
+        "Operator ◊ over the operator □ obeys the distributive law",
+        "Operator □ over the operator ◊ obeys the distributive law"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Operator ◊ obeys the associative law",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Operator □ obeys the associative law",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Operator ◊ over the operator □ obeys the distributive law",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Operator □ over the operator ◊ obeys the distributive law",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q53",
+      "questionNumber": 53,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider two set-associative cache memory architectures: WBC, which uses the \nwrite back policy, and WTC, which uses the write through policy. Both of them use \nthe LRU (Least Recently Used) block replacement policy. The cache memory is \nconnected to the main memory. Which of the following statements is/are TRUE?",
+      "questionType": "MSQ",
+      "options": [
+        "A read miss in WBC never evicts a dirty block",
+        "A read miss in WTC never triggers a write back operation of a cache block to \nmain memory",
+        "A write hit in WBC can modify the value of the dirty bit of a cache block",
+        "A write miss in WTC always writes the victim cache block to main memory \nbefore loading the missed block to the cache"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "A read miss in WBC never evicts a dirty block",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "A read miss in WTC never triggers a write back operation of a cache block to \nmain memory",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "A write hit in WBC can modify the value of the dirty bit of a cache block",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "A write miss in WTC always writes the victim cache block to main memory \nbefore loading the missed block to the cache",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q54",
+      "questionNumber": 54,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per \ntrack and each sector holds 1024 bytes of data. The number of cylinders in the hard \ndisk is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "4096 to 4096",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 4096.0,
+        "max": 4096.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 4096 to 4096.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q55",
+      "questionNumber": 55,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The baseline execution time of a program on a 2 GHz single core machine is  \n100 nanoseconds (ns). The code corresponding to 90% of the execution time can be \nfully parallelized. The overhead for using an additional core is 10 ns when running \non a multicore system. Assume that all cores in the multicore system run their share \nof the parallelized code for an equal amount of time. The number of cores that minimize the execution time of the program is ________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "3 to 3",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 3 to 3.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q56",
+      "questionNumber": 56,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "A given program has 25% load/store instructions. Suppose the ideal CPI (cycles per \ninstruction) without any memory stalls is 2. The program exhibits 2% miss rate on \ninstruction cache and 8% miss rate on data cache. The miss penalty is 100 cycles. \nThe speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., \nwith NO data or instruction cache misses) is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "3.00 to 3.00",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 3.00 to 3.00.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q57",
+      "questionNumber": 57,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following code snippet using the fork() and wait() system calls. \nAssume that the code compiles and runs correctly, and that the system calls run \nsuccessfully without any errors. int x = 3; \nwhile(x > 0) { \n  fork(); \n  printf(\"hello\"); \n  wait(NULL); \n  x--; \n} The total number of times the printf statement is executed is _______",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "14 to 14",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 14.0,
+        "max": 14.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 14 to 14.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q58",
+      "questionNumber": 58,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the entries shown below in the forwarding table of an IP router. Each entry \nconsists of an IP prefix and the corresponding next hop router for packets whose \ndestination IP address matches the prefix. The notation “/N” in a prefix indicates a \nsubnet mask with the most significant N bits set to 1. Prefix \nNext hop router 10.1.1.0/24 \nR1 10.1.1.128/25 \nR2 10.1.1.64/26 \nR3 10.1.1.192/26 \nR4 This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are \n10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of \npackets forwarded via the next hop router R2 is _______",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "40 to 40",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 40.0,
+        "max": 40.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 40 to 40.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q59",
+      "questionNumber": 59,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Let 𝐺 = (𝑉, Σ, 𝑆, 𝑃)  be a context-free grammar in Chomsky Normal Form with  \nΣ = {𝑎, 𝑏, 𝑐}  and 𝑉 containing 10 variable symbols including the start  \nsymbol 𝑆. The string 𝑤 = 𝑎30𝑏30𝑐30 is derivable from 𝑆. The number of steps \n(application of rules) in the derivation 𝑆→∗𝑤 is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "179 to 179",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 179.0,
+        "max": 179.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 179 to 179.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q60",
+      "questionNumber": 60,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "The number of edges present in the forest generated by the DFS traversal of an \nundirected graph 𝐺 with 100 vertices is 40. The number of connected components \nin 𝐺 is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "60 to 60",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 60.0,
+        "max": 60.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 60 to 60.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q61",
+      "questionNumber": 61,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider the following two regular expressions over the alphabet {0,1}: 𝑟=  0∗+ 1∗ 𝑠= 01∗+ 10∗ The total number of strings of length less than or equal to 5, which are  \nneither in 𝑟 nor in 𝑠, is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "44 to 44",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 44.0,
+        "max": 44.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 44 to 44.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q62",
+      "questionNumber": 62,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a memory management system that uses a page size of 2 KB. Assume that \nboth the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, \nand 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address \n(in decimal format) corresponding to the virtual address 2500 (in decimal format) \nis _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "6596 to 6596",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 6596.0,
+        "max": 6596.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 6596 to 6596.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q63",
+      "questionNumber": 63,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without \nreplacement. Given that the first ball drawn is red, the probability (rounded off to 3 \ndecimal places) that both balls drawn are red is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.370 to 0.380",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.37,
+        "max": 0.38
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.370 to 0.380.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q64",
+      "questionNumber": 64,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and \nM3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2.  \nA, B, and C are select lines of M1, M2, and M3, respectively. X1 0 Q1 X2 1 M1 S1 0 M3\nA Y 1 S3 X3 0 C Q2 M2 X4 1 S2 B For an instance of inputs X1=1, X2=1, X3=0, and X4=0, the number of \ncombinations of A, B, C that give the output Y=1 is _________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "4 to 4",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 4 to 4.",
+      "diagramUrl": "/exam-assets/gate/2024/cs-1/q64_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/cs-1/q64_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-cs-1-q65",
+      "questionNumber": 65,
+      "sectionId": "cs1_core",
+      "sectionName": "Computer Science & IT (Session 1)",
+      "questionText": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP \nheader) from a sender to a receiver over a path of two links with a router between \nthem. The first link (sender to router) has an MTU (Maximum Transmission Unit) \nsize of 542 bytes, while the second link (router to receiver) has an MTU size of 360 \nbytes. The number of fragments that would be delivered at the receiver is ________",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "6 to 6",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 6.0,
+        "max": 6.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 6 to 6.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-10",
+      "shift": "Shift 1 (Forenoon: 09:30 - 12:30)",
+      "tier": "Single Stage",
+      "paperCode": "CS-1",
+      "discipline": "Computer Science and Information Technology",
+      "language": "English"
+    }
+  ]
+}

@@ -1,0 +1,4511 @@
+{
+  "id": "gate-2025-ge",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2025,
+  "title": "GATE 2025 — Geomatics Engineering (GE)",
+  "subTitle": "Official IIT Roorkee Question Paper (Single Session)",
+  "date": "2025-02-01",
+  "shift": "General",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "GE",
+  "discipline": "Geomatics Engineering",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 130.0,
+  "totalQuestions": 84,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "ge_a",
+      "name": "Part A: Common",
+      "questionCount": 36,
+      "startIndex": 10,
+      "endIndex": 45,
+      "maxMarks": 55.0
+    },
+    {
+      "id": "ge_b_s1",
+      "name": "Part B: Section I (Surveying and Mapping)",
+      "questionCount": 19,
+      "startIndex": 46,
+      "endIndex": 64,
+      "maxMarks": 30.0
+    },
+    {
+      "id": "ge_b_s2",
+      "name": "Part B: Section II (Image Processing and Analysis)",
+      "questionCount": 19,
+      "startIndex": 65,
+      "endIndex": 83,
+      "maxMarks": 30.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2025-ge-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their\ndecreasing order of intensity. Identify the missing word in Group-II.\nGroup-I: Abuse → Insult → Ridicule\nGroup-II: ________ → Praise → Appreciate",
+      "questionType": "MCQ",
+      "options": [
+        "Extol",
+        "Prize",
+        "Appropriate",
+        "Espouse"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Extol",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Prize",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Appropriate",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Espouse",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\nSelect the most appropriate option to complete the above sentence.",
+      "questionType": "MCQ",
+      "options": [
+        "will be",
+        "can be",
+        "am going to be",
+        "could have been"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "will be",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "can be",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "am going to be",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "could have been",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The 12 musical notes are given as 𝐶, 𝐶#, 𝐷, 𝐷#, 𝐸, 𝐹, 𝐹#, 𝐺, 𝐺#, 𝐴, 𝐴#, and 𝐵.\n12\nFrequency of each note is √2 times the frequency of the previous note. If the\nfrequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹# and 𝐶\nis:",
+      "questionType": "MCQ",
+      "options": [
+        "6\n√2",
+        "√2",
+        "4\n√2",
+        "2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "6\n√2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "√2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "4\n√2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The following figures show three curves generated using an iterative algorithm. The\ntotal length of the curve generated after ‘Iteration 𝑛’ is:\nNote: The figures shown are representative.\n1\nIteration 0:\n1\n1\nIteration 1:\nLength of each segment:\n3\n3\n1\n1\nIteration 2: 9 Length of each segment:\n9",
+      "questionType": "MCQ",
+      "options": [
+        "𝑛\n5 2\n( )\n3",
+        "𝑛\n5\n( )\n3",
+        "2𝑛\n5\n( )\n3",
+        "𝑛(2𝑛−1)\n5\n( )\n3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑛\n5 2\n( )\n3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑛\n5\n( )\n3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "2𝑛\n5\n( )\n3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑛(2𝑛−1)\n5\n( )\n3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "|𝑥|\nWhich one of the following plots represents 𝑓(𝑥) = − , where 𝑥 is a non-\n𝑥\nzero real number?\nNote: The figures shown are representative.",
+      "questionType": "MCQ",
+      "options": [
+        "f(x)\n(0,1)\nx\n(0, −1)",
+        "f(x)\n(0,1)\nx\n(0, −1)",
+        "f(x)\n(1,0)\nx\n(−1,0)",
+        "f(x)\n(0,1)\nx\n(0, −1)"
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2025/ge/q5_opt_a.png",
+        "/exam-assets/gate/2025/ge/q5_opt_b.png",
+        "/exam-assets/gate/2025/ge/q5_opt_c.png",
+        "/exam-assets/gate/2025/ge/q5_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "f(x)\n(0,1)\nx\n(0, −1)",
+          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "f(x)\n(0,1)\nx\n(0, −1)",
+          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "f(x)\n(1,0)\nx\n(−1,0)",
+          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "f(x)\n(0,1)\nx\n(0, −1)",
+          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_d.png"
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. Over time, such adaptations lead to significant evolutionary changes with\nthe potential to shape the development of new species.\nQ. In natural world, organisms constantly adapt to their environments in\nresponse to challenges and opportunities.\nR. This process of adaptation is driven by the principle of natural selection,\nwhere favorable traits increase an organism’s chances of survival and\nreproduction.\nS. As environments change, organisms that can adapt their behavior, structure\nand physiology to such changes are more likely to survive.",
+      "questionType": "MCQ",
+      "options": [
+        "P → Q → R → S",
+        "Q → S → R → P",
+        "R → S → Q → P",
+        "S → P → R → Q"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P → Q → R → S",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Q → S → R → P",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "R → S → Q → P",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "S → P → R → Q",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏 and 𝑏 from\n1 2\nthe origin (0), as shown in the figure. Note that 0 < 𝑏 < 𝑏 < 1. Which one of the\n1 2\nfollowing is NOT a necessary condition for forming a triangle using the three\npieces?\nNote: All lengths are in meter. The figure shown is representative.",
+      "questionType": "MCQ",
+      "options": [
+        "𝑏 < 0.5\n1",
+        "𝑏 > 0.5\n2",
+        "𝑏 < 𝑏 + 0.5\n2 1",
+        "𝑏 + 𝑏 < 1\n1 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑏 < 0.5\n1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑏 > 0.5\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑏 < 𝑏 + 0.5\n2 1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑏 + 𝑏 < 1\n1 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q7_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q7_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure\nindicates their order of position at the start of the game. They play the game by\nmoving forward in a circle in the clockwise direction.\nAfter the 1st round, 4th student behind P leaves the game. After 2nd round, 5th student\nbehind Q leaves the game. After 3rd round, 3rd student behind V leaves the game.\nAfter 4th round, 4th student behind U leaves the game. Who all are left in the game\nafter the 4th round?\nNote: The figure shown is representative.\nP\nW R\nU T\nQ\nV\nS",
+      "questionType": "MCQ",
+      "options": [
+        "P; T; Q; S",
+        "V; P; T; Q",
+        "W; R; Q; V",
+        "Q; T; V; W"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P; T; Q; S",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "V; P; T; Q",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "W; R; Q; V",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Q; T; V; W",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2025 committee.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q8_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a\ntournament; also included are the number of silver and the bronze medals won by\nthem. Based only on the data provided in the table, which one of the following\nstatements is INCORRECT?",
+      "questionType": "MCQ",
+      "options": [
+        "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
+        "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
+        "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
+        "Canada has won twice as many total medals as Japan."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Canada has won twice as many total medals as Japan.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "An organization allows its employees to work independently on consultancy\nprojects but charges an overhead on the consulting fee. The overhead is 20% of the\nconsulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is\n₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The\ngovernment charges a Goods and Services Tax of 18% on the total amount (the\nconsulting fee plus the overhead). An employee of the organization charges this\nentire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client\ncannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the\nemployee can charge?",
+      "questionType": "MCQ",
+      "options": [
+        "₹ 7,01,438",
+        "₹ 7,24,961",
+        "₹ 7,51,232",
+        "₹ 7,75,784"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "₹ 7,01,438",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "₹ 7,24,961",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "₹ 7,51,232",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "₹ 7,75,784",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q11",
+      "questionNumber": 11,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "For a sample drawn from normally distributed population, the statistic\n(n−1)s2\nY = , where n = sample size,  = population standard deviation,\n2\ns = sample standard deviation, has",
+      "questionType": "MCQ",
+      "options": [
+        "Chi-square distribution with (n−1) degrees of freedom",
+        "Chi-square distribution with n degrees of freedom",
+        "Chi-square distribution with (n +1) degrees of freedom",
+        "Gaussian distribution with n degrees of freedom"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Chi-square distribution with (n−1) degrees of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Chi-square distribution with n degrees of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Chi-square distribution with (n +1) degrees of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Gaussian distribution with n degrees of freedom",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q12",
+      "questionNumber": 12,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The reflectance geometry of white-sky albedo can be represented as______.",
+      "questionType": "MCQ",
+      "options": [
+        "bi-directional",
+        "bi-conical",
+        "bi-hemispherical",
+        "directional-conical"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "bi-directional",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "bi-conical",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "bi-hemispherical",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "directional-conical",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q13",
+      "questionNumber": 13,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Clouds appear white in optical visible spectral bands of remote sensing images due\nto ______ scattering.",
+      "questionType": "MCQ",
+      "options": [
+        "Rayleigh",
+        "Mie",
+        "selective",
+        "non-selective"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Rayleigh",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Mie",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "selective",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "non-selective",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q14",
+      "questionNumber": 14,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "If the absolute temperature (greater than 0 K) of a body is doubled, it would emit\n______ times more radiation.",
+      "questionType": "MCQ",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "8",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "16",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q15",
+      "questionNumber": 15,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "If the emissivity of an object varies with wavelength, it is called as ________.",
+      "questionType": "MCQ",
+      "options": [
+        "grey body",
+        "black body",
+        "selective radiant",
+        "non-selective radiant"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "grey body",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "black body",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "selective radiant",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "non-selective radiant",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q16",
+      "questionNumber": 16,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In the context of Global Navigation Satellite System positioning, the Saastamoinen\nmodel provides a correction for________.",
+      "questionType": "MCQ",
+      "options": [
+        "zenith hydrostatic delay",
+        "slant hydrostatic delay",
+        "zenith total delay",
+        "slant total delay"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "zenith hydrostatic delay",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "slant hydrostatic delay",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "zenith total delay",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "slant total delay",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q17",
+      "questionNumber": 17,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In the context of Global Navigation Satellite System positioning, which of the\nfollowing statement is correct?",
+      "questionType": "MCQ",
+      "options": [
+        "In Differential Global Navigation Satellite System, the corrections to the\ncoordinates of the user are transmitted from the reference station",
+        "Real-time kinematic positioning and stop-and-go positioning are both kinematic\nmethods",
+        "Rapid-static positioning is not a relative positioning technique",
+        "Double differencing eliminates the clock errors and improves the noise in the\ndifferenced pseudorange observations"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "In Differential Global Navigation Satellite System, the corrections to the\ncoordinates of the user are transmitted from the reference station",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Real-time kinematic positioning and stop-and-go positioning are both kinematic\nmethods",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Rapid-static positioning is not a relative positioning technique",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Double differencing eliminates the clock errors and improves the noise in the\ndifferenced pseudorange observations",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q18",
+      "questionNumber": 18,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In the choke ring antenna there are concentric cylinders placed around the antenna\nthat are of a certain depth to minimize the multipath effect. If the signal wavelength\nis 𝜆, then the depth of the cylinders in the choke ring antenna should be",
+      "questionType": "MCQ",
+      "options": [
+        "\nexactly\n4",
+        " \nslightly more than and far less than\n4 2",
+        "\nexactly\n2",
+        "\nslightly more than and far less than 𝜆\n2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "\nexactly\n4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": " \nslightly more than and far less than\n4 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "\nexactly\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "\nslightly more than and far less than 𝜆\n2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q19",
+      "questionNumber": 19,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which one of the following statements is NOT correct in the context of Geographic\nInformation System?",
+      "questionType": "MCQ",
+      "options": [
+        "A raster data model makes use of grid of cells that are organized into rows and\ncolumns for representation of features on earth",
+        "Vector data model represents the spatial features on Earth’s surface in terms of\npoints, lines or polygons",
+        "Resampling is applied after georeferencing of vector datasets",
+        "Topology is used in vector data models to ensure spatial data integrity"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "A raster data model makes use of grid of cells that are organized into rows and\ncolumns for representation of features on earth",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Vector data model represents the spatial features on Earth’s surface in terms of\npoints, lines or polygons",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Resampling is applied after georeferencing of vector datasets",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Topology is used in vector data models to ensure spatial data integrity",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q20",
+      "questionNumber": 20,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which one of the following statements is NOT correct in the context of shapefile?",
+      "questionType": "MCQ",
+      "options": [
+        "It is an example of georelational data model",
+        "It is a topological data model",
+        "It treats points as pairs of ( x, y ) coordinates",
+        "In this, polygons can have duplicate arcs for shared boundaries"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It is an example of georelational data model",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It is a topological data model",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It treats points as pairs of ( x, y ) coordinates",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "In this, polygons can have duplicate arcs for shared boundaries",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q21",
+      "questionNumber": 21,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The table below is an attribute table about employee records. Which attribute can\nbe used as a primary key?",
+      "questionType": "MCQ",
+      "options": [
+        "Emp_Name",
+        "Emp_ID",
+        "Emp_Dept",
+        "Emp_Desig"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Emp_Name",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Emp_ID",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Emp_Dept",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Emp_Desig",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q22",
+      "questionNumber": 22,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Find the best match between column I and column II for the following scenario\nrelated to spatial operators.",
+      "questionType": "MCQ",
+      "options": [
+        "P-2; Q-3; R-1",
+        "P-1; Q-3; R-2",
+        "P-2; Q-1; R-3",
+        "P-1; Q-2; R-3"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P-2; Q-3; R-1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P-1; Q-3; R-2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P-2; Q-1; R-3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P-1; Q-2; R-3",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q23",
+      "questionNumber": 23,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "For the weighted least squares adjustment, which of the following statements is/are\ncorrect?",
+      "questionType": "MSQ",
+      "options": [
+        "Weighted sum of the squares of the residuals is minimized",
+        "The expected value of the residuals is equal to zero",
+        "Redundancy of observations is maximized",
+        "Weights are taken inversely proportional to the variance of the observations"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Weighted sum of the squares of the residuals is minimized",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The expected value of the residuals is equal to zero",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Redundancy of observations is maximized",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Weights are taken inversely proportional to the variance of the observations",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q24",
+      "questionNumber": 24,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The geophysical variables that can be measured/derived from the Global Navigation\nSatellite System observations is/are",
+      "questionType": "MSQ",
+      "options": [
+        "ocean color",
+        "precipitable water vapor",
+        "soil moisture",
+        "seismic motion"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "ocean color",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "precipitable water vapor",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "soil moisture",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "seismic motion",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is B;C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q25",
+      "questionNumber": 25,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "For a given set of observations for distance measurements, the standard error was\ncomputed as ± 2.5 cm. Assuming that the observations conform to normal error\ndistribution theory, the probable error will be given by ± ______ cm (rounded off\nto 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.67 to 1.69",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.67,
+        "max": 1.69
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.67 to 1.69.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q26",
+      "questionNumber": 26,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In a two-dimensional coordinate system, it is proposed to determine the size and\nshape of a triangle ABC in addition to its location and orientation. For this, all the\ninternal angles and sides of the triangle were observed. Further, the planar\ncoordinates of point A and bearing/azimuth of line AB were known. The redundancy\n(r) for the above system will be equal to _____________ (Answer in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "3 to 3",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 3 to 3.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q27",
+      "questionNumber": 27,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The covariance matrix, , for the planar coordinates of a surveyed point is given as:\n 25 mm2 0.500 mm2\n=  \n0.500 mm2 100 mm2 \nThe coefficient of correlation is________ (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.01 to 0.01",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.01,
+        "max": 0.01
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.01 to 0.01.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q28",
+      "questionNumber": 28,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Match the following SAR sensors to their frequency bands",
+      "questionType": "MCQ",
+      "options": [
+        "P – 3, Q – 2, R – 4, S – 1",
+        "P – 4, Q – 2, R – 1, S – 3",
+        "P – 2, Q – 4, R – 1, S – 3",
+        "P – 1, Q – 4, R – 3, S – 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P – 3, Q – 2, R – 4, S – 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P – 4, Q – 2, R – 1, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P – 2, Q – 4, R – 1, S – 3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P – 1, Q – 4, R – 3, S – 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q28_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q28_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q29",
+      "questionNumber": 29,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The relativistic effect in Global Navigation Satellite System satellites has two parts,\nof which the first part is the time dilation due to the shift in the fundamental\nfrequency of the satellite clock. The second part is due to the satellite’s semi-major\naxis and __________.",
+      "questionType": "MCQ",
+      "options": [
+        "eccentricity",
+        "inclination",
+        "argument of perigee",
+        "right ascension of the ascending node"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "eccentricity",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "inclination",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "argument of perigee",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "right ascension of the ascending node",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q30",
+      "questionNumber": 30,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "A country has 7 permanent Global Navigation Satellite System stations covering its\nterritory. Their surveying organization generates a network solution after applying\ndouble differencing to the observations. These 7 permanent stations can view 5 to\n10 common satellites at any given epoch. What is the range (minimum, maximum)\nof the number of independent double differenced observables possible?",
+      "questionType": "MCQ",
+      "options": [
+        "(35, 70)",
+        "(30, 56)",
+        "(28, 48)",
+        "(24, 54)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(35, 70)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(30, 56)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(28, 48)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(24, 54)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q31",
+      "questionNumber": 31,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Consider the nodes of a square grid A, B, C and D (shown in figure below), where\na certain parameter is measured. The distances between the points is also indicated\nin the same figure. For example, the value observed at point A is 120 and is\nindicated as A (120), and the distance between points A and B is 1.0 units. The\nvalue at point ‘X’ computed using bilinear interpolation, using the values at points\nA, B, C and D is _________.",
+      "questionType": "MCQ",
+      "options": [
+        "175",
+        "152",
+        "198",
+        "210"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "175",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "152",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "198",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "210",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q32",
+      "questionNumber": 32,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The first value in the output of a SQL query (given below) when run on a table\nhaving name “Table-1”is?\nSQL Query: SELECT LastName FROM Table-1 WHERE State=“IN” ORDER BY\nFirstName",
+      "questionType": "MCQ",
+      "options": [
+        "Ramirez",
+        "Douglas",
+        "Paul",
+        "Squires"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Ramirez",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Douglas",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Paul",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Squires",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q32_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q32_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q33",
+      "questionNumber": 33,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Consider the three input raster images given below. A geospatial analyst decided to\nuse the overlay operation to generate a new raster showing the average values. The\nvalues of the cells P, Q and R in the output raster are:",
+      "questionType": "MCQ",
+      "options": [
+        "P = 3, Q = 3, R = 2",
+        "P = 4, Q = 4, R = 3",
+        "P = 3, Q = 3, R = 3",
+        "P = 4, Q = 4, R = 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P = 3, Q = 3, R = 2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P = 4, Q = 4, R = 3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P = 3, Q = 3, R = 3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P = 4, Q = 4, R = 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q34",
+      "questionNumber": 34,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In a Geographic Information System database, a stream is represented by a line and\nhouses are represented by polygons. The pollution in the stream is affecting houses\nwithin a distance of 500 m on both sides. Which vector data analysis operations\nshould be performed to identify houses affected by the pollution in the stream?",
+      "questionType": "MCQ",
+      "options": [
+        "Buffer and Overlay",
+        "Dissolve and Overlay",
+        "Buffer",
+        "Split"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Buffer and Overlay",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Dissolve and Overlay",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Buffer",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Split",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q35",
+      "questionNumber": 35,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In a given weighted graph shown below, what is the value of the expression\n(p+d)2\nwhere,\ni. Alphabets A, B, C, D, E and F denote the nodes\nii. Numbers 1 to 6 denote the weights between two nodes\niii. d = shortest distance between node A and node E\niv. p = number of paths with distance d",
+      "questionType": "MCQ",
+      "options": [
+        "100",
+        "64",
+        "81",
+        "121"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "100",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "64",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "81",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "121",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q35_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q35_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q36",
+      "questionNumber": 36,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In a plane triangle, the observed angles 𝑃, 𝑄 and 𝑅, assumed uncorrelated, with\ngiven weights are:\n𝑃 = 401902″ weight = 1\n𝑄 = 703001″ weight = 2\n𝑅 = 691100″ weight = 1\nThe most probable values of these angles (𝑃̂, 𝑄̂, 𝑅̂) will be given by:",
+      "questionType": "MCQ",
+      "options": [
+        "𝑃̂ = 401900″, 𝑄̂ = 703000″, 𝑅̂ = 691100″",
+        "𝑃̂ = 401901″, 𝑄̂ = 703000″, 𝑅̂ = 691059″",
+        "𝑃̂ = 40190.8″, 𝑄̂ = 70300.4″, 𝑅̂ = 691058.8″",
+        "𝑃̂ = 401858.4″, 𝑄̂ = 70300.4″, 𝑅̂ = 69111.2″"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑃̂ = 401900″, 𝑄̂ = 703000″, 𝑅̂ = 691100″",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑃̂ = 401901″, 𝑄̂ = 703000″, 𝑅̂ = 691059″",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑃̂ = 40190.8″, 𝑄̂ = 70300.4″, 𝑅̂ = 691058.8″",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑃̂ = 401858.4″, 𝑄̂ = 70300.4″, 𝑅̂ = 69111.2″",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q37",
+      "questionNumber": 37,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are correct in the context of Voronoi polygon?",
+      "questionType": "MSQ",
+      "options": [
+        "A Voronoi polygon may contain more than one point, especially where the density\nof points is higher",
+        "The center of a Voronoi polygon is a circumcenter of a Delaunay triangle",
+        "Each intersection of Voronoi edges belongs to at least three Voronoi polygons",
+        "Voronoi polygons and Delaunay triangles are geometric dual of each other"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "A Voronoi polygon may contain more than one point, especially where the density\nof points is higher",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The center of a Voronoi polygon is a circumcenter of a Delaunay triangle",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Each intersection of Voronoi edges belongs to at least three Voronoi polygons",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Voronoi polygons and Delaunay triangles are geometric dual of each other",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is C;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q38",
+      "questionNumber": 38,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following conditions is/are essential for geostationary satellite orbits?",
+      "questionType": "MSQ",
+      "options": [
+        "Eccentricity is zero",
+        "Inclination is close to zero",
+        "Prograde",
+        "Retrograde"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Eccentricity is zero",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Inclination is close to zero",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Prograde",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Retrograde",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B;C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q39",
+      "questionNumber": 39,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Two adjacent angles 𝐴 and 𝐵 have been observed with the following mean values\nand correlation matrix, 𝜌:\n𝐴̅ = 10°20′10″ ± 10″ 1.0 0.6\n} 𝜌 = [ ]\n𝐵̅ = 25°35′15″ ± 20″ 0.6 1.0\nThe standard deviation of the sum of the estimated angles 𝐴̅ and 𝐵̅ will be\n______________ (in arcseconds) (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "27.15 to 27.30",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 27.15,
+        "max": 27.3
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 27.15 to 27.30.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q40",
+      "questionNumber": 40,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The residual error in a measurement comprises a bias of + 0.08 m and a random\ncomponent given by the following density function:\n1  −x2 \nf ( x)= exp  m−1\n0.15 0.0072\nFor this system, the mean square error (MSE) is ________ m. (rounded off to 2\ndecimal places)",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.09 to 0.11",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.09,
+        "max": 0.11
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.09 to 0.11.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q41",
+      "questionNumber": 41,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "For the following ten angle observations, the standard error of the mean angle is\ngiven as ____________ arcsecond (rounded off to 2 decimal places).\n25°40′12″ 25°40′14″ 25°40′16″ 25°40′18″ 25°40′09″\n25°40′15″ 25°40′10″ 25°40′13″ 25°40′15″ 25°40′18″",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.95 to 0.98",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.95,
+        "max": 0.98
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.95 to 0.98.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q42",
+      "questionNumber": 42,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The velocity (V ) of a satellite moving in a circular orbit at a height of 1000 km above\ns\nearth surface is ______km s -1(rounded off to 2 decimal places).\n(G = 6.67 10−11 m 3 kg -1 s-2, M =5.972 10 24 kg and r =6378 km)\ne e",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "7.25 to 7.45",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 7.25,
+        "max": 7.45
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 7.25 to 7.45.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q43",
+      "questionNumber": 43,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "If the radiant temperature of a body is 360 K and its emissivity 0.6, then the kinetic\ntemperature of that body is ______ K (Answer in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "408 to 410",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 408.0,
+        "max": 410.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 408 to 410.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q44",
+      "questionNumber": 44,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Energy carried by a part of short-wave infrared ray at 1000 nm wavelength is ______\neV (rounded off to 2 decimal places).\nh=6.626 10−34J s , 1 J=6.242 101 8eV, c= 3 × 108m s -1",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.14 to 1.34",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.14,
+        "max": 1.34
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.14 to 1.34.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q45",
+      "questionNumber": 45,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The scattering matrix for a fully polarimetric synthetic aperture radar pixel is given\nbelow. The C element of the covariance matrix computed with a 1 × 1 window\n11\nwill be ____? (rounded off to 2 decimal places).\nHere, i = −1.\n0.1 +0.5i 0.1 −0.1i\n \n0.1 +0.1i 0.3−0.5i",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.25 to 0.27",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.25,
+        "max": 0.27
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.25 to 0.27.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q46",
+      "questionNumber": 46,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Global Navigation Satellite System can be used for positioning and timing. The\naverage geometric dilution of precision (GDOP) at a location is 1.0 and positional\ndilution of precision (PDOP) is 0.8. With the precision of the measurements being\n300 m, the achieved precision of timing is ____ns (Answer in integer).\nConsider the speed of light is 3 108 m s -1",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "600 to 600",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 600.0,
+        "max": 600.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 600 to 600.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q47",
+      "questionNumber": 47,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Two positions on the Earth’s surface are given in the form of Cartesian coordinates\nin the WGS84 reference frame and ellipsoid. The norm of difference of these two\nposition vectors is the____________.",
+      "questionType": "MCQ",
+      "options": [
+        "spherical distance",
+        "ellipsoidal distance",
+        "Euclidean distance",
+        "planar distance"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "spherical distance",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "ellipsoidal distance",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Euclidean distance",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "planar distance",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q48",
+      "questionNumber": 48,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Which one of the following map projections is NOT conformal?",
+      "questionType": "MCQ",
+      "options": [
+        "Transverse Mercator",
+        "Stereographic",
+        "Lambert Conformal Conic",
+        "Sinusoidal"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Transverse Mercator",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Stereographic",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Lambert Conformal Conic",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Sinusoidal",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q49",
+      "questionNumber": 49,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In a Survey of India topographic map of scale 1:50,000, the contours are drawn\nconventionally at intervals of _______ m.",
+      "questionType": "MCQ",
+      "options": [
+        "10 and 20",
+        "20 and 40",
+        "30 and 50",
+        "25 and 50"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "10 and 20",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "20 and 40",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "30 and 50",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "25 and 50",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q50",
+      "questionNumber": 50,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Figure below shows an open traverse PQRS, where P is the starting point of traverse\nand S is the end point of traverse. Which one of the following is correct?",
+      "questionType": "MCQ",
+      "options": [
+        "∠𝑅 = Bearing = 32, ∠𝑃 = Deflection Angle = 75, ∠𝑄 = Included Angle = 120",
+        "∠𝑃 = Bearing = 75, ∠𝑄 = Deflection Angle = 120, ∠𝑅 = Included Angle = 32",
+        "∠𝑃 = Bearing = 75, ∠𝑅 = Deflection Angle = 32, ∠𝑄 = Included Angle = 120",
+        "∠𝑅 = Bearing = 32, ∠𝑄 = Deflection Angle = 120, ∠𝑃 = Included Angle = 75"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "∠𝑅 = Bearing = 32, ∠𝑃 = Deflection Angle = 75, ∠𝑄 = Included Angle = 120",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "∠𝑃 = Bearing = 75, ∠𝑄 = Deflection Angle = 120, ∠𝑅 = Included Angle = 32",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "∠𝑃 = Bearing = 75, ∠𝑅 = Deflection Angle = 32, ∠𝑄 = Included Angle = 120",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "∠𝑅 = Bearing = 32, ∠𝑄 = Deflection Angle = 120, ∠𝑃 = Included Angle = 75",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q50_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q50_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q51",
+      "questionNumber": 51,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "When conducting a survey using a total station, a zenith angle is measured as\n84 13 56 in the direct mode. What is the equivalent zenith angle in the reverse\nmode?",
+      "questionType": "MCQ",
+      "options": [
+        "264 13 56",
+        "05",
+        "275",
+        "185"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "264 13 56",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "05",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "275",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "185",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q52",
+      "questionNumber": 52,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In a closed traverse PQRST the following data were collected in the field. What is\nthe correct sum of deflection angles for this traverse?",
+      "questionType": "MCQ",
+      "options": [
+        "38200",
+        "36000",
+        "54000",
+        "72352"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "38200",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "36000",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "54000",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "72352",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q52_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q52_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q53",
+      "questionNumber": 53,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Which one of the following parameters does NOT affect the scale of a vertical aerial\nphotograph?",
+      "questionType": "MCQ",
+      "options": [
+        "Size of the photograph",
+        "Focal length of the camera",
+        "Flying height",
+        "Terrain elevation"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Size of the photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Focal length of the camera",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Flying height",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Terrain elevation",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q54",
+      "questionNumber": 54,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Select the correct statement in the context of relief displacement in vertical aerial\nphotographs.",
+      "questionType": "MCQ",
+      "options": [
+        "It is zero for principal point, irrespective of whether the point is above or below the\ndatum",
+        "It increases with increased flying height above datum",
+        "It occurs radially from one of the image corners",
+        "It has no effect on the appearance (in the aerial photograph) of the straight roads\nover an undulating terrain"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It is zero for principal point, irrespective of whether the point is above or below the\ndatum",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It increases with increased flying height above datum",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It occurs radially from one of the image corners",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It has no effect on the appearance (in the aerial photograph) of the straight roads\nover an undulating terrain",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q55",
+      "questionNumber": 55,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Given h = H + N , where h is the ellipsoidal/geodetic height at point P, H is the\nP P P P P\northometric height and N is the geoid undulation along the ellipsoidal normal. Which\nP\none of the following statements is correct?",
+      "questionType": "MCQ",
+      "options": [
+        "Two points on the Earth’s surface that have the same ellipsoidal height will be on the\nsame equipotential surface",
+        "The geoid undulation is the separation of the equipotential surface at the ground\nsurface with respect to the ellipsoid",
+        "The points on an equipotential surface will not have the same orthometric height",
+        "The orthometric height of the instantaneous sea level is zero"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Two points on the Earth’s surface that have the same ellipsoidal height will be on the\nsame equipotential surface",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The geoid undulation is the separation of the equipotential surface at the ground\nsurface with respect to the ellipsoid",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The points on an equipotential surface will not have the same orthometric height",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The orthometric height of the instantaneous sea level is zero",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q56",
+      "questionNumber": 56,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In the figure below, I and I are the two instrument stations. The instrument stations\n1 2\nand the object (P) lie in the same vertical plane. Assume all instruments and staff are\nlevelled.\nL = horizontal distance between the object and the station I\n2\nb = horizontal distance between the instrument stations\nS = staff reading at the Benchmark (BM) for horizontal line of sight\nH = reading on the staff at P\nr = height of the point sighted by instruments at the staff kept at P from the line of\nsight of the instruments\nand = vertical angles to the reading on staff at P from I and I ,respectively\n1 2 1 2\nWhich one of the following relationships is correct for L?",
+      "questionType": "MCQ",
+      "options": [
+        "\nb tan\n1\nL = ( )\n \ntan − tan\n1 2",
+        "\nb tan\n2\nL = ( )\n \ntan − tan\n2 1",
+        "\nb tan\n1\nL = ( )\n \ntan − tan\n2 1",
+        "\nb tan\n2\nL = ( )\n \n(tan − tan\n1 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "\nb tan\n1\nL = ( )\n \ntan − tan\n1 2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "\nb tan\n2\nL = ( )\n \ntan − tan\n2 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "\nb tan\n1\nL = ( )\n \ntan − tan\n2 1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "\nb tan\n2\nL = ( )\n \n(tan − tan\n1 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q57",
+      "questionNumber": 57,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In a closed traversed with five sides, the closing error found from the fore bearing\nand back bearing of the last line is +0.5. The correction to the fourth line will be",
+      "questionType": "MCQ",
+      "options": [
+        "–012",
+        "018",
+        "–024",
+        "030"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "–012",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "018",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "–024",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "030",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q58",
+      "questionNumber": 58,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Consider a pair of overlapping vertical aerial photographs taken from a flying height\nof 665 m above a point A on the ground, with a camera having a focal length of\n152.4 mm. The height of the point A above the mean sea level is 535 m. The parallax\nbar reading of the point A as measured from the photographs is 10.96 mm. Assuming\nthe air base to be 400 m, the parallax bar constant is ___________ mm.",
+      "questionType": "MCQ",
+      "options": [
+        "80.71",
+        "457.96",
+        "39.84",
+        "24.18"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "80.71",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "457.96",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "39.84",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "24.18",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q59",
+      "questionNumber": 59,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "The statements below show the relationship of Whole Circle Bearing (WCB) with\nthe Quadrantal Bearing (QB) for quadrant designations North-East (N-E), North-\nWest (N-W), South-East (S-E) and South-West (S-W). Which of the following\nstatements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "For the quadrant S-W, QB = WCB −180",
+        "For the quadrant S-W, WCB = 180 − QB",
+        "For the quadrant N-W, WCB = 180 − QB",
+        "For the quadrant N-W, QB = − WCB 360"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "For the quadrant S-W, QB = WCB −180",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "For the quadrant S-W, WCB = 180 − QB",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "For the quadrant N-W, WCB = 180 − QB",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "For the quadrant N-W, QB = − WCB 360",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q60",
+      "questionNumber": 60,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Consider an infinitely sized square grid pattern (as shown in the figure below)\noverlaid on a flat ground at an elevation of 120 m above mean sea level. An image is\ntaken by a camera from flying height of 450 m above mean sea level. Assume that\nthe flying height remains constant throughout the operation of the flight. The flying\ndirection is along the line FL, as shown in the figure below. The camera is looking in\nthe off-nadir in the flight direction resulting in a low oblique photograph. Which of\nthe following statements for the resulting low oblique photograph is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Scale of the photograph is not uniform along the flight direction",
+        "Parallel lines on the ground do not always appear parallel in the resulting photograph",
+        "Horizon is visible in the photograph",
+        "Cells A, B and C appear as squares in the resulting aerial photograph"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Scale of the photograph is not uniform along the flight direction",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Parallel lines on the ground do not always appear parallel in the resulting photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Horizon is visible in the photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Cells A, B and C appear as squares in the resulting aerial photograph",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q60_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q60_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q61",
+      "questionNumber": 61,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "A point is specified along the Greenwich Meridian at 60 N latitude on an ellipsoid.\nThe parameters of the ellipsoid are semi-major axis a=6378137 m and flattening\n1 4a 2b\nfactor f= . The volume of the ellipsoid is given by , where b is the\n298.224 3\nsemi-minor axis. The latitude of the point on the sphere whose volume is the same as\nthe volume of the ellipsoid of reference is _________ N (rounded off to 2 decimal\nplaces).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "59.78 to 59.88",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 59.78,
+        "max": 59.88
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 59.78 to 59.88.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q62",
+      "questionNumber": 62,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In a map based on the UTM projection, the grid distance is in error with respect to\nthe geodetic distance by about one in four thousand. If the map distance is 3 cm and\nthe map scale is 1:25,000, then the geodetic distance is_________ m (rounded off to\n2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "749.79 to 750.20",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 749.79,
+        "max": 750.2
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 749.79 to 750.20.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q63",
+      "questionNumber": 63,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "A level with the height of the instrument being 2.550 m has been placed at a station\nhaving a Reduced Level (RL) of 130.565 m. The instrument reads 3.665 m on a\nlevelling staff held inverted at the bottom of a bridge deck. The RL of the bottom of\nthe bridge deck is______m (rounded off to 3 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "136.770 to 136.790",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 136.77,
+        "max": 136.79
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 136.770 to 136.790.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q64",
+      "questionNumber": 64,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In levelling between two points P and Q on opposite banks of a river, the level was\nset up near P, and the staff reading on P and Q were 2.165 m and 3.810 m,\nrespectively. The level was then moved and set up near Q and the respective staff\nreadings on P and Q were 0.910 m and 2.355 m. The true difference of level between\nP and Q is______ m (rounded off to 3 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.540 to 1.550",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.54,
+        "max": 1.55
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.540 to 1.550.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q65",
+      "questionNumber": 65,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "A 23 cm square format camera with a focal length of 152.4 mm is used for taking\nvertical aerial photographs with 60% end-lap. These photographs are viewed under a\nstereoscope with a base-height ratio of 0.15. The vertical exaggeration while\nstereoviewing these photographs is __________ (Answer in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "4 to 4",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 4 to 4.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q66",
+      "questionNumber": 66,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which one of the following image processing methods employs standard deviation?",
+      "questionType": "MCQ",
+      "options": [
+        "Band ratio",
+        "Parallelepiped classification",
+        "Correction of skew distortion in raw satellite image",
+        "Nearest neighbor classification"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Band ratio",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Parallelepiped classification",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Correction of skew distortion in raw satellite image",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Nearest neighbor classification",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q67",
+      "questionNumber": 67,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which one of the following is NOT used to assess the quality of remote sensing\nimage?",
+      "questionType": "MCQ",
+      "options": [
+        "Univariate statistics of image",
+        "Histogram",
+        "Multivariate statistics of image",
+        "Swath of the image"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Univariate statistics of image",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Histogram",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Multivariate statistics of image",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Swath of the image",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q68",
+      "questionNumber": 68,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which one of the following techniques is NOT used to atmospherically correct the\nsatellite image?",
+      "questionType": "MCQ",
+      "options": [
+        "Image normalization using histogram adjustment",
+        "Radiative transfer model",
+        "Image to image registration",
+        "Image normalization using regression"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Image normalization using histogram adjustment",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Radiative transfer model",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Image to image registration",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Image normalization using regression",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q69",
+      "questionNumber": 69,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "A remote sensing instrument measures only in Green, Red and Near-Infrared\nfrequency bands. The remote sensing index/indices that CANNOT be derived using\ndata of this instrument is/are______.",
+      "questionType": "MSQ",
+      "options": [
+        "Normalized Difference Vegetation Index",
+        "Atmospherically Resistant Vegetation Index",
+        "Soil Adjusted Vegetation Index",
+        "Enhanced Vegetation Index"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Normalized Difference Vegetation Index",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Atmospherically Resistant Vegetation Index",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Soil Adjusted Vegetation Index",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Enhanced Vegetation Index",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q70",
+      "questionNumber": 70,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Principal Component Analysis is performed on a 4-band IRS satellite image. The\neigen values (𝐸 = [𝜆 , 𝜆 , 𝜆 , 𝜆 ]) computed from the covariance matrix are\n1,1 2,2 3,3 4,4\n887.60, 75.20, 37.60 and 6.73, respectively. The percentage of total variance\nexplained by the third principal component (𝜆 ) is ________ (rounded off to 2\n3,3\ndecimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "3.71 to 3.75",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 3.71,
+        "max": 3.75
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 3.71 to 3.75.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q71",
+      "questionNumber": 71,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Piecewise linear contrast stretch is performed on an 8-bit image. The output (𝐵𝑉 )\n𝑜𝑢𝑡\nwould be zero for input value 𝐵𝑉 ≤ 80. The output (𝐵𝑉 ) would be 255 for\n𝑖𝑛 𝑜𝑢𝑡\n𝐵𝑉 > 120. For the remaining input values, 𝐵𝑉 = (2 × 𝐵𝑉 ) −20.\n𝑖𝑛 𝑜𝑢𝑡 𝑖𝑛\nIf 𝐵𝑉 = 120, then 𝐵𝑉 is _____ (Answer in integer).\n𝑖𝑛 𝑜𝑢𝑡",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "220 to 220",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 220.0,
+        "max": 220.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 220 to 220.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q72",
+      "questionNumber": 72,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "A CCD array element in a remote sensing sensor measures incoming radiation and\nits output voltage varies linearly between 0 V to 5 V. This voltage is converted to\nan 8-bit digital image using an analogue to digital convertor (ADC). The ADC has\na linear response without bias or noise. If the output image pixel has a digital\nnumber of 100, the input voltage to the ADC would be _____ V (rounded off to 2\ndecimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.95 to 1.97",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.95,
+        "max": 1.97
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.95 to 1.97.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q73",
+      "questionNumber": 73,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "In supervised digital image classification, the number of combinations to be\nevaluated to select three best bands out of five bands is___________ (Answer in\ninteger).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "10 to 10",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 10.0,
+        "max": 10.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 10 to 10.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q74",
+      "questionNumber": 74,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The figure below shows a one-dimensional function, 𝑓, and a filter 𝑤. Consider 𝑓\nis padded with zeros on both sides. Which one among the following will be the final\nconvolution output of 𝑓 with 𝑤 after the padding zeros are removed from the\noutput?",
+      "questionType": "MCQ",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2025/ge/q74_opt_a.png",
+        "/exam-assets/gate/2025/ge/q74_opt_b.png",
+        "/exam-assets/gate/2025/ge/q74_opt_c.png",
+        "/exam-assets/gate/2025/ge/q74_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/ge/q74_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/ge/q74_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/ge/q74_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/ge/q74_opt_d.png"
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q74_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q74_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q75",
+      "questionNumber": 75,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Figure below shows the scatterplot of training pixels of water (w), sand (s), forest\n(f) and commercial (c) in bands 1 and 2. Pixel ‘A’ having digital number 4 and 6\nin band 1 and band 2, respectively, is to be classified using k-nearest neighbor\nclassifier having the value of k equal to 5. The assigned class for the pixel ‘A’ is\n_____.",
+      "questionType": "MCQ",
+      "options": [
+        "forest",
+        "sand",
+        "water",
+        "commercial"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "forest",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "sand",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "water",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "commercial",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q76",
+      "questionNumber": 76,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "A remote sensing image is acquired from an IRS series satellite. Initially a two-\n−𝐷2(𝑢,𝑣)\ndimensional filter with transfer function 𝐻(𝑢, 𝑣) = exp ( ) is applied to\n2𝐷2\n0\nreduce scan line effects. Here 𝐷(𝑢, 𝑣) is the distance from center of the frequency\nrectangle, and 𝐷 is the cutoff frequency. Which one of the following will be the\n0\ntransfer function for the corresponding filter to detect the edges in the image?",
+      "questionType": "MCQ",
+      "options": [
+        "−𝐷2(𝑢, 𝑣)\n1 −exp ( )\n2𝐷2\n0",
+        "−𝐷2(𝑢, 𝑣)\nexp ( )\n2𝐷2\n0",
+        "−𝐷2(𝑢, 𝑣)\n1 + exp ( )\n2𝐷2\n0",
+        "𝐷2(𝑢, 𝑣)\n1 −exp ( )\n2𝐷2\n0"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−𝐷2(𝑢, 𝑣)\n1 −exp ( )\n2𝐷2\n0",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "−𝐷2(𝑢, 𝑣)\nexp ( )\n2𝐷2\n0",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "−𝐷2(𝑢, 𝑣)\n1 + exp ( )\n2𝐷2\n0",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐷2(𝑢, 𝑣)\n1 −exp ( )\n2𝐷2\n0",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q77",
+      "questionNumber": 77,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Consider an imaging system with 128 128 pixels that produces a noiseless,\ndistortion-free digital image. It is used to digitize checkerboard patterns where all\nsquares of the pattern are in the field of view. Using this imaging system, if a\ncheckerboard pattern with 128 128 squares is digitized, each square will be\n1 1 pixel in size. What is the size of the checkerboard square in the generated\ndigital image for which spatial aliasing is observed (measured in pixels of the\nimaging system)?",
+      "questionType": "MCQ",
+      "options": [
+        "1",
+        "2",
+        "0.9",
+        "2.5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "0.9",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2.5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q78",
+      "questionNumber": 78,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "For the correlation matrix of a 4-band satellite image as shown below, which of the\nfollowing statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "Band 3 provides some unique information not found in other bands",
+        "There is high redundancy in band 2 and 4",
+        "The standard deviation of all the bands is equal",
+        "Image cannot be classified using bands 1 and 3 only"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Band 3 provides some unique information not found in other bands",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "There is high redundancy in band 2 and 4",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The standard deviation of all the bands is equal",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Image cannot be classified using bands 1 and 3 only",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q78_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q78_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q79",
+      "questionNumber": 79,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The histogram of a red band in a 3-bit satellite image is shown below. Which of\nthe following statements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "There are more darker pixels in the image",
+        "There are more brighter pixels in the image",
+        "The mean digital number of the image is 1250",
+        "It may be predicted that approximately 40% of area in the image is covered by\nmaterial with low spectral albedo in red band"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "There are more darker pixels in the image",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "There are more brighter pixels in the image",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The mean digital number of the image is 1250",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It may be predicted that approximately 40% of area in the image is covered by\nmaterial with low spectral albedo in red band",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;D.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q79_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q79_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q80",
+      "questionNumber": 80,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following statements is/are correct regarding across-track scanning\nsensor of an airborne optical imaging system?",
+      "questionType": "MSQ",
+      "options": [
+        "The relief displacement will be along the direction of the flight line",
+        "There is no relief displacement along the direction of the flight line",
+        "The greater is the distance of the ground object from nadir, the lesser is the image\nscale compression",
+        "Linear features have sigmoidal distortion"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The relief displacement will be along the direction of the flight line",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "There is no relief displacement along the direction of the flight line",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The greater is the distance of the ground object from nadir, the lesser is the image\nscale compression",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Linear features have sigmoidal distortion",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q81",
+      "questionNumber": 81,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "In case of normalized difference vegetation index (NDVI), which of the following\nstatements is/are correct?",
+      "questionType": "MSQ",
+      "options": [
+        "It is functionally equivalent to a simple ratio of red to near infra-red reflectance",
+        "It reduces many forms of multiplicative noise",
+        "It reduces additive noise",
+        "It is sensitive to canopy background variations"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It is functionally equivalent to a simple ratio of red to near infra-red reflectance",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It reduces many forms of multiplicative noise",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It reduces additive noise",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It is sensitive to canopy background variations",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A;B;D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B;D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q82",
+      "questionNumber": 82,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The hue, intensity and saturation values for a pixel are 𝐻 = 0.5 rad, 𝑆 = 0.5 and\n𝐼 = 0.3, respectively. If the pixel is converted to RGB color model, then the value\nof the green pixel would be _____ (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.28 to 0.32",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.28,
+        "max": 0.32
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 0.28 to 0.32.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q83",
+      "questionNumber": 83,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The brightness values of four pixels in the input image are shown in the table below.\nThe image is rectified using nearest neighbor intensity interpolation, and the pixel\nat location (5, 4) in the output image is to be filled with the value from coordinate\n(5.3, 3.7) in the input image. The brightness value of the pixel at location (5, 4) in\nthe rectified output image is ______ (Answer in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "11 to 11",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 11.0,
+        "max": 11.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 11 to 11.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q83_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q83_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2025-ge-q84",
+      "questionNumber": 84,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The error matrix resulting from randomly selected test pixels for a classified image\nis given below. The Producer’s accuracy of class 1 is ___________% (rounded off\nto 1 decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "90.0 to 91.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 90.0,
+        "max": 91.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IIT Roorkee is 90.0 to 91.0.",
+      "diagramUrl": "/exam-assets/gate/2025/ge/q84_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/ge/q84_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2025,
+      "date": "2025-02-01",
+      "shift": "General",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    }
+  ]
+}

@@ -1,0 +1,4768 @@
+{
+  "id": "gate-2024-ge",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2024,
+  "title": "GATE 2024 — Geomatics Engineering (GE)",
+  "subTitle": "Official IISc Bengaluru Question Paper (Single Session)",
+  "date": "2024-02-03",
+  "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "GE",
+  "discipline": "Geomatics Engineering",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 130.0,
+  "totalQuestions": 84,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "ge_a",
+      "name": "Part A: Common",
+      "questionCount": 36,
+      "startIndex": 10,
+      "endIndex": 45,
+      "maxMarks": 55.0
+    },
+    {
+      "id": "ge_b_s1",
+      "name": "Part B: Section I (Surveying and Mapping)",
+      "questionCount": 19,
+      "startIndex": 46,
+      "endIndex": 64,
+      "maxMarks": 30.0
+    },
+    {
+      "id": "ge_b_s2",
+      "name": "Part B: Section II (Image Processing and Analysis)",
+      "questionCount": 19,
+      "startIndex": 65,
+      "endIndex": 83,
+      "maxMarks": 30.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2024-ge-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If ‘→’ denotes increasing order of intensity, then the meaning of the words\n[smile → giggle → laugh] is analogous to [disapprove → ________ → chide].\nWhich one of the given options is appropriate to fill the blank?",
+      "questionType": "MCQ",
+      "options": [
+        "reprove",
+        "praise",
+        "reprise",
+        "grieve"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "reprove",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "praise",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "reprise",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "grieve",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Find the odd one out in the set: {19, 37, 21, 17, 23, 29, 31, 11}",
+      "questionType": "MCQ",
+      "options": [
+        "21",
+        "29",
+        "37",
+        "23"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "21",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "29",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "37",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "23",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the following series, identify the number that needs to be changed to form the\nFibonacci series.\n1, 1, 2, 3, 6, 8, 13, 21,…",
+      "questionType": "MCQ",
+      "options": [
+        "8",
+        "21",
+        "6",
+        "13"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "8",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "21",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "6",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "13",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The real variables 𝑥, 𝑦, 𝑧, and the real constants 𝑝, 𝑞, 𝑟 satisfy\n𝑥 𝑦 𝑧\n= =\n𝑝𝑞 −𝑟2 𝑞𝑟−𝑝2 𝑟𝑝−𝑞2\nGiven that the denominators are non-zero, the value of 𝑝𝑥 + 𝑞𝑦+ 𝑟𝑧 is",
+      "questionType": "MCQ",
+      "options": [
+        "0",
+        "1",
+        "𝑝𝑞𝑟",
+        "𝑝2 + 𝑞2 + 𝑟2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑝𝑞𝑟",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑝2 + 𝑞2 + 𝑟2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Take two long dice (rectangular parallelepiped), each having four rectangular faces\nlabelled as 2, 3, 5, and 7. If thrown, the long dice cannot land on the square faces\nand has 1/4 probability of landing on any of the four rectangular faces. The label on\nthe top face of the dice is the score of the throw.\nIf thrown together, what is the probability of getting the sum of the two long dice\nscores greater than 11?",
+      "questionType": "MCQ",
+      "options": [
+        "3/8",
+        "1/8",
+        "1/16",
+        "3/16"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "3/8",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1/8",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1/16",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "3/16",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the given text, the blanks are numbered (i)−(iv). Select the best match for all the\nblanks.\n(i) (ii)\nProf. P merely a man who narrated funny stories. in his blackest\nmoments he was capable of self-deprecating humor.\n(iii) (iv)\nProf. Q a man who hardly narrated funny stories. in his blackest\nmoments was he able to find humor.",
+      "questionType": "MCQ",
+      "options": [
+        "(i) was (ii) Only (iii) wasn’t (iv) Even",
+        "(i) wasn’t (ii) Even (iii) was (iv) Only",
+        "(i) was (ii) Even (iii) wasn’t (iv) Only",
+        "(i) wasn’t (ii) Only (iii) was (iv) Even"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i) was (ii) Only (iii) wasn’t (iv) Even",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(i) wasn’t (ii) Even (iii) was (iv) Only",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(i) was (ii) Even (iii) wasn’t (iv) Only",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(i) wasn’t (ii) Only (iii) was (iv) Even",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "How many combinations of non-null sets A, B, C are possible from the subsets of\n{2, 3, 5} satisfying the conditions: (i) A is a subset of B, and (ii) B is a subset of C?",
+      "questionType": "MCQ",
+      "options": [
+        "28",
+        "27",
+        "18",
+        "19"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "28",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "27",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "18",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "19",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2024 committee.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The bar chart gives the batting averages of VK and RS for 11 calendar years from\n2012 to 2022. Considering that 2015 and 2019 are world cup years, which one of\nthe following options is true?\n140\n120 Average\nVK RS\n100\n80\n60 Batting\n40\n20\n0\n2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022\nCalendar Year",
+      "questionType": "MCQ",
+      "options": [
+        "RS has a higher yearly batting average than that of VK in every world cup year.",
+        "VK has a higher yearly batting average than that of RS in every world cup year.",
+        "VK’s yearly batting average is consistently higher than that of RS between the two\nworld cup years.",
+        "RS’s yearly batting average is consistently higher than that of VK in the last three\nyears."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "RS has a higher yearly batting average than that of VK in every world cup year.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "VK has a higher yearly batting average than that of RS in every world cup year.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "VK’s yearly batting average is consistently higher than that of RS between the two\nworld cup years.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "RS’s yearly batting average is consistently higher than that of VK in the last three\nyears.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q8_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A planar rectangular paper has two V-shaped pieces attached as shown below.\nThis piece of paper is folded to make the following closed three-dimensional object.\nThe number of folds required to form the above object is",
+      "questionType": "MCQ",
+      "options": [
+        "9",
+        "7",
+        "11",
+        "8"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "9",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "7",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "11",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "8",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q9_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q9_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "Four equilateral triangles are used to form a regular closed three-dimensional object\nby joining along the edges. The angle between any two faces is",
+      "questionType": "MCQ",
+      "options": [
+        "30°",
+        "60°",
+        "45°",
+        "90°"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "30°",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "60°",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "45°",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "90°",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2024 committee.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q11",
+      "questionNumber": 11,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following options best describes the “uncertainty” in a\nmeasurement?",
+      "questionType": "MCQ",
+      "options": [
+        "It includes both random and gross errors",
+        "It includes only systematic errors",
+        "It includes both systematic and gross errors",
+        "It includes both random and systematic errors"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It includes both random and gross errors",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It includes only systematic errors",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It includes both systematic and gross errors",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It includes both random and systematic errors",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q12",
+      "questionNumber": 12,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "A distance was measured as 200 m ± 0.1 m. The relative precision of this\nmeasurement is",
+      "questionType": "MCQ",
+      "options": [
+        "1:20",
+        "1:200",
+        "1:2000",
+        "1:20000"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1:20",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1:200",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1:2000",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1:20000",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q13",
+      "questionNumber": 13,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following options describes the CORRECT relationship for a\nGaussian distributed random error?",
+      "questionType": "MCQ",
+      "options": [
+        "Probable error < Average error < Standard error < 90% error",
+        "Standard error < Average error < Probable error < 90% error",
+        "Average error < Probable error < 90% error < Standard error",
+        "Probable error < 90% error < Average error < Standard error"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Probable error < Average error < Standard error < 90% error",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Standard error < Average error < Probable error < 90% error",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Average error < Probable error < 90% error < Standard error",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Probable error < 90% error < Average error < Standard error",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q14",
+      "questionNumber": 14,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The Chi-square distribution is used for comparing the",
+      "questionType": "MCQ",
+      "options": [
+        "population variance with the sample variance for a given degree of freedom",
+        "population mean with the sample mean for a given degree of freedom",
+        "population median with the sample median for a given degree of freedom",
+        "population mean and standard deviation with the sample mean and standard\ndeviation for a given degree of freedom"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "population variance with the sample variance for a given degree of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "population mean with the sample mean for a given degree of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "population median with the sample median for a given degree of freedom",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "population mean and standard deviation with the sample mean and standard\ndeviation for a given degree of freedom",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q15",
+      "questionNumber": 15,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Water bodies appear in dark tone in Near Infrared (NIR) image, because water\n________ most of the NIR radiations incident on it.",
+      "questionType": "MCQ",
+      "options": [
+        "absorbs",
+        "emits",
+        "reflects",
+        "scatters"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "absorbs",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "emits",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "reflects",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "scatters",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q16",
+      "questionNumber": 16,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The approximate altitude (above earth surface) of polar sun-synchronous orbits of\nISRO’s remote sensing satellites is",
+      "questionType": "MCQ",
+      "options": [
+        "< 90 km",
+        "90 km to 200 km",
+        "200 km to 400 km",
+        "> 400 km"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "< 90 km",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "90 km to 200 km",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "200 km to 400 km",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "> 400 km",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q17",
+      "questionNumber": 17,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Hyperspectral sensor consists of",
+      "questionType": "MCQ",
+      "options": [
+        "large number of wide and discrete bands",
+        "small number of wide and contiguous bands",
+        "large number of narrow and contiguous bands",
+        "small number of narrow and discrete bands"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "large number of wide and discrete bands",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "small number of wide and contiguous bands",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "large number of narrow and contiguous bands",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "small number of narrow and discrete bands",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q18",
+      "questionNumber": 18,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Part of the solar radiation incident on the water surface gets refracted as per",
+      "questionType": "MCQ",
+      "options": [
+        "Rayleigh’s law",
+        "Snell’s law",
+        "Moore’s law",
+        "Newton’s law"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Rayleigh’s law",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Snell’s law",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Moore’s law",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Newton’s law",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q19",
+      "questionNumber": 19,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following mathematical principles is applied for finding a\ngeographic position on Earth’s surface using GPS?",
+      "questionType": "MCQ",
+      "options": [
+        "Triangulation",
+        "Analytical traversing",
+        "Trilateration",
+        "Analytical leveling"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Triangulation",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Analytical traversing",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Trilateration",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Analytical leveling",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q20",
+      "questionNumber": 20,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following is NOT a segment of GPS to determine position and time?",
+      "questionType": "MCQ",
+      "options": [
+        "Space segment",
+        "Control segment",
+        "Launch segment",
+        "User segment"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Space segment",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Control segment",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Launch segment",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "User segment",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q21",
+      "questionNumber": 21,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Dilution of Precision (DOP) in GPS based survey is primarily used to assess the\nquality of",
+      "questionType": "MCQ",
+      "options": [
+        "satellite’s altitude",
+        "satellite’s geometry",
+        "satellite’s atomic clocks",
+        "satellite’s velocity"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "satellite’s altitude",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "satellite’s geometry",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "satellite’s atomic clocks",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "satellite’s velocity",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q22",
+      "questionNumber": 22,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "How many NAVSTAR GPS satellites in standard constellation are operational\nand provide uninterrupted service?",
+      "questionType": "MCQ",
+      "options": [
+        "4",
+        "12",
+        "24",
+        "36"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "12",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "24",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "36",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q23",
+      "questionNumber": 23,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Identify the type of digitizing error in the following figure.",
+      "questionType": "MCQ",
+      "options": [
+        "Dangling arc",
+        "Overshoot",
+        "Undershoot",
+        "Missing label"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Dangling arc",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Overshoot",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Undershoot",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Missing label",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q23_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q23_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q24",
+      "questionNumber": 24,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following is NOT a derivative of digital elevation model (DEM)?",
+      "questionType": "MCQ",
+      "options": [
+        "Slope",
+        "Aspect",
+        "Contour",
+        "Emissivity"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Slope",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Aspect",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Contour",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Emissivity",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q25",
+      "questionNumber": 25,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following is a core vector GIS operation?",
+      "questionType": "MCQ",
+      "options": [
+        "Overlaying",
+        "Contrast stretching",
+        "Histogram equalization",
+        "Band ratioing"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Overlaying",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Contrast stretching",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Histogram equalization",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Band ratioing",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q26",
+      "questionNumber": 26,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The wavelength at which maximum energy is radiated or emitted from the forest\nfire at temperature of 700 °C is ______ µm (rounded off to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2.9 to 3.1",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.9,
+        "max": 3.1
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2.9 to 3.1.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q27",
+      "questionNumber": 27,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "The standard error of a unit weight for a set of angle observations is 10″.\nThe minimum number of observations required to reduce the standard error of the\nmean for this set of observations to 2″ is ______ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "25 to 25",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 25.0,
+        "max": 25.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 25 to 25.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q28",
+      "questionNumber": 28,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "An angle is observed independently twice, and the values are as follows:\n60°30′10′′ ± 10′′\n60°30′20′′ ± 20′′\nThe most probable value (MPV) of the angle is",
+      "questionType": "MCQ",
+      "options": [
+        "60°30′12′′",
+        "60°30′15′′",
+        "60°30′18′′",
+        "60°30′14′′"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "60°30′12′′",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "60°30′15′′",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "60°30′18′′",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "60°30′14′′",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q29",
+      "questionNumber": 29,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In the figure, d , d , d are three independently measured distances for estimating\n1 2 3\nthe unknown distances x and y. The correlation coefficient between the unknown\nestimates approximately equals to\nd =100 m  1 cm\n1\nd =150 m  2 cm\n2\nd =175 m  3 cm\n3",
+      "questionType": "MCQ",
+      "options": [
+        "+ 0.325",
+        "− 0.496",
+        "+ 0.755",
+        "− 0.592"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "+ 0.325",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "− 0.496",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "+ 0.755",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "− 0.592",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q29_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q29_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q30",
+      "questionNumber": 30,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Independent angles AOB, BOC and AOC were observed as shown in figure. The\nstandard error of all observations is same. The adjusted values of these angles\nusing the least squares adjustment are\nAOB = 300020\nBOC = 300005\nAOC = 600010",
+      "questionType": "MCQ",
+      "options": [
+        "AOB = 300015, BOC = 300000, AOC = 600015",
+        "AOB = 300010, BOC = 300005, AOC = 600015",
+        "AOB = 300005, BOC = 300010, AOC = 600015",
+        "AOB = 300010, BOC = 300010, AOC = 600020"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "AOB = 300015, BOC = 300000, AOC = 600015",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "AOB = 300010, BOC = 300005, AOC = 600015",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "AOB = 300005, BOC = 300010, AOC = 600015",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "AOB = 300010, BOC = 300010, AOC = 600020",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q30_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q30_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q31",
+      "questionNumber": 31,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "To reduce the slope distance (S) to an equivalent horizontal distance (H) as shown\nin the figure given below, the following independent observations were taken.\n𝑆 = 29.95 m ± 0.01 m; 𝜃 = 430′ ± 10'\nThe required precision of computed horizontal distance is ± 0.005 m. Assume a\n“balanced accuracy” where the contribution to precision of the horizontal distance\ncomes equally from the slope distance and angle measurements. The minimum\nnumber of angle observations to achieve the desired precision is\n(Given 1 radian = 206265 seconds)",
+      "questionType": "MCQ",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q31_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q31_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q32",
+      "questionNumber": 32,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Find the best match between remote sensing sensors (Column A) with their\ncharacteristics (Column B)\nColumn A Column B\n(P) IRS LISS-III (1) 36 bands\n(Q) Landsat TM (2) along track scanner\n(R) MODIS (3) across track scanner\n(S) Hyperion (4) 18 bands\n(5) 242 bands",
+      "questionType": "MCQ",
+      "options": [
+        "P−1, Q−5, R−2, S−3",
+        "P−3, Q−2 , R−4, S−1",
+        "P−2, Q−3, R−1, S−5",
+        "P−1, Q−3, R−4, S−5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P−1, Q−5, R−2, S−3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P−3, Q−2 , R−4, S−1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P−2, Q−3, R−1, S−5",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P−1, Q−3, R−4, S−5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q33",
+      "questionNumber": 33,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Find the best match between Column A and Column B\nColumn A Column B\n(P) Radiant flux (1) Dimensionless\n(Q) Radiant energy (2) Watts\n(R) Radiant Exitance (3) Joules\n(S) Reflectance (4) Watts m−2\n(5) Watts m−2 s−1",
+      "questionType": "MCQ",
+      "options": [
+        "P−5, Q−4, R−3, S−1",
+        "P−5, Q−4, R−2, S−3",
+        "P−3, Q−1, R−2, S−4",
+        "P−2, Q−3, R−4, S−1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "P−5, Q−4, R−3, S−1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "P−5, Q−4, R−2, S−3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "P−3, Q−1, R−2, S−4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "P−2, Q−3, R−4, S−1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q34",
+      "questionNumber": 34,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following factors is/are responsible for ionospheric delay in GNSS\nobservations?",
+      "questionType": "MSQ",
+      "options": [
+        "Total electron count in the ionosphere",
+        "Carrier signal frequency",
+        "Size of GPS receivers",
+        "Size and accuracy of atomic clocks"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Total electron count in the ionosphere",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Carrier signal frequency",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Size of GPS receivers",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Size and accuracy of atomic clocks",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q35",
+      "questionNumber": 35,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are CORRECT in the context of GPS data\ncollection methods?",
+      "questionType": "MSQ",
+      "options": [
+        "CORS (Continuously Operating Reference Station) can be used as a reference\n(base) GPS receiver",
+        "Reference (base) receiver should record the observations for longer period as\ncompared to remote (rover) GPS receiver for applying corrections",
+        "Remote (rover) GPS receiver must always be placed on a known location for\napplying the corrections of reference (base) GPS receiver",
+        "Reference (base) and remote (rover) GPS receivers must be placed on top of each\nother for applying corrections"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "CORS (Continuously Operating Reference Station) can be used as a reference\n(base) GPS receiver",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Reference (base) receiver should record the observations for longer period as\ncompared to remote (rover) GPS receiver for applying corrections",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Remote (rover) GPS receiver must always be placed on a known location for\napplying the corrections of reference (base) GPS receiver",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Reference (base) and remote (rover) GPS receivers must be placed on top of each\nother for applying corrections",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q36",
+      "questionNumber": 36,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following errors is/are corrected in Differential GPS (DGPS)?",
+      "questionType": "MSQ",
+      "options": [
+        "Tropospheric delays",
+        "Orbital errors",
+        "Ionospheric delays",
+        "Ambiguity in atomic clocks"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Tropospheric delays",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Orbital errors",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Ionospheric delays",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Ambiguity in atomic clocks",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B; C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B; C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q37",
+      "questionNumber": 37,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "Network analysis can be done with vector data.",
+        "Linear features are clearly identified as discrete features in vector database.",
+        "Satellite images are in vector format.",
+        "Digital elevation model is in raster format."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Network analysis can be done with vector data.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Linear features are clearly identified as discrete features in vector database.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Satellite images are in vector format.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Digital elevation model is in raster format.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q38",
+      "questionNumber": 38,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "In GIS, buffer is a zone with a specified width surrounding a spatial feature. Which\nof the following statements regarding buffer is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "For a point feature, buffer is an ellipse with minor and major axes as buffer\ndistances",
+        "For a line feature, buffer is a band with a specified distance created around the line\nconforming to the line’s curve",
+        "Buffer zones are polylines",
+        "For a polygon feature, buffer is a belt of a specified distance from the edge of the\npolygon and conforming to its shape"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "For a point feature, buffer is an ellipse with minor and major axes as buffer\ndistances",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "For a line feature, buffer is a band with a specified distance created around the line\nconforming to the line’s curve",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Buffer zones are polylines",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "For a polygon feature, buffer is a belt of a specified distance from the edge of the\npolygon and conforming to its shape",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q39",
+      "questionNumber": 39,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements about the Triangulated Irregular Network\n(TIN) model is/are INCORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "TIN contains irregularly spaced sampled points.",
+        "Triangulation is performed to form network of triangles.",
+        "In the TIN model, the edges represent features such as peaks and depression.",
+        "In the TIN model, the vertices represent features such as peaks and depression."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "TIN contains irregularly spaced sampled points.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Triangulation is performed to form network of triangles.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "In the TIN model, the edges represent features such as peaks and depression.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "In the TIN model, the vertices represent features such as peaks and depression.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q40",
+      "questionNumber": 40,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are INCORRECT in the context of GIS?",
+      "questionType": "MSQ",
+      "options": [
+        "CLIP erases a part of one of the input layers.",
+        "SPLIT overlays polygons and keeps all areas in both layers.",
+        "INTERSECT overlays polygons and keeps only the common portions of both\nlayers.",
+        "UNION overlays polygons and keeps all areas in both layers."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "CLIP erases a part of one of the input layers.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "SPLIT overlays polygons and keeps all areas in both layers.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "INTERSECT overlays polygons and keeps only the common portions of both\nlayers.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "UNION overlays polygons and keeps all areas in both layers.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q41",
+      "questionNumber": 41,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following is/are method(s) used for compact storage of raster GIS\ndata?",
+      "questionType": "MSQ",
+      "options": [
+        "Chain code",
+        "Run-length code",
+        "Quadtree",
+        "Decision-tree"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Chain code",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Run-length code",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Quadtree",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Decision-tree",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B; C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B; C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q42",
+      "questionNumber": 42,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on successive days."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q43",
+      "questionNumber": 43,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following statements is/are CORRECT for satellite image\ninterpretation?",
+      "questionType": "MSQ",
+      "options": [
+        "SWIR band is sensitive to moisture in soil and vegetation",
+        "Blue band is not useful to discriminate between water and snow",
+        "NIR band is useful to discriminate between land and water",
+        "Green band is useful to discriminate between cloud and snow"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "SWIR band is sensitive to moisture in soil and vegetation",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Blue band is not useful to discriminate between water and snow",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "NIR band is useful to discriminate between land and water",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Green band is useful to discriminate between cloud and snow",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q44",
+      "questionNumber": 44,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following CANNOT be used as visual interpretation key(s) for\nsatellite images?",
+      "questionType": "MSQ",
+      "options": [
+        "Texture",
+        "Projection",
+        "Pattern",
+        "Association"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Texture",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Projection",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Pattern",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Association",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q45",
+      "questionNumber": 45,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Which of the following parts of the electromagnetic spectrum is/are used in\nsatellite remote sensing for earth observation?",
+      "questionType": "MSQ",
+      "options": [
+        "Visible wavelengths",
+        "Thermal Infrared wavelengths",
+        "Radio wavelengths",
+        "Gamma wavelengths"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Visible wavelengths",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Thermal Infrared wavelengths",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Radio wavelengths",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Gamma wavelengths",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q46",
+      "questionNumber": 46,
+      "sectionId": "ge_a",
+      "sectionName": "Part A: Common",
+      "questionText": "Using the following data, the spatial resolution of a push-broom sensor\nis ______ m (in integer).\nData:\nOrbital altitude (above earth surface) = 1000 km\nNumber of spectral bands = 5\nNumber of detectors/CCDs (charged coupled devices) in a row = 4000\nGround swath = 20 km",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "5 to 5",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 5 to 5.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q47",
+      "questionNumber": 47,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "If the plotting accuracy of a map is 0.25 mm and the scale of the same map is\n1:100000, what will be the minimum ground distance that can be plotted on the\nmap?",
+      "questionType": "MCQ",
+      "options": [
+        "2.5 m",
+        "25 m",
+        "250 m",
+        "2500 m"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2.5 m",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "25 m",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "250 m",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2500 m",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q48",
+      "questionNumber": 48,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "𝐷\nThe Survey of India toposheet number 43 covers ground area of\n6",
+      "questionType": "MCQ",
+      "options": [
+        "1° by 1°",
+        "25′ by 25′",
+        "15′ by 15′",
+        "7.5′ by 7.5′"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1° by 1°",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "25′ by 25′",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "15′ by 15′",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "7.5′ by 7.5′",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q49",
+      "questionNumber": 49,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Universal Transverse Mercator (UTM) is a",
+      "questionType": "MCQ",
+      "options": [
+        "conical projection",
+        "azimuthal projection",
+        "polyconic projection",
+        "cylindrical projection"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "conical projection",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "azimuthal projection",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "polyconic projection",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "cylindrical projection",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q50",
+      "questionNumber": 50,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Change Point (CP) in levelling refers to a location where",
+      "questionType": "MCQ",
+      "options": [
+        "only backsight reading is taken",
+        "both backsight and foresight readings are taken",
+        "survey work ends",
+        "staff reading is taken on a benchmark"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "only backsight reading is taken",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "both backsight and foresight readings are taken",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "survey work ends",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "staff reading is taken on a benchmark",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q51",
+      "questionNumber": 51,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "At a fixed instrument location in levelling, if the backsight reading at a point P is\nmore than the foresight reading at a point Q, then",
+      "questionType": "MCQ",
+      "options": [
+        "point P has lower elevation than point Q",
+        "point P has higher elevation than point Q",
+        "the elevation difference between P and Q depends on height of the instrument",
+        "the elevation difference between P and Q depends on benchmark elevation"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "point P has lower elevation than point Q",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "point P has higher elevation than point Q",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "the elevation difference between P and Q depends on height of the instrument",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "the elevation difference between P and Q depends on benchmark elevation",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q52",
+      "questionNumber": 52,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "“Transit the telescope” of a theodolite involves",
+      "questionType": "MCQ",
+      "options": [
+        "rotating the theodolite about its vertical axis",
+        "rotating the telescope about its trunnion axis",
+        "rotating the telescope about its line of collimation",
+        "rotating the theodolite by 90° in horizontal plane"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "rotating the theodolite about its vertical axis",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "rotating the telescope about its trunnion axis",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "rotating the telescope about its line of collimation",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "rotating the theodolite by 90° in horizontal plane",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q53",
+      "questionNumber": 53,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Scale of a vertical aerial photograph of an undulating terrain is",
+      "questionType": "MCQ",
+      "options": [
+        "directly proportional to the height of terrain",
+        "inversely proportional to the focal length of camera lens",
+        "directly proportional to the flying height of aircraft",
+        "uniform throughout the photograph"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "directly proportional to the height of terrain",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "inversely proportional to the focal length of camera lens",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "directly proportional to the flying height of aircraft",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "uniform throughout the photograph",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q54",
+      "questionNumber": 54,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Isocentre of a tilted photograph is",
+      "questionType": "MCQ",
+      "options": [
+        "intersection of the optical axis of the aerial camera with the plane of the photograph",
+        "the point of aerial photograph where a plumb line dropped from exposure station\npierces the photograph",
+        "angle of tilt of the photograph",
+        "the point on the photograph where the bisector of the angle of tilt meets the\nphotograph"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "intersection of the optical axis of the aerial camera with the plane of the photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "the point of aerial photograph where a plumb line dropped from exposure station\npierces the photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "angle of tilt of the photograph",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "the point on the photograph where the bisector of the angle of tilt meets the\nphotograph",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q55",
+      "questionNumber": 55,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "The magnetic bearing of a line in the year 1990 was found to be N 40°30′ W and\nmagnetic declination was 3°30′ E. If the present magnetic declination is 2°10′ W,\nthe magnetic bearing now (in reduced bearing system) would be",
+      "questionType": "MCQ",
+      "options": [
+        "S 30°50′ W",
+        "N 30°50′ W",
+        "S 34°50′ W",
+        "N 34°50′ W"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "S 30°50′ W",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "N 30°50′ W",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "S 34°50′ W",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "N 34°50′ W",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q56",
+      "questionNumber": 56,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Map (A) represents all the roads, street lights, trees and buildings of a campus of\n5 km2. Another map (B) represents the forest and agricultural area of a district of\n10000 km2. Considering the physical size of both the maps (A) & (B) same, which\nof the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "Map (A) is at relatively large scale",
+        "Map (B) is at relatively large scale",
+        "Both maps are at same scale",
+        "Both maps are not at same scale"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Map (A) is at relatively large scale",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Map (B) is at relatively large scale",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Both maps are at same scale",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Both maps are not at same scale",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q57",
+      "questionNumber": 57,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Which of the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly\nareas",
+        "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain\nareas",
+        "In triangulation, the angles are measured with greater accuracy, while in\ntrilateration, sides are measured with greater accuracy",
+        "In trilateration, the angles are measured with greater accuracy, while in\ntriangulation, sides of triangles are measured with greater accuracy"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly\nareas",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain\nareas",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "In triangulation, the angles are measured with greater accuracy, while in\ntrilateration, sides are measured with greater accuracy",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "In trilateration, the angles are measured with greater accuracy, while in\ntriangulation, sides of triangles are measured with greater accuracy",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q58",
+      "questionNumber": 58,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Which of the following statements is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "Bowditch rule in traverse adjustment is particularly useful, where angular and linear\nmeasurements are equally precise",
+        "Transit rule in traverse adjustment is particularly useful, where angular\nmeasurements are more precise than linear measurements",
+        "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes\nor departures of the traverse",
+        "In Transit rule, the traverse adjustment is done using perimeter of the traverse"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Bowditch rule in traverse adjustment is particularly useful, where angular and linear\nmeasurements are equally precise",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Transit rule in traverse adjustment is particularly useful, where angular\nmeasurements are more precise than linear measurements",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes\nor departures of the traverse",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "In Transit rule, the traverse adjustment is done using perimeter of the traverse",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q59",
+      "questionNumber": 59,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "Consider a point A on the surface of Earth, its elevation with respect to EGM2008\n(geoid) is 95.5 m. The geoidal undulation at point A is 4.5 m. The orthometric height\nof point A is ______ m (rounded off to one decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "95 to 96",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 95.0,
+        "max": 96.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 95 to 96.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q60",
+      "questionNumber": 60,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "If the longitudinal overlap in aerial photographs is kept as 65%, the common overlap\n(superlap) between three successive photographs is ________ % (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "30 to 30",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 30.0,
+        "max": 30.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 30 to 30.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q61",
+      "questionNumber": 61,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "The Representative Fraction (RF) of the graphical scale given below is 1/X, where\nX is ______ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "10000 to 10000",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 10000.0,
+        "max": 10000.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 10000 to 10000.",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q61_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q61_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q62",
+      "questionNumber": 62,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "The combined correction for curvature of Earth and refraction in levelling for a\ndistance of 6 km would be ______ m (rounded off to two decimal places).\nAssume the radius of earth is 6370 km.",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2.40 to 2.50 OR -2.50 to -2.40",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.4,
+        "max": 2.5
+      },
+      "answerRanges": [
+        {
+          "min": 2.4,
+          "max": 2.5
+        },
+        {
+          "min": -2.5,
+          "max": -2.4
+        }
+      ],
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2.40 to 2.50 OR -2.50 to -2.40.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q63",
+      "questionNumber": 63,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "In tangential method of tacheometry, two vanes in a staff were fixed at a distance\nof 1.0 m with the bottom vane fixed at 1.0 m. The levelling staff was held vertical\nat a point P and the vertical angles of the vanes observed were 5°30′ and 3°15′,\nrespectively. The vertical distance between the instrument axis and the bottom vane\nwould be _____ m (rounded off to two decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.40 to 1.50",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.4,
+        "max": 1.5
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.40 to 1.50.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q64",
+      "questionNumber": 64,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "A line measures 15 cm on an aerial photograph, while it measures 5 cm on a map\nat 1:24000 scale. The photograph was taken using a camera lens of 20 cm focal\nlength. Average elevation of terrain is 240 m above mean sea level. The flying\nheight of the aircraft above mean sea level is______ m (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1838 to 1842",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1838.0,
+        "max": 1842.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1838 to 1842.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q65",
+      "questionNumber": 65,
+      "sectionId": "ge_b_s1",
+      "sectionName": "Part B: Section I (Surveying and Mapping)",
+      "questionText": "A high tower appeared on an aerial photograph taken at 1000 m above mean sea\nlevel with a camera lens of 15 cm focal length. The radial distances of the top and\nbottom images of the tower from principal point of photograph are 92.6 mm and\n78.3 mm, respectively. If the average elevation of terrain is 300 m above mean sea\nlevel, then the height of the tower above ground is ______ m (rounded off to the\nnearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "107 to 109",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 107.0,
+        "max": 109.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 107 to 109.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q66",
+      "questionNumber": 66,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "A four-band multispectral image of size 64 × 64 pixels has 560 header bytes. The\nper pixel depth of the image is 2 bytes. The total number of bytes required to store\nthis image on the disk in the Band Interleaved by Line (BIL) format will be",
+      "questionType": "MCQ",
+      "options": [
+        "33328",
+        "32338",
+        "33823",
+        "33283"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "33328",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "32338",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "33823",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "33283",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q67",
+      "questionNumber": 67,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "1\nA one-dimensional normalized kernel 1 2 1 is convolved with an image to\n4\nproduce an intermediate result. The intermediate image of this operation is again\nconvolved with the same kernel to produce a final result. The equivalent kernel to\nachieve the same final result in one step from the original image is given as",
+      "questionType": "MCQ",
+      "options": [
+        "1\n1 4 6 4 1\n16",
+        "1\n1 2 1 2 1\n16",
+        "1\n1 2 4 2 1\n8",
+        "1\n1 2 4 2 1\n10"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1\n1 4 6 4 1\n16",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1\n1 2 1 2 1\n16",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1\n1 2 4 2 1\n8",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1\n1 2 4 2 1\n10",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q68",
+      "questionNumber": 68,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The histogram equalization applied to a digital image generally DOES NOT yield\na truly uniform histogram of the transformed image due to",
+      "questionType": "MCQ",
+      "options": [
+        "discrete nature of pixel values",
+        "poor contrast of the original image",
+        "low frequency image information",
+        "presence of edges"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "discrete nature of pixel values",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "poor contrast of the original image",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "low frequency image information",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "presence of edges",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q69",
+      "questionNumber": 69,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which type of contrast stretching is represented by the following figure?",
+      "questionType": "MCQ",
+      "options": [
+        "Linear contrast stretch",
+        "Multiple linear stretch",
+        "Logarithmic stretch",
+        "Gaussian stretch"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Linear contrast stretch",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Multiple linear stretch",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Logarithmic stretch",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Gaussian stretch",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q69_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q69_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q70",
+      "questionNumber": 70,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Contrast enhancement is a type of ______ enhancement.",
+      "questionType": "MCQ",
+      "options": [
+        "spectral",
+        "spatial",
+        "radiometric",
+        "temporal"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "spectral",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "spatial",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "radiometric",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "temporal",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q71",
+      "questionNumber": 71,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "______ is a raster image resampling technique that DOES NOT alter any of the\noutput cell values from the input raster dataset.",
+      "questionType": "MCQ",
+      "options": [
+        "Nearest neighbor",
+        "Cubic convolution",
+        "Bilinear",
+        "Kriging"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Nearest neighbor",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Cubic convolution",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Bilinear",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Kriging",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q72",
+      "questionNumber": 72,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "De-stripping in radiometric correction is used to correct a type of",
+      "questionType": "MCQ",
+      "options": [
+        "sensor defect",
+        "atmospheric effect",
+        "path radiance",
+        "geometric error"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "sensor defect",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "atmospheric effect",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "path radiance",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "geometric error",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q73",
+      "questionNumber": 73,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "The figure given below shows the Fourier spectrum obtained by applying filter on\na remote sensing image in frequency domain. Zone A represents the location of\n______ components.",
+      "questionType": "MCQ",
+      "options": [
+        "low frequency",
+        "mid frequency",
+        "mid to high frequency",
+        "high frequency"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "low frequency",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "mid frequency",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "mid to high frequency",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "high frequency",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q73_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q73_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q74",
+      "questionNumber": 74,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "For the following covariance matrix (∑) of a multispectral image, which of the\nstatements is/are INCORRECT?\nband-1 band-2 band-3\nband-134.14 46.71 40.68\n \n=band-2 46.71 68.83 69.59\n \nband-3 40.68 69.59 248.40 ",
+      "questionType": "MCQ",
+      "options": [
+        "band-1 and band-2 have maximum correlation",
+        "band-2 and band-3 are least correlated",
+        "band-3 conveys the maximum information content",
+        "band-1 conveys the minimum information content"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "band-1 and band-2 have maximum correlation",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "band-2 and band-3 are least correlated",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "band-3 conveys the maximum information content",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "band-1 conveys the minimum information content",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q75",
+      "questionNumber": 75,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following statistical measures CANNOT be computed from the\nmultispectral image histograms?",
+      "questionType": "MCQ",
+      "options": [
+        "Mean, skewness, kurtosis",
+        "Covariance matrix",
+        "Co-occurrence matrix",
+        "Correlation matrix"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Mean, skewness, kurtosis",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Covariance matrix",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Co-occurrence matrix",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Correlation matrix",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q76",
+      "questionNumber": 76,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following statements about Principal Component Analysis (PCA)\nis/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "A two-dimensional data set can have up to four principal components.",
+        "The first principal component accounts for the majority of conceivable data\nvariation.",
+        "The second principal component attempts to encapsulate the mode of the data.",
+        "The transformed principal components are linear combinations of the original\nvariables and are orthogonal."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "A two-dimensional data set can have up to four principal components.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The first principal component accounts for the majority of conceivable data\nvariation.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The second principal component attempts to encapsulate the mode of the data.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The transformed principal components are linear combinations of the original\nvariables and are orthogonal.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q77",
+      "questionNumber": 77,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "In the context of satellite image classification, which of the following statements\nis/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "Both ANN and Fuzzy C-means clustering are parametric classifiers",
+        "Both ANN and Fuzzy C-means clustering are non-parametric classifiers",
+        "ANN can be both supervised and unsupervised classification method",
+        "Fuzzy C-means clustering is a supervised classification method"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Both ANN and Fuzzy C-means clustering are parametric classifiers",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Both ANN and Fuzzy C-means clustering are non-parametric classifiers",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "ANN can be both supervised and unsupervised classification method",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Fuzzy C-means clustering is a supervised classification method",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; C",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "C"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        2
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; C.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q78",
+      "questionNumber": 78,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following filters can be used to suppress the low frequency component\nof a raster image?",
+      "questionType": "MSQ",
+      "options": [
+        "(i)",
+        "(ii)",
+        "(iii)",
+        "(iv)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(ii)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(iii)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(iv)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q78_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q78_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q79",
+      "questionNumber": 79,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following statements about image ratio is/are CORRECT?",
+      "questionType": "MSQ",
+      "options": [
+        "It cannot be used to suppress the effects of topography",
+        "It cannot be used to suppress the effects of differential sun-illumination",
+        "It helps in suppressing the effects of differential sun-illumination",
+        "It helps in suppressing the effects of topography"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It cannot be used to suppress the effects of topography",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It cannot be used to suppress the effects of differential sun-illumination",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It helps in suppressing the effects of differential sun-illumination",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It helps in suppressing the effects of topography",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "C",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        2,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is C; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q80",
+      "questionNumber": 80,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Which of the following statistical classification algorithms is/are represented by the\nfigure given below?",
+      "questionType": "MSQ",
+      "options": [
+        "Minimum distance to mean classification",
+        "Parallelepiped classification",
+        "Maximum likelihood classification",
+        "k-means clustering"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Minimum distance to mean classification",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Parallelepiped classification",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Maximum likelihood classification",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "k-means clustering",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B.",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q80_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q80_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q81",
+      "questionNumber": 81,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "Using the given 3 × 3 pixel kernel and original image and applying the concept of\nconvolution, the value of central pixel of the output image is ______ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "70 to 70",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 70.0,
+        "max": 70.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 70 to 70.",
+      "diagramUrl": "/exam-assets/gate/2024/ge/q81_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ge/q81_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q82",
+      "questionNumber": 82,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "A four-band multispectral image with pixel size of 50 m × 50 m covers a ground\narea of 20 km × 20 km. If the radiometric resolution of the satellite data is 8 bits,\nthen the uncompressed satellite image contains ______ kilobytes (kB) of data (in\ninteger).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "625 to 625 OR 640 to 640",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 625.0,
+        "max": 625.0
+      },
+      "answerRanges": [
+        {
+          "min": 625.0,
+          "max": 625.0
+        },
+        {
+          "min": 640.0,
+          "max": 640.0
+        }
+      ],
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 625 to 625 OR 640 to 640.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q83",
+      "questionNumber": 83,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "In spatial interpolation using coordinate transformations for image-to-map\nrectification, the minimum number of ground control points (GCPs) required to\nperform a third-order transformation is ______ (in integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "10 to 10",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 10.0,
+        "max": 10.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 10 to 10.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ge-q84",
+      "questionNumber": 84,
+      "sectionId": "ge_b_s2",
+      "sectionName": "Part B: Section II (Image Processing and Analysis)",
+      "questionText": "In an image with 6-bit quantization level, the pixel values of a scene are between 25\nand 55. A linear contrast stretch is applied to the image covering the full dynamic\nrange. A pixel value 40 in the original image will be mapped to ______ (rounded\noff to nearest integer) in the stretched image.",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "31 to 32",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 31.0,
+        "max": 32.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 31 to 32.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "GE",
+      "discipline": "Geomatics Engineering",
+      "language": "English"
+    }
+  ]
+}

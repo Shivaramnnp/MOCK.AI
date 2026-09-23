@@ -1,0 +1,3379 @@
+{
+  "id": "gate-2024-ee",
+  "examId": "gate",
+  "examName": "GATE",
+  "editionYear": 2024,
+  "title": "GATE 2024 — Electrical Engineering (EE)",
+  "subTitle": "Official IISc Bengaluru Question Paper (Single Session)",
+  "date": "2024-02-11",
+  "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+  "tier": "Single Stage",
+  "paperType": "CBE_OBJECTIVE",
+  "paperCode": "EE",
+  "discipline": "Electrical Engineering",
+  "language": "English",
+  "durationMinutes": 180,
+  "totalMarks": 100.0,
+  "totalQuestions": 65,
+  "isComplete": true,
+  "markingScheme": {
+    "marksPerCorrect": 1.0,
+    "negativeMarks": 0.33,
+    "unansweredMarks": 0.0
+  },
+  "sections": [
+    {
+      "id": "ga",
+      "name": "General Aptitude",
+      "questionCount": 10,
+      "startIndex": 0,
+      "endIndex": 9,
+      "maxMarks": 15.0
+    },
+    {
+      "id": "ee_core",
+      "name": "Electrical Engineering",
+      "questionCount": 55,
+      "startIndex": 10,
+      "endIndex": 64,
+      "maxMarks": 85.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "gate-2024-ee-q1",
+      "questionNumber": 1,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If ‘→’ denotes increasing order of intensity, then the meaning of the words\n[talk → shout → scream] is analogous to [please → ________ → pander].\nWhich one of the given options is appropriate to fill the blank?",
+      "questionType": "MCQ",
+      "options": [
+        "flatter",
+        "flutter",
+        "fritter",
+        "frizzle"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "flatter",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "flutter",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "fritter",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "frizzle",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q2",
+      "questionNumber": 2,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "P and Q have been allotted a hostel room with two beds, a study table, and an\nalmirah. P is an avid bird-watcher and wants to sit at the table and watch birds\noutside the window. Q does not mind that as long as his bed is close to the ceiling\nfan.\nWhich one of the following arrangements suits them the most?",
+      "questionType": "MCQ",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2024/ee/q2_opt_a.png",
+        "/exam-assets/gate/2024/ee/q2_opt_b.png",
+        "/exam-assets/gate/2024/ee/q2_opt_c.png",
+        "/exam-assets/gate/2024/ee/q2_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ee/q2_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ee/q2_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ee/q2_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2024/ee/q2_opt_d.png"
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q3",
+      "questionNumber": 3,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The decimal number system uses the characters 0, 1, 2, …, 8, 9, and the octal\nnumber system uses the characters 0, 1, 2, …, 6, 7.\nFor example, the decimal number 12 ( = 1 × 101 + 2 × 100 ) is expressed as\n14 ( = 1 × 81 + 4 × 80 ) in the octal number system.\nThe decimal number 108 in the octal number system is",
+      "questionType": "MCQ",
+      "options": [
+        "168",
+        "108",
+        "150",
+        "154"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "168",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "108",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "150",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "154",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q4",
+      "questionNumber": 4,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A shopkeeper buys shirts from a producer and sells them at 20% profit. A customer\nhas to pay ₹3,186.00 including 18% taxes, per shirt. At what price did the\nshopkeeper buy each shirt from the producer?",
+      "questionType": "MCQ",
+      "options": [
+        "₹2,500.00",
+        "₹1,975.40",
+        "₹2,250.00",
+        "₹2,548.80"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "₹2,500.00",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "₹1,975.40",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "₹2,250.00",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "₹2,548.80",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q5",
+      "questionNumber": 5,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "If, for non-zero real variables 𝑥, 𝑦, and real parameter 𝑎 > 1,\n𝑥: 𝑦 = (𝑎+ 1) ∶ (𝑎−1),\nthen, the ratio (𝑥2 −𝑦2) ∶ (𝑥2 + 𝑦2) is",
+      "questionType": "MCQ",
+      "options": [
+        "2𝑎 ∶ (𝑎2 + 1)",
+        "𝑎 ∶ (𝑎2 + 1)",
+        "2𝑎 ∶ (𝑎2 −1)",
+        "𝑎 ∶ (𝑎2 −1)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2𝑎 ∶ (𝑎2 + 1)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑎 ∶ (𝑎2 + 1)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "2𝑎 ∶ (𝑎2 −1)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑎 ∶ (𝑎2 −1)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q6",
+      "questionNumber": 6,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the given text, the blanks are numbered (i)−(iv). Select the best match for\nall the blanks.\n(i) (ii)\nFollowing a row the shopkeeper the price of a frying pan, the\n(iii) (iv)\ncook stood a row to withdraw cash the ATM booth.",
+      "questionType": "MCQ",
+      "options": [
+        "(i) with (ii) over (iii) at (iv) with",
+        "(i) at (ii) over (iii) over (iv) in",
+        "(i) with (ii) over (iii) in (iv) at",
+        "(i) over (ii) with (iii) over (iv) at"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "(i) with (ii) over (iii) at (iv) with",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "(i) at (ii) over (iii) over (iv) in",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(i) with (ii) over (iii) in (iv) at",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(i) over (ii) with (iii) over (iv) at",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q7",
+      "questionNumber": 7,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "In the following figure,\nCD = 5 cm, BE = 10 cm, AE = 12 cm,\n∠DAB = ∠DCB, and ∠DAE = ∠DBC = 90°\nPoints AFCD create a rhombus.\nThe length of BF (in cm) is",
+      "questionType": "MCQ",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "3",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "6",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2024 committee.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q7_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q7_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q8",
+      "questionNumber": 8,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The chart below shows the data of the number of cars bought by Millennials and\nGen X people in a country from the year 2010 to 2020 as well as the yearly fuel\nconsumption of the country (in Million liters).\nGen X Millenials Fuel Consumption\n100 100000\nliters)\n90 90000 cars\n80 80000 buying\n(Million\n70 70000\n60 60000\npeople\n50 50000 Consumption\n40 40000\nof\n30 30000\nNumber\n20 20000\n10 10000 Fuel\n0 0\n2010 2015 2020\nYear\nConsidering the data presented in the chart, which one of the following options is\ntrue?",
+      "questionType": "MCQ",
+      "options": [
+        "The percentage increase in fuel consumption from 2010 to 2015 is more than the\npercentage increase in fuel consumption from 2015 to 2020.",
+        "The increase in the number of Millennial car buyers from 2015 to 2020 is less than\nthe decrease in the number of Gen X car buyers from 2010 to 2015.",
+        "The increase in the number of Millennial car buyers from 2010 to 2015 is more than\nthe decrease in the number of Gen X car buyers from 2010 to 2015.",
+        "The decrease in the number of Gen X car buyers from 2015 to 2020 is more than\nthe increase in the number of Millennial car buyers from 2010 to 2015."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "The percentage increase in fuel consumption from 2010 to 2015 is more than the\npercentage increase in fuel consumption from 2015 to 2020.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "The increase in the number of Millennial car buyers from 2015 to 2020 is less than\nthe decrease in the number of Gen X car buyers from 2010 to 2015.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "The increase in the number of Millennial car buyers from 2010 to 2015 is more than\nthe decrease in the number of Gen X car buyers from 2010 to 2015.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The decrease in the number of Gen X car buyers from 2015 to 2020 is more than\nthe increase in the number of Millennial car buyers from 2010 to 2015.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q8_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q9",
+      "questionNumber": 9,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "The assembly shown below has three teethed circular objects (Pinions) and two\nteethed flat objects (Racks), which are perfectly mating with each other. Pinions can\nonly rotate clockwise or anti-clockwise staying at its own center. Racks can\ntranslate towards the left (←) or the right (→) direction.\nIf the object A (Rack) is translating towards the right (→) direction, the correct\nstatement among the following is",
+      "questionType": "MCQ",
+      "options": [
+        "Object B translates towards the right direction.",
+        "Object B translates towards the left direction.",
+        "Object R rotates in the anticlockwise direction.",
+        "Object Q rotates in the clockwise direction."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Object B translates towards the right direction.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Object B translates towards the left direction.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Object R rotates in the anticlockwise direction.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Object Q rotates in the clockwise direction.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q9_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q9_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q10",
+      "questionNumber": 10,
+      "sectionId": "ga",
+      "sectionName": "General Aptitude",
+      "questionText": "A surveyor has to measure the horizontal distance from her position to a distant\nreference point C. Using her position as the center, a 200 m horizontal line segment\nis drawn with the two endpoints A and B. Points A, B, and C are not collinear. Each\nof the angles ∠CAB and ∠CBA are measured as 87.8°. The distance (in m) of the\nreference point C from her position is nearest to",
+      "questionType": "MCQ",
+      "options": [
+        "2603",
+        "2606",
+        "2306",
+        "2063"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "2603",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2606",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "2306",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2063",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q11",
+      "questionNumber": 11,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which one of the following matrices has an inverse?",
+      "questionType": "MCQ",
+      "options": [
+        "1 4 8\n[ 0 4 2]\n0.5 2 4",
+        "1 2 3\n[2 4 6]\n3 2 9",
+        "1 4 8\n[0 4 2]\n1 2 4",
+        "1 4 8\n[0 4 2 ]\n3 12 24"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1 4 8\n[ 0 4 2]\n0.5 2 4",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1 2 3\n[2 4 6]\n3 2 9",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1 4 8\n[0 4 2]\n1 2 4",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1 4 8\n[0 4 2 ]\n3 12 24",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q12",
+      "questionNumber": 12,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The number of junctions in the circuit is",
+      "questionType": "MCQ",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "6",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "7",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "8",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "9",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q13",
+      "questionNumber": 13,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "All the elements in the circuit are ideal. The power delivered by the 10 V source in\nwatts is\n𝛼 Ω 2 Ω\n10 V\n1 Ω 10 A",
+      "questionType": "MCQ",
+      "options": [
+        "0",
+        "50",
+        "100",
+        "dependent on the value of 𝛼"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "50",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "100",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "dependent on the value of 𝛼",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q13_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q13_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q14",
+      "questionNumber": 14,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The circuit shown in the figure with the switch 𝑆 open, is in steady state. After the\nswitch 𝑆 is closed, the time constant of the circuit in seconds is\n𝑆 1 Ω 1 H\n1 Ω 1 H\n1 A\n1 H\n1 H",
+      "questionType": "MCQ",
+      "options": [
+        "1.25",
+        "0",
+        "1",
+        "1.5"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1.25",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1.5",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q15",
+      "questionNumber": 15,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Suppose signal 𝑦(𝑡) is obtained by the time-reversal of signal 𝑥(𝑡), i.e.,\n𝑦(𝑡) = 𝑥(−𝑡), −∞ < 𝑡 < ∞. Which one of the following options is always true\nfor the convolution of 𝑥(𝑡) and 𝑦(𝑡)?",
+      "questionType": "MCQ",
+      "options": [
+        "It is an even signal.",
+        "It is an odd signal.",
+        "It is a causal signal.",
+        "It is an anti-causal signal."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "It is an even signal.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "It is an odd signal.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "It is a causal signal.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "It is an anti-causal signal.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q16",
+      "questionNumber": 16,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "If 𝑢(𝑡) is the unit step function, then the region of convergence (ROC) of the\nLaplace transform of the signal\n𝑒𝑡2\n𝑥(𝑡) = [𝑢(𝑡−1) −𝑢(𝑡−10)]\nis",
+      "questionType": "MCQ",
+      "options": [
+        "−Re( s)",
+        "Re( s )10",
+        "Re( s )1",
+        "1Re( s)10"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "−Re( s)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Re( s )10",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Re( s )1",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1Re( s)10",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q17",
+      "questionNumber": 17,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A three phase, 50 Hz, 6 pole induction motor runs at 960 rpm. The stator copper\nloss, core loss, and the rotational loss of the motor can be neglected. The percentage\nefficiency of the motor is",
+      "questionType": "MCQ",
+      "options": [
+        "92",
+        "94",
+        "96",
+        "98"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "92",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "94",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "96",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "98",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q18",
+      "questionNumber": 18,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which one of the following options represents possible voltage polarities in a single\nphase two winding transformer? Here, 𝑉 is the applied primary voltage, 𝐸 is the\n𝑝 𝑝\ninduced primary voltage, 𝑉 is the open circuit secondary voltage, and 𝐸 is the\n𝑠 𝑠\ninduced secondary voltage.",
+      "questionType": "MCQ",
+      "options": [
+        "+ + + +\n𝑉 𝐸 𝐸 𝑉\n𝑝 𝑝 𝑠 𝑠\n− − − −",
+        "− − + +\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n+ + − −",
+        "+ − − +\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n− + + −",
+        "+ − − −\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n+ +\n− +"
+      ],
+      "optionImages": [
+        "/exam-assets/gate/2024/ee/q18_opt_a.png",
+        "/exam-assets/gate/2024/ee/q18_opt_b.png",
+        "/exam-assets/gate/2024/ee/q18_opt_c.png",
+        "/exam-assets/gate/2024/ee/q18_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "+ + + +\n𝑉 𝐸 𝐸 𝑉\n𝑝 𝑝 𝑠 𝑠\n− − − −",
+          "imageUrl": "/exam-assets/gate/2024/ee/q18_opt_a.png"
+        },
+        {
+          "id": "B",
+          "text": "− − + +\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n+ + − −",
+          "imageUrl": "/exam-assets/gate/2024/ee/q18_opt_b.png"
+        },
+        {
+          "id": "C",
+          "text": "+ − − +\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n− + + −",
+          "imageUrl": "/exam-assets/gate/2024/ee/q18_opt_c.png"
+        },
+        {
+          "id": "D",
+          "text": "+ − − −\n𝑉 𝑝 𝐸 𝑝 𝐸 𝑠 𝑉 𝑠\n+ +\n− +",
+          "imageUrl": "/exam-assets/gate/2024/ee/q18_opt_d.png"
+        }
+      ],
+      "correctAnswer": "MTA",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": true,
+      "explanation": "Marks to All (MTA) awarded by official GATE 2024 committee.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q19",
+      "questionNumber": 19,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The figure shows the single line diagram of a 4-bus power network. Branches 𝑏 ,\n1\n𝑏 , 𝑏 , and 𝑏 have impedances 4𝑧, 𝑧, 2𝑧, and 4𝑧 per-unit (pu), respectively, where\n2 3 4\n𝑧 = 𝑟+ 𝑗𝑥, with 𝑟 > 0 and 𝑥 > 0. The current drawn from each load bus (marked\nas arrows) is equal to 𝐼 pu, where 𝐼 ≠ 0. If the network is to operate with minimum\nloss, the branch that should be opened is\n𝑏 𝑏\n1 2\n𝐼 𝑏 𝑏 𝐼\n3 4\n𝐼",
+      "questionType": "MCQ",
+      "options": [
+        "𝑏\n1",
+        "𝑏\n2",
+        "𝑏\n3",
+        "𝑏\n4"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑏\n1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑏\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑏\n3",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑏\n4",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q19_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q19_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q20",
+      "questionNumber": 20,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "𝐶(𝑠)\nFor the block-diagram shown in the figure, the transfer function is\n𝑅(𝑠)\n_\n_\n𝑅(𝑠) + 𝐶(𝑠)\n𝐺(𝑠)\n+",
+      "questionType": "MCQ",
+      "options": [
+        "𝐺(𝑠)\n1 + 2𝐺(𝑠)",
+        "𝐺(𝑠)\n−\n1 + 2𝐺(𝑠)",
+        "𝐺(𝑠)\n1 −2𝐺(𝑠)",
+        "𝐺(𝑠)\n−\n1 −2𝐺(𝑠)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝐺(𝑠)\n1 + 2𝐺(𝑠)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝐺(𝑠)\n−\n1 + 2𝐺(𝑠)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝐺(𝑠)\n1 −2𝐺(𝑠)",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝐺(𝑠)\n−\n1 −2𝐺(𝑠)",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q20_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q20_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q21",
+      "questionNumber": 21,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "𝜔2\nConsider the standard second-order system of the form 𝑛 with the\n𝑠2+2𝜁𝜔 𝑠+𝜔2\n𝑛 𝑛\npoles 𝑝 and 𝑝∗ having negative real parts. The pole locations are also shown in the\nfigure. Now consider two such second-order systems as defined below:\nSystem 1: 𝜔 = 3 rad/sec and 𝜃 = 60°\n𝑛\nSystem 2: 𝜔 = 1 rad/sec and 𝜃 = 70°\n𝑛\nWhich one of the following statements is correct?\n𝑗𝜔\n𝑝\n×\n𝜃\n−𝜔 0 𝜎\n𝑛\n×\n𝑝∗",
+      "questionType": "MCQ",
+      "options": [
+        "Settling time of System 1 is more than that of System 2.",
+        "Settling time of System 2 is more than that of System 1.",
+        "Settling times of both the systems are the same.",
+        "Settling time cannot be computed from the given information."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Settling time of System 1 is more than that of System 2.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Settling time of System 2 is more than that of System 1.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Settling times of both the systems are the same.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Settling time cannot be computed from the given information.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q21_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q21_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q22",
+      "questionNumber": 22,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the cascaded system as shown in the figure. Neglecting the faster\ncomponent of the transient response, which one of the following options is a first-\norder pole-only approximation such that the steady-state values of the unit step\nresponses of the original and the approximated systems are same?\nInput 1 𝑠 + 40 Output\n𝑠 + 1 𝑠 + 20",
+      "questionType": "MCQ",
+      "options": [
+        "1\n𝑠+ 1",
+        "2\n𝑠+ 1",
+        "1\n𝑠+ 20",
+        "2\n𝑠+ 20"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1\n𝑠+ 1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "2\n𝑠+ 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1\n𝑠+ 20",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "2\n𝑠+ 20",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q22_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q22_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q23",
+      "questionNumber": 23,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The table lists two instrument transformers and their features:\nInstrument Transformers Features\nP) Primary is connected in parallel to the grid\nX) Current Transformer (CT) Q) Open circuited secondary is not desirable\nY) Potential Transformer (PT) R) Primary current is the line current\nS) Secondary burden affects the primary current\nThe correct matching of the two columns is",
+      "questionType": "MCQ",
+      "options": [
+        "X matches with P and Q; Y matches with R and S.",
+        "X matches with P and R; Y matches with Q and S.",
+        "X matches with Q and R; Y matches with P and S.",
+        "X matches with Q and S; Y matches with P and R."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "X matches with P and Q; Y matches with R and S.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "X matches with P and R; Y matches with Q and S.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "X matches with Q and R; Y matches with P and S.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "X matches with Q and S; Y matches with P and R.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q24",
+      "questionNumber": 24,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Simplified form of the Boolean function\n𝐹(𝑃, 𝑄, 𝑅, 𝑆) = 𝑃̅𝑄̅ + 𝑃̅𝑄𝑆+ 𝑃𝑄̅𝑅̅𝑆̅ + 𝑃𝑄̅𝑅𝑆̅\nis",
+      "questionType": "MCQ",
+      "options": [
+        "𝑃̅𝑆 + 𝑄̅𝑆̅",
+        "𝑃̅𝑄̅ + 𝑄̅𝑆̅",
+        "𝑃̅𝑄 + 𝑅𝑆̅",
+        "𝑃𝑆̅ + 𝑄𝑅̅"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑃̅𝑆 + 𝑄̅𝑆̅",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑃̅𝑄̅ + 𝑄̅𝑆̅",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑃̅𝑄 + 𝑅𝑆̅",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑃𝑆̅ + 𝑄𝑅̅",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q25",
+      "questionNumber": 25,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the circuit, the present value of 𝑍 is 1. Neglecting the delay in the combinatorial\ncircuit, the values of 𝑆 and 𝑍, respectively, after the application of the clock will be\n𝑍\n𝑍 𝐷\n𝑄\n𝑋 = 1 𝑆 = 𝑋⊕𝑌⊕𝑍\n𝑆\nClock 𝑄ത\n𝑌 = 0\nCombinatorial D Flip-flop\nCircuit",
+      "questionType": "MCQ",
+      "options": [
+        "𝑆 = 0, 𝑍 = 0",
+        "𝑆 = 0, 𝑍 = 1",
+        "𝑆 = 1, 𝑍 = 0",
+        "𝑆 = 1, 𝑍 = 1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑆 = 0, 𝑍 = 0",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑆 = 0, 𝑍 = 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑆 = 1, 𝑍 = 0",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑆 = 1, 𝑍 = 1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q25_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q25_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q26",
+      "questionNumber": 26,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "To obtain the Boolean function 𝐹(𝑋, 𝑌) = 𝑋𝑌̅ + 𝑋̅, the inputs 𝑃𝑄𝑅𝑆 in the figure\nshould be\n4:1 Multiplexer\n𝑃 0\n𝑄 1\n𝐹(𝑋, 𝑌)\n𝑅 2\n𝑆 3\n𝑀𝑆𝐵 𝐿𝑆𝐵\n𝑆 𝑆\n1 0\n𝑆 and 𝑆 are the select lines.\n1 0\n𝑋 𝑌",
+      "questionType": "MCQ",
+      "options": [
+        "1010",
+        "1110",
+        "0110",
+        "0001"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1010",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1110",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "0110",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "0001",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q26_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q26_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q27",
+      "questionNumber": 27,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "If the following switching devices have similar power ratings, which one of them is\nthe fastest?",
+      "questionType": "MCQ",
+      "options": [
+        "SCR",
+        "GTO",
+        "IGBT",
+        "Power MOSFET"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "SCR",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "GTO",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "IGBT",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Power MOSFET",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q28",
+      "questionNumber": 28,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A single-phase triac based AC voltage controller feeds a series RL load. The input\nAC supply is 230 V, 50 Hz. The values of R and L are 10 Ω and 18.37 mH,\nrespectively. The minimum triggering angle of the triac to obtain controllable output\nvoltage is",
+      "questionType": "MCQ",
+      "options": [
+        "15°",
+        "30°",
+        "45°",
+        "60°"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "15°",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "30°",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "45°",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "60°",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.33,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q29",
+      "questionNumber": 29,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝑋 be a discrete random variable that is uniformly distributed over the set\n{−10, −9, ⋯, 0, ⋯, 9, 10}. Which of the following random variables is/are\nuniformly distributed?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑋2",
+        "𝑋3",
+        "(𝑋−5)2",
+        "(𝑋+ 10)2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑋2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑋3",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "(𝑋−5)2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "(𝑋+ 10)2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q30",
+      "questionNumber": 30,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which of the following complex functions is/are analytic on the complex plane?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑓(𝑧) = 𝑗Re(𝑧)",
+        "𝑓(𝑧) = Im(𝑧)",
+        "𝑓(𝑧) = 𝑒|𝑧|",
+        "𝑓(𝑧) = 𝑧2 −𝑧"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑓(𝑧) = 𝑗Re(𝑧)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑓(𝑧) = Im(𝑧)",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑓(𝑧) = 𝑒|𝑧|",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑓(𝑧) = 𝑧2 −𝑧",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q31",
+      "questionNumber": 31,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the complex function 𝑓(𝑧) = cos 𝑧 + 𝑒𝑧2 . The coefficient of 𝑧5 in the\nTaylor series expansion of 𝑓(𝑧) about the origin is ______ (rounded off to 1\ndecimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.0 to 0.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.0 to 0.0.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q32",
+      "questionNumber": 32,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "1 2 2\nThe sum of the eigenvalues of the matrix A= [ ] is ______ (rounded off to the\n3 4\nnearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "29 to 29",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 29.0,
+        "max": 29.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 29 to 29.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q33",
+      "questionNumber": 33,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "LetX ( ) be the Fourier transform of the signal\n𝑒−𝑡4\n𝑥(𝑡) = cos 𝑡, −∞ < 𝑡 < ∞.\nThe value of the derivative of X ( )at =0 is _______ (rounded off to 1 decimal\nplace).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.0 to 0.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.0 to 0.0.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q34",
+      "questionNumber": 34,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The incremental cost curves of two generators (Gen A and Gen B) in a plant\nsupplying a common load are shown in the figure. If the incremental cost of\nsupplying the common load is Rs. 7400 per MWh, then the common load in MW is\n_______ (rounded off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "35 to 35",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 35 to 35.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q34_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q34_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q35",
+      "questionNumber": 35,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A forced commutated thyristorized step-down chopper is shown in the figure.\nNeglect the ON-state drop across the power devices. Assume that the capacitor is\ninitially charged to 50 V with the polarity shown in the figure. The load current (𝐼 )\n𝐿\ncan be assumed to be constant at 10 A. Initially, Th is ON and Th is OFF. The\nM A\nturn-off time available to Th in microseconds, when Th is triggered, is_________\nM A\n(rounded off to the nearest integer).\nTh\nM\n𝐼 = 10 A\n𝐿\n+\n10 𝜇F\n−\n𝐿\n+\n50 V\nConstant\n−\nCurrent\nLoad\nTh\nA",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "50 to 50",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 50 to 50.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q35_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q35_diag.png"
+      ],
+      "marks": 1.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q36",
+      "questionNumber": 36,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider a vector 𝑢̅ = 2𝑥̂ + 𝑦̂ + 2𝑧̂, where 𝑥̂, 𝑦̂, 𝑧̂ represent unit vectors along the\ncoordinate axes 𝑥, 𝑦, 𝑧 respectively. The directional derivative of the function\n𝑓(𝑥, 𝑦, 𝑧) = 2 ln(𝑥𝑦) + ln(𝑦𝑧) + 3 ln(𝑥𝑧) at the point (𝑥, 𝑦, 𝑧) = (1, 1, 1) in the\ndirection of 𝑢̅ is",
+      "questionType": "MCQ",
+      "options": [
+        "0",
+        "7\n5√2",
+        "7",
+        "21"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "0",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "7\n5√2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "7",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "21",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q37",
+      "questionNumber": 37,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The input 𝑥(𝑡) and the output 𝑦(𝑡) of a system are related as\n𝑡\n𝑦(𝑡) = 𝑒−𝑡 ∫ 𝑒𝜏 𝑥(𝜏) 𝑑𝜏, − ∞ < 𝑡 < ∞.\n−∞\nThe system is",
+      "questionType": "MCQ",
+      "options": [
+        "nonlinear.",
+        "linear and time-invariant.",
+        "linear but not time-invariant.",
+        "noncausal."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "nonlinear.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "linear and time-invariant.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "linear but not time-invariant.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "noncausal.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (B).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q38",
+      "questionNumber": 38,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the discrete-time systems 𝑇 and 𝑇 defined as follows:\n1 2\n{𝑇 𝑥}[𝑛] = 𝑥[0] + 𝑥[1] + ⋯+ 𝑥[𝑛]\n1\n1 1\n{𝑇 𝑥}[𝑛] = 𝑥[0] + 𝑥[1] + ⋯+ 𝑥[𝑛]\n2 2 2𝑛\nWhich one of the following statements is true?",
+      "questionType": "MCQ",
+      "options": [
+        "𝑇 and 𝑇 are BIBO stable.\n1 2",
+        "𝑇 and 𝑇 are not BIBO stable.\n1 2",
+        "𝑇 is BIBO stable but 𝑇 is not BIBO stable.\n1 2",
+        "𝑇 is not BIBO stable but 𝑇 is BIBO stable.\n1 2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑇 and 𝑇 are BIBO stable.\n1 2",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑇 and 𝑇 are not BIBO stable.\n1 2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑇 is BIBO stable but 𝑇 is not BIBO stable.\n1 2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑇 is not BIBO stable but 𝑇 is BIBO stable.\n1 2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (D).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q39",
+      "questionNumber": 39,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "If the Z-transform of a finite-duration discrete-time signal 𝑥[𝑛] is 𝑋(𝑧), then the Z-\ntransform of the signal 𝑦[𝑛] = 𝑥[2𝑛] is",
+      "questionType": "MCQ",
+      "options": [
+        "𝑌(𝑧) = 𝑋(𝑧2)",
+        "1\n𝑌(𝑧) = [𝑋(𝑧−1/2 ) + 𝑋(−𝑧−1/2)]\n2",
+        "1\n𝑌(𝑧) = [𝑋(𝑧1/2 ) + 𝑋(−𝑧1/2)]\n2",
+        "1\n𝑌(𝑧) = [𝑋(𝑧2 ) + 𝑋(−𝑧2)]\n2"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑌(𝑧) = 𝑋(𝑧2)",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1\n𝑌(𝑧) = [𝑋(𝑧−1/2 ) + 𝑋(−𝑧−1/2)]\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1\n𝑌(𝑧) = [𝑋(𝑧1/2 ) + 𝑋(−𝑧1/2)]\n2",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "1\n𝑌(𝑧) = [𝑋(𝑧2 ) + 𝑋(−𝑧2)]\n2",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q40",
+      "questionNumber": 40,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A 3-phase, 11 kV, 10 MVA synchronous generator is connected to an inductive\nload of power factor (√3/2) via a lossless line with a per-phase inductive reactance\nof 5 Ω. The per-phase synchronous reactance of the generator is 30 Ω with\nnegligible armature resistance. If the generator is producing the rated current at the\nrated voltage, then the power factor at the terminal of the generator is",
+      "questionType": "MCQ",
+      "options": [
+        "0.63 lagging.",
+        "0.87 lagging.",
+        "0.63 leading.",
+        "0.87 leading."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "0.63 lagging.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "0.87 lagging.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "0.63 leading.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "0.87 leading.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q41",
+      "questionNumber": 41,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "For the three-bus lossless power network shown in the figure, the voltage\nmagnitudes at all the buses are equal to 1 per unit (pu), and the differences of the\nvoltage phase angles are very small. The line reactances are marked in the figure,\nwhere 𝛼, 𝛽, 𝛾, and 𝑥 are strictly positive. The bus injections 𝑃 and 𝑃 are in pu. If\n1 2\n𝑃 = 𝑚𝑃 2, where 𝑚 > 0, and the real power flow from bus 1 to bus 2 is 0 pu, then\n1\nwhich one of the following options is correct?\nbus 1 bus 2\n𝑃 𝑃\n1 2\n𝑗𝛼𝑥 Ω\n𝑗𝛽𝑥 Ω 𝑗𝛾𝑥 Ω\nbus 3",
+      "questionType": "MCQ",
+      "options": [
+        "𝛾 = 𝑚𝛽",
+        "𝛽 = 𝑚𝛾",
+        "𝛼 = 𝑚𝛾",
+        "𝛼 = 𝑚𝛽"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝛾 = 𝑚𝛽",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝛽 = 𝑚𝛾",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝛼 = 𝑚𝛾",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝛼 = 𝑚𝛽",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q41_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q41_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q42",
+      "questionNumber": 42,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A BJT biasing circuit is shown in the figure, where 𝑉 = 0.7 V and 𝛽 = 100. The\n𝐵𝐸\nQuiescent Point values of 𝑉 and 𝐼 are respectively\n𝐶𝐸 𝐶",
+      "questionType": "MCQ",
+      "options": [
+        "4.6 V and 2.46 mA",
+        "3.5 V and 2.46 mA",
+        "2.61 V and 3.13 mA",
+        "4.6 V and 3.13 mA"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "4.6 V and 2.46 mA",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "3.5 V and 2.46 mA",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "2.61 V and 3.13 mA",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "4.6 V and 3.13 mA",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q42_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q42_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q43",
+      "questionNumber": 43,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Let 𝑓(𝑡) be a real-valued function whose second derivative is positive for\n−∞ < 𝑡 < ∞. Which of the following statements is/are always true?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑓(𝑡) has at least one local minimum.",
+        "𝑓(𝑡) cannot have two distinct local minima.",
+        "𝑓(𝑡) has at least one local maximum.",
+        "The minimum value of 𝑓(𝑡) cannot be negative."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑓(𝑡) has at least one local minimum.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑓(𝑡) cannot have two distinct local minima.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑓(𝑡) has at least one local maximum.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "The minimum value of 𝑓(𝑡) cannot be negative.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q44",
+      "questionNumber": 44,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the function 𝑓(𝑡) = (max(0, 𝑡))2 for −∞ < 𝑡 < ∞, where max(𝑎, 𝑏)\ndenotes the maximum of 𝑎 and 𝑏. Which of the following statements is/are true?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑓(𝑡) is not differentiable.",
+        "𝑓(𝑡) is differentiable and its derivative is continuous.",
+        "𝑓(𝑡) is differentiable but its derivative is not continuous.",
+        "𝑓(𝑡) and its derivative are differentiable."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑓(𝑡) is not differentiable.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "𝑓(𝑡) is differentiable and its derivative is continuous.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑓(𝑡) is differentiable but its derivative is not continuous.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑓(𝑡) and its derivative are differentiable.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q45",
+      "questionNumber": 45,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which of the following differential equations is/are nonlinear?",
+      "questionType": "MSQ",
+      "options": [
+        "𝑑𝑥(𝑡)\n𝑡 𝑥(𝑡) + = 𝑡2𝑒𝑡, 𝑥(0) = 0\n𝑑𝑡",
+        "1 𝑑𝑥(𝑡)\n𝑒𝑡 + 𝑥(𝑡) = 0, 𝑥(0) = 0\n2 𝑑𝑡",
+        "𝑑𝑥(𝑡)\n𝑥(𝑡) cos 𝑡 − sin 𝑡 = 1, 𝑥(0) = 0\n𝑑𝑡",
+        "𝑑𝑥(𝑡)\n( )\n𝑥(𝑡) + 𝑒 𝑑𝑡 = 1, 𝑥(0) = 0"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "𝑑𝑥(𝑡)\n𝑡 𝑥(𝑡) + = 𝑡2𝑒𝑡, 𝑥(0) = 0\n𝑑𝑡",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1 𝑑𝑥(𝑡)\n𝑒𝑡 + 𝑥(𝑡) = 0, 𝑥(0) = 0\n2 𝑑𝑡",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "𝑑𝑥(𝑡)\n𝑥(𝑡) cos 𝑡 − sin 𝑡 = 1, 𝑥(0) = 0\n𝑑𝑡",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "𝑑𝑥(𝑡)\n( )\n𝑥(𝑡) + 𝑒 𝑑𝑡 = 1, 𝑥(0) = 0",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q46",
+      "questionNumber": 46,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "For a two-phase network, the phase voltages 𝑉 and 𝑉 are to be expressed in terms\n𝑝 𝑞\n𝑉 𝑉\n𝑝 𝛼\nof sequence voltages 𝑉 and 𝑉 as [ ] = 𝐒[ ]. The possible option(s) for matrix\n𝛼 𝛽 𝑉 𝑉\n𝑞 𝛽\n𝐒 is/are",
+      "questionType": "MSQ",
+      "options": [
+        "1 1\n[ ]\n1 −1",
+        "1 1\n[ ]\n1 1",
+        "1 1\n[ ]\n1 0",
+        "−1 1\n[ ]\n1 1"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1 1\n[ ]\n1 −1",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "1 1\n[ ]\n1 1",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "1 1\n[ ]\n1 0",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "−1 1\n[ ]\n1 1",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "A",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        0,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is A; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q47",
+      "questionNumber": 47,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Which of the following options is/are correct for the Automatic Generation Control\n(AGC) and Automatic Voltage Regulator (AVR) installed with synchronous\ngenerators?",
+      "questionType": "MSQ",
+      "options": [
+        "AGC response has a local effect on frequency while AVR response has a global\neffect on voltage.",
+        "AGC response has a global effect on frequency while AVR response has a local\neffect on voltage.",
+        "AGC regulates the field current of the synchronous generator while AVR regulates\nthe generator’s mechanical power input.",
+        "AGC regulates the generator’s mechanical power input while AVR regulates the\nfield current of the synchronous generator."
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "AGC response has a local effect on frequency while AVR response has a global\neffect on voltage.",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "AGC response has a global effect on frequency while AVR response has a local\neffect on voltage.",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "AGC regulates the field current of the synchronous generator while AVR regulates\nthe generator’s mechanical power input.",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "AGC regulates the generator’s mechanical power input while AVR regulates the\nfield current of the synchronous generator.",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "B; D",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": [
+        "B",
+        "D"
+      ],
+      "correctAnswerSets": null,
+      "correctAnswerIndices": [
+        1,
+        3
+      ],
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B; D.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q48",
+      "questionNumber": 48,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Two passive two-port networks P and Q are connected as shown in the figure. The\n40 Ω 60 Ω\nimpedance matrix of network P is 𝑍 = [ ]. The admittance matrix of\n𝐏 80 Ω 100 Ω\n5 S −2.5 S\nnetwork Q is 𝑌 = [ ]. Let the ABCD matrix of the two-port\n𝐐 −2.5 S 1 S\n𝛼 𝛽\nnetwork R in the figure be [ ]. The value of 𝛽 in Ω is _____________ (rounded\n𝛾 𝛿\noff to 2 decimal places).\nTwo-port Two-port\nnetwork network\nP Q\nTwo-port network R",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "-19.90 to -19.70",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": -19.9,
+        "max": -19.7
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is -19.90 to -19.70.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q48_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q48_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q49",
+      "questionNumber": 49,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "For the circuit shown in the figure, the source frequency is 5000 rad/sec. The\nmutual inductance between the magnetically coupled inductors is 5 mH with their\nself inductances being 125 mH and 1 mH. The Thevenin’s impedance, 𝑍 ,\n𝑡ℎ\nbetween the terminals P and Q in Ω is _________ (rounded off to 2 decimal places).\n4 Ω 2 Ω\n𝑍\n𝑠\nP\n50 𝜇F\nSource 𝑍 𝑡ℎ 4 Ω 125 mH\n1 mH\nQ\n5 mH",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "5.32 to 5.34",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 5.32,
+        "max": 5.34
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 5.32 to 5.34.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q49_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q49_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q50",
+      "questionNumber": 50,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the circuit shown, 𝑍 = 50∠−90° Ω and 𝑍 = 200∠−30° Ω. It is supplied by\n1 2\na three phase 400 V source with the phase sequence being R-Y-B. Assume the watt\nmeters 𝑊 and 𝑊 to be ideal. The magnitude of the difference between the readings\n1 2\nof 𝑊 and 𝑊 in watts is ___________ (rounded off to 2 decimal places).\n1 2\ncc\n_ 𝑊\n+ 1\nR\npc _\n+\n𝑍 𝑍\n1 2\n+\npc\n_\nB\n𝑊 2 cc _\n+\nY",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "692 to 693",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 692.0,
+        "max": 693.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 692 to 693.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q50_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q50_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q51",
+      "questionNumber": 51,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the (𝑥, 𝑦, 𝑧) coordinate system, three point-charges 𝑄, 𝑄, and 𝛼𝑄 are located in\nfree space at (−1, 0, 0), (1, 0, 0), and (0, −1, 0), respectively. The value of 𝛼 for the\nelectric field to be zero at (0, 0.5, 0) is ______________ (rounded off to 1 decimal\nplace).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "-1.7 to -1.5",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": -1.7,
+        "max": -1.5
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is -1.7 to -1.5.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q52",
+      "questionNumber": 52,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The given equation represents a magnetic field strength 𝐻̅(𝑟, 𝜃, 𝜙) in the spherical\ncoordinate system, in free space. Here, 𝑟̂ and 𝜃̂ represent the unit vectors along 𝑟\nand 𝜃, respectively. The value of 𝑃 in the equation should be ____________\n(rounded off to the nearest integer).\n1\n𝐻̅(𝑟, 𝜃, 𝜙) = (𝑟̂𝑃cos 𝜃 + 𝜃̂ sin 𝜃)\n𝑟3",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2 to 2",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2 to 2.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q53",
+      "questionNumber": 53,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "If the energy of a continuous-time signal 𝑥(𝑡) is 𝐸 and the energy of the signal\n2𝑥(2𝑡−1) is 𝑐𝐸, then 𝑐 is _____ (rounded off to 1 decimal place).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "2.0 to 2.0",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2.0 to 2.0.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q54",
+      "questionNumber": 54,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A 3-phase star connected slip ring induction motor has the following parameters\nreferred to the stator:\n𝑅 = 3 Ω, 𝑋 = 2 Ω, 𝑋′ = 2 Ω, 𝑅′ = 2.5 Ω\n𝑠 𝑠 𝑟 𝑟\nThe per phase stator to rotor effective turns ratio is 3:1. The rotor winding is also\nstar connected. The magnetizing reactance and core loss of the motor can be\nneglected. To have maximum torque at starting, the value of the extra resistance in\nohms (referred to the rotor side) to be connected in series with each phase of the\nrotor winding is _________ (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.26 to 0.29",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.26,
+        "max": 0.29
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.26 to 0.29.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q55",
+      "questionNumber": 55,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A 5 kW, 220 V DC shunt motor has 0.5 Ω armature resistance including brushes.\nThe motor draws a no-load current of 3 A. The field current is constant at 1 A.\nAssuming that the core and rotational losses are constant and independent of the\nload, the current (in amperes) drawn by the motor while delivering the rated load,\nfor the best possible efficiency, is ________ (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "27.19 to 27.39",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 27.19,
+        "max": 27.39
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 27.19 to 27.39.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q56",
+      "questionNumber": 56,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "The single line diagram of a lossless system is shown in the figure. The system is\noperating in steady-state at a stable equilibrium point with the power output of the\ngenerator being 𝑃 sin 𝛿, where 𝛿 is the load angle and the mechanical power\n𝑚𝑎𝑥\ninput is 0.5𝑃 . A fault occurs on line 2 such that the power output of the generator\n𝑚𝑎𝑥\nis less than 0.5𝑃 during the fault. After the fault is cleared by opening line 2, the\n𝑚𝑎𝑥\npower output of the generator is {𝑃 /√2} sin 𝛿. If the critical fault clearing angle\n𝑚𝑎𝑥\nis 𝜋/2 radians, the accelerating area on the power angle curve is ______ times 𝑃\n𝑚𝑎𝑥\n(rounded off to 2 decimal places).\nLine 1\nLine 2\nGenerator Infinite\nbus bus",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.10 to 0.12",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.1,
+        "max": 0.12
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.10 to 0.12.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q56_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q56_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q57",
+      "questionNumber": 57,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the closed-loop system shown in the figure with\n𝐾(𝑠2 −2𝑠+ 2)\n𝐺(𝑠) = .\n(𝑠2 + 2𝑠+ 5)\nThe root locus for the closed-loop system is to be drawn for 0 ≤ 𝐾 < ∞. The angle\nof departure (between 0° and 360°) of the root locus branch drawn from the pole\n(−1 + 𝑗2), in degrees, is _________________ (rounded off to the nearest integer).\n𝑅(𝑠) + 𝐶(𝑠)\n𝐺(𝑠)\n_",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "4 to 8",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 4.0,
+        "max": 8.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 4 to 8.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q57_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q57_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q58",
+      "questionNumber": 58,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the stable closed-loop system shown in the figure. The asymptotic Bode\nmagnitude plot of 𝐺(𝑠) has a constant slope of −20 dB/decade at least till\n100 rad/sec with the gain crossover frequency being 10 rad/sec. The asymptotic\nBode phase plot remains constant at −90° at least till 𝜔 = 10 rad/sec. The steady-\nstate error of the closed-loop system for a unit ramp input is ______________\n(rounded off to 2 decimal places).\n𝑅(𝑠) + 𝐶(𝑠)\n𝐺(𝑠)\n_",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.09 to 0.11",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.09,
+        "max": 0.11
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.09 to 0.11.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q58_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q58_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q59",
+      "questionNumber": 59,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "Consider the stable closed-loop system shown in the figure. The magnitude and\nphase values of the frequency response of 𝐺(𝑠) are given in the table. The value of\nthe gain 𝐾 (> 0) for a 50° phase margin is _______ (rounded off to 2 decimal\n𝐼\nplaces).\n𝜔 in rad/sec Magnitude in dB Phase in degrees\n0.5 −7 −40\n1.0 −10 −80\n2.0 −18 −130\n10.0 −40 −200\n𝑅(𝑠) + 𝐶(𝑠)\n𝐾\n𝐼\n𝐺(𝑠)\n𝑠\n_",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.11 to 1.13",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.11,
+        "max": 1.13
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.11 to 1.13.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q59_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q59_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q60",
+      "questionNumber": 60,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the given circuit, the diodes are ideal. The current 𝐼 through the diode 𝐷1 in\nmilliamperes is ___________ (rounded off to two decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "1.64 to 1.70",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 1.64,
+        "max": 1.7
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.64 to 1.70.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q60_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q60_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q61",
+      "questionNumber": 61,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A difference amplifier is shown in the figure. Assume the op-amp to be ideal. The\nCMRR (in dB) of the difference amplifier is _________ (rounded off to 2 decimal\nplaces).\n10.5 kΩ 101 kΩ\n+\n𝑣\nin1\n_\n_\n9.5 kΩ +\n+ 𝑣\n_o\n+\n𝑣 101.5 kΩ\nin2 _",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "39.50 to 41.50",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 39.5,
+        "max": 41.5
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 39.50 to 41.50.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q61_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q61_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q62",
+      "questionNumber": 62,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A single-phase half-controlled bridge converter supplies an inductive load with\nripple free load current. The triggering angle of the converter is 60°. The ratio of\nthe rms value of the fundamental component of the input current to the rms value\nof the total input current of the bridge is _________ (rounded off to 3 decimal\nplaces).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "0.940 to 0.970",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 0.94,
+        "max": 0.97
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0.940 to 0.970.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q63",
+      "questionNumber": 63,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A single-phase full bridge voltage source inverter (VSI) feeds a purely inductive\nload. The inverter output voltage is a square wave in 180° conduction mode. The\nfundamental frequency of the output voltage is 50 Hz. If the DC input voltage of\nthe inverter is 100 V and the value of the load inductance is 20 mH, the peak-to-\npeak load current in amperes is _________ (rounded off to the nearest integer).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "50 to 50",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 50 to 50.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q64",
+      "questionNumber": 64,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "In the DC-DC converter shown in the figure, the current through the inductor is\ncontinuous. The switching frequency is 500 Hz. The voltage (𝑉) across the load is\n𝑜\nassumed to be constant and ripple free. The peak inductor current in amperes is\n_________ (rounded off to the nearest integer).\n𝐿 = 2 mH\n𝐼 𝐼\n𝑖 𝑜\n+ +\n𝑆 𝑉 = 40 V 10 Ω\n𝑉 = 20 V _ 𝑜 _\n𝑖",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "13 to 13",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 13.0,
+        "max": 13.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 13 to 13.",
+      "diagramUrl": "/exam-assets/gate/2024/ee/q64_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ee/q64_diag.png"
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    },
+    {
+      "id": "gate-2024-ee-q65",
+      "questionNumber": 65,
+      "sectionId": "ee_core",
+      "sectionName": "Electrical Engineering",
+      "questionText": "A single-phase full-controlled thyristor converter bridge is used for regenerative\nbraking of a separately excited DC motor with the following specifications:\nRated armature voltage 210 V\nRated armature current 10 A\nRated speed 1200 rpm\nArmature resistance 1 Ω\nInput to the converter bridge 240 V at 50 Hz\nThe armature of the DC motor is fed from the\nfull-controlled bridge and the field current is kept\nconstant.\nAssume that the motor is running at 600 rpm and the armature terminals of the\nmotor are suitably reversed for regenerative braking. If the armature current of the\nmotor is to be maintained at the rated value, the triggering angle of the converter\nbridge in degrees should be ____________ (rounded off to 2 decimal places).",
+      "questionType": "NAT",
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
+      "correctAnswer": "113.00 to 116.00",
+      "correctAnswerIndex": -1,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": {
+        "min": 113.0,
+        "max": 116.0
+      },
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official accepted numerical range provided by IISc Bengaluru is 113.00 to 116.00.",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.0,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-11",
+      "shift": "Shift 2 (Afternoon: 14:30 - 17:30)",
+      "tier": "Single Stage",
+      "paperCode": "EE",
+      "discipline": "Electrical Engineering",
+      "language": "English"
+    }
+  ]
+}
