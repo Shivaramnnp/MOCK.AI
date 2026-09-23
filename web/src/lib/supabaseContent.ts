@@ -68,13 +68,24 @@ export function getStorageBaseUrl(): string {
  *   '/exam-assets/gate/2025/cs-1/q5_diag.png'
  *   → 'https://nvvscqxsrechenyqcwli.supabase.co/storage/v1/object/public/exam-assets/gate/2025/cs-1/q5_diag.png'
  *
+ * If already a full URL or data URI, returns as-is.
  * Falls back to the original local path when Project 2 is not configured.
  */
 export function resolveAssetUrl(localPath: string | null | undefined): string | null {
   if (!localPath) return null;
+  // If already a full URL or data URI, return as-is
+  if (
+    localPath.startsWith('http://') ||
+    localPath.startsWith('https://') ||
+    localPath.startsWith('data:') ||
+    localPath.startsWith('//')
+  ) {
+    return localPath;
+  }
   if (!isContentBackendAvailable()) return localPath;
 
-  // Strip leading '/exam-assets/' prefix since the bucket is 'exam-assets'
-  const stripped = localPath.replace(/^\/exam-assets\//, '');
+  // Strip leading '/exam-assets/' or 'exam-assets/' prefix since bucket is 'exam-assets'
+  const stripped = localPath.replace(/^\/?exam-assets\//, '');
   return `${getStorageBaseUrl()}/${stripped}`;
 }
+
