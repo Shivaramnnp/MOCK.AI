@@ -93,9 +93,10 @@ CONTENT_URL = "https://nvvscqxsrechenyqcwli.supabase.co"
 CONTENT_KEY = "sb_publishable_cPG2lwdWsiWhUTjctYedCw_RKoqOQnW"
 STORAGE_BUCKET = "exam-assets"
 
-# Image quality heuristics — reject if below threshold (watermark filter)
-MIN_FILE_SIZE_BYTES = 1024          # Skip files < 1 KB (likely blank / empty)
-MIN_NON_WHITE_RATIO = 0.02          # At least 2% non-white pixels (visual content check)
+# Image quality heuristics
+MIN_FILE_SIZE_BYTES = 100           # Minimum bytes for valid image header
+MIN_NON_WHITE_RATIO = 0.005         # At least 0.5% non-white pixels (visual content check)
+
 
 # ---------------------------------------------------------------------------
 # Watermark/Invalid asset detection
@@ -118,30 +119,47 @@ def compute_hash(data: bytes) -> str:
 def is_valid_image_bytes(data: bytes, path: str) -> tuple[bool, str]:
     """
     Returns (is_valid, reason).
-    Reject images that are too small or appear to be pure-white/blank.
+    Accepts valid small images (e.g. 72x22 mirrored text options).
+    Rejects truly invalid crops: solid monochrome bars, separator lines, nearly blank.
     """
     if len(data) < MIN_FILE_SIZE_BYTES:
         return False, f"file too small ({len(data)} bytes)"
     if looks_like_watermark_path(path):
         return False, "watermark path pattern"
 
-    # Try pixel-level check (requires Pillow)
     try:
         from PIL import Image
         import io
-        img = Image.open(io.BytesIO(data)).convert("RGB")
+        img = Image.open(io.BytesIO(data))
         w, h = img.size
-        if w == 0 or h == 0:
-            return False, "zero-dimension image"
-        pixels = list(img.getdata())
+        if w < 5 or h < 5:
+            return False, f"dimension too small ({w}x{h})"
+
+        # Check for extreme line aspect ratios (1px/2px separator lines)
+        if (w > 100 and h <= 2) or (h > 100 and w <= 2):
+            return False, f"separator line artifact ({w}x{h})"
+
+        # Check for single-color monochrome solid rectangle (e.g. solid black line or white rectangle)
+        ext = img.getextrema()
+        if isinstance(ext, tuple) and len(ext) > 0:
+            if isinstance(ext[0], tuple):
+                if all(c_min == c_max for c_min, c_max in ext[:3]):
+                    return False, "solid monochrome rectangle"
+            elif ext[0] == ext[1]:
+                return False, "solid monochrome rectangle"
+
+        # Check for nearly blank white images
+        rgb_img = img.convert("RGB")
+        pixels = list(rgb_img.getdata())
         non_white = sum(1 for r, g, b in pixels if not (r > 240 and g > 240 and b > 240))
-        ratio = non_white / len(pixels)
+        ratio = non_white / len(pixels) if pixels else 0
         if ratio < MIN_NON_WHITE_RATIO:
-            return False, f"nearly blank ({ratio*100:.1f}% non-white pixels)"
+            return False, f"nearly blank ({ratio*100:.2f}% non-white pixels)"
+
     except ImportError:
         pass  # Pillow not installed — skip pixel check
-    except Exception:
-        pass  # Corrupt image — let Supabase handle it
+    except Exception as e:
+        return False, f"corrupt image ({e})"
 
     return True, "ok"
 

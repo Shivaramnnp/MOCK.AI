@@ -30,7 +30,7 @@ from supabase import create_client
 CONTENT_URL   = "https://nvvscqxsrechenyqcwli.supabase.co"
 STORAGE_BUCKET = "exam-assets"
 PUBLIC_ASSETS = Path("/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public/exam-assets")
-MIN_BYTES     = 512
+MIN_BYTES     = 100
 
 WATERMARK_PATTERNS = ["watermark", "_wm_", "_bg_"]
 
@@ -45,14 +45,30 @@ def is_valid_image(data: bytes, path: str) -> tuple[bool, str]:
     try:
         from PIL import Image
         import io
-        img = Image.open(io.BytesIO(data)).convert("RGB")
-        pixels = list(img.getdata())
+        img = Image.open(io.BytesIO(data))
+        w, h = img.size
+        if w < 5 or h < 5:
+            return False, f"dimension too small ({w}x{h})"
+
+        if (w > 100 and h <= 2) or (h > 100 and w <= 2):
+            return False, f"separator line artifact ({w}x{h})"
+
+        ext = img.getextrema()
+        if isinstance(ext, tuple) and len(ext) > 0:
+            if isinstance(ext[0], tuple):
+                if all(c_min == c_max for c_min, c_max in ext[:3]):
+                    return False, "solid monochrome rectangle"
+            elif ext[0] == ext[1]:
+                return False, "solid monochrome rectangle"
+
+        rgb_img = img.convert("RGB")
+        pixels = list(rgb_img.getdata())
         if not pixels: return False, "no pixels"
         non_white = sum(1 for r,g,b in pixels if not (r>240 and g>240 and b>240))
-        if non_white / len(pixels) < 0.02:
-            return False, f"blank ({non_white/len(pixels)*100:.1f}% non-white)"
-    except Exception:
-        pass
+        if non_white / len(pixels) < 0.005:
+            return False, f"blank ({non_white/len(pixels)*100:.2f}% non-white)"
+    except Exception as e:
+        return False, f"corrupt ({e})"
     return True, "ok"
 
 def main():
@@ -76,31 +92,36 @@ def main():
     else:
         search_paths = ["gate", "ssc"]
 
-    all_pngs = []
+    all_images = []
     for sp in search_paths:
         base = PUBLIC_ASSETS / sp
         if args.year and sp == "gate":
             base = PUBLIC_ASSETS / "gate" / str(args.year)
-        pngs = sorted(base.rglob("*.png")) if base.exists() else []
-        all_pngs.extend(pngs)
+        if base.exists():
+            files = sorted(
+                list(base.rglob("*.png")) +
+                list(base.rglob("*.jpeg")) +
+                list(base.rglob("*.jpg"))
+            )
+            all_images.extend(files)
 
-    print("=" * 70)
-    print(f"MOCK.AI — Image Upload to Supabase Storage")
-    print("=" * 70)
-    print(f"  Bucket: {STORAGE_BUCKET}")
-    print(f"  Images found: {len(all_pngs)}")
-    print()
+    print("=" * 70, flush=True)
+    print("MOCK.AI — Image Upload to Supabase Storage", flush=True)
+    print("=" * 70, flush=True)
+    print(f"  Bucket: {STORAGE_BUCKET}", flush=True)
+    print(f"  Images found: {len(all_images)}", flush=True)
+    print(flush=True)
 
     seen_hashes = set()
     uploaded = skipped = rejected = errors = 0
     start = datetime.datetime.now()
 
-    for i, png_path in enumerate(all_pngs, 1):
+    for i, img_path in enumerate(all_images, 1):
         # Convert absolute path to storage path
-        rel = png_path.relative_to(PUBLIC_ASSETS)
+        rel = img_path.relative_to(PUBLIC_ASSETS)
         storage_path = str(rel).replace("\\", "/")
 
-        data = png_path.read_bytes()
+        data = img_path.read_bytes()
         h    = compute_hash(data)
 
         # Dedup
@@ -110,15 +131,15 @@ def main():
         seen_hashes.add(h)
 
         # Validate
-        valid, reason = is_valid_image(data, str(png_path))
+        valid, reason = is_valid_image(data, str(img_path))
         if not valid:
             rejected += 1
             if rejected <= 5:
-                print(f"  ✗ Rejected: {png_path.name} ({reason})")
+                print(f"  ✗ Rejected: {img_path.name} ({reason})", flush=True)
             continue
 
         # Upload
-        mime = mimetypes.guess_type(str(png_path))[0] or "image/png"
+        mime = mimetypes.guess_type(str(img_path))[0] or "image/png"
         try:
             sb.storage.from_(STORAGE_BUCKET).upload(
                 path=storage_path,
@@ -129,8 +150,8 @@ def main():
             if uploaded % 100 == 0 or i <= 5:
                 elapsed = (datetime.datetime.now() - start).total_seconds()
                 rate = uploaded / elapsed if elapsed > 0 else 0
-                remaining = (len(all_pngs) - i) / rate if rate > 0 else 0
-                print(f"  [{i}/{len(all_pngs)}] Uploaded: {uploaded} | Rate: {rate:.0f}/s | ETA: {remaining/60:.1f}min")
+                remaining = (len(all_images) - i) / rate if rate > 0 else 0
+                print(f"  [{i}/{len(all_images)}] Uploaded: {uploaded} | Rate: {rate:.0f}/s | ETA: {remaining/60:.1f}min", flush=True)
         except Exception as e:
             err_str = str(e).lower()
             if "already exists" in err_str or "duplicate" in err_str:
@@ -138,7 +159,7 @@ def main():
             else:
                 errors += 1
                 if errors <= 5:
-                    print(f"  ⚠️  Upload error {png_path.name}: {str(e)[:60]}")
+                    print(f"  ⚠️  Upload error {img_path.name}: {str(e)[:60]}", flush=True)
 
     elapsed = (datetime.datetime.now() - start).total_seconds()
     print()

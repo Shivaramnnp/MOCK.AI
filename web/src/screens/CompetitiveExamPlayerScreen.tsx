@@ -26,64 +26,7 @@ import {
 import { ExamService } from '../services/examService';
 import { LatexRenderer } from '../components/LatexRenderer';
 import { resolveAssetUrl } from '../lib/supabaseContent';
-
-const QuestionDiagramView: React.FC<{
-  url: string;
-  dIdx: number;
-  questionIndex: number;
-  onZoom: (url: string) => void;
-}> = ({ url, dIdx, questionIndex, onZoom }) => {
-  const [hasError, setHasError] = useState(false);
-  const resolved = resolveAssetUrl(url) ?? url;
-
-  if (hasError || !resolved) return null;
-
-  return (
-    <div className="p-3 bg-white rounded-xl border border-surface-border dark:border-darkSurface-border shadow-xs max-w-xl mx-auto flex flex-col items-center group relative">
-      <img
-        src={resolved}
-        alt={`Figure ${dIdx + 1} for question ${questionIndex + 1}`}
-        className="rounded-lg max-h-72 object-contain mx-auto cursor-zoom-in hover:opacity-95 transition-opacity"
-        onClick={() => onZoom(resolved)}
-        onError={() => setHasError(true)}
-      />
-      <button
-        type="button"
-        onClick={() => onZoom(resolved)}
-        className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold text-surface-muted hover:text-brand-primary transition-colors cursor-pointer"
-      >
-        <ZoomIn className="w-3.5 h-3.5" />
-        <span>Click to enlarge figure</span>
-      </button>
-    </div>
-  );
-};
-
-const OptionImageView: React.FC<{
-  url: string;
-  optLetter: string;
-  onZoom: (url: string) => void;
-}> = ({ url, optLetter, onZoom }) => {
-  const [hasError, setHasError] = useState(false);
-  const resolved = resolveAssetUrl(url) ?? url;
-
-  if (hasError || !resolved) return null;
-
-  return (
-    <div className="inline-block p-2 bg-white rounded-lg border border-surface-border/70 shadow-2xs">
-      <img
-        src={resolved}
-        alt={`Option ${optLetter} figure`}
-        className="max-h-24 object-contain cursor-zoom-in"
-        onClick={(e) => {
-          e.stopPropagation();
-          onZoom(resolved);
-        }}
-        onError={() => setHasError(true)}
-      />
-    </div>
-  );
-};
+import { ExamAsset } from '../components/ExamAsset';
 
 interface CompetitiveExamPlayerScreenProps {
   paper: ExamPaper;
@@ -643,11 +586,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                 {((currentQuestion.diagramUrls && currentQuestion.diagramUrls.length > 0) || currentQuestion.diagramUrl) && (
                   <div className="my-4 space-y-3">
                     {(currentQuestion.diagramUrls || [currentQuestion.diagramUrl!]).map((url, dIdx) => (
-                      <QuestionDiagramView
+                      <ExamAsset
                         key={`${currentQuestion.id}-diag-${dIdx}`}
                         url={url}
-                        dIdx={dIdx}
-                        questionIndex={currentIndex}
+                        alt={`Figure ${dIdx + 1} for question ${currentIndex + 1}`}
+                        variant="diagram"
                         onZoom={setZoomImageUrl}
                       />
                     ))}
@@ -752,10 +695,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                           </div>
                           <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2">
                             {optImage && (
-                              <OptionImageView
+                              <ExamAsset
                                 key={`${currentQuestion.id}-msq-opt-${optIdx}`}
                                 url={optImage}
-                                optLetter={optLetter}
+                                alt={`Option ${optLetter} figure`}
+                                variant="option"
                                 onZoom={setZoomImageUrl}
                               />
                             )}
@@ -802,10 +746,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                           </div>
                           <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2">
                             {optImage && (
-                              <OptionImageView
+                              <ExamAsset
                                 key={`${currentQuestion.id}-mcq-opt-${optIdx}`}
                                 url={optImage}
-                                optLetter={optLetter}
+                                alt={`Option ${optLetter} figure`}
+                                variant="option"
                                 onZoom={setZoomImageUrl}
                               />
                             )}

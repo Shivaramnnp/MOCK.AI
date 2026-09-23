@@ -16,6 +16,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
         return katex.renderToString(math.trim(), {
           displayMode: true,
           throwOnError: false,
+          output: 'html',
         });
       } catch {
         return `$$${math}$$`;
@@ -28,6 +29,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
         return katex.renderToString(math.trim(), {
           displayMode: false,
           throwOnError: false,
+          output: 'html',
         });
       } catch {
         return `$${math}$`;

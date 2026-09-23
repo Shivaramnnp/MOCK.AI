@@ -32,17 +32,32 @@
   padding-bottom: env(safe-area-inset-bottom, 0.5rem);
 }
 
-/* KaTeX formula responsiveness */
+/* KaTeX formula responsiveness & overflow containment */
 .katex {
   font-size: 1.05em !important;
   max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.katex-html {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
 }
 
 .katex-display {
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.5rem 0;
   margin: 0.5rem 0 !important;
+}
+
+/* Ensure fraction bars and rules stay within container */
+.katex .mfrac .frac-line {
+  max-width: 100% !important;
 }
 
 /* Text line clamps */
