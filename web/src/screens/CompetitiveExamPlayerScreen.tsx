@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
+
   Clock,
   ChevronLeft,
   ChevronRight,
@@ -24,6 +25,8 @@ import {
 } from '../types';
 import { ExamService } from '../services/examService';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { resolveAssetUrl } from '../lib/supabaseContent';
+
 
 interface CompetitiveExamPlayerScreenProps {
   paper: ExamPaper;
@@ -588,14 +591,15 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                         className="p-3 bg-white rounded-xl border border-surface-border dark:border-darkSurface-border shadow-xs max-w-xl mx-auto flex flex-col items-center group relative"
                       >
                         <img
-                          src={url}
+                          src={resolveAssetUrl(url) ?? url}
                           alt={`Figure ${dIdx + 1} for question ${currentIndex + 1}`}
                           className="rounded-lg max-h-72 object-contain mx-auto cursor-zoom-in hover:opacity-95 transition-opacity"
-                          onClick={() => setZoomImageUrl(url)}
+                          onClick={() => setZoomImageUrl(resolveAssetUrl(url))}
                         />
                         <button
                           type="button"
-                          onClick={() => setZoomImageUrl(url)}
+                          onClick={() => setZoomImageUrl(resolveAssetUrl(url))}
+
                           className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold text-surface-muted hover:text-brand-primary transition-colors cursor-pointer"
                         >
                           <ZoomIn className="w-3.5 h-3.5" />
@@ -706,12 +710,12 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                             {optImage && (
                               <div className="inline-block p-2 bg-white rounded-lg border border-surface-border/70 shadow-2xs">
                                 <img
-                                  src={optImage}
+                                  src={resolveAssetUrl(optImage) ?? optImage}
                                   alt={`Option ${optLetter} figure`}
                                   className="max-h-24 object-contain cursor-zoom-in"
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    setZoomImageUrl(optImage);
+                                    setZoomImageUrl(resolveAssetUrl(optImage) ?? optImage);
                                   }}
                                 />
                               </div>
@@ -761,12 +765,12 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                             {optImage && (
                               <div className="inline-block p-2 bg-white rounded-lg border border-surface-border/70 shadow-2xs">
                                 <img
-                                  src={optImage}
+                                  src={resolveAssetUrl(optImage) ?? optImage}
                                   alt={`Option ${optLetter} figure`}
                                   className="max-h-24 object-contain cursor-zoom-in"
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    setZoomImageUrl(optImage);
+                                    setZoomImageUrl(resolveAssetUrl(optImage) ?? optImage);
                                   }}
                                 />
                               </div>
