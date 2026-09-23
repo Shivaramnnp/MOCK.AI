@@ -584,14 +584,16 @@ def main():
     parser.add_argument("--exam",     type=str,  default=None, help="Filter by exam ID (e.g. gate, ssc-chsl)")
     parser.add_argument("--year",     type=int,  default=None, help="Filter by year (e.g. 2025)")
     parser.add_argument("--paper",    type=str,  default=None, help="Migrate only one specific paper ID")
+    parser.add_argument("--skip-existing", action="store_true", help="Skip papers that already exist in exam_papers")
     args = parser.parse_args()
 
     print("=" * 70)
     print("MOCK.AI — SUPABASE PROJECT 2 CONTENT MIGRATION")
     print("=" * 70)
-    print(f"  Target:  {CONTENT_URL}")
-    print(f"  Dry run: {args.dry_run}")
-    print(f"  Filter:  exam={args.exam or 'ALL'}, year={args.year or 'ALL'}, paper={args.paper or 'ALL'}")
+    print(f"  Target:        {CONTENT_URL}")
+    print(f"  Dry run:       {args.dry_run}")
+    print(f"  Skip existing: {args.skip_existing}")
+    print(f"  Filter:        exam={args.exam or 'ALL'}, year={args.year or 'ALL'}, paper={args.paper or 'ALL'}")
     print()
 
     # ---- Discover JSON files ----
@@ -634,10 +636,30 @@ def main():
         print("  ✗ Cannot set up storage bucket. Aborting.")
         sys.exit(1)
 
+    existing_paper_ids = set()
+    if args.skip_existing:
+        try:
+            r = client.table("exam_papers").select("id").execute()
+            existing_paper_ids = {row["id"] for row in (r.data or [])}
+            print(f"  Found {len(existing_paper_ids)} existing papers in DB. These will be skipped.\n")
+        except Exception as e:
+            print(f"  Could not fetch existing papers: {e}")
+
     # ---- Migrate each paper ----
     print(f"\n  Migrating {len(json_files)} papers...\n" + "-" * 70)
 
     for json_path in json_files:
+        if args.skip_existing:
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    pdata = json.load(f)
+                    pid = pdata.get("id")
+                    if pid in existing_paper_ids:
+                        print(f"  ~ Already in DB: {pid} (skipping)")
+                        stats.papers_skipped_duplicate += 1
+                        continue
+            except Exception:
+                pass
         migrate_paper(client, json_path, args.dry_run, stats, asset_cache)
 
     # ---- Record ingestion run ----
