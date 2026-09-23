@@ -192,6 +192,7 @@ def parse_tcs_ion_cbt(pdf_path, year):
     subTitle = f"Official Previous Year Paper ({shift_time})"
     
     # 2. Extract tick icons xrefs across the document
+    # 2. Extract tick and cross icons xrefs across the document using color saturation
     tick_xrefs = set()
     cross_xrefs = set()
     
@@ -205,51 +206,31 @@ def parse_tcs_ion_cbt(pdf_path, year):
             if w <= 35 and h <= 35:
                 img = Image.open(io.BytesIO(meta['image'])).convert('RGB')
                 pixels = list(img.getdata())
-                colored = [p for p in pixels if p[0] < 240 or p[1] < 240 or p[2] < 240]
-                if colored:
-                    avg_r = sum(p[0] for p in colored) / len(colored)
-                    avg_g = sum(p[1] for p in colored) / len(colored)
-                    if avg_g > avg_r:
-                        tick_xrefs.add(xref)
-                    else:
-                        cross_xrefs.add(xref)
+                sat_red = [p for p in pixels if p[0] > 120 and p[0] > p[1] + 30 and p[0] > p[2] + 30]
+                sat_green = [p for p in pixels if p[1] > 120 and p[1] > p[0] + 30 and p[1] > p[2] + 30]
+                if len(sat_green) > 20 and len(sat_green) > len(sat_red):
+                    tick_xrefs.add(xref)
+                elif len(sat_red) > 20 and len(sat_red) > len(sat_green):
+                    cross_xrefs.add(xref)
                         
-    # 3. Process pages and extract questions
+    # 3. Process pages and extract questions via cross-page stream
     asset_dir = os.path.join(PUBLIC_ASSETS_DIR, 'ssc/chsl', str(year), paper_id)
     web_base_url = f"/exam-assets/ssc/chsl/{year}/{paper_id}"
     
-    questions = []
-    current_sec_id = 'english'
-    current_sec_name = 'English Language'
-    sec_q_counter = 0
-    overall_q_num = 0
-    
-    # Track statistics for audit
-    visual_q_count = 0
-    diag_count = 0
-    opt_img_count = 0
-    tables_count = 0
-    graphs_count = 0
-    
-    # Vector outline fallback: if entire document has < 100 characters of text
-    total_doc_text = sum(len(doc[pi].get_text()) for pi in range(len(doc)))
-    use_ocr = (total_doc_text < 500 and pytesseract is not None)
+    # Collect all blocks, images, ticks across the entire document
+    all_blocks = []
+    all_images = []
+    all_ticks = []
     
     for p_idx, page in enumerate(doc):
-        # OCR fallback for vector drawing pages
-        if use_ocr:
-            pix = page.get_pixmap(dpi=150)
-            img = Image.open(io.BytesIO(pix.tobytes('png')))
-            ocr_text = pytesseract.image_to_string(img)
-            # Synthesize text blocks from OCR lines
-            lines = [l.strip() for l in ocr_text.split('\n') if l.strip()]
-            blocks = [(0, i*25, 500, (i+1)*25, l, 0, 0) for i, l in enumerate(lines)]
-        else:
-            blocks = page.get_text('blocks')
-            blocks.sort(key=lambda b: b[1])
+        for b in page.get_text('blocks'):
+            all_blocks.append({
+                'page': p_idx,
+                'pos': (p_idx, b[1]),
+                'bbox': b[:4],
+                'text': b[4]
+            })
             
-        # Collect non-ad, non-icon images on page
-        page_imgs = []
         for info in page.get_images():
             xref = info[0]
             if xref in tick_xrefs or xref in cross_xrefs:
@@ -264,222 +245,256 @@ def parse_tcs_ion_cbt(pdf_path, year):
                     continue
                 if r.x1 < 78 and (w <= 35 or h <= 35):
                     continue
-                page_imgs.append({
-                    'xref': xref,
+                all_images.append({
+                    'page': p_idx,
+                    'pos': (p_idx, r.y0),
                     'rect': r,
+                    'xref': xref,
                     'meta': meta,
                     'w': w,
                     'h': h
                 })
                 
-        # Collect ticks on this page with vertical position
-        page_ticks = []
         for xref in tick_xrefs:
             for r in page.get_image_rects(xref):
-                page_ticks.append(r)
-        page_ticks.sort(key=lambda r: r.y0)
+                all_ticks.append({
+                    'page': p_idx,
+                    'pos': (p_idx, r.y0),
+                    'rect': r
+                })
+
+    # Markers for Sections and Questions
+    markers = []
+    for b in all_blocks:
+        t = b['text'].strip()
+        if 'Section :' in t or 'Section:' in t:
+            markers.append({'type': 'section', 'pos': b['pos'], 'text': t})
+        else:
+            m = re.search(r'(?:^|\n)\s*Q\s*\.?\s*(\d+)', t)
+            if m and b['bbox'][0] < 80:
+                markers.append({'type': 'question', 'q_num': int(m.group(1)), 'pos': b['pos'], 'text': t})
+
+    markers.sort(key=lambda m: m['pos'])
+
+    questions = []
+    current_sec_id = 'english'
+    current_sec_name = 'English Language'
+    overall_q_num = 0
+    visual_q_count = 0
+    diag_count = 0
+    opt_img_count = 0
+    tables_count = 0
+    graphs_count = 0
+
+    for idx, m in enumerate(markers):
+        if m['type'] == 'section':
+            sec_raw = m['text'].split(':')[-1].strip().lower()
+            if 'intelligence' in sec_raw or 'reasoning' in sec_raw:
+                current_sec_id = 'reasoning'
+                current_sec_name = 'General Intelligence & Reasoning'
+            elif 'quantitative' in sec_raw or 'quant' in sec_raw:
+                current_sec_id = 'quant'
+                current_sec_name = 'Quantitative Aptitude'
+            elif 'awareness' in sec_raw:
+                current_sec_id = 'general_awareness'
+                current_sec_name = 'General Awareness'
+            elif 'english' in sec_raw:
+                current_sec_id = 'english'
+                current_sec_name = 'English Language'
+            elif 'mathematical' in sec_raw:
+                current_sec_id = 'quant'
+                current_sec_name = 'Mathematical Abilities'
+            elif 'computer' in sec_raw:
+                current_sec_id = 'computer'
+                current_sec_name = 'Computer Knowledge Module'
+            continue
+            
+        start_pos = m['pos']
+        end_pos = markers[idx + 1]['pos'] if idx + 1 < len(markers) else (len(doc), 99999)
+        overall_q_num += 1
         
-        # Scan page elements
-        items = []
-        for b in blocks:
-            t = b[4].strip()
-            if 'Section :' in t or 'Section:' in t:
-                items.append(('section', b[1], t))
-            else:
-                m = re.search(r'(?:^|\n)\s*Q\s*\.?\s*(\d+)', t)
-                if m:
-                    items.append(('question', b[1], int(m.group(1)), b[4]))
-                    
-        for idx_item, item in enumerate(items):
-            if item[0] == 'section':
-                sec_raw = item[2].split(':')[-1].strip().lower()
-                if 'intelligence' in sec_raw or 'reasoning' in sec_raw:
-                    current_sec_id = 'reasoning'
-                    current_sec_name = 'General Intelligence & Reasoning'
-                elif 'quantitative' in sec_raw or 'quant' in sec_raw:
-                    current_sec_id = 'quant'
-                    current_sec_name = 'Quantitative Aptitude'
-                elif 'awareness' in sec_raw:
-                    current_sec_id = 'general_awareness'
-                    current_sec_name = 'General Awareness'
-                elif 'english' in sec_raw:
-                    current_sec_id = 'english'
-                    current_sec_name = 'English Language'
-                elif 'mathematical' in sec_raw:
-                    current_sec_id = 'quant'
-                    current_sec_name = 'Mathematical Abilities'
-                elif 'computer' in sec_raw:
-                    current_sec_id = 'computer'
-                    current_sec_name = 'Computer Knowledge Module'
-                sec_q_counter = 0
-            elif item[0] == 'question':
-                q_local = item[2]
-                q_y = item[1]
-                sec_q_counter += 1
-                overall_q_num += 1
+        q_blocks = [b for b in all_blocks if start_pos <= b['pos'] < end_pos]
+        q_imgs = [img for img in all_images if start_pos <= img['pos'] < end_pos]
+        q_ticks = [t for t in all_ticks if start_pos <= t['pos'] < end_pos]
+        
+        # Ans marker
+        ans_pos = None
+        for b in q_blocks:
+            if 'Ans' in b['text']:
+                ans_pos = b['pos']
+                break
                 
-                next_y = items[idx_item+1][1] if idx_item+1 < len(items) else page.rect.height
-                
-                # Question text & options extraction
-                q_block_text = item[3]
-                ans_y = None
-                
-                # Search for Ans marker
-                for b in blocks:
-                    if q_y <= b[1] < next_y and 'Ans' in b[4]:
-                        ans_y = b[1]
-                        break
-                        
-                # Extract question prompt text
-                q_text_lines = []
-                ans_reached = False
-                for b in blocks:
-                    if q_y <= b[1] < next_y:
-                        if 'Ans' in b[4]:
-                            ans_reached = True
-                            # Capture text before 'Ans' if in same block
-                            parts = b[4].split('Ans')
-                            if parts[0].strip():
-                                q_text_lines.append(parts[0].strip())
+        # Question prompt text
+        prompt_parts = []
+        for b in q_blocks:
+            if ans_pos and b['pos'] >= ans_pos:
+                if b['pos'] == ans_pos:
+                    p = b['text'].split('Ans')[0].strip()
+                    if p:
+                        prompt_parts.append(p)
+                break
+            prompt_parts.append(b['text'].strip())
+            
+        raw_q_text = clean_watermarks('\n'.join(prompt_parts))
+        raw_q_text = re.sub(r'^(?:Q\.?\s*\d+\s*)', '', raw_q_text).strip()
+        
+        # Split diagrams vs option images
+        if ans_pos:
+            diag_imgs = [img for img in q_imgs if img['pos'] < ans_pos]
+            opt_imgs = [img for img in q_imgs if img['pos'] >= ans_pos]
+        else:
+            diag_imgs = q_imgs
+            opt_imgs = []
+            
+        opt_imgs.sort(key=lambda img: img['pos'])
+        
+        # Option texts
+        opt_texts = ["", "", "", ""]
+        opt_positions = {}
+        for b in q_blocks:
+            if ans_pos and b['pos'] >= ans_pos:
+                matches = list(re.finditer(r'(?:^|\n)\s*([1-4])\.\s*(.*?)(?=\n\s*[1-4]\.|\n\s*Question ID|\n\s*Status|\n\s*Chosen Option|$)', b['text'], re.DOTALL))
+                for om in matches:
+                    opt_idx = int(om.group(1)) - 1
+                    val = clean_watermarks(om.group(2).strip())
+                    opt_texts[opt_idx] = val
+                    opt_positions[opt_idx] = b['pos']
+
+        # 1. Process diagrams
+        diag_urls = []
+        for d_i, d in enumerate(diag_imgs):
+            ext = d['meta']['ext']
+            fname_diag = f"q{overall_q_num}_diag_{d_i+1}.{ext}" if len(diag_imgs) > 1 else f"q{overall_q_num}_diag.{ext}"
+            dest_path = os.path.join(asset_dir, fname_diag)
+            web_url = f"{web_base_url}/{fname_diag}"
+            saved_url = get_or_save_asset(d['meta']['image'], ext, dest_path, web_url)
+            diag_urls.append(saved_url)
+            diag_count += 1
+            if d['w'] > 500 and d['h'] > 200:
+                graphs_count += 1
+            elif d['w'] > 400 and d['h'] < 100:
+                tables_count += 1
+
+        # 2. Process option images and align by vertical coordinate
+        option_images = [None, None, None, None]
+        if len(opt_imgs) == 4:
+            for opt_i in range(4):
+                opt_meta = opt_imgs[opt_i]['meta']
+                ext = opt_meta['ext']
+                letter = ['a', 'b', 'c', 'd'][opt_i]
+                fname_opt = f"q{overall_q_num}_opt_{letter}.{ext}"
+                dest_path = os.path.join(asset_dir, fname_opt)
+                web_url = f"{web_base_url}/{fname_opt}"
+                saved_url = get_or_save_asset(opt_meta['image'], ext, dest_path, web_url)
+                option_images[opt_i] = saved_url
+                opt_img_count += 1
+        elif 0 < len(opt_imgs) < 4:
+            for opt_img in opt_imgs:
+                best_i = None
+                best_dist = 999999
+                for i in range(4):
+                    if i in opt_positions:
+                        dist = abs(opt_img['pos'][0] - opt_positions[i][0]) * 10000 + abs(opt_img['pos'][1] - opt_positions[i][1])
+                        if dist < best_dist:
+                            best_dist = dist
+                            best_i = i
+                if best_i is None or option_images[best_i] is not None:
+                    for i in range(4):
+                        if option_images[i] is None:
+                            best_i = i
                             break
-                        if not ans_reached:
-                            q_text_lines.append(b[4].strip())
-                            
-                raw_q_text = clean_watermarks('\n'.join(q_text_lines))
-                # Remove Q.X prefix
-                raw_q_text = re.sub(r'^(?:Q\.?\s*\d+\s*)', '', raw_q_text).strip()
+                if best_i is not None:
+                    opt_meta = opt_img['meta']
+                    ext = opt_meta['ext']
+                    letter = ['a', 'b', 'c', 'd'][best_i]
+                    fname_opt = f"q{overall_q_num}_opt_{letter}.{ext}"
+                    dest_path = os.path.join(asset_dir, fname_opt)
+                    web_url = f"{web_base_url}/{fname_opt}"
+                    saved_url = get_or_save_asset(opt_meta['image'], ext, dest_path, web_url)
+                    option_images[best_i] = saved_url
+                    opt_img_count += 1
+
+        # OCR fallback for small text/number images
+        if pytesseract:
+            for i in range(4):
+                if not opt_texts[i] and option_images[i]:
+                    for img in opt_imgs:
+                        m_meta = img['meta']
+                        if m_meta['width'] <= 160 and m_meta['height'] <= 60:
+                            try:
+                                pil_im = Image.open(io.BytesIO(m_meta['image'])).convert('RGB')
+                                pil_im_lg = pil_im.resize((pil_im.width * 4, pil_im.height * 4), Image.Resampling.LANCZOS)
+                                ocr_res = pytesseract.image_to_string(pil_im_lg, config='--psm 7').strip()
+                                if ocr_res and not opt_texts[i]:
+                                    opt_texts[i] = ocr_res
+                                    break
+                            except Exception:
+                                pass
+
+        # 3. Determine Correct Answer via Green Tick Icon
+        correct_idx = 0
+        if q_ticks:
+            t_pos = q_ticks[0]['pos']
+            if any(option_images) and len(opt_imgs) == 4:
+                diffs = [abs(opt['pos'][0] - t_pos[0]) * 10000 + abs(opt['pos'][1] - t_pos[1]) for opt in opt_imgs]
+                correct_idx = diffs.index(min(diffs))
+            elif opt_positions:
+                closest = min(opt_positions.items(), key=lambda p: abs(p[1][0] - t_pos[0]) * 10000 + abs(p[1][1] - t_pos[1]))
+                correct_idx = closest[0]
                 
-                # Parse 4 options text
-                opt_texts = ["", "", "", ""]
-                opt_y_positions = []
-                for b in blocks:
-                    if ans_y and ans_y <= b[1] < next_y:
-                        m_opt = re.match(r'^([1-4])\.\s*(.*)', b[4].strip(), re.DOTALL)
-                        if m_opt:
-                            opt_idx = int(m_opt.group(1)) - 1
-                            opt_texts[opt_idx] = clean_watermarks(m_opt.group(2))
-                            opt_y_positions.append((opt_idx, b[1]))
-                            
-                # Delineate diagrams vs option images
-                q_imgs = [img for img in page_imgs if q_y <= img['rect'].y0 < next_y]
-                if ans_y:
-                    diag_imgs = [img for img in q_imgs if img['rect'].y0 < ans_y]
-                    opt_imgs = [img for img in q_imgs if img['rect'].y0 >= ans_y]
-                else:
-                    diag_imgs = q_imgs
-                    opt_imgs = []
-                    
-                opt_imgs.sort(key=lambda img: img['rect'].y0)
-                
-                # 1. Process diagrams
-                diag_urls = []
-                for d_i, d in enumerate(diag_imgs):
-                    ext = d['meta']['ext']
-                    fname_diag = f"q{overall_q_num}_diag_{d_i+1}.{ext}" if len(diag_imgs) > 1 else f"q{overall_q_num}_diag.{ext}"
-                    dest_path = os.path.join(asset_dir, fname_diag)
-                    web_url = f"{web_base_url}/{fname_diag}"
-                    saved_url = get_or_save_asset(d['meta']['image'], ext, dest_path, web_url)
-                    diag_urls.append(saved_url)
-                    diag_count += 1
-                    
-                    # Detect graphs / tables by aspect ratio / size
-                    if d['w'] > 500 and d['h'] > 200:
-                        graphs_count += 1
-                    elif d['w'] > 400 and d['h'] < 100:
-                        tables_count += 1
-                        
-                # 2. Process option images
-                option_images = [None, None, None, None]
-                if len(opt_imgs) == 4:
-                    for opt_i in range(4):
-                        opt_meta = opt_imgs[opt_i]['meta']
-                        ext = opt_meta['ext']
-                        letter = ['a', 'b', 'c', 'd'][opt_i]
-                        fname_opt = f"q{overall_q_num}_opt_{letter}.{ext}"
-                        dest_path = os.path.join(asset_dir, fname_opt)
-                        web_url = f"{web_base_url}/{fname_opt}"
-                        saved_url = get_or_save_asset(opt_meta['image'], ext, dest_path, web_url)
-                        option_images[opt_i] = saved_url
-                        opt_img_count += 1
-                elif 0 < len(opt_imgs) < 4:
-                    for opt_i, img in enumerate(opt_imgs):
-                        ext = img['meta']['ext']
-                        letter = ['a', 'b', 'c', 'd'][opt_i]
-                        fname_opt = f"q{overall_q_num}_opt_{letter}.{ext}"
-                        dest_path = os.path.join(asset_dir, fname_opt)
-                        web_url = f"{web_base_url}/{fname_opt}"
-                        saved_url = get_or_save_asset(img['meta']['image'], ext, dest_path, web_url)
-                        option_images[opt_i] = saved_url
-                        opt_img_count += 1
-                        
-                # 3. Determine Correct Answer via Green Tick Icon
-                q_ticks = [t for t in page_ticks if q_y <= t.y0 < next_y]
-                correct_idx = 0
-                if q_ticks:
-                    t_y = q_ticks[0].y0
-                    # If option images are present, align with option image vertical level
-                    if any(option_images) and len(opt_imgs) == 4:
-                        diffs = [abs(opt['rect'].y0 - t_y) for opt in opt_imgs]
-                        correct_idx = diffs.index(min(diffs))
-                    elif opt_y_positions:
-                        # Align with text option y position
-                        closest = min(opt_y_positions, key=lambda p: abs(p[1] - t_y))
-                        correct_idx = closest[0]
-                        
-                ans_letter = ['A', 'B', 'C', 'D'][correct_idx]
-                
-                # 4. Clean placeholders
-                if any(option_images):
-                    rich_opts = []
-                    for idx_opt in range(4):
-                        lbl = ['A', 'B', 'C', 'D'][idx_opt]
-                        img_u = option_images[idx_opt]
-                        orig_t = opt_texts[idx_opt]
-                        is_ph = bool(re.match(r'^Option\s*\([A-D]\)$', orig_t.strip(), re.IGNORECASE))
-                        cl_t = "" if (is_ph and img_u) else orig_t
-                        opt_texts[idx_opt] = cl_t
-                        rich_opts.append({
-                            'id': lbl,
-                            'text': cl_t,
-                            'imageUrl': img_u
-                        })
-                else:
-                    rich_opts = [{'id': ['A','B','C','D'][i], 'text': opt_texts[i], 'imageUrl': None} for i in range(4)]
-                    
-                # Clean questionText placeholder if diagram exists
-                if diag_urls and (not raw_q_text or re.match(r'^Question\s*\d+$', raw_q_text.strip(), re.IGNORECASE)):
-                    raw_q_text = ""
-                elif not raw_q_text:
-                    raw_q_text = f"Question {overall_q_num}"
-                    
-                if diag_urls or any(option_images):
-                    visual_q_count += 1
-                    
-                q_obj = {
-                    "id": f"{paper_id}-q{overall_q_num}",
-                    "questionNumber": overall_q_num,
-                    "sectionId": current_sec_id,
-                    "sectionName": current_sec_name,
-                    "questionText": raw_q_text,
-                    "options": opt_texts,
-                    "optionImages": option_images if any(option_images) else None,
-                    "richOptions": rich_opts if any(option_images) else None,
-                    "correctAnswer": ans_letter,
-                    "correctAnswerIndex": correct_idx,
-                    "explanation": f"The official answer key provided by Staff Selection Commission is Option ({ans_letter}).",
-                    "diagramUrl": diag_urls[0] if diag_urls else None,
-                    "diagramUrls": diag_urls if diag_urls else None,
-                    "questionAssets": [{'type': 'image', 'url': u} for u in diag_urls] if diag_urls else None,
-                    "marks": 2.0 if tier == 'Tier 1' else 3.0,
-                    "negativeMarks": 0.5 if tier == 'Tier 1' else 1.0,
-                    "examId": "ssc-chsl",
-                    "year": int(year),
-                    "date": iso_date,
-                    "shift": shift_label,
-                    "tier": tier,
-                    "language": "English"
-                }
-                questions.append(q_obj)
+        ans_letter = ['A', 'B', 'C', 'D'][correct_idx]
+        
+        # 4. Clean placeholders
+        if any(option_images):
+            rich_opts = []
+            for idx_opt in range(4):
+                lbl = ['A', 'B', 'C', 'D'][idx_opt]
+                img_u = option_images[idx_opt]
+                orig_t = opt_texts[idx_opt]
+                is_ph = bool(re.match(r'^Option\s*\([A-D]\)$', orig_t.strip(), re.IGNORECASE))
+                cl_t = "" if (is_ph and img_u) else orig_t
+                opt_texts[idx_opt] = cl_t
+                rich_opts.append({
+                    'id': lbl,
+                    'text': cl_t,
+                    'imageUrl': img_u
+                })
+        else:
+            rich_opts = [{'id': ['A','B','C','D'][i], 'text': opt_texts[i], 'imageUrl': None} for i in range(4)]
+            
+        if diag_urls and (not raw_q_text or re.match(r'^Question\s*\d+$', raw_q_text.strip(), re.IGNORECASE)):
+            raw_q_text = ""
+        elif not raw_q_text:
+            raw_q_text = f"Question {overall_q_num}"
+            
+        if diag_urls or any(option_images):
+            visual_q_count += 1
+            
+        q_obj = {
+            "id": f"{paper_id}-q{overall_q_num}",
+            "questionNumber": overall_q_num,
+            "sectionId": current_sec_id,
+            "sectionName": current_sec_name,
+            "questionText": raw_q_text,
+            "options": opt_texts,
+            "optionImages": option_images if any(option_images) else None,
+            "richOptions": rich_opts if any(option_images) else None,
+            "correctAnswer": ans_letter,
+            "correctAnswerIndex": correct_idx,
+            "explanation": f"The official answer key provided by Staff Selection Commission is Option ({ans_letter}).",
+            "diagramUrl": diag_urls[0] if diag_urls else None,
+            "diagramUrls": diag_urls if diag_urls else None,
+            "questionAssets": [{'type': 'image', 'url': u} for u in diag_urls] if diag_urls else None,
+            "marks": 2.0 if tier == 'Tier 1' else 3.0,
+            "negativeMarks": 0.5 if tier == 'Tier 1' else 1.0,
+            "examId": "ssc-chsl",
+            "year": int(year),
+            "date": iso_date,
+            "shift": shift_label,
+            "tier": tier,
+            "language": "English"
+        }
+        questions.append(q_obj)
 
     # Build Section metadata
     sec_counts = {}
@@ -545,6 +560,8 @@ def parse_tcs_ion_cbt(pdf_path, year):
 
 def run_multiyear_ingestion():
     folders = {
+        '2024': '/Users/shivarampatel/Downloads/exam ssc/qp 2024',
+        '2023': '/Users/shivarampatel/Downloads/exam ssc/qp 2023',
         '2022': '/Users/shivarampatel/Downloads/exam ssc/qp2022',
         '2021': '/Users/shivarampatel/Downloads/exam ssc/qp 2021',
         '2020': '/Users/shivarampatel/Downloads/exam ssc/qp 2020',
@@ -553,7 +570,7 @@ def run_multiyear_ingestion():
     
     audit_reports = {}
     
-    for year in ['2022', '2021', '2020', '2019']:
+    for year in ['2024', '2023', '2022', '2021', '2020', '2019']:
         fpath = folders[year]
         pdf_files = sorted(glob.glob(os.path.join(fpath, '*.pdf')))
         

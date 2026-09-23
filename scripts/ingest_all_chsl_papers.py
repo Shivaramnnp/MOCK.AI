@@ -150,7 +150,7 @@ PAPERS_SPEC = [
     }
 ]
 
-def clean_watermarks(text):
+def clean_watermarks(text, is_option=False):
     if not text:
         return ""
     text = re.sub(r'Copyright\s*©?\s*\d*\s*Adda247', '', text, flags=re.IGNORECASE)
@@ -158,8 +158,9 @@ def clean_watermarks(text):
     text = re.sub(r'Adda247', '', text, flags=re.IGNORECASE)
     # Remove running header e.g. "1  SSC CHSL T-I Similar Paper (Held on 18 Nov Shift 1)"
     text = re.sub(r'(?:^|\n)\s*\d+\s+SSC\s+CHSL\s+T-I\s+Similar\s+Paper\s*\([^)]*\)\s*', '\n', text)
-    # Remove lone numbers on line
-    text = re.sub(r'(?:^|\n)\s*\d+\s*(?:\n|$)', '\n', text)
+    # Remove lone numbers on line ONLY for full page headers/footers, never for options
+    if not is_option and len(text) > 300:
+        text = re.sub(r'(?:^|\n)\s*\d+\s*(?:\n|$)', '\n', text)
     text = re.sub(r'[ \t]+', ' ', text)
     return text.strip()
 
@@ -228,10 +229,10 @@ def parse_format1_pdf(pdf_path, meta):
                     if a_candidates:
                         last_a = a_candidates[-1]
                         q_text = clean_watermarks(q_and_opts[:last_a.start()])
-                        opt_a = clean_watermarks(q_and_opts[last_a.end():last_b.start()])
-                        opt_b = clean_watermarks(q_and_opts[last_b.end():last_c.start()])
-                        opt_c = clean_watermarks(q_and_opts[last_c.end():last_d.start()])
-                        opt_d = clean_watermarks(q_and_opts[last_d.end():])
+                        opt_a = clean_watermarks(q_and_opts[last_a.end():last_b.start()], is_option=True)
+                        opt_b = clean_watermarks(q_and_opts[last_b.end():last_c.start()], is_option=True)
+                        opt_c = clean_watermarks(q_and_opts[last_c.end():last_d.start()], is_option=True)
+                        opt_d = clean_watermarks(q_and_opts[last_d.end():], is_option=True)
                         opts = [opt_a, opt_b, opt_c, opt_d]
 
         # In reasoning diagram questions where options are diagrams
@@ -310,7 +311,7 @@ def parse_format2_pdf(pdf_path, meta):
             for o_idx in range(4):
                 o_start = last4[o_idx].end()
                 o_end = last4[o_idx+1].start() if o_idx < 3 else len(content)
-                opt_str = clean_watermarks(content[o_start:o_end])
+                opt_str = clean_watermarks(content[o_start:o_end], is_option=True)
                 opts.append(opt_str)
 
         while len(opts) < 4:
@@ -417,11 +418,11 @@ def process_all():
         
         # If paper 1 (13nov-s2) already exists with expert KaTeX equations, keep it or enrich
         out_json_path = os.path.join(OUT_DIR, f"{spec['id']}.json")
-        if spec['id'] == 'ssc-chsl-2025-13nov-s2' and os.path.exists(out_json_path):
+        if spec['id'] in ['ssc-chsl-2025-13nov-s2', 'ssc-chsl-2025-20nov-s1'] and os.path.exists(out_json_path):
             with open(out_json_path, 'r', encoding='utf-8') as f:
                 paper_obj = json.load(f)
             questions = paper_obj['questions']
-            print(f"-> Preserving existing verified 13nov-s2 dataset ({len(questions)} questions)")
+            print(f"-> Preserving existing verified {spec['id']} dataset ({len(questions)} questions)")
         else:
             if spec['format'] == 1:
                 questions = parse_format1_pdf(pdf_path, spec)

@@ -15,13 +15,13 @@ const CONTENT_URL: string =
   (typeof import.meta !== 'undefined' &&
     import.meta.env &&
     import.meta.env.VITE_SUPABASE_CONTENT_URL) ||
-  '';
+  'https://nvvscqxsrechenyqcwli.supabase.co';
 
 const CONTENT_KEY: string =
   (typeof import.meta !== 'undefined' &&
     import.meta.env &&
     import.meta.env.VITE_SUPABASE_CONTENT_KEY) ||
-  '';
+  'sb_publishable_cPG2lwdWsiWhUTjctYedCw_RKoqOQnW';
 
 /**
  * Returns true if Project 2 environment variables are configured.

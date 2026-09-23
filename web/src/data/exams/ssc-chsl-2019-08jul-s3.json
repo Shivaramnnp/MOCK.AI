@@ -60,7 +60,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Arrange the following activities in a logical and meaningful order.\n1. Attending classes in college\n2. Admission merit list declaration\n3. Getting admission in the college\n4. Applying for admission to college\n5. Annual Examination – Class 12\n6. Result declaration – Class 12",
       "options": [
-        "",
+        "5, 6, 2, 4, 3, 1",
         "5, 6, 4, 2, 3, 1",
         "5, 6, 4, 2, 1, 3",
         "6, 5, 4, 2, 3, 1"
@@ -89,22 +89,22 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which number will replace the question mark (?) in the following series?\n77, 92, 125, 178, 253, ?",
       "options": [
-        "",
+        "350",
         "352",
         "353",
         "351"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q2_opt_a.jpeg",
         null,
         null,
-        null
+        null,
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q2_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q2_opt_a.jpeg"
+          "text": "350",
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -119,7 +119,7 @@
         {
           "id": "D",
           "text": "351",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q2_opt_d.jpeg"
         }
       ],
       "correctAnswer": "B",
@@ -149,8 +149,34 @@
         "",
         ""
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_a.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_b.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_c.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q3_opt_d.jpeg"
+        }
+      ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
@@ -173,16 +199,16 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "‘Tadpole’ is related to ‘Frog’ in the same way as ‘Caterpillar’ is related to ‘_________’.",
       "options": [
-        "",
+        "Butterfly",
         "Bat",
         "Baboon",
         "Boar"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -202,7 +228,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "In a code language, ADVISORY is written as GDLYRVBU. How will CHEMICAL be\nwritten as in that language?",
       "options": [
-        "",
+        "MFOHFLOD",
         "KFQHFLPE",
         "JFPGFMOD",
         "KFPHFLOD"
@@ -229,68 +255,39 @@
       "questionNumber": 6,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Which two numbers should be interchanged in the following equation to make it\ncorrect?\n731 ÷ 13 + 450 – 25 × 43 = 142",
+      "questionText": "Which two numbers should be interchanged in the following equation to make it\ncorrect?\n731 ÷ 13 + 450 – 25 × 43 = 142\n…",
       "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "optionImages": null,
-      "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
-      "negativeMarks": 0.5,
-      "examId": "ssc-chsl",
-      "year": 2019,
-      "date": "2019-07-08",
-      "shift": "Shift 3",
-      "tier": "Tier 1",
-      "language": "English"
-    },
-    {
-      "id": "ssc-chsl-2019-08jul-s3-q7",
-      "questionNumber": 7,
-      "sectionId": "reasoning",
-      "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Question 7",
-      "options": [
-        "",
-        "",
-        "",
-        ""
+        "13 and 25",
+        "450 and 25",
+        "13 and 43",
+        "731 and 450"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q7_opt_a.jpeg",
         null,
         null,
-        null
+        null,
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q6_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q7_opt_a.jpeg"
+          "text": "13 and 25",
+          "imageUrl": null
         },
         {
           "id": "B",
-          "text": "",
+          "text": "450 and 25",
           "imageUrl": null
         },
         {
           "id": "C",
-          "text": "",
+          "text": "13 and 43",
           "imageUrl": null
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "731 and 450",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q6_opt_d.jpeg"
         }
       ],
       "correctAnswer": "C",
@@ -309,25 +306,120 @@
       "language": "English"
     },
     {
+      "id": "ssc-chsl-2019-08jul-s3-q7",
+      "questionNumber": 7,
+      "sectionId": "reasoning",
+      "sectionName": "General Intelligence & Reasoning",
+      "questionText": "",
+      "options": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q7_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_c.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_a.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s4/q73_opt_d.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q7_opt_d.jpeg"
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q66_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q66_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q66_opt_d.jpeg"
+        }
+      ],
+      "marks": 2.0,
+      "negativeMarks": 0.5,
+      "examId": "ssc-chsl",
+      "year": 2019,
+      "date": "2019-07-08",
+      "shift": "Shift 3",
+      "tier": "Tier 1",
+      "language": "English"
+    },
+    {
       "id": "ssc-chsl-2019-08jul-s3-q8",
       "questionNumber": 8,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Question 8",
+      "questionText": "",
       "options": [
         "",
-        "",
-        "",
-        ""
+        "32",
+        "32",
+        "32"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        null,
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-01jul-s3/q72_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s2/q39_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-03jul-s3/q5_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "32",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-01jul-s3/q72_opt_a.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "32",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-11jul-s2/q39_opt_c.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "32",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-03jul-s3/q5_opt_d.jpeg"
+        }
+      ],
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s2/q47_opt_c.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s2/q47_opt_c.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s2/q47_opt_c.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -344,16 +436,42 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the combination of letters that when sequentially placed in the gaps of the\ngiven letter series will complete the series.\nx _ _ y q _ _ t x z _ _ q s q t x _ _ y q s _ t",
       "options": [
-        "",
+        "z y s q y y z y q",
         "y y s q z y z y q",
         "z y q s y z z y q",
         "z y s q y y y z t"
       ],
-      "optionImages": null,
-      "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q9_opt_a.jpeg",
+        null,
+        null,
+        null
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "z y s q y y z y q",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q9_opt_a.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "y y s q z y z y q",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "z y q s y z z y q",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "z y s q y y y z t",
+          "imageUrl": null
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -379,16 +497,16 @@
         ""
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_a.jpeg",
+        null,
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_a.jpeg"
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -403,7 +521,7 @@
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q10_opt_d.jpeg"
         }
       ],
       "correctAnswer": "A",
@@ -435,7 +553,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the word-pair in which the two words are related in the same way as are the two\nwords in the following word-pair.\nDetailed : Meticulous",
       "options": [
-        "",
+        "Heavy : Light",
         "Hungry : Fulfilled",
         "Fat : Obese",
         "Loud : Loose"
@@ -464,16 +582,16 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "If DIRECTOR is coded as 49953269, then how will FRIENDLY be coded as?",
       "options": [
-        "",
+        "69955437",
         "69845447",
         "79954435",
         "68955438"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -493,13 +611,39 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the number-pair in which the two numbers are related in the same way as are\nthe two numbers of the following number-pair.\n2 : 9",
       "options": [
-        "",
+        "8 : 65",
         "4 : 65",
         "7 : 50",
         "3 : 26"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q13_opt_a.jpeg",
+        null,
+        null,
+        null
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "8 : 65",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q13_opt_a.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "4 : 65",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "7 : 50",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "3 : 26",
+          "imageUrl": null
+        }
+      ],
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
@@ -528,16 +672,16 @@
         ""
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_a.jpeg",
+        null,
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_a.jpeg"
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -552,7 +696,7 @@
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q14_opt_d.jpeg"
         }
       ],
       "correctAnswer": "A",
@@ -584,7 +728,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the set in which the numbers are related in the same way as are the numbers of\nthe following set.\n(8, 112, 28)",
       "options": [
-        "",
+        "(16, 282, 36)",
         "(18, 216, 22)",
         "(14, 364, 52)",
         "(12, 216, 34)"
@@ -611,12 +755,12 @@
       "questionNumber": 16,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Two statements are given, followed by three conclusions numbered I, II and III.\nAssuming the statements to be true, even if they seem to be at variance with\ncommonly known facts, decide which of the conclusions logically follow(s) from the\nstatements.\nStatements: \nSome chilies are potatoes.\nSome potatoes are onions.",
+      "questionText": "Two statements are given, followed by three conclusions numbered I, II and III.\nAssuming the statements to be true, even if they seem to be at variance with\ncommonly known facts, decide which of the conclusions logically follow(s) from the\nstatements.\nStatements: \nSome chilies are potatoes.\nSome potatoes are onions.\n…\nConclusions:\nI. Some onions are chilies. \nII. Some onions are potatoes. \nIII. No onion is chilly.",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Conclusion II and either conclusion I or III follow.",
+        "Only conclusions I and II follow.",
+        "Only conclusions II and III follow.",
+        "Conclusion I and either conclusion II or III follow."
       ],
       "optionImages": null,
       "richOptions": null,
@@ -642,22 +786,22 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "A total sum of ₹153 is distributed among three friends A, B and C in such a way that C\ngets 5 times as much money than A gets and B gets 3 times as much money than A\ngets. How many rupees does B get?",
       "options": [
-        "",
+        "65",
         "51",
         "61",
         "66"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q17_opt_a.jpeg",
         null,
         null,
-        null
+        null,
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q17_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q17_opt_a.jpeg"
+          "text": "65",
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -672,7 +816,7 @@
         {
           "id": "D",
           "text": "66",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q17_opt_d.jpeg"
         }
       ],
       "correctAnswer": "B",
@@ -703,16 +847,16 @@
         ""
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_a.jpeg",
+        null,
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_a.jpeg"
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -727,7 +871,7 @@
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q18_opt_d.jpeg"
         }
       ],
       "correctAnswer": "D",
@@ -757,18 +901,18 @@
       "questionNumber": 19,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Three of the following four numbers are alike in a certain way and one is different. Pick\nthe number that is different from the rest.",
+      "questionText": "Three of the following four numbers are alike in a certain way and one is different. Pick\nthe number that is different from the rest.\n…",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "49",
+        "64",
+        "16",
+        "25"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -788,7 +932,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Three of the following four letter-clusters are alike in a certain way and one is different.\nPick the odd one out.",
       "options": [
-        "",
+        "DHLP",
         "PTXB",
         "RVZD",
         "JNRW"
@@ -817,7 +961,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the set in which the numbers are related in the same way as are the numbers of\nthe following set.\n(4, 113, 7)",
       "options": [
-        "",
+        "(3, 118, 9)",
         "(8, 155, 4)",
         "(5, 141, 4)",
         "(6, 161, 4)"
@@ -846,7 +990,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the option that is related to the third letter-cluster in the same way as the\nsecond letter-cluster is related to the first letter-cluster.\nSMKJ : VONL : : DPOA : ?",
       "options": [
-        "",
+        "GSSC",
         "GSSD",
         "GRRC",
         "HRRD"
@@ -875,16 +1019,42 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Three of the following four words are alike in a certain way and one is different. Pick\nthe odd word out.",
       "options": [
-        "",
+        "Serene",
         "Nervous",
         "Anxious",
-        ""
+        "Apprehensive"
       ],
-      "optionImages": null,
-      "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "optionImages": [
+        null,
+        null,
+        null,
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q23_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "Serene",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "Nervous",
+          "imageUrl": null
+        },
+        {
+          "id": "C",
+          "text": "Anxious",
+          "imageUrl": null
+        },
+        {
+          "id": "D",
+          "text": "Apprehensive",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q23_opt_d.jpeg"
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -910,16 +1080,16 @@
         ""
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_a.jpeg",
+        null,
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_a.jpeg"
+          "imageUrl": null
         },
         {
           "id": "B",
@@ -934,7 +1104,7 @@
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q24_opt_d.jpeg"
         }
       ],
       "correctAnswer": "C",
@@ -966,7 +1136,7 @@
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "A + B means ‘A is sister of B’\nA – B means ‘A is daughter of B’\nA × B means ‘A is brother of B’\nA ÷ B means ‘A is mother of B’\nIf D + P ÷ I × K ÷ T – R, then how is R related to P?",
       "options": [
-        "",
+        "Son",
         "Brother",
         "Daughter’s husband",
         "Daughter’s son"
@@ -995,7 +1165,7 @@
       "sectionName": "General Awareness",
       "questionText": "The _______ is the stem-like part of the leaf that joins the blade to the stem.",
       "options": [
-        "",
+        "Stipules",
         "Petiole",
         "Midrib",
         "Vein"
@@ -1024,7 +1194,7 @@
       "sectionName": "General Awareness",
       "questionText": "The famous dancer Chemancheri Kunhiraman Nair is associated with which of the\nfollowing dance forms?",
       "options": [
-        "",
+        "Sattriya",
         "Mohiniyattam",
         "Kathakali",
         "Manipuri"
@@ -1053,16 +1223,16 @@
       "sectionName": "General Awareness",
       "questionText": "Which Indian contemporary artist was awarded the 7th Joan Miro Prize 2019?",
       "options": [
-        "",
+        "Nalini Malani",
         "Atul Dodiya",
         "Arpita Singh",
         "Vivan Sundaram"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1082,7 +1252,7 @@
       "sectionName": "General Awareness",
       "questionText": "In 2019, radar imaging satellite RISAT-2B was launched successfully by the Sathish\nDhawan Space Centre located in _______.",
       "options": [
-        "",
+        "Balasore",
         "Mumbai",
         "Sriharikota",
         "Thiruvananthapuram"
@@ -1111,7 +1281,7 @@
       "sectionName": "General Awareness",
       "questionText": "Which author has been awarded the 27th Vyas Samman of the K.K. Birla Foundation in\n2018?",
       "options": [
-        "",
+        "Ashish Chaudhary",
         "Yogita Yadav",
         "Pankaj Dubey",
         "Mamta Kalia"
@@ -1140,7 +1310,7 @@
       "sectionName": "General Awareness",
       "questionText": "A/an _______ stock is the stock of a large, well-established and financially sound\ncompany that has operated for many years.",
       "options": [
-        "",
+        "Cyclical",
         "Defensive",
         "Blue-Chip",
         "Income"
@@ -1169,7 +1339,7 @@
       "sectionName": "General Awareness",
       "questionText": "In Parliamentary proceedings, how many matters per day as per their priority in the\nballot are allowed to be raised during 'Zero Hour'?",
       "options": [
-        "",
+        "21",
         "18",
         "19",
         "20"
@@ -1198,7 +1368,7 @@
       "sectionName": "General Awareness",
       "questionText": "Flower colours of red, pink, blue and purple come mainly from pigments called\n_______.",
       "options": [
-        "",
+        "Carotenoids",
         "Lycopene",
         "Chlorophyll",
         "Anthocyanins"
@@ -1227,7 +1397,7 @@
       "sectionName": "General Awareness",
       "questionText": "In 1973, the Project Tiger was started in ________National Park.",
       "options": [
-        "",
+        "Bhitarkanika",
         "Sanjay Gandhi",
         "Jim Corbett",
         "Sunderbans"
@@ -1256,16 +1426,16 @@
       "sectionName": "General Awareness",
       "questionText": "After the battle of ________ in 1757, the British achieved political power in lndia.",
       "options": [
-        "",
+        "Aliwal",
         "Buxar",
-        "",
-        ""
+        "Plassey",
+        "Saragarhi"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1285,7 +1455,7 @@
       "sectionName": "General Awareness",
       "questionText": "A chain of islands closely scattered in a body of water is called:",
       "options": [
-        "",
+        "Canyon",
         "Archipelago",
         "Strait",
         "Reef"
@@ -1314,7 +1484,7 @@
       "sectionName": "General Awareness",
       "questionText": "Which Sikh Guru compiled the ‘Adi Granth’ the holy scripture of Sikhism?",
       "options": [
-        "",
+        "Guru Hargobind",
         "Guru Amar Das",
         "Guru Arjan Dev",
         "Guru Ram Das"
@@ -1343,16 +1513,16 @@
       "sectionName": "General Awareness",
       "questionText": "As of june 2019, which Indian state has the lowest number of districts?",
       "options": [
-        "",
+        "Goa",
         "Telangana",
         "Sikkim",
         "Arunachal Pradesh"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1372,7 +1542,7 @@
       "sectionName": "General Awareness",
       "questionText": "In India the Ursa Major Constellation is also known as:",
       "options": [
-        "",
+        "Devarshi",
         "Maharshi",
         "Saptarshi",
         "Swadeshi"
@@ -1401,10 +1571,10 @@
       "sectionName": "General Awareness",
       "questionText": "Which one of the following nations will host the FIFA U-17 Women's World Cup in\n2020?",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "India",
+        "China",
+        "Nepal",
+        "Bangladesh"
       ],
       "optionImages": null,
       "richOptions": null,
@@ -1430,7 +1600,7 @@
       "sectionName": "General Awareness",
       "questionText": "The Indian movie star Rahul Bose was associated with ______ sport of India.",
       "options": [
-        "",
+        "Football",
         "Rowing",
         "Rugby",
         "Squash"
@@ -1459,7 +1629,7 @@
       "sectionName": "General Awareness",
       "questionText": "Who among the following wrote the book 'Wise and Otherwise'?",
       "options": [
-        "",
+        "Gita Piramal",
         "Jhumpa Lahiri",
         "Arundhati Roy",
         "Sudha Murthy"
@@ -1488,7 +1658,7 @@
       "sectionName": "General Awareness",
       "questionText": "Which process refers to the starting up of a computer and the loading of the required\nparts of the operating system into the RAM?",
       "options": [
-        "",
+        "Swipping",
         "Booting",
         "Mapping",
         "Tagging"
@@ -1517,16 +1687,16 @@
       "sectionName": "General Awareness",
       "questionText": "Matters, which are not points of order, can be raised by way of Special Mentions under\nRule ________ of Lok Sabha.",
       "options": [
-        "",
+        "377",
         "302",
         "223",
         "214"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1546,7 +1716,7 @@
       "sectionName": "General Awareness",
       "questionText": "Which one of the following is NOT a output device?",
       "options": [
-        "",
+        "Projector",
         "Headphones",
         "Plotter",
         "Joystick"
@@ -1575,7 +1745,7 @@
       "sectionName": "General Awareness",
       "questionText": "Bumchu' is a unique cultural festival celebrated in the Indian state of:",
       "options": [
-        "",
+        "West Bengal",
         "Odisha",
         "Assam",
         "Sikkim"
@@ -1604,7 +1774,7 @@
       "sectionName": "General Awareness",
       "questionText": "A/an _______ is the wide end of a river that meets the sea.",
       "options": [
-        "",
+        "Creek",
         "Estuary",
         "Gorge",
         "Meander"
@@ -1633,16 +1803,16 @@
       "sectionName": "General Awareness",
       "questionText": "_______ is a type of good for which demand increases as its price rises.",
       "options": [
-        "",
+        "Giffen Good",
         "Capital Good",
         "Club Good",
         "Consumer Good"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1662,16 +1832,16 @@
       "sectionName": "General Awareness",
       "questionText": "With which of the following sports is the term 'twiddle' associated?",
       "options": [
-        "",
+        "Table Tennis",
         "Cricket",
         "Rugby",
         "Hockey"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -1691,7 +1861,7 @@
       "sectionName": "General Awareness",
       "questionText": "In which state was the second edition of the Indian Open International Boxing\nTournament held?",
       "options": [
-        "",
+        "Odisha",
         "Assam",
         "Karnataka",
         "Madhya Pradesh"
@@ -1720,10 +1890,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "1122257",
+        "1122257",
+        "1122257",
+        "1122257"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q51_opt_a.jpeg",
@@ -1734,22 +1904,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "1122257",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q51_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "1122257",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q51_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "1122257",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q51_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "1122257",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q51_opt_d.jpeg"
         }
       ],
@@ -1780,21 +1950,54 @@
       "questionNumber": 52,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 52",
+      "questionText": "",
       "options": [
         "",
-        "",
-        "",
-        ""
+        "10",
+        "10",
+        "10"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        null,
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_b.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "10",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_c.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "10",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_b.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "10",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_b.jpeg"
+        }
+      ],
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_d.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -1809,21 +2012,59 @@
       "questionNumber": 53,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 53",
+      "questionText": "…",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "1OT:: 117",
+        "1OT:: 117",
+        "1OT:: 117",
+        "1OT:: 117"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "1OT:: 117",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_a.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "1OT:: 117",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_b.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "1OT:: 117",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_c.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "1OT:: 117",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_opt_d.jpeg"
+        }
+      ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_diag_1.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_diag_1.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_diag_2.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_diag_1.jpeg"
+        },
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q53_diag_2.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -1838,47 +2079,54 @@
       "questionNumber": 54,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 54",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "13",
+        "13",
+        "13",
+        "13"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q54_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s3/q65_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q60_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q54_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q54_opt_a.jpeg"
+          "text": "13",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s3/q65_opt_d.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "13",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_c.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "13",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q60_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "13",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q54_opt_d.jpeg"
         }
       ],
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q41_opt_a.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q41_opt_a.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q41_opt_a.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -1893,47 +2141,54 @@
       "questionNumber": 55,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 55",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "106°",
+        "106°",
+        "106°",
+        "106°"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_a.jpeg",
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_b.jpeg",
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q65_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q70_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "106°",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_b.jpeg"
+          "text": "106°",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q65_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "106°",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q70_opt_a.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "106°",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q55_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "C",
-      "correctAnswerIndex": 2,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q65_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q65_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q65_opt_d.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -1948,21 +2203,54 @@
       "questionNumber": 56,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 56",
+      "questionText": "",
       "options": [
         "",
-        "",
-        "",
-        ""
+        "16",
+        "16",
+        "16"
       ],
-      "optionImages": null,
-      "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "optionImages": [
+        null,
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q68_diag.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q41_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s3/q66_opt_b.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": null
+        },
+        {
+          "id": "B",
+          "text": "16",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q68_diag.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "16",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q41_opt_a.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "16",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s3/q66_opt_b.jpeg"
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q58_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q58_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q58_opt_d.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -1977,21 +2265,59 @@
       "questionNumber": 57,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 57",
+      "questionText": "…",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "17.65% profit",
+        "17.65% profit",
+        "17.65% profit",
+        "17.65% profit"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q58_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "17.65% profit",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_a.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "17.65% profit",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_b.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "17.65% profit",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q58_opt_b.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "17.65% profit",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_opt_d.jpeg"
+        }
+      ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_diag_1.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_diag_1.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q58_opt_c.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q57_diag_1.jpeg"
+        },
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q58_opt_c.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2008,10 +2334,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "40,000",
+        "40,000",
+        "40,000",
+        "40,000"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q58_opt_a.jpeg",
@@ -2022,22 +2348,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "40,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q58_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "40,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q58_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "40,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q58_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "40,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q58_opt_d.jpeg"
         }
       ],
@@ -2070,10 +2396,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2012",
+        "2012",
+        "2012",
+        "2012"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q74_opt_b.jpeg",
@@ -2084,22 +2410,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "2012",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q74_opt_b.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "2012",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q74_opt_c.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "2012",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q58_opt_a.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "2012",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q59_opt_d.jpeg"
         }
       ],
@@ -2130,47 +2456,54 @@
       "questionNumber": 60,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 60",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "24°",
+        "24°",
+        "24°",
+        "24°"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q70_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "24°",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "24°",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "24°",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q70_opt_b.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "24°",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q60_opt_d.jpeg"
         }
       ],
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q73_opt_c.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q73_opt_c.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-15oct-s1/q73_opt_c.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2185,47 +2518,54 @@
       "questionNumber": 61,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 61",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "4",
+        "4",
+        "4",
+        "4"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q61_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q61_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q61_opt_a.jpeg"
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q55_opt_d.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "4",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q61_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "D",
-      "correctAnswerIndex": 3,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_b.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_b.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_b.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2242,42 +2582,42 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "52",
+        "52",
+        "52",
+        "52"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_a.jpeg",
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_b.jpeg",
-        null,
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q75_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q64_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_a.jpeg"
+          "text": "52",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q75_opt_c.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_b.jpeg"
+          "text": "52",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q64_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "52",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "52",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "C",
-      "correctAnswerIndex": 2,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_diag.jpeg",
       "diagramUrls": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q62_diag.jpeg"
@@ -2304,42 +2644,42 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "20",
+        "20",
+        "20",
+        "20"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q34_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q34_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s3/q42_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_opt_a.jpeg"
+          "text": "20",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q34_opt_c.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "20",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q34_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "20",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s3/q42_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "20",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_diag.jpeg",
       "diagramUrls": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q63_diag.jpeg"
@@ -2375,7 +2715,7 @@
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-04jul-s1/q49_opt_d.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_opt_d.jpeg"
       ],
       "richOptions": [
         {
@@ -2396,12 +2736,12 @@
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "C",
-      "correctAnswerIndex": 2,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_diag.jpeg",
       "diagramUrls": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q64_diag.jpeg"
@@ -2428,50 +2768,50 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2",
+        "2",
+        "2",
+        "2"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q65_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q49_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q65_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q65_opt_a.jpeg"
+          "text": "2",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "2",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_d.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "2",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q49_opt_b.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "2",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q65_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_b.jpeg",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_c.jpeg",
       "diagramUrls": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_b.jpeg"
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_c.jpeg"
       ],
       "questionAssets": [
         {
           "type": "image",
-          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_b.jpeg"
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q72_opt_c.jpeg"
         }
       ],
       "marks": 2.0,
@@ -2490,10 +2830,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "21.69%",
+        "21.69%",
+        "21.69%",
+        "21.69%"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q55_opt_a.jpeg",
@@ -2504,22 +2844,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "21.69%",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q55_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "21.69%",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q55_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "21.69%",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q66_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "21.69%",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q66_opt_d.jpeg"
         }
       ],
@@ -2552,10 +2892,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "9:16",
+        "9:16",
+        "9:16",
+        "9:16"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s1/q63_opt_a.jpeg",
@@ -2566,22 +2906,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "9:16",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s1/q63_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "9:16",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q67_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "9:16",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s1/q60_opt_a.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "9:16",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q67_opt_d.jpeg"
         }
       ],
@@ -2612,47 +2952,54 @@
       "questionNumber": 68,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 68",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "50",
+        "50",
+        "50",
+        "50"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q68_opt_a.jpeg",
-        null,
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q72_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-14oct-s1/q28_opt_b.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q68_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q68_opt_a.jpeg"
+          "text": "50",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q72_opt_c.jpeg"
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": null
+          "text": "50",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-14oct-s1/q28_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "50",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_d.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "50",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q68_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_a.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_a.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q49_opt_a.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2667,21 +3014,54 @@
       "questionNumber": 69,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 69",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "3",
+        "3",
+        "3",
+        "3"
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_c.jpeg",
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q69_opt_d.jpeg"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "3",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_d.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_c.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q37_opt_a.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "3",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q69_opt_d.jpeg"
+        }
+      ],
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2698,10 +3078,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "18,000",
+        "18,000",
+        "18,000",
+        "18,000"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q70_opt_a.jpeg",
@@ -2712,22 +3092,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "18,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q70_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "18,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q70_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "18,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q70_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "18,000",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q70_opt_d.jpeg"
         }
       ],
@@ -2760,10 +3140,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "8,400",
+        "8,400",
+        "8,400",
+        "8,400"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q71_opt_a.jpeg",
@@ -2774,22 +3154,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "8,400",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q71_opt_a.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "8,400",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q71_opt_b.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "8,400",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q71_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "8,400",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q71_opt_d.jpeg"
         }
       ],
@@ -2820,47 +3200,54 @@
       "questionNumber": 72,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 72",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "=",
+        "=",
+        "=",
+        "="
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s3/q69_opt_c.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q51_opt_c.jpeg",
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q72_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q47_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q72_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "=",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s3/q69_opt_c.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "=",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s1/q51_opt_c.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q72_opt_c.jpeg"
+          "text": "=",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s2/q47_opt_a.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "=",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q72_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-12oct-s1/q61_opt_d.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2875,47 +3262,54 @@
       "questionNumber": 73,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 73",
+      "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "180",
+        "180",
+        "180",
+        "180"
       ],
       "optionImages": [
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s3/q66_opt_a.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s3/q66_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q74_opt_a.jpeg",
-        null,
-        null
+        "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q66_opt_d.jpeg",
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q73_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s3/q66_opt_a.jpeg"
+          "text": "180",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s3/q66_opt_b.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "180",
           "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s3/q74_opt_a.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": null
+          "text": "180",
+          "imageUrl": "/exam-assets/ssc/chsl/2020/ssc-chsl-2020-13oct-s1/q66_opt_d.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "180",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q73_opt_d.jpeg"
         }
       ],
-      "correctAnswer": "D",
-      "correctAnswerIndex": 3,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "correctAnswer": "C",
+      "correctAnswerIndex": 2,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
+      "diagramUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q70_opt_a.jpeg",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q70_opt_a.jpeg"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q70_opt_a.jpeg"
+        }
+      ],
       "marks": 2.0,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
@@ -2932,10 +3326,10 @@
       "sectionName": "Quantitative Aptitude",
       "questionText": "",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2011",
+        "2011",
+        "2011",
+        "2011"
       ],
       "optionImages": [
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q74_opt_c.jpeg",
@@ -2946,22 +3340,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "",
+          "text": "2011",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-02jul-s2/q74_opt_c.jpeg"
         },
         {
           "id": "B",
-          "text": "",
+          "text": "2011",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q68_opt_a.jpeg"
         },
         {
           "id": "C",
-          "text": "",
+          "text": "2011",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s2/q58_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
+          "text": "2011",
           "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q74_opt_d.jpeg"
         }
       ],
@@ -2995,36 +3389,36 @@
       "questionText": "",
       "options": [
         "",
-        "",
-        "",
-        ""
+        "5% loss",
+        "5% loss",
+        "5% loss"
       ],
       "optionImages": [
+        null,
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_a.jpeg",
         "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_c.jpeg",
-        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q75_opt_c.jpeg",
-        null
+        "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q75_opt_d.jpeg"
       ],
       "richOptions": [
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_a.jpeg"
+          "imageUrl": null
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_c.jpeg"
+          "text": "5% loss",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_a.jpeg"
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q75_opt_c.jpeg"
+          "text": "5% loss",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-05jul-s1/q63_opt_c.jpeg"
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "5% loss",
+          "imageUrl": "/exam-assets/ssc/chsl/2019/ssc-chsl-2019-08jul-s3/q75_opt_d.jpeg"
         }
       ],
       "correctAnswer": "D",
@@ -3056,7 +3450,7 @@
       "sectionName": "English Language",
       "questionText": "Identify the most appropriate option to substitute the underlined segment. If no\nsubstitution is required, select No substitution.\nThis was an only the mistake he made.",
       "options": [
-        "",
+        "only the mistake",
         "the mistake only",
         "the only mistake",
         "No substitution"
@@ -3083,18 +3477,18 @@
       "questionNumber": 77,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Fill in the blank with the most appropriate word.\nThe landlord is very ______ about cleanliness and finds fault with all his tenants.",
+      "questionText": "Fill in the blank with the most appropriate word.\nThe landlord is very ______ about cleanliness and finds fault with all his tenants.\n…",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "fabulous",
+        "fastidious",
+        "pompous",
+        "ominous"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3114,7 +3508,7 @@
       "sectionName": "English Language",
       "questionText": "Identify the segment which contains the grammatical error.\nGreat many students who are good at other subjects perform poorly in English.",
       "options": [
-        "",
+        "perform poorly",
         "in English",
         "who are good at",
         "Great many students"
@@ -3143,7 +3537,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate meaning of the given idiom.\nThrough thick and thin",
       "options": [
-        "",
+        "to be scared of small dangers",
         "passing through a thick forest",
         "support under all circumstances",
         "to be hard-hearted in times of loss"
@@ -3172,7 +3566,7 @@
       "sectionName": "English Language",
       "questionText": "Identify the segment which contains the grammatical error.\nClimate change are a greatest threat facing our planet which needs our immediate\nattention.",
       "options": [
-        "",
+        "our immediate attention",
         "are a greatest",
         "which needs",
         "facing our planet"
@@ -3201,10 +3595,10 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate synonym of the given word.\nDISCOVER",
       "options": [
-        "",
+        "neglect",
         "find",
-        "",
-        ""
+        "hide",
+        "ignore"
       ],
       "optionImages": null,
       "richOptions": null,
@@ -3230,7 +3624,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate synonym of the given word.\nIGNOMINIOUS",
       "options": [
-        "",
+        "wonderful",
         "disgraceful",
         "innocuous",
         "generous"
@@ -3259,7 +3653,7 @@
       "sectionName": "English Language",
       "questionText": "Identify the most appropriate option to substitute the underlined segment. If no\nsubstitution is required, select No substitution.\nHe is a good singer of the two.",
       "options": [
-        "",
+        "No substitution",
         "the best singer",
         "the better singer",
         "the good singer"
@@ -3288,7 +3682,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate passive form of the given sentence.\nPlease lock the door.",
       "options": [
-        "",
+        "The door should kindly being locked.",
         "You are requested to lock the door.",
         "You are being ordered to lock the door.",
         "Please let the door be lock."
@@ -3317,16 +3711,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate word for the group of words.\npeople who enjoy social company",
       "options": [
-        "",
+        "gregarious",
         "unanimous",
         "gorgeous",
         "herbivorous"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3346,16 +3740,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate antonym of the given word.\nRETALIATION",
       "options": [
-        "",
+        "reconciliation",
         "retribution",
         "retrospection",
         "regression"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3375,7 +3769,7 @@
       "sectionName": "English Language",
       "questionText": "Given below are four jumbled sentences. Out of the given options pick the one that\ngives their correct order.\nA. Till quite recently the trend was to go to the west that offered advanced medical\nfacilities.\nB. This is because it has on offer the highest level of services, facilities and\nprofessional skills.\nC. But over the last decade the trend has reversed and India is being chosen for\nmedical tourism.\nD. Today, it is not uncommon to travel to a foreign country for medical treatment.",
       "options": [
-        "",
+        "BCDA",
         "DACB",
         "CBDA",
         "ABCD"
@@ -3404,7 +3798,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate indirect form of the given sentence.\nShe said to you, \"I have a thousand rupees in my purse now.\"",
       "options": [
-        "",
+        "She told you that she has a thousand rupees in my purse now.",
         "She told you that she had a thousand rupees in her purse then.",
         "She said you that she have a thousand rupees in my purse then.",
         "She told me that she had a thousand rupees in her purse now."
@@ -3433,7 +3827,7 @@
       "sectionName": "English Language",
       "questionText": "Select the wrongly spelt word.",
       "options": [
-        "",
+        "eager",
         "beggar",
         "vehical",
         "value"
@@ -3462,7 +3856,7 @@
       "sectionName": "English Language",
       "questionText": "Given below are four jumbled sentences. Out of the given options pick the one that\ngives their correct order.\nA. This kindness converted his street into a neighbourhood. \nB. He and his wife were always ready to lend a helping hand.\nC. Mohan was an ideal neighbour in every way.\nD. Whether it was lending tools or watering fields, the couple embodied neighbourly\nkindness.",
       "options": [
-        "",
+        "DBCA",
         "CBDA",
         "CDAB",
         "BDAC"
@@ -3491,16 +3885,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in blank number 1",
       "options": [
-        "",
+        "appreciated",
         "thanked",
         "rebuked",
         "jeered"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3520,16 +3914,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in blank number 2",
       "options": [
-        "",
+        "clumsy",
         "capable",
         "clever",
         "courteous"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3549,7 +3943,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in blank number 3",
       "options": [
-        "",
+        "maintain",
         "develop",
         "conceal",
         "consider"
@@ -3578,16 +3972,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in blank number 4",
       "options": [
-        "",
+        "opportunities",
         "dreams",
         "favours",
         "threats"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3607,7 +4001,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in blank number 5",
       "options": [
-        "",
+        "consequences",
         "intrusions",
         "prohibitions",
         "handicaps"
@@ -3636,7 +4030,7 @@
       "sectionName": "English Language",
       "questionText": "Fill in the blank with the most appropriate word.\nWe must not lose heart in times of ______ .",
       "options": [
-        "",
+        "diversity",
         "adversity",
         "deformity",
         "inactivity"
@@ -3665,7 +4059,7 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate word for the group of words.\nOne who eats too much",
       "options": [
-        "",
+        "overweight",
         "glutton",
         "corpulent",
         "obese"
@@ -3694,16 +4088,16 @@
       "sectionName": "English Language",
       "questionText": "Select the most appropriate meaning of the given idiom.\nRule the roost",
       "options": [
-        "",
+        "to make all the decisions",
         "to be prosperous but generous",
         "to frequently pick a quarrel",
         "to blindly follow others"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3723,16 +4117,16 @@
       "sectionName": "English Language",
       "questionText": "Select the correctly spelt word.",
       "options": [
-        "",
+        "genuine",
         "genwin",
         "genuin",
         "genune"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "B",
-      "correctAnswerIndex": 1,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -3750,18 +4144,18 @@
       "questionNumber": 100,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate antonym of the given word.",
+      "questionText": "Select the most appropriate antonym of the given word.\n…\nLOYALTY",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "faith",
+        "treason",
+        "trust",
+        "fidelity"
       ],
       "optionImages": null,
       "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "correctAnswer": "B",
+      "correctAnswerIndex": 1,
+      "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
