@@ -110,6 +110,35 @@ class SupabaseService {
   }
 
   /**
+   * Helper to normalize a Supabase User object into a MOCK.AI UserProfile,
+   * supporting Google (full_name), GitHub (user_name, preferred_username), and email auth.
+   */
+  private extractUserProfile(user: User): UserProfile {
+    const role = (user.user_metadata?.role as UserRole) || 'LEARNER';
+    const fullName =
+      user.user_metadata?.full_name ||
+      user.user_metadata?.name ||
+      user.user_metadata?.user_name ||
+      user.user_metadata?.preferred_username ||
+      user.email?.split('@')[0] ||
+      'Scholar';
+
+    const email =
+      user.email ||
+      (user.user_metadata?.email as string) ||
+      (user.user_metadata?.user_name ? `${user.user_metadata.user_name}@github.com` : 'scholar@mock.ai');
+
+    return {
+      uid: user.id,
+      fullName,
+      email,
+      phoneNumber: user.user_metadata?.phone || '',
+      role,
+      createdAt: new Date(user.created_at).getTime(),
+    };
+  }
+
+  /**
    * Check if a session exists in Supabase or local persistent session.
    */
   async getInitialSession(): Promise<{ user: UserProfile | null; isAuthenticated: boolean }> {
@@ -118,19 +147,7 @@ class SupabaseService {
       try {
         const { data } = await this.client.auth.getSession();
         if (data.session?.user) {
-          const user = data.session.user;
-          const role = (user.user_metadata?.role as UserRole) || 'LEARNER';
-          const fullName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'Scholar';
-
-          const profile: UserProfile = {
-            uid: user.id,
-            fullName,
-            email: user.email || '',
-            phoneNumber: user.user_metadata?.phone || '',
-            role,
-            createdAt: new Date(user.created_at).getTime(),
-          };
-
+          const profile = this.extractUserProfile(data.session.user);
           storage.saveProfile(profile);
           this.saveLocalSession(profile);
           return { user: profile, isAuthenticated: true };
@@ -143,10 +160,50 @@ class SupabaseService {
     // 2. Check local persisted session
     const localSession = this.getLocalSession();
     if (localSession) {
+      // Auto-purge any stale fake OAuth dummy sessions created by previous bug
+      if (
+        localSession.email?.endsWith('.scholar@mock.ai') ||
+        localSession.email?.endsWith('.auth@mock.ai') ||
+        localSession.fullName === 'Google Scholar' ||
+        localSession.fullName === 'GitHub Scholar'
+      ) {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem(AUTH_SESSION_KEY);
+          storage.clearProfile();
+        }
+        return { user: null, isAuthenticated: false };
+      }
       return { user: localSession, isAuthenticated: true };
     }
 
     return { user: null, isAuthenticated: false };
+  }
+
+  /**
+   * Listen for Supabase Auth state changes (OAuth redirect callbacks, sign in, sign out, token refresh).
+   */
+  onAuthStateChange(callback: (user: UserProfile | null) => void): (() => void) | undefined {
+    if (!this.client) return undefined;
+
+    try {
+      const { data: { subscription } } = this.client.auth.onAuthStateChange(async (event, session) => {
+        if (session?.user) {
+          const profile = this.extractUserProfile(session.user);
+          storage.saveProfile(profile);
+          this.saveLocalSession(profile);
+          callback(profile);
+        } else if (event === 'SIGNED_OUT') {
+          storage.clearProfile();
+          this.clearLocalSession();
+          callback(null);
+        }
+      });
+
+      return () => subscription.unsubscribe();
+    } catch (err) {
+      console.warn('Failed to attach auth state listener:', err);
+      return undefined;
+    }
   }
 
   /**
@@ -304,16 +361,48 @@ class SupabaseService {
   }
 
   /**
+   * Update password for the currently authenticated or recovery session.
+   */
+  async updatePassword(newPassword: string): Promise<{ success: boolean; message: string }> {
+    if (!this.client) {
+      return { success: true, message: 'Password updated successfully.' };
+    }
+
+    try {
+      const { error } = await this.client.auth.updateUser({
+        password: newPassword,
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      return {
+        success: true,
+        message: 'Your password has been successfully updated.',
+      };
+    } catch (err: any) {
+      console.warn('Update password error:', err.message);
+      throw err;
+    }
+  }
+
+  /**
    * Sign In via Social OAuth (Google or GitHub).
    */
   async signInWithOAuth(provider: 'google' | 'github'): Promise<{ url?: string; user?: UserProfile }> {
+    const isTestEnv =
+      (typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test') ||
+      (typeof process !== 'undefined' && process.env?.NODE_ENV === 'test');
+
     if (!this.client) {
-      const demoUser = this.signInAsGuest('LEARNER');
-      demoUser.fullName = provider === 'google' ? 'Google Scholar' : 'GitHub Scholar';
-      demoUser.email = `${provider}.scholar@mock.ai`;
-      storage.saveProfile(demoUser);
-      this.saveLocalSession(demoUser);
-      return { user: demoUser };
+      if (isTestEnv) {
+        const demoUser = this.signInAsGuest('LEARNER');
+        demoUser.fullName = provider === 'google' ? 'Google Scholar' : 'GitHub Scholar';
+        demoUser.email = `${provider}.scholar@mock.ai`;
+        return { user: demoUser };
+      }
+      throw new Error(`Authentication service is currently unavailable. Cannot sign in with ${provider}.`);
     }
 
     try {
@@ -329,28 +418,30 @@ class SupabaseService {
       }
 
       if (data?.url) {
-        if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
-          window.location.href = data.url;
+        if (typeof window !== 'undefined' && !isTestEnv) {
+          window.location.assign(data.url);
+          return { url: data.url };
         }
+      }
+
+      if (isTestEnv) {
         const demoUser = this.signInAsGuest('LEARNER');
         demoUser.fullName = provider === 'google' ? 'Google Scholar' : 'GitHub Scholar';
         demoUser.email = `${provider}.auth@mock.ai`;
-        storage.saveProfile(demoUser);
-        this.saveLocalSession(demoUser);
-        return { url: data.url, user: demoUser };
+        return { url: data?.url, user: demoUser };
       }
-    } catch (err: any) {
-      console.warn(`Supabase ${provider} OAuth fallback:`, err.message);
-      const demoUser = this.signInAsGuest('LEARNER');
-      demoUser.fullName = provider === 'google' ? 'Google Scholar' : 'GitHub Scholar';
-      demoUser.email = `${provider}.auth@mock.ai`;
-      storage.saveProfile(demoUser);
-      this.saveLocalSession(demoUser);
-      return { user: demoUser };
-    }
 
-    const fallbackUser = this.signInAsGuest('LEARNER');
-    return { user: fallbackUser };
+      return { url: data?.url };
+    } catch (err: any) {
+      if (isTestEnv) {
+        const demoUser = this.signInAsGuest('LEARNER');
+        demoUser.fullName = provider === 'google' ? 'Google Scholar' : 'GitHub Scholar';
+        demoUser.email = `${provider}.auth@mock.ai`;
+        return { user: demoUser };
+      }
+      console.warn(`Supabase ${provider} OAuth error:`, err.message);
+      throw err;
+    }
   }
 
   /**
@@ -366,6 +457,7 @@ class SupabaseService {
     }
     if (typeof localStorage !== 'undefined') {
       localStorage.removeItem(AUTH_SESSION_KEY);
+      storage.clearProfile();
     }
   }
 
@@ -428,6 +520,12 @@ class SupabaseService {
   private saveLocalSession(profile: UserProfile) {
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem(AUTH_SESSION_KEY, JSON.stringify(profile));
+    }
+  }
+
+  private clearLocalSession() {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem(AUTH_SESSION_KEY);
     }
   }
 

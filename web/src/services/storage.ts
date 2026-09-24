@@ -383,6 +383,10 @@ class StorageService {
     localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(profile));
   }
 
+  clearProfile(): void {
+    localStorage.removeItem(STORAGE_KEYS.PROFILE);
+  }
+
   setRole(role: UserRole): void {
     const profile = this.getProfile();
     profile.role = role;
