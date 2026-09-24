@@ -47,4 +47,29 @@ describe('LatexRenderer', () => {
     expect(katexElement).not.toBeNull();
     expect(container.querySelector('.katex-mathml')).toBeNull();
   });
+
+  it('should correctly render \\(...\\) inline math (Q59 and Q62 regressions)', () => {
+    const { container: c1 } = render(<LatexRenderer content={'\\(75\\text{ cm}^2\\)'} />);
+    expect(c1.querySelector('.katex')).not.toBeNull();
+    expect(c1.textContent).toContain('75');
+    expect(c1.textContent).toContain('cm');
+    expect(c1.textContent).not.toContain('\\(');
+
+    const { container: c2 } = render(<LatexRenderer content={'\\(1728\\text{ cm}^3\\)'} />);
+    expect(c2.querySelector('.katex')).not.toBeNull();
+    expect(c2.textContent).toContain('1728');
+    expect(c2.textContent).not.toContain('\\(');
+
+    const { container: c3 } = render(
+      <LatexRenderer content="If, \(a + b = 18\) and \(a^2 + b^2 = 200\), then find \((a^3 + b^3)\)." />
+    );
+    expect(c3.querySelectorAll('.katex').length).toBe(3);
+    expect(c3.textContent).not.toContain('\\(');
+  });
+
+  it('should correctly render \\[...\\] block math', () => {
+    const { container } = render(<LatexRenderer content={'View: \\[\\int x dx\\]'} />);
+    expect(container.querySelector('.katex-display')).not.toBeNull();
+    expect(container.textContent).not.toContain('\\[');
+  });
 });
