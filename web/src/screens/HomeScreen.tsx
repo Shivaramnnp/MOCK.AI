@@ -20,6 +20,7 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { TestHistory, DailyTask, DailyInsight, UserProfile, ExamTestSession } from '../types';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface HomeScreenProps {
   tests: TestHistory[];
@@ -572,6 +573,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             })}
           </div>
         )}
+
+        {/* ── Sponsored Learning Space (Non-Test Feed Banner) ────────── */}
+        <div className="mt-8">
+          <AdSlot placement="home_banner" />
+        </div>
       </div>
     </div>
   );

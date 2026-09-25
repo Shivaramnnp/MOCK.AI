@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { ExamService } from '../services/examService';
 import { ExamPaper } from '../types';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface ExamDetailScreenProps {
   examId: string;
@@ -249,6 +250,9 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
           </div>
         )}
       </div>
+
+      {/* ── Sponsored Learning Space (Pattern & Preparation Resources) ─ */}
+      <AdSlot placement="exam_detail_preview" format="rectangle" />
 
       {/* ── Previous-Year Papers Section ──────────────────────────────── */}
       <div className="space-y-6">

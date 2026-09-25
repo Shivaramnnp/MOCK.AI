@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { TestHistory } from '../types';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface AnalyticsScreenProps {
   tests: TestHistory[];
@@ -272,6 +273,11 @@ export const AnalyticsScreen: React.FC<AnalyticsScreenProps> = ({
             );
           })}
         </div>
+      </div>
+
+      {/* ── Sponsored Learning Space (Recommended Study Aids) ─────── */}
+      <div className="mt-8">
+        <AdSlot placement="analytics_banner" format="responsive" />
       </div>
     </div>
   );

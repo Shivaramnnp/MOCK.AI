@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { TestSessionState } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface ReviewScreenProps {
   session: TestSessionState;
@@ -91,8 +92,9 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
             No questions match the filter "{selectedFilter}".
           </div>
         ) : (
-          filteredQuestions.map(({ q, idx, userChoice, isCorrect, isSkipped, isBookmarked }) => {
+          filteredQuestions.map(({ q, idx, userChoice, isCorrect, isSkipped, isBookmarked }, arrayIndex) => {
             const isExpanded = expandedExplanations[idx] !== false; // expanded by default or toggled
+            const shouldShowAd = (arrayIndex + 1) % 5 === 0 && arrayIndex < filteredQuestions.length - 1;
 
             let statusBadge = (
               <span className="flex items-center gap-1 text-xs font-bold text-brand-green bg-emerald-500/10 px-2.5 py-1 rounded-full">
@@ -118,10 +120,10 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
             }
 
             return (
-              <div
-                key={idx}
-                className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4"
-              >
+              <React.Fragment key={idx}>
+                <div
+                  className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4"
+                >
                 {/* Card Header */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -237,8 +239,15 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
                   )}
                 </div>
               </div>
-            );
-          })
+
+              {shouldShowAd && (
+                <div className="py-2">
+                  <AdSlot placement="review_inline" format="inline" />
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })
         )}
       </div>
     </div>

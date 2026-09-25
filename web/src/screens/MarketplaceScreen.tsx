@@ -12,6 +12,7 @@ import {
   Share2,
 } from 'lucide-react';
 import { PublishedExam, TestHistory, UserProfile } from '../types';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface MarketplaceScreenProps {
   exams: PublishedExam[];
@@ -206,6 +207,11 @@ export const MarketplaceScreen: React.FC<MarketplaceScreenProps> = ({
           ))}
         </div>
       )}
+
+      {/* ── Sponsored Learning Space (Community & Exam Partners) ─────── */}
+      <div className="mt-8">
+        <AdSlot placement="marketplace_banner" format="responsive" />
+      </div>
 
       {/* ── Publish Exam Modal ────────────────────────────────────────── */}
       {showPublishModal && (

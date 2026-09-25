@@ -25,6 +25,7 @@ import { ExploreScreen } from './screens/ExploreScreen';
 import { ExamDetailScreen } from './screens/ExamDetailScreen';
 import { CompetitiveExamPlayerScreen } from './screens/CompetitiveExamPlayerScreen';
 import { CompetitiveExamResultsScreen } from './screens/CompetitiveExamResultsScreen';
+import { AdProvider } from './lib/ads/AdContext';
 
 // Services & Types
 import { storage } from './services/storage';
@@ -705,8 +706,9 @@ export const App: React.FC = () => {
   const isTakingExam = currentRoute === 'test_player' || currentRoute === 'exam_player';
 
   return (
-    <div className="min-h-screen flex flex-col bg-surface dark:bg-darkSurface text-surface-text dark:text-darkSurface-text transition-colors selection:bg-brand-primary selection:text-white">
-      {/* ── Top Responsive Navbar ──────────────────────────────────────── */}
+    <AdProvider currentRoute={currentRoute} user={profile}>
+      <div className="min-h-screen flex flex-col bg-surface dark:bg-darkSurface text-surface-text dark:text-darkSurface-text transition-colors selection:bg-brand-primary selection:text-white">
+        {/* ── Top Responsive Navbar ──────────────────────────────────────── */}
       {!isTakingExam && (
         <Navbar
           currentRoute={currentRoute}
@@ -1053,5 +1055,6 @@ export const App: React.FC = () => {
         onSubmit={handleJsonSubmit}
       />
     </div>
+    </AdProvider>
   );
 };

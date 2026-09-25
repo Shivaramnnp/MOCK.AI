@@ -12,6 +12,7 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { TestSessionState } from '../types';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface ResultsScreenProps {
   session: TestSessionState;
@@ -239,6 +240,11 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({
           <Home className="w-4 h-4" />
           <span>Back Home</span>
         </button>
+      </div>
+
+      {/* ── Sponsored Learning Space (Post-Test Resources) ───────────── */}
+      <div className="mt-8 pt-4 border-t border-surface-border/40">
+        <AdSlot placement="test_results_footer" format="responsive" />
       </div>
     </div>
   );

@@ -27,6 +27,7 @@ import {
 import { ExamPaper, ExamTestSession, CompetitiveQuestion } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
 import { ExamAsset } from '../components/ExamAsset';
+import { AdSlot } from '../components/ads/AdSlot';
 
 interface CompetitiveExamResultsScreenProps {
   session: ExamTestSession;
@@ -960,6 +961,11 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
           </div>
         </>
       )}
+
+      {/* ── Sponsored Learning Space (Post-Exam Analysis & Resources) ── */}
+      <div className="mt-8">
+        <AdSlot placement="exam_results_footer" format="responsive" />
+      </div>
 
       {/* ── Zoom Image Lightbox Modal ─────────────────────────────────── */}
       {zoomImageUrl && (
