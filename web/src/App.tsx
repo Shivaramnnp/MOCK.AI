@@ -20,6 +20,7 @@ import { MarketplaceScreen } from './screens/MarketplaceScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
 import { AuthScreen } from './screens/AuthScreen';
+import { ForgotPasswordScreen } from './screens/ForgotPasswordScreen';
 import { ExploreScreen } from './screens/ExploreScreen';
 import { ExamDetailScreen } from './screens/ExamDetailScreen';
 import { CompetitiveExamPlayerScreen } from './screens/CompetitiveExamPlayerScreen';
@@ -72,6 +73,16 @@ export const App: React.FC = () => {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isAuthLoading, setIsAuthLoading] = useState<boolean>(true);
+  const [isPasswordRecoveryMode, setIsPasswordRecoveryMode] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return (
+        window.location.hash.includes('reset-password') ||
+        window.location.hash.includes('type=recovery') ||
+        window.location.search.includes('type=recovery')
+      );
+    }
+    return false;
+  });
 
   // Active Session / Working State
   const [activeTest, setActiveTest] = useState<TestHistory | null>(null);
@@ -167,7 +178,31 @@ export const App: React.FC = () => {
 
     checkAuthSession();
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    // Subscribe to auth state changes (OAuth redirects, session refreshes, password recovery)
+    const unsubscribeAuth = supabaseService.onAuthStateChange((user, event) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setIsPasswordRecoveryMode(true);
+      }
+      if (user) {
+        setProfile(user);
+        setIsAuthenticated(true);
+        // Only strip URL tokens if NOT currently in password recovery mode
+        if (
+          typeof window !== 'undefined' &&
+          !window.location.hash.includes('reset-password') &&
+          !window.location.hash.includes('type=recovery') &&
+          !window.location.search.includes('type=recovery') &&
+          (window.location.hash.includes('access_token=') || window.location.search.includes('code='))
+        ) {
+          window.history.replaceState(null, '', window.location.pathname);
+        }
+      }
+    });
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      if (unsubscribeAuth) unsubscribeAuth();
+    };
   }, []);
 
   const navigateTo = (route: AppRoute) => {
@@ -554,7 +589,30 @@ export const App: React.FC = () => {
     );
   }
 
-  // Authentication Gate Screen
+  // ── 1. Password Recovery Screen (Priority: User clicked reset password link in email) ──
+  if (isPasswordRecoveryMode) {
+    return (
+      <ForgotPasswordScreen
+        forcedMode="update"
+        onBackToLogin={() => {
+          setIsPasswordRecoveryMode(false);
+          if (typeof window !== 'undefined') {
+            window.location.hash = '';
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        }}
+        onPasswordResetSuccess={() => {
+          setIsPasswordRecoveryMode(false);
+          if (typeof window !== 'undefined') {
+            window.location.hash = '';
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        }}
+      />
+    );
+  }
+
+  // ── 2. Authentication Gate Screen ──────────────────────────────────
   if (!isAuthenticated) {
     return <AuthScreen onAuthSuccess={handleAuthSuccess} />;
   }

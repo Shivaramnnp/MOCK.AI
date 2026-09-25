@@ -776,12 +776,6 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                     <span>{phoneWarning}</span>
                   </div>
                 )}
-                {/* Format hint */}
-                {!phoneWarning && (
-                  <p className="mt-1 text-[11px] text-surface-muted">
-                    Used to prevent duplicate accounts. Must be unique per user.
-                  </p>
-                )}
               </div>
             )}
 
