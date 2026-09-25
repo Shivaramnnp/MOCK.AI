@@ -616,7 +616,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Shivaram Patel"
+                    placeholder="Enter your full name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="w-full pl-10 pr-4 py-2.5 rounded-2xl border border-surface-border dark:border-white/10 bg-white dark:bg-white/[0.03] text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary transition-colors shadow-sm"

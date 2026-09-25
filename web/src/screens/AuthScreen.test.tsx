@@ -40,7 +40,7 @@ describe('AuthScreen Component', () => {
 
     // Verify registration fields appear
     expect(screen.getByText('Create Your Account')).toBeDefined();
-    expect(screen.getByPlaceholderText('e.g. Shivaram Patel')).toBeDefined();
+    expect(screen.getByPlaceholderText('Enter your full name')).toBeDefined();
     expect(screen.getByPlaceholderText('Re-enter your password')).toBeDefined();
     expect(screen.getByText('Select Your Primary Role:')).toBeDefined();
 
@@ -144,7 +144,7 @@ describe('AuthScreen Component', () => {
 
     // Fill all required fields including mobile number (wrapped in act to flush React state)
     await act(async () => {
-      fireEvent.change(screen.getByPlaceholderText('e.g. Shivaram Patel'), { target: { value: 'Test Student' } });
+      fireEvent.change(screen.getByPlaceholderText('Enter your full name'), { target: { value: 'Test Student' } });
       fireEvent.change(screen.getByPlaceholderText('name@example.com'), { target: { value: 'test@example.com' } });
       fireEvent.change(screen.getByPlaceholderText('At least 6 characters'), { target: { value: 'password123' } });
       fireEvent.change(screen.getByPlaceholderText('Re-enter your password'), { target: { value: 'password123' } });
