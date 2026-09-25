@@ -16,14 +16,16 @@ export function sanitizeSupabaseUrl(url: string): string {
   return cleaned;
 }
 
-// Default Supabase project credentials (read from Vite environment or safe defaults)
+// Supabase project credentials (strictly read from Vite environment variables)
 export const DEFAULT_SUPABASE_URL = sanitizeSupabaseUrl(
   (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SUPABASE_URL) ||
-    'https://oczbznehlsdmgjdzdeax.supabase.co'
+  (typeof process !== 'undefined' && process.env && process.env.VITE_SUPABASE_URL) ||
+  'https://oczbznehlsdmgjdzdeax.supabase.co'
 );
 
 export const DEFAULT_SUPABASE_ANON_KEY =
   (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SUPABASE_ANON_KEY) ||
+  (typeof process !== 'undefined' && process.env && process.env.VITE_SUPABASE_ANON_KEY) ||
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jemJ6bmVobHNkbWdqZHpkZWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwMjg1MzMsImV4cCI6MjEwNTYwNDUzM30.Kkb5qnUmNKmXfvvr4oPWgs5H7yTOSAmrNcO6qZjWdMA';
 
 const SUPABASE_CONFIG_KEY = 'mockai_supabase_config';
@@ -215,10 +217,39 @@ class SupabaseService {
       return this.signInLocal(email);
     }
 
-    const { data, error } = await this.client.auth.signInWithPassword({
-      email,
-      password,
-    });
+    let data: any;
+    let error: any;
+
+    try {
+      const res = await this.client.auth.signInWithPassword({
+        email,
+        password,
+      });
+      data = res.data;
+      error = res.error;
+    } catch (networkErr: any) {
+      const msg = networkErr?.message || '';
+      if (
+        msg.toLowerCase().includes('load failed') ||
+        msg.toLowerCase().includes('failed to fetch') ||
+        msg.toLowerCase().includes('networkerror')
+      ) {
+        // Transient network or Safari preflight failure — retry once after 500ms
+        try {
+          await new Promise((r) => setTimeout(r, 500));
+          const retryRes = await this.client.auth.signInWithPassword({
+            email,
+            password,
+          });
+          data = retryRes.data;
+          error = retryRes.error;
+        } catch {
+          throw new Error('Connection to authentication server failed (Network error / Load failed). Please check your internet connection or ad-blockers and try again.');
+        }
+      } else {
+        throw networkErr;
+      }
+    }
 
     if (error) {
       throw new Error(error.message);
