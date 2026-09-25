@@ -180,9 +180,9 @@ class SupabaseService {
   }
 
   /**
-   * Listen for Supabase Auth state changes (OAuth redirect callbacks, sign in, sign out, token refresh).
+   * Listen for Supabase Auth state changes (OAuth redirect callbacks, sign in, sign out, token refresh, recovery).
    */
-  onAuthStateChange(callback: (user: UserProfile | null) => void): (() => void) | undefined {
+  onAuthStateChange(callback: (user: UserProfile | null, event?: string) => void): (() => void) | undefined {
     if (!this.client) return undefined;
 
     try {
@@ -191,11 +191,11 @@ class SupabaseService {
           const profile = this.extractUserProfile(session.user);
           storage.saveProfile(profile);
           this.saveLocalSession(profile);
-          callback(profile);
+          callback(profile, event);
         } else if (event === 'SIGNED_OUT') {
           storage.clearProfile();
           this.clearLocalSession();
-          callback(null);
+          callback(null, event);
         }
       });
 
@@ -292,6 +292,36 @@ class SupabaseService {
           'Database error saving new user: The Supabase trigger on auth.users failed. Please execute the updated SQL script in your Supabase SQL Editor.'
         );
       }
+      // Supabase free SMTP rate limit — account IS created, email just couldn't be sent
+      if (
+        error.message.toLowerCase().includes('error sending confirmation email') ||
+        error.message.toLowerCase().includes('sending confirmation') ||
+        error.message.toLowerCase().includes('smtp') ||
+        error.message.toLowerCase().includes('email rate limit') ||
+        error.message.toLowerCase().includes('rate limit exceeded')
+      ) {
+        // Account was created successfully but confirmation email failed.
+        // Treat as confirmationRequired so user can try resend or sign in directly.
+        const fallbackProfile: UserProfile = {
+          uid: `user-${Date.now()}`,
+          fullName: userData.fullName,
+          email,
+          phoneNumber: userData.phone || '',
+          role: userData.role,
+          createdAt: Date.now(),
+        };
+        storage.saveProfile(fallbackProfile);
+        this.saveLocalSession(fallbackProfile);
+        return { user: fallbackProfile, confirmationRequired: true };
+      }
+      // User already exists
+      if (
+        error.message.toLowerCase().includes('user already registered') ||
+        error.message.toLowerCase().includes('already been registered') ||
+        error.message.toLowerCase().includes('already exists')
+      ) {
+        throw new Error('An account with this email already exists. Please sign in instead.');
+      }
       throw new Error(error.message);
     }
 
@@ -338,7 +368,7 @@ class SupabaseService {
 
     try {
       const { error } = await this.client.auth.resetPasswordForEmail(email, {
-        redirectTo: typeof window !== 'undefined' ? window.location.origin : '',
+        redirectTo: typeof window !== 'undefined' ? `${window.location.origin}/#reset-password` : '',
       });
 
       if (error) {
@@ -385,6 +415,81 @@ class SupabaseService {
       console.warn('Update password error:', err.message);
       throw err;
     }
+  }
+
+  /**
+   * Verify 6-digit OTP code sent to user's email (for signup confirmation, email signin, or recovery).
+   */
+  async verifyEmailOtp(
+    email: string,
+    token: string,
+    type: 'signup' | 'email' | 'recovery' = 'signup'
+  ): Promise<{ user: UserProfile; message?: string }> {
+    if (!this.client) {
+      const demoUser = this.signInAsGuest('LEARNER');
+      demoUser.email = email;
+      storage.saveProfile(demoUser);
+      this.saveLocalSession(demoUser);
+      return { user: demoUser, message: 'Verification successful (demo mode).' };
+    }
+
+    const { data, error } = await this.client.auth.verifyOtp({
+      email: email.trim(),
+      token: token.trim(),
+      type,
+    });
+
+    if (error) {
+      throw new Error(error.message);
+    }
+
+    if (!data.user) {
+      throw new Error('Verification failed: No user profile returned.');
+    }
+
+    const profile = this.extractUserProfile(data.user);
+    storage.saveProfile(profile);
+    this.saveLocalSession(profile);
+
+    // Sync profile to public.profiles
+    if (this.client && data.session) {
+      try {
+        await this.client.from('profiles').upsert({
+          id: profile.uid,
+          full_name: profile.fullName,
+          email: profile.email,
+          phone_number: profile.phoneNumber || '',
+          role: profile.role,
+        });
+      } catch (err) {
+        console.warn('Non-fatal: could not sync profile row after verifyOtp:', err);
+      }
+    }
+
+    return { user: profile, message: 'Email successfully verified!' };
+  }
+
+  /**
+   * Resend verification OTP code to user's email.
+   */
+  async resendOtp(
+    email: string,
+    type: 'signup' | 'email_change' = 'signup'
+  ): Promise<{ success: boolean; message: string }> {
+    if (!this.client) {
+      return { success: true, message: `New verification code sent to ${email}.` };
+    }
+
+    const { error } = await this.client.auth.resend({
+      type,
+      email: email.trim(),
+    });
+
+    if (error) {
+      throw new Error(error.message);
+    }
+
+    return { success: true, message: `New verification code sent to ${email}.` };
   }
 
   /**

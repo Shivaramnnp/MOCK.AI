@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Sparkles,
   Lock,
@@ -18,16 +18,19 @@ import {
   Sun,
   Moon,
   Check,
+  KeyRound,
+  RefreshCw,
 } from 'lucide-react';
 import { supabaseService } from '../services/supabase';
 import { UserProfile, UserRole } from '../types';
+import { ForgotPasswordScreen } from './ForgotPasswordScreen';
 
 interface AuthScreenProps {
   onAuthSuccess: (user: UserProfile) => void;
 }
 
 export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
-  const [mode, setMode] = useState<'login' | 'signup'>('login');
+  const [mode, setMode] = useState<'login' | 'signup' | 'forgot' | 'verify_otp'>('login');
 
   // Form State
   const [fullName, setFullName] = useState('');
@@ -46,7 +49,15 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  // Forgot Password Modal State
+  // OTP Verification State
+  const [otpCode, setOtpCode] = useState('');
+  const [pendingEmail, setPendingEmail] = useState('');
+  const [isOtpLoading, setIsOtpLoading] = useState(false);
+  const [otpError, setOtpError] = useState<string | null>(null);
+  const [otpSuccess, setOtpSuccess] = useState<string | null>(null);
+  const [otpCooldown, setOtpCooldown] = useState(0);
+
+  // Forgot Password Modal State (retained for backward compatibility)
   const [showForgotModal, setShowForgotModal] = useState(false);
   const [forgotEmail, setForgotEmail] = useState('');
   const [forgotStatus, setForgotStatus] = useState<string | null>(null);
@@ -54,6 +65,15 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
 
   // Theme State
   const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+
+  // Resend cooldown timer countdown
+  useEffect(() => {
+    if (otpCooldown <= 0) return;
+    const interval = setInterval(() => {
+      setOtpCooldown((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [otpCooldown]);
 
   const toggleTheme = () => {
     if (isDark) {
@@ -96,6 +116,15 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
       const { user } = await supabaseService.signIn(email.trim(), password);
       onAuthSuccess(user);
     } catch (err: any) {
+      if (err.message?.toLowerCase().includes('email not confirmed')) {
+        setPendingEmail(email.trim());
+        setMode('verify_otp');
+        setOtpCooldown(60);
+        try {
+          await supabaseService.resendOtp(email.trim(), 'signup');
+        } catch {}
+        return;
+      }
       setErrorMessage(err.message || 'Invalid email or password.');
     } finally {
       setIsLoading(false);
@@ -132,9 +161,11 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
       });
 
       if (confirmationRequired) {
-        setSuccessMessage(
-          `Account created for ${email}! A confirmation link has been sent to your inbox.`
-        );
+        setPendingEmail(email.trim());
+        setMode('verify_otp');
+        setOtpCooldown(60);
+        setOtpError(null);
+        setOtpSuccess(`A 6-digit confirmation code has been dispatched to ${email.trim()}.`);
       } else {
         onAuthSuccess(user);
       }
@@ -142,6 +173,46 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
       setErrorMessage(err.message || 'Failed to create account.');
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleVerifyOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanCode = otpCode.trim();
+    if (cleanCode.length < 6) {
+      setOtpError('Please enter the full 6-digit verification code.');
+      return;
+    }
+
+    setIsOtpLoading(true);
+    setOtpError(null);
+
+    try {
+      const { user } = await supabaseService.verifyEmailOtp(pendingEmail || email, cleanCode, 'signup');
+      setOtpSuccess('Email verified successfully!');
+      setTimeout(() => {
+        onAuthSuccess(user);
+      }, 500);
+    } catch (err: any) {
+      setOtpError(err.message || 'Invalid or expired verification code. Please check your email or request a new code.');
+    } finally {
+      setIsOtpLoading(false);
+    }
+  };
+
+  const handleResendOtp = async () => {
+    if (otpCooldown > 0 || isOtpLoading) return;
+    setIsOtpLoading(true);
+    setOtpError(null);
+
+    try {
+      await supabaseService.resendOtp(pendingEmail || email, 'signup');
+      setOtpCooldown(60);
+      setOtpSuccess('A fresh verification code has been dispatched to your email.');
+    } catch (err: any) {
+      setOtpError(err.message || 'Failed to resend code. Please try again.');
+    } finally {
+      setIsOtpLoading(false);
     }
   };
 
@@ -174,6 +245,16 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
       setIsForgotLoading(false);
     }
   };
+
+  if (mode === 'forgot') {
+    return (
+      <ForgotPasswordScreen
+        initialEmail={email}
+        onBackToLogin={() => setMode('login')}
+        onPasswordResetSuccess={() => setMode('login')}
+      />
+    );
+  }
 
   return (
     <div className="relative min-h-screen flex flex-col lg:grid lg:grid-cols-12 bg-surface dark:bg-[#0A0C13] text-surface-text dark:text-darkSurface-text selection:bg-brand-primary selection:text-white transition-colors duration-200">
@@ -286,17 +367,145 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
 
         {/* ── Card Container ─────────────────────────────────────────── */}
         <div className="w-full max-w-md bg-white dark:bg-[#111420]/90 border border-surface-border dark:border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl dark:shadow-2xl space-y-5">
-          {/* Header Title */}
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-surface-text dark:text-darkSurface-text tracking-tight">
-              {mode === 'login' ? 'Welcome Back, Scholar' : 'Create Your Account'}
-            </h2>
-            <p className="text-xs sm:text-sm text-surface-muted dark:text-darkSurface-muted mt-1.5">
-              {mode === 'login'
-                ? 'Sign in with your credentials to access your mock exams and classes.'
-                : 'Join thousands of students and teachers accelerating their exam mastery.'}
-            </p>
-          </div>
+          {mode === 'verify_otp' ? (
+            <div className="space-y-5">
+              {/* Header */}
+              <div className="text-center space-y-2">
+                <div className="w-14 h-14 mx-auto rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shadow-inner">
+                  <KeyRound className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl font-display font-extrabold text-surface-text dark:text-darkSurface-text tracking-tight">
+                  Verify Your Email
+                </h2>
+                <p className="text-xs sm:text-sm text-surface-muted dark:text-darkSurface-muted leading-relaxed">
+                  We sent a 6-digit confirmation code to{' '}
+                  <span className="font-semibold text-brand-primary break-all">{pendingEmail || email}</span>. Enter the code below to complete your registration.
+                </p>
+              </div>
+
+              {/* Info notice about email delivery delays */}
+              <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-amber-700 dark:text-amber-300 text-[11px] flex items-start gap-2">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                <span>
+                  Didn't receive the code? Check your <strong>spam/junk</strong> folder. Delivery may take 1–2 minutes. If it never arrives, use <strong>Resend</strong> below or try <strong>Continue with Google</strong>.
+                </span>
+              </div>
+
+              {/* Error & Success Feedback Alerts */}
+              {otpError && (
+                <div className="p-3.5 rounded-2xl bg-red-500/10 border border-red-500/25 text-brand-red text-xs flex items-start gap-2.5 animate-in fade-in duration-150">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{otpError}</span>
+                </div>
+              )}
+
+              {otpSuccess && (
+                <div className="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-brand-green text-xs flex items-start gap-2.5 animate-in fade-in duration-150">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{otpSuccess}</span>
+                </div>
+              )}
+
+              {/* Form */}
+              <form onSubmit={handleVerifyOtp} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-2 text-center">
+                    6-Digit Verification Code
+                  </label>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
+                    pattern="[0-9]*"
+                    maxLength={6}
+                    autoFocus
+                    required
+                    value={otpCode}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/\D/g, '').slice(0, 6);
+                      setOtpCode(val);
+                      if (otpError) setOtpError(null);
+                    }}
+                    placeholder="• • • • • •"
+                    className="w-full text-center text-2xl tracking-[0.5em] font-mono py-3 px-4 rounded-2xl border-2 border-surface-border dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all shadow-sm font-bold"
+                  />
+                  <p className="text-[11px] text-surface-muted text-center mt-2">
+                    Check your spam/junk folder if the code doesn't appear within 1 minute.
+                  </p>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isOtpLoading || otpCode.trim().length !== 6}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-sm shadow-glow hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                >
+                  {isOtpLoading ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      <span>Verify & Complete Signup</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+
+              {/* Resend & Back actions */}
+              <div className="pt-2 border-t border-surface-border dark:border-white/10 flex flex-col gap-2.5 text-center text-xs">
+                <button
+                  type="button"
+                  onClick={handleResendOtp}
+                  disabled={otpCooldown > 0 || isOtpLoading}
+                  className="inline-flex items-center justify-center gap-1.5 font-bold text-brand-primary hover:text-brand-variant disabled:text-surface-muted transition-colors py-1"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isOtpLoading ? 'animate-spin' : ''}`} />
+                  {otpCooldown > 0
+                    ? `Resend code in ${otpCooldown}s`
+                    : 'Resend Verification Code'}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMode('login');
+                    setEmail(pendingEmail || email);
+                    setOtpCode('');
+                    setOtpError(null);
+                    setOtpSuccess(null);
+                    setErrorMessage(null);
+                  }}
+                  className="inline-flex items-center justify-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold hover:underline transition-colors py-1"
+                >
+                  Already confirmed? Try signing in →
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMode('signup');
+                    setOtpCode('');
+                    setOtpError(null);
+                    setOtpSuccess(null);
+                  }}
+                  className="text-surface-muted hover:text-surface-text transition-colors py-1"
+                >
+                  ← Change email address or go back
+                </button>
+              </div>
+            </div>
+          ) : (
+            <>
+              {/* Header Title */}
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-surface-text dark:text-darkSurface-text tracking-tight">
+                  {mode === 'login' ? 'Welcome Back, Scholar' : 'Create Your Account'}
+                </h2>
+                <p className="text-xs sm:text-sm text-surface-muted dark:text-darkSurface-muted mt-1.5">
+                  {mode === 'login'
+                    ? 'Sign in with your credentials to access your mock exams and classes.'
+                    : 'Join thousands of students and teachers accelerating their exam mastery.'}
+                </p>
+              </div>
 
           {/* Mode Switcher Tabs */}
           <div className="flex p-1 rounded-2xl bg-surface-elev2 dark:bg-white/[0.04] border border-surface-border dark:border-white/10">
@@ -670,6 +879,8 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
               )}
             </div>
           </div>
+          </>
+        )}
         </div>
 
         {/* ── Production Trust & Compliance Footer ───────────────────── */}
