@@ -28,7 +28,6 @@ dist-ssr
 .env.*
 !.env.example
 
-# Local exam assets — served from Supabase Storage in production
-# These are 198MB of PNGs already uploaded to Supabase CDN
-public/exam-assets/
+# Local SSC exam assets — served from Supabase CDN in production (198MB)
+public/exam-assets/ssc/
 

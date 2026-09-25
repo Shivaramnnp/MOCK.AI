@@ -139,7 +139,11 @@ def neutralize_page_watermarks(doc, page, year=2024):
     for img in page.get_images():
         xref = img[0]
         rects = page.get_image_rects(xref)
-        is_watermark = any(r.width > 380 and r.height > 320 for r in rects)
+        is_watermark = any(
+            (r.width > 380 and r.height > 320) or
+            (r.width > 240 and r.height > 240 and abs(r.width - r.height) < 15)
+            for r in rects
+        )
         if is_watermark:
             try:
                 page.replace_image(xref, pixmap=blank_rgb)
@@ -332,7 +336,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
             rects = page.get_image_rects(xref)
             if any(r.y1 < 75 for r in rects):
                 continue
-            if any(r.width > 380 and r.height > 320 for r in rects):
+            if any((r.width > 380 and r.height > 320) or (r.width > 240 and r.height > 240 and abs(r.width - r.height) < 15) for r in rects):
                 continue
             for r in rects:
                 if r.y1 > 75 and r.y0 < 765:
@@ -431,10 +435,11 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                             opt_match = re.match(r'^(?:\(([A-D])\)|([A-D])(?:\s+|$)|(©))', label)
 
                             if opt_match:
-                                opt_letter = opt_match.group(1) or opt_match.group(2) or ('C' if opt_match.group(3) else None)
+                                opt_letter = opt_match.group(1) or opt_match.group(2) or ('C' if opt_match.group(3) else 'A')
+                                is_visual_option = not val or len(val.strip()) == 0 or bool(re.match(r'^(?:Option\s*\(?[A-D]\)?|\(?[A-D]\)?)$', val.strip(), re.IGNORECASE))
                                 has_opt_img = False
 
-                                if cell_imgs or cell_drws:
+                                if is_visual_option and (cell_imgs or cell_drws):
                                     visual_rects = cell_imgs + cell_drws
                                     union_rect = visual_rects[0]
                                     for vr in visual_rects[1:]:
@@ -458,7 +463,10 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
 
                                 if not has_opt_img:
                                     q_data['option_images'].append(None)
-                                q_data['options'].append(sanitize_math_text(val))
+                                opt_text = sanitize_math_text(val)
+                                if r'\frac' in opt_text and not ('$' in opt_text or r'\(' in opt_text or r'\[' in opt_text):
+                                    opt_text = f"\\({opt_text}\\)"
+                                q_data['options'].append(opt_text)
 
                             elif len(q_data['options']) == 0 and not q_data['diagram_url']:
                                 if cell_imgs or cell_drws:
@@ -601,11 +609,12 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                     if fracs:
                         val = f"\\({fracs[0][3]}\\)"  # KaTeX fraction string e.g. \(\frac{E[X]}{E[Y]}\)
 
-                    # Check for option image
+                    # Check for option image (only for visual-only options, not text options)
                     o_imgs = [im[1] for im in page_images if opt_rect.intersects(im[1]) and (opt_rect & im[1]).width > 12 and (opt_rect & im[1]).height > 12]
                     o_drws = [dr for dr in page_drawings if opt_rect.intersects(dr) and (opt_rect & dr).width > 12 and (opt_rect & dr).height > 12]
+                    is_visual_option = not val or len(val.strip()) == 0 or bool(re.match(r'^(?:Option\s*\(?[A-D]\)?|\(?[A-D]\)?)$', val.strip(), re.IGNORECASE))
                     has_img = False
-                    if o_imgs or o_drws:
+                    if is_visual_option and (o_imgs or o_drws):
                         visuals = o_imgs + o_drws
                         union_rect = visuals[0]
                         for v in visuals[1:]:
@@ -627,7 +636,10 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                                     has_img = True
                     if not has_img:
                         opt_images.append(None)
-                    opt_texts.append(sanitize_math_text(val))
+                    opt_text = sanitize_math_text(val)
+                    if r'\frac' in opt_text and not ('$' in opt_text or r'\(' in opt_text or r'\[' in opt_text):
+                        opt_text = f"\\({opt_text}\\)"
+                    opt_texts.append(opt_text)
                 else:
                     opt_texts.append('')
                     opt_images.append(None)

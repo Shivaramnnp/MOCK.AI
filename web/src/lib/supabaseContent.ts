@@ -82,6 +82,11 @@ export function resolveAssetUrl(localPath: string | null | undefined): string | 
   ) {
     return localPath;
   }
+  // GATE exam assets are bundled and served directly by Vercel static CDN
+  if (localPath.startsWith('/exam-assets/gate') || localPath.startsWith('exam-assets/gate')) {
+    return localPath.startsWith('/') ? localPath : `/${localPath}`;
+  }
+
   if (!isContentBackendAvailable()) return localPath;
 
   // Strip leading '/exam-assets/' or 'exam-assets/' prefix since bucket is 'exam-assets'

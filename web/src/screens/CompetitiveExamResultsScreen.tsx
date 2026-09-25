@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { ExamPaper, ExamTestSession, CompetitiveQuestion } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { ExamAsset } from '../components/ExamAsset';
 
 interface CompetitiveExamResultsScreenProps {
   session: ExamTestSession;
@@ -755,25 +756,13 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                     {((q.diagramUrls && q.diagramUrls.length > 0) || q.diagramUrl) && (
                       <div className="my-2 space-y-2">
                         {(q.diagramUrls || [q.diagramUrl!]).map((url, dIdx) => (
-                          <div
+                          <ExamAsset
                             key={dIdx}
-                            className="p-2.5 bg-white rounded-xl border border-surface-border shadow-2xs max-w-md mx-auto flex flex-col items-center group relative"
-                          >
-                            <img
-                              src={url}
-                              alt={`Diagram for Question ${idx + 1}`}
-                              className="rounded-lg max-h-56 object-contain mx-auto cursor-zoom-in hover:opacity-95 transition-opacity"
-                              onClick={() => setZoomImageUrl(url)}
-                            />
-                            <button
-                              type="button"
-                              onClick={() => setZoomImageUrl(url)}
-                              className="mt-1 inline-flex items-center gap-1 text-[10px] font-semibold text-surface-muted hover:text-brand-primary transition-colors cursor-pointer"
-                            >
-                              <ZoomIn className="w-3 h-3" />
-                              <span>Enlarge figure</span>
-                            </button>
-                          </div>
+                            url={url}
+                            alt={`Diagram for Question ${idx + 1}`}
+                            variant="diagram"
+                            onZoom={setZoomImageUrl}
+                          />
                         ))}
                       </div>
                     )}
@@ -853,17 +842,13 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                               </span>
                               <div className="flex-1 pt-0.5 space-y-1.5">
                                 {optImage && (
-                                  <div className="inline-block p-1.5 bg-white rounded-lg border border-surface-border/70 shadow-2xs">
-                                    <img
-                                      src={optImage}
-                                      alt={`Option ${optLetter} figure`}
-                                      className="max-h-20 object-contain cursor-zoom-in"
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setZoomImageUrl(optImage);
-                                      }}
-                                    />
-                                  </div>
+                                  <ExamAsset
+                                    key={`${q.id}-msq-res-opt-${optIndex}`}
+                                    url={optImage}
+                                    alt={`Option ${optLetter} figure`}
+                                    variant="option"
+                                    onZoom={setZoomImageUrl}
+                                  />
                                 )}
                                 {hasValidText && (
                                   <div>
@@ -916,17 +901,13 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                               </span>
                               <div className="flex-1 pt-0.5 space-y-1.5">
                                 {optImage && (
-                                  <div className="inline-block p-1.5 bg-white rounded-lg border border-surface-border/70 shadow-2xs">
-                                    <img
-                                      src={optImage}
-                                      alt={`Option ${optLetter} figure`}
-                                      className="max-h-20 object-contain cursor-zoom-in"
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setZoomImageUrl(optImage);
-                                      }}
-                                    />
-                                  </div>
+                                  <ExamAsset
+                                    key={`${q.id}-mcq-res-opt-${optIndex}`}
+                                    url={optImage}
+                                    alt={`Option ${optLetter} figure`}
+                                    variant="option"
+                                    onZoom={setZoomImageUrl}
+                                  />
                                 )}
                                 {hasValidText && (
                                   <div>
