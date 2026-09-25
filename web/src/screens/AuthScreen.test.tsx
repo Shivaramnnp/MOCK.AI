@@ -1,7 +1,8 @@
 import React from 'react';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { render, screen, fireEvent, cleanup, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, cleanup, waitFor, act } from '@testing-library/react';
 import { AuthScreen } from './AuthScreen';
+import { supabaseService } from '../services/supabase';
 
 describe('AuthScreen Component', () => {
   afterEach(() => {
@@ -120,5 +121,60 @@ describe('AuthScreen Component', () => {
     fireEvent.click(cancelBtn);
 
     expect(screen.queryByText('Reset Your Password')).toBeNull();
+  });
+
+  it('should transition to OTP verification mode when signup requires email confirmation and verify code', async () => {
+    const handleAuthSuccess = vi.fn();
+    const signUpSpy = vi.spyOn(supabaseService, 'signUp').mockResolvedValueOnce({
+      user: { uid: 'u-1', fullName: 'Test Student', email: 'test@example.com', phoneNumber: '9876543210', role: 'LEARNER', createdAt: Date.now() },
+      confirmationRequired: true,
+    });
+    const verifySpy = vi.spyOn(supabaseService, 'verifyEmailOtp').mockResolvedValueOnce({
+      user: { uid: 'u-1', fullName: 'Test Student', email: 'test@example.com', phoneNumber: '9876543210', role: 'LEARNER', createdAt: Date.now() },
+      message: 'Verified',
+    });
+    // Mock checkPhoneExists — called inline during submit
+    vi.spyOn(supabaseService, 'checkPhoneExists').mockResolvedValue({ exists: false });
+
+    render(<AuthScreen onAuthSuccess={handleAuthSuccess} />);
+
+    // Switch to Create Account
+    const createTabs = screen.getAllByRole('button', { name: /Create Account/i });
+    fireEvent.click(createTabs[0]);
+
+    // Fill all required fields including mobile number (wrapped in act to flush React state)
+    await act(async () => {
+      fireEvent.change(screen.getByPlaceholderText('e.g. Shivaram Patel'), { target: { value: 'Test Student' } });
+      fireEvent.change(screen.getByPlaceholderText('name@example.com'), { target: { value: 'test@example.com' } });
+      fireEvent.change(screen.getByPlaceholderText('At least 6 characters'), { target: { value: 'password123' } });
+      fireEvent.change(screen.getByPlaceholderText('Re-enter your password'), { target: { value: 'password123' } });
+      fireEvent.change(screen.getByPlaceholderText('+91 98765 43210'), { target: { value: '9876543210' } });
+    });
+
+    // Submit by firing the form's submit event (bypasses jsdom native validation)
+    const form = screen.getByPlaceholderText('name@example.com').closest('form')!;
+    await act(async () => {
+      fireEvent.submit(form);
+    });
+
+    // OTP screen should appear after confirmation is required
+    await waitFor(() => {
+      expect(screen.getByText('Verify Your Email')).toBeDefined();
+    }, { timeout: 3000 });
+
+    // Enter 6-digit verification code
+    const otpInput = screen.getByPlaceholderText('• • • • • •');
+    fireEvent.change(otpInput, { target: { value: '123456' } });
+
+    // Click verify
+    const verifyBtn = screen.getByRole('button', { name: /Verify & Complete Signup/i });
+    fireEvent.click(verifyBtn);
+
+    await waitFor(() => {
+      expect(verifySpy).toHaveBeenCalledWith('test@example.com', '123456', 'signup');
+    });
+
+    signUpSpy.mockRestore();
+    verifySpy.mockRestore();
   });
 });

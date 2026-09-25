@@ -38,6 +38,8 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [phoneWarning, setPhoneWarning] = useState<string | null>(null);
+  const [phoneChecking, setPhoneChecking] = useState(false);
   const [role, setRole] = useState<UserRole>('LEARNER');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -74,6 +76,32 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
     }, 1000);
     return () => clearInterval(interval);
   }, [otpCooldown]);
+
+  // Debounced real-time phone uniqueness check (signup mode only)
+  useEffect(() => {
+    if (mode !== 'signup' || !phone.trim() || phone.replace(/\D/g, '').length < 7) {
+      setPhoneWarning(null);
+      setPhoneChecking(false);
+      return;
+    }
+    setPhoneChecking(true);
+    setPhoneWarning(null);
+    const timer = setTimeout(async () => {
+      try {
+        const { exists } = await supabaseService.checkPhoneExists(phone);
+        if (exists) {
+          setPhoneWarning('⚠️ This mobile number is already registered. Please use a different number or sign in.');
+        } else {
+          setPhoneWarning(null);
+        }
+      } catch {
+        setPhoneWarning(null);
+      } finally {
+        setPhoneChecking(false);
+      }
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [phone, mode]);
 
   const toggleTheme = () => {
     if (isDark) {
@@ -149,9 +177,30 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
       setErrorMessage('Passwords do not match. Please verify your password.');
       return;
     }
+    // Phone field: required and must be valid
+    if (!phone.trim()) {
+      setErrorMessage('Please enter your mobile number.');
+      return;
+    }
+    if (phone.replace(/\D/g, '').length < 10) {
+      setErrorMessage('Please enter a valid 10-digit mobile number.');
+      return;
+    }
 
     setIsLoading(true);
     setErrorMessage(null);
+
+    // Inline phone uniqueness check (authoritative, not relying on debounced state)
+    try {
+      const { exists } = await supabaseService.checkPhoneExists(phone.trim());
+      if (exists) {
+        setErrorMessage('This mobile number is already registered. Please use a different number or sign in to your existing account.');
+        setIsLoading(false);
+        return;
+      }
+    } catch {
+      // Non-fatal — let signUp itself catch duplicates via DB constraint
+    }
 
     try {
       const { user, confirmationRequired } = await supabaseService.signUp(email.trim(), password, {
@@ -165,7 +214,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         setMode('verify_otp');
         setOtpCooldown(60);
         setOtpError(null);
-        setOtpSuccess(`A 6-digit confirmation code has been dispatched to ${email.trim()}.`);
+        setOtpSuccess(`A confirmation code has been sent to ${email.trim()}. Check your inbox (and spam folder).`);
       } else {
         onAuthSuccess(user);
       }
@@ -180,7 +229,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
     e.preventDefault();
     const cleanCode = otpCode.trim();
     if (cleanCode.length < 6) {
-      setOtpError('Please enter the full 6-digit verification code.');
+      setOtpError('Please enter the full verification code.');
       return;
     }
 
@@ -378,7 +427,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                   Verify Your Email
                 </h2>
                 <p className="text-xs sm:text-sm text-surface-muted dark:text-darkSurface-muted leading-relaxed">
-                  We sent a 6-digit confirmation code to{' '}
+                  We sent a confirmation code to{' '}
                   <span className="font-semibold text-brand-primary break-all">{pendingEmail || email}</span>. Enter the code below to complete your registration.
                 </p>
               </div>
@@ -410,7 +459,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
               <form onSubmit={handleVerifyOtp} className="space-y-4">
                 <div>
                   <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-2 text-center">
-                    6-Digit Verification Code
+                    Verification Code
                   </label>
                   <input
                     type="text"
@@ -427,7 +476,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                       if (otpError) setOtpError(null);
                     }}
                     placeholder="• • • • • •"
-                    className="w-full text-center text-2xl tracking-[0.5em] font-mono py-3 px-4 rounded-2xl border-2 border-surface-border dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all shadow-sm font-bold"
+                    className="w-full text-center text-2xl tracking-[0.4em] font-mono py-3 px-4 rounded-2xl border-2 border-surface-border dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all shadow-sm font-bold"
                   />
                   <p className="text-[11px] text-surface-muted text-center mt-2">
                     Check your spam/junk folder if the code doesn't appear within 1 minute.
@@ -436,7 +485,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
 
                 <button
                   type="submit"
-                  disabled={isOtpLoading || otpCode.trim().length !== 6}
+                  disabled={isOtpLoading || otpCode.trim().length < 6}
                   className="w-full py-3 rounded-2xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-sm shadow-glow hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {isOtpLoading ? (
@@ -683,6 +732,55 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                       <span className="text-red-500 font-medium">Passwords do not match</span>
                     )}
                   </div>
+                )}
+              </div>
+            )}
+
+            {/* Mobile Number Field (Sign Up only) */}
+            {mode === 'signup' && (
+              <div>
+                <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1">
+                  Mobile Number: <span className="text-brand-red normal-case font-semibold">*</span>
+                </label>
+                <div className="relative">
+                  <Phone className="w-4 h-4 text-surface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 98765 43210"
+                    value={phone}
+                    onChange={(e) => {
+                      // Allow digits, spaces, +, -, ()
+                      const val = e.target.value.replace(/[^\d\s\+\-\(\)]/g, '').slice(0, 15);
+                      setPhone(val);
+                    }}
+                    className={`w-full pl-10 pr-9 py-2.5 rounded-2xl border text-sm text-surface-text dark:text-darkSurface-text bg-white dark:bg-white/[0.03] focus:outline-none transition-colors shadow-sm ${
+                      phoneWarning
+                        ? 'border-amber-400 dark:border-amber-500 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20'
+                        : 'border-surface-border dark:border-white/10 focus:border-brand-primary'
+                    }`}
+                  />
+                  {/* Spinner while checking */}
+                  {phoneChecking && (
+                    <div className="absolute right-3.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 border-2 border-brand-primary border-t-transparent rounded-full animate-spin" />
+                  )}
+                  {/* Green tick when valid and unique */}
+                  {!phoneChecking && !phoneWarning && phone.replace(/\D/g, '').length >= 10 && (
+                    <Check className="w-3.5 h-3.5 text-emerald-500 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                  )}
+                </div>
+                {/* Duplicate warning */}
+                {phoneWarning && (
+                  <div className="mt-1.5 flex items-start gap-1.5 text-[11px] text-amber-600 dark:text-amber-400 font-medium">
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                    <span>{phoneWarning}</span>
+                  </div>
+                )}
+                {/* Format hint */}
+                {!phoneWarning && (
+                  <p className="mt-1 text-[11px] text-surface-muted">
+                    Used to prevent duplicate accounts. Must be unique per user.
+                  </p>
                 )}
               </div>
             )}

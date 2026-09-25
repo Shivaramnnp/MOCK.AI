@@ -263,6 +263,33 @@ class SupabaseService {
   }
 
   /**
+   * Check if a phone number is already registered in public.profiles.
+   * Returns { exists: boolean } — used for real-time uniqueness validation.
+   */
+  async checkPhoneExists(phone: string): Promise<{ exists: boolean }> {
+    if (!this.client || !phone.trim()) return { exists: false };
+    // Normalize: strip non-digits for comparison
+    const normalized = phone.replace(/\D/g, '');
+    if (normalized.length < 7) return { exists: false };
+
+    try {
+      const { data, error } = await this.client
+        .from('profiles')
+        .select('id')
+        .or(`phone_number.eq.${normalized},phone_number.eq.${phone.trim()}`)
+        .limit(1);
+
+      if (error) {
+        console.warn('Phone uniqueness check failed:', error.message);
+        return { exists: false }; // non-fatal; let signup proceed
+      }
+      return { exists: !!(data && data.length > 0) };
+    } catch {
+      return { exists: false };
+    }
+  }
+
+  /**
    * Sign Up with Email, Password, Name & Role via Supabase.
    */
   async signUp(
@@ -272,6 +299,16 @@ class SupabaseService {
   ): Promise<{ user: UserProfile; confirmationRequired: boolean }> {
     if (!this.client) {
       return this.signUpLocal(email, userData);
+    }
+
+    // ── Phone uniqueness guard ────────────────────────────────────────
+    if (userData.phone && userData.phone.trim()) {
+      const { exists } = await this.checkPhoneExists(userData.phone);
+      if (exists) {
+        throw new Error(
+          'This mobile number is already registered to another account. Please use a different number or sign in to your existing account.'
+        );
+      }
     }
 
     const { data, error } = await this.client.auth.signUp({
