@@ -179,50 +179,33 @@
       "questionNumber": 4,
       "sectionId": "quant",
       "sectionName": "Mathematical Abilities",
-      "questionText": "Q\n.\n4\nA\nn\ns\n1.\n2.\n3.\n4.\n\nOption 1 ID : 6306802076471\nOption 2 ID : 6306802076469\nOption 3 ID : 6306802076470\nOption 4 ID : 6306802076472\nStatus :",
+      "questionText": "Sandeep made a profit of 22% when he sold an overcoat for ₹8,540. Find the cost price of the overcoat.",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "₹7,000",
+        "₹6,000",
+        "₹6,500",
+        "₹7,500"
       ],
       "optionImages": null,
-      "richOptions": null,
+      "richOptions": [
+        { "id": "A", "text": "₹7,000", "imageUrl": null },
+        { "id": "B", "text": "₹6,000", "imageUrl": null },
+        { "id": "C", "text": "₹6,500", "imageUrl": null },
+        { "id": "D", "text": "₹7,500", "imageUrl": null }
+      ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "explanation": "Selling Price = ₹8,540, Profit = 22%. $\\text{Cost Price} = \\frac{\\text{SP}}{1 + \\text{Profit\\%}} = \\frac{8540}{1.22} = ₹7,000$. Thus, Option (A) is correct.",
       "diagramUrl": null,
       "diagramUrls": null,
-      "questionAssets": [
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s2-tier2/q4_diag_2.png"
-        },
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s2-tier2/q4_diag_2.png"
-        },
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s2-tier2/q4_diag_4.png"
-        },
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s2-tier2/q4_diag_2.png"
-        },
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s2-tier2/q4_diag_2.png"
-        }
-      ],
+      "questionAssets": null,
       "marks": 3.0,
       "negativeMarks": 1.0,
       "examId": "ssc-chsl",
       "year": 2024,
       "date": "2024-11-18",
       "shift": "Shift 1",
-      "tier": "Tier 2",
-      "language": "English"
+      "tier": "Tier 2"
     },
     {
       "id": "ssc-chsl-2024-18nov-s1-tier2-q5",
@@ -346,18 +329,23 @@
       "questionNumber": 7,
       "sectionId": "quant",
       "sectionName": "Mathematical Abilities",
-      "questionText": "Q\n.\n7\nA\nn\ns\n1. 7\n2. 3\n3. 12\n4. 10\n\nOption 1 ID : 6306802075714\nOption 2 ID : 6306802075713\nOption 3 ID : 6306802075716\nOption 4 ID : 6306802075715\nStatus :",
+      "questionText": "Find the value of \\(3(\\sec^2 A - 1)(\\csc A - 1)(\\csc A + 1) + 4(\\csc^2 A - \\cot^2 A)\\).",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "7",
+        "3",
+        "12",
+        "10"
       ],
       "optionImages": null,
-      "richOptions": null,
+      "richOptions": [
+        { "id": "A", "text": "7", "imageUrl": null },
+        { "id": "B", "text": "3", "imageUrl": null },
+        { "id": "C", "text": "12", "imageUrl": null },
+        { "id": "D", "text": "10", "imageUrl": null }
+      ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "explanation": "Using trigonometric identities: $\\sec^2 A - 1 = \\tan^2 A$, $(\\csc A - 1)(\\csc A + 1) = \\csc^2 A - 1 = \\cot^2 A$, and $\\csc^2 A - \\cot^2 A = 1$. Substituting into expression gives $3(\\tan^2 A \\cdot \\cot^2 A) + 4(1) = 3(1) + 4 = 7$. Thus, Option (A) is correct.",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
@@ -575,18 +563,23 @@
       "questionNumber": 14,
       "sectionId": "quant",
       "sectionName": "Mathematical Abilities",
-      "questionText": "Q\n.\n1\n4\nA\nn\ns\n1. 3\n2. −3\n3. 0\n4. −1\n\nOption 1 ID : 6306802075816\nOption 2 ID : 6306802075813\nOption 3 ID : 6306802075815\nOption 4 ID : 6306802075814\nStatus :",
+      "questionText": "Find the value of \\((\\sin^6 A + \\cos^6 A + 3\\sin^2 A \\cos^2 A) - (\\sin^4 A - \\cos^4 A + 1)\\csc^2 A\\).",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "3",
+        "−3",
+        "0",
+        "−1"
       ],
       "optionImages": null,
-      "richOptions": null,
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
+      "richOptions": [
+        { "id": "A", "text": "3", "imageUrl": null },
+        { "id": "B", "text": "−3", "imageUrl": null },
+        { "id": "C", "text": "0", "imageUrl": null },
+        { "id": "D", "text": "−1", "imageUrl": null }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerIndex": 3,
+      "explanation": "Since $(\\sin^2 A + \\cos^2 A)^3 = \\sin^6 A + \\cos^6 A + 3\\sin^2 A \\cos^2 A = 1^3 = 1$, and $\\sin^4 A - \\cos^4 A + 1 = (\\sin^2 A - \\cos^2 A)(\\sin^2 A + \\cos^2 A) + 1 = \\sin^2 A - \\cos^2 A + 1 = \\sin^2 A + (1 - \\cos^2 A) = 2\\sin^2 A$. Therefore, the value is $1 - (2\\sin^2 A \\cdot \\csc^2 A) = 1 - 2(1) = -1$. Thus, Option (D) is correct.",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,

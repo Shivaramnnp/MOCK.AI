@@ -16,10 +16,10 @@ describe('ForgotPasswordScreen Component', () => {
 
     expect(screen.getByText('Reset Your Password')).toBeDefined();
     expect(screen.getByPlaceholderText('name@example.com')).toBeDefined();
-    expect(screen.getByRole('button', { name: /Send Recovery Email/i })).toBeDefined();
+    expect(screen.getByRole('button', { name: /Send Recovery Code/i })).toBeDefined();
   });
 
-  it('should call supabaseService.resetPassword and show confirmation view upon form submission', async () => {
+  it('should call supabaseService.resetPassword and show OTP entry view upon form submission', async () => {
     const resetSpy = vi.spyOn(supabaseService, 'resetPassword').mockResolvedValueOnce({
       success: true,
       message: 'Reset instructions sent',
@@ -28,13 +28,13 @@ describe('ForgotPasswordScreen Component', () => {
     const handleBack = vi.fn();
     render(<ForgotPasswordScreen onBackToLogin={handleBack} initialEmail="test@example.com" />);
 
-    const submitBtn = screen.getByRole('button', { name: /Send Recovery Email/i });
+    const submitBtn = screen.getByRole('button', { name: /Send Recovery Code/i });
     fireEvent.click(submitBtn);
 
     await waitFor(() => {
       expect(resetSpy).toHaveBeenCalledWith('test@example.com');
-      expect(screen.getByText('Check Your Inbox')).toBeDefined();
-      expect(screen.getByText('test@example.com')).toBeDefined();
+      expect(screen.getByText('Check Your Email')).toBeDefined();
+      expect(screen.getByText('Recovery Code')).toBeDefined();
     });
   });
 

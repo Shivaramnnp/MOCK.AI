@@ -14,6 +14,12 @@ import {
   Check,
   GraduationCap,
   Award,
+  Trash2,
+  LogOut,
+  AlertCircle,
+  Eye,
+  X,
+  AlertTriangle,
 } from 'lucide-react';
 import { ClassModel, AssignmentModel, UserProfile, TestHistory } from '../types';
 
@@ -22,10 +28,13 @@ interface ClassroomScreenProps {
   classes: ClassModel[];
   assignments: AssignmentModel[];
   tests: TestHistory[];
-  onCreateClass: (name: string) => void;
-  onJoinClass: (code: string) => void;
+  onCreateClass: (name: string) => Promise<void> | void;
+  onJoinClass: (code: string) => Promise<{ success: boolean; message: string } | void> | { success: boolean; message: string } | void;
   onCreateAssignment: (classId: string, testId: string, dueDate: number | null) => void;
   onTakeAssignment: (asg: AssignmentModel) => void;
+  onDeleteClass?: (classId: string) => void;
+  onLeaveClass?: (classId: string) => void;
+  onDeleteAssignment?: (assignmentId: string) => void;
 }
 
 export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
@@ -37,6 +46,9 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
   onJoinClass,
   onCreateAssignment,
   onTakeAssignment,
+  onDeleteClass,
+  onLeaveClass,
+  onDeleteAssignment,
 }) => {
   const isTeacher = profile.role === 'TEACHER';
   const [activeTab, setActiveTab] = useState<'classes' | 'assignments' | 'grades'>('classes');
@@ -45,17 +57,34 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showJoinModal, setShowJoinModal] = useState(false);
   const [showAssignModal, setShowAssignModal] = useState(false);
+  const [selectedRosterClass, setSelectedRosterClass] = useState<ClassModel | null>(null);
   const [selectedClassId, setSelectedClassId] = useState<string>('');
 
   // Form state
   const [classNameInput, setClassNameInput] = useState('');
   const [joinCodeInput, setJoinCodeInput] = useState('');
+  const [joinError, setJoinError] = useState<string | null>(null);
   const [selectedTestId, setSelectedTestId] = useState('');
   const [dueDays, setDueDays] = useState(3);
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
+  // Filter classes & assignments based on user's role and enrollment
+  const visibleClasses = isTeacher
+    ? classes.filter((c) => c.teacherId === profile.uid)
+    : classes.filter((c) => c.studentIds?.includes(profile.uid));
+
+  const enrolledClassIds = new Set(
+    classes.filter((c) => c.studentIds?.includes(profile.uid)).map((c) => c.classId)
+  );
+
+  const visibleAssignments = isTeacher
+    ? assignments.filter(
+        (a) => visibleClasses.some((c) => c.classId === a.classId) || a.assignedBy === profile.uid
+      )
+    : assignments.filter((a) => enrolledClassIds.has(a.classId));
+
   // Statistics calculation
-  const totalStudents = classes.reduce((acc, c) => acc + c.studentIds.length, 0);
+  const totalStudents = visibleClasses.reduce((acc, c) => acc + (c.studentIds?.length || 0), 0);
 
   // Flatten submissions for teachers
   const allSubmissions: {
@@ -69,12 +98,12 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
     submittedAt?: number;
   }[] = [];
 
-  assignments.forEach((asg) => {
+  visibleAssignments.forEach((asg) => {
     Object.entries(asg.studentSubmissions || {}).forEach(([studentId, sub]) => {
       if (sub.status === 'SUBMITTED' && sub.score !== undefined && sub.total !== undefined) {
-        // Resolve student name from class roster if available
         const targetClass = classes.find((c) => c.classId === asg.classId);
-        const resolvedName = targetClass?.studentNames?.[studentId] || `Scholar ${studentId.slice(-4)}`;
+        const resolvedName =
+          sub.studentName || targetClass?.studentNames?.[studentId] || `Scholar ${studentId.slice(-4)}`;
 
         allSubmissions.push({
           studentId,
@@ -90,12 +119,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
     });
   });
 
-  const studentPendingAssignments = assignments.filter((a) => {
-    const sub = a.studentSubmissions?.[profile.uid];
-    return !sub || sub.status !== 'SUBMITTED';
-  });
-
-  const studentCompletedAssignments = assignments.filter((a) => {
+  const studentCompletedAssignments = visibleAssignments.filter((a) => {
     const sub = a.studentSubmissions?.[profile.uid];
     return sub && sub.status === 'SUBMITTED';
   });
@@ -108,20 +132,31 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
     }
   };
 
-  const handleCreateSubmit = (e: React.FormEvent) => {
+  const handleCreateSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!classNameInput.trim()) return;
-    onCreateClass(classNameInput.trim());
+    await onCreateClass(classNameInput.trim());
     setClassNameInput('');
     setShowCreateModal(false);
   };
 
-  const handleJoinSubmit = (e: React.FormEvent) => {
+  const handleJoinSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!joinCodeInput.trim()) return;
-    onJoinClass(joinCodeInput.trim().toUpperCase());
-    setJoinCodeInput('');
-    setShowJoinModal(false);
+    const cleanCode = joinCodeInput.trim().toUpperCase();
+    if (!cleanCode) return;
+
+    try {
+      const res = await onJoinClass(cleanCode);
+      if (res && !res.success) {
+        setJoinError(res.message);
+        return;
+      }
+      setJoinCodeInput('');
+      setJoinError(null);
+      setShowJoinModal(false);
+    } catch (err: any) {
+      setJoinError(err?.message || 'Failed to join class. Please try again.');
+    }
   };
 
   const handleAssignSubmit = (e: React.FormEvent) => {
@@ -129,6 +164,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
     if (!selectedClassId || !selectedTestId) return;
     const dueTime = dueDays > 0 ? Date.now() + dueDays * 86400000 : null;
     onCreateAssignment(selectedClassId, selectedTestId, dueTime);
+    setSelectedTestId('');
     setShowAssignModal(false);
   };
 
@@ -161,7 +197,11 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
             </button>
           ) : (
             <button
-              onClick={() => setShowJoinModal(true)}
+              onClick={() => {
+                setJoinError(null);
+                setJoinCodeInput('');
+                setShowJoinModal(true);
+              }}
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-xs sm:text-sm shadow-md hover:brightness-110 active:scale-95 transition-all"
             >
               <KeyRound className="w-4 h-4" />
@@ -179,14 +219,14 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
             <span>Active Classes</span>
           </div>
           <span className="text-2xl sm:text-3xl font-black text-surface-text dark:text-darkSurface-text mt-2 block">
-            {classes.length}
+            {visibleClasses.length}
           </span>
         </div>
 
         <div className="p-5 rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border shadow-sm">
           <div className="flex items-center gap-2 text-xs font-bold text-surface-muted uppercase">
             <Users className="w-4 h-4 text-purple-500" />
-            <span>{isTeacher ? 'Total Students' : 'Class Members'}</span>
+            <span>{isTeacher ? 'Total Students' : 'Classmates'}</span>
           </div>
           <span className="text-2xl sm:text-3xl font-black text-surface-text dark:text-darkSurface-text mt-2 block">
             {totalStudents}
@@ -199,7 +239,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
             <span>Assignments</span>
           </div>
           <span className="text-2xl sm:text-3xl font-black text-surface-text dark:text-darkSurface-text mt-2 block">
-            {assignments.length}
+            {visibleAssignments.length}
           </span>
         </div>
 
@@ -224,7 +264,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
               : 'text-surface-muted hover:text-surface-text'
           }`}
         >
-          Classes & Rosters ({classes.length})
+          {isTeacher ? 'Classes & Rosters' : 'My Classes'} ({visibleClasses.length})
         </button>
         <button
           onClick={() => setActiveTab('assignments')}
@@ -234,7 +274,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
               : 'text-surface-muted hover:text-surface-text'
           }`}
         >
-          Assignments ({assignments.length})
+          Assignments ({visibleAssignments.length})
         </button>
         {isTeacher && (
           <button
@@ -253,7 +293,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
       {/* ── TAB 1: Classes & Rosters ──────────────────────────────────── */}
       {activeTab === 'classes' && (
         <div className="space-y-4">
-          {classes.length === 0 ? (
+          {visibleClasses.length === 0 ? (
             <div className="text-center py-12 px-4 rounded-3xl border border-dashed border-surface-border dark:border-darkSurface-border bg-white dark:bg-darkSurface-elev1">
               <Users className="w-10 h-10 text-surface-muted mx-auto mb-3 opacity-50" />
               <h3 className="font-bold text-base text-surface-text dark:text-darkSurface-text">
@@ -264,11 +304,25 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                   ? 'Click "Create New Class" above to organize your students.'
                   : 'Ask your instructor for an invite code to join their classroom.'}
               </p>
+              {!isTeacher && (
+                <button
+                  onClick={() => {
+                    setJoinError(null);
+                    setJoinCodeInput('');
+                    setShowJoinModal(true);
+                  }}
+                  className="mt-4 px-4 py-2 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110 transition-all inline-flex items-center gap-1.5"
+                >
+                  <KeyRound className="w-3.5 h-3.5" />
+                  <span>Enter Class Code</span>
+                </button>
+              )}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {classes.map((cls) => {
+              {visibleClasses.map((cls) => {
                 const classAssignments = assignments.filter((a) => a.classId === cls.classId);
+                const studentCount = cls.studentIds?.length || 0;
 
                 return (
                   <div
@@ -278,9 +332,9 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                     <div>
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-xs font-bold text-brand-primary bg-brand-primary/10 px-3 py-1 rounded-full">
-                          {cls.studentIds.length} Students
+                          {studentCount} {studentCount === 1 ? 'Student' : 'Students'}
                         </span>
-                        {isTeacher && (
+                        {isTeacher ? (
                           <div className="flex items-center gap-1.5 font-mono text-xs font-bold bg-surface-elev2 dark:bg-darkSurface-elev2 px-2.5 py-1 rounded-xl border border-surface-border dark:border-darkSurface-border">
                             <span className="text-surface-muted">Code:</span>
                             <span className="text-brand-primary">{cls.joinCode}</span>
@@ -296,6 +350,10 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                               )}
                             </button>
                           </div>
+                        ) : (
+                          <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
+                            ● Enrolled
+                          </span>
                         )}
                       </div>
 
@@ -303,46 +361,92 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                         {cls.name}
                       </h3>
                       <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-0.5">
-                        Instructor: {cls.teacherName}
+                        Instructor: {cls.teacherId === profile.uid ? 'You' : cls.teacherName || 'Faculty'}
                       </p>
 
                       {/* Roster preview */}
-                      {cls.studentIds.length > 0 && (
+                      {studentCount > 0 && (
                         <div className="mt-3 flex flex-wrap gap-1.5">
                           {cls.studentIds.slice(0, 4).map((sid) => (
                             <span
                               key={sid}
                               className="text-[11px] px-2 py-0.5 rounded-md bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-muted"
                             >
-                              {cls.studentNames?.[sid] || sid}
+                              {cls.studentNames?.[sid] || `Scholar ${sid.slice(-4)}`}
                             </span>
                           ))}
-                          {cls.studentIds.length > 4 && (
+                          {studentCount > 4 && (
                             <span className="text-[11px] px-2 py-0.5 rounded-md text-surface-muted">
-                              +{cls.studentIds.length - 4} more
+                              +{studentCount - 4} more
                             </span>
                           )}
                         </div>
                       )}
                     </div>
 
-                    {isTeacher && (
-                      <div className="mt-5 pt-3 border-t border-surface-border dark:border-darkSurface-border flex items-center justify-between">
-                        <span className="text-xs text-surface-muted">
-                          {classAssignments.length} Assignments
-                        </span>
-                        <button
-                          onClick={() => {
-                            setSelectedClassId(cls.classId);
-                            setShowAssignModal(true);
-                          }}
-                          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-surface-elev2 dark:bg-darkSurface-elev2 hover:bg-brand-primary hover:text-white font-bold text-xs text-brand-primary transition-colors"
-                        >
-                          <Plus className="w-3.5 h-3.5" />
-                          <span>Assign Test</span>
-                        </button>
-                      </div>
-                    )}
+                    <div className="mt-5 pt-3 border-t border-surface-border dark:border-darkSurface-border flex items-center justify-between">
+                      {isTeacher ? (
+                        <>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs text-surface-muted">
+                              {classAssignments.length} {classAssignments.length === 1 ? 'Assignment' : 'Assignments'}
+                            </span>
+                            <button
+                              onClick={() => setSelectedRosterClass(cls)}
+                              className="text-xs text-brand-primary hover:underline font-semibold flex items-center gap-1"
+                            >
+                              <Eye className="w-3.5 h-3.5" />
+                              <span>Roster</span>
+                            </button>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => {
+                                setSelectedClassId(cls.classId);
+                                setSelectedTestId('');
+                                setShowAssignModal(true);
+                              }}
+                              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-elev2 dark:bg-darkSurface-elev2 hover:bg-brand-primary hover:text-white font-bold text-xs text-brand-primary transition-colors"
+                            >
+                              <Plus className="w-3.5 h-3.5" />
+                              <span>Assign Test</span>
+                            </button>
+                            {onDeleteClass && (
+                              <button
+                                onClick={() => {
+                                  if (confirm(`Are you sure you want to delete "${cls.name}"? All assigned exams in this class will also be removed.`)) {
+                                    onDeleteClass(cls.classId);
+                                  }
+                                }}
+                                title="Delete classroom"
+                                className="p-2 rounded-xl text-surface-muted hover:text-brand-red hover:bg-red-500/10 transition-colors"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <span className="text-xs text-surface-muted">
+                            {classAssignments.length} {classAssignments.length === 1 ? 'Assigned Test' : 'Assigned Tests'}
+                          </span>
+                          {onLeaveClass && (
+                            <button
+                              onClick={() => {
+                                if (confirm(`Leave "${cls.name}"? You will lose access to homework tests from this class.`)) {
+                                  onLeaveClass(cls.classId);
+                                }
+                              }}
+                              className="text-xs text-brand-red hover:underline font-semibold flex items-center gap-1"
+                            >
+                              <LogOut className="w-3.5 h-3.5" />
+                              <span>Leave Class</span>
+                            </button>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 );
               })}
@@ -354,7 +458,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
       {/* ── TAB 2: Assignments & Homework ─────────────────────────────── */}
       {activeTab === 'assignments' && (
         <div className="space-y-4">
-          {assignments.length === 0 ? (
+          {visibleAssignments.length === 0 ? (
             <div className="text-center py-12 px-4 rounded-3xl border border-dashed border-surface-border dark:border-darkSurface-border bg-white dark:bg-darkSurface-elev1">
               <FileCheck2 className="w-10 h-10 text-surface-muted mx-auto mb-3 opacity-50" />
               <h3 className="font-bold text-base text-surface-text dark:text-darkSurface-text">
@@ -362,16 +466,17 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
               </h3>
               <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-1 max-w-sm mx-auto">
                 {isTeacher
-                  ? 'Assign an exam from your test library to a class.'
-                  : 'Your instructors have not posted any new homework tests.'}
+                  ? 'Assign an exam from your test library to one of your classes.'
+                  : 'Your instructors have not posted any new homework tests yet.'}
               </p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {assignments.map((asg) => {
+              {visibleAssignments.map((asg) => {
                 const mySub = asg.studentSubmissions?.[profile.uid];
                 const isSubmitted = mySub?.status === 'SUBMITTED';
                 const submissionCount = Object.keys(asg.studentSubmissions || {}).length;
+                const isOverdue = asg.dueDate && asg.dueDate < Date.now() && !isSubmitted;
 
                 return (
                   <div
@@ -384,9 +489,16 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                           {asg.className}
                         </span>
                         {asg.dueDate && (
-                          <span className="text-xs text-surface-muted flex items-center gap-1">
+                          <span
+                            className={`text-xs flex items-center gap-1 font-medium ${
+                              isOverdue ? 'text-brand-red font-bold' : 'text-surface-muted'
+                            }`}
+                          >
                             <Clock className="w-3.5 h-3.5" />
-                            <span>Due {new Date(asg.dueDate).toLocaleDateString()}</span>
+                            <span>
+                              {isOverdue ? 'Overdue • ' : 'Due '}
+                              {new Date(asg.dueDate).toLocaleDateString()}
+                            </span>
                           </span>
                         )}
                       </div>
@@ -395,20 +507,40 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                         {asg.testTitle}
                       </h3>
                       <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-1">
-                        {asg.questions.length} Questions • Assigned by {asg.assignedByName}
+                        {asg.questions.length} Questions • Assigned by {asg.assignedByName || 'Instructor'}
                       </p>
                     </div>
 
                     <div className="mt-5 pt-3 border-t border-surface-border dark:border-darkSurface-border flex items-center justify-between">
                       {isTeacher ? (
-                        <span className="text-xs font-bold text-surface-muted">
-                          {submissionCount} Submissions received
-                        </span>
+                        <>
+                          <span className="text-xs font-bold text-surface-muted">
+                            {submissionCount} Submissions received
+                          </span>
+                          {onDeleteAssignment && (
+                            <button
+                              onClick={() => {
+                                if (confirm(`Remove assignment "${asg.testTitle}" from classroom?`)) {
+                                  onDeleteAssignment(asg.assignmentId);
+                                }
+                              }}
+                              className="p-1.5 rounded-lg text-surface-muted hover:text-brand-red hover:bg-red-500/10 transition-colors"
+                              title="Delete assignment"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
+                        </>
                       ) : (
                         <div>
                           {isSubmitted ? (
                             <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md">
                               ✓ Scored {mySub.score} / {mySub.total} ({mySub.scorePercent}%)
+                            </span>
+                          ) : isOverdue ? (
+                            <span className="text-xs font-bold text-brand-red bg-red-500/10 px-2.5 py-1 rounded-md flex items-center gap-1">
+                              <AlertTriangle className="w-3 h-3" />
+                              <span>Past Due</span>
                             </span>
                           ) : (
                             <span className="text-xs font-semibold text-amber-500">
@@ -458,6 +590,7 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                     <th className="px-5 py-3.5">Exam</th>
                     <th className="px-5 py-3.5">Score</th>
                     <th className="px-5 py-3.5">Accuracy</th>
+                    <th className="px-5 py-3.5">Submitted</th>
                     <th className="px-5 py-3.5">Status</th>
                   </tr>
                 </thead>
@@ -487,6 +620,9 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                           {sub.percent}%
                         </span>
                       </td>
+                      <td className="px-5 py-3.5 text-surface-muted text-xs">
+                        {sub.submittedAt ? new Date(sub.submittedAt).toLocaleDateString() : 'Recent'}
+                      </td>
                       <td className="px-5 py-3.5">
                         <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-brand-green">
                           <CheckCircle2 className="w-3 h-3" />
@@ -499,6 +635,69 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
               </table>
             </div>
           )}
+        </div>
+      )}
+
+      {/* ── View Roster Modal ─────────────────────────────────────────── */}
+      {selectedRosterClass && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150">
+          <div className="w-full max-w-lg bg-white dark:bg-darkSurface-elev1 rounded-3xl border border-surface-border dark:border-darkSurface-border p-6 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-surface-border dark:border-darkSurface-border">
+              <div>
+                <h3 className="font-bold text-lg text-surface-text dark:text-darkSurface-text">
+                  Class Roster: {selectedRosterClass.name}
+                </h3>
+                <p className="text-xs text-surface-muted">
+                  Join Code: <span className="font-mono font-bold text-brand-primary">{selectedRosterClass.joinCode}</span>
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedRosterClass(null)}
+                className="p-1.5 rounded-xl text-surface-muted hover:text-surface-text hover:bg-surface-elev2"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="max-h-80 overflow-y-auto space-y-2">
+              {(!selectedRosterClass.studentIds || selectedRosterClass.studentIds.length === 0) ? (
+                <p className="text-xs text-surface-muted text-center py-6">
+                  No students have enrolled in this class yet. Share code <strong>{selectedRosterClass.joinCode}</strong> with your students.
+                </p>
+              ) : (
+                selectedRosterClass.studentIds.map((sid, idx) => (
+                  <div
+                    key={sid}
+                    className="p-3 rounded-2xl bg-surface-elev2 dark:bg-darkSurface-elev2 flex items-center justify-between"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-xs">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-surface-text dark:text-darkSurface-text">
+                          {selectedRosterClass.studentNames?.[sid] || `Scholar ${sid.slice(-4)}`}
+                        </p>
+                        <p className="text-[10px] text-surface-muted font-mono">{sid}</p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
+                      Enrolled
+                    </span>
+                  </div>
+                ))
+              )}
+            </div>
+
+            <div className="flex justify-end pt-2">
+              <button
+                onClick={() => setSelectedRosterClass(null)}
+                className="px-4 py-2 rounded-xl bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs font-bold text-surface-text hover:bg-surface-elev3"
+              >
+                Close Roster
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
@@ -548,13 +747,23 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
       {/* ── Join Class Modal ─────────────────────────────────────────── */}
       {showJoinModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150">
-          <div className="w-full max-w-md bg-white dark:bg-darkSurface-elev1 rounded-3xl border border-surface-border dark:border-darkSurface-border p-6 shadow-2xl">
-            <h3 className="font-bold text-xl text-surface-text dark:text-darkSurface-text mb-2">
-              Join Classroom
-            </h3>
-            <p className="text-xs text-surface-muted mb-4">
-              Enter the 6-character code provided by your instructor.
-            </p>
+          <div className="w-full max-w-md bg-white dark:bg-darkSurface-elev1 rounded-3xl border border-surface-border dark:border-darkSurface-border p-6 shadow-2xl space-y-4">
+            <div>
+              <h3 className="font-bold text-xl text-surface-text dark:text-darkSurface-text mb-1">
+                Join Classroom
+              </h3>
+              <p className="text-xs text-surface-muted">
+                Enter the 6-character invite code provided by your instructor.
+              </p>
+            </div>
+
+            {joinError && (
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center gap-2 text-brand-red text-xs font-semibold">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>{joinError}</span>
+              </div>
+            )}
+
             <form onSubmit={handleJoinSubmit} className="space-y-4">
               <div>
                 <input
@@ -564,7 +773,10 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
                   maxLength={6}
                   placeholder="e.g. PHY981"
                   value={joinCodeInput}
-                  onChange={(e) => setJoinCodeInput(e.target.value.toUpperCase())}
+                  onChange={(e) => {
+                    setJoinCodeInput(e.target.value.toUpperCase());
+                    if (joinError) setJoinError(null);
+                  }}
                   className="w-full text-center tracking-widest font-mono text-xl font-bold px-4 py-3 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-brand-primary focus:outline-none focus:border-brand-primary"
                 />
               </div>
@@ -572,14 +784,18 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
               <div className="flex items-center justify-end gap-3 pt-2">
                 <button
                   type="button"
-                  onClick={() => setShowJoinModal(false)}
+                  onClick={() => {
+                    setShowJoinModal(false);
+                    setJoinError(null);
+                  }}
                   className="px-4 py-2 text-xs font-semibold text-surface-muted"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110"
+                  disabled={!joinCodeInput.trim()}
+                  className="px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110 disabled:opacity-50"
                 >
                   Enroll Now
                 </button>
@@ -596,60 +812,79 @@ export const ClassroomScreen: React.FC<ClassroomScreenProps> = ({
             <h3 className="font-bold text-xl text-surface-text dark:text-darkSurface-text mb-4">
               Assign Test to Students
             </h3>
-            <form onSubmit={handleAssignSubmit} className="space-y-4">
-              <div>
-                <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
-                  Select Exam to Assign:
-                </label>
-                <select
-                  required
-                  value={selectedTestId}
-                  onChange={(e) => setSelectedTestId(e.target.value)}
-                  className="w-full px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
-                >
-                  <option value="">-- Choose one of your tests --</option>
-                  {tests.map((t) => (
-                    <option key={t.id} value={t.id}>
-                      {t.title} ({t.questions.length} Qs)
-                    </option>
-                  ))}
-                </select>
-              </div>
 
-              <div>
-                <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
-                  Due in (Days):
-                </label>
-                <select
-                  value={dueDays}
-                  onChange={(e) => setDueDays(Number(e.target.value))}
-                  className="w-full px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
-                >
-                  <option value={1}>1 Day (Tomorrow)</option>
-                  <option value={3}>3 Days</option>
-                  <option value={7}>1 Week</option>
-                  <option value={14}>2 Weeks</option>
-                  <option value={0}>No Due Date</option>
-                </select>
+            {tests.length === 0 ? (
+              <div className="space-y-4 py-2">
+                <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs flex items-center gap-2.5">
+                  <AlertTriangle className="w-5 h-5 shrink-0" />
+                  <span>You don't have any mock exams in your library yet. Generate or create a test first before assigning.</span>
+                </div>
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setShowAssignModal(false)}
+                    className="px-4 py-2 text-xs font-semibold text-surface-muted hover:text-surface-text"
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
+            ) : (
+              <form onSubmit={handleAssignSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+                    Select Exam to Assign:
+                  </label>
+                  <select
+                    required
+                    value={selectedTestId}
+                    onChange={(e) => setSelectedTestId(e.target.value)}
+                    className="w-full px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+                  >
+                    <option value="">-- Choose one of your tests --</option>
+                    {tests.map((t) => (
+                      <option key={t.id} value={t.id}>
+                        {t.title} ({t.questions.length} Qs)
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
-              <div className="flex items-center justify-end gap-3 pt-3">
-                <button
-                  type="button"
-                  onClick={() => setShowAssignModal(false)}
-                  className="px-4 py-2 text-xs font-semibold text-surface-muted"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  disabled={!selectedTestId}
-                  className="px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110 disabled:opacity-50"
-                >
-                  Issue Assignment
-                </button>
-              </div>
-            </form>
+                <div>
+                  <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+                    Due in (Days):
+                  </label>
+                  <select
+                    value={dueDays}
+                    onChange={(e) => setDueDays(Number(e.target.value))}
+                    className="w-full px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+                  >
+                    <option value={1}>1 Day (Tomorrow)</option>
+                    <option value={3}>3 Days</option>
+                    <option value={7}>1 Week</option>
+                    <option value={14}>2 Weeks</option>
+                    <option value={0}>No Due Date</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center justify-end gap-3 pt-3">
+                  <button
+                    type="button"
+                    onClick={() => setShowAssignModal(false)}
+                    className="px-4 py-2 text-xs font-semibold text-surface-muted"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={!selectedTestId}
+                    className="px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110 disabled:opacity-50"
+                  >
+                    Issue Assignment
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       )}

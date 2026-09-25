@@ -8,7 +8,6 @@ import {
   User,
   Settings,
   LogOut,
-  ChevronDown,
   BookOpen,
   School,
   LineChart,
@@ -21,7 +20,7 @@ interface NavbarProps {
   onNavigate: (route: AppRoute) => void;
   streakCount: number;
   userRole: UserRole;
-  onRoleChange: (role: UserRole) => void;
+  onRoleChange?: (role: UserRole) => void;
   isDark: boolean;
   onToggleTheme: () => void;
   onOpenCreateModal: () => void;
@@ -42,7 +41,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSignOut,
 }) => {
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
-  const [roleDropdownOpen, setRoleDropdownOpen] = useState(false);
 
   const getInitials = (name?: string) => {
     if (!name) return 'SC';
@@ -156,63 +154,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>{streakCount}d</span>
           </div>
 
-          {/* Role Switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setRoleDropdownOpen(!roleDropdownOpen)}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-xl border text-xs font-semibold select-none transition-all ${badge.color}`}
-            >
-              <span>{badge.emoji}</span>
-              <span className="hidden sm:inline">{badge.label}</span>
-              <ChevronDown className="w-3 h-3 opacity-60" />
-            </button>
-
-            {roleDropdownOpen && (
-              <div
-                className="absolute right-0 mt-2 w-48 rounded-2xl bg-white dark:bg-darkSurface-elev2 shadow-xl border border-surface-border dark:border-darkSurface-border py-2 z-50 animate-in fade-in zoom-in-95 duration-150"
-                onClick={() => setRoleDropdownOpen(false)}
-              >
-                <div className="px-3.5 py-1 text-[10px] font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider">
-                  Active Mode
-                </div>
-                <button
-                  onClick={() => onRoleChange('LEARNER')}
-                  className={`w-full px-3.5 py-2 text-left text-xs flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors ${
-                    userRole === 'LEARNER' ? 'font-bold text-brand-primary' : ''
-                  }`}
-                >
-                  <span>📖</span>
-                  <div>
-                    <p className="font-semibold text-xs leading-none">Learner</p>
-                    <span className="text-[10px] text-surface-muted">Self-paced practice</span>
-                  </div>
-                </button>
-                <button
-                  onClick={() => onRoleChange('STUDENT')}
-                  className={`w-full px-3.5 py-2 text-left text-xs flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors ${
-                    userRole === 'STUDENT' ? 'font-bold text-brand-primary' : ''
-                  }`}
-                >
-                  <span>🎓</span>
-                  <div>
-                    <p className="font-semibold text-xs leading-none">Student</p>
-                    <span className="text-[10px] text-surface-muted">Class assignments</span>
-                  </div>
-                </button>
-                <button
-                  onClick={() => onRoleChange('TEACHER')}
-                  className={`w-full px-3.5 py-2 text-left text-xs flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors ${
-                    userRole === 'TEACHER' ? 'font-bold text-brand-primary' : ''
-                  }`}
-                >
-                  <span>👨‍🏫</span>
-                  <div>
-                    <p className="font-semibold text-xs leading-none">Teacher</p>
-                    <span className="text-[10px] text-surface-muted">Create & grade exams</span>
-                  </div>
-                </button>
-              </div>
-            )}
+          {/* Permanent Role Badge (Configured during account creation) */}
+          <div
+            title={`Account Role: ${badge.label} (Set during registration)`}
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-xl border text-xs font-semibold select-none ${badge.color}`}
+          >
+            <span>{badge.emoji}</span>
+            <span className="hidden sm:inline">{badge.label}</span>
           </div>
 
           {/* Theme Toggle */}

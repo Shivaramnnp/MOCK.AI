@@ -20,9 +20,52 @@ export const ExamAsset: React.FC<ExamAssetProps> = ({
   const [hasError, setHasError] = useState(false);
   const resolved = resolveAssetUrl(url) ?? (url || null);
 
-  // If no URL or image failed to load, do not render a broken placeholder box
-  if (!resolved || hasError) {
+  // Reset error when URL changes
+  React.useEffect(() => {
+    setHasError(false);
+  }, [resolved]);
+
+  if (!resolved) {
     return null;
+  }
+
+  if (hasError) {
+    if (variant === 'option') {
+      return (
+        <div
+          className={`inline-flex items-center gap-1.5 px-2 py-1 bg-amber-500/10 border border-amber-500/20 rounded-md text-[11px] text-amber-700 dark:text-amber-400 ${className}`}
+        >
+          <span>Image load error</span>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setHasError(false);
+            }}
+            className="underline font-bold hover:text-amber-800 cursor-pointer ml-1"
+          >
+            Retry
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <div
+        className={`p-4 bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/20 rounded-xl text-center flex flex-col items-center justify-center gap-2 max-w-md mx-auto ${className}`}
+      >
+        <p className="text-xs text-amber-700 dark:text-amber-400 font-medium">
+          Figure failed to load: {alt}
+        </p>
+        <button
+          type="button"
+          onClick={() => setHasError(false)}
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white dark:bg-darkSurface-elev2 border border-surface-border text-xs font-semibold text-surface-text hover:bg-surface-elev1 transition-colors cursor-pointer shadow-xs"
+        >
+          Retry Loading
+        </button>
+      </div>
+    );
   }
 
   if (variant === 'option') {

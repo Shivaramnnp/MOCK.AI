@@ -19,7 +19,7 @@ import {
   Target,
   AlertCircle,
 } from 'lucide-react';
-import { TestHistory, DailyTask, DailyInsight, UserProfile } from '../types';
+import { TestHistory, DailyTask, DailyInsight, UserProfile, ExamTestSession } from '../types';
 
 interface HomeScreenProps {
   tests: TestHistory[];
@@ -27,6 +27,9 @@ interface HomeScreenProps {
   streakCount: number;
   dailyTasks: DailyTask[];
   dailyInsight: DailyInsight;
+  activeSessions?: ExamTestSession[];
+  onResumeSession?: (session: ExamTestSession) => void;
+  onDiscardSession?: (sessionId: string) => void;
   onToggleTask: (taskId: string) => void;
   onOpenCreateModal: () => void;
   onStartTest: (test: TestHistory) => void;
@@ -41,6 +44,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   streakCount,
   dailyTasks,
   dailyInsight,
+  activeSessions = [],
+  onResumeSession,
+  onDiscardSession,
   onToggleTask,
   onOpenCreateModal,
   onStartTest,
@@ -245,6 +251,139 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           ))}
         </div>
       </div>
+
+      {/* ── Continue Test Section (Persistent Saved Tests) ───────────── */}
+      {activeSessions && activeSessions.length > 0 && (
+        <div className="space-y-4 animate-in fade-in duration-200">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-brand-primary animate-pulse" />
+              <h2 className="text-xl font-bold font-display text-surface-text dark:text-darkSurface-text">
+                Continue Tests ({activeSessions.length})
+              </h2>
+            </div>
+            <span className="text-xs text-surface-muted dark:text-darkSurface-muted">
+              Resume in-progress mock exams exactly where you left off
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {activeSessions.map((sess) => {
+              // Calculate answered count
+              let answeredCount = 0;
+              if (sess.questionStatuses) {
+                Object.values(sess.questionStatuses).forEach((st) => {
+                  if (st === 'ANSWERED' || st === 'ANSWERED_AND_MARKED_FOR_REVIEW') {
+                    answeredCount++;
+                  }
+                });
+              } else if (sess.userAnswers) {
+                answeredCount = Object.keys(sess.userAnswers).length;
+              }
+
+              const totalQuestions = Object.keys(sess.questionStatuses || {}).length || 100;
+              const percent = Math.min(100, Math.round((answeredCount / totalQuestions) * 100));
+
+              // Time formatting
+              const safeTime = Number.isFinite(sess.timeRemainingSeconds) && sess.timeRemainingSeconds >= 0
+                ? Math.floor(sess.timeRemainingSeconds)
+                : (sess.durationSeconds || 3600);
+              const mins = Math.floor(safeTime / 60);
+              const secs = safeTime % 60;
+              const timeFormatted = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+              // Relative last saved time
+              const elapsedMinutes = Math.max(0, Math.floor((Date.now() - (sess.lastSavedAt || sess.startedAt)) / 60000));
+              const lastSavedStr =
+                elapsedMinutes < 1
+                  ? 'Just now'
+                  : elapsedMinutes === 1
+                  ? '1 minute ago'
+                  : elapsedMinutes < 60
+                  ? `${elapsedMinutes} minutes ago`
+                  : `${Math.floor(elapsedMinutes / 60)} hours ago`;
+
+              return (
+                <div
+                  key={sess.sessionId}
+                  className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-brand-primary/25 hover:border-brand-primary p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4"
+                >
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="px-2.5 py-1 rounded-lg bg-brand-primary/10 text-brand-primary font-extrabold text-[11px] uppercase tracking-wider">
+                        {sess.examId === 'gate' ? 'GATE' : 'SSC CHSL'} {sess.tier ? `• ${sess.tier}` : ''}
+                      </span>
+                      <span className="text-[11px] font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded-full uppercase">
+                        {sess.status}
+                      </span>
+                    </div>
+
+                    <h3 className="font-bold text-sm sm:text-base text-surface-text dark:text-darkSurface-text line-clamp-2">
+                      {sess.paperTitle}
+                    </h3>
+
+                    {(sess.examDate || sess.shift) && (
+                      <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+                        {[sess.examDate, sess.shift].filter(Boolean).join(' • ')}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Progress & Timing */}
+                  <div className="space-y-2 pt-2 border-t border-surface-border dark:border-darkSurface-border text-xs">
+                    <div className="flex items-center justify-between">
+                      <span className="text-surface-muted">Progress:</span>
+                      <span className="font-bold text-surface-text dark:text-darkSurface-text">
+                        {answeredCount} / {totalQuestions} answered
+                      </span>
+                    </div>
+                    {/* Progress Bar */}
+                    <div className="w-full h-2 rounded-full bg-surface-elev2 dark:bg-darkSurface-elev2 overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-brand-primary to-brand-variant rounded-full transition-all"
+                        style={{ width: `${percent}%` }}
+                      />
+                    </div>
+
+                    <div className="flex items-center justify-between text-surface-muted pt-1">
+                      <div className="flex items-center gap-1.5 font-mono font-bold text-surface-text dark:text-darkSurface-text">
+                        <Clock className="w-3.5 h-3.5 text-brand-primary" />
+                        <span>Time left: {timeFormatted}</span>
+                      </div>
+                      <span className="text-[11px] text-surface-muted">
+                        Saved: {lastSavedStr}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2 pt-2">
+                    {onDiscardSession && (
+                      <button
+                        onClick={() => {
+                          if (window.confirm('Discard this test attempt? Progress will be permanently lost.')) {
+                            onDiscardSession(sess.sessionId);
+                          }
+                        }}
+                        className="p-2 rounded-xl text-surface-muted hover:text-red-500 hover:bg-red-500/10 transition-colors"
+                        title="Discard Test"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    )}
+                    <button
+                      onClick={() => onResumeSession?.(sess)}
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-xs sm:text-sm shadow-md hover:brightness-110 active:scale-95 transition-all"
+                    >
+                      <Play className="w-4 h-4 fill-white" />
+                      <span>Resume Test</span>
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* ── Resume Unfinished Test (if any) ───────────────────────────── */}
       {unfinishedTest && (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Sparkles, CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { BottomNav } from './components/BottomNav';
@@ -31,6 +31,8 @@ import { storage } from './services/storage';
 import { aiService } from './services/aiService';
 import { supabaseService } from './services/supabase';
 import { ExamService } from './services/examService';
+import { ExamSessionService } from './services/examSessionService';
+import { ClassroomService } from './services/classroomService';
 import {
   AppRoute,
   TestHistory,
@@ -87,6 +89,7 @@ export const App: React.FC = () => {
   // Active Session / Working State
   const [activeTest, setActiveTest] = useState<TestHistory | null>(null);
   const [activeSession, setActiveSession] = useState<TestSessionState | null>(null);
+  const [activeAssignmentId, setActiveAssignmentId] = useState<string | undefined>(undefined);
   const [editorInitialData, setEditorInitialData] = useState<{
     id?: string;
     title: string;
@@ -119,6 +122,36 @@ export const App: React.FC = () => {
     return ExamService.getPaperById('ssc-chsl-2025-13nov-s2') || null;
   });
   const [activeExamSession, setActiveExamSession] = useState<ExamTestSession | null>(null);
+  const [userActiveSessions, setUserActiveSessions] = useState<ExamTestSession[]>([]);
+
+  const refreshUserActiveSessions = useCallback(async (uid?: string) => {
+    const targetUid = uid || profile.uid;
+    if (!targetUid) return;
+    try {
+      const sessions = await ExamSessionService.getActiveSessionsForUser(targetUid);
+      setUserActiveSessions(sessions);
+    } catch (e) {
+      console.warn('Failed to load active sessions:', e);
+    }
+  }, [profile.uid]);
+
+  const refreshClassrooms = useCallback(async (userProfile: UserProfile = profile) => {
+    try {
+      const cls = await ClassroomService.getClasses(userProfile);
+      setClasses(cls);
+      const asg = await ClassroomService.getAssignments(userProfile);
+      setAssignments(asg);
+    } catch (e) {
+      console.warn('Could not refresh classrooms:', e);
+    }
+  }, [profile]);
+
+  useEffect(() => {
+    if (currentRoute === 'classroom') {
+      ClassroomService.syncLocalToRemote().catch(() => {});
+      refreshClassrooms();
+    }
+  }, [currentRoute, refreshClassrooms]);
 
   // Initialize storage state, theme, and authentication session on mount
   useEffect(() => {
@@ -165,8 +198,10 @@ export const App: React.FC = () => {
         if (authed && user) {
           setProfile(user);
           setIsAuthenticated(true);
+          refreshUserActiveSessions(user.uid);
         } else {
           setIsAuthenticated(false);
+          refreshUserActiveSessions('guest');
         }
       } catch (err) {
         console.warn('Authentication check failed:', err);
@@ -186,6 +221,7 @@ export const App: React.FC = () => {
       if (user) {
         setProfile(user);
         setIsAuthenticated(true);
+        refreshUserActiveSessions(user.uid);
         // Only strip URL tokens if NOT currently in password recovery mode
         if (
           typeof window !== 'undefined' &&
@@ -196,6 +232,8 @@ export const App: React.FC = () => {
         ) {
           window.history.replaceState(null, '', window.location.pathname);
         }
+      } else {
+        refreshUserActiveSessions('guest');
       }
     });
 
@@ -204,6 +242,36 @@ export const App: React.FC = () => {
       if (unsubscribeAuth) unsubscribeAuth();
     };
   }, []);
+
+  // Refresh active sessions on route changes to 'home'
+  useEffect(() => {
+    if (currentRoute === 'home') {
+      refreshUserActiveSessions();
+    }
+  }, [currentRoute, refreshUserActiveSessions]);
+
+  const handleResumeExamSession = async (sess: ExamTestSession) => {
+    let paper = ExamService.getPaperById(sess.paperId);
+    if (!paper) {
+      const fetched = await ExamService.getPaperByIdAsync(sess.paperId);
+      if (fetched) paper = fetched;
+    }
+
+    if (paper) {
+      const resumed = await ExamSessionService.resumeSession(sess.sessionId, profile.uid);
+      setActiveExamPaper(paper);
+      setActiveExamSession(resumed || sess);
+      navigateTo('exam_player');
+    } else {
+      showToast('Could not load exam paper for this session.', 'error');
+    }
+  };
+
+  const handleDiscardExamSession = async (sessionId: string) => {
+    await ExamSessionService.discardSession(sessionId, profile.uid);
+    await refreshUserActiveSessions();
+    showToast('Test attempt discarded.', 'info');
+  };
 
   const navigateTo = (route: AppRoute) => {
     setNavigationStack((prev) => [...prev, route]);
@@ -466,6 +534,7 @@ export const App: React.FC = () => {
   // --- Handlers for Test Execution & Results ---
 
   const handleStartTest = (test: TestHistory) => {
+    setActiveAssignmentId(undefined);
     setActiveTest(test);
     navigateTo('test_player');
   };
@@ -508,13 +577,15 @@ export const App: React.FC = () => {
 
     // If this was an assignment, submit score to classroom
     if (session.assignmentId) {
-      storage.submitAssignment(
+      ClassroomService.submitAssignment(
         session.assignmentId,
         profile.uid,
         correct,
-        session.questions.length
-      );
+        session.questions.length,
+        profile.fullName
+      ).catch(() => {});
       setAssignments(storage.getAssignments());
+      showToast(`Assignment completed! Scored ${correct}/${session.questions.length}`);
     }
 
     navigateTo('results');
@@ -596,16 +667,29 @@ export const App: React.FC = () => {
         forcedMode="update"
         onBackToLogin={() => {
           setIsPasswordRecoveryMode(false);
+          setIsAuthenticated(false);
           if (typeof window !== 'undefined') {
             window.location.hash = '';
             window.history.replaceState(null, '', window.location.pathname);
           }
         }}
-        onPasswordResetSuccess={() => {
+        onPasswordResetSuccess={async () => {
           setIsPasswordRecoveryMode(false);
           if (typeof window !== 'undefined') {
             window.location.hash = '';
             window.history.replaceState(null, '', window.location.pathname);
+          }
+          // Re-check if we have an active session after password update
+          try {
+            const { user, isAuthenticated: authed } = await supabaseService.getInitialSession();
+            if (authed && user) {
+              setProfile(user);
+              setIsAuthenticated(true);
+            } else {
+              setIsAuthenticated(false);
+            }
+          } catch {
+            setIsAuthenticated(false);
           }
         }}
       />
@@ -647,6 +731,9 @@ export const App: React.FC = () => {
             streakCount={streak.currentStreak}
             dailyTasks={dailyTasks}
             dailyInsight={dailyInsight}
+            activeSessions={userActiveSessions}
+            onResumeSession={handleResumeExamSession}
+            onDiscardSession={handleDiscardExamSession}
             onToggleTask={handleToggleTask}
             onOpenCreateModal={() => setIsSourceModalOpen(true)}
             onStartTest={(test) => handleStartTest(test)}
@@ -683,6 +770,7 @@ export const App: React.FC = () => {
             onBack={() => navigateTo('explore')}
             onStartPaper={(paper) => {
               setActiveExamPaper(paper);
+              setActiveExamSession(null);
               navigateTo('exam_player');
             }}
           />
@@ -691,9 +779,15 @@ export const App: React.FC = () => {
         {currentRoute === 'exam_player' && activeExamPaper && (
           <CompetitiveExamPlayerScreen
             paper={activeExamPaper}
-            onExit={() => navigateTo('explore_exam')}
+            initialSession={activeExamSession}
+            userId={profile.uid}
+            onExit={() => {
+              refreshUserActiveSessions();
+              navigateTo('home');
+            }}
             onSubmit={(completedSession) => {
               setActiveExamSession(completedSession);
+              refreshUserActiveSessions();
               navigateTo('exam_results');
             }}
           />
@@ -703,8 +797,14 @@ export const App: React.FC = () => {
           <CompetitiveExamResultsScreen
             session={activeExamSession}
             paper={activeExamPaper}
-            onRetake={() => navigateTo('exam_player')}
-            onExplore={() => navigateTo('explore')}
+            onRetake={() => {
+              setActiveExamSession(null);
+              navigateTo('exam_player');
+            }}
+            onExplore={() => {
+              refreshUserActiveSessions();
+              navigateTo('explore');
+            }}
           />
         )}
 
@@ -732,6 +832,7 @@ export const App: React.FC = () => {
         {currentRoute === 'test_player' && activeTest && (
           <TestPlayerScreen
             testId={activeTest.id}
+            assignmentId={activeAssignmentId}
             title={activeTest.title}
             category={activeTest.category}
             questions={activeTest.questions}
@@ -770,20 +871,21 @@ export const App: React.FC = () => {
             classes={classes}
             assignments={assignments}
             tests={tests}
-            onCreateClass={(name) => {
-              storage.createClass(name, profile.uid, profile.fullName);
-              setClasses(storage.getClasses());
+            onCreateClass={async (name) => {
+              await ClassroomService.createClass(name, profile.uid, profile.fullName);
+              await refreshClassrooms();
               showToast(`Class "${name}" created successfully.`);
             }}
-            onJoinClass={(code) => {
-              const res = storage.joinClass(code, profile.uid, profile.fullName);
+            onJoinClass={async (code) => {
+              const res = await ClassroomService.joinClass(code, profile.uid, profile.fullName);
               showToast(res.message, res.success ? 'success' : 'error');
-              setClasses(storage.getClasses());
+              await refreshClassrooms();
+              return res;
             }}
-            onCreateAssignment={(classId, testId, dueDate) => {
+            onCreateAssignment={async (classId, testId, dueDate) => {
               const targetTest = tests.find((t) => t.id === testId);
               if (targetTest) {
-                storage.createAssignment(
+                await ClassroomService.createAssignment(
                   classId,
                   targetTest.title,
                   targetTest.questions,
@@ -791,7 +893,7 @@ export const App: React.FC = () => {
                   profile.uid,
                   profile.fullName
                 );
-                setAssignments(storage.getAssignments());
+                await refreshClassrooms();
                 showToast(`Exam assigned to class successfully!`);
               }
             }}
@@ -807,8 +909,24 @@ export const App: React.FC = () => {
                 bestScorePercent: null,
                 bestTotal: asg.questions.length,
               };
+              setActiveAssignmentId(asg.assignmentId);
               setActiveTest(mockTest);
               navigateTo('test_player');
+            }}
+            onDeleteClass={async (classId) => {
+              await ClassroomService.deleteClass(classId);
+              await refreshClassrooms();
+              showToast('Classroom and its assignments removed.');
+            }}
+            onLeaveClass={async (classId) => {
+              const res = await ClassroomService.leaveClass(classId, profile.uid);
+              showToast(res.message, res.success ? 'info' : 'error');
+              await refreshClassrooms();
+            }}
+            onDeleteAssignment={async (assignmentId) => {
+              await ClassroomService.deleteAssignment(assignmentId);
+              await refreshClassrooms();
+              showToast('Assignment removed.');
             }}
           />
         )}

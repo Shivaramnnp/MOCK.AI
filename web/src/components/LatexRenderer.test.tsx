@@ -72,4 +72,44 @@ describe('LatexRenderer', () => {
     expect(container.querySelector('.katex-display')).not.toBeNull();
     expect(container.textContent).not.toContain('\\[');
   });
+
+  it('should sanitize unsafe HTML and prevent XSS injection (SEC-004)', () => {
+    const maliciousPayload = '<script>alert("xss")</script><img src="x" onerror="alert(1)"> $x = 5$';
+    const { container } = render(<LatexRenderer content={maliciousPayload} />);
+
+    // Script and img elements must NOT exist in the DOM
+    expect(container.querySelector('script')).toBeNull();
+    expect(container.querySelector('img')).toBeNull();
+
+    // KaTeX math should still render
+    expect(container.querySelector('.katex')).not.toBeNull();
+
+    // Malicious text is safely escaped as text content
+    expect(container.textContent).toContain('<script>');
+  });
+
+  it('should auto-detect and render naked unbracketed LaTeX commands (DATA-004)', () => {
+    const { container } = render(
+      <LatexRenderer content="Time = 40 minutes = \frac{40}{60} hour, where \pi \approx 3.14 and radius = \sqrt{49}" />
+    );
+
+    // KaTeX elements should be rendered for \frac, \pi, \approx, \sqrt
+    const katexNodes = container.querySelectorAll('.katex');
+    expect(katexNodes.length).toBeGreaterThanOrEqual(4);
+    expect(container.textContent).not.toContain('\\frac');
+    expect(container.textContent).not.toContain('\\sqrt');
+  });
+
+  it('should correctly render GATE 2025 DA Q11 expectation fraction in both naked and standard delimited format', () => {
+    // Naked fraction
+    const { container: c1 } = render(<LatexRenderer content="\\frac{E[X]}{E[Y]}" />);
+    expect(c1.querySelector('.katex')).not.toBeNull();
+    expect(c1.textContent).not.toContain('\\frac');
+
+    // Standard inline delimited
+    const { container: c2 } = render(<LatexRenderer content="\\(\\frac{E[X]}{E[Y]}\\)" />);
+    expect(c2.querySelector('.katex')).not.toBeNull();
+    expect(c2.textContent).not.toContain('\\frac');
+    expect(c2.textContent).not.toContain('\\(');
+  });
 });

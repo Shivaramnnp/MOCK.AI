@@ -498,41 +498,40 @@ class StorageService {
   // --- Classroom & Assignments ---
   getClasses(): ClassModel[] {
     const raw = localStorage.getItem(STORAGE_KEYS.CLASSES);
-    if (!raw) {
-      const seedClasses: ClassModel[] = [
-        {
-          classId: 'class-phy-101',
-          name: 'Advanced Physics 101 (Section A)',
-          teacherId: 'user-default-1',
-          teacherName: 'Shivaram Patel',
-          joinCode: 'PHY981',
-          studentIds: ['stu-1', 'stu-2', 'stu-3'],
-          studentNames: {
-            'stu-1': 'Aarav Sharma',
-            'stu-2': 'Priya Iyer',
-            'stu-3': 'Rohan Das',
-          },
-          createdAt: Date.now() - 86400000 * 8,
-        },
-      ];
-      localStorage.setItem(STORAGE_KEYS.CLASSES, JSON.stringify(seedClasses));
-      return seedClasses;
-    }
+    if (!raw) return [];
     try {
-      return JSON.parse(raw);
+      const parsed: ClassModel[] = JSON.parse(raw);
+      // Strip any hardcoded dummy demo seed classes
+      const filtered = parsed.filter(
+        (c) => c.classId !== 'class-phy-101' && c.teacherId !== 'user-default-1'
+      );
+      if (filtered.length !== parsed.length) {
+        localStorage.setItem(STORAGE_KEYS.CLASSES, JSON.stringify(filtered));
+      }
+      return filtered;
     } catch {
       return [];
     }
   }
 
+  saveClasses(classes: ClassModel[]): void {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.setItem(STORAGE_KEYS.CLASSES, JSON.stringify(classes));
+  }
+
   createClass(name: string, teacherId: string, teacherName: string): ClassModel {
     const classes = this.getClasses();
-    const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // Unambiguous chars (no 0/O/1/I)
+    let code: string;
+    do {
+      code = Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+    } while (classes.some((c) => c.joinCode === code));
+
     const newClass: ClassModel = {
       classId: 'class-' + Date.now(),
-      name,
+      name: name.trim(),
       teacherId,
-      teacherName,
+      teacherName: teacherName.trim(),
       joinCode: code,
       studentIds: [],
       studentNames: {},
@@ -544,11 +543,21 @@ class StorageService {
   }
 
   joinClass(joinCode: string, studentId: string, studentName: string): { success: boolean; message: string } {
-    const classes = this.getClasses();
-    const target = classes.find((c) => c.joinCode.trim().toUpperCase() === joinCode.trim().toUpperCase());
-    if (!target) {
-      return { success: false, message: 'Class not found with this code.' };
+    if (!joinCode || !joinCode.trim()) {
+      return { success: false, message: 'Please provide a valid 6-character join code.' };
     }
+    const cleanCode = joinCode.trim().toUpperCase();
+    const classes = this.getClasses();
+    const target = classes.find((c) => c.joinCode && c.joinCode.trim().toUpperCase() === cleanCode);
+    if (!target) {
+      return { success: false, message: 'Class not found. Please verify the code with your instructor.' };
+    }
+    if (target.teacherId === studentId) {
+      return { success: false, message: 'You are the instructor of this class.' };
+    }
+    if (!target.studentIds) target.studentIds = [];
+    if (!target.studentNames) target.studentNames = {};
+
     if (target.studentIds.includes(studentId)) {
       return { success: true, message: 'You are already enrolled in this class.' };
     }
@@ -558,39 +567,55 @@ class StorageService {
     return { success: true, message: `Successfully enrolled in ${target.name}!` };
   }
 
+  deleteClass(classId: string): void {
+    const classes = this.getClasses().filter((c) => c.classId !== classId);
+    localStorage.setItem(STORAGE_KEYS.CLASSES, JSON.stringify(classes));
+
+    // Cascade: remove assignments associated with deleted class
+    const assignments = this.getAssignments().filter((a) => a.classId !== classId);
+    localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(assignments));
+  }
+
+  leaveClass(classId: string, studentId: string): { success: boolean; message: string } {
+    const classes = this.getClasses();
+    const target = classes.find((c) => c.classId === classId);
+    if (!target) {
+      return { success: false, message: 'Classroom not found.' };
+    }
+    if (target.studentIds) {
+      target.studentIds = target.studentIds.filter((id) => id !== studentId);
+    }
+    if (target.studentNames && target.studentNames[studentId]) {
+      delete target.studentNames[studentId];
+    }
+    localStorage.setItem(STORAGE_KEYS.CLASSES, JSON.stringify(classes));
+    return { success: true, message: `Left ${target.name}.` };
+  }
+
   getAssignments(): AssignmentModel[] {
     const raw = localStorage.getItem(STORAGE_KEYS.ASSIGNMENTS);
-    if (!raw) {
-      const seedAssignments: AssignmentModel[] = [
-        {
-          assignmentId: 'asg-01',
-          classId: 'class-phy-101',
-          className: 'Advanced Physics 101 (Section A)',
-          testTitle: 'Kinematics & Newtonian Mechanics Test',
-          assignedBy: 'user-default-1',
-          assignedByName: 'Shivaram Patel',
-          dueDate: Date.now() + 86400000 * 3,
-          assignedAt: Date.now() - 86400000,
-          questions: SEED_TESTS[0].questions,
-          studentSubmissions: {
-            'stu-1': {
-              status: 'SUBMITTED',
-              score: 4,
-              total: 5,
-              scorePercent: 80,
-              submittedAt: Date.now() - 3600000 * 12,
-            },
-          },
-        },
-      ];
-      localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(seedAssignments));
-      return seedAssignments;
-    }
+    if (!raw) return [];
     try {
-      return JSON.parse(raw);
+      const parsed: AssignmentModel[] = JSON.parse(raw);
+      // Strip any hardcoded dummy demo seed assignments
+      const filtered = parsed.filter(
+        (a) =>
+          a.assignmentId !== 'asg-01' &&
+          a.classId !== 'class-phy-101' &&
+          a.assignedBy !== 'user-default-1'
+      );
+      if (filtered.length !== parsed.length) {
+        localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(filtered));
+      }
+      return filtered;
     } catch {
       return [];
     }
+  }
+
+  saveAssignments(assignments: AssignmentModel[]): void {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(assignments));
   }
 
   createAssignment(
@@ -621,16 +646,31 @@ class StorageService {
     return newAsg;
   }
 
-  submitAssignment(assignmentId: string, studentId: string, score: number, total: number): void {
+  deleteAssignment(assignmentId: string): void {
+    const assignments = this.getAssignments().filter((a) => a.assignmentId !== assignmentId);
+    localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(assignments));
+  }
+
+  submitAssignment(
+    assignmentId: string,
+    studentId: string,
+    score: number,
+    total: number,
+    studentName?: string
+  ): void {
     const assignments = this.getAssignments();
     const asg = assignments.find((a) => a.assignmentId === assignmentId);
     if (asg) {
+      if (!asg.studentSubmissions) {
+        asg.studentSubmissions = {};
+      }
       asg.studentSubmissions[studentId] = {
         status: 'SUBMITTED',
         score,
         total,
-        scorePercent: total > 0 ? (score * 100) / total : 0,
+        scorePercent: total > 0 ? Math.round((score * 100) / total) : 0,
         submittedAt: Date.now(),
+        studentName,
       };
       localStorage.setItem(STORAGE_KEYS.ASSIGNMENTS, JSON.stringify(assignments));
     }

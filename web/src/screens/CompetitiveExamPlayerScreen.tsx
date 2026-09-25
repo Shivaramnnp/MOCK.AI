@@ -16,6 +16,7 @@ import {
   ShieldAlert,
   ZoomIn,
   X,
+  LayoutGrid,
 } from 'lucide-react';
 import {
   ExamPaper,
@@ -24,26 +25,34 @@ import {
   CompetitiveQuestion,
 } from '../types';
 import { ExamService } from '../services/examService';
+import { ExamSessionService } from '../services/examSessionService';
 import { LatexRenderer } from '../components/LatexRenderer';
 import { resolveAssetUrl } from '../lib/supabaseContent';
 import { ExamAsset } from '../components/ExamAsset';
 
 interface CompetitiveExamPlayerScreenProps {
   paper: ExamPaper;
+  initialSession?: ExamTestSession | null;
+  userId?: string;
   onExit: () => void;
   onSubmit: (completedSession: ExamTestSession) => void;
 }
 
 export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenProps> = ({
   paper,
+  initialSession,
+  userId = 'guest',
   onExit,
   onSubmit,
 }) => {
   // Load existing session or create fresh
   const [session, setSession] = useState<ExamTestSession>(() => {
-    const existing = ExamService.getActiveSession(paper.id);
+    if (initialSession && initialSession.paperId === paper.id) {
+      return initialSession;
+    }
+    const existing = ExamSessionService.getActiveSession(paper.id, userId);
     if (existing) return existing;
-    return ExamService.createExamSession(paper);
+    return ExamSessionService.createSession(paper, userId);
   });
 
   const [currentIndex, setCurrentIndex] = useState<number>(session.currentQuestionIndex || 0);
@@ -60,63 +69,85 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   const [statuses, setStatuses] = useState<Record<number, QuestionAttemptStatus>>(
     session.questionStatuses || {}
   );
-  const [timeRemaining, setTimeRemaining] = useState<number>(session.timeRemainingSeconds);
+  const [timeRemaining, setTimeRemaining] = useState<number>(() => {
+    const remaining = ExamSessionService.calculateRemainingSeconds(session);
+    return Number.isFinite(remaining) ? remaining : (session.durationSeconds || 3600);
+  });
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(session.elapsedSeconds);
   const [showSubmitModal, setShowSubmitModal] = useState<boolean>(false);
   const [showExitConfirm, setShowExitConfirm] = useState<boolean>(false);
+  const [isSavingExit, setIsSavingExit] = useState<boolean>(false);
+  const [saveExitError, setSaveExitError] = useState<string | null>(null);
+  const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error' | 'idle'>('idle');
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
+  const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState<boolean>(false);
 
-  const questions = paper.questions;
+  // SEC-003: Sanitize questions in memory to withhold answer keys, options, and explanations during the active test session
+  const sanitizedQuestions = useMemo(() => {
+    return paper.questions.map((q) => {
+      const {
+        correctAnswer: _ca,
+        correctAnswerIndex: _cai,
+        correctAnswerSet: _cas,
+        correctAnswerSets: _cass,
+        correctAnswerIndices: _cais,
+        answerRange: _ar,
+        answerRanges: _ars,
+        explanation: _exp,
+        modelSolution: _ms,
+        ...safeQ
+      } = q;
+      return {
+        ...safeQ,
+        rubrics: paper.paperType === 'DESCRIPTIVE' ? q.rubrics : undefined,
+      };
+    });
+  }, [paper.questions, paper.paperType]);
+
+  const questions = sanitizedQuestions;
   const currentQuestion = questions[currentIndex] || questions[0];
 
-  // Auto-sync session state to storage
-  const syncToStorage = useCallback(
-    (overrides?: Partial<ExamTestSession>) => {
-      setSession((prev) => {
-        const updated: ExamTestSession = {
-          ...prev,
-          currentQuestionIndex: currentIndex,
-          userAnswers,
-          userMsqAnswers,
-          userNatAnswers,
-          userDescriptiveAnswers: descriptiveAnswers,
-          questionStatuses: statuses,
-          timeRemainingSeconds: timeRemaining,
-          elapsedSeconds,
-          ...overrides,
-        };
-        ExamService.saveActiveSession(updated);
-        return updated;
-      });
-    },
-    [currentIndex, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds]
-  );
-
-  // Timer countdown
+  // ENG-001: Intercept browser back navigation to prevent accidental loss of test progress
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeRemaining((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          handleFinalSubmit();
-          return 0;
-        }
-        return prev - 1;
-      });
-      setElapsedSeconds((prev) => prev + 1);
-    }, 1000);
+    window.history.pushState({ mockaiExam: true }, '', window.location.href);
 
-    return () => clearInterval(timer);
+    const handlePopState = () => {
+      window.history.pushState({ mockaiExam: true }, '', window.location.href);
+      setShowExitConfirm(true);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Periodic save every 5 seconds
+  // Subscribe to autosave status
   useEffect(() => {
-    const syncInterval = setInterval(() => {
-      syncToStorage();
-    }, 5000);
-    return () => clearInterval(syncInterval);
-  }, [syncToStorage]);
+    return ExamSessionService.subscribeToAutosaveStatus((status) => {
+      setSaveStatus(status);
+    });
+  }, []);
+
+  // Flush on unload to prevent data loss on sudden browser close
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      const currentSessionState: ExamTestSession = {
+        ...session,
+        currentQuestionIndex: currentIndex,
+        userAnswers,
+        userMsqAnswers,
+        userNatAnswers,
+        userDescriptiveAnswers: descriptiveAnswers,
+        questionStatuses: statuses,
+        timeRemainingSeconds: timeRemaining,
+        elapsedSeconds,
+      };
+      ExamSessionService.saveSessionLocal(currentSessionState);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [session, currentIndex, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds]);
 
   // Current section determination
   const currentSection = useMemo(() => {
@@ -127,11 +158,65 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     );
   }, [paper.sections, currentIndex]);
 
+  // Auto-sync session state to storage
+  const syncToStorage = useCallback(
+    (overrides?: Partial<ExamTestSession>) => {
+      setSession((prev) => {
+        const updated: ExamTestSession = {
+          ...prev,
+          currentQuestionIndex: currentIndex,
+          currentSectionId: currentSection?.id || prev.currentSectionId,
+          userAnswers,
+          userMsqAnswers,
+          userNatAnswers,
+          userDescriptiveAnswers: descriptiveAnswers,
+          questionStatuses: statuses,
+          timeRemainingSeconds: timeRemaining,
+          elapsedSeconds,
+          ...overrides,
+        };
+        ExamSessionService.saveSessionLocal(updated);
+        ExamSessionService.queueAutosave(updated);
+        return updated;
+      });
+    },
+    [currentIndex, currentSection, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds]
+  );
+
+  // Timer countdown with authoritative wall-clock calculation
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const remaining = ExamSessionService.calculateRemainingSeconds(session);
+      const safeRemaining = Number.isFinite(remaining) ? remaining : 0;
+      setTimeRemaining(safeRemaining);
+      setElapsedSeconds((prev) => prev + 1);
+
+      if (safeRemaining <= 0) {
+        clearInterval(timer);
+        handleFinalSubmit();
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [session]);
+
+  // Periodic save checkpoint every 5 seconds
+  useEffect(() => {
+    const syncInterval = setInterval(() => {
+      syncToStorage();
+    }, 5000);
+    return () => clearInterval(syncInterval);
+  }, [syncToStorage]);
+
   // Format timer HH:MM:SS
   const formatTime = (totalSecs: number) => {
-    const hours = Math.floor(totalSecs / 3600);
-    const minutes = Math.floor((totalSecs % 3600) / 60);
-    const seconds = totalSecs % 60;
+    if (!Number.isFinite(totalSecs) || totalSecs < 0) {
+      return '00:00';
+    }
+    const safeSecs = Math.floor(totalSecs);
+    const hours = Math.floor(safeSecs / 3600);
+    const minutes = Math.floor((safeSecs % 3600) / 60);
+    const seconds = safeSecs % 60;
     const pad = (n: number) => n.toString().padStart(2, '0');
     if (hours > 0) {
       return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
@@ -263,6 +348,86 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     }
   };
 
+  // A11Y-001: Standard CBT Keyboard Navigation (1-4 / A-D for options, Enter for Save & Next, Esc for modal dismiss)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // 1. Escape key dismisses open overlays
+      if (e.key === 'Escape') {
+        if (zoomImageUrl) {
+          setZoomImageUrl(null);
+          return;
+        }
+        if (showSubmitModal) {
+          setShowSubmitModal(false);
+          return;
+        }
+        if (showExitConfirm) {
+          setShowExitConfirm(false);
+          return;
+        }
+        if (isMobilePaletteOpen) {
+          setIsMobilePaletteOpen(false);
+          return;
+        }
+      }
+
+      // Do NOT intercept keys when user is typing inside an input or textarea
+      const target = document.activeElement;
+      if (
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        (target as HTMLElement)?.isContentEditable
+      ) {
+        return;
+      }
+
+      // Do NOT intercept if modifier keys are active
+      if (e.ctrlKey || e.metaKey || e.altKey) {
+        return;
+      }
+
+      // 2. Option Selection: 1-4 or A-D
+      const key = e.key.toUpperCase();
+      const optionMap: Record<string, number> = {
+        '1': 0, 'A': 0,
+        '2': 1, 'B': 1,
+        '3': 2, 'C': 2,
+        '4': 3, 'D': 3,
+      };
+
+      if (optionMap[key] !== undefined) {
+        const optIdx = optionMap[key];
+        if (currentQuestion?.options && optIdx < currentQuestion.options.length) {
+          if (currentQuestion.questionType === 'MSQ') {
+            handleToggleMsqOption(optIdx);
+          } else if (currentQuestion.questionType !== 'NAT' && paper.paperType !== 'DESCRIPTIVE') {
+            handleSelectOption(optIdx);
+          }
+        }
+        return;
+      }
+
+      // 3. Enter key: Save & Next
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleSaveAndNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [
+    zoomImageUrl,
+    showSubmitModal,
+    showExitConfirm,
+    isMobilePaletteOpen,
+    currentQuestion,
+    handleToggleMsqOption,
+    handleSelectOption,
+    handleSaveAndNext,
+    paper.paperType,
+  ]);
+
   // Section switcher
   const handleSelectSection = (sectionId: string) => {
     const targetSection = paper.sections.find((s) => s.id === sectionId);
@@ -289,6 +454,35 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     setShowSubmitModal(false);
     onSubmit(completed);
   }, [session, currentIndex, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds, paper, onSubmit]);
+
+  // Save & Exit handler: Flushes pending changes, sets status to 'PAUSED', persists and exits
+  const handleSaveAndExit = useCallback(async () => {
+    setIsSavingExit(true);
+    setSaveExitError(null);
+    try {
+      const currentSessionState: ExamTestSession = {
+        ...session,
+        currentQuestionIndex: currentIndex,
+        currentSectionId: currentSection?.id || session.currentSectionId,
+        userAnswers,
+        userMsqAnswers,
+        userNatAnswers,
+        userDescriptiveAnswers: descriptiveAnswers,
+        questionStatuses: statuses,
+        timeRemainingSeconds: timeRemaining,
+        elapsedSeconds,
+      };
+
+      await ExamSessionService.saveAndExit(currentSessionState);
+      setIsSavingExit(false);
+      setShowExitConfirm(false);
+      onExit();
+    } catch (err: any) {
+      console.error('Failed to save & exit test session:', err);
+      setIsSavingExit(false);
+      setSaveExitError('Your progress could not be saved. Please try again.');
+    }
+  }, [session, currentIndex, currentSection, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds, onExit]);
 
   // Status statistics for palette and modal
   const paletteStats = useMemo(() => {
@@ -332,6 +526,34 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Autosave Status Indicator */}
+            <div className="hidden sm:flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-lg bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
+              {saveStatus === 'saving' && (
+                <>
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-ping" />
+                  <span className="text-surface-muted">Saving...</span>
+                </>
+              )}
+              {saveStatus === 'saved' && (
+                <>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                  <span className="text-emerald-600 dark:text-emerald-400">Saved</span>
+                </>
+              )}
+              {saveStatus === 'error' && (
+                <>
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
+                  <span className="text-amber-600 dark:text-amber-400">Saved offline</span>
+                </>
+              )}
+              {saveStatus === 'idle' && (
+                <>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-surface-muted/60" />
+                  <span className="text-surface-muted">Saved</span>
+                </>
+              )}
+            </div>
+
             {/* Countdown Timer */}
             <div
               className={`flex items-center gap-2 px-3 py-1.5 rounded-xl font-mono text-xs sm:text-sm font-extrabold transition-all ${
@@ -352,6 +574,16 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
               title="Toggle Fullscreen"
             >
               {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+            </button>
+
+            {/* UX-001: Mobile Question Palette Trigger */}
+            <button
+              onClick={() => setIsMobilePaletteOpen(true)}
+              className="lg:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-primary border border-brand-primary/20 text-xs font-bold transition-colors cursor-pointer"
+              title="Open Question Palette"
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span>Palette</span>
             </button>
 
             <button
@@ -1106,29 +1338,97 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
       {/* ── Exit Confirmation Modal ──────────────────────────────────── */}
       {showExitConfirm && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-3xl p-6 max-w-sm w-full shadow-xl space-y-4">
-            <h3 className="text-base font-bold font-display text-surface-text dark:text-darkSurface-text">
-              Pause and Exit Examination?
-            </h3>
-            <p className="text-xs text-surface-muted dark:text-darkSurface-muted leading-relaxed">
-              Your answers and remaining timer ({formatTime(timeRemaining)}) are saved automatically. You can resume this paper anytime from Explore.
-            </p>
-            <div className="flex items-center justify-end gap-2 pt-2">
-              <button
-                onClick={() => setShowExitConfirm(false)}
-                className="px-3 py-1.5 rounded-xl border border-surface-border text-xs font-semibold text-surface-muted hover:text-surface-text"
-              >
-                Cancel
-              </button>
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150">
+          <div className="bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                <AlertTriangle className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold font-display text-surface-text dark:text-darkSurface-text">
+                  Exit Test?
+                </h3>
+                <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+                  Your progress will be saved.
+                </p>
+              </div>
+            </div>
+
+            {/* Test Stats Grid */}
+            <div className="grid grid-cols-2 gap-3 py-1">
+              <div className="p-3.5 rounded-2xl bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
+                <span className="text-[11px] font-semibold text-surface-muted uppercase block">
+                  You have attempted:
+                </span>
+                <span className="text-base font-extrabold text-surface-text dark:text-darkSurface-text mt-0.5 block">
+                  {paletteStats.answered + paletteStats.answeredAndMarked} / {questions.length} questions
+                </span>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
+                <span className="text-[11px] font-semibold text-surface-muted uppercase block">
+                  Marked for review:
+                </span>
+                <span className="text-base font-extrabold text-purple-600 dark:text-purple-400 mt-0.5 block">
+                  {paletteStats.markedForReview + paletteStats.answeredAndMarked}
+                </span>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
+                <span className="text-[11px] font-semibold text-surface-muted uppercase block">
+                  Current question:
+                </span>
+                <span className="text-base font-extrabold text-brand-primary mt-0.5 block">
+                  Q{currentIndex + 1}
+                </span>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
+                <span className="text-[11px] font-semibold text-surface-muted uppercase block">
+                  Time left:
+                </span>
+                <span className="text-base font-extrabold font-mono text-surface-text dark:text-darkSurface-text mt-0.5 block">
+                  {formatTime(timeRemaining)}
+                </span>
+              </div>
+            </div>
+
+            {saveExitError && (
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs flex items-center justify-between gap-2">
+                <span>{saveExitError}</span>
+                <button
+                  onClick={handleSaveAndExit}
+                  className="px-2.5 py-1 rounded-lg bg-red-600 text-white font-bold text-[10px] hover:bg-red-700"
+                >
+                  Retry
+                </button>
+              </div>
+            )}
+
+            <div className="flex items-center justify-end gap-3 pt-2">
               <button
                 onClick={() => {
-                  syncToStorage();
-                  onExit();
+                  setShowExitConfirm(false);
+                  setSaveExitError(null);
                 }}
-                className="px-4 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold"
+                disabled={isSavingExit}
+                className="px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border text-xs font-bold text-surface-text dark:text-darkSurface-text hover:bg-surface-elev1 transition-colors"
               >
-                Exit to Explore
+                Continue Test
+              </button>
+              <button
+                onClick={handleSaveAndExit}
+                disabled={isSavingExit}
+                className="px-5 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-primary/90 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2"
+              >
+                {isSavingExit ? (
+                  <>
+                    <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Saving...</span>
+                  </>
+                ) : (
+                  <span>Save & Exit</span>
+                )}
               </button>
             </div>
           </div>
@@ -1157,6 +1457,133 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
               alt="Enlarged figure"
               className="max-h-[80vh] w-auto object-contain mx-auto rounded-lg"
             />
+          </div>
+        </div>
+      )}
+
+      {/* ── Mobile Floating Palette Pill (UX-001) ───────────────────── */}
+      <div className="lg:hidden fixed bottom-4 right-4 z-40">
+        <button
+          onClick={() => setIsMobilePaletteOpen(true)}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-brand-primary text-white shadow-xl shadow-brand-primary/30 text-xs font-bold hover:scale-105 active:scale-95 transition-all cursor-pointer"
+        >
+          <LayoutGrid className="w-4 h-4" />
+          <span>Grid ({currentIndex + 1}/{questions.length})</span>
+        </button>
+      </div>
+
+      {/* ── Mobile Question Palette Drawer Modal (UX-001) ─────────────── */}
+      {isMobilePaletteOpen && (
+        <div
+          className="fixed inset-0 z-50 lg:hidden bg-black/60 backdrop-blur-xs flex flex-col justify-end animate-in fade-in duration-150"
+          onClick={() => setIsMobilePaletteOpen(false)}
+        >
+          <div
+            className="bg-white dark:bg-darkSurface-elev1 border-t border-surface-border dark:border-darkSurface-border rounded-t-3xl max-h-[85vh] flex flex-col shadow-2xl animate-in slide-in-from-bottom duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="p-4 border-b border-surface-border dark:border-darkSurface-border flex items-center justify-between">
+              <div>
+                <h3 className="text-sm font-bold font-display text-surface-text dark:text-darkSurface-text">
+                  Question Palette ({currentSection.name})
+                </h3>
+                <p className="text-[11px] text-surface-muted">
+                  Tap any question to jump directly
+                </p>
+              </div>
+              <button
+                onClick={() => setIsMobilePaletteOpen(false)}
+                className="p-1.5 rounded-full bg-surface-elev2 hover:bg-surface-elev1 text-surface-muted cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Sections Selector */}
+            <div className="p-3 border-b border-surface-border dark:border-darkSurface-border flex gap-1.5 overflow-x-auto scrollbar-none">
+              {paper.sections.map((sec) => (
+                <button
+                  key={sec.id}
+                  onClick={() => handleSelectSection(sec.id)}
+                  className={`px-3 py-1 rounded-lg text-[11px] font-bold shrink-0 transition-colors cursor-pointer ${
+                    currentSection.id === sec.id
+                      ? 'bg-brand-primary text-white'
+                      : 'bg-surface-elev2 text-surface-muted hover:text-surface-text'
+                  }`}
+                >
+                  {sec.name} ({sec.questionCount})
+                </button>
+              ))}
+            </div>
+
+            {/* Status Legend */}
+            <div className="p-3 border-b border-surface-border dark:border-darkSurface-border grid grid-cols-4 gap-2 text-[10px] text-surface-muted">
+              <div className="flex items-center gap-1.5">
+                <span className="w-3.5 h-3.5 rounded bg-emerald-500 text-white font-bold flex items-center justify-center text-[8px]">{paletteStats.answered}</span>
+                <span>Answered</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-3.5 h-3.5 rounded bg-red-500 text-white font-bold flex items-center justify-center text-[8px]">{paletteStats.notAnswered}</span>
+                <span>Unans</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-3.5 h-3.5 rounded bg-purple-500 text-white font-bold flex items-center justify-center text-[8px]">{paletteStats.markedForReview}</span>
+                <span>Review</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-3.5 h-3.5 rounded bg-surface-elev2 border border-surface-border font-bold flex items-center justify-center text-[8px]">{paletteStats.notVisited}</span>
+                <span>Left</span>
+              </div>
+            </div>
+
+            {/* Palette Grid */}
+            <div className="p-4 overflow-y-auto max-h-[45vh]">
+              <div className="grid grid-cols-6 gap-2">
+                {questions
+                  .slice(currentSection.startIndex, currentSection.endIndex + 1)
+                  .map((q, idx) => {
+                    const actualIndex = currentSection.startIndex + idx;
+                    const st = statuses[actualIndex] || 'NOT_VISITED';
+                    const isCurrent = actualIndex === currentIndex;
+
+                    let badgeColor = 'bg-surface-elev1 dark:bg-darkSurface-elev2 border-surface-border text-surface-muted';
+                    if (st === 'ANSWERED') badgeColor = 'bg-emerald-500 text-white border-emerald-600';
+                    else if (st === 'NOT_ANSWERED') badgeColor = 'bg-red-500 text-white border-red-600';
+                    else if (st === 'MARKED_FOR_REVIEW') badgeColor = 'bg-purple-500 text-white border-purple-600';
+                    else if (st === 'ANSWERED_AND_MARKED_FOR_REVIEW') badgeColor = 'bg-purple-600 text-white ring-2 ring-emerald-400 border-purple-700';
+
+                    return (
+                      <button
+                        key={actualIndex}
+                        onClick={() => {
+                          jumpToQuestion(actualIndex);
+                          setIsMobilePaletteOpen(false);
+                        }}
+                        className={`h-9 rounded-lg text-xs font-bold flex items-center justify-center border transition-all cursor-pointer ${badgeColor} ${
+                          isCurrent ? 'ring-2 ring-brand-primary ring-offset-2 scale-105 shadow-sm' : ''
+                        }`}
+                      >
+                        {actualIndex + 1}
+                      </button>
+                    );
+                  })}
+              </div>
+            </div>
+
+            {/* Bottom Submit Action */}
+            <div className="p-3 border-t border-surface-border dark:border-darkSurface-border">
+              <button
+                onClick={() => {
+                  setIsMobilePaletteOpen(false);
+                  setShowSubmitModal(true);
+                }}
+                className="w-full py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>Submit Examination</span>
+              </button>
+            </div>
           </div>
         </div>
       )}

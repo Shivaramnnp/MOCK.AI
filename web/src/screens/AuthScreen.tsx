@@ -24,6 +24,7 @@ import {
 import { supabaseService } from '../services/supabase';
 import { UserProfile, UserRole } from '../types';
 import { ForgotPasswordScreen } from './ForgotPasswordScreen';
+import { LegalModal, LegalTabType } from '../components/LegalModal';
 
 interface AuthScreenProps {
   onAuthSuccess: (user: UserProfile) => void;
@@ -64,6 +65,15 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
   const [forgotEmail, setForgotEmail] = useState('');
   const [forgotStatus, setForgotStatus] = useState<string | null>(null);
   const [isForgotLoading, setIsForgotLoading] = useState(false);
+
+  // Legal & Compliance Modal State
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalModalTab, setLegalModalTab] = useState<LegalTabType>('privacy');
+
+  const openLegalModal = (tab: LegalTabType) => {
+    setLegalModalTab(tab);
+    setLegalModalOpen(true);
+  };
 
   // Theme State
   const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
@@ -153,7 +163,18 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         } catch {}
         return;
       }
-      setErrorMessage(err.message || 'Invalid email or password.');
+      const rawMsg = err.message || '';
+      if (
+        rawMsg.toLowerCase() === 'load failed' ||
+        rawMsg.toLowerCase().includes('failed to fetch') ||
+        rawMsg.toLowerCase().includes('networkerror')
+      ) {
+        setErrorMessage(
+          'Unable to reach authentication server (Network / Load failed). Please check your internet connection, disable any ad-blockers for localhost, or refresh the page.'
+        );
+      } else {
+        setErrorMessage(rawMsg || 'Invalid email or password.');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -219,7 +240,16 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         onAuthSuccess(user);
       }
     } catch (err: any) {
-      setErrorMessage(err.message || 'Failed to create account.');
+      const rawMsg = err.message || '';
+      if (
+        rawMsg.toLowerCase() === 'load failed' ||
+        rawMsg.toLowerCase().includes('failed to fetch') ||
+        rawMsg.toLowerCase().includes('networkerror')
+      ) {
+        setErrorMessage('Unable to reach server (Network / Load failed). Please check your internet connection or ad-blockers.');
+      } else {
+        setErrorMessage(rawMsg || 'Failed to create account.');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -243,7 +273,16 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         onAuthSuccess(user);
       }, 500);
     } catch (err: any) {
-      setOtpError(err.message || 'Invalid or expired verification code. Please check your email or request a new code.');
+      const rawMsg = err.message || '';
+      if (
+        rawMsg.toLowerCase() === 'load failed' ||
+        rawMsg.toLowerCase().includes('failed to fetch') ||
+        rawMsg.toLowerCase().includes('networkerror')
+      ) {
+        setOtpError('Network connection failed. Please check your internet connection and try again.');
+      } else {
+        setOtpError(rawMsg || 'Invalid or expired verification code. Please check your email or request a new code.');
+      }
     } finally {
       setIsOtpLoading(false);
     }
@@ -466,16 +505,16 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                     inputMode="numeric"
                     autoComplete="one-time-code"
                     pattern="[0-9]*"
-                    maxLength={6}
+                    maxLength={8}
                     autoFocus
                     required
                     value={otpCode}
                     onChange={(e) => {
-                      const val = e.target.value.replace(/\D/g, '').slice(0, 6);
+                      const val = e.target.value.replace(/\D/g, '').slice(0, 8);
                       setOtpCode(val);
                       if (otpError) setOtpError(null);
                     }}
-                    placeholder="• • • • • •"
+                    placeholder="• • • • • • • •"
                     className="w-full text-center text-2xl tracking-[0.4em] font-mono py-3 px-4 rounded-2xl border-2 border-surface-border dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all shadow-sm font-bold"
                   />
                   <p className="text-[11px] text-surface-muted text-center mt-2">
@@ -653,8 +692,8 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                   <button
                     type="button"
                     onClick={() => {
-                      setForgotEmail(email);
-                      setShowForgotModal(true);
+                      setMode('forgot');
+                      setErrorMessage(null);
                     }}
                     className="text-xs text-brand-primary hover:text-brand-variant font-semibold"
                   >
@@ -847,13 +886,21 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
             {/* Terms of Service & Privacy Policy Notice */}
             <p className="text-[11px] text-center text-surface-muted dark:text-darkSurface-muted leading-relaxed pt-1">
               By continuing, you agree to MOCK.AI's{' '}
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-brand-primary hover:underline font-medium">
+              <button
+                type="button"
+                onClick={() => openLegalModal('terms')}
+                className="text-brand-primary hover:underline font-medium inline"
+              >
                 Terms of Service
-              </a>{' '}
+              </button>{' '}
               and{' '}
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-brand-primary hover:underline font-medium">
+              <button
+                type="button"
+                onClick={() => openLegalModal('privacy')}
+                className="text-brand-primary hover:underline font-medium inline"
+              >
                 Privacy Policy
-              </a>.
+              </button>.
             </p>
 
             {/* Submit Button */}
@@ -978,27 +1025,50 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         {/* ── Production Trust & Compliance Footer ───────────────────── */}
         <div className="mt-8 flex flex-col items-center gap-2 text-center">
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-surface-muted/70">
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-surface-text transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegalModal('privacy')}
+              className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            >
               Privacy Policy
-            </a>
+            </button>
             <span>•</span>
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-surface-text transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegalModal('terms')}
+              className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            >
               Terms of Service
-            </a>
+            </button>
             <span>•</span>
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-surface-text transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegalModal('status')}
+              className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            >
               System Status
-            </a>
+            </button>
             <span>•</span>
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-surface-text transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegalModal('security')}
+              className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            >
               Security Compliance
-            </a>
+            </button>
           </div>
           <p className="text-[11px] text-surface-muted/50">
             © {new Date().getFullYear()} MOCK.AI Inc. All rights reserved.
           </p>
         </div>
       </div>
+
+      {/* ── Legal & Compliance Interactive Modal ─────────────────────── */}
+      <LegalModal
+        isOpen={legalModalOpen}
+        initialTab={legalModalTab}
+        onClose={() => setLegalModalOpen(false)}
+      />
 
       {/* ── Forgot Password Modal ────────────────────────────────────── */}
       {showForgotModal && (

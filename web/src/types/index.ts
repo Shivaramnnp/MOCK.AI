@@ -119,6 +119,7 @@ export interface SubmissionData {
   total?: number;
   scorePercent?: number;
   submittedAt?: number;
+  studentName?: string;
 }
 
 export interface AssignmentModel {
@@ -319,15 +320,29 @@ export interface ExamResultSummary {
   sectionResults: Record<string, SectionResultSummary>;
 }
 
+export type ExamSessionStatus =
+  | 'IN_PROGRESS'
+  | 'PAUSED'
+  | 'SUBMITTED'
+  | 'COMPLETED'
+  | 'EXPIRED'
+  | 'ABANDONED';
+
 export interface ExamTestSession {
   sessionId: string;
   paperId: string;
   examId: string;
   paperTitle: string;
+  editionYear?: number;
+  tier?: string;
+  shift?: string;
+  examDate?: string;
   userId: string;
   startedAt: number;
+  lastSavedAt: number;
+  expiresAt: number;
   completedAt: number | null;
-  status: 'IN_PROGRESS' | 'COMPLETED' | 'ABANDONED';
+  status: ExamSessionStatus;
   durationSeconds: number;
   timeRemainingSeconds: number;
   elapsedSeconds: number;
@@ -338,6 +353,7 @@ export interface ExamTestSession {
   questionStatuses: Record<number, QuestionAttemptStatus>; // questionIndex -> QuestionAttemptStatus
   currentQuestionIndex: number;
   currentSectionId: string;
+  version: number; // Revision counter for concurrent multi-device sync
   result?: ExamResultSummary;
 }
 

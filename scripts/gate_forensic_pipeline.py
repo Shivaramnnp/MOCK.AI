@@ -599,7 +599,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                     # Check for fraction bar in option (e.g. Q11 Option B: E[X]/E[Y])
                     fracs = detect_fractions_in_region(page, opt_rect)
                     if fracs:
-                        val = fracs[0][3]  # KaTeX fraction string e.g. \frac{E[X]}{E[Y]}
+                        val = f"\\({fracs[0][3]}\\)"  # KaTeX fraction string e.g. \(\frac{E[X]}{E[Y]}\)
 
                     # Check for option image
                     o_imgs = [im[1] for im in page_images if opt_rect.intersects(im[1]) and (opt_rect & im[1]).width > 12 and (opt_rect & im[1]).height > 12]

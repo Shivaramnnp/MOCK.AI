@@ -162,19 +162,39 @@ describe('AuthScreen Component', () => {
       expect(screen.getByText('Verify Your Email')).toBeDefined();
     }, { timeout: 3000 });
 
-    // Enter 6-digit verification code
-    const otpInput = screen.getByPlaceholderText('• • • • • •');
-    fireEvent.change(otpInput, { target: { value: '123456' } });
+    // Enter verification code
+    const otpInput = screen.getByPlaceholderText('• • • • • • • •');
+    fireEvent.change(otpInput, { target: { value: '12345678' } });
 
     // Click verify
     const verifyBtn = screen.getByRole('button', { name: /Verify & Complete Signup/i });
     fireEvent.click(verifyBtn);
 
     await waitFor(() => {
-      expect(verifySpy).toHaveBeenCalledWith('test@example.com', '123456', 'signup');
+      expect(verifySpy).toHaveBeenCalledWith('test@example.com', '12345678', 'signup');
     });
 
     signUpSpy.mockRestore();
     verifySpy.mockRestore();
+  });
+
+  it('should open LegalModal when clicking footer compliance links', () => {
+    const handleSuccess = vi.fn();
+    render(<AuthScreen onAuthSuccess={handleSuccess} />);
+
+    // Click Privacy Policy link
+    const privacyBtns = screen.getAllByRole('button', { name: /^Privacy Policy$/i });
+    fireEvent.click(privacyBtns[0]);
+    expect(screen.getByText('Privacy Policy & Data Protection')).toBeDefined();
+
+    // Close modal
+    const closeBtn = screen.getByRole('button', { name: /Close modal/i });
+    fireEvent.click(closeBtn);
+    expect(screen.queryByText('Privacy Policy & Data Protection')).toBeNull();
+
+    // Click System Status footer link
+    const statusBtn = screen.getByRole('button', { name: /^System Status$/i });
+    fireEvent.click(statusBtn);
+    expect(screen.getByText(/Live Infrastructure Status/i)).toBeDefined();
   });
 });

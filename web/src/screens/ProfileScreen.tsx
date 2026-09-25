@@ -9,6 +9,7 @@ import {
   Shield,
   LogOut,
   ChevronRight,
+  Check,
 } from 'lucide-react';
 import { UserProfile, UserRole, TestHistory } from '../types';
 
@@ -16,7 +17,7 @@ interface ProfileScreenProps {
   profile: UserProfile;
   tests: TestHistory[];
   streakCount: number;
-  onRoleChange: (role: UserRole) => void;
+  onRoleChange?: (role: UserRole) => void;
   onNavigateSettings: () => void;
   onSignOut: () => void;
 }
@@ -124,56 +125,53 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({
         </div>
       </div>
 
-      {/* ── Role Selector Options ─────────────────────────────────────── */}
-      <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4">
-        <div>
-          <h3 className="text-lg font-bold text-surface-text dark:text-darkSurface-text">
-            Active Role & Experience
-          </h3>
-          <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
-            Switch your profile mode to experience tailored classroom, teacher, or self-study workflows
-          </p>
+      {/* ── Permanent Account Role Card ───────────────────────────────── */}
+      <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 sm:p-8 shadow-sm space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 className="text-lg font-bold text-surface-text dark:text-darkSurface-text flex items-center gap-2">
+              <span>Account Role</span>
+              <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Verified
+              </span>
+            </h3>
+            <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+              Your role was selected during account registration and is permanently configured.
+            </p>
+          </div>
         </div>
 
-        <div className="space-y-3">
-          {roles.map((r) => {
-            const isSelected = profile.role === r.role;
-
-            return (
-              <div
-                key={r.role}
-                onClick={() => onRoleChange(r.role)}
-                className={`cursor-pointer p-4 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
-                  isSelected
-                    ? 'bg-brand-primary/10 border-brand-primary shadow-sm'
-                    : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border hover:border-brand-primary/40'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{r.emoji}</span>
-                  <div>
-                    <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text">
-                      {r.title}
+        {(() => {
+          const currentRoleObj = roles.find((r) => r.role === profile.role) || roles[0];
+          return (
+            <div className="p-4 sm:p-5 rounded-2xl bg-brand-primary/10 border border-brand-primary/30 shadow-sm flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3.5 min-w-0">
+                <span className="text-3xl sm:text-4xl shrink-0">{currentRoleObj.emoji}</span>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-bold text-sm sm:text-base text-surface-text dark:text-darkSurface-text">
+                      {currentRoleObj.title}
                     </h4>
-                    <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-0.5">
-                      {r.desc}
-                    </p>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-primary text-white">
+                      Active
+                    </span>
                   </div>
-                </div>
-
-                <div
-                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                    isSelected
-                      ? 'border-brand-primary bg-brand-primary text-white'
-                      : 'border-surface-muted'
-                  }`}
-                >
-                  {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
+                  <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-1 leading-relaxed">
+                    {currentRoleObj.desc}
+                  </p>
                 </div>
               </div>
-            );
-          })}
-        </div>
+
+              <div className="w-6 h-6 rounded-full bg-brand-primary text-white flex items-center justify-center shrink-0 shadow-sm">
+                <Check className="w-3.5 h-3.5" />
+              </div>
+            </div>
+          );
+        })()}
+
+        <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted/70 italic">
+          Need to transition to an institutional or teacher account? Contact support at <span className="font-semibold text-brand-primary not-italic">themockai.official@gmail.com</span>.
+        </p>
       </div>
 
       {/* ── Sign Out Button ───────────────────────────────────────────── */}

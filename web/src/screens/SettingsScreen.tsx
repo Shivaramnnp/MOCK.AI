@@ -11,9 +11,16 @@ import {
   Check,
   ArrowLeft,
   Sparkles,
+  Lock,
+  Shield,
+  AlertCircle,
+  Eye,
+  EyeOff,
 } from 'lucide-react';
 import { AppSettings, storage } from '../services/storage';
+import { supabaseService } from '../services/supabase';
 import { TestHistory } from '../types';
+import { LegalModal, LegalTabType } from '../components/LegalModal';
 
 interface SettingsScreenProps {
   settings: AppSettings;
@@ -34,6 +41,51 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   const [groqKey, setGroqKey] = useState(settings.groqApiKey);
   const [timerSeconds, setTimerSeconds] = useState(settings.timerSeconds);
   const [savedSuccess, setSavedSuccess] = useState(false);
+
+  // Security / Password update state
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isPasswordLoading, setIsPasswordLoading] = useState(false);
+  const [passwordSuccess, setPasswordSuccess] = useState<string | null>(null);
+  const [passwordError, setPasswordError] = useState<string | null>(null);
+
+  // Legal Modal State
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalModalTab, setLegalModalTab] = useState<LegalTabType>('privacy');
+
+  const openLegalModal = (tab: LegalTabType) => {
+    setLegalModalTab(tab);
+    setLegalModalOpen(true);
+  };
+
+  const handleUpdatePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newPassword.length < 6) {
+      setPasswordError('New password must be at least 6 characters long.');
+      return;
+    }
+    if (newPassword !== confirmPassword) {
+      setPasswordError('Passwords do not match.');
+      return;
+    }
+
+    setIsPasswordLoading(true);
+    setPasswordError(null);
+    setPasswordSuccess(null);
+
+    try {
+      await supabaseService.updatePassword(newPassword);
+      setPasswordSuccess('Password successfully updated! Your account is secured.');
+      setNewPassword('');
+      setConfirmPassword('');
+      setTimeout(() => setPasswordSuccess(null), 4000);
+    } catch (err: any) {
+      setPasswordError(err.message || 'Failed to update password. Please try again.');
+    } finally {
+      setIsPasswordLoading(false);
+    }
+  };
 
   const handleSaveApiKeys = (e: React.FormEvent) => {
     e.preventDefault();
@@ -208,6 +260,94 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
         </div>
       </div>
 
+      {/* Security & Account Password */}
+      <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4">
+        <div className="flex items-center gap-2">
+          <Shield className="w-5 h-5 text-brand-primary" />
+          <h3 className="font-bold text-base text-surface-text dark:text-darkSurface-text">
+            Security & Account Password
+          </h3>
+        </div>
+        <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+          Update your account password to keep your mock tests and study progress secure.
+        </p>
+
+        {passwordSuccess && (
+          <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+            <Check className="w-4 h-4 shrink-0" />
+            <span>{passwordSuccess}</span>
+          </div>
+        )}
+
+        {passwordError && (
+          <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center gap-2 text-brand-red text-xs font-semibold">
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            <span>{passwordError}</span>
+          </div>
+        )}
+
+        <form onSubmit={handleUpdatePassword} className="space-y-4 max-w-md pt-1">
+          <div>
+            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+              New Password:
+            </label>
+            <div className="relative">
+              <Lock className="w-4 h-4 text-surface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type={showPassword ? 'text' : 'password'}
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                placeholder="At least 6 characters"
+                required
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-surface-muted hover:text-surface-text"
+              >
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+              Confirm New Password:
+            </label>
+            <div className="relative">
+              <Lock className="w-4 h-4 text-surface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type={showPassword ? 'text' : 'password'}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Re-enter new password"
+                required
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            disabled={isPasswordLoading || !newPassword || !confirmPassword}
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-indigo-600 text-white font-bold text-xs shadow-md hover:brightness-110 active:scale-95 disabled:opacity-50 transition-all flex items-center gap-2"
+          >
+            {isPasswordLoading ? (
+              <>
+                <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <span>Updating Password...</span>
+              </>
+            ) : (
+              <>
+                <Shield className="w-3.5 h-3.5" />
+                <span>Update Password</span>
+              </>
+            )}
+          </button>
+        </form>
+      </div>
+
       {/* Data Backup & Reset */}
       <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4">
         <h3 className="font-bold text-base text-surface-text dark:text-darkSurface-text">
@@ -236,6 +376,53 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           </button>
         </div>
       </div>
+
+      {/* Trust & Legal Footer */}
+      <div className="pt-4 border-t border-surface-border dark:border-darkSurface-border flex flex-col items-center gap-2 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-surface-muted">
+          <button
+            type="button"
+            onClick={() => openLegalModal('privacy')}
+            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+          >
+            Privacy Policy
+          </button>
+          <span>•</span>
+          <button
+            type="button"
+            onClick={() => openLegalModal('terms')}
+            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+          >
+            Terms of Service
+          </button>
+          <span>•</span>
+          <button
+            type="button"
+            onClick={() => openLegalModal('status')}
+            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+          >
+            System Status
+          </button>
+          <span>•</span>
+          <button
+            type="button"
+            onClick={() => openLegalModal('security')}
+            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+          >
+            Security Compliance
+          </button>
+        </div>
+        <p className="text-[11px] text-surface-muted/60">
+          MOCK.AI &bull; Educational AI Exam Preparation Platform &bull; &copy; {new Date().getFullYear()}
+        </p>
+      </div>
+
+      {/* Legal & Compliance Modal */}
+      <LegalModal
+        isOpen={legalModalOpen}
+        initialTab={legalModalTab}
+        onClose={() => setLegalModalOpen(false)}
+      />
     </div>
   );
 };

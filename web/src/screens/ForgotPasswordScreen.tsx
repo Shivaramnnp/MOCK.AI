@@ -38,8 +38,8 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
       window.location.hash.includes('reset-password') ||
       window.location.search.includes('type=recovery'));
 
-  const [mode, setMode] = useState<'request' | 'update'>(
-    forcedMode || (isRecoveryUrl ? 'update' : 'request')
+  const [mode, setMode] = useState<'request' | 'verify_otp' | 'update'>(
+    forcedMode === 'update' ? 'update' : 'request'
   );
 
   // Request mode state
@@ -48,6 +48,11 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
   const [requestSent, setRequestSent] = useState(false);
   const [requestError, setRequestError] = useState<string | null>(null);
   const [resendCooldown, setResendCooldown] = useState(0);
+
+  // OTP verification state
+  const [otpCode, setOtpCode] = useState('');
+  const [isOtpVerifying, setIsOtpVerifying] = useState(false);
+  const [otpError, setOtpError] = useState<string | null>(null);
 
   // Update mode state
   const [newPassword, setNewPassword] = useState('');
@@ -100,7 +105,7 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
   const strength = getPasswordStrength();
   const passwordsMatch = newPassword && confirmPassword && newPassword === confirmPassword;
 
-  // Handle Send Reset Email
+  // Handle Send Reset Email → transitions to OTP verification step
   const handleSendRecoveryEmail = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     const cleanEmail = email.trim();
@@ -116,10 +121,41 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
       await supabaseService.resetPassword(cleanEmail);
       setRequestSent(true);
       setResendCooldown(60);
+      setMode('verify_otp');
+      setOtpCode('');
+      setOtpError(null);
     } catch (err: any) {
-      setRequestError(err.message || 'Failed to dispatch password recovery link. Please try again.');
+      setRequestError(err.message || 'Failed to send recovery code. Please try again.');
     } finally {
       setIsRequestLoading(false);
+    }
+  };
+
+  // Handle OTP verification for password recovery
+  const handleVerifyRecoveryOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanCode = otpCode.trim();
+    if (cleanCode.length < 6) {
+      setOtpError('Please enter the full verification code from your email.');
+      return;
+    }
+
+    setIsOtpVerifying(true);
+    setOtpError(null);
+
+    try {
+      await supabaseService.verifyEmailOtp(email.trim(), cleanCode, 'recovery');
+      // Recovery session established — show password update form
+      setMode('update');
+    } catch (err: any) {
+      const msg = err.message || '';
+      if (msg.toLowerCase().includes('expired') || msg.toLowerCase().includes('invalid')) {
+        setOtpError('Code is invalid or expired. Please request a new one.');
+      } else {
+        setOtpError(msg || 'Verification failed. Please check the code and try again.');
+      }
+    } finally {
+      setIsOtpVerifying(false);
     }
   };
 
@@ -141,8 +177,23 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
     try {
       await supabaseService.updatePassword(newPassword);
       setUpdateSuccess(true);
+      // Auto-redirect to app after 2 seconds
+      setTimeout(() => {
+        if (onPasswordResetSuccess) {
+          onPasswordResetSuccess();
+        } else {
+          onBackToLogin();
+        }
+      }, 2000);
     } catch (err: any) {
-      setUpdateError(err.message || 'Failed to update password. Your reset link may have expired.');
+      const msg = err.message || '';
+      if (msg.toLowerCase().includes('session') || msg.toLowerCase().includes('jwt') || msg.toLowerCase().includes('expired')) {
+        setUpdateError(
+          'Your password reset link has expired. Please request a new one from the login screen.'
+        );
+      } else {
+        setUpdateError(msg || 'Failed to update password. Please try again.');
+      }
     } finally {
       setIsUpdateLoading(false);
     }
@@ -198,126 +249,173 @@ export const ForgotPasswordScreen: React.FC<ForgotPasswordScreenProps> = ({
           {/* ═══════════════════════════════════════════════════════════════════ */}
           {mode === 'request' && (
             <div>
-              {!requestSent ? (
-                <>
-                  <div className="text-center mb-7">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 text-brand-primary mb-4 shadow-inner">
-                      <KeyRound className="w-7 h-7" />
-                    </div>
-                    <h2 className="text-2xl font-bold tracking-tight text-white mb-2">
-                      Reset Your Password
-                    </h2>
-                    <p className="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">
-                      Enter the email address registered with your account and we'll dispatch an instant password reset link.
-                    </p>
-                  </div>
+              <div className="text-center mb-7">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 text-brand-primary mb-4 shadow-inner">
+                  <KeyRound className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl font-bold tracking-tight text-white mb-2">
+                  Reset Your Password
+                </h2>
+                <p className="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">
+                  Enter the email address registered with your account and we'll send you a recovery code.
+                </p>
+              </div>
 
-                  {requestError && (
-                    <div className="mb-5 p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 flex items-start gap-2.5 text-red-400 text-xs animate-shake">
-                      <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-                      <span>{requestError}</span>
-                    </div>
-                  )}
-
-                  <form onSubmit={handleSendRecoveryEmail} className="space-y-5">
-                    <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
-                        Email Address
-                      </label>
-                      <div className="relative">
-                        <Mail className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
-                        <input
-                          type="email"
-                          required
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="name@example.com"
-                          className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-700/80 bg-slate-800/80 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all"
-                        />
-                      </div>
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isRequestLoading || !email.trim()}
-                      className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-brand-primary to-indigo-600 hover:from-brand-primary/90 hover:to-indigo-500 active:scale-[0.98] text-white font-semibold text-sm shadow-lg shadow-brand-primary/25 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
-                    >
-                      {isRequestLoading ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                          <span>Sending Recovery Email...</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>Send Recovery Email</span>
-                          <ArrowRight className="w-4 h-4" />
-                        </>
-                      )}
-                    </button>
-
-                    <div className="flex items-center justify-between pt-2">
-                      <button
-                        type="button"
-                        onClick={onBackToLogin}
-                        className="text-xs text-slate-400 hover:text-white transition-colors"
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setMode('update')}
-                        className="text-xs text-brand-primary hover:text-brand-accent transition-colors font-medium"
-                      >
-                        Already have a reset token?
-                      </button>
-                    </div>
-                  </form>
-                </>
-              ) : (
-                /* Success Feedback View */
-                <div className="text-center py-2">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-5">
-                    <CheckCircle2 className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Check Your Inbox</h3>
-                  <p className="text-xs text-slate-300 mb-2 leading-relaxed">
-                    We've sent a password reset link to:
-                  </p>
-                  <p className="text-sm font-semibold text-brand-primary bg-slate-800/80 py-1.5 px-3 rounded-lg border border-slate-700/60 inline-block mb-4">
-                    {email}
-                  </p>
-                  <p className="text-xs text-slate-400 leading-relaxed mb-6">
-                    Click the link in the email to set a new password. If you don't see it within a minute, check your spam folder.
-                  </p>
-
-                  <div className="space-y-3">
-                    <button
-                      type="button"
-                      disabled={resendCooldown > 0 || isRequestLoading}
-                      onClick={() => handleSendRecoveryEmail()}
-                      className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-xs font-semibold text-slate-200 border border-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
-                    >
-                      <RefreshCw className={`w-3.5 h-3.5 ${isRequestLoading ? 'animate-spin' : ''}`} />
-                      <span>
-                        {resendCooldown > 0 ? `Resend email in ${resendCooldown}s` : 'Resend Recovery Email'}
-                      </span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={onBackToLogin}
-                      className="w-full py-2.5 px-4 rounded-xl bg-brand-primary/10 hover:bg-brand-primary/20 text-xs font-semibold text-brand-primary border border-brand-primary/20 transition-all"
-                    >
-                      Return to Sign In
-                    </button>
-                  </div>
+              {requestError && (
+                <div className="mb-5 p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 flex items-start gap-2.5 text-red-400 text-xs animate-shake">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{requestError}</span>
                 </div>
               )}
+
+              <form onSubmit={handleSendRecoveryEmail} className="space-y-5">
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                    Email Address
+                  </label>
+                  <div className="relative">
+                    <Mail className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="name@example.com"
+                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-700/80 bg-slate-800/80 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isRequestLoading || !email.trim()}
+                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-brand-primary to-indigo-600 hover:from-brand-primary/90 hover:to-indigo-500 active:scale-[0.98] text-white font-semibold text-sm shadow-lg shadow-brand-primary/25 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                >
+                  {isRequestLoading ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span>Sending Recovery Code...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Send Recovery Code</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+
+                <div className="flex items-center justify-between pt-2">
+                  <button
+                    type="button"
+                    onClick={onBackToLogin}
+                    className="text-xs text-slate-400 hover:text-white transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
             </div>
           )}
 
           {/* ═══════════════════════════════════════════════════════════════════ */}
-          {/* MODE 2: SET NEW PASSWORD (RECOVERY CALLBACK)                       */}
+          {/* MODE 2: ENTER OTP CODE                                             */}
+          {/* ═══════════════════════════════════════════════════════════════════ */}
+          {mode === 'verify_otp' && (
+            <div>
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 text-brand-primary mb-4 shadow-inner">
+                  <Mail className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl font-bold tracking-tight text-white mb-2">
+                  Check Your Email
+                </h2>
+                <p className="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">
+                  We sent a recovery code to{' '}
+                  <span className="font-semibold text-brand-primary">{email}</span>.
+                  Enter it below to continue.
+                </p>
+                <p className="text-[11px] text-slate-500 mt-1">
+                  Check your spam/junk folder if you don't see it.
+                </p>
+              </div>
+
+              {otpError && (
+                <div className="mb-5 p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 flex items-start gap-2.5 text-red-400 text-xs">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{otpError}</span>
+                </div>
+              )}
+
+              <form onSubmit={handleVerifyRecoveryOtp} className="space-y-5">
+                <div>
+                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 text-center">
+                    Recovery Code
+                  </label>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
+                    pattern="[0-9]*"
+                    maxLength={8}
+                    autoFocus
+                    required
+                    value={otpCode}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/\D/g, '').slice(0, 8);
+                      setOtpCode(val);
+                      if (otpError) setOtpError(null);
+                    }}
+                    placeholder="• • • • • • • •"
+                    className="w-full text-center text-2xl tracking-[0.4em] font-mono py-3 px-4 rounded-xl border border-slate-700/80 bg-slate-800/80 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all font-bold"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isOtpVerifying || otpCode.trim().length < 6}
+                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-brand-primary to-indigo-600 hover:from-brand-primary/90 hover:to-indigo-500 active:scale-[0.98] text-white font-semibold text-sm shadow-lg shadow-brand-primary/25 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                >
+                  {isOtpVerifying ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span>Verifying...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Verify Code</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+
+                <div className="flex items-center justify-between pt-1">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMode('request');
+                      setRequestSent(false);
+                      setOtpCode('');
+                      setOtpError(null);
+                    }}
+                    className="text-xs text-slate-400 hover:text-white transition-colors"
+                  >
+                    ← Change email
+                  </button>
+                  <button
+                    type="button"
+                    disabled={resendCooldown > 0 || isRequestLoading}
+                    onClick={() => handleSendRecoveryEmail()}
+                    className="text-xs text-brand-primary hover:text-indigo-400 font-semibold disabled:text-slate-500 transition-colors"
+                  >
+                    {resendCooldown > 0 ? `Resend in ${resendCooldown}s` : 'Resend code'}
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+
+          {/* ═══════════════════════════════════════════════════════════════════ */}
+          {/* MODE 3: SET NEW PASSWORD                                            */}
           {/* ═══════════════════════════════════════════════════════════════════ */}
           {mode === 'update' && (
             <div>

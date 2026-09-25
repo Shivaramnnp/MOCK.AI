@@ -691,7 +691,7 @@
       "questionType": "MCQ",
       "options": [
         "E[X|Y ]",
-        "\\frac{E[X]}{E[Y]}",
+        "\\(\\frac{E[X]}{E[Y]}\\)",
         "E[X]",
         "E[Y ]"
       ],
@@ -709,7 +709,7 @@
         },
         {
           "id": "B",
-          "text": "\\frac{E[X]}{E[Y]}",
+          "text": "\\(\\frac{E[X]}{E[Y]}\\)",
           "imageUrl": null
         },
         {
@@ -885,8 +885,8 @@
       "options": [
         "0",
         "1",
-        "\\frac{1}{10!}",
-        "\\frac{2}{10!}"
+        "\\(\\frac{1}{10!}\\)",
+        "\\(\\frac{2}{10!}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -902,12 +902,12 @@
         },
         {
           "id": "C",
-          "text": "\\frac{1}{10!}",
+          "text": "\\(\\frac{1}{10!}\\)",
           "imageUrl": null
         },
         {
           "id": "D",
-          "text": "\\frac{2}{10!}",
+          "text": "\\(\\frac{2}{10!}\\)",
           "imageUrl": null
         }
       ],
@@ -1066,7 +1066,7 @@
       "questionText": "Consider the following pseudocode:\n\n```text\nCar (model, year, serial, color)\nMake (maker, model)\nOwn (owner, serial)\n```",
       "questionType": "MCQ",
       "options": [
-        "\\frac{(owner,}{(owner,}",
+        "\\(\\frac{(owner,}{(owner,}\\)",
         "All owners of more than one car, where at least one car is red and made by ABC",
         "All owners of a red car made by ABC",
         "All red cars made by ABC"
@@ -1080,7 +1080,7 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\frac{(owner,}{(owner,}",
+          "text": "\\(\\frac{(owner,}{(owner,}\\)",
           "imageUrl": "/exam-assets/gate/2025/da/q17_opt_a.png"
         },
         {
@@ -2544,10 +2544,10 @@
       "questionText": "Consider the neural network shown in the ﬁgure with inputs: u, v weights: a, b, c, d, e, f output: y R denotes the ReLU function, R(x) = max(0, x). a u R b e y R c\nd f v\nR Given u = 2, v = 3, a = 1, b = 1, c = 1, d = -1, e = 4, f = -1, which one of the following is correct?",
       "questionType": "MCQ",
       "options": [
-        "\\frac{ \\partial y}{ \\partial a}",
-        "\\frac{ \\partial y}{ \\partial a}",
-        "\\frac{ \\partial y}{ \\partial a}",
-        "\\frac{ \\partial y}{ \\partial a}"
+        "\\(\\frac{ \\partial y}{ \\partial a}\\)",
+        "\\(\\frac{ \\partial y}{ \\partial a}\\)",
+        "\\(\\frac{ \\partial y}{ \\partial a}\\)",
+        "\\(\\frac{ \\partial y}{ \\partial a}\\)"
       ],
       "optionImages": [
         "/exam-assets/gate/2025/da/q42_opt_a.png",
@@ -2558,22 +2558,22 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\frac{ \\partial y}{ \\partial a}",
+          "text": "\\(\\frac{ \\partial y}{ \\partial a}\\)",
           "imageUrl": "/exam-assets/gate/2025/da/q42_opt_a.png"
         },
         {
           "id": "B",
-          "text": "\\frac{ \\partial y}{ \\partial a}",
+          "text": "\\(\\frac{ \\partial y}{ \\partial a}\\)",
           "imageUrl": "/exam-assets/gate/2025/da/q42_opt_b.png"
         },
         {
           "id": "C",
-          "text": "\\frac{ \\partial y}{ \\partial a}",
+          "text": "\\(\\frac{ \\partial y}{ \\partial a}\\)",
           "imageUrl": "/exam-assets/gate/2025/da/q42_opt_c.png"
         },
         {
           "id": "D",
-          "text": "\\frac{ \\partial y}{ \\partial a}",
+          "text": "\\(\\frac{ \\partial y}{ \\partial a}\\)",
           "imageUrl": "/exam-assets/gate/2025/da/q42_opt_d.png"
         }
       ],
@@ -2993,7 +2993,7 @@
       "options": [
         "The maximum value of f is attained at x = -5",
         "The minimum value of f is attained at x = -2",
-        "\\frac{133}{2}",
+        "\\(\\frac{133}{2}\\)",
         "The minimum value of the derivative of f is attained at x = -7"
       ],
       "optionImages": null,
@@ -3010,7 +3010,7 @@
         },
         {
           "id": "C",
-          "text": "\\frac{133}{2}",
+          "text": "\\(\\frac{133}{2}\\)",
           "imageUrl": null
         },
         {

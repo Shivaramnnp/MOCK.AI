@@ -52,8 +52,8 @@ describe('ExamAsset Component', () => {
     expect(zoomButton).toBeNull();
   });
 
-  it('should gracefully hide itself when image fails to load (onError)', () => {
-    const { container, getByAltText } = render(
+  it('should display graceful error retry UI when image fails to load (onError)', () => {
+    const { getByAltText, getByText } = render(
       <ExamAsset
         url="/exam-assets/corrupted-or-404-image.png"
         alt="Broken figure"
@@ -67,7 +67,13 @@ describe('ExamAsset Component', () => {
     // Trigger image error (e.g. 404 or corrupted asset)
     fireEvent.error(img);
 
-    // Component should re-render and return null — NO orphan border or broken icon
-    expect(container.firstChild).toBeNull();
+    // Component should re-render with error indicator and retry button
+    expect(getByText(/Figure failed to load: Broken figure/i)).toBeDefined();
+    const retryBtn = getByText(/Retry Loading/i);
+    expect(retryBtn).toBeDefined();
+
+    // Clicking retry resets error state
+    fireEvent.click(retryBtn);
+    expect(getByAltText('Broken figure')).toBeDefined();
   });
 });

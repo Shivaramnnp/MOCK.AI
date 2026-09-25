@@ -12,6 +12,7 @@ import {
   getPaperById,
 } from '../data/exams/catalog';
 import { examRepository, paperRepository, questionRepository } from '../repositories';
+import { ExamSessionService } from './examSessionService';
 
 
 const ACTIVE_SESSION_STORAGE_KEY = 'mockai_active_exam_session';
@@ -101,61 +102,54 @@ export class ExamService {
    * Initialize a fresh exam test session with official section and question states.
    */
   static createExamSession(paper: ExamPaper, userId: string = 'guest'): ExamTestSession {
-    const durationSeconds = paper.durationMinutes * 60;
-    const initialStatuses: Record<number, any> = {};
-
-    for (let i = 0; i < paper.questions.length; i++) {
-      initialStatuses[i] = i === 0 ? 'NOT_ANSWERED' : 'NOT_VISITED';
-    }
-
-    const session: ExamTestSession = {
-      sessionId: `session_${paper.id}_${Date.now()}`,
-      paperId: paper.id,
-      examId: paper.examId,
-      paperTitle: paper.title,
-      userId,
-      startedAt: Date.now(),
-      completedAt: null,
-      status: 'IN_PROGRESS',
-      durationSeconds,
-      timeRemainingSeconds: durationSeconds,
-      elapsedSeconds: 0,
-      userAnswers: {},
-      userMsqAnswers: {},
-      userNatAnswers: {},
-      questionStatuses: initialStatuses,
-      currentQuestionIndex: 0,
-      currentSectionId: paper.sections[0]?.id || 'english',
-    };
-
-    this.saveActiveSession(session);
-    return session;
+    return ExamSessionService.createSession(paper, userId);
   }
 
   /**
-   * Auto-save the active exam test session to local persistence.
+   * Auto-save the active exam test session to local persistence and queue remote persistence.
    */
   static saveActiveSession(session: ExamTestSession): void {
-    try {
-      localStorage.setItem(ACTIVE_SESSION_STORAGE_KEY, JSON.stringify(session));
-    } catch (e) {
-      console.error('Failed to persist active exam session to localStorage', e);
-    }
+    ExamSessionService.saveSessionLocal(session);
+    ExamSessionService.queueAutosave(session);
   }
 
   /**
    * Retrieve the active exam session if one exists.
    */
-  static getActiveSession(paperId?: string): ExamTestSession | null {
+  static getActiveSession(paperId?: string, userId: string = 'guest'): ExamTestSession | null {
+    const sessions = ExamSessionService.getLocalSessions(userId);
+    const candidate = sessions.find(
+      (s) =>
+        (s.status === 'IN_PROGRESS' || s.status === 'PAUSED') &&
+        (!paperId || s.paperId === paperId)
+    );
+    if (candidate) {
+      const remaining = ExamSessionService.calculateRemainingSeconds(candidate);
+      if (remaining <= 0) {
+        candidate.status = 'EXPIRED';
+        ExamSessionService.saveSessionLocal(candidate);
+        return null;
+      }
+      candidate.timeRemainingSeconds = remaining;
+      return candidate;
+    }
+
+    // Check legacy single-session key as fallback
     try {
       const data = localStorage.getItem(ACTIVE_SESSION_STORAGE_KEY);
       if (!data) return null;
       const session = JSON.parse(data) as ExamTestSession;
-      if (session.status !== 'IN_PROGRESS') return null;
+      if (session.status !== 'IN_PROGRESS' && session.status !== 'PAUSED') return null;
       if (paperId && session.paperId !== paperId) return null;
+      const remaining = ExamSessionService.calculateRemainingSeconds(session);
+      if (remaining <= 0) {
+        session.status = 'EXPIRED';
+        ExamSessionService.saveSessionLocal(session);
+        return null;
+      }
+      session.timeRemainingSeconds = remaining;
       return session;
     } catch (e) {
-      console.error('Failed to parse active exam session', e);
       return null;
     }
   }
@@ -163,11 +157,13 @@ export class ExamService {
   /**
    * Clear active exam session upon submission or cancellation.
    */
-  static clearActiveSession(): void {
-    try {
-      localStorage.removeItem(ACTIVE_SESSION_STORAGE_KEY);
-    } catch (e) {
-      console.error('Failed to clear active exam session', e);
+  static clearActiveSession(userId: string = 'guest'): void {
+    if (typeof localStorage !== 'undefined') {
+      try {
+        localStorage.removeItem(ACTIVE_SESSION_STORAGE_KEY);
+      } catch (e) {
+        console.error('Failed to clear active exam session', e);
+      }
     }
   }
 
@@ -449,9 +445,13 @@ export class ExamService {
       result,
     };
 
-    // Save to history
+    // Save to history and persistent service
     this.saveAttemptToHistory(completedSession);
-    this.clearActiveSession();
+    ExamSessionService.submitSessionSync(completedSession, result);
+    ExamSessionService.submitSession(completedSession, result).catch((err) => {
+      console.warn('Non-fatal: persistent submit sync error:', err);
+    });
+    this.clearActiveSession(session.userId);
 
     return completedSession;
   }
