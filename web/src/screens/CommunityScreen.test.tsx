@@ -1,10 +1,11 @@
 import React from 'react';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, cleanup, within } from '@testing-library/react';
 import { CommunityScreen } from './CommunityScreen';
 import { CreatePostModal } from '../components/community/CreatePostModal';
+import { PostDetailModal } from '../components/community/PostDetailModal';
 import { communityService } from '../services/communityService';
-import { UserProfile } from '../types';
+import { UserProfile, CommunityPost } from '../types';
 
 describe('CommunityScreen UI Integration Tests', () => {
   const mockUser: UserProfile = {
@@ -154,4 +155,123 @@ describe('CommunityScreen UI Integration Tests', () => {
       expect(screen.getByRole('button', { name: /Try Again/i })).toBeTruthy();
     });
   });
+
+  it('preserves React hook ordering in PostDetailModal when transitioning isOpen state', async () => {
+    const mockPost: CommunityPost = {
+      id: 'post-hook-test-1',
+      authorId: 'test-user-123',
+      authorName: 'Ananya Roy',
+      authorRole: 'STUDENT',
+      type: 'DISCUSSION',
+      title: 'Hook Stability Verification Post',
+      description: 'Testing that PostDetailModal does not throw hook order violations.',
+      status: 'OPEN',
+      priority: 'NORMAL',
+      metadata: {},
+      isPinned: false,
+      isHidden: false,
+      supportCount: 5,
+      commentCount: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      hasUserSupported: false,
+    };
+
+    vi.spyOn(communityService, 'getPostById').mockResolvedValue({
+      post: mockPost,
+      comments: [],
+    });
+
+    // 1. Initial render with isOpen=false (as rendered on initial Community mount)
+    const { rerender } = render(
+      <PostDetailModal
+        isOpen={false}
+        postId={null}
+        onClose={() => {}}
+        user={mockUser}
+      />
+    );
+    expect(screen.queryByText('Hook Stability Verification Post')).toBeNull();
+
+    // 2. Rerender with isOpen=true and postId provided (clicking post)
+    // If hooks count differs, React will throw a fatal error here!
+    rerender(
+      <PostDetailModal
+        isOpen={true}
+        postId="post-hook-test-1"
+        onClose={() => {}}
+        user={mockUser}
+      />
+    );
+
+    await waitFor(() => {
+      expect(screen.getByText('Hook Stability Verification Post')).toBeTruthy();
+    });
+
+    // 3. Rerender back to isOpen=false (closing modal)
+    // Verifies no "rendered fewer hooks" error
+    rerender(
+      <PostDetailModal
+        isOpen={false}
+        postId={null}
+        onClose={() => {}}
+        user={mockUser}
+      />
+    );
+    expect(screen.queryByText('Hook Stability Verification Post')).toBeNull();
+  });
+
+  it('opens PostDetailModal when clicking on a community post card', async () => {
+    const mockPost: CommunityPost = {
+      id: 'post-click-test-1',
+      authorId: 'test-user-123',
+      authorName: 'Ananya Roy',
+      authorRole: 'STUDENT',
+      type: 'PAPER_REQUEST',
+      title: 'Need 2024 CGL Shift 2 Paper',
+      description: 'Please upload the Shift 2 question paper for CGL 2024.',
+      status: 'OPEN',
+      priority: 'NORMAL',
+      metadata: {},
+      isPinned: false,
+      isHidden: false,
+      supportCount: 12,
+      commentCount: 3,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      hasUserSupported: false,
+    };
+
+    vi.spyOn(communityService, 'getPosts').mockResolvedValue({
+      posts: [mockPost],
+      total: 1,
+    });
+
+    vi.spyOn(communityService, 'getPostById').mockResolvedValue({
+      post: mockPost,
+      comments: [],
+    });
+
+    render(<CommunityScreen user={mockUser} />);
+
+    // Wait for the post card to appear
+    await waitFor(() => {
+      expect(screen.getByText('Need 2024 CGL Shift 2 Paper')).toBeTruthy();
+    });
+
+    // Click the post card
+    fireEvent.click(screen.getByText('Need 2024 CGL Shift 2 Paper'));
+
+    // Verify detail modal opens with role="dialog" without crashing into a white screen
+    const dialog = await screen.findByRole('dialog');
+    expect(dialog).toBeTruthy();
+    expect(within(dialog).getByText('Please upload the Shift 2 question paper for CGL 2024.')).toBeTruthy();
+
+    // Verify closing via Escape key closes dialog cleanly
+    fireEvent.keyDown(window, { key: 'Escape' });
+    await waitFor(() => {
+      expect(screen.queryByRole('dialog')).toBeNull();
+    });
+  });
 });
+

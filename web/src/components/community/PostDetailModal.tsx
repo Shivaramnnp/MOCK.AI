@@ -87,8 +87,6 @@ export const PostDetailModal: React.FC<PostDetailModalProps> = ({
     }
   }, [isOpen, postId, user?.uid]);
 
-  if (!isOpen || !postId) return null;
-
   const handleToggleSupport = async () => {
     if (!user) {
       alert('Please sign in to support this request.');
@@ -188,7 +186,7 @@ export const PostDetailModal: React.FC<PostDetailModalProps> = ({
     }
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen || !postId) return null;
 
   const modalContent = (
     <div
