@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, School, LineChart, Compass } from 'lucide-react';
+import { Home, School, LineChart, Compass, MessageSquare } from 'lucide-react';
 import { AppRoute } from '../types';
 
 interface BottomNavProps {
@@ -11,6 +11,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentRoute, onNavigate }
   const items: { label: string; route: AppRoute; icon: React.ComponentType<{ className?: string }> }[] = [
     { label: 'Home', route: 'home', icon: Home },
     { label: 'Explore', route: 'explore', icon: Compass },
+    { label: 'Community', route: 'community', icon: MessageSquare },
     { label: 'Classroom', route: 'classroom', icon: School },
     { label: 'Analytics', route: 'analytics', icon: LineChart },
   ];

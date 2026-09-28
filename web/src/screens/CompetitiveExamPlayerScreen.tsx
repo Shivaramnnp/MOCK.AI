@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import {
 
   Clock,
@@ -27,6 +27,7 @@ import {
 import { ExamService } from '../services/examService';
 import { ExamSessionService } from '../services/examSessionService';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { StructuredContentRenderer } from '../components/StructuredContentRenderer';
 import { resolveAssetUrl } from '../lib/supabaseContent';
 import { ExamAsset } from '../components/ExamAsset';
 
@@ -128,26 +129,19 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     });
   }, []);
 
-  // Flush on unload to prevent data loss on sudden browser close
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      const currentSessionState: ExamTestSession = {
-        ...session,
-        currentQuestionIndex: currentIndex,
-        userAnswers,
-        userMsqAnswers,
-        userNatAnswers,
-        userDescriptiveAnswers: descriptiveAnswers,
-        questionStatuses: statuses,
-        timeRemainingSeconds: timeRemaining,
-        elapsedSeconds,
-      };
-      ExamSessionService.saveSessionLocal(currentSessionState);
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [session, currentIndex, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds]);
+  // Reference container to prevent stale closures and timer dependency churn
+  const stateRef = useRef({
+    currentIndex,
+    currentSection: paper.sections[0],
+    userAnswers,
+    userMsqAnswers,
+    userNatAnswers,
+    descriptiveAnswers,
+    statuses,
+    timeRemaining,
+    elapsedSeconds,
+    session,
+  });
 
   // Current section determination
   const currentSection = useMemo(() => {
@@ -158,30 +152,64 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     );
   }, [paper.sections, currentIndex]);
 
-  // Auto-sync session state to storage
+  // Keep stateRef synchronously up-to-date on each render
+  useEffect(() => {
+    stateRef.current = {
+      currentIndex,
+      currentSection,
+      userAnswers,
+      userMsqAnswers,
+      userNatAnswers,
+      descriptiveAnswers,
+      statuses,
+      timeRemaining,
+      elapsedSeconds,
+      session,
+    };
+  });
+
+  // Get authoritative complete session state snapshot
+  const getCurrentSessionSnapshot = useCallback(
+    (overrides?: Partial<ExamTestSession>): ExamTestSession => {
+      const cur = stateRef.current;
+      return {
+        ...cur.session,
+        currentQuestionIndex: cur.currentIndex,
+        currentSectionId: cur.currentSection?.id || cur.session.currentSectionId,
+        userAnswers: cur.userAnswers,
+        userMsqAnswers: cur.userMsqAnswers,
+        userNatAnswers: cur.userNatAnswers,
+        userDescriptiveAnswers: cur.descriptiveAnswers,
+        questionStatuses: cur.statuses,
+        timeRemainingSeconds: cur.timeRemaining,
+        elapsedSeconds: cur.elapsedSeconds,
+        ...overrides,
+      };
+    },
+    []
+  );
+
+  // Auto-sync session state to storage (kept for backwards-compatibility without dependency churn)
   const syncToStorage = useCallback(
     (overrides?: Partial<ExamTestSession>) => {
-      setSession((prev) => {
-        const updated: ExamTestSession = {
-          ...prev,
-          currentQuestionIndex: currentIndex,
-          currentSectionId: currentSection?.id || prev.currentSectionId,
-          userAnswers,
-          userMsqAnswers,
-          userNatAnswers,
-          userDescriptiveAnswers: descriptiveAnswers,
-          questionStatuses: statuses,
-          timeRemainingSeconds: timeRemaining,
-          elapsedSeconds,
-          ...overrides,
-        };
-        ExamSessionService.saveSessionLocal(updated);
-        ExamSessionService.queueAutosave(updated);
-        return updated;
-      });
+      const snapshot = getCurrentSessionSnapshot(overrides);
+      setSession(snapshot);
+      ExamSessionService.saveSessionLocal(snapshot);
+      ExamSessionService.queueAutosave(snapshot);
     },
-    [currentIndex, currentSection, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds]
+    [getCurrentSessionSnapshot]
   );
+
+  // Flush on unload to prevent data loss on sudden browser close
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      const snapshot = getCurrentSessionSnapshot();
+      ExamSessionService.saveSessionLocal(snapshot);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [getCurrentSessionSnapshot]);
 
   // Timer countdown with authoritative wall-clock calculation
   useEffect(() => {
@@ -200,13 +228,13 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     return () => clearInterval(timer);
   }, [session]);
 
-  // Periodic save checkpoint every 5 seconds
+  // Scalable adaptive heartbeat: 60 seconds with ±10s randomized jitter (ONLY fires if isDirty === true)
   useEffect(() => {
-    const syncInterval = setInterval(() => {
-      syncToStorage();
-    }, 5000);
-    return () => clearInterval(syncInterval);
-  }, [syncToStorage]);
+    const stopHeartbeat = ExamSessionService.startHeartbeat(() => {
+      return getCurrentSessionSnapshot();
+    });
+    return stopHeartbeat;
+  }, [getCurrentSessionSnapshot]);
 
   // Format timer HH:MM:SS
   const formatTime = (totalSecs: number) => {
@@ -236,46 +264,70 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   };
 
   // Question navigation handler
-  const jumpToQuestion = (targetIndex: number) => {
+  const jumpToQuestion = (targetIndex: number, currentStatusesMap?: Record<number, QuestionAttemptStatus>) => {
     if (targetIndex < 0 || targetIndex >= questions.length) return;
 
-    setStatuses((prev) => {
-      const next = { ...prev };
-      // If previous was NOT_VISITED, mark as NOT_ANSWERED
-      if (next[targetIndex] === 'NOT_VISITED') {
-        next[targetIndex] = 'NOT_ANSWERED';
-      }
-      return next;
-    });
+    const baseStatuses = currentStatusesMap || statuses;
+    let nextStatuses = baseStatuses;
+    if (baseStatuses[targetIndex] === 'NOT_VISITED') {
+      nextStatuses = { ...baseStatuses, [targetIndex]: 'NOT_ANSWERED' };
+    }
+    setStatuses(nextStatuses);
 
     setCurrentIndex(targetIndex);
-    syncToStorage({ currentQuestionIndex: targetIndex });
+
+    const snapshot = getCurrentSessionSnapshot({
+      currentQuestionIndex: targetIndex,
+      questionStatuses: nextStatuses,
+    });
+    ExamSessionService.saveSessionLocal(snapshot);
+
+    // Milestone checkpoint: Sync to remote cloud every 20 answered questions
+    let answered = 0;
+    for (const st of Object.values(nextStatuses)) {
+      if (st === 'ANSWERED' || st === 'ANSWERED_AND_MARKED_FOR_REVIEW') {
+        answered++;
+      }
+    }
+    if (answered > 0 && answered % 20 === 0) {
+      ExamSessionService.triggerRemoteCheckpoint(snapshot, 'checkpoint');
+    }
   };
 
   // Select option (MCQ)
   const handleSelectOption = (optionIndex: number) => {
+    ExamSessionService.markDirty();
     setUserAnswers((prev) => {
       const next = { ...prev, [currentIndex]: optionIndex };
+      ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userAnswers: next }));
       return next;
     });
   };
 
   // Toggle MSQ option
   const handleToggleMsqOption = (optionIndex: number) => {
+    ExamSessionService.markDirty();
     setUserMsqAnswers((prev) => {
       const current = prev[currentIndex] || [];
       const exists = current.includes(optionIndex);
       const next = exists ? current.filter((i) => i !== optionIndex) : [...current, optionIndex].sort();
-      return { ...prev, [currentIndex]: next };
+      const updated = { ...prev, [currentIndex]: next };
+      ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userMsqAnswers: updated }));
+      return updated;
     });
   };
 
   // NAT input change
   const handleNatChange = (value: string) => {
-    setUserNatAnswers((prev) => ({
-      ...prev,
-      [currentIndex]: value,
-    }));
+    ExamSessionService.markDirty();
+    setUserNatAnswers((prev) => {
+      const updated = {
+        ...prev,
+        [currentIndex]: value,
+      };
+      ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userNatAnswers: updated }));
+      return updated;
+    });
   };
 
   // Check if current question has an answer
@@ -296,55 +348,83 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
   // Clear response
   const handleClearResponse = () => {
+    ExamSessionService.markDirty();
+    let updatedAnswers = userAnswers;
+    let updatedMsq = userMsqAnswers;
+    let updatedNat = userNatAnswers;
+
     setUserAnswers((prev) => {
       const next = { ...prev };
       delete next[currentIndex];
+      updatedAnswers = next;
       return next;
     });
     setUserMsqAnswers((prev) => {
       const next = { ...prev };
       delete next[currentIndex];
+      updatedMsq = next;
       return next;
     });
     setUserNatAnswers((prev) => {
       const next = { ...prev };
       delete next[currentIndex];
+      updatedNat = next;
       return next;
     });
 
-    setStatuses((prev) => ({
-      ...prev,
+    const nextStatuses: Record<number, QuestionAttemptStatus> = {
+      ...statuses,
       [currentIndex]: 'NOT_ANSWERED',
-    }));
+    };
+    setStatuses(nextStatuses);
+
+    ExamSessionService.saveSessionLocal(
+      getCurrentSessionSnapshot({
+        userAnswers: updatedAnswers,
+        userMsqAnswers: updatedMsq,
+        userNatAnswers: updatedNat,
+        questionStatuses: nextStatuses,
+      })
+    );
   };
 
   // Save & Next
   const handleSaveAndNext = () => {
+    ExamSessionService.markDirty();
     const hasAnswer = checkHasAnswer(currentIndex);
-
-    setStatuses((prev) => ({
-      ...prev,
+    const nextStatuses: Record<number, QuestionAttemptStatus> = {
+      ...statuses,
       [currentIndex]: hasAnswer ? 'ANSWERED' : 'NOT_ANSWERED',
-    }));
+    };
+
+    setStatuses(nextStatuses);
 
     if (currentIndex < questions.length - 1) {
-      jumpToQuestion(currentIndex + 1);
+      jumpToQuestion(currentIndex + 1, nextStatuses);
+    } else {
+      const snapshot = getCurrentSessionSnapshot({ questionStatuses: nextStatuses });
+      ExamSessionService.saveSessionLocal(snapshot);
     }
   };
 
   // Mark for Review & Next
   const handleMarkForReviewAndNext = () => {
+    ExamSessionService.markDirty();
     const hasAnswer = checkHasAnswer(currentIndex);
-
-    setStatuses((prev) => ({
-      ...prev,
+    const nextStatuses: Record<number, QuestionAttemptStatus> = {
+      ...statuses,
       [currentIndex]: hasAnswer
         ? 'ANSWERED_AND_MARKED_FOR_REVIEW'
         : 'MARKED_FOR_REVIEW',
-    }));
+    };
+
+    setStatuses(nextStatuses);
 
     if (currentIndex < questions.length - 1) {
-      jumpToQuestion(currentIndex + 1);
+      jumpToQuestion(currentIndex + 1, nextStatuses);
+    } else {
+      const snapshot = getCurrentSessionSnapshot({ questionStatuses: nextStatuses });
+      ExamSessionService.saveSessionLocal(snapshot);
     }
   };
 
@@ -433,56 +513,40 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     const targetSection = paper.sections.find((s) => s.id === sectionId);
     if (targetSection) {
       jumpToQuestion(targetSection.startIndex);
+      const snapshot = getCurrentSessionSnapshot({
+        currentQuestionIndex: targetSection.startIndex,
+        currentSectionId: sectionId,
+      });
+      // Section boundary checkpoint: Trigger remote cloud synchronization
+      ExamSessionService.triggerRemoteCheckpoint(snapshot, 'section');
     }
   };
 
   // Final Submission
   const handleFinalSubmit = useCallback(() => {
-    const currentSessionState: ExamTestSession = {
-      ...session,
-      currentQuestionIndex: currentIndex,
-      userAnswers,
-      userMsqAnswers,
-      userNatAnswers,
-      userDescriptiveAnswers: descriptiveAnswers,
-      questionStatuses: statuses,
-      timeRemainingSeconds: timeRemaining,
-      elapsedSeconds,
-    };
-
-    const completed = ExamService.submitExamSession(currentSessionState, paper);
+    const snapshot = getCurrentSessionSnapshot();
+    const completed = ExamService.submitExamSession(snapshot, paper);
     setShowSubmitModal(false);
     onSubmit(completed);
-  }, [session, currentIndex, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds, paper, onSubmit]);
+  }, [getCurrentSessionSnapshot, paper, onSubmit]);
 
   // Save & Exit handler: Flushes pending changes, sets status to 'PAUSED', persists and exits
   const handleSaveAndExit = useCallback(async () => {
     setIsSavingExit(true);
     setSaveExitError(null);
     try {
-      const currentSessionState: ExamTestSession = {
-        ...session,
-        currentQuestionIndex: currentIndex,
-        currentSectionId: currentSection?.id || session.currentSectionId,
-        userAnswers,
-        userMsqAnswers,
-        userNatAnswers,
-        userDescriptiveAnswers: descriptiveAnswers,
-        questionStatuses: statuses,
-        timeRemainingSeconds: timeRemaining,
-        elapsedSeconds,
-      };
-
-      await ExamSessionService.saveAndExit(currentSessionState);
+      const snapshot = getCurrentSessionSnapshot();
+      await ExamSessionService.saveAndExit(snapshot);
       setIsSavingExit(false);
       setShowExitConfirm(false);
       onExit();
     } catch (err: any) {
       console.error('Failed to save & exit test session:', err);
       setIsSavingExit(false);
-      setSaveExitError('Your progress could not be saved. Please try again.');
+      setShowExitConfirm(false);
+      onExit();
     }
-  }, [session, currentIndex, currentSection, userAnswers, userMsqAnswers, userNatAnswers, descriptiveAnswers, statuses, timeRemaining, elapsedSeconds, onExit]);
+  }, [getCurrentSessionSnapshot, onExit]);
 
   // Status statistics for palette and modal
   const paletteStats = useMemo(() => {
@@ -807,27 +871,50 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                   </div>
                 </div>
 
-                {/* Question Text */}
-                {currentQuestion.questionText && currentQuestion.questionText.trim().length > 0 && (
+                {/* Question Text / Structured Academic Content */}
+                {((currentQuestion.contentBlocks && currentQuestion.contentBlocks.length > 0) ||
+                  (currentQuestion.questionText && currentQuestion.questionText.trim().length > 0)) && (
                   <div className="text-sm sm:text-base leading-relaxed text-surface-text dark:text-darkSurface-text font-medium">
-                    <LatexRenderer content={currentQuestion.questionText} />
+                    <StructuredContentRenderer
+                      blocks={currentQuestion.contentBlocks}
+                      fallbackText={currentQuestion.questionText}
+                      onZoomImage={setZoomImageUrl}
+                      questionNumber={currentIndex + 1}
+                    />
                   </div>
                 )}
 
-                {/* Diagram/Image if present */}
-                {((currentQuestion.diagramUrls && currentQuestion.diagramUrls.length > 0) || currentQuestion.diagramUrl) && (
-                  <div className="my-4 space-y-3">
-                    {(currentQuestion.diagramUrls || [currentQuestion.diagramUrl!]).map((url, dIdx) => (
-                      <ExamAsset
-                        key={`${currentQuestion.id}-diag-${dIdx}`}
-                        url={url}
-                        alt={`Figure ${dIdx + 1} for question ${currentIndex + 1}`}
-                        variant="diagram"
-                        onZoom={setZoomImageUrl}
-                      />
-                    ))}
-                  </div>
-                )}
+                {/* Diagram/Image if present (deduplicated against contentBlocks to prevent double-rendering) */}
+                {(() => {
+                  const contentBlockAssetUrls = new Set(
+                    (currentQuestion.contentBlocks || [])
+                      .filter((b) => (b.type === 'diagram' || b.type === 'image') && b.assetUrl)
+                      .map((b) => b.assetUrl!)
+                  );
+                  const unrenderedDiagramUrls = (
+                    currentQuestion.diagramUrls && currentQuestion.diagramUrls.length > 0
+                      ? currentQuestion.diagramUrls
+                      : currentQuestion.diagramUrl
+                      ? [currentQuestion.diagramUrl]
+                      : []
+                  ).filter((url) => !contentBlockAssetUrls.has(url));
+
+                  if (unrenderedDiagramUrls.length === 0) return null;
+
+                  return (
+                    <div className="my-4 space-y-3">
+                      {unrenderedDiagramUrls.map((url, dIdx) => (
+                        <ExamAsset
+                          key={`${currentQuestion.id}-diag-${dIdx}`}
+                          url={url}
+                          alt={`Figure ${dIdx + 1} for question ${currentIndex + 1}`}
+                          variant="diagram"
+                          onZoom={setZoomImageUrl}
+                        />
+                      ))}
+                    </div>
+                  );
+                })()}
 
                 {/* Question Input / Option Choices */}
                 {currentQuestion.questionType === 'NAT' ? (
@@ -901,10 +988,15 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       const currentSelected = userMsqAnswers[currentIndex] || [];
                       const isSelected = currentSelected.includes(optIdx);
                       const optImage = currentQuestion.optionImages?.[optIdx];
+                      const rawOptBlocks = currentQuestion.richOptions?.[optIdx]?.contentBlocks;
+                      const optBlocks = optImage
+                        ? rawOptBlocks?.filter((b) => !(b.type === 'image' && (b.assetUrl === optImage || !b.content)))
+                        : rawOptBlocks;
                       const hasValidText =
-                        optionText &&
-                        optionText.trim().length > 0 &&
-                        !/^Option\s*\([A-D]\)$/i.test(optionText.trim());
+                        (optBlocks && optBlocks.length > 0) ||
+                        (optionText &&
+                          optionText.trim().length > 0 &&
+                          !/^Option\s*\([A-D]\)$/i.test(optionText.trim()));
 
                       return (
                         <div
@@ -925,7 +1017,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                           >
                             {isSelected ? '✓' : optLetter}
                           </div>
-                          <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2">
+                          <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2 option-content text-left">
                             {optImage && (
                               <ExamAsset
                                 key={`${currentQuestion.id}-msq-opt-${optIdx}`}
@@ -936,8 +1028,12 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                               />
                             )}
                             {hasValidText && (
-                              <div>
-                                <LatexRenderer content={optionText} />
+                              <div className="w-full text-left">
+                                <StructuredContentRenderer
+                                  blocks={optBlocks}
+                                  fallbackText={optionText}
+                                  isOption={true}
+                                />
                               </div>
                             )}
                           </div>
@@ -952,10 +1048,15 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       const optLetter = ['A', 'B', 'C', 'D'][optIdx];
                       const isSelected = userAnswers[currentIndex] === optIdx;
                       const optImage = currentQuestion.optionImages?.[optIdx];
+                      const rawOptBlocks = currentQuestion.richOptions?.[optIdx]?.contentBlocks;
+                      const optBlocks = optImage
+                        ? rawOptBlocks?.filter((b) => !(b.type === 'image' && (b.assetUrl === optImage || !b.content)))
+                        : rawOptBlocks;
                       const hasValidText =
-                        optionText &&
-                        optionText.trim().length > 0 &&
-                        !/^Option\s*\([A-D]\)$/i.test(optionText.trim());
+                        (optBlocks && optBlocks.length > 0) ||
+                        (optionText &&
+                          optionText.trim().length > 0 &&
+                          !/^Option\s*\([A-D]\)$/i.test(optionText.trim()));
 
                       return (
                         <div
@@ -976,7 +1077,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                           >
                             {optLetter}
                           </div>
-                          <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2">
+                          <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2 option-content text-left">
                             {optImage && (
                               <ExamAsset
                                 key={`${currentQuestion.id}-mcq-opt-${optIdx}`}
@@ -987,8 +1088,12 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                               />
                             )}
                             {hasValidText && (
-                              <div>
-                                <LatexRenderer content={optionText} />
+                              <div className="w-full text-left">
+                                <StructuredContentRenderer
+                                  blocks={optBlocks}
+                                  fallbackText={optionText}
+                                  isOption={true}
+                                />
                               </div>
                             )}
                           </div>

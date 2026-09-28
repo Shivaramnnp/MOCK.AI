@@ -130,18 +130,38 @@ function mapRowToQuestion(
   };
 }
 
+const QUESTIONS_CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes
+
+const questionsByPaperCache = new Map<string, { data: CompetitiveQuestion[]; timestamp: number }>();
+
+export function _resetQuestionRepositoryCache(): void {
+  questionsByPaperCache.clear();
+}
+
 export const questionRepository = {
   /**
    * Get ALL questions + options for a paper in 2 batched queries.
    * Falls back to local JSON when Project 2 is unavailable.
    */
   async getQuestions(paperId: string): Promise<CompetitiveQuestion[]> {
+    const now = Date.now();
+    const cached = questionsByPaperCache.get(paperId);
+    if (cached && now - cached.timestamp < QUESTIONS_CACHE_TTL_MS) {
+      return cached.data;
+    }
+
     if (!isContentBackendAvailable()) {
-      return getPaperById(paperId)?.questions ?? [];
+      const local = getPaperById(paperId)?.questions ?? [];
+      questionsByPaperCache.set(paperId, { data: local, timestamp: now });
+      return local;
     }
 
     const client = getContentClient();
-    if (!client) return getPaperById(paperId)?.questions ?? [];
+    if (!client) {
+      const local = getPaperById(paperId)?.questions ?? [];
+      questionsByPaperCache.set(paperId, { data: local, timestamp: now });
+      return local;
+    }
 
     try {
       // Query 1: All questions for this paper with their primary diagram asset
@@ -192,12 +212,16 @@ export const questionRepository = {
         optionsMap.set(opt.question_id, arr);
       }
 
-      return (qData as RemoteQuestionRow[]).map((row) =>
+      const mapped = (qData as RemoteQuestionRow[]).map((row) =>
         mapRowToQuestion(row, paperId, optionsMap)
       );
+      questionsByPaperCache.set(paperId, { data: mapped, timestamp: now });
+      return mapped;
     } catch (err) {
       console.warn('[questionRepository] Remote fetch failed, using local:', err);
-      return getPaperById(paperId)?.questions ?? [];
+      const local = getPaperById(paperId)?.questions ?? [];
+      questionsByPaperCache.set(paperId, { data: local, timestamp: now });
+      return local;
     }
   },
 };

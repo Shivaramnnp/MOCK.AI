@@ -13,6 +13,7 @@ import {
   Clock,
   Sparkles,
   Eye,
+  X,
 } from 'lucide-react';
 import { Question, TestHistory } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
@@ -79,6 +80,28 @@ export const EditorScreen: React.FC<EditorScreenProps> = ({
       const opts = [...copy[qIndex].options];
       opts[optIndex] = value;
       copy[qIndex] = { ...copy[qIndex], options: opts };
+      return copy;
+    });
+  };
+
+  const handleAddOption = (qIndex: number) => {
+    setQuestions((prev) => {
+      const copy = [...prev];
+      const opts = [...copy[qIndex].options, ''];
+      copy[qIndex] = { ...copy[qIndex], options: opts };
+      return copy;
+    });
+  };
+
+  const handleRemoveOption = (qIndex: number, optIndex: number) => {
+    setQuestions((prev) => {
+      const copy = [...prev];
+      if (copy[qIndex].options.length <= 2) return copy;
+      const opts = copy[qIndex].options.filter((_, i) => i !== optIndex);
+      let corr = copy[qIndex].correctAnswerIndex;
+      if (corr === optIndex) corr = 0;
+      else if (corr > optIndex) corr = corr - 1;
+      copy[qIndex] = { ...copy[qIndex], options: opts, correctAnswerIndex: corr };
       return copy;
     });
   };
@@ -315,11 +338,21 @@ export const EditorScreen: React.FC<EditorScreenProps> = ({
                 )}
               </div>
 
-              {/* 4 Options Grid */}
+              {/* Options Grid */}
               <div className="space-y-2.5 mt-4">
-                <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider">
-                  Options (Select correct answer with radio):
-                </label>
+                <div className="flex items-center justify-between">
+                  <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider">
+                    Options (Select correct answer):
+                  </label>
+                  <button
+                    type="button"
+                    onClick={() => handleAddOption(qIndex)}
+                    className="text-xs font-semibold text-brand-primary hover:underline flex items-center gap-1"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Option</span>
+                  </button>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {q.options.map((opt, optIndex) => {
                     const isCorrect = q.correctAnswerIndex === optIndex;
@@ -353,6 +386,17 @@ export const EditorScreen: React.FC<EditorScreenProps> = ({
                           placeholder={`Option ${letter}`}
                           className="w-full bg-transparent border-none text-xs sm:text-sm text-surface-text dark:text-darkSurface-text focus:outline-none"
                         />
+
+                        {q.options.length > 2 && (
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveOption(qIndex, optIndex)}
+                            title="Remove option"
+                            className="p-1 rounded-lg text-surface-muted hover:text-red-500 hover:bg-red-500/10 transition-colors shrink-0"
+                          >
+                            <X className="w-3.5 h-3.5" />
+                          </button>
+                        )}
                       </div>
                     );
                   })}

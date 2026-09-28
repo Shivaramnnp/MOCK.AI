@@ -22,6 +22,10 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   updated_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now())
 );
 
+CREATE UNIQUE INDEX IF NOT EXISTS idx_profiles_phone 
+  ON public.profiles(phone_number) 
+  WHERE phone_number IS NOT NULL AND phone_number != '';
+
 -- 3. Enable RLS on profiles and configure policies
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 

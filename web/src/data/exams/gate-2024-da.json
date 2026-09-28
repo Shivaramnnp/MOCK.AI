@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\nWhich one of the given options is appropriate to fill the blank?",
+      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\n\nWhich one of the given options is appropriate to fill the blank?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\n\nWhich one of the given options is appropriate to fill the blank?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "frown",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "frown",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "frown",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "fawn",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "fawn",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "vein",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vein",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "vain",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vain",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -103,7 +154,24 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts\nwith shared boundaries (excluding corners) have the same color. The minimum\nnumber of colors required is",
+      "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q2_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "4",
@@ -116,22 +184,62 @@
         {
           "id": "A",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -163,7 +271,18 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the\ndigits {1, 3,4, 6, 7}, such that no digit appears more than once in a number?",
+      "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the digits {1, 3,4, 6, 7}, such that no digit appears more than once in a number?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "How many 4-digit positive integers divisible by 3 can be formed using only the digits {1, 3,4, 6, 7}, such that no digit appears more than once in a number?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "24",
@@ -176,22 +295,62 @@
         {
           "id": "A",
           "text": "24",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "24",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "48",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "48",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "72",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "72",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "12",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -221,7 +380,18 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The sum of the following infinite series is\n1 1 1 1 1 1 1\n2 + + + + + + + + ⋯\n2 3 4 8 9 16 27",
+      "questionText": "The sum of the following infinite series is\n\n2 + \\(\\frac{1}{2}\\) + \\(\\frac{1}{3}\\) + \\(\\frac{1}{4}\\) + \\(\\frac{1}{8}\\) + \\(\\frac{1}{9}\\) + \\(\\frac{1}{16}\\) + \\(\\frac{1}{27}\\) + ⋯",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The sum of the following infinite series is\n\n2 + \\(\\frac{1}{2}\\) + \\(\\frac{1}{3}\\) + \\(\\frac{1}{4}\\) + \\(\\frac{1}{8}\\) + \\(\\frac{1}{9}\\) + \\(\\frac{1}{16}\\) + \\(\\frac{1}{27}\\) + ⋯",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "11/3",
@@ -234,22 +404,62 @@
         {
           "id": "A",
           "text": "11/3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11/3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "7/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "13/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "13/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -279,7 +489,24 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and\nD is represented by the pie chart shown. The total number of votes cast in the\nelection were 1,15,000, out of which 5,000 were invalid.\nShare of valid votes\nD\n15%\nA\nC 40%\n20%\nB\n25%\nBased on the data provided, the total number of valid votes received by the\ncandidates B and C is",
+      "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were 1,15,000, out of which 5,000 were invalid.\n\nBased on the data provided, the total number of valid votes received by the candidates B and C is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were 1,15,000, out of which 5,000 were invalid.\n\nBased on the data provided, the total number of valid votes received by the candidates B and C is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q5_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "45,000",
@@ -292,22 +519,62 @@
         {
           "id": "A",
           "text": "45,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "45,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "49,500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "49,500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "51,750",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "51,750",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "54,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "54,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -339,7 +606,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a\nnumber of mutations in a particular gene that resulted in these people developing\nthe ability to digest dairy milk.\nBased on the given passage, which of the following can be inferred?",
+      "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.\n\nBased on the given passage, which of the following can be inferred?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.\n\nBased on the given passage, which of the following can be inferred?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "All human beings can digest dairy milk.",
@@ -352,22 +630,62 @@
         {
           "id": "A",
           "text": "All human beings can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "All human beings can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "No human being can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "No human being can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Digestion of dairy milk is essential for human beings.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Digestion of dairy milk is essential for human beings.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "In human beings, digestion of dairy milk resulted from a mutated gene.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In human beings, digestion of dairy milk resulted from a mutated gene.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -397,7 +715,18 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The probability of a boy or a girl being born is 1/2. For a family having only\nthree children, what is the probability of having two girls and one boy?",
+      "questionText": "The probability of a boy or a girl being born is 1/2. For a family having only three children, what is the probability of having two girls and one boy?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The probability of a boy or a girl being born is 1/2. For a family having only three children, what is the probability of having two girls and one boy?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3/8",
@@ -410,22 +739,62 @@
         {
           "id": "A",
           "text": "3/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -455,7 +824,47 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they\ninvest in each of these mutual funds are given in the table.\nMutual fund A Mutual fund B Mutual fund C\nPerson 1 ₹10,000 ₹20,000 ₹20,000\nPerson 2 ₹20,000 ₹15,000 ₹15,000\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than\nPerson 2. The annual rate of return for the mutual funds B and C is 15% each. What\nis the annual rate of return for the mutual fund A?",
+      "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table.\n\n| Mutual fund A | Mutual fund B | Mutual fund C |\n| :--- | :--- | :--- |\n| Person 1 | ₹10,000 | ₹20,000 | ₹20,000 |\n| Person 2 | ₹20,000 | ₹15,000 | ₹15,000 |\n\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than Person 2. The annual rate of return for the mutual funds B and C is 15% each. What is the annual rate of return for the mutual fund A?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mutual fund A",
+            "Mutual fund B",
+            "Mutual fund C"
+          ],
+          "rows": [
+            [
+              "Person 1",
+              "₹10,000",
+              "₹20,000",
+              "₹20,000"
+            ],
+            [
+              "Person 2",
+              "₹20,000",
+              "₹15,000",
+              "₹15,000"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "At the end of one year, the total amount that Person 1 gets is ₹500 more than Person 2. The annual rate of return for the mutual funds B and C is 15% each. What is the annual rate of return for the mutual fund A?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "7.5%",
@@ -468,22 +877,62 @@
         {
           "id": "A",
           "text": "7.5%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7.5%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "10%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "15%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "20%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -513,7 +962,24 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Three different views of a dice are shown in the figure below.\nThe piece of paper that can be folded to make this dice is",
+      "questionText": "Three different views of a dice are shown in the figure below.\n\nThe piece of paper that can be folded to make this dice is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three different views of a dice are shown in the figure below.\n\nThe piece of paper that can be folded to make this dice is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q9_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -531,22 +997,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q9_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q9_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q9_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q9_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q9_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -578,7 +1084,18 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Visualize two identical right circular cones such that one is inverted over the other\nand they share a common circular base. If a cutting plane passes through the vertices\nof the assembled cones, what shape does the outer boundary of the\nresulting cross-section make?",
+      "questionText": "Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "A rhombus",
@@ -591,22 +1108,62 @@
         {
           "id": "A",
           "text": "A rhombus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A rhombus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "A triangle",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A triangle",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "An ellipse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An ellipse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "A hexagon",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A hexagon",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -636,7 +1193,18 @@
       "questionNumber": 11,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following statements:\n(i) The mean and variance of a Poisson random variable are equal.\n(ii) For a standard normal random variable, the mean is zero and the\nvariance is one.\nWhich ONE of the following options is correct?",
+      "questionText": "Consider the following statements:\n\n(i) The mean and variance of a Poisson random variable are equal. (ii) For a standard normal random variable, the mean is zero and the variance is one.\n\nWhich ONE of the following options is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements:\n\n(i) The mean and variance of a Poisson random variable are equal. (ii) For a standard normal random variable, the mean is zero and the variance is one.\n\nWhich ONE of the following options is correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Both (i) and (ii) are true",
@@ -649,22 +1217,62 @@
         {
           "id": "A",
           "text": "Both (i) and (ii) are true",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both (i) and (ii) are true",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(i) is true and (ii) is false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is true and (ii) is false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(ii) is true and (i) is false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) is true and (i) is false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Both (i) and (ii) are false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both (i) and (ii) are false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -694,7 +1302,18 @@
       "questionNumber": 12,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Three fair coins are tossed independently. T is the event that two or more tosses\nresult in heads. S is the event that two or more tosses result in tails.\nWhat is the probability of the event 𝑇 \\cap 𝑆 ?",
+      "questionText": "Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails.\n\nWhat is the probability of the event 𝑇 \\cap 𝑆 ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails.\n\nWhat is the probability of the event 𝑇 \\cap 𝑆 ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0",
@@ -707,22 +1326,62 @@
         {
           "id": "A",
           "text": "0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.25",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.25",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -752,35 +1411,86 @@
       "questionNumber": 13,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "2 -1\nConsider the matrix 𝑴 = [ ].\n3 1\nWhich ONE of the following statements is TRUE?",
+      "questionText": "Consider the matrix 𝑴= [2 3 -1 1 ]. Which ONE of the following statements is TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the matrix 𝑴= [2 3 -1 1 ]. Which ONE of the following statements is TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "The eigenvalues of 𝑴 are non-negative and real.",
         "The eigenvalues of 𝑴 are complex conjugate pairs.",
         "One eigenvalue of 𝑴 is positive and real, and another eigenvalue of 𝑴 is zero.",
-        "One eigenvalue of 𝑴 is non-negative and real, and another eigenvalue of 𝑴 is\nnegative and real."
+        "One eigenvalue of 𝑴 is non-negative and real, and another eigenvalue of 𝑴 is negative and real."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "The eigenvalues of 𝑴 are non-negative and real.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The eigenvalues of 𝑴 are non-negative and real.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The eigenvalues of 𝑴 are complex conjugate pairs.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The eigenvalues of 𝑴 are complex conjugate pairs.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "One eigenvalue of 𝑴 is positive and real, and another eigenvalue of 𝑴 is zero.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "One eigenvalue of 𝑴 is positive and real, and another eigenvalue of 𝑴 is zero.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "One eigenvalue of 𝑴 is non-negative and real, and another eigenvalue of 𝑴 is\nnegative and real.",
-          "imageUrl": null
+          "text": "One eigenvalue of 𝑴 is non-negative and real, and another eigenvalue of 𝑴 is negative and real.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "One eigenvalue of 𝑴 is non-negative and real, and another eigenvalue of 𝑴 is negative and real.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -810,7 +1520,18 @@
       "questionNumber": 14,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider performing depth-first search (DFS) on an undirected and unweighted\ngraph G starting at vertex 𝑠. For any vertex 𝑢 in G, 𝑑[𝑢] is the length of the shortest\npath from 𝑠 to 𝑢. Let (𝑢, 𝑣) be an edge in G such that 𝑑[𝑢] < 𝑑[𝑣]. If the edge\n(𝑢, 𝑣) is explored first in the direction from 𝑢 to 𝑣 during the above DFS, then (𝑢, 𝑣)\nbecomes a ______ edge.",
+      "questionText": "Consider performing depth-first search (DFS) on an undirected and unweighted graph G starting at vertex 𝑠. For any vertex 𝑢 in G, 𝑑[𝑢] is the length of the shortest path from 𝑠 to 𝑢. Let (𝑢, 𝑣) be an edge in G such that 𝑑[𝑢] < 𝑑[𝑣]. If the edge (𝑢, 𝑣) is explored first in the direction from 𝑢 to 𝑣 during the above DFS, then (𝑢, 𝑣) becomes a ______ edge.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider performing depth-first search (DFS) on an undirected and unweighted graph G starting at vertex 𝑠. For any vertex 𝑢 in G, 𝑑[𝑢] is the length of the shortest path from 𝑠 to 𝑢. Let (𝑢, 𝑣) be an edge in G such that 𝑑[𝑢] < 𝑑[𝑣]. If the edge (𝑢, 𝑣) is explored first in the direction from 𝑢 to 𝑣 during the above DFS, then (𝑢, 𝑣) becomes a ______ edge.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "tree",
@@ -823,22 +1544,62 @@
         {
           "id": "A",
           "text": "tree",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "tree",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "cross",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "cross",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "back",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "back",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "gray",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "gray",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -868,7 +1629,18 @@
       "questionNumber": 15,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "For any twice differentiable function 𝑓: ℝ → ℝ, if at some 𝑥∗ \\in ℝ, 𝑓′(𝑥∗) = 0\nand 𝑓′′(𝑥∗) > 0, then the function 𝑓 necessarily has a ______ at 𝑥 = 𝑥∗.\nNote: ℝ denotes the set of real numbers.",
+      "questionText": "For any twice differentiable function 𝑓: ℝ→ℝ, if at some 𝑥^{∗} \\in ℝ, 𝑓^{′}(𝑥^{∗}) = 0 and 𝑓^{′′}(𝑥^{∗}) > 0, then the function 𝑓 necessarily has a ______ at 𝑥= 𝑥^{∗}.\n\nNote: ℝ denotes the set of real numbers.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For any twice differentiable function 𝑓: ℝ→ℝ, if at some 𝑥^{∗} \\in ℝ, 𝑓^{′}(𝑥^{∗}) = 0 and 𝑓^{′′}(𝑥^{∗}) > 0, then the function 𝑓 necessarily has a ______ at 𝑥= 𝑥^{∗}.\n\nNote: ℝ denotes the set of real numbers.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "local minimum",
@@ -881,22 +1653,62 @@
         {
           "id": "A",
           "text": "local minimum",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "local minimum",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "global minimum",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "global minimum",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "local maximum",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "local maximum",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "global maximum",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "global maximum",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -926,7 +1738,41 @@
       "questionNumber": 16,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Match the items in Column 1 with the items in Column 2 in the following table:\nColumn 1 Column 2\n(p) First In First Out (i) Stacks\n(q) Lookup Operation (ii) Queues\n(r) Last In First Out (iii) Hash Tables",
+      "questionText": "Match the items in Column 1 with the items in Column 2 in the following table:\n\n| Column 1 | Column 2 |\n| :--- | :--- |\n| (p) First In First Out | (i) Stacks |\n| (q) Lookup Operation | (ii) Queues |\n| (r) Last In First Out | (iii) Hash Tables |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the items in Column 1 with the items in Column 2 in the following table:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column 1",
+            "Column 2"
+          ],
+          "rows": [
+            [
+              "(p) First In First Out",
+              "(i) Stacks"
+            ],
+            [
+              "(q) Lookup Operation",
+              "(ii) Queues"
+            ],
+            [
+              "(r) Last In First Out",
+              "(iii) Hash Tables"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(p) - (ii), (q) - (iii), (r) - (i)",
@@ -939,22 +1785,62 @@
         {
           "id": "A",
           "text": "(p) - (ii), (q) - (iii), (r) - (i)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (ii), (q) - (iii), (r) - (i)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(p) - (ii), (q) - (i), (r) - (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (ii), (q) - (i), (r) - (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(p) - (i), (q) - (ii), (r) - (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (i), (q) - (ii), (r) - (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(p) - (i), (q) - (iii), (r) - (ii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (i), (q) - (iii), (r) - (ii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -984,35 +1870,90 @@
       "questionNumber": 17,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the dataset with six datapoints: {(𝒙 , 𝒚 ),(𝒙 ,𝒚 ),… , (𝒙 ,𝒚 )},\n𝟏 𝟏 𝟐 𝟐 𝟔 𝟔\n1 0 0 -1 2 -2\nwhere 𝒙 = [ ], 𝒙 = [ ], 𝒙 = [ ] , 𝒙 = [ ], 𝒙 = [ ] , 𝒙 = [ ]\n𝟏 0 𝟐 1 𝟑 -1 𝟒 0 𝟓 2 𝟔 -2\nand the labels are given by 𝒚 = 𝒚 = 𝒚 = 1, and 𝒚 = 𝒚 = 𝒚 = -1. A hard\n𝟏 𝟐 𝟓 𝟑 𝟒 𝟔\nmargin linear support vector machine is trained on the above dataset.\nWhich ONE of the following sets is a possible set of support vectors?",
+      "questionText": "Consider where 𝒙_{𝟏}= [1 and the labels are given by 𝒚_{𝟏}= 𝒚_{𝟐}= 𝒚_{𝟓}= 1, and 𝒚_{𝟑}= 𝒚_{𝟒}= 𝒚_{𝟔}= -1. A hard margin linear support vector machine is trained on the above dataset. the dataset with 0], 𝒙_{𝟐}= [0 1], 𝒙_{𝟑}= [ 0 six datapoints:\n\n-1] , 𝒙_{𝟒}= [-1 {(𝒙_{𝟏}, 𝒚_{𝟏}),(𝒙_{𝟐},𝒚_{𝟐}),… , (𝒙_{𝟔},𝒚_{𝟔})}, 0 ], 𝒙_{𝟓}= [2 2] , 𝒙_{𝟔}= [-2 -2]\n\nWhich ONE of the following sets is a possible set of support vectors?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider where 𝒙_{𝟏}= [1 and the labels are given by 𝒚_{𝟏}= 𝒚_{𝟐}= 𝒚_{𝟓}= 1, and 𝒚_{𝟑}= 𝒚_{𝟒}= 𝒚_{𝟔}= -1. A hard margin linear support vector machine is trained on the above dataset. the dataset with 0], 𝒙_{𝟐}= [0 1], 𝒙_{𝟑}= [ 0 six datapoints:\n\n-1] , 𝒙_{𝟒}= [-1 {(𝒙_{𝟏}, 𝒚_{𝟏}),(𝒙_{𝟐},𝒚_{𝟐}),… , (𝒙_{𝟔},𝒚_{𝟔})}, 0 ], 𝒙_{𝟓}= [2 2] , 𝒙_{𝟔}= [-2 -2]\n\nWhich ONE of the following sets is a possible set of support vectors?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "{𝒙 , 𝒙 ,𝒙 }\n𝟏 𝟐 𝟓",
-        "{𝒙 , 𝒙 ,𝒙 }\n𝟑 𝟒 𝟓",
-        "{𝒙 , 𝒙 }\n𝟒 𝟓",
-        "{𝒙 , 𝒙 ,𝒙 , 𝒙 }\n𝟏 𝟐 𝟑 𝟒"
+        "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟓}}\\)",
+        "\\({𝒙_{𝟑}, 𝒙_{𝟒},𝒙_{𝟓}}\\)",
+        "\\({𝒙_{𝟒}, 𝒙_{𝟓}}\\)",
+        "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟑}, 𝒙_{𝟒}}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "{𝒙 , 𝒙 ,𝒙 }\n𝟏 𝟐 𝟓",
-          "imageUrl": null
+          "text": "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟓}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "{𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟓}}",
+              "content": "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟓}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "{𝒙 , 𝒙 ,𝒙 }\n𝟑 𝟒 𝟓",
-          "imageUrl": null
+          "text": "\\({𝒙_{𝟑}, 𝒙_{𝟒},𝒙_{𝟓}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "{𝒙_{𝟑}, 𝒙_{𝟒},𝒙_{𝟓}}",
+              "content": "\\({𝒙_{𝟑}, 𝒙_{𝟒},𝒙_{𝟓}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "{𝒙 , 𝒙 }\n𝟒 𝟓",
-          "imageUrl": null
+          "text": "\\({𝒙_{𝟒}, 𝒙_{𝟓}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "{𝒙_{𝟒}, 𝒙_{𝟓}}",
+              "content": "\\({𝒙_{𝟒}, 𝒙_{𝟓}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "{𝒙 , 𝒙 ,𝒙 , 𝒙 }\n𝟏 𝟐 𝟑 𝟒",
-          "imageUrl": null
+          "text": "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟑}, 𝒙_{𝟒}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "{𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟑}, 𝒙_{𝟒}}",
+              "content": "\\({𝒙_{𝟏}, 𝒙_{𝟐},𝒙_{𝟑}, 𝒙_{𝟒}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1042,7 +1983,41 @@
       "questionNumber": 18,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Match the items in Column 1 with the items in Column 2 in the following table:\nColumn 1 Column 2\n(p) Principal Component Analysis (i) Discriminative Model\n(q) Naïve Bayes Classification (ii) Dimensionality Reduction\n(r) Logistic Regression (iii) Generative Model",
+      "questionText": "Match the items in Column 1 with the items in Column 2 in the following table:\n\n| Column 1 | Column 2 |\n| :--- | :--- |\n| (p) Principal Component Analysis | (i) Discriminative Model |\n| (q) Naïve Bayes Classification | (ii) Dimensionality Reduction |\n| (r) Logistic Regression | (iii) Generative Model |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the items in Column 1 with the items in Column 2 in the following table:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column 1",
+            "Column 2"
+          ],
+          "rows": [
+            [
+              "(p) Principal Component Analysis",
+              "(i) Discriminative Model"
+            ],
+            [
+              "(q) Naïve Bayes Classification",
+              "(ii) Dimensionality Reduction"
+            ],
+            [
+              "(r) Logistic Regression",
+              "(iii) Generative Model"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(p) - (iii), (q) - (i), (r) - (ii)",
@@ -1055,22 +2030,62 @@
         {
           "id": "A",
           "text": "(p) - (iii), (q) - (i), (r) - (ii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (iii), (q) - (i), (r) - (ii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(p) - (ii), (q) - (i), (r) - (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (ii), (q) - (i), (r) - (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(p) - (ii), (q) - (iii), (r) - (i)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (ii), (q) - (iii), (r) - (i)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(p) - (iii), (q) - (ii), (r) - (i)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(p) - (iii), (q) - (ii), (r) - (i)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1100,35 +2115,86 @@
       "questionNumber": 19,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Euclidean distance based 𝑘-means clustering algorithm was run on a dataset of 100\n1 -1\npoints with 𝑘 = 3. If the points [ ] and [ ] are both part of cluster 3, then which\n1 1\nONE of the following points is necessarily also part of cluster 3?",
+      "questionText": "Euclidean distance based 𝑘-means clustering algorithm was run on a dataset of 100 points with 𝑘= 3. If the points [1 ONE of the following points is necessarily also part of cluster 3? 1] and [-1 1 ] are both part of cluster 3, then which",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Euclidean distance based 𝑘-means clustering algorithm was run on a dataset of 100 points with 𝑘= 3. If the points [1 ONE of the following points is necessarily also part of cluster 3? 1] and [-1 1 ] are both part of cluster 3, then which",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "0\n[ ]\n0",
-        "0\n[ ]\n2",
-        "2\n[ ]\n0",
-        "0\n[ ]\n1"
+        "[0 0]",
+        "[0 2]",
+        "[2 0]",
+        "[0 1]"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "0\n[ ]\n0",
-          "imageUrl": null
+          "text": "[0 0]",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[0 0]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "0\n[ ]\n2",
-          "imageUrl": null
+          "text": "[0 2]",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[0 2]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2\n[ ]\n0",
-          "imageUrl": null
+          "text": "[2 0]",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[2 0]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "0\n[ ]\n1",
-          "imageUrl": null
+          "text": "[0 1]",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[0 1]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1158,35 +2224,89 @@
       "questionNumber": 20,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Given a dataset with 𝐾 binary-valued attributes (where 𝐾 > 2) for a two-class\nclassification task, the number of parameters to be estimated for learning a naïve\nBayes classifier is",
+      "questionText": "Given a dataset with 𝐾 binary-valued attributes (where 𝐾> 2) for a two-class classification task, the number of parameters to be estimated for learning a naïve Bayes classifier is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given a dataset with 𝐾 binary-valued attributes (where 𝐾> 2) for a two-class classification task, the number of parameters to be estimated for learning a naïve Bayes classifier is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "2𝐾 + 1",
+        "\\(2^{𝐾}+ 1\\)",
         "2𝐾+ 1",
-        "2𝐾+1 + 1",
-        "𝐾2 + 1"
+        "\\(2^{𝐾+1} + 1\\)",
+        "\\(𝐾^{2} + 1\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "2𝐾 + 1",
-          "imageUrl": null
+          "text": "\\(2^{𝐾}+ 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{𝐾}+ 1",
+              "content": "\\(2^{𝐾}+ 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
           "text": "2𝐾+ 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2𝐾+ 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2𝐾+1 + 1",
-          "imageUrl": null
+          "text": "\\(2^{𝐾+1} + 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{𝐾+1} + 1",
+              "content": "\\(2^{𝐾+1} + 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝐾2 + 1",
-          "imageUrl": null
+          "text": "\\(𝐾^{2} + 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝐾^{2} + 1",
+              "content": "\\(𝐾^{2} + 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1216,35 +2336,88 @@
       "questionNumber": 21,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider performing uniform hashing on an open address hash table with load\n𝑛\nfactor 𝛼 = < 1, where 𝑛 elements are stored in the table with 𝑚 slots. The\n𝑚\n1\nexpected number of probes in an unsuccessful search is at most .\n1-𝛼\nInserting an element in this hash table requires at most ______ probes, on average.",
+      "questionText": "Consider performing uniform hashing on an open address hash table with load factor 𝛼= _{𝑚}< 1, where 𝑛 elements are stored in the table with 𝑚 slots. The <u>𝑛</u>\n\nexpected number of probes in an unsuccessful search is at most \\(\\frac{1}{1-𝛼}\\)\n\nInserting an element in this hash table requires at most ______ probes, on average.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider performing uniform hashing on an open address hash table with load factor 𝛼= _{𝑚}< 1, where 𝑛 elements are stored in the table with 𝑚 slots. The <u>𝑛</u>\n\nexpected number of probes in an unsuccessful search is at most \\(\\frac{1}{1-𝛼}\\)\n\nInserting an element in this hash table requires at most ______ probes, on average.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\nln ( )\n1 - 𝛼",
-        "1\n1 - 𝛼",
-        "𝛼\n1 +\n2",
-        "1\n1 + 𝛼"
+        "ln ( 1 -𝛼) 1",
+        "\\(\\frac{1}{1-𝛼}\\)",
+        "1 + \\(\\frac{𝛼}{2}\\)",
+        "\\(\\frac{1}{1+𝛼}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\nln ( )\n1 - 𝛼",
-          "imageUrl": null
+          "text": "ln ( 1 -𝛼) 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ln ( 1 -𝛼) 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n1 - 𝛼",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{1-𝛼}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{1-𝛼}",
+              "content": "\\(\\frac{1}{1-𝛼}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝛼\n1 +\n2",
-          "imageUrl": null
+          "text": "1 + \\(\\frac{𝛼}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1 + \\(\\frac{𝛼}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "1\n1 + 𝛼",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{1+𝛼}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{1+𝛼}",
+              "content": "\\(\\frac{1}{1+𝛼}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1274,35 +2447,90 @@
       "questionNumber": 22,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "For any binary classification dataset, let 𝑆 \\in ℝ𝑑 \\times 𝑑 and 𝑆 \\in ℝ𝑑 \\times 𝑑 be the\n𝐵 𝑊\nbetween-class and within-class scatter (covariance) matrices, respectively. The\nFisher linear discriminant is defined by 𝑢∗ \\in ℝ𝑑, that maximizes\n𝑢𝑇𝑆 𝑢\n𝐽(𝑢) = 𝐵\n𝑢𝑇𝑆 𝑢\n𝑊\nIf 𝜆 = 𝐽(𝑢∗), 𝑆 is non-singular and 𝑆 \\ne 0, then (𝑢∗, 𝜆) must satisfy which ONE\n𝑊 𝐵\nof the following equations?\nNote: ℝ denotes the set of real numbers.",
+      "questionText": "For any binary classification dataset, let 𝑆_{𝐵} \\in ℝ^{𝑑 \\times 𝑑} and 𝑆_{𝑊} \\in ℝ^{𝑑 \\times 𝑑} be the between-class and within-class scatter (covariance) matrices, respectively. The Fisher linear discriminant is defined by 𝑢^{∗} \\in ℝ^{𝑑}, that maximizes\n\n𝐽(𝑢) = \\(\\frac{𝑢𝑇𝑆𝐵𝑢}{𝑢𝑇𝑆𝑊𝑢}\\)\n\nIf 𝜆= 𝐽(𝑢^{∗}), 𝑆_{𝑊} is non-singular and 𝑆_{𝐵} \\ne 0, then (𝑢^{∗}, 𝜆) must satisfy which ONE of the following equations?\n\nNote: ℝ denotes the set of real numbers.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For any binary classification dataset, let 𝑆_{𝐵} \\in ℝ^{𝑑 \\times 𝑑} and 𝑆_{𝑊} \\in ℝ^{𝑑 \\times 𝑑} be the between-class and within-class scatter (covariance) matrices, respectively. The Fisher linear discriminant is defined by 𝑢^{∗} \\in ℝ^{𝑑}, that maximizes\n\n𝐽(𝑢) = \\(\\frac{𝑢𝑇𝑆𝐵𝑢}{𝑢𝑇𝑆𝑊𝑢}\\)\n\nIf 𝜆= 𝐽(𝑢^{∗}), 𝑆_{𝑊} is non-singular and 𝑆_{𝐵} \\ne 0, then (𝑢^{∗}, 𝜆) must satisfy which ONE of the following equations?\n\nNote: ℝ denotes the set of real numbers.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑆-1𝑆 𝑢∗ = 𝜆𝑢∗\n𝑊 𝐵",
-        "𝑆 𝑢∗ = 𝜆𝑆 𝑢∗\n𝑊 𝐵",
-        "𝑆 𝑆 𝑢∗ = 𝜆𝑢∗\n𝐵 𝑊",
-        "𝑢∗𝑇𝑢∗ = 𝜆2"
+        "\\(𝑆_{𝑊} -1𝑆𝐵𝑢∗= 𝜆𝑢∗\\)",
+        "\\(𝑆_{𝑊}𝑢^{∗}= 𝜆𝑆_{𝐵}𝑢^{∗}\\)",
+        "\\(𝑆_{𝐵}𝑆_{𝑊}𝑢^{∗}= 𝜆𝑢^{∗}\\)",
+        "\\(𝑢^{∗𝑇}𝑢^{∗}= 𝜆^{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑆-1𝑆 𝑢∗ = 𝜆𝑢∗\n𝑊 𝐵",
-          "imageUrl": null
+          "text": "\\(𝑆_{𝑊} -1𝑆𝐵𝑢∗= 𝜆𝑢∗\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑆_{𝑊} -1𝑆𝐵𝑢∗= 𝜆𝑢∗",
+              "content": "\\(𝑆_{𝑊} -1𝑆𝐵𝑢∗= 𝜆𝑢∗\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑆 𝑢∗ = 𝜆𝑆 𝑢∗\n𝑊 𝐵",
-          "imageUrl": null
+          "text": "\\(𝑆_{𝑊}𝑢^{∗}= 𝜆𝑆_{𝐵}𝑢^{∗}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑆_{𝑊}𝑢^{∗}= 𝜆𝑆_{𝐵}𝑢^{∗}",
+              "content": "\\(𝑆_{𝑊}𝑢^{∗}= 𝜆𝑆_{𝐵}𝑢^{∗}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑆 𝑆 𝑢∗ = 𝜆𝑢∗\n𝐵 𝑊",
-          "imageUrl": null
+          "text": "\\(𝑆_{𝐵}𝑆_{𝑊}𝑢^{∗}= 𝜆𝑢^{∗}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑆_{𝐵}𝑆_{𝑊}𝑢^{∗}= 𝜆𝑢^{∗}",
+              "content": "\\(𝑆_{𝐵}𝑆_{𝑊}𝑢^{∗}= 𝜆𝑢^{∗}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑢∗𝑇𝑢∗ = 𝜆2",
-          "imageUrl": null
+          "text": "\\(𝑢^{∗𝑇}𝑢^{∗}= 𝜆^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑢^{∗𝑇}𝑢^{∗}= 𝜆^{2}",
+              "content": "\\(𝑢^{∗𝑇}𝑢^{∗}= 𝜆^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1332,35 +2560,90 @@
       "questionNumber": 23,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let ℎ and ℎ be two admissible heuristics used in 𝐴∗ search.\n1 2\nWhich ONE of the following expressions is always an admissible heuristic?",
+      "questionText": "Let ℎ_{1}and ℎ_{2} be two admissible heuristics used in 𝐴^{∗} search. Which ONE of the following expressions is always an admissible heuristic?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let ℎ_{1}and ℎ_{2} be two admissible heuristics used in 𝐴^{∗} search. Which ONE of the following expressions is always an admissible heuristic?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "ℎ + ℎ\n1 2",
-        "ℎ \\times ℎ\n1 2",
-        "ℎ 1/ℎ 2, (ℎ \\ne 0)\n2",
-        "|ℎ - ℎ 2|\n1"
+        "\\(ℎ_{1} + ℎ_{2}\\)",
+        "\\(ℎ_{1} \\times ℎ_{2}\\)",
+        "\\(ℎ_{1}/ℎ_{2}, (ℎ_{2} \\ne 0)\\)",
+        "\\(|ℎ_{1} -ℎ_{2}|\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "ℎ + ℎ\n1 2",
-          "imageUrl": null
+          "text": "\\(ℎ_{1} + ℎ_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "ℎ_{1} + ℎ_{2}",
+              "content": "\\(ℎ_{1} + ℎ_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "ℎ \\times ℎ\n1 2",
-          "imageUrl": null
+          "text": "\\(ℎ_{1} \\times ℎ_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "ℎ_{1} \\times ℎ_{2}",
+              "content": "\\(ℎ_{1} \\times ℎ_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "ℎ 1/ℎ 2, (ℎ \\ne 0)\n2",
-          "imageUrl": null
+          "text": "\\(ℎ_{1}/ℎ_{2}, (ℎ_{2} \\ne 0)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "ℎ_{1}/ℎ_{2}, (ℎ_{2} \\ne 0)",
+              "content": "\\(ℎ_{1}/ℎ_{2}, (ℎ_{2} \\ne 0)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "|ℎ - ℎ 2|\n1",
-          "imageUrl": null
+          "text": "\\(|ℎ_{1} -ℎ_{2}|\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "|ℎ_{1} -ℎ_{2}|",
+              "content": "\\(|ℎ_{1} -ℎ_{2}|\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1390,7 +2673,18 @@
       "questionNumber": 24,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider five random variables 𝑈, 𝑉, 𝑊, 𝑋, and 𝑌 whose joint distribution\nsatisfies:\n𝑃(𝑈, 𝑉, 𝑊, 𝑋, 𝑌) = 𝑃(𝑈)𝑃(𝑉)𝑃(𝑊|𝑈, 𝑉)𝑃(𝑋|𝑊)𝑃(𝑌|𝑊)\nWhich ONE of the following statements is FALSE?",
+      "questionText": "Consider five random variables 𝑈, 𝑉, 𝑊, 𝑋, and 𝑌 whose joint distribution satisfies:\n\n𝑃(𝑈, 𝑉, 𝑊, 𝑋, 𝑌) = 𝑃(𝑈)𝑃(𝑉)𝑃(𝑊|𝑈, 𝑉)𝑃(𝑋|𝑊)𝑃(𝑌|𝑊)\n\nWhich ONE of the following statements is FALSE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider five random variables 𝑈, 𝑉, 𝑊, 𝑋, and 𝑌 whose joint distribution satisfies:\n\n𝑃(𝑈, 𝑉, 𝑊, 𝑋, 𝑌) = 𝑃(𝑈)𝑃(𝑉)𝑃(𝑊|𝑈, 𝑉)𝑃(𝑋|𝑊)𝑃(𝑌|𝑊)\n\nWhich ONE of the following statements is FALSE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑌 is conditionally independent of 𝑉 given 𝑊",
@@ -1403,22 +2697,62 @@
         {
           "id": "A",
           "text": "𝑌 is conditionally independent of 𝑉 given 𝑊",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑌 is conditionally independent of 𝑉 given 𝑊",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑋 is conditionally independent of 𝑈 given 𝑊",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑋 is conditionally independent of 𝑈 given 𝑊",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑈 and 𝑉 are conditionally independent given 𝑊",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑈 and 𝑉 are conditionally independent given 𝑊",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑌 and 𝑋 are conditionally independent given 𝑊",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑌 and 𝑋 are conditionally independent given 𝑊",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1448,7 +2782,18 @@
       "questionNumber": 25,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following statement:\nIn adversarial search, 𝛼- 𝛽 pruning can be applied to game trees of any depth where\n𝛼 is the (m) value choice we have formed so far at any choice point along the\npath for the MAX player and 𝛽 is the (n) value choice we have formed so far\nat any choice point along the path for the MIN player.\nWhich ONE of the following choices of (m) and (n) makes the above statement\nvalid?",
+      "questionText": "Consider the following statement:\n\nIn adversarial search, 𝛼- 𝛽 pruning can be applied to game trees of any depth where 𝛼 is the (m) value choice we have formed so far at any choice point along the path for the MAX player and 𝛽 is the (n) value choice we have formed so far at any choice point along the path for the MIN player.\n\nWhich ONE of the following choices of (m) and (n) makes the above statement valid?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statement:\n\nIn adversarial search, 𝛼- 𝛽 pruning can be applied to game trees of any depth where 𝛼 is the (m) value choice we have formed so far at any choice point along the path for the MAX player and 𝛽 is the (n) value choice we have formed so far at any choice point along the path for the MIN player.\n\nWhich ONE of the following choices of (m) and (n) makes the above statement valid?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(m) = highest, (n) = highest",
@@ -1461,22 +2806,62 @@
         {
           "id": "A",
           "text": "(m) = highest, (n) = highest",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(m) = highest, (n) = highest",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(m) = lowest, (n) = highest",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(m) = lowest, (n) = highest",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(m) = highest, (n) = lowest",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(m) = highest, (n) = lowest",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(m) = lowest, (n) = lowest",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(m) = lowest, (n) = lowest",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1506,35 +2891,90 @@
       "questionNumber": 26,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider a database that includes the following relations:\nDefender(name, rating, side, goals)\nForward(name, rating, assists, goals)\nTeam(name, club, price)\nWhich ONE of the following relational algebra expressions checks that every name\noccurring in Team appears in either Defender or Forward, where 𝜙 denotes the\nempty set?",
+      "questionText": "Consider a database that includes the following relations:\n\nDefender(name, rating, side, goals)\nForward(name, rating, assists, goals)\nTeam(name, club, price)\n\nWhich ONE of the following relational algebra expressions checks that every name occurring in Team appears in either Defender or Forward, where 𝜙 denotes the empty set?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a database that includes the following relations:\n\nDefender(name, rating, side, goals)\nForward(name, rating, assists, goals)\nTeam(name, club, price)\n\nWhich ONE of the following relational algebra expressions checks that every name occurring in Team appears in either Defender or Forward, where 𝜙 denotes the empty set?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Π (Team) ∖ (Π (Defender) \\cap Π (Forward)) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-        "(Π (Defender) \\cap Π (Forward))∖Π (Team) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-        "Π (Team) ∖ (Π (Defender) \\cup Π (Forward)) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-        "(Π (Defender) \\cup Π (Forward)) ∖ Π (Team) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒"
+        "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+        "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+        "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+        "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Π (Team) ∖ (Π (Defender) \\cap Π (Forward)) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-          "imageUrl": null
+          "text": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙",
+              "content": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "(Π (Defender) \\cap Π (Forward))∖Π (Team) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-          "imageUrl": null
+          "text": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙",
+              "content": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "Π (Team) ∖ (Π (Defender) \\cup Π (Forward)) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-          "imageUrl": null
+          "text": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙",
+              "content": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "(Π (Defender) \\cup Π (Forward)) ∖ Π (Team) = 𝜙\n𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒 𝑛𝑎𝑚𝑒",
-          "imageUrl": null
+          "text": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙",
+              "content": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1564,7 +3004,18 @@
       "questionNumber": 27,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let the minimum, maximum, mean and standard deviation values for the attribute\nincome of data scientists be ₹46000, ₹170000, ₹96000, and ₹21000, respectively.\nThe z-score normalized income value of ₹106000 is closest to which ONE of the\nfollowing options?",
+      "questionText": "Let the minimum, maximum, mean and standard deviation values for the attribute income of data scientists be ₹46000, ₹170000, ₹96000, and ₹21000, respectively. The z-score normalized income value of ₹106000 is closest to which ONE of the following options?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let the minimum, maximum, mean and standard deviation values for the attribute income of data scientists be ₹46000, ₹170000, ₹96000, and ₹21000, respectively. The z-score normalized income value of ₹106000 is closest to which ONE of the following options?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0.217",
@@ -1577,22 +3028,62 @@
         {
           "id": "A",
           "text": "0.217",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.217",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0.476",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.476",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.623",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.623",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2.304",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2.304",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1622,7 +3113,18 @@
       "questionNumber": 28,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following tree traversals on a full binary tree:\n(i) Preorder\n(ii) Inorder\n(iii) Postorder\nWhich of the following traversal options is/are sufficient to uniquely reconstruct\nthe full binary tree?",
+      "questionText": "Consider the following tree traversals on a full binary tree:\n\n(i) Preorder (ii) Inorder (iii) Postorder\n\nWhich of the following traversal options is/are sufficient to uniquely reconstruct the full binary tree?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following tree traversals on a full binary tree:\n\n(i) Preorder (ii) Inorder (iii) Postorder\n\nWhich of the following traversal options is/are sufficient to uniquely reconstruct the full binary tree?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "(i) and (ii)",
@@ -1635,22 +3137,62 @@
         {
           "id": "A",
           "text": "(i) and (ii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (ii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(ii) and (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) and (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(i) and (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(ii) only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -1688,35 +3230,90 @@
       "questionNumber": 29,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let 𝑥 and 𝑦 be two propositions. Which of the following statements is a tautology\n/are tautologies?",
+      "questionText": "Let 𝑥 and 𝑦 be two propositions. Which of the following statements is a tautology /are tautologies?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑥 and 𝑦 be two propositions. Which of the following statements is a tautology /are tautologies?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "(¬𝑥∧𝑦 ) ⟹ (𝑦 ⟹ 𝑥)",
-        "(𝑥∧¬𝑦 ) ⟹ (¬𝑥 ⟹ 𝑦)",
-        "(¬𝑥∧𝑦 ) ⟹ (¬𝑥 ⟹ 𝑦)",
-        "(𝑥∧¬𝑦 ) ⟹ (𝑦 ⟹ 𝑥)"
+        "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹(𝑦⟹𝑥)\\)",
+        "\\((𝑥 \\land \\neg 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+        "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+        "\\((𝑥 \\land \\neg 𝑦 ) ⟹(𝑦⟹𝑥)\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(¬𝑥∧𝑦 ) ⟹ (𝑦 ⟹ 𝑥)",
-          "imageUrl": null
+          "text": "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹(𝑦⟹𝑥)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "( \\neg 𝑥 \\land 𝑦 ) ⟹(𝑦⟹𝑥)",
+              "content": "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹(𝑦⟹𝑥)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "(𝑥∧¬𝑦 ) ⟹ (¬𝑥 ⟹ 𝑦)",
-          "imageUrl": null
+          "text": "\\((𝑥 \\land \\neg 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "(𝑥 \\land \\neg 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)",
+              "content": "\\((𝑥 \\land \\neg 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "(¬𝑥∧𝑦 ) ⟹ (¬𝑥 ⟹ 𝑦)",
-          "imageUrl": null
+          "text": "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "( \\neg 𝑥 \\land 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)",
+              "content": "\\(( \\neg 𝑥 \\land 𝑦 ) ⟹( \\neg 𝑥⟹𝑦)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "(𝑥∧¬𝑦 ) ⟹ (𝑦 ⟹ 𝑥)",
-          "imageUrl": null
+          "text": "\\((𝑥 \\land \\neg 𝑦 ) ⟹(𝑦⟹𝑥)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "(𝑥 \\land \\neg 𝑦 ) ⟹(𝑦⟹𝑥)",
+              "content": "\\((𝑥 \\land \\neg 𝑦 ) ⟹(𝑦⟹𝑥)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B;C;D",
@@ -1754,7 +3351,18 @@
       "questionNumber": 30,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider sorting the following array of integers in ascending order using an in-place\nQuicksort algorithm that uses the last element as the pivot.\n60 70 80 90 100\nThe minimum number of swaps performed during this Quicksort is ______.",
+      "questionText": "Consider sorting the following array of integers in ascending order using an in-place Quicksort algorithm that uses the last element as the pivot.\n\n60 70 80 90 100\n\nThe minimum number of swaps performed during this Quicksort is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider sorting the following array of integers in ascending order using an in-place Quicksort algorithm that uses the last element as the pivot.\n\n60 70 80 90 100\n\nThe minimum number of swaps performed during this Quicksort is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1789,7 +3397,115 @@
       "questionNumber": 31,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following two tables named Raider and Team in a relational database\nmaintained by a Kabaddi league. The attribute ID in table Team references the\nprimary key of the Raider table, ID.\nRaider\nID Name Raids RaidPoints\n1 Arjun 200 250\n2 Ankush 190 219\n3 Sunil 150 200\n4 Reza 150 190\n5 Pratham 175 220\n6 Gopal 193 215\nTeam\nCity ID BidPoints\nJaipur 2 200\nPatna 3 195\nHyderabad 5 175\nJaipur 1 250\nPatna 4 200\nJaipur 6 200\nThe SQL query described below is executed on this database:\nSELECT *\nFROM Raider, Team\nWHERE Raider.ID=Team.ID AND City=\"Jaipur\" AND\nRaidPoints > 200;\nThe number of rows returned by this query is ______.",
+      "questionText": "Consider the following two tables named Raider and Team in a relational database maintained by a Kabaddi league. The attribute ID in table Team references the primary key of the Raider table, ID.\n\n**Raider**\n\n| ID | Name | Raids | RaidPoints |\n| :--- | :--- | :--- | :--- |\n| 1 | Arjun | 200 | 250 |\n| 2 | Ankush | 190 | 219 |\n| 3 | Sunil | 150 | 200 |\n| 4 | Reza | 150 | 190 |\n| 5 | Pratham | 175 | 220 |\n| 6 | Gopal | 193 | 215 |\n\n**Team**\n\n| City | ID | BidPoints |\n| :--- | :--- | :--- |\n| Jaipur | 2 | 200 |\n| Patna | 3 | 195 |\n| Hyderabad | 5 | 175 |\n| Jaipur | 1 | 250 |\n| Patna | 4 | 200 |\n| Jaipur | 6 | 200 |\n\nThe SQL query described below is executed on this database: SELECT * FROM Raider, Team WHERE Raider.ID=Team.ID AND City=“Jaipur” AND RaidPoints > 200; The number of rows returned by this query is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following two tables named Raider and Team in a relational database maintained by a Kabaddi league. The attribute ID in table Team references the primary key of the Raider table, ID.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "ID",
+            "Name",
+            "Raids",
+            "RaidPoints"
+          ],
+          "rows": [
+            [
+              "1",
+              "Arjun",
+              "200",
+              "250"
+            ],
+            [
+              "2",
+              "Ankush",
+              "190",
+              "219"
+            ],
+            [
+              "3",
+              "Sunil",
+              "150",
+              "200"
+            ],
+            [
+              "4",
+              "Reza",
+              "150",
+              "190"
+            ],
+            [
+              "5",
+              "Pratham",
+              "175",
+              "220"
+            ],
+            [
+              "6",
+              "Gopal",
+              "193",
+              "215"
+            ]
+          ],
+          "confidence": "VERIFIED",
+          "caption": "Raider"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "City",
+            "ID",
+            "BidPoints"
+          ],
+          "rows": [
+            [
+              "Jaipur",
+              "2",
+              "200"
+            ],
+            [
+              "Patna",
+              "3",
+              "195"
+            ],
+            [
+              "Hyderabad",
+              "5",
+              "175"
+            ],
+            [
+              "Jaipur",
+              "1",
+              "250"
+            ],
+            [
+              "Patna",
+              "4",
+              "200"
+            ],
+            [
+              "Jaipur",
+              "6",
+              "200"
+            ]
+          ],
+          "confidence": "VERIFIED",
+          "caption": "Team"
+        },
+        {
+          "type": "text",
+          "content": "The SQL query described below is executed on this database:\n\nSELECT * FROM Raider, Team WHERE Raider.ID=Team.ID AND City=\"Jaipur\" AND RaidPoints > 200;\n\nThe number of rows returned by this query is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1824,7 +3540,18 @@
       "questionNumber": 32,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "The fundamental operations in a double-ended queue D are:\ninsertFirst(e) - Insert a new element e at the beginning of D.\ninsertLast(e) - Insert a new element e at the end of D.\nremoveFirst() - Remove and return the first element of D.\nremoveLast() - Remove and return the last element of D.\nIn an empty double-ended queue, the following operations are performed:\ninsertFirst(10)\ninsertLast(32)\na ←removeFirst()\ninsertLast(28)\ninsertLast(17)\na ←removeFirst()\na ← removeLast()\nThe value of a is ______.",
+      "questionText": "The fundamental operations in a double-ended queue D are:\n\ninsertFirst(e) - Insert a new element e at the beginning of D. insertLast(e) - Insert a new element e at the end of D. removeFirst() - Remove and return the first element of D. removeLast() - Remove and return the last element of D.\n\nIn an empty double-ended queue, the following operations are performed:\n\ninsertFirst(10)\n\ninsertLast(32)\n\na ←removeFirst()\n\ninsertLast(28)\n\ninsertLast(17)\n\na ←removeFirst()\n\na ← removeLast()\n\nThe value of a is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The fundamental operations in a double-ended queue D are:\n\ninsertFirst(e) - Insert a new element e at the beginning of D. insertLast(e) - Insert a new element e at the end of D. removeFirst() - Remove and return the first element of D. removeLast() - Remove and return the last element of D.\n\nIn an empty double-ended queue, the following operations are performed:\n\ninsertFirst(10)\n\ninsertLast(32)\n\na ←removeFirst()\n\ninsertLast(28)\n\ninsertLast(17)\n\na ←removeFirst()\n\na ← removeLast()\n\nThe value of a is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1859,7 +3586,18 @@
       "questionNumber": 33,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "1\nLet 𝑓:ℝ → ℝ be the function 𝑓(𝑥) = .\n1+𝑒-𝑥\nThe value of the derivative of 𝑓 at 𝑥 where 𝑓(𝑥) = 0.4 is ______\n(rounded off to two decimal places).\nNote: ℝ denotes the set of real numbers.",
+      "questionText": "Let 𝑓:ℝ→ℝ be the function 𝑓(𝑥) = \\(\\frac{1}{1+𝑒-𝑥}\\) .\n\nThe value of the derivative of 𝑓 at 𝑥 where 𝑓(𝑥) = 0.4 is ______ (rounded off to two decimal places).\n\nNote: ℝ denotes the set of real numbers.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑓:ℝ→ℝ be the function 𝑓(𝑥) = \\(\\frac{1}{1+𝑒-𝑥}\\) .\n\nThe value of the derivative of 𝑓 at 𝑥 where 𝑓(𝑥) = 0.4 is ______ (rounded off to two decimal places).\n\nNote: ℝ denotes the set of real numbers.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1894,7 +3632,18 @@
       "questionNumber": 34,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "The sample average of 50 data points is 40. The updated sample average after\nincluding a new data point taking the value of 142 is ______.",
+      "questionText": "The sample average of 50 data points is 40. The updated sample average after including a new data point taking the value of 142 is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The sample average of 50 data points is 40. The updated sample average after including a new data point taking the value of 142 is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1929,7 +3678,18 @@
       "questionNumber": 35,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "1 2 3\nConsider the 3 \\times 3 matrix 𝑴 = [3 1 3].\n4 3 6\nThe determinant of (𝑴𝟐 + 12𝑴) is ______.",
+      "questionText": "1 2 3 Consider the 3 \\times 3 matrix 𝑴= [ 3 1 3 ]. 4 3 6 The determinant of (𝑴^{𝟐}+ 12𝑴) is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "1 2 3 Consider the 3 \\times 3 matrix 𝑴= [ 3 1 3 ]. 4 3 6 The determinant of (𝑴^{𝟐}+ 12𝑴) is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1964,7 +3724,18 @@
       "questionNumber": 36,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "A fair six-sided die (with faces numbered 1, 2, 3, 4, 5, 6) is repeatedly thrown\nindependently.\nWhat is the expected number of times the die is thrown until two consecutive throws\nof even numbers are seen?",
+      "questionText": "A fair six-sided die (with faces numbered 1, 2, 3, 4, 5, 6) is repeatedly thrown independently.\n\nWhat is the expected number of times the die is thrown until two consecutive throws of even numbers are seen?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A fair six-sided die (with faces numbered 1, 2, 3, 4, 5, 6) is repeatedly thrown independently.\n\nWhat is the expected number of times the die is thrown until two consecutive throws of even numbers are seen?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "2",
@@ -1977,22 +3748,62 @@
         {
           "id": "A",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2022,35 +3833,86 @@
       "questionNumber": 37,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let 𝑓:ℝ → ℝ be a function. Note: ℝ denotes the set of real numbers.\n-𝑥, if 𝑥 < -2\n𝑓(𝑥) = {𝑎𝑥2 + 𝑏𝑥+ 𝑐, if 𝑥 \\in [-2,2]\n𝑥, if 𝑥 > 2\nWhich ONE of the following choices gives the values of 𝑎, 𝑏, 𝑐 that make the\nfunction 𝑓 continuous and differentiable?",
+      "questionText": "Let 𝑓:ℝ→ℝ be a function. Note: ℝ denotes the set of real numbers.\n\n-𝑥, if 𝑥< -2 𝑓(𝑥) = { 𝑎𝑥^{2} + 𝑏𝑥+ 𝑐, if 𝑥 \\in [-2,2] 𝑥, if 𝑥> 2\n\nWhich ONE of the following choices gives the values of 𝑎, 𝑏, 𝑐 that make the function 𝑓 continuous and differentiable?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑓:ℝ→ℝ be a function. Note: ℝ denotes the set of real numbers.\n\n-𝑥, if 𝑥< -2 𝑓(𝑥) = { 𝑎𝑥^{2} + 𝑏𝑥+ 𝑐, if 𝑥 \\in [-2,2] 𝑥, if 𝑥> 2\n\nWhich ONE of the following choices gives the values of 𝑎, 𝑏, 𝑐 that make the function 𝑓 continuous and differentiable?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n𝑎 = , 𝑏 = 0, 𝑐 = 1\n4",
-        "1\n𝑎 = , 𝑏 = 0, 𝑐 = 0\n2",
-        "𝑎 = 0, 𝑏 = 0, 𝑐 = 0",
-        "𝑎 = 1, 𝑏 = 1, 𝑐 = -4"
+        "𝑎= \\(\\frac{1}{4}\\), 𝑏= 0, 𝑐= 1",
+        "𝑎= \\(\\frac{1}{2}\\), 𝑏= 0, 𝑐= 0",
+        "𝑎= 0, 𝑏= 0, 𝑐= 0",
+        "𝑎= 1, 𝑏= 1, 𝑐= -4"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n𝑎 = , 𝑏 = 0, 𝑐 = 1\n4",
-          "imageUrl": null
+          "text": "𝑎= \\(\\frac{1}{4}\\), 𝑏= 0, 𝑐= 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑎= \\(\\frac{1}{4}\\), 𝑏= 0, 𝑐= 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n𝑎 = , 𝑏 = 0, 𝑐 = 0\n2",
-          "imageUrl": null
+          "text": "𝑎= \\(\\frac{1}{2}\\), 𝑏= 0, 𝑐= 0",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑎= \\(\\frac{1}{2}\\), 𝑏= 0, 𝑐= 0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑎 = 0, 𝑏 = 0, 𝑐 = 0",
-          "imageUrl": null
+          "text": "𝑎= 0, 𝑏= 0, 𝑐= 0",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑎= 0, 𝑏= 0, 𝑐= 0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑎 = 1, 𝑏 = 1, 𝑐 = -4",
-          "imageUrl": null
+          "text": "𝑎= 1, 𝑏= 1, 𝑐= -4",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑎= 1, 𝑏= 1, 𝑐= -4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2080,7 +3942,29 @@
       "questionNumber": 38,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following Python code:\ndef count(child_dict, i):\nif i not in child_dict.keys():\nreturn 1\nans = 1\nfor j in child_dict[i]:\nans += count(child_dict, j)\nreturn ans\nchild_dict = dict()\nchild_dict[0] = [1,2]\nchild_dict[1] = [3,4,5]\nchild_dict[2] = [6,7,8]\nprint(count(child_dict,0))\nWhich ONE of the following is the output of this code?",
+      "questionText": "Consider the following Python code:\n\n```text\ndef count(child_dict, i):\n    if i not in child_dict.keys():\n         return 1\n    ans = 1\n    for j in child_dict[i]:\n        ans += count(child_dict, j)\n    return ans\nchild_dict = dict()\nchild_dict[0] = [1,2]\nchild_dict[1] = [3,4,5]\nchild_dict[2] = [6,7,8]\nprint(count(child_dict,0))\n```\n\nWhich ONE of the following is the output of this code?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following Python code:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "pseudocode",
+          "content": "```text\ndef count(child_dict, i):\n    if i not in child_dict.keys():\n         return 1\n    ans = 1\n    for j in child_dict[i]:\n        ans += count(child_dict, j)\n    return ans\nchild_dict = dict()\nchild_dict[0] = [1,2]\nchild_dict[1] = [3,4,5]\nchild_dict[2] = [6,7,8]\nprint(count(child_dict,0))\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which ONE of the following is the output of this code?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "pseudocode",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "6",
@@ -2093,22 +3977,62 @@
         {
           "id": "A",
           "text": "6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2138,7 +4062,29 @@
       "questionNumber": 39,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the function computeS(X) whose pseudocode is given below:\ncomputeS(X)\n𝑆[1] ← 1\nfor 𝑖 ←2 to 𝑙𝑒𝑛𝑔𝑡ℎ(𝑋)\n𝑆[𝑖] ← 1\nif 𝑋[𝑖- 1] \\le 𝑋[𝑖]\n𝑆[𝑖] ←𝑆[𝑖] + 𝑆[𝑖-1]\nend if\nend for\nreturn S\nWhich ONE of the following values is returned by the function computeS(X)\nfor X = [6, 3, 5, 4, 10]?",
+      "questionText": "Consider the function computeS(X) whose pseudocode is given below:\n\n```text\ncomputeS(X)\n  end if\nend for\nreturn S\n```\n\nWhich ONE of the following values is returned by the function computeS(X) for X = [6, 3, 5, 4, 10]?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the function computeS(X) whose pseudocode is given below:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "pseudocode",
+          "content": "```text\ncomputeS(X)\n  end if\nend for\nreturn S\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which ONE of the following values is returned by the function computeS(X) for X = [6, 3, 5, 4, 10]?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "pseudocode",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "[1, 1, 2, 3, 4]",
@@ -2151,22 +4097,62 @@
         {
           "id": "A",
           "text": "[1, 1, 2, 3, 4]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[1, 1, 2, 3, 4]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "[1, 1, 2, 3, 3]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[1, 1, 2, 3, 3]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "[1, 1, 2, 1, 2]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[1, 1, 2, 1, 2]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "[1, 1, 2, 1, 5]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[1, 1, 2, 1, 5]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2196,35 +4182,86 @@
       "questionNumber": 40,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let 𝐹(𝑛) denote the maximum number of comparisons made while searching for\nan entry in a sorted array of size 𝑛 using binary search.\nWhich ONE of the following options is TRUE?",
+      "questionText": "Let 𝐹(𝑛) denote the maximum number of comparisons made while searching for an entry in a sorted array of size 𝑛 using binary search.\n\nWhich ONE of the following options is TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝐹(𝑛) denote the maximum number of comparisons made while searching for an entry in a sorted array of size 𝑛 using binary search.\n\nWhich ONE of the following options is TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 1",
         "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 𝐹(⌈𝑛/2⌉)",
         "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋)",
-        "𝐹(𝑛) = 𝐹(𝑛- 1) + 1"
+        "𝐹(𝑛) = 𝐹(𝑛-1) + 1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 𝐹(⌈𝑛/2⌉)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋) + 𝐹(⌈𝑛/2⌉)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐹(𝑛) = 𝐹(⌊𝑛/2⌋)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝐹(𝑛) = 𝐹(𝑛- 1) + 1",
-          "imageUrl": null
+          "text": "𝐹(𝑛) = 𝐹(𝑛-1) + 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐹(𝑛) = 𝐹(𝑛-1) + 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2254,35 +4291,97 @@
       "questionNumber": 41,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following Python function:\ndef fun(D, s1, s2):\nif s1 < s2:\nD[s1], D[s2] = D[s2], D[s1]\nfun(D, s1+1, s2-1)\nWhat does this Python function fun() do? Select the ONE appropriate option\nbelow.",
+      "questionText": "Consider the following Python function:\n\n```text\ndef fun(D, s1, s2):\n       if s1 < s2:\n          D[s1], D[s2] = D[s2], D[s1]\n          fun(D, s1+1, s2-1)\n```\n\nWhat does this Python function fun() do? Select the ONE appropriate option below.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following Python function:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "pseudocode",
+          "content": "```text\ndef fun(D, s1, s2):\n       if s1 < s2:\n          D[s1], D[s2] = D[s2], D[s1]\n          fun(D, s1+1, s2-1)\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "What does this Python function fun() do? Select the ONE appropriate option below.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "pseudocode",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "It finds the smallest element in D from index s1 to s2, both inclusive.",
-        "It performs a merge sort in-place on this list D between indices s1 and s2, both\ninclusive.",
+        "It performs a merge sort in-place on this list D between indices s1 and s2, both inclusive.",
         "It reverses the list D between indices s1 and s2, both inclusive.",
-        "It swaps the elements in D at indices s1 and s2, and leaves the remaining elements\nunchanged."
+        "It swaps the elements in D at indices s1 and s2, and leaves the remaining elements unchanged."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "It finds the smallest element in D from index s1 to s2, both inclusive.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It finds the smallest element in D from index s1 to s2, both inclusive.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "It performs a merge sort in-place on this list D between indices s1 and s2, both\ninclusive.",
-          "imageUrl": null
+          "text": "It performs a merge sort in-place on this list D between indices s1 and s2, both inclusive.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It performs a merge sort in-place on this list D between indices s1 and s2, both inclusive.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "It reverses the list D between indices s1 and s2, both inclusive.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It reverses the list D between indices s1 and s2, both inclusive.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "It swaps the elements in D at indices s1 and s2, and leaves the remaining elements\nunchanged.",
-          "imageUrl": null
+          "text": "It swaps the elements in D at indices s1 and s2, and leaves the remaining elements unchanged.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It swaps the elements in D at indices s1 and s2, and leaves the remaining elements unchanged.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2312,7 +4411,77 @@
       "questionNumber": 42,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the table below, where the (𝑖, 𝑗)𝑡ℎ element of the table is the distance\nbetween points 𝑥 and 𝑥 . Single linkage clustering is performed on data points,\n𝑖 𝑗\n𝑥 ,𝑥 , 𝑥 ,𝑥 , 𝑥 .\n1 2 3 4 5\n𝑥 𝑥 𝑥 𝑥 𝑥\n1 2 3 4 5\n𝑥 0 1 4 3 6\n1\n𝑥 1 0 3 5 3\n2\n𝑥 4 3 0 2 5\n3\n𝑥 3 5 2 0 1\n4\n𝑥 6 3 5 1 0\n5\nWhich ONE of the following is the correct representation of the clusters produced?",
+      "questionText": "Consider the table below, where the (𝑖, 𝑗)^{𝑡ℎ} element of the table is the distance between points 𝑥_{𝑖} and 𝑥_{𝑗}. Single linkage clustering is performed on data points, 𝑥_{1},𝑥_{2}, 𝑥_{3},𝑥_{4}, 𝑥_{5}.\n\n| 𝑥 1 | 𝑥 2 | 𝑥 3 | 𝑥 4 | 𝑥 5 |\n| :--- | :--- | :--- | :--- | :--- |\n| 𝑥 1 | 0 | 1 | 4 | 3 | 6 |\n| 𝑥 2 | 1 | 0 | 3 | 5 | 3 |\n| 𝑥 3 | 4 | 3 | 0 | 2 | 5 |\n| 𝑥 4 | 3 | 5 | 2 | 0 | 1 |\n| 𝑥 5 | 6 | 3 | 5 | 1 | 0 |\n\nWhich ONE of the following is the correct representation of the clusters produced?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the table below, where the (𝑖, 𝑗)^{𝑡ℎ} element of the table is the distance between points 𝑥_{𝑖} and 𝑥_{𝑗}. Single linkage clustering is performed on data points, 𝑥_{1},𝑥_{2}, 𝑥_{3},𝑥_{4}, 𝑥_{5}.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑥 1",
+            "𝑥 2",
+            "𝑥 3",
+            "𝑥 4",
+            "𝑥 5"
+          ],
+          "rows": [
+            [
+              "𝑥 1",
+              "0",
+              "1",
+              "4",
+              "3",
+              "6"
+            ],
+            [
+              "𝑥 2",
+              "1",
+              "0",
+              "3",
+              "5",
+              "3"
+            ],
+            [
+              "𝑥 3",
+              "4",
+              "3",
+              "0",
+              "2",
+              "5"
+            ],
+            [
+              "𝑥 4",
+              "3",
+              "5",
+              "2",
+              "0",
+              "1"
+            ],
+            [
+              "𝑥 5",
+              "6",
+              "3",
+              "5",
+              "1",
+              "0"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which ONE of the following is the correct representation of the clusters produced?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2330,22 +4499,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q42_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q42_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q42_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2024/da/q42_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/da/q42_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2375,35 +4584,92 @@
       "questionNumber": 43,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the two neural networks (NNs) shown in Figures 1 and 2, with 𝑅𝑒𝐿𝑈\nactivation (𝑅𝑒𝐿𝑈(𝑧) = max{0, 𝑧} , \\forall 𝑧 \\in ℝ). ℝ denotes the set of real numbers. The\nconnections and their corresponding weights are shown in the Figures. The biases\nat every neuron are set to 0. For what values of 𝑝, 𝑞, 𝑟 in Figure 2 are the two NNs\nequivalent, when 𝑥 ,𝑥 , 𝑥 are positive?\n1 2 3\nFigure 1\nFigure 2",
+      "questionText": "Consider the two neural networks (NNs) shown in Figures 1 and 2, with 𝑅𝑒𝐿𝑈 activation (𝑅𝑒𝐿𝑈(𝑧) = max{0, 𝑧} , \\forall 𝑧 \\in ℝ). ℝ denotes the set of real numbers. The connections and their corresponding weights are shown in the Figures. The biases at every neuron are set to 0. For what values of 𝑝, 𝑞, 𝑟 in Figure 2 are the two NNs equivalent, when 𝑥_{1},𝑥_{2}, 𝑥_{3} are positive? Figure 1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the two neural networks (NNs) shown in Figures 1 and 2, with 𝑅𝑒𝐿𝑈 activation (𝑅𝑒𝐿𝑈(𝑧) = max{0, 𝑧} , \\forall 𝑧 \\in ℝ). ℝ denotes the set of real numbers. The connections and their corresponding weights are shown in the Figures. The biases at every neuron are set to 0. For what values of 𝑝, 𝑞, 𝑟 in Figure 2 are the two NNs equivalent, when 𝑥_{1},𝑥_{2}, 𝑥_{3} are positive? Figure 1",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q43_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑝 = 36, 𝑞 = 24,𝑟 = 24",
-        "𝑝 = 24, 𝑞 = 24,𝑟 = 36",
-        "𝑝 = 18, 𝑞 = 36,𝑟 = 24",
-        "𝑝 = 36, 𝑞 = 36,𝑟 = 36"
+        "𝑝= 36, 𝑞= 24,𝑟= 24",
+        "𝑝= 24, 𝑞= 24,𝑟= 36",
+        "𝑝= 18, 𝑞= 36,𝑟= 24",
+        "𝑝= 36, 𝑞= 36,𝑟= 36"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑝 = 36, 𝑞 = 24,𝑟 = 24",
-          "imageUrl": null
+          "text": "𝑝= 36, 𝑞= 24,𝑟= 24",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 36, 𝑞= 24,𝑟= 24",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑝 = 24, 𝑞 = 24,𝑟 = 36",
-          "imageUrl": null
+          "text": "𝑝= 24, 𝑞= 24,𝑟= 36",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 24, 𝑞= 24,𝑟= 36",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑝 = 18, 𝑞 = 36,𝑟 = 24",
-          "imageUrl": null
+          "text": "𝑝= 18, 𝑞= 36,𝑟= 24",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 18, 𝑞= 36,𝑟= 24",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑝 = 36, 𝑞 = 36,𝑟 = 36",
-          "imageUrl": null
+          "text": "𝑝= 36, 𝑞= 36,𝑟= 36",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 36, 𝑞= 36,𝑟= 36",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2435,12 +4701,23 @@
       "questionNumber": 44,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider a state space where the start state is number 1. The successor function for\nthe state numbered n returns two states numbered n+1 and n+2. Assume that the\nstates in the unexpanded state list are expanded in the ascending order of numbers\nand the previously expanded states are not added to the unexpanded state list.\nWhich ONE of the following statements about breadth-first search (BFS) and\ndepth-first search (DFS) is true, when reaching the goal state number 6?",
+      "questionText": "Consider a state space where the start state is number 1. The successor function for the state numbered n returns two states numbered n+1 and n+2. Assume that the states in the unexpanded state list are expanded in the ascending order of numbers and the previously expanded states are not added to the unexpanded state list.\n\nWhich ONE of the following statements about breadth-first search (BFS) and depth-first search (DFS) is true, when reaching the goal state number 6?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a state space where the start state is number 1. The successor function for the state numbered n returns two states numbered n+1 and n+2. Assume that the states in the unexpanded state list are expanded in the ascending order of numbers and the previously expanded states are not added to the unexpanded state list.\n\nWhich ONE of the following statements about breadth-first search (BFS) and depth-first search (DFS) is true, when reaching the goal state number 6?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "BFS expands more states than DFS.",
         "DFS expands more states than BFS.",
-        "Both BFS and DFS expand equal number of states.",
+        "Both BFS and DFS exp and equal number of states.",
         "Both BFS and DFS do not reach the goal state number 6."
       ],
       "optionImages": null,
@@ -2448,22 +4725,62 @@
         {
           "id": "A",
           "text": "BFS expands more states than DFS.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "BFS expands more states than DFS.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "DFS expands more states than BFS.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "DFS expands more states than BFS.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Both BFS and DFS expand equal number of states.",
-          "imageUrl": null
+          "text": "Both BFS and DFS exp and equal number of states.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both BFS and DFS exp and equal number of states.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Both BFS and DFS do not reach the goal state number 6.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both BFS and DFS do not reach the goal state number 6.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2493,7 +4810,18 @@
       "questionNumber": 45,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following sorting algorithms:\n(i) Bubble sort\n(ii) Insertion sort\n(iii) Selection sort\nWhich ONE among the following choices of sorting algorithms sorts the numbers\nin the array [4, 3, 2, 1, 5] in increasing order after exactly two passes over the array?",
+      "questionText": "Consider the following sorting algorithms:\n\n(i) Bubble sort (ii) Insertion sort (iii) Selection sort\n\nWhich ONE among the following choices of sorting algorithms sorts the numbers in the array [4, 3, 2, 1, 5] in increasing order after exactly two passes over the array?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following sorting algorithms:\n\n(i) Bubble sort (ii) Insertion sort (iii) Selection sort\n\nWhich ONE among the following choices of sorting algorithms sorts the numbers in the array [4, 3, 2, 1, 5] in increasing order after exactly two passes over the array?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(i) only",
@@ -2506,22 +4834,62 @@
         {
           "id": "A",
           "text": "(i) only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(iii) only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(iii) only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(i) and (iii) only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (iii) only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(ii) and (iii) only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) and (iii) only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2551,35 +4919,86 @@
       "questionNumber": 46,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Given the relational schema 𝑅 = (𝑈,𝑉, 𝑊, 𝑋, 𝑌, 𝑍) and the set of functional\ndependencies:\n{𝑈→ 𝑉, 𝑈→ 𝑊, 𝑊𝑋 → 𝑌, 𝑊𝑋 →𝑍, 𝑉 → 𝑋}\nWhich of the following functional dependencies can be derived from the above\nset?",
+      "questionText": "Given the relational schema 𝑅= (𝑈,𝑉, 𝑊, 𝑋, 𝑌, 𝑍) and the set of functional dependencies:\n\n{𝑈→𝑉, 𝑈→𝑊, 𝑊𝑋→𝑌, 𝑊𝑋→𝑍, 𝑉→𝑋}\n\nWhich of the following functional dependencies can be derived from the above set?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given the relational schema 𝑅= (𝑈,𝑉, 𝑊, 𝑋, 𝑌, 𝑍) and the set of functional dependencies:\n\n{𝑈→𝑉, 𝑈→𝑊, 𝑊𝑋→𝑌, 𝑊𝑋→𝑍, 𝑉→𝑋}\n\nWhich of the following functional dependencies can be derived from the above set?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑉𝑊 → 𝑌𝑍",
-        "𝑊𝑋 → 𝑌𝑍",
-        "𝑉𝑊 → 𝑈",
-        "𝑉𝑊 → 𝑌"
+        "𝑉𝑊→𝑌𝑍",
+        "𝑊𝑋→𝑌𝑍",
+        "𝑉𝑊→𝑈",
+        "𝑉𝑊→𝑌"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑉𝑊 → 𝑌𝑍",
-          "imageUrl": null
+          "text": "𝑉𝑊→𝑌𝑍",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑉𝑊→𝑌𝑍",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑊𝑋 → 𝑌𝑍",
-          "imageUrl": null
+          "text": "𝑊𝑋→𝑌𝑍",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑊𝑋→𝑌𝑍",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑉𝑊 → 𝑈",
-          "imageUrl": null
+          "text": "𝑉𝑊→𝑈",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑉𝑊→𝑈",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑉𝑊 → 𝑌",
-          "imageUrl": null
+          "text": "𝑉𝑊→𝑌",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑉𝑊→𝑌",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -2617,35 +5036,90 @@
       "questionNumber": 47,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Select all choices that are subspaces of ℝ3.\nNote: ℝ denotes the set of real numbers.",
+      "questionText": "Select all choices that are subspaces of ℝ^{3}.\n\nNote: ℝ denotes the set of real numbers.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select all choices that are subspaces of ℝ^{3}.\n\nNote: ℝ denotes the set of real numbers.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑥 1 1\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 𝐱= 𝛼[1] + 𝛽[0] ,𝛼, 𝛽 \\in ℝ}\n2\n𝑥 3 0 0",
-        "𝑥 1 1\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 𝐱= 𝛼2 [2] + 𝛽2 [0] , 𝛼, 𝛽 \\in ℝ}\n2\n𝑥 3 0 1",
-        "𝑥\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 5𝑥 + 2𝑥 = 0, 4𝑥 -2𝑥 + 3𝑥 = 0}\n2 1 3 1 2 3\n𝑥\n3",
-        "𝑥\n1\n{𝐱 = [𝑥 2] \\in ℝ3: 5𝑥 + 2𝑥 + 4 = 0}\n1 3\n𝑥\n3"
+        "\\(𝑥_{1} 1 1 {𝐱= [ 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼[ 1 ] + 𝛽[ 0 ],𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 0\\)",
+        "\\({𝐱= [ 𝑥_{1} 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼^{2} [ 1 2 ] + 𝛽^{2} [ 1 0 ], 𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 1\\)",
+        "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} = 0, 4𝑥_{1} -2𝑥_{2} + 3𝑥_{3} = 0}\\)",
+        "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} + 4 = 0}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑥 1 1\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 𝐱= 𝛼[1] + 𝛽[0] ,𝛼, 𝛽 \\in ℝ}\n2\n𝑥 3 0 0",
-          "imageUrl": null
+          "text": "\\(𝑥_{1} 1 1 {𝐱= [ 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼[ 1 ] + 𝛽[ 0 ],𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 0\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑥_{1} 1 1 {𝐱= [ 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼[ 1 ] + 𝛽[ 0 ],𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 0",
+              "content": "\\(𝑥_{1} 1 1 {𝐱= [ 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼[ 1 ] + 𝛽[ 0 ],𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 0\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑥 1 1\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 𝐱= 𝛼2 [2] + 𝛽2 [0] , 𝛼, 𝛽 \\in ℝ}\n2\n𝑥 3 0 1",
-          "imageUrl": null
+          "text": "\\({𝐱= [ 𝑥_{1} 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼^{2} [ 1 2 ] + 𝛽^{2} [ 1 0 ], 𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "{𝐱= [ 𝑥_{1} 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼^{2} [ 1 2 ] + 𝛽^{2} [ 1 0 ], 𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 1",
+              "content": "\\({𝐱= [ 𝑥_{1} 𝑥_{2} ] \\in ℝ^{3}: 𝐱= 𝛼^{2} [ 1 2 ] + 𝛽^{2} [ 1 0 ], 𝛼, 𝛽 \\in ℝ} 𝑥_{3} 0 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑥\n1\n{𝐱 = [𝑥 ] \\in ℝ3: 5𝑥 + 2𝑥 = 0, 4𝑥 -2𝑥 + 3𝑥 = 0}\n2 1 3 1 2 3\n𝑥\n3",
-          "imageUrl": null
+          "text": "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} = 0, 4𝑥_{1} -2𝑥_{2} + 3𝑥_{3} = 0}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} = 0, 4𝑥_{1} -2𝑥_{2} + 3𝑥_{3} = 0}",
+              "content": "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} = 0, 4𝑥_{1} -2𝑥_{2} + 3𝑥_{3} = 0}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑥\n1\n{𝐱 = [𝑥 2] \\in ℝ3: 5𝑥 + 2𝑥 + 4 = 0}\n1 3\n𝑥\n3",
-          "imageUrl": null
+          "text": "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} + 4 = 0}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} + 4 = 0}",
+              "content": "\\(𝑥_{1} {𝐱= [ 𝑥_{2} 𝑥_{3} ] \\in ℝ^{3}: 5𝑥_{1} + 2𝑥_{3} + 4 = 0}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -2681,35 +5155,90 @@
       "questionNumber": 48,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Which of the following statements is/are TRUE?\nNote: ℝ denotes the set of real numbers.",
+      "questionText": "Which of the following statements is/are TRUE?\n\nNote: ℝ denotes the set of real numbers.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are TRUE?\n\nNote: ℝ denotes the set of real numbers.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "There exist 𝑴 \\in ℝ3 \\times 3, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱 = 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has infinite solutions.",
-        "There exist 𝑴 \\in ℝ3 \\times 3, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱= 𝒑 has no solutions\nand M𝐱 = 𝒒 has infinite solutions.",
-        "There exist 𝑴 \\in ℝ2 \\times 3, 𝒑 \\in ℝ2, and 𝒒 \\in ℝ2 such that 𝑴𝐱= 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has infinite solutions.",
-        "There exist 𝑴 \\in ℝ3 \\times 2, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱= 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has no solutions."
+        "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+        "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
+        "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+        "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "There exist 𝑴 \\in ℝ3 \\times 3, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱 = 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has infinite solutions.",
-          "imageUrl": null
+          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
+              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "There exist 𝑴 \\in ℝ3 \\times 3, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱= 𝒑 has no solutions\nand M𝐱 = 𝒒 has infinite solutions.",
-          "imageUrl": null
+          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.",
+              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "There exist 𝑴 \\in ℝ2 \\times 3, 𝒑 \\in ℝ2, and 𝒒 \\in ℝ2 such that 𝑴𝐱= 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has infinite solutions.",
-          "imageUrl": null
+          "text": "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
+              "content": "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "There exist 𝑴 \\in ℝ3 \\times 2, 𝒑 \\in ℝ3, and 𝒒 \\in ℝ3 such that 𝑴𝐱= 𝒑 has a unique\nsolution and M𝐱 = 𝒒 has no solutions.",
-          "imageUrl": null
+          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.",
+              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2745,35 +5274,90 @@
       "questionNumber": 49,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let ℝ be the set of real numbers, 𝑈 be a subspace of ℝ3 and 𝑴 \\in ℝ3 \\times 3 be the\nmatrix corresponding to the projection on to the subspace 𝑈.\nWhich of the following statements is/are TRUE?",
+      "questionText": "Let ℝ be the set of real numbers, 𝑈 be a subspace of ℝ^{3} and 𝑴 \\in ℝ^{3 \\times 3} be the matrix corresponding to the projection on to the subspace 𝑈.\n\nWhich of the following statements is/are TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let ℝ be the set of real numbers, 𝑈 be a subspace of ℝ^{3} and 𝑴 \\in ℝ^{3 \\times 3} be the matrix corresponding to the projection on to the subspace 𝑈.\n\nWhich of the following statements is/are TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "If 𝑈 is a 1-dimensional subspace of ℝ3, then the null space of 𝑴 is a\n1-dimensional subspace.",
-        "If 𝑈 is a 2-dimensional subspace of ℝ3, then the null space of 𝑴 is a\n1-dimensional subspace.",
-        "𝑴2 = 𝑴",
-        "𝑴3 = 𝑴"
+        "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+        "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+        "\\(𝑴^{2} = 𝑴\\)",
+        "\\(𝑴^{3} = 𝑴\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "If 𝑈 is a 1-dimensional subspace of ℝ3, then the null space of 𝑴 is a\n1-dimensional subspace.",
-          "imageUrl": null
+          "text": "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
+              "content": "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "If 𝑈 is a 2-dimensional subspace of ℝ3, then the null space of 𝑴 is a\n1-dimensional subspace.",
-          "imageUrl": null
+          "text": "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
+              "content": "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑴2 = 𝑴",
-          "imageUrl": null
+          "text": "\\(𝑴^{2} = 𝑴\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑴^{2} = 𝑴",
+              "content": "\\(𝑴^{2} = 𝑴\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑴3 = 𝑴",
-          "imageUrl": null
+          "text": "\\(𝑴^{3} = 𝑴\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑴^{3} = 𝑴",
+              "content": "\\(𝑴^{3} = 𝑴\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B;C;D",
@@ -2811,35 +5395,86 @@
       "questionNumber": 50,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the function 𝑓: ℝ → ℝ where ℝ is the set of all real numbers.\n𝑥4 2𝑥3 3𝑥2\n𝑓(𝑥) = - - + 1\n4 3 2\nWhich of the following statements is/are TRUE?",
+      "questionText": "Consider the function 𝑓: ℝ→ℝ where ℝ is the set of all real numbers.\n\n𝑓(𝑥) = \\(\\frac{𝑥4}{4}\\) -2𝑥^{3} 3 -3𝑥^{2} 2 + 1 Which of the following statements is/are TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the function 𝑓: ℝ→ℝ where ℝ is the set of all real numbers.\n\n𝑓(𝑥) = \\(\\frac{𝑥4}{4}\\) -2𝑥^{3} 3 -3𝑥^{2} 2 + 1 Which of the following statements is/are TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑥 = 0 is a local maximum of f",
-        "𝑥 = 3 is a local minimum of f",
-        "𝑥 = -1 is a local maximum of f",
-        "𝑥 = 0 is a local minimum of f"
+        "𝑥= 0 is a local maximum of f",
+        "𝑥= 3 is a local minimum of f",
+        "𝑥= -1 is a local maximum of f",
+        "𝑥= 0 is a local minimum of f"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑥 = 0 is a local maximum of f",
-          "imageUrl": null
+          "text": "𝑥= 0 is a local maximum of f",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥= 0 is a local maximum of f",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑥 = 3 is a local minimum of f",
-          "imageUrl": null
+          "text": "𝑥= 3 is a local minimum of f",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥= 3 is a local minimum of f",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑥 = -1 is a local maximum of f",
-          "imageUrl": null
+          "text": "𝑥= -1 is a local maximum of f",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥= -1 is a local maximum of f",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑥 = 0 is a local minimum of f",
-          "imageUrl": null
+          "text": "𝑥= 0 is a local minimum of f",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥= 0 is a local minimum of f",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2875,7 +5510,24 @@
       "questionNumber": 51,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the directed acyclic graph (DAG) below:\nWhich of the following is/are valid vertex orderings that can be obtained from a\ntopological sort of the DAG?",
+      "questionText": "Consider the directed acyclic graph (DAG) below:\n\nWhich of the following is/are valid vertex orderings that can be obtained from a topological sort of the DAG?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the directed acyclic graph (DAG) below:\n\nWhich of the following is/are valid vertex orderings that can be obtained from a topological sort of the DAG?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q51_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "P Q R S T U V",
@@ -2888,22 +5540,62 @@
         {
           "id": "A",
           "text": "P Q R S T U V",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P Q R S T U V",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P R Q V S U T",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P R Q V S U T",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P Q R S V U T",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P Q R S V U T",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P R Q S V T U",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P R Q S V T U",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2941,35 +5633,89 @@
       "questionNumber": 52,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let H, 𝐼, 𝐿, and 𝑁 represent height, number of internal nodes, number of leaf nodes,\nand the total number of nodes respectively in a rooted binary tree.\nWhich of the following statements is/are always TRUE?",
+      "questionText": "Let H, 𝐼, 𝐿, and 𝑁 represent height, number of internal nodes, number of leaf nodes, and the total number of nodes respectively in a rooted binary tree.\n\nWhich of the following statements is/are always TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let H, 𝐼, 𝐿, and 𝑁 represent height, number of internal nodes, number of leaf nodes, and the total number of nodes respectively in a rooted binary tree.\n\nWhich of the following statements is/are always TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "𝐿 \\le 𝐼+ 1",
-        "𝐻 + 1 \\le 𝑁 \\le 2𝐻+1 -1",
-        "𝐻 \\le 𝐼 \\le 2𝐻 - 1",
-        "𝐻 \\le 𝐿 \\le 2𝐻-1"
+        "\\(𝐻+ 1 \\le 𝑁 \\le 2^{𝐻+1} -1\\)",
+        "\\(𝐻 \\le 𝐼 \\le 2^{𝐻}-1\\)",
+        "\\(𝐻 \\le 𝐿 \\le 2^{𝐻-1}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "𝐿 \\le 𝐼+ 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐿 \\le 𝐼+ 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝐻 + 1 \\le 𝑁 \\le 2𝐻+1 -1",
-          "imageUrl": null
+          "text": "\\(𝐻+ 1 \\le 𝑁 \\le 2^{𝐻+1} -1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝐻+ 1 \\le 𝑁 \\le 2^{𝐻+1} -1",
+              "content": "\\(𝐻+ 1 \\le 𝑁 \\le 2^{𝐻+1} -1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝐻 \\le 𝐼 \\le 2𝐻 - 1",
-          "imageUrl": null
+          "text": "\\(𝐻 \\le 𝐼 \\le 2^{𝐻}-1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝐻 \\le 𝐼 \\le 2^{𝐻}-1",
+              "content": "\\(𝐻 \\le 𝐼 \\le 2^{𝐻}-1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝐻 \\le 𝐿 \\le 2𝐻-1",
-          "imageUrl": null
+          "text": "\\(𝐻 \\le 𝐿 \\le 2^{𝐻-1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝐻 \\le 𝐿 \\le 2^{𝐻-1}",
+              "content": "\\(𝐻 \\le 𝐿 \\le 2^{𝐻-1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -3007,7 +5753,24 @@
       "questionNumber": 53,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider the following figures representing datasets consisting of\ntwo-dimensional features with two classes denoted by circles and squares.\n(i) (ii)\n(iii) (iv)\nWhich of the following is/are TRUE?",
+      "questionText": "Consider the following figures representing datasets consisting of two-dimensional features with two classes denoted by circles and squares.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following figures representing datasets consisting of two-dimensional features with two classes denoted by circles and squares.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q53_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "(i) is linearly separable.",
@@ -3020,22 +5783,62 @@
         {
           "id": "A",
           "text": "(i) is linearly separable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is linearly separable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(ii) is linearly separable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) is linearly separable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(iii) is linearly separable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(iii) is linearly separable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(iv) is linearly separable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(iv) is linearly separable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3073,35 +5876,90 @@
       "questionNumber": 54,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let game(ball, rugby) be true if the ball is used in rugby and false otherwise.\nLet shape(ball, round) be true if the ball is round and false otherwise.\nConsider the following logical sentences:\ns1: \\forall ball ¬ game(ball, rugby) ⟹shape(ball, round)\ns2: \\forall ball ¬ shape(ball, round) ⟹game(ball, rugby)\ns3: \\forall ball game(ball, rugby) ⟹ ¬ shape(ball, round)\ns4: \\forall ball shape(ball, round) ⟹ ¬ game(ball, rugby)\nWhich of the following choices is/are logical representations of the assertion,\n\"All balls are round except balls used in rugby\"?",
+      "questionText": "Let game(ball, rugby) be true if the ball is used in rugby and false otherwise.\n\nLet shape(ball, round) be true if the ball is round and false otherwise.\n\nConsider the following logical sentences:\n\ns1: \\forall ball \\neg game(ball, rugby) ⟹shape(ball, round)\n\ns2: \\forall ball \\neg shape(ball, round) ⟹game(ball, rugby)\n\ns3: \\forall ball game(ball, rugby) ⟹ \\neg shape(ball, round)\n\ns4: \\forall ball shape(ball, round) ⟹ \\neg game(ball, rugby)\n\nWhich of the following choices is/are logical representations of the assertion, \"All balls are round except balls used in rugby\"?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let game(ball, rugby) be true if the ball is used in rugby and false otherwise.\n\nLet shape(ball, round) be true if the ball is round and false otherwise.\n\nConsider the following logical sentences:\n\ns1: \\forall ball \\neg game(ball, rugby) ⟹shape(ball, round)\n\ns2: \\forall ball \\neg shape(ball, round) ⟹game(ball, rugby)\n\ns3: \\forall ball game(ball, rugby) ⟹ \\neg shape(ball, round)\n\ns4: \\forall ball shape(ball, round) ⟹ \\neg game(ball, rugby)\n\nWhich of the following choices is/are logical representations of the assertion, \"All balls are round except balls used in rugby\"?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑠1 ∧𝑠3",
-        "𝑠1 ∧𝑠2",
-        "𝑠2 ∧𝑠3",
-        "𝑠3 ∧𝑠4"
+        "\\(𝑠1 \\land 𝑠3\\)",
+        "\\(𝑠1 \\land 𝑠2\\)",
+        "\\(𝑠2 \\land 𝑠3\\)",
+        "\\(𝑠3 \\land 𝑠4\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑠1 ∧𝑠3",
-          "imageUrl": null
+          "text": "\\(𝑠1 \\land 𝑠3\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑠1 \\land 𝑠3",
+              "content": "\\(𝑠1 \\land 𝑠3\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑠1 ∧𝑠2",
-          "imageUrl": null
+          "text": "\\(𝑠1 \\land 𝑠2\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑠1 \\land 𝑠2",
+              "content": "\\(𝑠1 \\land 𝑠2\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑠2 ∧𝑠3",
-          "imageUrl": null
+          "text": "\\(𝑠2 \\land 𝑠3\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑠2 \\land 𝑠3",
+              "content": "\\(𝑠2 \\land 𝑠3\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑠3 ∧𝑠4",
-          "imageUrl": null
+          "text": "\\(𝑠3 \\land 𝑠4\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑠3 \\land 𝑠4",
+              "content": "\\(𝑠3 \\land 𝑠4\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3137,12 +5995,23 @@
       "questionNumber": 55,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "An OTT company is maintaining a large disk-based relational database of different\nmovies with the following schema:\nMovie(ID, CustomerRating)\nGenre(ID, Name)\nMovie_Genre(MovieID, GenreID)\nConsider the following SQL query on the relation database above:\nSELECT *\nFROM Movie, Genre, Movie_Genre\nWHERE\nMovie.CustomerRating > 3.4 AND\nGenre.Name = \"Comedy\" AND\nMovie_Genre.MovieID = Movie.ID AND\nMovie_Genre.GenreID = Genre.ID;\nThis SQL query can be sped up using which of the following indexing options?",
+      "questionText": "An OTT company is maintaining a large disk-based relational database of different movies with the following schema:\n\nMovie(ID, CustomerRating)\nGenre(ID, Name)\nMovie_Genre(MovieID, <u>GenreID</u>)\n\nConsider the following SQL query on the relation database above:\n\nSELECT * FROM Movie, Genre, Movie_Genre WHERE Movie.CustomerRating > 3.4 AND Genre.Name = \"Comedy\" AND Movie_Genre.MovieID = Movie.ID AND Movie_Genre.GenreID = Genre.ID;\n\nThis SQL query can be sped up using which of the following indexing options?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An OTT company is maintaining a large disk-based relational database of different movies with the following schema:\n\nMovie(ID, CustomerRating)\nGenre(ID, Name)\nMovie_Genre(MovieID, <u>GenreID</u>)\n\nConsider the following SQL query on the relation database above:\n\nSELECT * FROM Movie, Genre, Movie_Genre WHERE Movie.CustomerRating > 3.4 AND Genre.Name = \"Comedy\" AND Movie_Genre.MovieID = Movie.ID AND Movie_Genre.GenreID = Genre.ID;\n\nThis SQL query can be sped up using which of the following indexing options?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "B+ tree on all the attributes.",
         "Hash index on Genre.Name and B+ tree on the remaining attributes.",
-        "Hash index on Movie.CustomerRating and B+ tree on the remaining\nattributes.",
+        "Hash index on Movie.CustomerRating and B+ tree on the remaining attributes.",
         "Hash index on all the attributes."
       ],
       "optionImages": null,
@@ -3150,22 +6019,62 @@
         {
           "id": "A",
           "text": "B+ tree on all the attributes.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "B+ tree on all the attributes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Hash index on Genre.Name and B+ tree on the remaining attributes.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hash index on Genre.Name and B+ tree on the remaining attributes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Hash index on Movie.CustomerRating and B+ tree on the remaining\nattributes.",
-          "imageUrl": null
+          "text": "Hash index on Movie.CustomerRating and B+ tree on the remaining attributes.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hash index on Movie.CustomerRating and B+ tree on the remaining attributes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Hash index on all the attributes.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hash index on all the attributes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -3201,7 +6110,18 @@
       "questionNumber": 56,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let 𝑋 be a random variable uniformly distributed in the interval [1, 3] and 𝑌 be a\nrandom variable uniformly distributed in the interval [2, 4]. If X and Y are\nindependent of each other, the probability P(𝑋 \\ge 𝑌) is ______ (rounded off to\nthree decimal places).",
+      "questionText": "Let 𝑋 be a random variable uniformly distributed in the interval [1, 3] and 𝑌 be a random variable uniformly distributed in the interval [2, 4]. If X and Y are independent of each other, the probability P(𝑋 \\ge 𝑌) is ______ (rounded off to three decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑋 be a random variable uniformly distributed in the interval [1, 3] and 𝑌 be a random variable uniformly distributed in the interval [2, 4]. If X and Y are independent of each other, the probability P(𝑋 \\ge 𝑌) is ______ (rounded off to three decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3236,7 +6156,18 @@
       "questionNumber": 57,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Let 𝑋 be a random variable exponentially distributed with parameter 𝜆 > 0. The\nprobability density function of X is given by:\n𝜆 𝑒-𝜆𝑥, 𝑥 \\ge 0\n𝑓 (𝑥) = {\n𝑋 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nIf 5𝐸(𝑋) = 𝑉𝑎𝑟(𝑋), where 𝐸(𝑋) and 𝑉𝑎𝑟(𝑋) indicate the expectation and variance\nof 𝑋, respectively, the value of 𝜆 is ______ (rounded off to one decimal place).",
+      "questionText": "Let 𝑋 be a random variable exponentially distributed with parameter 𝜆> 0. The probability density function of X is given by:\n\n𝑓_{𝑋}(𝑥) = {𝜆 𝑒^{-𝜆𝑥}, 𝑥 \\ge 0 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 If 5𝐸(𝑋) = 𝑉𝑎𝑟(𝑋), where 𝐸(𝑋) and 𝑉𝑎𝑟(𝑋) indicate the expectation and variance of 𝑋, respectively, the value of 𝜆 is ______ (rounded off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑋 be a random variable exponentially distributed with parameter 𝜆> 0. The probability density function of X is given by:\n\n𝑓_{𝑋}(𝑥) = {𝜆 𝑒^{-𝜆𝑥}, 𝑥 \\ge 0 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 If 5𝐸(𝑋) = 𝑉𝑎𝑟(𝑋), where 𝐸(𝑋) and 𝑉𝑎𝑟(𝑋) indicate the expectation and variance of 𝑋, respectively, the value of 𝜆 is ______ (rounded off to one decimal place).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3271,7 +6202,18 @@
       "questionNumber": 58,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider two events T and S. Let 𝑇̅ denote the complement of the event T. The\nprobability associated with different events are given as follows:\n𝑃(𝑇̅ ) = 0.6, 𝑃(𝑆|𝑇) = 0.3, 𝑃(𝑆|𝑇̅ ) = 0.6\nThen, 𝑃(𝑇|𝑆) is ______ (rounded off to two decimal places).",
+      "questionText": "Consider two events T and S. Let 𝑇 ̅denote the complement of the event T. The probability associated with different events are given as follows:\n\n𝑃(𝑇 ̅) = 0.6, 𝑃(𝑆|𝑇) = 0.3, 𝑃(𝑆|𝑇 ̅) = 0.6\n\nThen, 𝑃(𝑇|𝑆) is ______ (rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider two events T and S. Let 𝑇 ̅denote the complement of the event T. The probability associated with different events are given as follows:\n\n𝑃(𝑇 ̅) = 0.6, 𝑃(𝑆|𝑇) = 0.3, 𝑃(𝑆|𝑇 ̅) = 0.6\n\nThen, 𝑃(𝑇|𝑆) is ______ (rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3306,7 +6248,18 @@
       "questionNumber": 59,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Consider a joint probability density function of two random variables X and Y\n2𝑥𝑦, 0 < 𝑥 < 2, 0 < 𝑦 < 𝑥\n𝑓 (𝑥, 𝑦) = {\n𝑋,𝑌 0, otherwise\nThen, 𝐸[𝑌|𝑋 = 1.5] is ______.",
+      "questionText": "Consider a joint probability density function of two random variables X and Y\n\n𝑓_{𝑋,𝑌}(𝑥, 𝑦) = {2𝑥𝑦, 0, 0 < 𝑥< 2, otherwise 0 < 𝑦< 𝑥\n\nThen, 𝐸[𝑌|𝑋= 1.5] is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a joint probability density function of two random variables X and Y\n\n𝑓_{𝑋,𝑌}(𝑥, 𝑦) = {2𝑥𝑦, 0, 0 < 𝑥< 2, otherwise 0 < 𝑦< 𝑥\n\nThen, 𝐸[𝑌|𝑋= 1.5] is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3338,7 +6291,18 @@
       "questionNumber": 60,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Evaluate the following limit:\n2\nln ((𝑥 +1) cos 𝑥)\nlim = ______.\n𝑥2\n𝑥→0",
+      "questionText": "Evaluate the following limit:\n\n𝑥→0 lim <u>ln</u> (<u>(𝑥2+1</u>) <u>cos</u> <u>𝑥</u>) 𝑥^{2} = ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Evaluate the following limit:\n\n𝑥→0 lim <u>ln</u> (<u>(𝑥2+1</u>) <u>cos</u> <u>𝑥</u>) 𝑥^{2} = ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3373,7 +6337,18 @@
       "questionNumber": 61,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "1\n2\nLet 𝒖 = 3 , and let 𝜎 1, 𝜎 2,𝜎 3, 𝜎 4, 𝜎 be the singular values of the matrix\n5\n4\n[5 ]\n𝑴= 𝒖𝒖𝑻 (where 𝒖𝑻 is the transpose of 𝒖). The value of \\sum 5 𝜎 is ______.\n𝑖=1 𝑖",
+      "questionText": "1 2 Let 𝒖 = 3 , and let 𝜎_{1}, 𝜎_{2},𝜎_{3}, 𝜎_{4}, 𝜎_{5} be the singular values of the matrix 4 [ 5 ]\n\n𝑴= 𝒖𝒖^{𝑻} (where 𝒖^{𝑻} is the transpose of 𝒖). The value of \\sum 5 𝑖=1 𝜎_{𝑖} is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "1 2 Let 𝒖 = 3 , and let 𝜎_{1}, 𝜎_{2},𝜎_{3}, 𝜎_{4}, 𝜎_{5} be the singular values of the matrix 4 [ 5 ]\n\n𝑴= 𝒖𝒖^{𝑻} (where 𝒖^{𝑻} is the transpose of 𝒖). The value of \\sum 5 𝑖=1 𝜎_{𝑖} is ______.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3408,7 +6383,91 @@
       "questionNumber": 62,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Details of ten international cricket games between two teams \"Green\" and \"Blue\"\nare given in Table C. This table consists of matches played on different pitches,\nacross formats along with their winners. The attribute Pitch can take one of two\nvalues: spin-friendly (represented as 𝑆) or pace-friendly (represented as 𝐹). The\nattribute Format can take one of two values: one-day match (represented as 𝑂) or\ntest match (represented as 𝑇).\nA cricket organization would like to use the information given in Table C to develop\na decision-tree model to predict outcomes of future games between these two teams.\nTo develop such a model, the computed InformationGain(C, Pitch) with respect to\nthe Target is ______ (rounded off to two decimal places).\nTable C\nMatch Pitch Format Winner (Target)\nNumber\n1 𝑆 𝑇 Green\n2 𝑆 𝑇 Blue\n3 𝐹 𝑂 Blue\n4 𝑆 𝑂 Blue\n5 𝐹 𝑇 Green\n6 𝐹 𝑂 Blue\n7 𝑆 𝑂 Green\n8 𝐹 𝑇 Blue\n9 𝐹 𝑂 Blue\n10 𝑆 𝑂 Green",
+      "questionText": "Details of ten international cricket games between two teams “Green” and “Blue” are given in Table C. This table consists of matches played on different pitches, across formats along with their winners. The attribute Pitch can take one of two values: spin-friendly (represented as 𝑆) or pace-friendly (represented as 𝐹). The attribute Format can take one of two values: one-day match (represented as 𝑂) or test match (represented as 𝑇). A cricket organization would like to use the information given in Table C to develop a decision-tree model to predict outcomes of future games between these two teams. To develop such a model, the computed InformationGain(C, Pitch) with respect to the Target is ______ (rounded off to two decimal places). Table C\n\n| Match Number | Pitch | Format | Winner (Target) |\n| :--- | :--- | :--- | :--- |\n| 1 | 𝑆 | 𝑇 | Green |\n| 2 | 𝑆 | 𝑇 | Blue |\n| 3 | 𝐹 | 𝑂 | Blue |\n| 4 | 𝑆 | 𝑂 | Blue |\n| 5 | 𝐹 | 𝑇 | Green |\n| 6 | 𝐹 | 𝑂 | Blue |\n| 7 | 𝑆 | 𝑂 | Green |\n| 8 | 𝐹 | 𝑇 | Blue |\n| 9 | 𝐹 | 𝑂 | Blue |\n| 10 | 𝑆 | 𝑂 | Green |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Details of ten international cricket games between two teams \"Green\" and \"Blue\" are given in Table C. This table consists of matches played on different pitches, across formats along with their winners. The attribute Pitch can take one of two values: spin-friendly (represented as 𝑆) or pace-friendly (represented as 𝐹). The attribute Format can take one of two values: one-day match (represented as 𝑂) or test match (represented as 𝑇).\n\nA cricket organization would like to use the information given in Table C to develop a decision-tree model to predict outcomes of future games between these two teams.\n\nTo develop such a model, the computed InformationGain(C, Pitch) with respect to the Target is ______ (rounded off to two decimal places).\n\nTable C",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Match Number",
+            "Pitch",
+            "Format",
+            "Winner (Target)"
+          ],
+          "rows": [
+            [
+              "1",
+              "𝑆",
+              "𝑇",
+              "Green"
+            ],
+            [
+              "2",
+              "𝑆",
+              "𝑇",
+              "Blue"
+            ],
+            [
+              "3",
+              "𝐹",
+              "𝑂",
+              "Blue"
+            ],
+            [
+              "4",
+              "𝑆",
+              "𝑂",
+              "Blue"
+            ],
+            [
+              "5",
+              "𝐹",
+              "𝑇",
+              "Green"
+            ],
+            [
+              "6",
+              "𝐹",
+              "𝑂",
+              "Blue"
+            ],
+            [
+              "7",
+              "𝑆",
+              "𝑂",
+              "Green"
+            ],
+            [
+              "8",
+              "𝐹",
+              "𝑇",
+              "Blue"
+            ],
+            [
+              "9",
+              "𝐹",
+              "𝑂",
+              "Blue"
+            ],
+            [
+              "10",
+              "𝑆",
+              "𝑂",
+              "Green"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3443,7 +6502,24 @@
       "questionNumber": 63,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Given the two-dimensional dataset consisting of 5 data points from two classes\n(circles and squares) and assume that the Euclidean distance is used to measure the\ndistance between two points. The minimum odd value of 𝑘 in 𝑘-nearest neighbor\n⋄\nalgorithm for which the diamond ( ) shaped data point is assigned the label square\nis ______.",
+      "questionText": "Given the two-dimensional dataset consisting of 5 data points from two classes (circles and squares) and assume that the Euclidean distance is used to measure the distance between two points. The minimum odd value of 𝑘 in 𝑘-nearest neighbor algorithm for which the diamond (⋄) shaped data point is assigned the label square is ______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given the two-dimensional dataset consisting of 5 data points from two classes (circles and squares) and assume that the Euclidean distance is used to measure the distance between two points. The minimum odd value of 𝑘 in 𝑘-nearest neighbor algorithm for which the diamond (⋄) shaped data point is assigned the label square is ______.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q63_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3480,7 +6556,90 @@
       "questionNumber": 64,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Given the following Bayesian Network consisting of four Bernoulli random\nvariables and the associated conditional probability tables:\n𝑃(⋅)\n𝑈 = 0 0.5\n𝑈 = 1 0.5\n𝑃(𝑉 = 0| ⋅) 𝑃(𝑉 = 1| ⋅)\n𝑈 = 0 0.5 0.5\n𝑈 = 1 0.5 0.5\n𝑃(𝑊 = 0| ⋅) 𝑃(𝑊 = 1| ⋅)\n𝑈 = 0 1 0\n𝑈 = 1 0 1\n𝑃(𝑍 = 0| ⋅) 𝑃(𝑍 = 1| ⋅)\n𝑉 = 0 𝑊 = 0 0.5 0.5\n𝑉 = 0 𝑊 = 1 1 0\n𝑉 = 1 𝑊 = 0 1 0\n𝑉 = 1 𝑊 = 1 0.5 0.5\nThe value of 𝑃(𝑈 = 1, 𝑉 = 1, 𝑊 = 1,𝑍 = 1) = ______ (rounded off to three\ndecimal places).",
+      "questionText": "Given the following Bayesian Network consisting of four Bernoulli random variables and the associated conditional probability tables: \\(\\frac{𝑃(⋅)}{0.5}\\) \\(\\frac{𝑈=0}{𝑈=1}\\) <u>𝑈=</u> <u>1</u> <u>0.5</u>\n\n| 𝑃(𝑉 = 0| ⋅) | 𝑃(𝑉 = 1| ⋅) |\n| :--- | :--- |\n| 𝑈 = 0 | 0.5 | 0.5 |\n| 𝑈 = 1 | 0.5 | 0.5 |\n| 𝑃(𝑊 = 0| ⋅) | 𝑃(𝑊 = 1| ⋅) |\n| 𝑈 = 0 | 1 | 0 |\n| 𝑈 = 1 | 0 | 1 |\n\n| 𝑃(𝑍 = 0| ⋅) | 𝑃(𝑍 = 1| ⋅) |\n| :--- | :--- |\n| 𝑉 = 0 𝑊 = 0 | 0.5 0.5 |\n| 𝑉 = 0 𝑊 = 1 | 1 0 |\n| 𝑉 = 1 𝑊 = 0 | 1 0 |\n| 𝑉 = 1 𝑊 = 1 | 0.5 0.5 |\n\nThe value of 𝑃(𝑈= 1, 𝑉= 1, 𝑊= 1,𝑍= 1) = ______ (rounded off to three decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given the following Bayesian Network consisting of four Bernoulli random variables and the associated conditional probability tables:\n\n\\(\\frac{𝑃(⋅)}{0.5}\\) \\(\\frac{𝑈=0}{𝑈=1}\\) <u>𝑈=</u> <u>1</u> <u>0.5</u>",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑃(𝑉 = 0| ⋅)",
+            "𝑃(𝑉 = 1| ⋅)"
+          ],
+          "rows": [
+            [
+              "𝑈 = 0",
+              "0.5",
+              "0.5"
+            ],
+            [
+              "𝑈 = 1",
+              "0.5",
+              "0.5"
+            ],
+            [
+              "𝑃(𝑊 = 0| ⋅)",
+              "𝑃(𝑊 = 1| ⋅)"
+            ],
+            [
+              "𝑈 = 0",
+              "1",
+              "0"
+            ],
+            [
+              "𝑈 = 1",
+              "0",
+              "1"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑃(𝑍 = 0| ⋅)",
+            "𝑃(𝑍 = 1| ⋅)"
+          ],
+          "rows": [
+            [
+              "𝑉 = 0 𝑊 = 0",
+              "0.5 0.5"
+            ],
+            [
+              "𝑉 = 0 𝑊 = 1",
+              "1 0"
+            ],
+            [
+              "𝑉 = 1 𝑊 = 0",
+              "1 0"
+            ],
+            [
+              "𝑉 = 1 𝑊 = 1",
+              "0.5 0.5"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The value of 𝑃(𝑈= 1, 𝑉= 1, 𝑊= 1,𝑍= 1) = ______ (rounded off to three decimal places).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/da/q64_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3517,7 +6676,18 @@
       "questionNumber": 65,
       "sectionId": "da_core",
       "sectionName": "Data Science & Artificial Intelligence",
-      "questionText": "Two fair coins are tossed independently. X is a random variable that takes a value\nof 1 if both tosses are heads and 0 otherwise. Y is a random variable that takes a\nvalue of 1 if at least one of the tosses is heads and 0 otherwise.\nThe value of the covariance of X and Y is ______ (rounded off to three decimal\nplaces).",
+      "questionText": "Two fair coins are tossed independently. X is a random variable that takes a value of 1 if both tosses are heads and 0 otherwise. Y is a random variable that takes a value of 1 if at least one of the tosses is heads and 0 otherwise.\n\nThe value of the covariance of X and Y is ______ (rounded off to three decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two fair coins are tossed independently. X is a random variable that takes a value of 1 if both tosses are heads and 0 otherwise. Y is a random variable that takes a value of 1 if at least one of the tosses is heads and 0 otherwise.\n\nThe value of the covariance of X and Y is ______ (rounded off to three decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

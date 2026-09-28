@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import React from 'react';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
@@ -7,6 +8,7 @@ describe('LegalModal Component', () => {
   afterEach(() => {
     cleanup();
     vi.restoreAllMocks();
+    document.body.style.overflow = '';
   });
 
   it('should not render anything when isOpen is false', () => {
@@ -63,5 +65,23 @@ describe('LegalModal Component', () => {
 
     fireEvent.keyDown(window, { key: 'Escape', code: 'Escape' });
     expect(handleClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call onClose when clicking on the backdrop', () => {
+    const handleClose = vi.fn();
+    render(<LegalModal isOpen={true} onClose={handleClose} />);
+
+    const dialog = screen.getByRole('dialog');
+    fireEvent.click(dialog);
+    expect(handleClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('should lock document.body overflow when open and restore when closed', () => {
+    const handleClose = vi.fn();
+    const { rerender } = render(<LegalModal isOpen={true} onClose={handleClose} />);
+    expect(document.body.style.overflow).toBe('hidden');
+
+    rerender(<LegalModal isOpen={false} onClose={handleClose} />);
+    expect(document.body.style.overflow).toBe('');
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { ExamSessionService } from './examSessionService';
+import { ExamSessionService, isRemoteUser } from './examSessionService';
 import { ExamService } from './examService';
 import { ExamPaper, ExamTestSession } from '../types';
 
@@ -189,4 +189,65 @@ describe('ExamSessionService Persistent Test Session Engine', () => {
     active = await ExamSessionService.getActiveSessionsForUser('user_discard');
     expect(active).toHaveLength(0);
   });
+
+  it('TEST 18: Dirty-state tracking accurately tracks modifications and skips clean checkpoints', async () => {
+    ExamSessionService.clearDirty();
+    expect(ExamSessionService.isSessionDirty()).toBe(false);
+
+    ExamSessionService.markDirty();
+    expect(ExamSessionService.isSessionDirty()).toBe(true);
+
+    const session = ExamSessionService.createSession(samplePaper, 'user_clean_check');
+    // createSession clears dirty flag for fresh session
+    expect(ExamSessionService.isSessionDirty()).toBe(false);
+
+    // Trigger heartbeat checkpoint when NOT dirty
+    const didSync = await ExamSessionService.triggerRemoteCheckpoint(session, 'heartbeat');
+    expect(didSync).toBe(true); // Handled cleanly without errors
+    expect(ExamSessionService.isSessionDirty()).toBe(false);
+
+    // Now mark dirty and trigger section checkpoint
+    ExamSessionService.markDirty();
+    expect(ExamSessionService.isSessionDirty()).toBe(true);
+
+    await ExamSessionService.triggerRemoteCheckpoint(session, 'section');
+    expect(ExamSessionService.isSessionDirty()).toBe(false); // Cleaned after sync
+  });
+
+  it('TEST 19: In-flight concurrency lock buffers subsequent checkpoints without queue saturation', async () => {
+    const session = ExamSessionService.createSession(samplePaper, 'user_concurrency');
+    ExamSessionService.markDirty();
+
+    // Trigger checkpoint
+    const p1 = ExamSessionService.triggerRemoteCheckpoint(session, 'checkpoint');
+    // Immediately trigger a second checkpoint while p1 is in flight
+    session.userAnswers[5] = 2;
+    const p2 = ExamSessionService.triggerRemoteCheckpoint(session, 'checkpoint');
+
+    await Promise.all([p1, p2]);
+
+    const stored = ExamSessionService.getLocalSessions('user_concurrency');
+    expect(stored[0].userAnswers[5]).toBe(2);
+  });
+
+  it('TEST 20: Jittered delay calculation is bounded and test-deterministic', () => {
+    // In test environment, returns baseMs deterministically
+    const testDelay = ExamSessionService.getJitteredDelay(60000, 10000);
+    expect(testDelay).toBe(60000);
+  });
+
+  it('TEST 21: Remote user identification adheres strictly to valid UUID requirements', () => {
+    expect(isRemoteUser('guest')).toBe(false);
+    expect(isRemoteUser('demo-candidate')).toBe(false);
+    expect(isRemoteUser('usr-guest-123')).toBe(false);
+    expect(isRemoteUser('test_user_flow')).toBe(false);
+    expect(isRemoteUser('user_123')).toBe(false);
+    expect(isRemoteUser('')).toBe(false);
+    expect(isRemoteUser(undefined)).toBe(false);
+
+    // Valid Supabase UUIDv4
+    expect(isRemoteUser('550e8400-e29b-41d4-a716-446655440000')).toBe(true);
+    expect(isRemoteUser('c73bcdcc-2669-4bf6-81d3-e4ae73fb11fd')).toBe(true);
+  });
 });
+

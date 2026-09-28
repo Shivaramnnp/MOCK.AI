@@ -25,15 +25,20 @@ import { ExploreScreen } from './screens/ExploreScreen';
 import { ExamDetailScreen } from './screens/ExamDetailScreen';
 import { CompetitiveExamPlayerScreen } from './screens/CompetitiveExamPlayerScreen';
 import { CompetitiveExamResultsScreen } from './screens/CompetitiveExamResultsScreen';
+import { CommunityScreen } from './screens/CommunityScreen';
+import { StaffDashboardScreen } from './screens/StaffDashboardScreen';
 import { AdProvider } from './lib/ads/AdContext';
 
 // Services & Types
 import { storage } from './services/storage';
 import { aiService } from './services/aiService';
 import { supabaseService } from './services/supabase';
+import { staffService } from './services/staffService';
 import { ExamService } from './services/examService';
 import { ExamSessionService } from './services/examSessionService';
 import { ClassroomService } from './services/classroomService';
+import { ingestionService } from './services/ingestion/ingestionService';
+import { isIngestionError } from './types/ingestionErrors';
 import {
   AppRoute,
   TestHistory,
@@ -45,6 +50,7 @@ import {
   PublishedExam,
   ExamPaper,
   ExamTestSession,
+  CommunityPostType,
 } from './types';
 
 export const App: React.FC = () => {
@@ -75,6 +81,7 @@ export const App: React.FC = () => {
 
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [isStaff, setIsStaff] = useState<boolean>(false);
   const [isAuthLoading, setIsAuthLoading] = useState<boolean>(true);
   const [isPasswordRecoveryMode, setIsPasswordRecoveryMode] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
@@ -125,6 +132,22 @@ export const App: React.FC = () => {
   const [activeExamSession, setActiveExamSession] = useState<ExamTestSession | null>(null);
   const [userActiveSessions, setUserActiveSessions] = useState<ExamTestSession[]>([]);
 
+  // Community State & Prefilled Context
+  const [communityInitialContext, setCommunityInitialContext] = useState<{
+    type?: CommunityPostType;
+    postId?: string;
+    examId?: string;
+    editionYear?: number;
+    paperId?: string;
+    paperTitle?: string;
+    questionId?: string;
+    questionNumber?: number;
+    tier?: string;
+    shift?: string;
+    currentRoute?: string;
+    sessionId?: string;
+  } | undefined>(undefined);
+
   const refreshUserActiveSessions = useCallback(async (uid?: string) => {
     const targetUid = uid || profile.uid;
     if (!targetUid) return;
@@ -172,6 +195,8 @@ export const App: React.FC = () => {
       'explore_exam',
       'exam_player',
       'exam_results',
+      'community',
+      'staff',
       'marketplace',
       'classroom',
       'analytics',
@@ -200,13 +225,16 @@ export const App: React.FC = () => {
           setProfile(user);
           setIsAuthenticated(true);
           refreshUserActiveSessions(user.uid);
+          staffService.getStaffAuthStatus(user.uid).then((res) => setIsStaff(res.isStaff));
         } else {
           setIsAuthenticated(false);
+          setIsStaff(false);
           refreshUserActiveSessions('guest');
         }
       } catch (err) {
         console.warn('Authentication check failed:', err);
         setIsAuthenticated(false);
+        setIsStaff(false);
       } finally {
         setIsAuthLoading(false);
       }
@@ -223,6 +251,7 @@ export const App: React.FC = () => {
         setProfile(user);
         setIsAuthenticated(true);
         refreshUserActiveSessions(user.uid);
+        staffService.getStaffAuthStatus(user.uid).then((res) => setIsStaff(res.isStaff));
         // Only strip URL tokens if NOT currently in password recovery mode
         if (
           typeof window !== 'undefined' &&
@@ -280,6 +309,9 @@ export const App: React.FC = () => {
 
     const validHashRoutes: AppRoute[] = [
       'home',
+      'explore',
+      'community',
+      'staff',
       'marketplace',
       'classroom',
       'analytics',
@@ -291,6 +323,54 @@ export const App: React.FC = () => {
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavClick = (route: AppRoute) => {
+    if (route !== 'community') {
+      setCommunityInitialContext(undefined);
+    }
+    navigateTo(route);
+  };
+
+  const handleReportQuestion = (context: {
+    examId: string;
+    editionYear?: number;
+    paperId: string;
+    paperTitle?: string;
+    questionId: string;
+    questionNumber: number;
+    tier?: string;
+    shift?: string;
+  }) => {
+    setCommunityInitialContext({
+      type: 'QUESTION_REPORT',
+      ...context,
+      currentRoute: 'exam_results',
+    });
+    navigateTo('community');
+  };
+
+  const handleNavigateToQuestion = (examId: string, paperId: string, _questionNumber?: number) => {
+    const paper = ExamService.getPaperById(paperId);
+    if (paper) {
+      setActiveExamPaper(paper);
+      setActiveExamSession(null);
+      navigateTo('exam_player');
+    } else {
+      setSelectedExamId(examId);
+      navigateTo('explore_exam');
+    }
+  };
+
+  const handleNavigateToPaper = (paperId: string) => {
+    const paper = ExamService.getPaperById(paperId);
+    if (paper) {
+      setActiveExamPaper(paper);
+      setActiveExamSession(null);
+      navigateTo('exam_player');
+    } else {
+      navigateTo('explore');
+    }
   };
 
   const navigateBack = () => {
@@ -305,6 +385,9 @@ export const App: React.FC = () => {
       setCurrentRoute(target);
       const validHashRoutes: AppRoute[] = [
         'home',
+        'explore',
+        'community',
+        'staff',
         'marketplace',
         'classroom',
         'analytics',
@@ -363,46 +446,62 @@ export const App: React.FC = () => {
   };
 
   const startProcessingFile = async (base64: string, mimeType: string, fileName: string) => {
+    const isPdf = mimeType.includes('pdf') || fileName.toLowerCase().endsWith('.pdf');
     setProcessingStatus(`Analyzing and extracting questions from ${fileName}...`);
     setProcessingError(null);
     navigateTo('processing');
 
     try {
-      const questions = await aiService.extractFromBase64File(base64, mimeType, fileName);
+      const res = await ingestionService.ingest(isPdf ? 'PDF' : 'Image', {
+        base64Data: base64,
+        mimeType,
+        fileName,
+      });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: fileName.replace(/\.[^/.]+$/, '') || 'Extracted Test',
-        category: mimeType.includes('pdf') ? 'PDF Study' : 'Document',
-        questions,
+        title: res.sourceTitle || fileName.replace(/\.[^/.]+$/, '') || 'Extracted Test',
+        category: isPdf ? 'PDF Study' : 'Document',
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to extract questions from file.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to extract questions from file.';
+      setProcessingError(msg);
     }
   };
 
   const startProcessingDocx = async (file: File, fileName: string) => {
-    setProcessingStatus(`Parsing Word document: ${fileName}...`);
+    setProcessingStatus(`Parsing Word/PPT document: ${fileName}...`);
     setProcessingError(null);
     navigateTo('processing');
 
     try {
       const buffer = await file.arrayBuffer();
-      const extractedText = await aiService.extractTextFromDocx(buffer);
-      if (!extractedText.trim()) {
-        throw new Error('No readable text could be extracted from this Word document.');
+      const res = await ingestionService.ingest('Docx', {
+        arrayBuffer: buffer,
+        fileName,
+        fileType: file.type,
+      });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
       }
-      setProcessingStatus(`Generating mock exam questions from document content...`);
-      const questions = await aiService.extractFromText(extractedText, fileName);
+
       setEditorInitialData({
-        title: fileName.replace(/\.[^/.]+$/, '') || 'Document Mock Exam',
+        title: res.sourceTitle || fileName.replace(/\.[^/.]+$/, '') || 'Document Mock Exam',
         category: 'Document Study',
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to extract questions from Word document.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to extract questions from document.';
+      setProcessingError(msg);
     }
   };
 
@@ -412,60 +511,76 @@ export const App: React.FC = () => {
     navigateTo('processing');
 
     try {
-      const questions = await aiService.generateFromTopic(topic, difficulty, count);
+      const res = await ingestionService.ingest(
+        'Topic',
+        { topic, difficulty, count },
+        { requestedCount: count, difficulty: difficulty as any }
+      );
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: `${topic} Mock Exam`,
+        title: res.sourceTitle,
         category: topic,
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to generate questions from topic.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to generate questions from topic.';
+      setProcessingError(msg);
     }
   };
 
   const handleUrlSubmit = async (url: string) => {
-    setProcessingStatus(`Fetching content from ${url}...`);
+    setProcessingStatus(`Fetching and extracting content from ${url}...`);
     setProcessingError(null);
     navigateTo('processing');
 
     try {
-      const questions = await aiService.extractFromText(
-        `Webpage Source URL: ${url}\nPlease construct a competitive exam based on the primary subject of this URL.`,
-        url
-      );
+      const res = await ingestionService.ingest('WebUrl', { url });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: `Webpage Exam: ${url.replace('https://', '').slice(0, 30)}`,
+        title: res.sourceTitle,
         category: 'Web Research',
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to process webpage URL.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to process webpage URL.';
+      setProcessingError(msg);
     }
   };
 
   const handleYouTubeSubmit = async (url: string) => {
-    setProcessingStatus('Fetching YouTube video concepts & generating MCQs...');
+    setProcessingStatus('Fetching verified YouTube video transcript & generating questions...');
     setProcessingError(null);
     navigateTo('processing');
 
     try {
-      const questions = await aiService.extractFromText(
-        `YouTube Video: ${url}\nExtract core educational concepts and build competitive multiple choice questions. Ignore speaker filler words.`,
-        'YouTube Lecture'
-      );
+      const res = await ingestionService.ingest('YouTube', { url });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: 'YouTube Lecture Mock Test',
+        title: res.sourceTitle,
         category: 'Video Lecture',
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to process YouTube link.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to process YouTube link.';
+      setProcessingError(msg);
     }
   };
 
@@ -475,16 +590,22 @@ export const App: React.FC = () => {
     navigateTo('processing');
 
     try {
-      const questions = await aiService.extractFromBase64File(base64Data, 'image/jpeg', 'Camera Scan');
+      const res = await ingestionService.ingest('Camera', { base64Data });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: 'Camera Scanned Exam',
+        title: res.sourceTitle,
         category: 'Physical Exam',
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to scan image.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to scan image.';
+      setProcessingError(msg);
     }
   };
 
@@ -494,41 +615,43 @@ export const App: React.FC = () => {
     navigateTo('processing');
 
     try {
-      const questions = await aiService.extractFromText(transcript, 'Voice Notes');
+      const res = await ingestionService.ingest('Audio', { transcript });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
       setEditorInitialData({
-        title: 'Voice Dictated Exam',
+        title: res.sourceTitle,
         category: 'Audio Notes',
-        questions,
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
     } catch (err: any) {
-      setProcessingError(err.message || 'Failed to generate questions from voice.');
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to generate questions from voice.';
+      setProcessingError(msg);
     }
   };
 
-  const handleJsonSubmit = (jsonText: string) => {
+  const handleJsonSubmit = async (jsonText: string) => {
     try {
-      const parsed = JSON.parse(jsonText);
-      const questionsList = Array.isArray(parsed) ? parsed : parsed.questions || [];
-      const formatted: Question[] = questionsList.map((q: any, i: number) => ({
-        id: `q-${Date.now()}-${i}`,
-        questionText: q.questionText || `Question ${i + 1}`,
-        options: Array.isArray(q.options) && q.options.length === 4 ? q.options : ['A', 'B', 'C', 'D'],
-        correctAnswerIndex: q.correctAnswerIndex ?? 0,
-        topic: q.topic || 'General',
-        explanation: q.explanation || '',
-      }));
+      const res = await ingestionService.ingest('Json', { jsonText });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
 
       setEditorInitialData({
-        title: parsed.title || 'Imported JSON Exam',
-        category: parsed.category || 'Imported',
-        questions: formatted,
+        title: res.sourceTitle,
+        category: 'Imported',
+        questions: res.legacyQuestions,
         existingTest: null,
       });
       navigateTo('editor');
-    } catch (err) {
-      showToast('Invalid JSON structure provided.', 'error');
+    } catch (err: any) {
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Invalid JSON structure provided.';
+      showToast(msg, 'error');
     }
   };
 
@@ -571,7 +694,8 @@ export const App: React.FC = () => {
       correct,
       session.questions.length,
       wrong,
-      session.elapsedSeconds
+      session.elapsedSeconds,
+      session.userAnswers
     );
     setTests(storage.getTests());
     setStreak(storage.getStreak());
@@ -640,6 +764,8 @@ export const App: React.FC = () => {
       console.warn('Sign out warning:', err);
     }
     setIsAuthenticated(false);
+    setIsStaff(false);
+    staffService.clearAuthCache();
     setCurrentRoute('home');
     showToast('Signed out successfully.', 'info');
   };
@@ -712,7 +838,7 @@ export const App: React.FC = () => {
       {!isTakingExam && (
         <Navbar
           currentRoute={currentRoute}
-          onNavigate={navigateTo}
+          onNavigate={handleNavClick}
           streakCount={streak.currentStreak}
           userRole={profile.role}
           onRoleChange={handleRoleChange}
@@ -721,6 +847,12 @@ export const App: React.FC = () => {
           onOpenCreateModal={() => setIsSourceModalOpen(true)}
           userName={profile.fullName}
           onSignOut={handleSignOut}
+          isStaff={isStaff}
+          user={isAuthenticated ? profile : null}
+          onNavigateToCommunityPost={(postId) => {
+            setCommunityInitialContext({ postId });
+            navigateTo('community');
+          }}
         />
       )}
 
@@ -807,6 +939,7 @@ export const App: React.FC = () => {
               refreshUserActiveSessions();
               navigateTo('explore');
             }}
+            onReportQuestion={handleReportQuestion}
           />
         )}
 
@@ -863,7 +996,46 @@ export const App: React.FC = () => {
           <AnalyticsScreen
             tests={tests}
             streakCount={streak.currentStreak}
+            userId={isAuthenticated ? profile.uid : 'guest'}
             onPracticeTopic={(topic) => handleTopicSubmit(topic, 'MEDIUM', 5)}
+            onNavigateExplore={() => navigateTo('explore')}
+            onReviewTest={(testId, isCompetitive, paperId) => {
+              if (isCompetitive && paperId) {
+                const paper = ExamService.getPaperById(paperId);
+                const session = ExamSessionService.getLocalSessions(
+                  isAuthenticated ? profile.uid : 'guest'
+                ).find((s) => s.sessionId === testId);
+                if (paper && session) {
+                  setActiveExamPaper(paper);
+                  setActiveExamSession(session);
+                  navigateTo('exam_results');
+                  return;
+                }
+              }
+              const target = tests.find((t) => t.id === testId);
+              if (target) {
+                handleStartTest(target);
+              }
+            }}
+          />
+        )}
+
+        {currentRoute === 'community' && (
+          <CommunityScreen
+            user={isAuthenticated ? profile : null}
+            initialContext={communityInitialContext}
+            onNavigate={navigateTo}
+            onNavigateToQuestion={handleNavigateToQuestion}
+            onNavigateToPaper={handleNavigateToPaper}
+          />
+        )}
+
+        {currentRoute === 'staff' && (
+          <StaffDashboardScreen
+            user={isAuthenticated ? profile : null}
+            onNavigate={navigateTo}
+            onNavigateToQuestion={handleNavigateToQuestion}
+            onNavigateToPaper={handleNavigateToPaper}
           />
         )}
 
@@ -992,7 +1164,7 @@ export const App: React.FC = () => {
       {!isTakingExam && (
         <BottomNav
           currentRoute={currentRoute}
-          onNavigate={navigateTo}
+          onNavigate={handleNavClick}
         />
       )}
 
@@ -1035,6 +1207,7 @@ export const App: React.FC = () => {
         isOpen={isTopicModalOpen}
         onClose={() => setIsTopicModalOpen(false)}
         onSubmit={handleTopicSubmit}
+        onOpenAiSettings={() => navigateTo('settings')}
       />
 
       <UrlModal

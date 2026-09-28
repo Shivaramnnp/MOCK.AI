@@ -197,4 +197,17 @@ describe('AuthScreen Component', () => {
     fireEvent.click(statusBtn);
     expect(screen.getByText(/Live Infrastructure Status/i)).toBeDefined();
   });
+
+  it('should render live platform statistics without blocking authentication', () => {
+    const handleSuccess = vi.fn();
+    render(<AuthScreen onAuthSuccess={handleSuccess} />);
+
+    // Check presence of platform statistics regions
+    const statsRegions = screen.getAllByRole('region', { name: /Platform Statistics/i });
+    expect(statsRegions.length).toBeGreaterThanOrEqual(1);
+
+    // Form inputs and sign-in button remain fully functional
+    expect(screen.getByPlaceholderText('name@example.com')).toBeDefined();
+    expect(screen.getByPlaceholderText('••••••••')).toBeDefined();
+  });
 });

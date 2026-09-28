@@ -97,6 +97,7 @@ object SmartModelRouter {
      * Recommend the best provider order for a given request type.
      * Returns providers sorted by score (highest first), skipping unavailable ones.
      */
+    @Synchronized
     fun recommend(
         hasImageData: Boolean,
         preferredProviderId: String = "auto"
@@ -128,6 +129,7 @@ object SmartModelRouter {
     }
 
     /** Record a successful request for a provider (updates stats + circuit) */
+    @Synchronized
     fun recordSuccess(provider: Provider, latencyMs: Long) {
         val s = stats[provider] ?: return
         s.latencyHistory.addLast(latencyMs); if (s.latencyHistory.size > WINDOW_SIZE) s.latencyHistory.removeFirst()
@@ -155,6 +157,7 @@ object SmartModelRouter {
     }
 
     /** Record a failed request (may open the circuit breaker) */
+    @Synchronized
     fun recordFailure(provider: Provider, errorMsg: String) {
         val s = stats[provider] ?: return
         s.latencyHistory.addLast(CIRCUIT_RESET_MS)  // Penalise latency
@@ -172,6 +175,7 @@ object SmartModelRouter {
     }
 
     /** Get a health summary for display in admin/debug screens */
+    @Synchronized
     fun getHealthReport(): Map<String, Map<String, Any>> = stats.entries.associate { (p, s) ->
         p.id to mapOf(
             "circuit" to s.circuitState.name,
@@ -183,6 +187,7 @@ object SmartModelRouter {
     }
 
     /** Reset — call on app start or sign-out */
+    @Synchronized
     fun reset() {
         stats.forEach { (_, s) ->
             s.latencyHistory.clear(); s.resultHistory.clear()

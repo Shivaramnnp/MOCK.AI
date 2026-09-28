@@ -62,6 +62,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\nWhich one of the given options is appropriate to fill the blank?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If '→' denotes increasing order of intensity, then the meaning of the words\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\nWhich one of the given options is appropriate to fill the blank?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "frown",
@@ -74,22 +85,62 @@
         {
           "id": "A",
           "text": "frown",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "frown",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "fawn",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "fawn",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "vein",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vein",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "vain",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vain",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -120,6 +171,23 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts\nwith shared boundaries (excluding corners) have the same color. The minimum\nnumber of colors required is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 15 parts of the given figure are to be painted such that no two adjacent parts\nwith shared boundaries (excluding corners) have the same color. The minimum\nnumber of colors required is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q2_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "4",
@@ -132,22 +200,62 @@
         {
           "id": "A",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -180,6 +288,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the\ndigits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "How many 4-digit positive integers divisible by 3 can be formed using only the\ndigits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "24",
@@ -192,22 +311,62 @@
         {
           "id": "A",
           "text": "24",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "24",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "48",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "48",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "72",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "72",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "12",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -238,6 +397,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "The sum of the following infinite series is\n1 1 1 1 1 1 1\n2 + + + + + + + + ⋯\n2 3 4 8 9 16 27",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The sum of the following infinite series is\n1 1 1 1 1 1 1\n2 + + + + + + + + ⋯\n2 3 4 8 9 16 27",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "11/3",
@@ -250,22 +420,62 @@
         {
           "id": "A",
           "text": "11/3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11/3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "7/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "13/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "13/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -296,6 +506,23 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and\nD is represented by the pie chart shown. The total number of votes cast in the\nelection were 1,15,000, out of which 5,000 were invalid.\nShare of valid votes\nD\n15%\nA\nC 40%\n20%\nB\n25%\nBased on the data provided, the total number of valid votes received by the\ncandidates B and C is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In an election, the share of valid votes received by the four candidates A, B, C, and\nD is represented by the pie chart shown. The total number of votes cast in the\nelection were 1,15,000, out of which 5,000 were invalid.\nShare of valid votes\nD\n15%\nA\nC 40%\n20%\nB\n25%\nBased on the data provided, the total number of valid votes received by the\ncandidates B and C is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q5_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "45,000",
@@ -308,22 +535,62 @@
         {
           "id": "A",
           "text": "45,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "45,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "49,500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "49,500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "51,750",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "51,750",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "54,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "54,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -356,6 +623,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a\nnumber of mutations in a particular gene that resulted in these people developing\nthe ability to digest dairy milk.\nBased on the given passage, which of the following can be inferred?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Thousands of years ago, some people began dairy farming. This coincided with a\nnumber of mutations in a particular gene that resulted in these people developing\nthe ability to digest dairy milk.\nBased on the given passage, which of the following can be inferred?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "All human beings can digest dairy milk.",
@@ -368,22 +646,62 @@
         {
           "id": "A",
           "text": "All human beings can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "All human beings can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "No human being can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "No human being can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Digestion of dairy milk is essential for human beings.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Digestion of dairy milk is essential for human beings.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "In human beings, digestion of dairy milk resulted from a mutated gene.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In human beings, digestion of dairy milk resulted from a mutated gene.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -414,6 +732,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "The probability of a boy or a girl being born is 1/2. For a family having only\nthree children, what is the probability of having two girls and one boy?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The probability of a boy or a girl being born is 1/2. For a family having only\nthree children, what is the probability of having two girls and one boy?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3/8",
@@ -426,22 +755,62 @@
         {
           "id": "A",
           "text": "3/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -472,6 +841,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they\ninvest in each of these mutual funds are given in the table.\nMutual fund A Mutual fund B Mutual fund C\nPerson 1 ₹10,000 ₹20,000 ₹20,000\nPerson 2 ₹20,000 ₹15,000 ₹15,000\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than\nPerson 2. The annual rate of return for the mutual funds B and C is 15% each. What\nis the annual rate of return for the mutual fund A?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they\ninvest in each of these mutual funds are given in the table.\nMutual fund A Mutual fund B Mutual fund C\nPerson 1 ₹10,000 ₹20,000 ₹20,000\nPerson 2 ₹20,000 ₹15,000 ₹15,000\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than\nPerson 2. The annual rate of return for the mutual funds B and C is 15% each. What\nis the annual rate of return for the mutual fund A?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "7.5%",
@@ -484,22 +864,62 @@
         {
           "id": "A",
           "text": "7.5%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7.5%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "10%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "15%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "20%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -530,6 +950,23 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "Three different views of a dice are shown in the figure below.\nThe piece of paper that can be folded to make this dice is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three different views of a dice are shown in the figure below.\nThe piece of paper that can be folded to make this dice is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q9_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -547,22 +984,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/ar/q9_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/ar/q9_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/ar/q9_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2024/ar/q9_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/ar/q9_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -595,6 +1072,17 @@
       "sectionId": "ga",
       "sectionName": "General Aptitude",
       "questionText": "Visualize two identical right circular cones such that one is inverted over the other\nand they share a common circular base. If a cutting plane passes through the vertices\nof the assembled cones, what shape does the outer boundary of the\nresulting cross-section make?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Visualize two identical right circular cones such that one is inverted over the other\nand they share a common circular base. If a cutting plane passes through the vertices\nof the assembled cones, what shape does the outer boundary of the\nresulting cross-section make?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "A rhombus",
@@ -607,22 +1095,62 @@
         {
           "id": "A",
           "text": "A rhombus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A rhombus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "A triangle",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A triangle",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "An ellipse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An ellipse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "A hexagon",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A hexagon",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -653,6 +1181,23 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The nature of curvature of the following structural form is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The nature of curvature of the following structural form is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q11_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "monoclastic",
@@ -665,22 +1210,62 @@
         {
           "id": "A",
           "text": "monoclastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "monoclastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "synclastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "synclastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "anticlastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "anticlastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "möbius",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "möbius",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -713,6 +1298,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "As per the Ekistics Logarithmic Scale, the 'world city' is referred as",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the Ekistics Logarithmic Scale, the 'world city' is referred as",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Megalopolis",
@@ -725,22 +1321,62 @@
         {
           "id": "A",
           "text": "Megalopolis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Megalopolis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Conurbation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conurbation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Acropolis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Acropolis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Ecumenopolis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ecumenopolis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -771,6 +1407,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "In Mānasāra Silpasāstra, a bow-shaped town plan is known as",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In Mānasāra Silpasāstra, a bow-shaped town plan is known as",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Dandaka",
@@ -783,22 +1430,62 @@
         {
           "id": "A",
           "text": "Dandaka",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Dandaka",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Prastara",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Prastara",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Kārmuka",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Kārmuka",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Nandyāvarta",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Nandyāvarta",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -829,6 +1516,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The value of a property when sold at a lower price than its open market price is\ncalled",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The value of a property when sold at a lower price than its open market price is\ncalled",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Distress Value",
@@ -841,22 +1539,62 @@
         {
           "id": "A",
           "text": "Distress Value",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Distress Value",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Accommodation Value",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Accommodation Value",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Speculative Value",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Speculative Value",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Replacement Value",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Replacement Value",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -887,6 +1625,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "In a traffic survey, Enoscope is used to measure",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a traffic survey, Enoscope is used to measure",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Volume to Capacity ratio",
@@ -899,22 +1648,62 @@
         {
           "id": "A",
           "text": "Volume to Capacity ratio",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Volume to Capacity ratio",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Sight distance",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sight distance",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Spot speed",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Spot speed",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Intersection delay",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Intersection delay",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -945,6 +1734,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The author of the book Human Aspects of Urban Form is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The author of the book Human Aspects of Urban Form is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Cliff Moughtin",
@@ -957,22 +1757,62 @@
         {
           "id": "A",
           "text": "Cliff Moughtin",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cliff Moughtin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Amos Rapoport",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Amos Rapoport",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Peter Katz",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Peter Katz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Lewis Mumford",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lewis Mumford",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1003,6 +1843,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is correct for Urban Cool Island (UCI)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is correct for Urban Cool Island (UCI)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "The UCI and Urban Heat Island (UHI) cannot happen in a city at the same time.",
@@ -1015,22 +1866,62 @@
         {
           "id": "A",
           "text": "The UCI and Urban Heat Island (UHI) cannot happen in a city at the same time.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The UCI and Urban Heat Island (UHI) cannot happen in a city at the same time.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Air temperature of surrounding rural areas is warmer than that of the urban areas.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Air temperature of surrounding rural areas is warmer than that of the urban areas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Air temperature of surrounding rural areas is cooler than that of the urban areas.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Air temperature of surrounding rural areas is cooler than that of the urban areas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "UCI happens only in a snow-clad mountain.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "UCI happens only in a snow-clad mountain.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1061,6 +1952,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is correct for an oxidation pond to treat waste\nwater?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is correct for an oxidation pond to treat waste\nwater?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "It is an aerobic pond.",
@@ -1073,22 +1975,62 @@
         {
           "id": "A",
           "text": "It is an aerobic pond.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It is an aerobic pond.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "It is an anaerobic pond.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It is an anaerobic pond.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "It does not require sunlight.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It does not require sunlight.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "It does not remove Biological Oxygen Demand (BOD).",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It does not remove Biological Oxygen Demand (BOD).",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1119,6 +2061,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The conservation architect of the Maitreya Buddha Temple at Basgo, Ladakh which\nwon the 2007 UNESCO Asia-Pacific Heritage Award is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The conservation architect of the Maitreya Buddha Temple at Basgo, Ladakh which\nwon the 2007 UNESCO Asia-Pacific Heritage Award is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Abha Narain Lambah",
@@ -1131,22 +2084,62 @@
         {
           "id": "A",
           "text": "Abha Narain Lambah",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Abha Narain Lambah",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Vinod Kumar M. M.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Vinod Kumar M. M.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Rahul Mehrotra",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Rahul Mehrotra",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Saima Iqbal",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Saima Iqbal",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1177,6 +2170,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following options is/are the right sequence(s) in water treatment\nprocess?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following options is/are the right sequence(s) in water treatment\nprocess?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Coagulation → Flocculation → Sedimentation",
@@ -1189,22 +2193,62 @@
         {
           "id": "A",
           "text": "Coagulation → Flocculation → Sedimentation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Coagulation → Flocculation → Sedimentation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Sedimentation → Filtration → Disinfection",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sedimentation → Filtration → Disinfection",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Sedimentation → Flocculation → Coagulation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sedimentation → Flocculation → Coagulation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Disinfection → Filtration → Flocculation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Disinfection → Filtration → Flocculation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1241,6 +2285,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following is/are associated with Gentrification in a neighbourhood?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are associated with Gentrification in a neighbourhood?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Wealthier households displace poor households",
@@ -1253,22 +2308,62 @@
         {
           "id": "A",
           "text": "Wealthier households displace poor households",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Wealthier households displace poor households",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Poor households displace wealthier households",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Poor households displace wealthier households",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Real estate value increases",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Real estate value increases",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Real estate value decreases",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Real estate value decreases",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1305,6 +2400,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following sites is/are included in the UNESCO World Heritage\nList as on December 2022?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following sites is/are included in the UNESCO World Heritage\nList as on December 2022?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Capitol Complex, Chandigarh",
@@ -1317,22 +2423,62 @@
         {
           "id": "A",
           "text": "Capitol Complex, Chandigarh",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Capitol Complex, Chandigarh",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Moth ki Masjid, Delhi",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Moth ki Masjid, Delhi",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Keoladeo National Park, Bharatpur",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Keoladeo National Park, Bharatpur",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Paradesi Synagogue, Kochi",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Paradesi Synagogue, Kochi",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1369,6 +2515,23 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The reference points, lines and planes for drawing a two-point perspective of an\nobject are marked in the Figure below. Select the correct option(s) that match(es)\nwith the corresponding nomenclature.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The reference points, lines and planes for drawing a two-point perspective of an\nobject are marked in the Figure below. Select the correct option(s) that match(es)\nwith the corresponding nomenclature.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q23_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "R - Station point, S - Picture plane",
@@ -1381,22 +2544,62 @@
         {
           "id": "A",
           "text": "R - Station point, S - Picture plane",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R - Station point, S - Picture plane",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "R - Vanishing point, T - Picture plane",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R - Vanishing point, T - Picture plane",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - Vanishing point, T - Ground line",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - Vanishing point, T - Ground line",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Q - Ground line, S - Horizon line",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q - Ground line, S - Horizon line",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1435,6 +2638,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "India's intended Nationally Determined Contribution to the United Nations\nFramework Convention on Climate Change in 2022 include(s)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "India's intended Nationally Determined Contribution to the United Nations\nFramework Convention on Climate Change in 2022 include(s)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "reduction of emissions intensity of India's GDP by 45% by 2030 from 2005 level",
@@ -1447,22 +2661,62 @@
         {
           "id": "A",
           "text": "reduction of emissions intensity of India's GDP by 45% by 2030 from 2005 level",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "reduction of emissions intensity of India's GDP by 45% by 2030 from 2005 level",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "achieving about 50% cumulative electric power installed capacity from non-fossil\nfuel-based energy resources by 2030",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "achieving about 50% cumulative electric power installed capacity from non-fossil\nfuel-based energy resources by 2030",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "achieving the target of net-zero emission by 2030",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "achieving the target of net-zero emission by 2030",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "reduction of total projected carbon emission by one billion tonnes from 2022 to\n2025",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "reduction of total projected carbon emission by one billion tonnes from 2022 to\n2025",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1499,6 +2753,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "As per the Census of India 2011, non-notified slums is/are categorised as",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the Census of India 2011, non-notified slums is/are categorised as",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Recognised",
@@ -1511,22 +2776,62 @@
         {
           "id": "A",
           "text": "Recognised",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Recognised",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Identified",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Identified",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Unrecognised",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Unrecognised",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Authorised",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Authorised",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1563,6 +2868,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following is/are under the purview of the Energy Conservation\nBuilding Code of India 2017 ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are under the purview of the Energy Conservation\nBuilding Code of India 2017 ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Indoor Lighting",
@@ -1575,22 +2891,62 @@
         {
           "id": "A",
           "text": "Indoor Lighting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Indoor Lighting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Outdoor Lighting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Outdoor Lighting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Plug Loads",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Plug Loads",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Embodied Energy",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Embodied Energy",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1627,6 +2983,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following is/are used for municipal fiscal resource mobilisation?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are used for municipal fiscal resource mobilisation?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Property tax",
@@ -1639,22 +3006,62 @@
         {
           "id": "A",
           "text": "Property tax",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Property tax",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Development charges",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Development charges",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Income tax",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Income tax",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Salary of municipal staff",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Salary of municipal staff",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1691,6 +3098,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "A ramp with a slope of 1:12 is required for wheelchair access. Intermediate landings\nof length 1.5 m each have to be provided after every 9 m running length. The\nrunning length of a straight ramp including landing, to negotiate a level difference\nof 900 mm vertical height, in m, is _____________ (rounded off to two decimal\nplaces).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A ramp with a slope of 1:12 is required for wheelchair access. Intermediate landings\nof length 1.5 m each have to be provided after every 9 m running length. The\nrunning length of a straight ramp including landing, to negotiate a level difference\nof 900 mm vertical height, in m, is _____________ (rounded off to two decimal\nplaces).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1726,6 +3144,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the features in Group-I with the corresponding software tools in\nGroup-II.\nGroup-I Group-II\n(P) Raster Graphics Editing (1) OpenStudio\n(Q) Energy Modeling (2) GIMP\n(R) Visual Programming Interface (3) STAAD\n(S) Structural Analysis (4) Grasshopper\n(5) Radiance",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the features in Group-I with the corresponding software tools in\nGroup-II.\nGroup-I Group-II\n(P) Raster Graphics Editing (1) OpenStudio\n(Q) Energy Modeling (2) GIMP\n(R) Visual Programming Interface (3) STAAD\n(S) Structural Analysis (4) Grasshopper\n(5) Radiance",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 1, R - 2, S - 5",
@@ -1738,22 +3167,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 1, R - 2, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 1, R - 2, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 2, Q - 1, R - 4, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 1, R - 4, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 1, Q - 4, R - 5, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 4, R - 5, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 2, Q - 5, R - 1, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 5, R - 1, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1784,6 +3253,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the elements in Group-I with the corresponding buildings in Group-II.\nGroup-I Group-II\n(P) Lightweight Structure (1) Taipei 101, Taipei by Lee and Wang\nThe Gherkin, London by Foster &\n(Q) Base Isolator (2)\nPartners\nMuseum of New Zealand Te Papa\n(R) Tuned-mass Damper (3)\nTongarewa, Wellington by Ivan Mercep\nPaper Log Houses, Kobe by Shigeru\n(S) Diagrid (4)\nBan\nMetropolitan Cathedral of Christ the\n(5) King, Liverpool by Lutyens and\nGibberd",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the elements in Group-I with the corresponding buildings in Group-II.\nGroup-I Group-II\n(P) Lightweight Structure (1) Taipei 101, Taipei by Lee and Wang\nThe Gherkin, London by Foster &\n(Q) Base Isolator (2)\nPartners\nMuseum of New Zealand Te Papa\n(R) Tuned-mass Damper (3)\nTongarewa, Wellington by Ivan Mercep\nPaper Log Houses, Kobe by Shigeru\n(S) Diagrid (4)\nBan\nMetropolitan Cathedral of Christ the\n(5) King, Liverpool by Lutyens and\nGibberd",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 1, Q - 3, R - 5, S - 4",
@@ -1796,22 +3276,62 @@
         {
           "id": "A",
           "text": "P - 1, Q - 3, R - 5, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 3, R - 5, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 4, Q - 3, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4, Q - 1, R - 5, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 1, R - 5, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 3, Q - 2, R - 1, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 2, R - 1, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1842,6 +3362,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the following concepts in Group-I with their corresponding description in\nGroup-II.\nGroup-I Group-II\nAffording a clear view of the waterfront to a\n(P) N I M B Y (1)\nplot through the abutting street\nPlanning and zoning tool to regulate\n(Q) Form based code (2)\ndevelopment primarily through urban form\nEstablishment of residential areas on the\n(R) Tactical urbanism (3)\noutskirts of a city\nShort-term, low cost, scalable interventions\n(S) Suburbanisation (4)\nand policies to change a neighbourhood\nResisting any physical intervention by public\n(5) or private enterprises within their\nneighbourhood",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following concepts in Group-I with their corresponding description in\nGroup-II.\nGroup-I Group-II\nAffording a clear view of the waterfront to a\n(P) N I M B Y (1)\nplot through the abutting street\nPlanning and zoning tool to regulate\n(Q) Form based code (2)\ndevelopment primarily through urban form\nEstablishment of residential areas on the\n(R) Tactical urbanism (3)\noutskirts of a city\nShort-term, low cost, scalable interventions\n(S) Suburbanisation (4)\nand policies to change a neighbourhood\nResisting any physical intervention by public\n(5) or private enterprises within their\nneighbourhood",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 5, Q - 2, R - 4, S - 3",
@@ -1854,22 +3385,62 @@
         {
           "id": "A",
           "text": "P - 5, Q - 2, R - 4, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 2, R - 4, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 5, Q - 4, R - 3, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 4, R - 3, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 1, Q - 2, R - 4, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 2, R - 4, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 1, Q - 5, R - 4, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 5, R - 4, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1900,6 +3471,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the urban renewal projects in Group-I with the corresponding cities in\nGroup-II.\nGroup-I Group-II\n(P) Cheonggyecheon (1) New York\n(Q) The High Line (2) London\n(R) False Creek South (3) Seoul\n(S) Canary Wharf (4) Vancouver\n(5) Tokyo",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the urban renewal projects in Group-I with the corresponding cities in\nGroup-II.\nGroup-I Group-II\n(P) Cheonggyecheon (1) New York\n(Q) The High Line (2) London\n(R) False Creek South (3) Seoul\n(S) Canary Wharf (4) Vancouver\n(5) Tokyo",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 1, R - 4, S - 2",
@@ -1912,22 +3494,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 1, R - 4, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 1, R - 4, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 5, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 5, Q - 1, R - 2, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 1, R - 2, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 2, Q - 5, R - 4, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 5, R - 4, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1958,6 +3580,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the Biosphere Reserves in Group-I with their corresponding features in\nGroup-II.\nGroup-I Group-II\n(P) Gulf of Mannar (1) Ridge, Glacier\nSub-tropical/Tropical Forest,\n(Q) Sunderbans (2)\nStepped Hill\n(R) Nanda Devi (3) Swamp forest, Mangrove\n(S) Nilgiri (4) Coral Reefs, Seagrass bed\n(5) Salt Marsh, Flat Terrain",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the Biosphere Reserves in Group-I with their corresponding features in\nGroup-II.\nGroup-I Group-II\n(P) Gulf of Mannar (1) Ridge, Glacier\nSub-tropical/Tropical Forest,\n(Q) Sunderbans (2)\nStepped Hill\n(R) Nanda Devi (3) Swamp forest, Mangrove\n(S) Nilgiri (4) Coral Reefs, Seagrass bed\n(5) Salt Marsh, Flat Terrain",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 1, Q - 3, R - 4, S - 5",
@@ -1970,22 +3603,62 @@
         {
           "id": "A",
           "text": "P - 1, Q - 3, R - 4, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 3, R - 4, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 5, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4, Q - 3, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 4, Q - 2, R - 3, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 2, R - 3, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2016,6 +3689,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the terminologies in Group-I with their descriptions in Group-II.\nGroup-I Group-II\nRapid expansion of geographical\n(P) Edge City (1)\nareas of towns or cities\n(Q) Synekism (2) Violence against the city\nA secondary CBD on the edge of\n(R) Urbicide (3)\nthe city\n(S) Urban Sprawl (4) Rebuilding core city area\nUnion of several small urban\n(5)\nsettlements under one rule",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the terminologies in Group-I with their descriptions in Group-II.\nGroup-I Group-II\nRapid expansion of geographical\n(P) Edge City (1)\nareas of towns or cities\n(Q) Synekism (2) Violence against the city\nA secondary CBD on the edge of\n(R) Urbicide (3)\nthe city\n(S) Urban Sprawl (4) Rebuilding core city area\nUnion of several small urban\n(5)\nsettlements under one rule",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 5, R - 2, S - 1",
@@ -2028,22 +3712,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 5, R - 2, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 2, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 4, R - 2, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 4, R - 2, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 2, Q - 5, R - 3, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 5, R - 3, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 4, Q - 2, R - 3, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 2, R - 3, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2074,6 +3798,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Match the items in Group-I with their corresponding items in Group-II.\nGroup-I Group-II\n(P) Floating floor (1) Overflow control\n(Q) Float valve (2) Delay not affecting a project\n(R) Metal float (3) Acoustical buffer\n(S) Free float (4) Plastering equipment\n(5) Traffic flow control",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the items in Group-I with their corresponding items in Group-II.\nGroup-I Group-II\n(P) Floating floor (1) Overflow control\n(Q) Float valve (2) Delay not affecting a project\n(R) Metal float (3) Acoustical buffer\n(S) Free float (4) Plastering equipment\n(5) Traffic flow control",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 2, R - 4, S - 1",
@@ -2086,22 +3821,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 2, R - 4, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 2, R - 4, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 5, Q - 1, R - 3, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 1, R - 3, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 3, Q - 1, R - 4, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 1, R - 4, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 1, Q - 2, R - 5, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 2, R - 5, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2132,6 +3907,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "As per the URDPFI Guidelines 2015, match the type of educational facilities in\nGroup-I with the corresponding minimum population to be served per facility\nin Group-II.\nGroup-I Group-II\n(P) Integrated school (1) 4,000\n(Q) Senior secondary school (2) 2,500\n(R) College (3) 90,000\n(S) Primary school (4) 1,25,000\n(5) 7,500",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the URDPFI Guidelines 2015, match the type of educational facilities in\nGroup-I with the corresponding minimum population to be served per facility\nin Group-II.\nGroup-I Group-II\n(P) Integrated school (1) 4,000\n(Q) Senior secondary school (2) 2,500\n(R) College (3) 90,000\n(S) Primary school (4) 1,25,000\n(5) 7,500",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 4, Q - 2, R - 3, S - 1",
@@ -2144,22 +3930,62 @@
         {
           "id": "A",
           "text": "P - 4, Q - 2, R - 3, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 2, R - 3, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 5, R - 4, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 4, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 2, Q - 5, R - 1, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 5, R - 1, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 3, Q - 2, R - 4, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 2, R - 4, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2190,6 +4016,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is/are true?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are true?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Physiological Equivalent Temperature is used in outdoor thermal comfort\nevaluation.",
@@ -2202,22 +4039,62 @@
         {
           "id": "A",
           "text": "Physiological Equivalent Temperature is used in outdoor thermal comfort\nevaluation.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Physiological Equivalent Temperature is used in outdoor thermal comfort\nevaluation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Thermal Performance Index is computed using outside surface temperature of\nbuilding envelope.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Thermal Performance Index is computed using outside surface temperature of\nbuilding envelope.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Reynolds number less than 2000 refers to laminar wind flow.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reynolds number less than 2000 refers to laminar wind flow.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Reynolds number greater than 4000 refers to turbulent wind flow.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reynolds number greater than 4000 refers to turbulent wind flow.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -2256,6 +4133,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Yellow, blue-violet and red-violet are split complementary hues.",
@@ -2268,22 +4156,62 @@
         {
           "id": "A",
           "text": "Yellow, blue-violet and red-violet are split complementary hues.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Yellow, blue-violet and red-violet are split complementary hues.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Orange, green and violet are analogous combinations.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Orange, green and violet are analogous combinations.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "CMYK is a subtractive colour system.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "CMYK is a subtractive colour system.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Blue, green, orange and red are tetrad combinations.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Blue, green, orange and red are tetrad combinations.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -2322,6 +4250,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "The Royal Botanical Garden is in Kew, England.",
@@ -2334,22 +4273,62 @@
         {
           "id": "A",
           "text": "The Royal Botanical Garden is in Kew, England.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The Royal Botanical Garden is in Kew, England.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The Villa d'Este is in Tivoli, Italy.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The Villa d'Este is in Tivoli, Italy.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Indira Gandhi Memorial Tulip Garden is in Srinagar, J&K, India.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Indira Gandhi Memorial Tulip Garden is in Srinagar, J&K, India.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Shinjuku Gyoen National Garden is in Beijing, China.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Shinjuku Gyoen National Garden is in Beijing, China.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -2388,6 +4367,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following statements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Hibiscus or china rose (Hibiscus rosa-sinensis) is a shrub which has red, pink, white,\nand yellow blossoms.",
@@ -2400,22 +4390,62 @@
         {
           "id": "A",
           "text": "Hibiscus or china rose (Hibiscus rosa-sinensis) is a shrub which has red, pink, white,\nand yellow blossoms.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hibiscus or china rose (Hibiscus rosa-sinensis) is a shrub which has red, pink, white,\nand yellow blossoms.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Frangipani, champa, and plumeria alba are names of the same flowering tree.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Frangipani, champa, and plumeria alba are names of the same flowering tree.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Jacaranda (Jacarenda mimisifolia), gulmohar (delonix regia), and amaltas\n(laburnum) are flowering trees.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Jacaranda (Jacarenda mimisifolia), gulmohar (delonix regia), and amaltas\n(laburnum) are flowering trees.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The fruit of the Kadam/cadamba tree (Neolamarckia cadamba) is conical in shape\nand poisonous for humans.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The fruit of the Kadam/cadamba tree (Neolamarckia cadamba) is conical in shape\nand poisonous for humans.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -2454,6 +4484,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "Which of the following is/are component(s) of Right of Way (RoW) of a road?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are component(s) of Right of Way (RoW) of a road?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Building line",
@@ -2466,22 +4507,62 @@
         {
           "id": "A",
           "text": "Building line",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Building line",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Kerb",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Kerb",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Carriageway",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Carriageway",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Sidewalk",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sidewalk",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C;D",
@@ -2520,6 +4601,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "As per the National Building Code of India 2016, terminologies associated with fire\nfighting in a building is/are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the National Building Code of India 2016, terminologies associated with fire\nfighting in a building is/are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Refuge area",
@@ -2532,22 +4624,62 @@
         {
           "id": "A",
           "text": "Refuge area",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Refuge area",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Water sprinkler system",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Water sprinkler system",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Panic bar",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Panic bar",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Atrium",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Atrium",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C OR A;B;C;D",
@@ -2598,6 +4730,23 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "For the beam shown below, ignoring the self-weight, the maximum hogging\nmoment (in kN⋅m) generated for the loads indicated is _____________ (rounded\noff to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For the beam shown below, ignoring the self-weight, the maximum hogging\nmoment (in kN⋅m) generated for the loads indicated is _____________ (rounded\noff to one decimal place).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q43_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2635,6 +4784,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "At present, the cost of a new office equipment is 50,000 (in Indian Rupees). It has\n15% salvage value after a useful life of 5 years. Using straight line method of\ndepreciation, the book value of the equipment 3 years from now, in Indian Rupees,\nwill be _____________ (in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "At present, the cost of a new office equipment is 50,000 (in Indian Rupees). It has\n15% salvage value after a useful life of 5 years. Using straight line method of\ndepreciation, the book value of the equipment 3 years from now, in Indian Rupees,\nwill be _____________ (in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2670,6 +4830,23 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "The network diagram of a construction project is shown in the following Figure. The\nduration of each activity, in days, and the early start time of the project are denoted\nin the diagram. The total project duration along the critical path, in days,\nis _____________(in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The network diagram of a construction project is shown in the following Figure. The\nduration of each activity, in days, and the early start time of the project are denoted\nin the diagram. The total project duration along the critical path, in days,\nis _____________(in integer).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q45_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2706,7 +4883,18 @@
       "questionNumber": 46,
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
-      "questionText": "The design of a 1200 capacity concert hall considers 1/3rd female audience and\n2/3rd male audience. The Table below shows the guideline for calculating\nWater Closet requirements.\nFixture Male Female\nWater closet 1 number per 100 up to 400 and 3 numbers per 100 up to 200\nover 400, 1 number for every population and over 200,\n250 or part thereof 2 numbers for every 100 or part\nthereof\nUsing the above guideline, the number of Water Closets required for the\ntotal audience is _____________ (in integer).",
+      "questionText": "The design of a 1200 capacity concert hall considers 1/3rd female audience and\n2/3rd male audience. The Table below shows the guideline for calculating\nWater Closet requirements.\nFixture Male Female\nWater closet 1 number per 100 up to 400 and 3 numbers per 100 up to 200\nover 400, 1 number for every population and over 200,\n250 or part thereof 2 numbers for every 100 or part\nthereof\nUsing the above guideline, the number of Water Closets required for the\ntotal audience is _____________ (in integer).\nMale\n1 number per 100 up to 400 and\nover 400, 1 number for every\n250 or part thereof",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The design of a 1200 capacity concert hall considers 1/3rd female audience and\n2/3rd male audience. The Table below shows the guideline for calculating\nWater Closet requirements.\nFixture Male Female\nWater closet 1 number per 100 up to 400 and 3 numbers per 100 up to 200\nover 400, 1 number for every population and over 200,\n250 or part thereof 2 numbers for every 100 or part\nthereof\nUsing the above guideline, the number of Water Closets required for the\ntotal audience is _____________ (in integer).\nMale\n1 number per 100 up to 400 and\nover 400, 1 number for every\n250 or part thereof",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2742,6 +4930,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "A declining Industrial Town has proposed to improve water sustainability by\nreducing stormwater runoff through change of land use land cover (LULC), as\nshown in the Table below, to attract new residents.\nRunoff Existing Area Proposed Area\nLULC\nCoefficient in hectare in hectare\nIndustrial 0.7 1500 800\nResidential 0.5 1000 1200\nPark and Playgrounds 0.25 1200 1000\nForest 0.15 300 1000\nConsidering a flat topography and zero additional runoff from the adjoining areas,\nthe reduction in run-off generation for a 400 mm rainfall event in the industrial town\nfor the proposed intervention, in cubic meters, is __________ \\times 106 (rounded off to\ntwo decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A declining Industrial Town has proposed to improve water sustainability by\nreducing stormwater runoff through change of land use land cover (LULC), as\nshown in the Table below, to attract new residents.\nRunoff Existing Area Proposed Area\nLULC\nCoefficient in hectare in hectare\nIndustrial 0.7 1500 800\nResidential 0.5 1000 1200\nPark and Playgrounds 0.25 1200 1000\nForest 0.15 300 1000\nConsidering a flat topography and zero additional runoff from the adjoining areas,\nthe reduction in run-off generation for a 400 mm rainfall event in the industrial town\nfor the proposed intervention, in cubic meters, is __________ \\times 106 (rounded off to\ntwo decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2777,6 +4976,17 @@
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
       "questionText": "A real estate developer is developing a township on a PPP mode. The total area of\nthe site is 2.672 hectares with an allowable FAR of 2.25, of which 20% is earmarked\nfor MIG category. The gross area of each MIG unit including common areas and\nservices is 72 m2. Assuming super built up area to be same as FAR, the\nmaximum number of MIG apartments that can be constructed\nis _____________ (in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A real estate developer is developing a township on a PPP mode. The total area of\nthe site is 2.672 hectares with an allowable FAR of 2.25, of which 20% is earmarked\nfor MIG category. The gross area of each MIG unit including common areas and\nservices is 72 m2. Assuming super built up area to be same as FAR, the\nmaximum number of MIG apartments that can be constructed\nis _____________ (in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2811,7 +5021,18 @@
       "questionNumber": 49,
       "sectionId": "ar_common",
       "sectionName": "Architecture and Planning (Part A - Common)",
-      "questionText": "A municipal town requires a volume of 70,000 m3 compacted solid waste to fill a\nlow lying land. The city has a total of 10,000 households.\nType of Percentage of Equivalent volume of compacted solid\nHouse Households waste generated/ household/ day\nLIG 30% 0.10 m3\nMIG 60% 0.15 m3\nHIG 10% 0.20 m3\nUsing the information as shown in the Table above, the estimated minimum number\nof days required to fill the low lying land is _____________ (in integer).",
+      "questionText": "A municipal town requires a volume of 70,000 m3 compacted solid waste to fill a\nlow lying land. The city has a total of 10,000 households.\nType of Percentage of Equivalent volume of compacted solid\nHouse Households waste generated/ household/ day\nLIG 30% 0.10 m3\nMIG 60% 0.15 m3\nHIG 10% 0.20 m3\nUsing the information as shown in the Table above, the estimated minimum number\nof days required to fill the low lying land is _____________ (in integer).\nRunoff\nCoefficient\n0.7\n0.5\n0.25\n0.15\nPercentage of\nHouseholds\n30%\n60%\n10%",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A municipal town requires a volume of 70,000 m3 compacted solid waste to fill a\nlow lying land. The city has a total of 10,000 households.\nType of Percentage of Equivalent volume of compacted solid\nHouse Households waste generated/ household/ day\nLIG 30% 0.10 m3\nMIG 60% 0.15 m3\nHIG 10% 0.20 m3\nUsing the information as shown in the Table above, the estimated minimum number\nof days required to fill the low lying land is _____________ (in integer).\nRunoff\nCoefficient\n0.7\n0.5\n0.25\n0.15\nPercentage of\nHouseholds\n30%\n60%\n10%",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2847,6 +5068,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Rose window is a characteristic feature of",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Rose window is a characteristic feature of",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Great Temple of Ammon, Karnak, Egypt",
@@ -2859,22 +5091,62 @@
         {
           "id": "A",
           "text": "Great Temple of Ammon, Karnak, Egypt",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Great Temple of Ammon, Karnak, Egypt",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Temple of Jupiter, Baalbek, Lebanon",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Temple of Jupiter, Baalbek, Lebanon",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Notre-Dame, Paris, France",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Notre-Dame, Paris, France",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Humayun Tomb, Nizamuddin, Delhi",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Humayun Tomb, Nizamuddin, Delhi",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2905,6 +5177,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "The schematic diagram of a unitary air-conditioner operating in cooling mode, is\nshown in the following Figure. The component P marked in the figure represents",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The schematic diagram of a unitary air-conditioner operating in cooling mode, is\nshown in the following Figure. The component P marked in the figure represents",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q51_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Condenser",
@@ -2917,22 +5206,62 @@
         {
           "id": "A",
           "text": "Condenser",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Condenser",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Evaporator",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaporator",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Compressor",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Compressor",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Expansion valve",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Expansion valve",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2965,6 +5294,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Titan Integrity Campus, Bengaluru is designed by",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Titan Integrity Campus, Bengaluru is designed by",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Christopher C. Benninger",
@@ -2977,22 +5317,62 @@
         {
           "id": "A",
           "text": "Christopher C. Benninger",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Christopher C. Benninger",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Sanjay Mohe",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sanjay Mohe",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Raj Rewal",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Raj Rewal",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Anant Raje",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Anant Raje",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -3023,6 +5403,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "With reference to the Figure below, which of the following labelling is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "With reference to the Figure below, which of the following labelling is/are correct?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q53_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "P - Extrados, Q - Key , R - Span",
@@ -3035,22 +5432,62 @@
         {
           "id": "A",
           "text": "P - Extrados, Q - Key , R - Span",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - Extrados, Q - Key , R - Span",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q - Key, S - Abutment, T - Rise",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q - Key, S - Abutment, T - Rise",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - Abutment, R - Rise, T - Extrados",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - Abutment, R - Rise, T - Extrados",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Q - Key, S - Span, T - Extrados",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q - Key, S - Span, T - Extrados",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -3089,6 +5526,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Which of the following buildings has/have pendentives as a structural element?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following buildings has/have pendentives as a structural element?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "St. Mark's Basilica, Venice, Italy",
@@ -3101,22 +5549,62 @@
         {
           "id": "A",
           "text": "St. Mark's Basilica, Venice, Italy",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "St. Mark's Basilica, Venice, Italy",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Westminster Cathedral, London, UK",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Westminster Cathedral, London, UK",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Dilwara Temple, Mount Abu, India",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Dilwara Temple, Mount Abu, India",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Hagia Irene Museum and Concert Hall, Istanbul",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hagia Irene Museum and Concert Hall, Istanbul",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3153,6 +5641,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Polytetrafluroethylene (PTFE) coated fiberglass has been used as a roofing\nmembrane in",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Polytetrafluroethylene (PTFE) coated fiberglass has been used as a roofing\nmembrane in",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Jawaharlal Nehru Stadium, New Delhi",
@@ -3165,22 +5664,62 @@
         {
           "id": "A",
           "text": "Jawaharlal Nehru Stadium, New Delhi",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Jawaharlal Nehru Stadium, New Delhi",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Eden Gardens Stadium, Kolkata",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Eden Gardens Stadium, Kolkata",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Melbourne Cricket Ground Stadium, Melbourne",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Melbourne Cricket Ground Stadium, Melbourne",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Beijing National Stadium, Beijing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Beijing National Stadium, Beijing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "MTA",
@@ -3211,6 +5750,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "A non-stop express elevator directly connects the observatory level at 80th floor of\na tower with the podium at 2nd floor level. The tower has a uniform floor-floor\nheight of 4 m. The elevator attains a maximum speed of 8 m/s. Assume 2 m/s2 as\nnet vertical acceleration and net vertical deceleration (incorporating gravity). If the\nelevator starts from a state of rest from the podium, the time taken to reach the\nobservatory, in seconds, is _____________ (rounded off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A non-stop express elevator directly connects the observatory level at 80th floor of\na tower with the podium at 2nd floor level. The tower has a uniform floor-floor\nheight of 4 m. The elevator attains a maximum speed of 8 m/s. Assume 2 m/s2 as\nnet vertical acceleration and net vertical deceleration (incorporating gravity). If the\nelevator starts from a state of rest from the podium, the time taken to reach the\nobservatory, in seconds, is _____________ (rounded off to one decimal place).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3246,6 +5796,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Match the elements in Group-I with the corresponding religious buildings in\nGroup-II.\nGroup-I Group-II\n(P) Bell capital (1) Mosque\n(Q) Mehrab (2) Hindu Temple\n(R) Gopuram (3) Greek Temple\n(S) Pediment (4) Romanesque Church\n(5) Egyptian Temple",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the elements in Group-I with the corresponding religious buildings in\nGroup-II.\nGroup-I Group-II\n(P) Bell capital (1) Mosque\n(Q) Mehrab (2) Hindu Temple\n(R) Gopuram (3) Greek Temple\n(S) Pediment (4) Romanesque Church\n(5) Egyptian Temple",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 5, Q - 1, R - 2, S - 3",
@@ -3258,22 +5819,62 @@
         {
           "id": "A",
           "text": "P - 5, Q - 1, R - 2, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 1, R - 2, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 1, R - 5, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 1, R - 5, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 5, Q - 4, R - 3, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 5, Q - 4, R - 3, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 4, Q - 1, R - 2, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 1, R - 2, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3304,6 +5905,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Match the museums in Group-I with their architects in Group-II.\nGroup-I Group-II\nIndira Gandhi Rashtriya\n(P) (1) Charles Correa\nManav Sangrahalaya, Bhopal\n(Q) Bihar Museum, Patna (2) Ram Sharma\nGandhi Memorial Museum,\n(R) (3) Romi Khosla\nAhmedabad\nMuseum of Art and Soumitro Ghosh & Nisha\n(S) (4)\nPhotography, Bengaluru Mathew\n(5) Fumihiko Maki",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the museums in Group-I with their architects in Group-II.\nGroup-I Group-II\nIndira Gandhi Rashtriya\n(P) (1) Charles Correa\nManav Sangrahalaya, Bhopal\n(Q) Bihar Museum, Patna (2) Ram Sharma\nGandhi Memorial Museum,\n(R) (3) Romi Khosla\nAhmedabad\nMuseum of Art and Soumitro Ghosh & Nisha\n(S) (4)\nPhotography, Bengaluru Mathew\n(5) Fumihiko Maki",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 4, Q - 5, R - 3, S - 1",
@@ -3316,22 +5928,62 @@
         {
           "id": "A",
           "text": "P - 4, Q - 5, R - 3, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 5, R - 3, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 4, Q - 3, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 2, Q - 3, R - 1, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 3, R - 1, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 2, Q - 5, R - 1, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 5, R - 1, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -3362,6 +6014,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Match the specially shaped bricks in Group-I with their corresponding\nnomenclature in Group-II.\nGroup-I Group-II\n(P) (1) Plinth Header\n(Q) (2) Bird's mouth\n(R) (3) Squint\n(S) (4) Double cant\n(5) Plinth stretcher",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the specially shaped bricks in Group-I with their corresponding\nnomenclature in Group-II.\nGroup-I Group-II\n(P) (1) Plinth Header\n(Q) (2) Bird's mouth\n(R) (3) Squint\n(S) (4) Double cant\n(5) Plinth stretcher",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q59_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 4, Q - 3, R - 5, S - 1",
@@ -3374,22 +6043,62 @@
         {
           "id": "A",
           "text": "P - 4, Q - 3, R - 5, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 5, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 2, R - 4, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 2, R - 4, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4, Q - 3, R - 5, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 5, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 4, Q - 1, R - 2, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 1, R - 2, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3422,6 +6131,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Which of the following statements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "The unit of Lighting Power Density is W/m2.",
@@ -3434,22 +6154,62 @@
         {
           "id": "A",
           "text": "The unit of Lighting Power Density is W/m2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The unit of Lighting Power Density is W/m2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The unit of Lighting Power Density is cd/m2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The unit of Lighting Power Density is cd/m2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The unit of Sound Power is W.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The unit of Sound Power is W.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The unit of Energy Performance Index is kWh/m2/year.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The unit of Energy Performance Index is kWh/m2/year.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -3488,6 +6248,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "Which of the following statements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Kath-kuni construction comprises layers of stone and timber.",
@@ -3500,22 +6271,62 @@
         {
           "id": "A",
           "text": "Kath-kuni construction comprises layers of stone and timber.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Kath-kuni construction comprises layers of stone and timber.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Nālukettu houses have a courtyard.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Nālukettu houses have a courtyard.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Ikra is a two-storeyed house with stone masonry and a flat-roof.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ikra is a two-storeyed house with stone masonry and a flat-roof.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Bhunga has a circular plan.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Bhunga has a circular plan.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -3554,6 +6365,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "A 5 m long Aluminium tie rod of cross-section 0.20 m \\times 0.04 m is subjected to a\ntensile force induced by its self-weight of 21.20 kg/m considering gravitational\nacceleration of 10 m/s2. If tensile Young's modulus of Aluminium is\n70,000 MPa, the maximum tensile strain in the rod is _____________ \\times 10-6\n(rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A 5 m long Aluminium tie rod of cross-section 0.20 m \\times 0.04 m is subjected to a\ntensile force induced by its self-weight of 21.20 kg/m considering gravitational\nacceleration of 10 m/s2. If tensile Young's modulus of Aluminium is\n70,000 MPa, the maximum tensile strain in the rod is _____________ \\times 10-6\n(rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q62_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3591,6 +6419,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "The following Figure shows the excavation plan of a two room structure, where the\ntrench has a uniform width of 1.10 meters. If the cumulative centre line length of\nthe trench is 41.10 meters and the required depth of concrete to be poured is 0.30\nmeters, the volume of concrete in foundation, in cubic meters, will be\n_____________(rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following Figure shows the excavation plan of a two room structure, where the\ntrench has a uniform width of 1.10 meters. If the cumulative centre line length of\nthe trench is 41.10 meters and the required depth of concrete to be poured is 0.30\nmeters, the volume of concrete in foundation, in cubic meters, will be\n_____________(rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q63_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3628,6 +6473,23 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "The decay of sound in an enclosed lecture hall of volume 3500 m3 is shown in the\nFigure below. The sound source is switched off at point P. Using the Reverberation\nTime (RT ) obtained from the figure, the calculated total sound absorption of the\n60\nhall, in Sabins, is _____________ (rounded off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The decay of sound in an enclosed lecture hall of volume 3500 m3 is shown in the\nFigure below. The sound source is switched off at point P. Using the Reverberation\nTime (RT ) obtained from the figure, the calculated total sound absorption of the\n60\nhall, in Sabins, is _____________ (rounded off to the nearest integer).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q64_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3665,6 +6527,17 @@
       "sectionId": "ar_b1",
       "sectionName": "Part B1: Architecture",
       "questionText": "A 2 TR window air-conditioner of Energy Efficiency Ratio (EER) 3.1 is catering to\na room of volume 40 m3. The air-conditioner is operational for 600 hours during\nsummer on cooling mode. The compressor is also operational for the complete\nduration. The total energy consumption of the air-conditioner during the above\nmentioned period, in kWh, is _____________ (rounded off to nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A 2 TR window air-conditioner of Energy Efficiency Ratio (EER) 3.1 is catering to\na room of volume 40 m3. The air-conditioner is operational for 600 hours during\nsummer on cooling mode. The compressor is also operational for the complete\nduration. The total energy consumption of the air-conditioner during the above\nmentioned period, in kWh, is _____________ (rounded off to nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3700,6 +6573,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Which of the following aims is set under the SVAMITVA scheme of the\nMinistry of Panchayati Raj, Government of India?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following aims is set under the SVAMITVA scheme of the\nMinistry of Panchayati Raj, Government of India?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Provide tap water connection to all households in rural areas.",
@@ -3712,22 +6596,62 @@
         {
           "id": "A",
           "text": "Provide tap water connection to all households in rural areas.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Provide tap water connection to all households in rural areas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Provide 'right to work' to the rural people falling Below Poverty Line.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Provide 'right to work' to the rural people falling Below Poverty Line.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Establish clear ownership of property in rural inhabited (Abadi) areas, by mapping\nof land parcels using improvised technology.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Establish clear ownership of property in rural inhabited (Abadi) areas, by mapping\nof land parcels using improvised technology.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Provide effective and efficient institutional platforms to enable the rural poor to\nincrease their household income by means of sustainable livelihood enhancement.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Provide effective and efficient institutional platforms to enable the rural poor to\nincrease their household income by means of sustainable livelihood enhancement.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -3758,6 +6682,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Mass Rapid Transit System is a",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Mass Rapid Transit System is a",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Fixed Route and Fixed Schedule service.",
@@ -3770,22 +6705,62 @@
         {
           "id": "A",
           "text": "Fixed Route and Fixed Schedule service.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fixed Route and Fixed Schedule service.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Fixed Route and Flexible Schedule service.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fixed Route and Flexible Schedule service.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Flexible Route and Fixed Schedule service.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Flexible Route and Fixed Schedule service.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Flexible Route and Flexible Schedule service.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Flexible Route and Flexible Schedule service.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3816,6 +6791,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Which of the following initiatives of the Government of India is also known as the\nNational Master Plan for Multi-modal Connectivity?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following initiatives of the Government of India is also known as the\nNational Master Plan for Multi-modal Connectivity?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "PM Gati Shakti",
@@ -3828,22 +6814,62 @@
         {
           "id": "A",
           "text": "PM Gati Shakti",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "PM Gati Shakti",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Bharatmala",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Bharatmala",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Parvatmala",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Parvatmala",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Sagarmala",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sagarmala",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3874,6 +6900,23 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "With reference to the Speed-Density diagram given below, which of the following\nstatements is/are correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "With reference to the Speed-Density diagram given below, which of the following\nstatements is/are correct?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q69_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Point P represents Maximum Flow",
@@ -3886,22 +6929,62 @@
         {
           "id": "A",
           "text": "Point P represents Maximum Flow",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Point P represents Maximum Flow",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Point P represents Jam Density",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Point P represents Jam Density",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Point Q represents Space Mean Speed for Free Flow condition",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Point Q represents Space Mean Speed for Free Flow condition",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Point Q represents Time Mean Speed",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Point Q represents Time Mean Speed",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -3940,6 +7023,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Which of the following statements correctly represent(s) the\nDemographic dividend of a country?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements correctly represent(s) the\nDemographic dividend of a country?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Share of working age population is larger than dependent population.",
@@ -3952,22 +7046,62 @@
         {
           "id": "A",
           "text": "Share of working age population is larger than dependent population.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Share of working age population is larger than dependent population.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Share of working age population is lesser than dependent population.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Share of working age population is lesser than dependent population.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Demographic dividend demands more job creation.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Demographic dividend demands more job creation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Demographic dividend can never lead to demographic disaster.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Demographic dividend can never lead to demographic disaster.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -4004,6 +7138,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "As per the URDPFI Guidelines 2015, choose the option(s) which indicate(s) the\nappropriate hierarchy of plans from higher to lower order.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the URDPFI Guidelines 2015, choose the option(s) which indicate(s) the\nappropriate hierarchy of plans from higher to lower order.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Perspective Plan > Development Plan > Local Area Plan",
@@ -4016,22 +7161,62 @@
         {
           "id": "A",
           "text": "Perspective Plan > Development Plan > Local Area Plan",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perspective Plan > Development Plan > Local Area Plan",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Development Plan > Special Purpose Plan > Annual Plan",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Development Plan > Special Purpose Plan > Annual Plan",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Local Area Plan > Development Plan > Annual Plan",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Local Area Plan > Development Plan > Annual Plan",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Special Purpose Plan > Perspective Plan > Local Area Plan",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Special Purpose Plan > Perspective Plan > Local Area Plan",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -4068,6 +7253,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "In 2021, a city survey report revealed a sex ratio of 930 with an estimated increase\nof 2.16% over the next 20 years. In 2041, the total population of the city is projected\nto be 15,00,000. The estimated female population in the year 2041\nwill be ____________ (in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In 2021, a city survey report revealed a sex ratio of 930 with an estimated increase\nof 2.16% over the next 20 years. In 2041, the total population of the city is projected\nto be 15,00,000. The estimated female population in the year 2041\nwill be ____________ (in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -4103,6 +7299,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Match the terms in Group-I with their descriptions in Group-II.\nGroup-I Group-II\nDevelopment on previously\n(P) Landfill site (1)\ndeveloped site\n(Q) Greenfield development (2) Land to dispose solid waste\nDevelopment on previously\n(R) Green Belt (3)\nundeveloped land\n(S) Brownfield development (4) Policy to protect livestock\nA buffer to control urban\n(5)\ndevelopment",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the terms in Group-I with their descriptions in Group-II.\nGroup-I Group-II\nDevelopment on previously\n(P) Landfill site (1)\ndeveloped site\n(Q) Greenfield development (2) Land to dispose solid waste\nDevelopment on previously\n(R) Green Belt (3)\nundeveloped land\n(S) Brownfield development (4) Policy to protect livestock\nA buffer to control urban\n(5)\ndevelopment",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 2, Q - 3, R - 1, S - 4",
@@ -4115,22 +7322,62 @@
         {
           "id": "A",
           "text": "P - 2, Q - 3, R - 1, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 3, R - 1, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 5, R - 2, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 2, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 2, Q - 3, R - 5, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 3, R - 5, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 3, Q - 4, R - 5, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 4, R - 5, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -4161,6 +7408,23 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Match the following illustrations in Group-I with their corresponding concepts in\nGroup-II.\nGroup-I Group-II\n(P)\n(1) Figure Ground\nRelationship\n(Q)\n(2) Town Planning\nScheme (TPS)\n(R)\n(3) Transit Oriented\nDevelopment (TOD)\n(S)\n(4) Transferable\nDevelopment Rights\n(TDR)\n(5) Cul-de-Sac",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following illustrations in Group-I with their corresponding concepts in\nGroup-II.\nGroup-I Group-II\n(P)\n(1) Figure Ground\nRelationship\n(Q)\n(2) Town Planning\nScheme (TPS)\n(R)\n(3) Transit Oriented\nDevelopment (TOD)\n(S)\n(4) Transferable\nDevelopment Rights\n(TDR)\n(5) Cul-de-Sac",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q74_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 4, R - 1, S - 2",
@@ -4173,22 +7437,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 4, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 4, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3, Q - 5, R - 2, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 5, R - 2, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 1, Q - 3, R - 4, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 3, R - 4, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 2, Q - 4, R - 1, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 4, R - 1, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -4221,6 +7525,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Match the following planning theories/concepts in Group-I with their\ncorresponding proponents in Group-II.\nGroup-I Group-II\n(P) Valley Section (1) McGee and Gemburg\n(Q) Third Place Theory (2) Oscar Newman\n(R) Defensible Space (3) Ray Oldenberg\n(S) Desakota Model (4) Patrick Geddes\n(5) C. A. Doxiadis",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following planning theories/concepts in Group-I with their\ncorresponding proponents in Group-II.\nGroup-I Group-II\n(P) Valley Section (1) McGee and Gemburg\n(Q) Third Place Theory (2) Oscar Newman\n(R) Defensible Space (3) Ray Oldenberg\n(S) Desakota Model (4) Patrick Geddes\n(5) C. A. Doxiadis",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 4, Q - 3, R - 2, S - 1",
@@ -4233,22 +7548,62 @@
         {
           "id": "A",
           "text": "P - 4, Q - 3, R - 2, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 2, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 4, Q - 2, R - 3, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 2, R - 3, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 1, Q - 3, R - 5, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 3, R - 5, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 2, Q - 4, R - 1, S - 5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 4, R - 1, S - 5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -4279,6 +7634,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Which of the following methods is/are used in traffic survey to measure the Running\nSpeed and Journey Speed?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following methods is/are used in traffic survey to measure the Running\nSpeed and Journey Speed?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Moving Observer Method",
@@ -4291,22 +7657,62 @@
         {
           "id": "A",
           "text": "Moving Observer Method",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Moving Observer Method",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Registration Number Method",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Registration Number Method",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Elevated Observer Method",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Elevated Observer Method",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Hardy Cross Method",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hardy Cross Method",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -4345,6 +7751,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "In the context of regional planning, which of the following terms\nrepresent(s) a region?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the context of regional planning, which of the following terms\nrepresent(s) a region?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Formal",
@@ -4357,22 +7774,62 @@
         {
           "id": "A",
           "text": "Formal",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Formal",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Functional",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Functional",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Isometric",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Isometric",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Planning",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Planning",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -4411,6 +7868,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "In a one-way single lane traffic stream, the observed average time headway\nis 2.5 seconds. The traffic flow of the above mentioned lane, in vehicle/hr,\nis _____________(in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a one-way single lane traffic stream, the observed average time headway\nis 2.5 seconds. The traffic flow of the above mentioned lane, in vehicle/hr,\nis _____________(in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -4446,6 +7914,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "The demand of a EcoCity theme park is estimated as P = 1500 - 7.5Q,\nwhere P (in Indian Rupees) is the price of a ticket for single entry, and Q (in integer)\nis the number of tickets sold per hour. The maximum revenue per hour along the\ndemand curve, in Indian Rupees, is _____________(in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The demand of a EcoCity theme park is estimated as P = 1500 - 7.5Q,\nwhere P (in Indian Rupees) is the price of a ticket for single entry, and Q (in integer)\nis the number of tickets sold per hour. The maximum revenue per hour along the\ndemand curve, in Indian Rupees, is _____________(in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -4481,6 +7960,23 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "Labour supply and urban growth are represented in X and Y axis of the Figure\nbelow. Curve OP represents the relationship between labour supply and urban\ngrowth.\nThe ratios A:A' and B:B' are 1:1.2 and 3:1.2, respectively.\nIf 6 units of labour is supplied in B, then the number of units of urban growth in B'\nwill be _____________ (rounded off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Labour supply and urban growth are represented in X and Y axis of the Figure\nbelow. Curve OP represents the relationship between labour supply and urban\ngrowth.\nThe ratios A:A' and B:B' are 1:1.2 and 3:1.2, respectively.\nIf 6 units of labour is supplied in B, then the number of units of urban growth in B'\nwill be _____________ (rounded off to one decimal place).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/ar/q80_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -4497,8 +7993,10 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IISc Bengaluru is 2.4 to 2.4.",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2024/ar/q80_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2024/ar/q80_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -4516,6 +8014,17 @@
       "sectionId": "ar_b2",
       "sectionName": "Part B2: Planning",
       "questionText": "A city with a present population of 1,75,000 is expecting an annual population\ngrowth rate of 0.85%. In a traffic assessment study, the trip generation model has\nbeen developed as Y = 142 + 0.675X, where Y is the number of daily trips generated\nwithin the city and X is the population of the city. The number of daily trips to be\ngenerated within the city after 10 years is _____________(in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A city with a present population of 1,75,000 is expecting an annual population\ngrowth rate of 0.85%. In a traffic assessment study, the trip generation model has\nbeen developed as Y = 142 + 0.675X, where Y is the number of daily trips generated\nwithin the city and X is the population of the city. The number of daily trips to be\ngenerated within the city after 10 years is _____________(in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

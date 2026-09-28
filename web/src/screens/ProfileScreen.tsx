@@ -12,6 +12,7 @@ import {
   Check,
 } from 'lucide-react';
 import { UserProfile, UserRole, TestHistory } from '../types';
+import { AnalyticsService } from '../services/analyticsService';
 
 interface ProfileScreenProps {
   profile: UserProfile;
@@ -30,14 +31,12 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({
   onNavigateSettings,
   onSignOut,
 }) => {
-  const completedTests = tests.filter((t) => t.lastTakenAt !== null);
-  const avgScore =
-    completedTests.length > 0
-      ? Math.round(
-          completedTests.reduce((acc, t) => acc + (t.bestScorePercent || 0), 0) /
-            completedTests.length
-        )
-      : 0;
+  const stats = React.useMemo(
+    () => AnalyticsService.getOverallStats(profile.uid),
+    [profile.uid, tests]
+  );
+  const totalCompletedTests = stats.totalTests;
+  const avgScore = stats.avgScore;
 
   const roles: { role: UserRole; title: string; emoji: string; desc: string }[] = [
     {
@@ -105,7 +104,7 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({
         <div className="p-4 rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border text-center">
           <span className="text-xs text-surface-muted block">Tests Taken</span>
           <span className="text-xl sm:text-2xl font-black text-surface-text dark:text-darkSurface-text mt-1 block">
-            {completedTests.length}
+            {totalCompletedTests}
           </span>
         </div>
 

@@ -1,5 +1,7 @@
 import { Question } from '../types';
 import { storage } from './storage';
+import { aiProviderService } from './ai/aiProviderService';
+import { parseQuestionsJson } from './ai/adapters/adapterHelpers';
 
 const GEMINI_ENDPOINT =
   'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
@@ -44,6 +46,17 @@ Ensure the questions test core concepts, formulas, edge cases, and reasoning.
 ${EXTRACTION_SYSTEM_PROMPT}
 `;
 
+    // 1. Try active provider from AIProviderService
+    const active = aiProviderService.getActiveAdapter();
+    if (active) {
+      try {
+        const questions = await active.adapter.generateQuestions(prompt, active.connection, { count, difficulty });
+        if (questions && questions.length > 0) return questions;
+      } catch (err) {
+        console.warn(`[AiService] Active provider (${active.connection.name}) failed, attempting fallback:`, err);
+      }
+    }
+
     return this.executeWithFallback(async (apiKey) => {
       return this.callGeminiText(prompt, apiKey);
     }, prompt);
@@ -64,12 +77,26 @@ Extract and construct comprehensive multiple choice questions testing the key fa
 ${EXTRACTION_SYSTEM_PROMPT}
 `;
 
+    // 1. Try active provider from AIProviderService
+    const active = aiProviderService.getActiveAdapter();
+    if (active) {
+      try {
+        const questions = await active.adapter.extractFromText(text, title, active.connection);
+        if (questions && questions.length > 0) return questions;
+      } catch (err) {
+        console.warn(`[AiService] Active provider (${active.connection.name}) failed, attempting fallback:`, err);
+      }
+    }
+
     return this.executeWithFallback(async (apiKey) => {
       return this.callGeminiText(prompt, apiKey);
     }, prompt);
   }
 
   getGeminiApiKey(): string {
+    const geminiConn = aiProviderService.getConnections().find((c) => c.providerId === 'google-gemini');
+    if (geminiConn?.apiKey) return geminiConn.apiKey;
+
     const settings = storage.getSettings();
     return (
       settings.geminiApiKey ||
@@ -79,6 +106,9 @@ ${EXTRACTION_SYSTEM_PROMPT}
   }
 
   getGroqApiKey(): string {
+    const groqConn = aiProviderService.getConnections().find((c) => c.providerId === 'groq');
+    if (groqConn?.apiKey) return groqConn.apiKey;
+
     const settings = storage.getSettings();
     return (
       settings.groqApiKey ||
@@ -109,17 +139,36 @@ ${EXTRACTION_SYSTEM_PROMPT}
     mimeType: string,
     fileName = 'Uploaded Document'
   ): Promise<Question[]> {
+    // 1. Try active provider if it supports base64 vision
+    const active = aiProviderService.getActiveAdapter();
+    if (active && active.adapter.extractFromBase64File) {
+      try {
+        const questions = await active.adapter.extractFromBase64File(
+          base64Data,
+          mimeType,
+          fileName,
+          active.connection
+        );
+        if (questions && questions.length > 0) return questions;
+      } catch (err) {
+        console.warn(`[AiService] Active provider vision extraction failed:`, err);
+      }
+    }
+
     const cleanBase64 = base64Data.includes(',') ? base64Data.split(',')[1] : base64Data;
     const apiKey = this.getGeminiApiKey();
 
     if (!apiKey) {
-      return this.generateSmartLocalMock(fileName, 8);
+      throw new Error(`Google Gemini API Key is required to analyze ${fileName}. Please enter your API key in Settings.`);
     }
 
     try {
-      const response = await fetch(`${GEMINI_ENDPOINT}?key=${apiKey}`, {
+      const response = await fetch(GEMINI_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': apiKey,
+        },
         body: JSON.stringify({
           contents: [
             {
@@ -152,9 +201,9 @@ ${EXTRACTION_SYSTEM_PROMPT}
       const rawText = json.candidates?.[0]?.content?.parts?.[0]?.text;
       if (!rawText) throw new Error('Empty response from Gemini');
       return this.parseQuestionsJson(rawText);
-    } catch (err) {
-      console.warn('Gemini vision call failed, falling back to smart local extraction:', err);
-      return this.generateSmartLocalMock(fileName, 6);
+    } catch (err: any) {
+      console.warn('Gemini vision call failed:', err);
+      throw new Error(`Failed to extract questions from ${fileName}: ${err.message || 'Vision inference error'}`);
     }
   }
 
@@ -175,6 +224,16 @@ ${JSON.stringify(questions, null, 2)}
 ${EXTRACTION_SYSTEM_PROMPT}
 `;
 
+    const active = aiProviderService.getActiveAdapter();
+    if (active) {
+      try {
+        const fixed = await active.adapter.fixQuestions(questions, active.connection);
+        if (fixed && fixed.length > 0) return fixed;
+      } catch (err) {
+        console.warn(`[AiService] Active provider fixQuestions failed, falling back:`, err);
+      }
+    }
+
     return this.executeWithFallback(
       async (apiKey) => {
         return this.callGeminiText(prompt, apiKey);
@@ -187,9 +246,12 @@ ${EXTRACTION_SYSTEM_PROMPT}
   // --- Internal Calling Helpers ---
 
   private async callGeminiText(prompt: string, apiKey: string): Promise<Question[]> {
-    const response = await fetch(`${GEMINI_ENDPOINT}?key=${apiKey}`, {
+    const response = await fetch(GEMINI_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': apiKey,
+      },
       body: JSON.stringify({
         contents: [
           {
@@ -247,36 +309,7 @@ ${EXTRACTION_SYSTEM_PROMPT}
   }
 
   private parseQuestionsJson(raw: string): Question[] {
-    const cleaned = raw.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim();
-    const parsed = JSON.parse(cleaned);
-    const list: any[] = Array.isArray(parsed) ? parsed : parsed.questions || [];
-
-    return list.map((q: any, idx: number) => {
-      let options: string[] = Array.isArray(q.options) ? q.options.map(String) : [];
-      while (options.length < 4) {
-        options.push(`Option ${String.fromCharCode(65 + options.length)}`);
-      }
-      if (options.length > 4) {
-        options = options.slice(0, 4);
-      }
-
-      let correctIndex = Number(q.correctAnswerIndex);
-      if (isNaN(correctIndex) || correctIndex < 0 || correctIndex > 3) {
-        correctIndex = 0;
-      }
-
-      return {
-        id: `q-${Date.now()}-${idx}`,
-        questionText: q.questionText || `Question ${idx + 1}`,
-        options,
-        correctAnswerIndex: correctIndex,
-        topic: q.topic || 'General',
-        explanation: q.explanation || 'Refer to fundamental principles for step-by-step verification.',
-        verificationStatus: 'VERIFIED',
-        trustScore: 0.95,
-        verifiedAt: Date.now(),
-      };
-    });
+    return parseQuestionsJson(raw);
   }
 
   private async executeWithFallback(
@@ -307,18 +340,24 @@ ${EXTRACTION_SYSTEM_PROMPT}
       }
     }
 
-    // 3. Fallback to smart local generator or provided default
+    // 3. Fallback to repair imperfect questions if provided (e.g. fixQuestions)
     if (defaultQuestions && defaultQuestions.length > 0) {
-      return defaultQuestions.map((q, idx) => ({
-        ...q,
-        options: q.options.length === 4 ? q.options : ['Option A', 'Option B', 'Option C', 'Option D'],
-        correctAnswerIndex: q.correctAnswerIndex >= 0 && q.correctAnswerIndex <= 3 ? q.correctAnswerIndex : 0,
-        explanation: q.explanation || 'Verified through standard curriculum principles.',
-        verificationStatus: 'VERIFIED',
-      }));
+      return defaultQuestions.map((q) => {
+        let opts = q.options;
+        while (opts.length < 4) {
+          opts.push(`Option ${String.fromCharCode(65 + opts.length)}`);
+        }
+        return {
+          ...q,
+          options: opts.slice(0, 4),
+          correctAnswerIndex: q.correctAnswerIndex >= 0 && q.correctAnswerIndex < 4 ? q.correctAnswerIndex : 0,
+          explanation: q.explanation || 'Verified through standard curriculum principles.',
+          verificationStatus: 'VERIFIED',
+        };
+      });
     }
 
-    return this.generateSmartLocalMock('Adaptive Concept Assessment', 8);
+    throw new Error('Unable to extract questions from source: All configured AI providers failed. Please check your API keys or network connection.');
   }
 
   /**

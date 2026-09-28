@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { ExamPaper, ExamTestSession, CompetitiveQuestion } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { StructuredContentRenderer } from '../components/StructuredContentRenderer';
 import { ExamAsset } from '../components/ExamAsset';
 import { AdSlot } from '../components/ads/AdSlot';
 
@@ -34,6 +35,16 @@ interface CompetitiveExamResultsScreenProps {
   paper: ExamPaper;
   onRetake: () => void;
   onExplore: () => void;
+  onReportQuestion?: (context: {
+    examId: string;
+    editionYear?: number;
+    paperId: string;
+    paperTitle?: string;
+    questionId: string;
+    questionNumber: number;
+    tier?: string;
+    shift?: string;
+  }) => void;
 }
 
 export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreenProps> = ({
@@ -41,6 +52,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
   paper,
   onRetake,
   onExplore,
+  onReportQuestion,
 }) => {
   const result = session.result;
   const questions = paper.questions;
@@ -743,30 +755,75 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             Unattempted (0)
                           </span>
                         )}
+
+                        {onReportQuestion && (
+                          <button
+                            onClick={() =>
+                              onReportQuestion({
+                                examId: paper.examId,
+                                editionYear: paper.editionYear,
+                                paperId: paper.id,
+                                paperTitle: paper.title,
+                                questionId: q.id,
+                                questionNumber: idx + 1,
+                                tier: paper.tier,
+                                shift: paper.shift,
+                              })
+                            }
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold text-surface-muted hover:text-amber-500 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/20 transition-all cursor-pointer"
+                            title="Report an issue with this question (incorrect formula, wrong answer key, rendering error, etc.)"
+                          >
+                            <AlertCircle className="w-3.5 h-3.5" />
+                            <span>Report</span>
+                          </button>
+                        )}
                       </div>
                     </div>
 
-                    {/* Question Text */}
-                    {q.questionText && q.questionText.trim().length > 0 && (
+                    {/* Question Text / Structured Academic Content */}
+                    {((q.contentBlocks && q.contentBlocks.length > 0) ||
+                      (q.questionText && q.questionText.trim().length > 0)) && (
                       <div className="text-xs sm:text-sm text-surface-text dark:text-darkSurface-text leading-relaxed font-medium">
-                        <LatexRenderer content={q.questionText} />
+                        <StructuredContentRenderer
+                          blocks={q.contentBlocks}
+                          fallbackText={q.questionText}
+                          onZoomImage={setZoomImageUrl}
+                          questionNumber={idx + 1}
+                        />
                       </div>
                     )}
 
-                    {/* Diagram if available */}
-                    {((q.diagramUrls && q.diagramUrls.length > 0) || q.diagramUrl) && (
-                      <div className="my-2 space-y-2">
-                        {(q.diagramUrls || [q.diagramUrl!]).map((url, dIdx) => (
-                          <ExamAsset
-                            key={dIdx}
-                            url={url}
-                            alt={`Diagram for Question ${idx + 1}`}
-                            variant="diagram"
-                            onZoom={setZoomImageUrl}
-                          />
-                        ))}
-                      </div>
-                    )}
+                    {/* Diagram if available (deduplicated against contentBlocks to prevent double-rendering) */}
+                    {(() => {
+                      const contentBlockAssetUrls = new Set(
+                        (q.contentBlocks || [])
+                          .filter((b) => (b.type === 'diagram' || b.type === 'image') && b.assetUrl)
+                          .map((b) => b.assetUrl!)
+                      );
+                      const unrenderedDiagramUrls = (
+                        q.diagramUrls && q.diagramUrls.length > 0
+                          ? q.diagramUrls
+                          : q.diagramUrl
+                          ? [q.diagramUrl]
+                          : []
+                      ).filter((url) => !contentBlockAssetUrls.has(url));
+
+                      if (unrenderedDiagramUrls.length === 0) return null;
+
+                      return (
+                        <div className="my-2 space-y-2">
+                          {unrenderedDiagramUrls.map((url, dIdx) => (
+                            <ExamAsset
+                              key={dIdx}
+                              url={url}
+                              alt={`Diagram for Question ${idx + 1}`}
+                              variant="diagram"
+                              onZoom={setZoomImageUrl}
+                            />
+                          ))}
+                        </div>
+                      );
+                    })()}
 
                     {/* Question Options or Numerical Answer Review */}
                     {q.questionType === 'NAT' ? (
@@ -810,10 +867,12 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             ? q.correctAnswerSet.includes(optLetter)
                             : false;
                           const optImage = q.optionImages?.[optIndex];
+                          const optBlocks = q.richOptions?.[optIndex]?.contentBlocks;
                           const hasValidText =
-                            optText &&
-                            optText.trim().length > 0 &&
-                            !/^Option\s*\([A-D]\)$/i.test(optText.trim());
+                            (optBlocks && optBlocks.length > 0) ||
+                            (optText &&
+                              optText.trim().length > 0 &&
+                              !/^Option\s*\([A-D]\)$/i.test(optText.trim()));
 
                           let optStyle =
                             'bg-surface-elev1/40 dark:bg-darkSurface-elev2/40 border-surface-border/60 text-surface-muted';
@@ -841,7 +900,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                               >
                                 {isUserPick ? '✓' : optLetter}
                               </span>
-                              <div className="flex-1 pt-0.5 space-y-1.5">
+                              <div className="flex-1 pt-0.5 space-y-1.5 option-content text-left">
                                 {optImage && (
                                   <ExamAsset
                                     key={`${q.id}-msq-res-opt-${optIndex}`}
@@ -852,8 +911,12 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                                   />
                                 )}
                                 {hasValidText && (
-                                  <div>
-                                    <LatexRenderer content={optText} />
+                                  <div className="w-full text-left">
+                                    <StructuredContentRenderer
+                                      blocks={optBlocks}
+                                      fallbackText={optText}
+                                      isOption={true}
+                                    />
                                   </div>
                                 )}
                               </div>
@@ -869,10 +932,12 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                           const isCorrectOpt = optIndex === q.correctAnswerIndex;
                           const isUserPick = userChoice === optIndex;
                           const optImage = q.optionImages?.[optIndex];
+                          const optBlocks = q.richOptions?.[optIndex]?.contentBlocks;
                           const hasValidText =
-                            optText &&
-                            optText.trim().length > 0 &&
-                            !/^Option\s*\([A-D]\)$/i.test(optText.trim());
+                            (optBlocks && optBlocks.length > 0) ||
+                            (optText &&
+                              optText.trim().length > 0 &&
+                              !/^Option\s*\([A-D]\)$/i.test(optText.trim()));
 
                           let optStyle =
                             'bg-surface-elev1/40 dark:bg-darkSurface-elev2/40 border-surface-border/60 text-surface-muted';
@@ -900,7 +965,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                               >
                                 {optLetter}
                               </span>
-                              <div className="flex-1 pt-0.5 space-y-1.5">
+                              <div className="flex-1 pt-0.5 space-y-1.5 option-content text-left">
                                 {optImage && (
                                   <ExamAsset
                                     key={`${q.id}-mcq-res-opt-${optIndex}`}
@@ -911,8 +976,12 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                                   />
                                 )}
                                 {hasValidText && (
-                                  <div>
-                                    <LatexRenderer content={optText} />
+                                  <div className="w-full text-left">
+                                    <StructuredContentRenderer
+                                      blocks={optBlocks}
+                                      fallbackText={optText}
+                                      isOption={true}
+                                    />
                                   </div>
                                 )}
                               </div>
@@ -923,21 +992,44 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                     )}
 
                     {/* Detailed Solution Box */}
-                    <div className="pt-2">
-                      <button
-                        onClick={() => toggleExplanation(idx)}
-                        className="flex items-center gap-1.5 text-xs font-bold text-brand-primary hover:underline"
-                      >
-                        <span>{isExpanded ? 'Hide Solution' : 'View Verified Solution'}</span>
-                        {isExpanded ? (
-                          <ChevronUp className="w-3.5 h-3.5" />
-                        ) : (
-                          <ChevronDown className="w-3.5 h-3.5" />
+                    <div className="pt-2 space-y-2">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <button
+                          onClick={() => toggleExplanation(idx)}
+                          className="flex items-center gap-1.5 text-xs font-bold text-brand-primary hover:underline cursor-pointer"
+                        >
+                          <span>{isExpanded ? 'Hide Solution' : 'View Verified Solution'}</span>
+                          {isExpanded ? (
+                            <ChevronUp className="w-3.5 h-3.5" />
+                          ) : (
+                            <ChevronDown className="w-3.5 h-3.5" />
+                          )}
+                        </button>
+
+                        {onReportQuestion && (
+                          <button
+                            onClick={() =>
+                              onReportQuestion({
+                                examId: paper.examId,
+                                editionYear: paper.editionYear,
+                                paperId: paper.id,
+                                paperTitle: paper.title,
+                                questionId: q.id,
+                                questionNumber: idx + 1,
+                                tier: paper.tier,
+                                shift: paper.shift,
+                              })
+                            }
+                            className="inline-flex items-center gap-1 text-[11px] font-medium text-surface-muted hover:text-amber-500 cursor-pointer transition-colors"
+                          >
+                            <AlertCircle className="w-3 h-3" />
+                            <span>Question wrong or corrupted? Report</span>
+                          </button>
                         )}
-                      </button>
+                      </div>
 
                       {isExpanded && (
-                        <div className="mt-2.5 p-4 rounded-xl bg-brand-primary/5 dark:bg-brand-primary/10 border border-brand-primary/20 space-y-2 text-xs animate-in fade-in duration-200">
+                        <div className="p-4 rounded-xl bg-brand-primary/5 dark:bg-brand-primary/10 border border-brand-primary/20 space-y-2 text-xs animate-in fade-in duration-200">
                           <span className="font-bold text-brand-primary flex items-center gap-1 text-[11px] uppercase tracking-wider">
                             <CheckCircle2 className="w-3.5 h-3.5" /> Correct Answer:{' '}
                             {q.isMta ? 'Marks to All (MTA)' : q.questionType === 'NAT' ? `Range ${q.correctAnswer}` : `Option ${q.correctAnswer}`}

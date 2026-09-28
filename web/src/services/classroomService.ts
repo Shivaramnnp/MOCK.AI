@@ -82,7 +82,24 @@ export class ClassroomService {
       const client = supabaseService.getClient();
       if (client) {
         const { data: supaClasses } = await client.from('classes').select('*');
-        if (supaClasses && Array.isArray(supaClasses)) {
+        if (supaClasses && Array.isArray(supaClasses) && supaClasses.length > 0) {
+          const classIds = supaClasses.map((sc) => sc.id);
+          // Batched single query for all class members across all classes (eliminates N+1 queries)
+          const { data: allMembers } = await client
+            .from('class_members')
+            .select('*')
+            .in('class_id', classIds);
+
+          const membersByClass = new Map<string, any[]>();
+          if (allMembers && Array.isArray(allMembers)) {
+            for (const m of allMembers) {
+              const cId = String(m.class_id || '');
+              const list = membersByClass.get(cId) || [];
+              list.push(m);
+              membersByClass.set(cId, list);
+            }
+          }
+
           for (const sc of supaClasses) {
             const id = sc.id;
             const existing: ClassModel = mergedMap.get(id) || {
@@ -96,25 +113,18 @@ export class ClassroomService {
               createdAt: new Date(sc.created_at).getTime(),
             };
 
-            // Query enrolled members for this class
-            const { data: members } = await client
-              .from('class_members')
-              .select('*')
-              .eq('class_id', id);
-
-            if (members && Array.isArray(members)) {
-              if (!existing.studentIds) existing.studentIds = [];
-              if (!existing.studentNames) existing.studentNames = {};
-              members.forEach((m: any) => {
-                const sId = String(m.student_id || '');
-                if (sId && !existing.studentIds.includes(sId)) {
-                  existing.studentIds.push(sId);
-                }
-                if (sId && m.student_name) {
-                  existing.studentNames[sId] = String(m.student_name);
-                }
-              });
-            }
+            const members = membersByClass.get(id) || [];
+            if (!existing.studentIds) existing.studentIds = [];
+            if (!existing.studentNames) existing.studentNames = {};
+            members.forEach((m: any) => {
+              const sId = String(m.student_id || '');
+              if (sId && !existing.studentIds.includes(sId)) {
+                existing.studentIds.push(sId);
+              }
+              if (sId && m.student_name) {
+                existing.studentNames[sId] = String(m.student_name);
+              }
+            });
             mergedMap.set(id, existing);
           }
         }

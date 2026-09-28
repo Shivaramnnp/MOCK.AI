@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words [sick → infirm → moribund] is analogous to [silly → _______ → daft]. Which one of the given options is appropriate to fill the blank?",
+      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\n\nWhich one of the given options is appropriate to fill the blank?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[sick → infirm → moribund] is analogous to [silly → _______ → daft].\n\nWhich one of the given options is appropriate to fill the blank?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "frown",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "frown",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "frown",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "fawn",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "fawn",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "vein",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vein",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "vain",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "vain",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -103,7 +154,24 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts\nwith shared boundaries (excluding corners) have the same color. The minimum\nnumber of colors required is",
+      "questionText": "The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/cy/q2_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "4",
@@ -116,22 +184,62 @@
         {
           "id": "A",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -163,7 +271,18 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the\ndigits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+      "questionText": "How many 4-digit positive integers divisible by 3 can be formed using only the digits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "How many 4-digit positive integers divisible by 3 can be formed using only the digits {1, 3, 4, 6, 7}, such that no digit appears more than once in a number?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "24",
@@ -176,22 +295,62 @@
         {
           "id": "A",
           "text": "24",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "24",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "48",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "48",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "72",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "72",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "12",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -221,7 +380,18 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The sum of the following infinite series is 2 + 1 2 + 1 3 + 1 4 + 1 8 + 1 9 + 1 16 + 1 27 + ⋯",
+      "questionText": "The sum of the following infinite series is\n\n2 + 1 2 + 1 3 + 1 4 + 1 8 + 1 9 + 1 16 + 1 27 + ⋯",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The sum of the following infinite series is\n\n2 + 1 2 + 1 3 + 1 4 + 1 8 + 1 9 + 1 16 + 1 27 + ⋯",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "11/3",
@@ -234,22 +404,62 @@
         {
           "id": "A",
           "text": "11/3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11/3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "7/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "13/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "13/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -279,7 +489,24 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and\nD is represented by the pie chart shown. The total number of votes cast in the\nelection were 1,15,000, out of which 5,000 were invalid. Share of valid votes D\n15% A\n40% C\n20% B\n25% Based on the data provided, the total number of valid votes received by the\ncandidates B and C is",
+      "questionText": "In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were 1,15,000, out of which 5,000 were invalid.\n\nShare of valid votes\n\nD 15% A C 40% 20%\n\nB 25% Based on the data provided, the total number of valid votes received by the candidates B and C is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were 1,15,000, out of which 5,000 were invalid.\n\nShare of valid votes\n\nD 15% A C 40% 20%\n\nB 25% Based on the data provided, the total number of valid votes received by the candidates B and C is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/cy/q5_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "45,000",
@@ -292,22 +519,62 @@
         {
           "id": "A",
           "text": "45,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "45,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "49,500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "49,500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "51,750",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "51,750",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "54,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "54,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -339,7 +606,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a\nnumber of mutations in a particular gene that resulted in these people developing\nthe ability to digest dairy milk. Based on the given passage, which of the following can be inferred?",
+      "questionText": "Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.\n\nBased on the given passage, which of the following can be inferred?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.\n\nBased on the given passage, which of the following can be inferred?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "All human beings can digest dairy milk.",
@@ -352,22 +630,62 @@
         {
           "id": "A",
           "text": "All human beings can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "All human beings can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "No human being can digest dairy milk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "No human being can digest dairy milk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Digestion of dairy milk is essential for human beings.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Digestion of dairy milk is essential for human beings.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "In human beings, digestion of dairy milk resulted from a mutated gene.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In human beings, digestion of dairy milk resulted from a mutated gene.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -397,7 +715,18 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Based on the given passage, which of the following can be inferred? The probability of a boy or a girl being born is 1/2. For a family having only\nthree children, what is the probability of having two girls and one boy?",
+      "questionText": "The probability of a boy or a girl being born is 1/2. For a family having only three children, what is the probability of having two girls and one boy?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The probability of a boy or a girl being born is 1/2. For a family having only three children, what is the probability of having two girls and one boy?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3/8",
@@ -410,22 +739,62 @@
         {
           "id": "A",
           "text": "3/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1/8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1/4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1/2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -455,7 +824,18 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they\ninvest in each of these mutual funds are given in the table. Mutual fund A\nMutual fund B\nMutual fund C Person 1\n₹10,000\n₹20,000\n₹20,000 Person 2\n₹20,000\n₹15,000\n₹15,000 At the end of one year, the total amount that Person 1 gets is ₹500 more than\nPerson 2. The annual rate of return for the mutual funds B and C is 15% each. What\nis the annual rate of return for the mutual fund A?",
+      "questionText": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table.\n\nMutual fund A Mutual fund B Mutual fund C\n\nPerson 1 ₹10,000 ₹20,000 ₹20,000\n\nPerson 2 ₹20,000 ₹15,000 ₹15,000\n\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than Person 2. The annual rate of return for the mutual funds B and C is 15% each. What is the annual rate of return for the mutual fund A?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table.\n\nMutual fund A Mutual fund B Mutual fund C\n\nPerson 1 ₹10,000 ₹20,000 ₹20,000\n\nPerson 2 ₹20,000 ₹15,000 ₹15,000\n\nAt the end of one year, the total amount that Person 1 gets is ₹500 more than Person 2. The annual rate of return for the mutual funds B and C is 15% each. What is the annual rate of return for the mutual fund A?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "7.5%",
@@ -468,22 +848,62 @@
         {
           "id": "A",
           "text": "7.5%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7.5%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "10%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "15%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "20%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -513,7 +933,24 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Three different views of a dice are shown in the figure below. The piece of paper that can be folded to make this dice is",
+      "questionText": "Three different views of a dice are shown in the figure below.\n\nThe piece of paper that can be folded to make this dice is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three different views of a dice are shown in the figure below.\n\nThe piece of paper that can be folded to make this dice is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/cy/q9_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -531,22 +968,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q9_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q9_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q9_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q9_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q9_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -578,7 +1055,18 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Visualize two identical right circular cones such that one is inverted over the other\nand they share a common circular base. If a cutting plane passes through the vertices\nof the assembled cones, what shape does the outer boundary of the\nresulting cross-section make?",
+      "questionText": "Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "A rhombus",
@@ -591,22 +1079,62 @@
         {
           "id": "A",
           "text": "A rhombus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A rhombus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "A triangle",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A triangle",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "An ellipse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An ellipse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "A hexagon",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "A hexagon",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -637,6 +1165,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following, the compound with the lowest CO stretching frequency is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following, the compound with the lowest CO stretching frequency is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "[Mn(CO)6]+",
@@ -649,22 +1188,62 @@
         {
           "id": "A",
           "text": "[Mn(CO)6]+",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Mn(CO)6]+",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "[V(CO)6]-",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[V(CO)6]-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "[Cr(CO)5]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Cr(CO)5]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "[Cr(dien)(CO)3] (dien: diethylenetriamine)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Cr(dien)(CO)3] (dien: diethylenetriamine)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "MTA",
@@ -694,7 +1273,18 @@
       "questionNumber": 12,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The ground state of [Cr(H2O)6]2+ is",
+      "questionText": "The ground state of [Cr(H_{2}O)_{6}]^{2+}is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The ground state of [Cr(H_{2}O)_{6}]^{2+}is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "5Eg",
@@ -707,22 +1297,62 @@
         {
           "id": "A",
           "text": "5Eg",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5Eg",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "5T2g",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5T2g",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6A1g",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6A1g",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6A2g",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6A2g",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -752,7 +1382,18 @@
       "questionNumber": 13,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The reaction of XeF2 with HN(SO2F)2 at 273 K in CF2Cl2 solvent yields",
+      "questionText": "The reaction of XeF_{2} with HN(SO_{2}F)_{2} at 273 K in CF_{2}Cl_{2} solvent yields",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The reaction of XeF_{2} with HN(SO_{2}F)_{2} at 273 K in CF_{2}Cl_{2} solvent yields",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "XeF4 + SO2 + NH3",
@@ -765,22 +1406,62 @@
         {
           "id": "A",
           "text": "XeF4 + SO2 + NH3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "XeF4 + SO2 + NH3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Xe + SO2 + N2 + HF",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Xe + SO2 + N2 + HF",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "SOF2 + XeO2 + NH3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "SOF2 + XeO2 + NH3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "FXeN(SO2F)2 + HF",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "FXeN(SO2F)2 + HF",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -811,6 +1492,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The major product in the following reaction sequence is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The major product in the following reaction sequence is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -823,22 +1515,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A",
@@ -869,6 +1569,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following, the chiral compound is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following, the chiral compound is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P",
@@ -881,22 +1592,62 @@
         {
           "id": "A",
           "text": "P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -926,7 +1677,18 @@
       "questionNumber": 16,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The major product in the given reaction sequence is Q. The mass spectrum of Q\nshows ([M] = molecular ion peak)",
+      "questionText": "The major product in the given reaction sequence is Q. The mass spectrum of Q shows\n\n([M] = molecular ion peak)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The major product in the given reaction sequence is Q. The mass spectrum of Q shows\n\n([M] = molecular ion peak)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "[M], [M+2], [M+4], and [M+6] peaks with relative intensity of 1:1:1:1",
@@ -939,22 +1701,62 @@
         {
           "id": "A",
           "text": "[M], [M+2], [M+4], and [M+6] peaks with relative intensity of 1:1:1:1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[M], [M+2], [M+4], and [M+6] peaks with relative intensity of 1:1:1:1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "[M], [M+2], [M+4], and [M+6] peaks with relative intensity of 1:3:3:1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[M], [M+2], [M+4], and [M+6] peaks with relative intensity of 1:3:3:1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "[M], [M+2], and [M+4] peaks with relative intensity of 1:2:1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[M], [M+2], and [M+4] peaks with relative intensity of 1:2:1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "[M] and [M+2] peaks with relative intensity of 1:1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[M] and [M+2] peaks with relative intensity of 1:1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -985,6 +1787,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The product M in the following reaction is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The product M in the following reaction is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -997,22 +1810,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A",
@@ -1042,7 +1863,18 @@
       "questionNumber": 18,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Critical micellar concentration of a surfactant is 0.008 M in water at 25 °C. If the\naggregation number of the micelles is 80, the concentration of the micelles (in M)\npresent in 0.088 M aqueous solution of the surfactant at 25 °C is",
+      "questionText": "Critical micellar concentration of a surfactant is 0.008 M in water at 25 °C. If the aggregation number of the micelles is 80, the concentration of the micelles (in M) present in 0.088 M aqueous solution of the surfactant at 25 °C is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Critical micellar concentration of a surfactant is 0.008 M in water at 25 °C. If the aggregation number of the micelles is 80, the concentration of the micelles (in M) present in 0.088 M aqueous solution of the surfactant at 25 °C is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0.010",
@@ -1055,22 +1887,62 @@
         {
           "id": "A",
           "text": "0.010",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.010",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0.001",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.001",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.008",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.008",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0.088",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.088",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1100,7 +1972,18 @@
       "questionNumber": 19,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The order and the number of classes present in a group with the irreducible\nrepresentations A1, A2, B1, B2, E1, and E2, are, respectively,",
+      "questionText": "The order and the number of classes present in a group with the irreducible representations A_{1}, A_{2}, B_{1}, B_{2}, E_{1}, and E_{2}, are, respectively,",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The order and the number of classes present in a group with the irreducible representations A_{1}, A_{2}, B_{1}, B_{2}, E_{1}, and E_{2}, are, respectively,",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "6 and 6",
@@ -1113,22 +1996,62 @@
         {
           "id": "A",
           "text": "6 and 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6 and 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "12 and 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12 and 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6 and 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6 and 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "12 and 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12 and 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1158,7 +2081,18 @@
       "questionNumber": 20,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The molecule XY2 is microwave active and its vibration-rotation spectrum shows\nonly P and R transitions. In the correct structure,",
+      "questionText": "The molecule XY_{2} is microwave active and its vibration-rotation spectrum shows only P and R transitions. In the correct structure,",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The molecule XY_{2} is microwave active and its vibration-rotation spectrum shows only P and R transitions. In the correct structure,",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "X is the central atom in linear XY2.",
@@ -1171,22 +2105,62 @@
         {
           "id": "A",
           "text": "X is the central atom in linear XY2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "X is the central atom in linear XY2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "X is the central atom in bent XY2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "X is the central atom in bent XY2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Y is the central atom in linear XY2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Y is the central atom in linear XY2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Y is the central atom in bent XY2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Y is the central atom in bent XY2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1217,6 +2191,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The complex(es) with distorted octahedral structure is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The complex(es) with distorted octahedral structure is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "[VF6]3-",
@@ -1229,22 +2214,62 @@
         {
           "id": "A",
           "text": "[VF6]3-",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[VF6]3-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "[FeF6]3-",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[FeF6]3-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "[MnF6]3-",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[MnF6]3-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "[Fe(CN)6]4-",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Fe(CN)6]4-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1281,6 +2306,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The compound(s) which show(s) the perovskite structure in solid state is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The compound(s) which show(s) the perovskite structure in solid state is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "CaTiO3",
@@ -1293,22 +2329,62 @@
         {
           "id": "A",
           "text": "CaTiO3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "CaTiO3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "NiFe2O4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "NiFe2O4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Fe3O4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fe3O4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "CsPbI3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "CsPbI3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -1345,6 +2421,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following metalloproteins, the pair(s) of non-heme proteins is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following metalloproteins, the pair(s) of non-heme proteins is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Hemoglobin and Myoglobin",
@@ -1357,22 +2444,62 @@
         {
           "id": "A",
           "text": "Hemoglobin and Myoglobin",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hemoglobin and Myoglobin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Hemocyanin and Carboxypeptidase",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hemocyanin and Carboxypeptidase",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Hemerythrin and Carbonic anhydrase",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hemerythrin and Carbonic anhydrase",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Cytochrome P-450 and Hemocyanin",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cytochrome P-450 and Hemocyanin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -1409,6 +2536,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The reaction(s) that yield(s) X as the major product is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The reaction(s) that yield(s) X as the major product is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -1421,22 +2559,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A;B",
@@ -1473,6 +2619,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The reaction(s) that yield(s) 2-methylquinoline as the major product is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The reaction(s) that yield(s) 2-methylquinoline as the major product is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -1485,22 +2642,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "B;D",
@@ -1537,6 +2702,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The correct statement(s) for decalin is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement(s) for decalin is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "cis-Decalin is thermodynamically less stable than trans-decalin.",
@@ -1549,22 +2725,62 @@
         {
           "id": "A",
           "text": "cis-Decalin is thermodynamically less stable than trans-decalin.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "cis-Decalin is thermodynamically less stable than trans-decalin.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "cis-Decalin contains plane of symmetry.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "cis-Decalin contains plane of symmetry.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "trans-Decalin undergoes ring inversion.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "trans-Decalin undergoes ring inversion.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "trans-Decalin belongs to the point group of C2h.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "trans-Decalin belongs to the point group of C2h.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -1600,7 +2816,18 @@
       "questionNumber": 27,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The correct statement(s) about 4D5/2 state of an atom is (are):",
+      "questionText": "The correct statement(s) about ^{4}D_{5/2}state of an atom is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement(s) about ^{4}D_{5/2}state of an atom is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "it corresponds to 𝐿= 2, 𝑆= 1/2, and 𝐽= 5/2.",
@@ -1613,22 +2840,62 @@
         {
           "id": "A",
           "text": "it corresponds to 𝐿= 2, 𝑆= 1/2, and 𝐽= 5/2.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "it corresponds to 𝐿= 2, 𝑆= 1/2, and 𝐽= 5/2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "it can originate from s1p2 electronic configuration.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "it can originate from s1p2 electronic configuration.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "it splits into five levels in the presence of magnetic field.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "it splits into five levels in the presence of magnetic field.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "it can show spectral transition to 4P3/2 state.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "it can show spectral transition to 4P3/2 state.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1663,6 +2930,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The correct statement(s) related to an ensemble is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement(s) related to an ensemble is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "an ensemble is a collection of an infinite number of imaginary\nreplications of the system of interest.",
@@ -1675,22 +2953,62 @@
         {
           "id": "A",
           "text": "an ensemble is a collection of an infinite number of imaginary\nreplications of the system of interest.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "an ensemble is a collection of an infinite number of imaginary\nreplications of the system of interest.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "all members of an ensemble are macroscopically identical and also have\nidentical microstates.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "all members of an ensemble are macroscopically identical and also have\nidentical microstates.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "an ensemble average of any macroscopic property of the system is\nequal to the value of the property averaged over a sufficiently long time.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "an ensemble average of any macroscopic property of the system is\nequal to the value of the property averaged over a sufficiently long time.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "all systems in a canonical ensemble need NOT have the same\ncomposition.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "all systems in a canonical ensemble need NOT have the same\ncomposition.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1726,7 +3044,18 @@
       "questionNumber": 29,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The non-dissociative adsorption of a gas on a given surface at a fixed temperature\nfollows Langmuir isotherm. The plot(s) which give(s) a straight line is (are)\n\n[Given: 𝑉 = volume of the adsorbed gas, 𝑃 = pressure of the gas]",
+      "questionText": "The non-dissociative adsorption of a gas on a given surface at a fixed temperature follows Langmuir isotherm. The plot(s) which give(s) a straight line is (are) [Given: 𝑉 = volume of the adsorbed gas, 𝑃 = pressure of the gas]",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The non-dissociative adsorption of a gas on a given surface at a fixed temperature follows Langmuir isotherm. The plot(s) which give(s) a straight line is (are) [Given: 𝑉 = volume of the adsorbed gas, 𝑃 = pressure of the gas]",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "1/𝑉 versus 1/𝑃",
@@ -1739,22 +3068,62 @@
         {
           "id": "A",
           "text": "1/𝑉 versus 1/𝑃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1/𝑉 versus 1/𝑃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑃/𝑉 versus 𝑃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑃/𝑉 versus 𝑃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑉 versus 𝑃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑉 versus 𝑃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑉 versus 1/𝑃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑉 versus 1/𝑃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1790,7 +3159,18 @@
       "questionNumber": 30,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The crystal field stabilization energy of [Cr(NH3)6]3+ with Δ0 value of\n21600 cm-1 is y cm-1. The value of |y| is___. (rounded off to the nearest integer)",
+      "questionText": "The crystal field stabilization energy of [Cr(NH_{3})_{6}]^{3+} with Δ_{0} value of 21600 cm^{-1} is y cm^{-1}. The value of |y| is___.\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The crystal field stabilization energy of [Cr(NH_{3})_{6}]^{3+} with Δ_{0} value of 21600 cm^{-1} is y cm^{-1}. The value of |y| is___.\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1825,7 +3205,18 @@
       "questionNumber": 31,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(rounded off to the nearest integer) The number of metal-metal bond(s) in the complex [(5ƞ-Cp)Mo(CO)2]2 is x and in\n[(5ƞ-Cp)2Fe2(CO)3] is y. The value of x + y is ___. (Assume 18 electron rule is followed.) (Answer in integer)",
+      "questionText": "The number of metal-metal bond(s) in the complex [(^{5}ƞ-Cp)Mo(CO)_{2}]_{2} is x and in [(^{5}ƞ-Cp)_{2}Fe_{2}(CO)_{3}] is y. The value of x + y is ___.\n\n(Assume 18 electron rule is followed.)\n\n(Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The number of metal-metal bond(s) in the complex [(^{5}ƞ-Cp)Mo(CO)_{2}]_{2} is x and in [(^{5}ƞ-Cp)_{2}Fe_{2}(CO)_{3}] is y. The value of x + y is ___.\n\n(Assume 18 electron rule is followed.)\n\n(Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1860,7 +3251,18 @@
       "questionNumber": 32,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(Assume 18 electron rule is followed.) (Answer in integer) 1H NMR spectrum of a mixture containing CH3Br (x mol) and (CH3)3CBr\n(y mol) shows two singlets at 2.7 ppm and 1.8 ppm, with the relative ratio\nof 3:1 (integration value), respectively. The value of x/y is ____. (rounded off to the nearest integer)",
+      "questionText": "^{1}H NMR spectrum of a mixture containing CH_{3}Br (x mol) and (CH_{3})_{3}CBr (y mol) shows two singlets at 2.7 ppm and 1.8 ppm, with the relative ratio of 3:1 (integration value), respectively. The value of x/y is ____.\n\n\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "^{1}H NMR spectrum of a mixture containing CH_{3}Br (x mol) and (CH_{3})_{3}CBr (y mol) shows two singlets at 2.7 ppm and 1.8 ppm, with the relative ratio of 3:1 (integration value), respectively. The value of x/y is ____.\n\n\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1895,7 +3297,18 @@
       "questionNumber": 33,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "𝑒2 The value of in atomic unit of energy is _____. 2𝜋𝜖0𝑎0 (𝑒: charge of electron; 𝑎0: Bohr radius; 𝜖0: permittivity of vacuum) (rounded off to the nearest integer)",
+      "questionText": "\\(\\frac{𝑒2}{2𝜋𝜖0𝑎0}\\)\n\n(𝑒: charge of electron; 𝑎_{0}: Bohr radius; 𝜖_{0}: permittivity of vacuum) (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "\\(\\frac{𝑒2}{2𝜋𝜖0𝑎0}\\)\n\n(𝑒: charge of electron; 𝑎_{0}: Bohr radius; 𝜖_{0}: permittivity of vacuum) (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1930,7 +3343,18 @@
       "questionNumber": 34,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "2𝜋𝜖0𝑎0 (𝑒: charge of electron; 𝑎0: Bohr radius; 𝜖0: permittivity of vacuum) (rounded off to the nearest integer) The partial vapor pressure of 0.1 molal solution of B in liquid A is 60 kPa at 300 K.\nThe partial vapor pressure (in kPa) of a solution containing B with mole fraction of\n0.1 in liquid A at 300 K is ___.\n\n(Assume the solute B obeys Henry's law. The molar mass of A is 80 g mol-1.) (rounded off to three decimal places)",
+      "questionText": "The partial vapor pressure of 0.1 molal solution of B in liquid A is 60 kPa at 300 K. The partial vapor pressure (in kPa) of a solution containing B with mole fraction of\n\n(Assume the solute B obeys Henry's law. The molar mass of A is 80 g mol^{-1}.)\n\n(rounded off to three decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The partial vapor pressure of 0.1 molal solution of B in liquid A is 60 kPa at 300 K. The partial vapor pressure (in kPa) of a solution containing B with mole fraction of\n\n(Assume the solute B obeys Henry's law. The molar mass of A is 80 g mol^{-1}.)\n\n(rounded off to three decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1965,7 +3389,24 @@
       "questionNumber": 35,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(rounded off to three decimal places) Consider the following two parallel irreversible first-order reactions, where k1 = 2k2\nat 300 K. After complete conversion of R at 300 K, the concentration of P1 in the\nreaction mixture was 15 mol L-1. The initial concentration of R (in mol L-1) was\n___. k1 P1 R k2 P2 (k1 and k2 are the rate constants) (rounded off to one decimal place)",
+      "questionText": "Consider the following two parallel irreversible first-order reactions, where k_{1} = 2k_{2} at 300 K. After complete conversion of R at 300 K, the concentration of P1 in the reaction mixture was 15 mol L^{-1}. The initial concentration of R (in mol L^{-1}) was ___. k1 P1 R k2 P2\n\n(k_{1}and k_{2} are the rate constants)\n\n(rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following two parallel irreversible first-order reactions, where k_{1} = 2k_{2} at 300 K. After complete conversion of R at 300 K, the concentration of P1 in the reaction mixture was 15 mol L^{-1}. The initial concentration of R (in mol L^{-1}) was ___. k1 P1 R k2 P2\n\n(k_{1}and k_{2} are the rate constants)\n\n(rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/cy/q35_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2002,7 +3443,18 @@
       "questionNumber": 36,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Borax on treatment with NaOH and H2O2 forms X. The compound X on reaction\nwith PhCN at 60 °C in methanol-water mixture gives Y as the major product. X and Y, respectively, are",
+      "questionText": "Borax on treatment with NaOH and H_{2}O_{2} forms X. The compound X on reaction with PhCN at 60 °C in methanol-water mixture gives Y as the major product.\n\nX and Y, respectively, are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Borax on treatment with NaOH and H_{2}O_{2} forms X. The compound X on reaction with PhCN at 60 °C in methanol-water mixture gives Y as the major product.\n\nX and Y, respectively, are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "NaB(O)(OH)2·nH2O and PhCONH2",
@@ -2015,22 +3467,62 @@
         {
           "id": "A",
           "text": "NaB(O)(OH)2·nH2O and PhCONH2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "NaB(O)(OH)2·nH2O and PhCONH2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "NaB(O)(OH)2·nH2O and PhCOOH",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "NaB(O)(OH)2·nH2O and PhCOOH",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Na2B2(O2)2(OH)4·nH2O and PhCONH2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Na2B2(O2)2(OH)4·nH2O and PhCONH2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Na2B2(O2)2(OH)4·nH2O and PhCOOH",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Na2B2(O2)2(OH)4·nH2O and PhCOOH",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2060,7 +3552,18 @@
       "questionNumber": 37,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "X and Y, respectively, are In the EPR spectrum of an aqueous solution of VOSO4 at room temperature, the\ntotal number of hyperfine splitting signals is",
+      "questionText": "In the EPR spectrum of an aqueous solution of VOSO_{4} at room temperature, the total number of hyperfine splitting signals is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the EPR spectrum of an aqueous solution of VOSO_{4} at room temperature, the total number of hyperfine splitting signals is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3",
@@ -2073,22 +3576,62 @@
         {
           "id": "A",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "7",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2118,7 +3661,18 @@
       "questionNumber": 38,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The heptacity of allyl and Cp and the ligation mode of NO in the thermodynamically\nstable complexes [(ƞx-allyl)Ru(CO)2(NO)] and [(ƞy-Cp)Ru(CO)2(NO)], respectively, are (The heptacity of allyl and Cp are denoted by ƞx and ƞy, respectively.)",
+      "questionText": "The heptacity of allyl and Cp and the ligation mode of NO in the thermodynamically stable complexes [(ƞ^{x}-allyl)Ru(CO)_{2}(NO)] and [(ƞ^{y}-Cp)Ru(CO)_{2}(NO)],\n\nrespectively, are (The heptacity of allyl and Cp are denoted by ƞ^{x} and ƞ^{y}, respectively.)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The heptacity of allyl and Cp and the ligation mode of NO in the thermodynamically stable complexes [(ƞ^{x}-allyl)Ru(CO)_{2}(NO)] and [(ƞ^{y}-Cp)Ru(CO)_{2}(NO)],\n\nrespectively, are (The heptacity of allyl and Cp are denoted by ƞ^{x} and ƞ^{y}, respectively.)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(ƞ3, NO-bent) and (ƞ5, NO-linear)",
@@ -2131,22 +3685,62 @@
         {
           "id": "A",
           "text": "(ƞ3, NO-bent) and (ƞ5, NO-linear)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ƞ3, NO-bent) and (ƞ5, NO-linear)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(ƞ3, NO-linear) and (ƞ5, NO-bent)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ƞ3, NO-linear) and (ƞ5, NO-bent)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(ƞ1, NO-bent) and (ƞ3, NO-bent)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ƞ1, NO-bent) and (ƞ3, NO-bent)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(ƞ1, NO-bent) and (ƞ5, NO-linear)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ƞ1, NO-bent) and (ƞ5, NO-linear)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2177,6 +3771,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "In the following reactions, the structures of I, II, and III, respectively, are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the following reactions, the structures of I, II, and III, respectively, are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2189,22 +3794,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A",
@@ -2234,7 +3847,18 @@
       "questionNumber": 40,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Consider the following 1H-NMR (400 MHz, DMSO-d6) data of a compound: δ in ppm: 3.85 (s, 6H), 6.73 (t, J = 2.2 Hz, 1H), 7.1 (d, J = 2.2 Hz, 2H), and 13.05\n(brs, 1H). The compound is",
+      "questionText": "Consider the following ^{1}H-NMR (400 MHz, DMSO-d_{6}) data of a compound:\n\nδ in ppm: 3.85 (s, 6H), 6.73 (t, J = 2.2 Hz, 1H), 7.1 (d, J = 2.2 Hz, 2H), and 13.05 (brs, 1H).\n\nThe compound is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following ^{1}H-NMR (400 MHz, DMSO-d_{6}) data of a compound:\n\nδ in ppm: 3.85 (s, 6H), 6.73 (t, J = 2.2 Hz, 1H), 7.1 (d, J = 2.2 Hz, 2H), and 13.05 (brs, 1H).\n\nThe compound is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2247,22 +3871,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "B",
@@ -2292,7 +3924,18 @@
       "questionNumber": 41,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Fischer presentation of D-(-)-fructose is given below. The correct structure of α-L-(+)-fructofuranose is",
+      "questionText": "Fischer presentation of D-(-)-fructose is given below.\n\nThe correct structure of α-L-(+)-fructofuranose is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Fischer presentation of D-(-)-fructose is given below.\n\nThe correct structure of α-L-(+)-fructofuranose is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2310,22 +3953,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q41_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q41_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q41_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2024/cy/q41_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2024/cy/q41_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2356,6 +4039,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The major products X and Y in the following reaction sequence are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The major products X and Y in the following reaction sequence are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2368,22 +4062,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A",
@@ -2414,6 +4116,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The major products E and F in the following reaction sequence are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The major products E and F in the following reaction sequence are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -2426,22 +4139,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A",
@@ -2471,7 +4192,18 @@
       "questionNumber": 44,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "𝜓1, 𝜓2, 𝜓3, and 𝜓4 are four Hückel molecular orbitals of benzene with orbital\nenergies 𝐸1, 𝐸2, 𝐸3, and 𝐸4, respectively. 𝜓1 = 1 2 (𝜙B + 𝜙C -𝜙E -𝜙F) 𝜓2 = 6-1 2 (𝜙A -𝜙B + 𝜙C -𝜙D + 𝜙E -𝜙F) 𝜓3 = 6-1 2 (𝜙A + 𝜙B + 𝜙C + 𝜙D + 𝜙E + 𝜙F) 𝜓4 = 12-1 2 (2𝜙A + 𝜙B -𝜙C -2𝜙D -𝜙E + 𝜙F) The correct order of the orbital energies is (The six carbon atoms of benzene are denoted by A to F and 𝜙𝐽 is the 2𝑝𝑧 orbital\nof 𝐽th carbon of benzene.)",
+      "questionText": "𝜓_{1}, 𝜓_{2}, 𝜓_{3}, and 𝜓_{4} are four Hückel molecular orbitals of benzene with orbital energies 𝐸_{1}, 𝐸_{2}, 𝐸_{3}, and 𝐸_{4}, respectively. 𝜓_{1} = 1 2 (𝜙_{B} + 𝜙_{C} -𝜙_{E} -𝜙_{F}) 𝜓2 = 6-1 2 (𝜙A -𝜙B + 𝜙C -𝜙D + 𝜙E -𝜙F) 𝜓3 = 6-1 2 (𝜙A + 𝜙B + 𝜙C + 𝜙D + 𝜙E + 𝜙F) 𝜓4 = 12-1 2 (2𝜙A + 𝜙B -𝜙C -2𝜙D -𝜙E + 𝜙F) The correct order of the orbital energies is\n\n(The six carbon atoms of benzene are denoted by A to F and 𝜙_{𝐽} is the 2𝑝_{𝑧} orbital of 𝐽^{th} carbon of benzene.)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "𝜓_{1}, 𝜓_{2}, 𝜓_{3}, and 𝜓_{4} are four Hückel molecular orbitals of benzene with orbital energies 𝐸_{1}, 𝐸_{2}, 𝐸_{3}, and 𝐸_{4}, respectively. 𝜓_{1} = 1 2 (𝜙_{B} + 𝜙_{C} -𝜙_{E} -𝜙_{F}) 𝜓2 = 6-1 2 (𝜙A -𝜙B + 𝜙C -𝜙D + 𝜙E -𝜙F) 𝜓3 = 6-1 2 (𝜙A + 𝜙B + 𝜙C + 𝜙D + 𝜙E + 𝜙F) 𝜓4 = 12-1 2 (2𝜙A + 𝜙B -𝜙C -2𝜙D -𝜙E + 𝜙F) The correct order of the orbital energies is\n\n(The six carbon atoms of benzene are denoted by A to F and 𝜙_{𝐽} is the 2𝑝_{𝑧} orbital of 𝐽^{th} carbon of benzene.)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝐸1 < 𝐸2 = 𝐸3 < 𝐸4",
@@ -2484,22 +4216,62 @@
         {
           "id": "A",
           "text": "𝐸1 < 𝐸2 = 𝐸3 < 𝐸4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐸1 < 𝐸2 = 𝐸3 < 𝐸4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝐸4 < 𝐸1 = 𝐸3 < 𝐸2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐸4 < 𝐸1 = 𝐸3 < 𝐸2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝐸3 < 𝐸1 = 𝐸4 < 𝐸2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐸3 < 𝐸1 = 𝐸4 < 𝐸2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝐸3 < 𝐸2 < 𝐸1 = 𝐸4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐸3 < 𝐸2 < 𝐸1 = 𝐸4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2529,7 +4301,18 @@
       "questionNumber": 45,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Consider the following six vibrational modes:\n\nsymmetric stretching of CO2, O-H symmetric stretching of H2O, stretching of\nHCl, stretching of H2, N-H symmetric stretching of NH3, and bending of CO2. Among these modes, if k number of modes are IR active but Raman inactive, l\nnumber of modes are IR inactive but Raman active, and m number of modes are\nboth IR and Raman active.\n\nk, l, and m, respectively, are",
+      "questionText": "Consider the following six vibrational modes:\n\nsymmetric stretching of CO_{2}, O-H symmetric stretching of H_{2}O, stretching of HCl, stretching of H_{2}, N-H symmetric stretching of NH_{3}, and bending of CO_{2}. Among these modes, if k number of modes are IR active but Raman inactive, l number of modes are IR inactive but Raman active, and m number of modes are both IR and Raman active. k, l, and m, respectively, are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following six vibrational modes:\n\nsymmetric stretching of CO_{2}, O-H symmetric stretching of H_{2}O, stretching of HCl, stretching of H_{2}, N-H symmetric stretching of NH_{3}, and bending of CO_{2}. Among these modes, if k number of modes are IR active but Raman inactive, l number of modes are IR inactive but Raman active, and m number of modes are both IR and Raman active. k, l, and m, respectively, are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1, 3, and 2",
@@ -2542,22 +4325,62 @@
         {
           "id": "A",
           "text": "1, 3, and 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1, 3, and 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "3, 1, and 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3, 1, and 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1, 2, and 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1, 2, and 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2, 1, and 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2, 1, and 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2587,7 +4410,18 @@
       "questionNumber": 46,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The correct statement for a thermally initiated radical polymerization in a solution\nis:\n\n(Assume: Steady-state and equal reactivity of the propagating radicals, termination\nreactions are only by combination, and no chain transfer reaction.\n\nGiven: Rp = rate of polymerization, DP = degree of polymerization, [I] = initiator\nconcentration, and [M] = monomer concentration.)",
+      "questionText": "The correct statement for a thermally initiated radical polymerization in a solution is:\n\n(Assume: Steady-state and equal reactivity of the propagating radicals, termination reactions are only by combination, and no chain transfer reaction. Given: Rp = rate of polymerization, DP = degree of polymerization, [I] = initiator concentration, and [M] = monomer concentration.)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement for a thermally initiated radical polymerization in a solution is:\n\n(Assume: Steady-state and equal reactivity of the propagating radicals, termination reactions are only by combination, and no chain transfer reaction. Given: Rp = rate of polymerization, DP = degree of polymerization, [I] = initiator concentration, and [M] = monomer concentration.)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "with increase in [I], both Rp and DP increase.",
@@ -2600,22 +4434,62 @@
         {
           "id": "A",
           "text": "with increase in [I], both Rp and DP increase.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "with increase in [I], both Rp and DP increase.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "with increase in [M], both Rp and DP increase.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "with increase in [M], both Rp and DP increase.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Rp decreases with increase in [I] but DP increases with increase in [M].",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Rp decreases with increase in [I] but DP increases with increase in [M].",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "DP increases with increase in [I] and DP decreases with increase in [M].",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "DP increases with increase in [I] and DP decreases with increase in [M].",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2645,7 +4519,18 @@
       "questionNumber": 47,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "If 𝑞𝑡 and 𝑄𝑡,𝑚 are the molecular and molar translational partition functions of X2,\nrespectively, then ln(𝑄𝑡,𝑚) =\n\n(𝑁 is the Avogadro number)",
+      "questionText": "If 𝑞_{𝑡} and 𝑄_{𝑡,𝑚} are the molecular and molar translational partition functions of X_{2,} respectively, then ln(𝑄_{𝑡,𝑚}) = (𝑁 is the Avogadro number)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If 𝑞_{𝑡} and 𝑄_{𝑡,𝑚} are the molecular and molar translational partition functions of X_{2,} respectively, then ln(𝑄_{𝑡,𝑚}) = (𝑁 is the Avogadro number)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑁ln 𝑞𝑡- 𝑁ln 𝑁",
@@ -2658,22 +4543,62 @@
         {
           "id": "A",
           "text": "𝑁ln 𝑞𝑡- 𝑁ln 𝑁",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑁ln 𝑞𝑡- 𝑁ln 𝑁",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑁ln 𝑞𝑡- ln 𝑁",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑁ln 𝑞𝑡- ln 𝑁",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑁ln 𝑞𝑡+ 𝑁ln 𝑁+ 𝑁",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑁ln 𝑞𝑡+ 𝑁ln 𝑁+ 𝑁",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑁ln 𝑞𝑡- 𝑁ln 𝑁+ 𝑁",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑁ln 𝑞𝑡- 𝑁ln 𝑁+ 𝑁",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2704,6 +4629,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following, the NMR active nucleus(nuclei) is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following, the NMR active nucleus(nuclei) is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "12C",
@@ -2716,22 +4652,62 @@
         {
           "id": "A",
           "text": "12C",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12C",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "19F",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "19F",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "2H",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2H",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "16O",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "16O",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -2768,6 +4744,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The complex(es) that exhibit(s) optical isomerism is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The complex(es) that exhibit(s) optical isomerism is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "[Fe(acac)3]",
@@ -2780,22 +4767,62 @@
         {
           "id": "A",
           "text": "[Fe(acac)3]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Fe(acac)3]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "cis-[Co(en)2Cl2]+",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "cis-[Co(en)2Cl2]+",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "trans-[Co(en)2Cl2]+",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "trans-[Co(en)2Cl2]+",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "[Co(en)3]3+",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "[Co(en)3]3+",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -2833,7 +4860,18 @@
       "questionNumber": 50,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "In aqueous solution of K4[Fe(CN)6], the allowed transition(s) is (are)",
+      "questionText": "In aqueous solution of K_{4}[Fe(CN)_{6}], the allowed transition(s) is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In aqueous solution of K_{4}[Fe(CN)_{6}], the allowed transition(s) is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "5T2g to 3Eg",
@@ -2846,22 +4884,62 @@
         {
           "id": "A",
           "text": "5T2g to 3Eg",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5T2g to 3Eg",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1A1g to 1T1g",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1A1g to 1T1g",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1A1g to 1T2g",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1A1g to 1T2g",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "5T2g to 5Eg",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5T2g to 5Eg",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -2898,6 +4976,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The correct option(s) that give(s) P as the major product is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct option(s) that give(s) P as the major product is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -2910,22 +4999,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A;B",
@@ -2962,6 +5059,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "The correct statement(s) regarding P, Q, R, and S is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement(s) regarding P, Q, R, and S is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "P reacts faster than Q with PhSNa in DMF as a solvent.",
@@ -2974,22 +5082,62 @@
         {
           "id": "A",
           "text": "P reacts faster than Q with PhSNa in DMF as a solvent.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P reacts faster than Q with PhSNa in DMF as a solvent.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q reacts faster than P with NaN3 in DMF as a solvent.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q reacts faster than P with NaN3 in DMF as a solvent.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R reacts faster than S when treated with TsCl/Et3N in DCM as a solvent.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R reacts faster than S when treated with TsCl/Et3N in DCM as a solvent.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "R gets oxidized faster than S when reacted with CrO3 in DCM as a solvent.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R gets oxidized faster than S when reacted with CrO3 in DCM as a solvent.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3026,6 +5174,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Consider the following reaction sequence. The correct option(s) is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following reaction sequence. The correct option(s) is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -3038,22 +5197,38 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "X = LiAlH4; L = (vinylsulfonyl)benzene",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "X = LiAlH4; L = (vinylsulfonyl)benzene",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -3089,7 +5264,18 @@
       "questionNumber": 54,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "Consider the following reaction sequence where M and N are the major products. The correct option(s) is (are)",
+      "questionText": "Consider the following reaction sequence where M and N are the major products.\n\nThe correct option(s) is (are)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following reaction sequence where M and N are the major products.\n\nThe correct option(s) is (are)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -3102,22 +5288,30 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": null,
+          "contentTypes": null
         }
       ],
       "correctAnswer": "A;C",
@@ -3153,7 +5347,18 @@
       "questionNumber": 55,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The correct statement(s) about the relationship for the H-atoms in the following\ncompounds is (are):",
+      "questionText": "The correct statement(s) about the relationship for the H-atoms in the following compounds is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The correct statement(s) about the relationship for the H-atoms in the following compounds is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "H1 and H3 are enantiotopic; H2 and H3 are diastereotopic.",
@@ -3166,22 +5371,62 @@
         {
           "id": "A",
           "text": "H1 and H3 are enantiotopic; H2 and H3 are diastereotopic.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H1 and H3 are enantiotopic; H2 and H3 are diastereotopic.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "H1 and H3 are diastereotopic; H2 and H3 are enantiotopic.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H1 and H3 are diastereotopic; H2 and H3 are enantiotopic.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "H5 and H7 are enantiotopic; H6 and H7 are homotopic.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H5 and H7 are enantiotopic; H6 and H7 are homotopic.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "H5 and H7 are homotopic; H6 and H7 are enantiotopic.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H5 and H7 are homotopic; H6 and H7 are enantiotopic.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3218,6 +5463,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following, the correct statement(s) is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following, the correct statement(s) is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "the normalization factor of a Slater determinant for a 3-electron atom is \\sqrt",
@@ -3230,22 +5486,62 @@
         {
           "id": "A",
           "text": "the normalization factor of a Slater determinant for a 3-electron atom is \\sqrt",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "the normalization factor of a Slater determinant for a 3-electron atom is \\sqrt",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "the number of nodes in the radial wave function of 3s orbital of a hydrogen atom\nis the same as the number of nodes in the angular wave function of a 4d orbital of\nhydrogen atom.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "the number of nodes in the radial wave function of 3s orbital of a hydrogen atom\nis the same as the number of nodes in the angular wave function of a 4d orbital of\nhydrogen atom.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "the energy separation between any two adjacent states is same for a harmonic\noscillator, while it is different for a rigid rotor.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "the energy separation between any two adjacent states is same for a harmonic\noscillator, while it is different for a rigid rotor.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "the magnitude of the total spin angular momentum of an 𝛼 electron is the negative\nof that of a 𝛽 electron.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "the magnitude of the total spin angular momentum of an 𝛼 electron is the negative\nof that of a 𝛽 electron.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -3282,6 +5578,17 @@
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
       "questionText": "Among the following, the correct statement(s) is (are):",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Among the following, the correct statement(s) is (are):",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "C2 symmetry element is present in H2O and H2O2 but NOT in PCl5.",
@@ -3294,22 +5601,62 @@
         {
           "id": "A",
           "text": "C2 symmetry element is present in H2O and H2O2 but NOT in PCl5.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "C2 symmetry element is present in H2O and H2O2 but NOT in PCl5.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "both C2 and C3 symmetry elements are present in CCl4 and SF6.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "both C2 and C3 symmetry elements are present in CCl4 and SF6.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "one 𝜎ℎ and three 𝜎𝑑 symmetry elements are present in benzene.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "one 𝜎ℎ and three 𝜎𝑑 symmetry elements are present in benzene.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝜎𝑣 symmetry element is present in NH3 but NOT in BF3.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝜎𝑣 symmetry element is present in NH3 but NOT in BF3.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -3345,7 +5692,18 @@
       "questionNumber": 58,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "S (in J mol-1 K-1) for the given reaction at 298 K is ________. (Given: log K1 = 10.6, where K1 is the equilibrium constant. H = -54 kJ mol-1\nand R = 8.314 J mol-1 K-1) (rounded off to two decimal places)",
+      "questionText": "S (in J mol^{-1} K^{-1}) for the given reaction at 298 K is ________.\n\n(Given: log K_{1}= 10.6, where K_{1} is the equilibrium constant. H = -54 kJ mol^{-1} and R = 8.314 J mol^{-1}K^{-1})\n\n(rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "S (in J mol^{-1} K^{-1}) for the given reaction at 298 K is ________.\n\n(Given: log K_{1}= 10.6, where K_{1} is the equilibrium constant. H = -54 kJ mol^{-1} and R = 8.314 J mol^{-1}K^{-1})\n\n(rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3380,7 +5738,18 @@
       "questionNumber": 59,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(Given: log K1 = 10.6, where K1 is the equilibrium constant. H = -54 kJ mol-1\nand R = 8.314 J mol-1 K-1) (rounded off to two decimal places) The turnover frequency (in h-1) of a reaction where 5 mol% of a catalyst is\nrequired for 90% conversion in 3 h is ____. (rounded off to the nearest integer)",
+      "questionText": "The turnover frequency (in h^{-1}) of a reaction where 5 mol% of a catalyst is required for 90% conversion in 3 h is ____.\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The turnover frequency (in h^{-1}) of a reaction where 5 mol% of a catalyst is required for 90% conversion in 3 h is ____.\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3415,7 +5784,18 @@
       "questionNumber": 60,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(rounded off to the nearest integer) In thermogravimetric analysis, 12.45 mg of CuSO4·5H2O was subjected to\nheating under N2 atmosphere. At a particular temperature, there was a weight loss\nof 3.6 mg. The number of water molecule(s) lost per formula unit is ____. (Given molar mass (in g mol-1) of H = 1.0, O = 16.0, S = 32.0, and Cu = 63.5) (rounded off to the nearest integer)",
+      "questionText": "In thermogravimetric analysis, 12.45 mg of CuSO_{4}·5H_{2}O was subjected to heating under N_{2} atmosphere. At a particular temperature, there was a weight loss of 3.6 mg. The number of water molecule(s) lost per formula unit is ____. (Given molar mass (in g mol^{-1}) of H = 1.0, O = 16.0, S = 32.0, and Cu = 63.5)\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In thermogravimetric analysis, 12.45 mg of CuSO_{4}·5H_{2}O was subjected to heating under N_{2} atmosphere. At a particular temperature, there was a weight loss of 3.6 mg. The number of water molecule(s) lost per formula unit is ____. (Given molar mass (in g mol^{-1}) of H = 1.0, O = 16.0, S = 32.0, and Cu = 63.5)\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3450,7 +5830,18 @@
       "questionNumber": 61,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "In the given reaction sequence, the amount of R produced (in g) is ____. (Given: molar mass (in g mol-1) of H = 1, C = 12, N = 14, O = 16, and S = 32)\n\n(rounded off to two decimal places)",
+      "questionText": "In the given reaction sequence, the amount of R produced (in g) is ____.\n\n\n\n(Given: molar mass (in g mol^{-1}) of H = 1, C = 12, N = 14, O = 16, and S = 32) (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the given reaction sequence, the amount of R produced (in g) is ____.\n\n\n\n(Given: molar mass (in g mol^{-1}) of H = 1, C = 12, N = 14, O = 16, and S = 32) (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3485,7 +5876,18 @@
       "questionNumber": 62,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "(Given: molar mass (in g mol-1) of H = 1, C = 12, N = 14, O = 16, and S = 32)\n\n(rounded off to two decimal places) The wave function of a particle in a cubic box (of side 𝐿) is given by 𝜋𝑥 𝜋𝑥 2𝜋𝑦 𝜋𝑧 𝜓(𝑥, 𝑦, 𝑧) = \\sqrt 32/𝐿3 sin 𝐿 . 𝐿cos 𝐿sin 𝐿sin The ratio of the energy of the state corresponding to the above wave function to\nthe ground state energy is ___. (rounded off to the nearest integer)",
+      "questionText": "The wave function of a particle in a cubic box (of side 𝐿) is given by\n\n𝜋𝑥 𝜋𝑥 2𝜋𝑦 𝜋𝑧 𝜓(𝑥, 𝑦, 𝑧) = \\sqrt 32/𝐿^{3} sin 𝐿 . 𝐿cos 𝐿sin 𝐿sin The ratio of the energy of the state corresponding to the above wave function to the ground state energy is ___.\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The wave function of a particle in a cubic box (of side 𝐿) is given by\n\n𝜋𝑥 𝜋𝑥 2𝜋𝑦 𝜋𝑧 𝜓(𝑥, 𝑦, 𝑧) = \\sqrt 32/𝐿^{3} sin 𝐿 . 𝐿cos 𝐿sin 𝐿sin The ratio of the energy of the state corresponding to the above wave function to the ground state energy is ___.\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3520,7 +5922,18 @@
       "questionNumber": 63,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "𝜋𝑥 𝜋𝑥 2𝜋𝑦 𝜋𝑧 𝜓(𝑥, 𝑦, 𝑧) = \\sqrt 32/𝐿3 sin 𝐿 . 𝐿cos 𝐿sin 𝐿sin The ratio of the energy of the state corresponding to the above wave function to\nthe ground state energy is ___. (rounded off to the nearest integer) 𝜙1 and 𝜙2 are normalized eigenfunctions of a Hermitian operator. |𝜓〉= 3𝑖 |𝜙1〉+ 2 |𝜙2〉 and |𝜒〉= -2𝑖 |𝜙1〉+ 5 |𝜙2〉. The value of ⟨𝜓|𝜒⟩+ ⟨𝜒|𝜓⟩ is ___. (rounded off to the nearest integer)",
+      "questionText": "𝜙_{1} and 𝜙_{2} are normalized eigenfunctions of a Hermitian operator. |𝜓〉= 3𝑖 |𝜙_{1}〉+ 2 |𝜙_{2}〉 and |𝜒〉= -2𝑖 |𝜙_{1}〉+ 5 |𝜙_{2}〉. The value of ⟨𝜓|𝜒⟩+ ⟨𝜒|𝜓⟩ is ___.\n\n(rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "𝜙_{1} and 𝜙_{2} are normalized eigenfunctions of a Hermitian operator. |𝜓〉= 3𝑖 |𝜙_{1}〉+ 2 |𝜙_{2}〉 and |𝜒〉= -2𝑖 |𝜙_{1}〉+ 5 |𝜙_{2}〉. The value of ⟨𝜓|𝜒⟩+ ⟨𝜒|𝜓⟩ is ___.\n\n(rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3555,7 +5968,18 @@
       "questionNumber": 64,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "2 mol of a monoatomic ideal gas with initial volume of 5 L and pressure 10 bar\nundergoes an irreversible adiabatic expansion against a constant final pressure of\n1 bar. The final volume (in L) is ______.\n\n(Given: R = 8.314 \\times 10-2 L bar mol-1 K-1)\n\n(rounded off to one decimal place)",
+      "questionText": "2 mol of a monoatomic ideal gas with initial volume of 5 L and pressure 10 bar undergoes an irreversible adiabatic expansion against a constant final pressure of 1 bar. The final volume (in L) is ______. (Given: R = 8.314 \\times 10^{-2} L bar mol^{-1} K^{-1}) (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "2 mol of a monoatomic ideal gas with initial volume of 5 L and pressure 10 bar undergoes an irreversible adiabatic expansion against a constant final pressure of 1 bar. The final volume (in L) is ______. (Given: R = 8.314 \\times 10^{-2} L bar mol^{-1} K^{-1}) (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3590,7 +6014,24 @@
       "questionNumber": 65,
       "sectionId": "cy_core",
       "sectionName": "Chemistry",
-      "questionText": "The following figure shows an experimental liquid-liquid phase diagram of phenol\nand water at the vapor pressure of the system. The total amount of phenol and water\n(in mol) present in the phenol-rich phase when 5 mol of water was shaken with 5\nmol of phenol at 40 °C is ______. (rounded off to one decimal place)",
+      "questionText": "The following figure shows an experimental liquid-liquid phase diagram of phenol and water at the vapor pressure of the system. The total amount of phenol and water (in mol) present in the phenol-rich phase when 5 mol of water was shaken with 5 mol of phenol at 40 °C is ______.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following figure shows an experimental liquid-liquid phase diagram of phenol and water at the vapor pressure of the system. The total amount of phenol and water (in mol) present in the phenol-rich phase when 5 mol of water was shaken with 5 mol of phenol at 40 °C is ______.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2024/cy/q65_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

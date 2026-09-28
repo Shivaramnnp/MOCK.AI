@@ -40,6 +40,8 @@ export interface UserProfile {
   phoneNumber?: string;
   role: UserRole;
   createdAt: number;
+  displayName?: string;
+  avatarUrl?: string;
 }
 
 export interface TestHistory {
@@ -55,6 +57,7 @@ export interface TestHistory {
   lastTimeSpentSeconds?: number;
   wrongCount?: number;
   isBookmarked?: boolean;
+  userAnswers?: Record<number, number>;
 }
 
 export interface TestSessionState {
@@ -164,6 +167,8 @@ export type AppRoute =
   | 'analytics'
   | 'classroom'
   | 'marketplace'
+  | 'community'
+  | 'staff'
   | 'profile'
   | 'settings';
 
@@ -215,10 +220,45 @@ export interface ExamQuestionAsset {
   height?: number;
 }
 
+export type ContentBlockType =
+  | 'text'
+  | 'math'
+  | 'inline_math'
+  | 'relational_algebra'
+  | 'code'
+  | 'pseudocode'
+  | 'table'
+  | 'image'
+  | 'diagram'
+  | 'graph'
+  | 'mixed'
+  | 'list'
+  | 'equation'
+  | 'matrix'
+  | 'figure'
+  | 'chart';
+
+export type BlockConfidence = 'VERIFIED' | 'HIGH_CONFIDENCE' | 'NEEDS_REVIEW' | 'FAILED';
+
+export interface ContentBlock {
+  type: ContentBlockType;
+  content?: string;
+  latex?: string;
+  language?: string;
+  headers?: string[];
+  rows?: string[][];
+  assetUrl?: string;
+  caption?: string;
+  confidence?: BlockConfidence;
+  blocks?: ContentBlock[];
+}
+
 export interface ExamQuestionOption {
   id: string; // 'A', 'B', 'C', 'D'
   text?: string;
   imageUrl?: string | null;
+  contentBlocks?: ContentBlock[];
+  contentTypes?: ContentBlockType[];
 }
 
 export interface CompetitiveQuestion {
@@ -227,6 +267,9 @@ export interface CompetitiveQuestion {
   sectionId: string;
   sectionName: string;
   questionText: string;
+  contentBlocks?: ContentBlock[];
+  contentTypes?: ContentBlockType[];
+  confidence?: BlockConfidence;
   questionType?: 'MCQ' | 'MSQ' | 'NAT';
   options: string[]; // options list (empty for NAT)
   optionImages?: (string | null)[]; // optional image URLs for visual options
@@ -356,4 +399,291 @@ export interface ExamTestSession {
   version: number; // Revision counter for concurrent multi-device sync
   result?: ExamResultSummary;
 }
+
+// ── Community & Feedback Hub Architecture ──────────────────────────────────────
+
+export type CommunityPostType =
+  | 'PAPER_REQUEST'
+  | 'QUESTION_REPORT'
+  | 'BUG_REPORT'
+  | 'FEATURE_REQUEST'
+  | 'DISCUSSION';
+
+export type CommunityPostStatus =
+  | 'OPEN'
+  | 'INVESTIGATING'
+  | 'IN_PROGRESS'
+  | 'RESOLVED'
+  | 'REJECTED'
+  | 'DUPLICATE'
+  | 'NEEDS_INFORMATION';
+
+export type CommunityPostPriority = 'LOW' | 'NORMAL' | 'HIGH' | 'CRITICAL';
+
+export type QuestionReportCategory =
+  | 'incorrect_question'
+  | 'incorrect_option'
+  | 'incorrect_answer'
+  | 'missing_image'
+  | 'wrong_image'
+  | 'broken_diagram'
+  | 'incorrect_formula'
+  | 'formatting_rendering'
+  | 'missing_content'
+  | 'other';
+
+export type BugReportCategory =
+  | 'login'
+  | 'test_engine'
+  | 'question_rendering'
+  | 'timer'
+  | 'results'
+  | 'explore'
+  | 'community'
+  | 'performance'
+  | 'ui'
+  | 'other';
+
+export type FeatureRequestCategory =
+  | 'new_exams'
+  | 'new_features'
+  | 'study_tools'
+  | 'analytics'
+  | 'question_types'
+  | 'accessibility'
+  | 'other';
+
+export type DiscussionCategory =
+  | 'exam_prep'
+  | 'doubt_clarification'
+  | 'strategy'
+  | 'study_resources'
+  | 'general';
+
+export interface CommunityPostMetadata {
+  // Paper Request metadata
+  examId?: string;
+  editionYear?: number;
+  tier?: string;
+  shift?: string;
+  examDate?: string;
+  sourceUrl?: string;
+
+  // Custom Exam & Year support
+  isCustomExam?: boolean;
+  customExamName?: string;
+  customExamNormalized?: string;
+  customExamAuthority?: string;
+  isCustomYear?: boolean;
+  customYear?: number;
+  customStage?: string;
+  customSession?: string;
+  canonicalExamId?: string; // If mapped to canonical exam later by staff
+
+  // Question Report metadata
+  paperId?: string;
+  questionId?: string;
+  questionNumber?: number;
+  questionCategory?: QuestionReportCategory;
+  supportingSource?: string;
+
+  // Bug Report metadata
+  bugCategory?: BugReportCategory;
+  expectedBehavior?: string;
+  actualBehavior?: string;
+  diagnostics?: {
+    route?: string;
+    browser?: string;
+    os?: string;
+    viewport?: string;
+    appVersion?: string;
+    sessionId?: string;
+    userAgent?: string;
+  };
+
+  // Feature Request metadata
+  featureCategory?: FeatureRequestCategory;
+
+  // Discussion metadata
+  discussionCategory?: DiscussionCategory;
+
+  // General attachment / screenshot
+  attachmentUrl?: string;
+  attachmentName?: string;
+}
+
+export interface CommunityPost {
+  id: string;
+  type: CommunityPostType;
+  title: string;
+  description: string;
+  authorId: string | null;
+  authorName: string;
+  authorRole: UserRole | 'STAFF' | 'ADMIN';
+  authorAvatarUrl?: string | null;
+  status: CommunityPostStatus;
+  priority: CommunityPostPriority;
+  supportCount: number;
+  commentCount: number;
+  metadata: CommunityPostMetadata;
+  customExamName?: string | null;
+  customExamNormalized?: string | null;
+  customExamAuthority?: string | null;
+  customYear?: number | null;
+  customStage?: string | null;
+  customSession?: string | null;
+  duplicateOfId?: string | null;
+  resolutionNotes?: string | null;
+  resolvedByName?: string | null;
+  resolvedAt?: string | null;
+  isPinned: boolean;
+  isHidden: boolean;
+  isEdited?: boolean;
+  editedAt?: string | null;
+  isDeleted?: boolean;
+  deletedAt?: string | null;
+  deletedBy?: string | null;
+  createdAt: string; // ISO timestamp
+  updatedAt: string;
+  hasUserSupported?: boolean; // Client-side augmented
+}
+
+export interface CommunityComment {
+  id: string;
+  postId: string;
+  parentCommentId?: string | null;
+  authorId: string | null;
+  authorName: string;
+  authorRole: UserRole | 'STAFF' | 'ADMIN';
+  isOfficialResponse: boolean;
+  content: string;
+  isHidden: boolean;
+  createdAt: string;
+  updatedAt: string;
+  replies?: CommunityComment[]; // Client-side nested
+}
+
+export interface CommunityReport {
+  id: string;
+  targetType: 'POST' | 'COMMENT';
+  targetId: string;
+  reporterId?: string | null;
+  reason: 'SPAM' | 'ABUSE' | 'INAPPROPRIATE' | 'SCAM' | 'INCORRECT' | 'OTHER';
+  details?: string;
+  status: 'PENDING' | 'REVIEWED' | 'DISMISSED' | 'ACTIONED';
+  createdAt: string;
+}
+
+// ── Staff Moderation & Operations System ───────────────────────────────────
+
+export type StaffRole =
+  | 'STAFF'
+  | 'MODERATOR'
+  | 'CONTENT_REVIEWER'
+  | 'SUPPORT'
+  | 'ADMIN'
+  | 'SUPER_ADMIN';
+
+export interface StaffAuthStatus {
+  isStaff: boolean;
+  role: StaffRole | null;
+  permissions: string[];
+}
+
+export type CommunityUserRestrictionStatus =
+  | 'ACTIVE'
+  | 'POSTING_RESTRICTED'
+  | 'SUSPENDED'
+  | 'BANNED';
+
+export interface CommunityUserRestriction {
+  id: string;
+  userId: string;
+  status: CommunityUserRestrictionStatus;
+  reason: string;
+  restrictedBy?: string;
+  expiresAt?: string | null;
+  createdAt: string;
+}
+
+export interface UserRestrictionCheckResult {
+  restricted: boolean;
+  status?: CommunityUserRestrictionStatus;
+  reason?: string;
+  expiresAt?: string | null;
+}
+
+export interface StaffNote {
+  id: string;
+  postId: string;
+  authorId: string;
+  authorName: string;
+  note: string;
+  createdAt: string;
+}
+
+export interface CommunityAuditLog {
+  id: string;
+  staffUserId?: string | null;
+  staffUserName: string;
+  action: string;
+  targetType: 'POST' | 'COMMENT' | 'USER' | 'REPORT' | 'ROLE';
+  targetId: string;
+  previousState?: Record<string, any> | null;
+  newState?: Record<string, any> | null;
+  reason: string;
+  createdAt: string;
+}
+
+export interface StaffQueueFilter {
+  type?: 'ALL' | CommunityPostType | 'REPORT';
+  status?: 'ALL' | CommunityPostStatus;
+  searchQuery?: string;
+  dateRange?: 'all' | 'today' | 'week' | 'month';
+}
+
+export type NotificationType =
+  | 'POST_STATUS_CHANGED'
+  | 'POST_RESOLVED'
+  | 'POST_REOPENED'
+  | 'POST_COMMENTED'
+  | 'POST_REPLY'
+  | 'POST_PINNED'
+  | 'POST_UPDATED_BY_STAFF'
+  | 'SYSTEM_ANNOUNCEMENT'
+  | 'STATUS_UPDATE';
+
+export interface NotificationMetadata {
+  postId?: string;
+  postType?: string;
+  postTitle?: string;
+  oldStatus?: CommunityPostStatus | string;
+  newStatus?: CommunityPostStatus | string;
+  actorType?: 'STAFF' | 'USER' | 'SYSTEM';
+  actorId?: string;
+  actorName?: string;
+  resolutionNotes?: string;
+  [key: string]: any;
+}
+
+export interface CommunityNotification {
+  id: string;
+  recipientUserId: string;
+  userId: string; // alias
+  postId: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  message?: string; // alias for backwards compatibility
+  entityType?: 'community_post' | 'system';
+  entityId?: string;
+  metadata?: NotificationMetadata;
+  oldStatus?: CommunityPostStatus;
+  newStatus?: CommunityPostStatus;
+  isRead: boolean;
+  readAt?: string | null;
+  createdAt: string;
+}
+
+
 

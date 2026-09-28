@@ -21,6 +21,7 @@ import { AppSettings, storage } from '../services/storage';
 import { supabaseService } from '../services/supabase';
 import { TestHistory } from '../types';
 import { LegalModal, LegalTabType } from '../components/LegalModal';
+import { AIProvidersManager } from '../components/settings/AIProvidersManager';
 
 interface SettingsScreenProps {
   settings: AppSettings;
@@ -37,10 +38,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onBack,
   onResetData,
 }) => {
-  const [geminiKey, setGeminiKey] = useState(settings.geminiApiKey);
-  const [groqKey, setGroqKey] = useState(settings.groqApiKey);
   const [timerSeconds, setTimerSeconds] = useState(settings.timerSeconds);
-  const [savedSuccess, setSavedSuccess] = useState(false);
 
   // Security / Password update state
   const [newPassword, setNewPassword] = useState('');
@@ -87,19 +85,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     }
   };
 
-  const handleSaveApiKeys = (e: React.FormEvent) => {
-    e.preventDefault();
-    const updated = {
-      ...settings,
-      geminiApiKey: geminiKey.trim(),
-      groqApiKey: groqKey.trim(),
-      timerSeconds,
-    };
-    onUpdateSettings(updated);
-    setSavedSuccess(true);
-    setTimeout(() => setSavedSuccess(false), 2500);
-  };
-
   const handleExportData = () => {
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(tests, null, 2));
     const downloadAnchor = document.createElement('a');
@@ -116,7 +101,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
       <div className="flex items-center gap-3 pb-4 border-b border-surface-border dark:border-darkSurface-border">
         <button
           onClick={onBack}
-          className="p-2 rounded-xl text-surface-muted hover:text-surface-text hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2 transition-colors"
+          className="p-2 rounded-xl text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
         </button>
@@ -142,7 +127,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
             className={`flex items-center justify-center gap-2 p-3.5 rounded-2xl border transition-all ${
               settings.theme === 'light'
                 ? 'bg-brand-primary/10 border-brand-primary text-brand-primary font-bold shadow-sm'
-                : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border text-surface-muted'
+                : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border text-surface-muted dark:text-darkSurface-muted hover:bg-surface-elev3 dark:hover:bg-darkSurface-elev3'
             }`}
           >
             <Sun className="w-4 h-4 text-amber-500" />
@@ -154,7 +139,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
             className={`flex items-center justify-center gap-2 p-3.5 rounded-2xl border transition-all ${
               settings.theme === 'dark'
                 ? 'bg-brand-primary/10 border-brand-primary text-brand-primary font-bold shadow-sm'
-                : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border text-surface-muted'
+                : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border text-surface-muted dark:text-darkSurface-muted hover:bg-surface-elev3 dark:hover:bg-darkSurface-elev3'
             }`}
           >
             <Moon className="w-4 h-4 text-brand-variant" />
@@ -163,74 +148,8 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
         </div>
       </div>
 
-      {/* AI Provider Configuration */}
-      <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-brand-primary" />
-            <h3 className="font-bold text-base text-surface-text dark:text-darkSurface-text">
-              AI Models & API Keys
-            </h3>
-          </div>
-          <p className="text-xs text-surface-muted dark:text-darkSurface-muted mt-0.5">
-            Configure your Gemini or Groq model keys for AI mock generation.
-          </p>
-          {(typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) && (
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold mt-2">
-              <span>●</span>
-              <span>Project Environment Key Connected (VITE_GEMINI_API_KEY)</span>
-            </div>
-          )}
-        </div>
-
-        <form onSubmit={handleSaveApiKeys} className="space-y-4 pt-1">
-          <div>
-            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
-              Google Gemini API Key:
-            </label>
-            <input
-              type="password"
-              value={geminiKey}
-              onChange={(e) => setGeminiKey(e.target.value)}
-              placeholder="AIzaSy..."
-              className="w-full px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs font-mono text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
-            />
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
-              Groq API Key (Backup):
-            </label>
-            <input
-              type="password"
-              value={groqKey}
-              onChange={(e) => setGroqKey(e.target.value)}
-              placeholder="gsk_..."
-              className="w-full px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs font-mono text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
-            />
-          </div>
-
-          <div className="flex items-center justify-between pt-2">
-            {savedSuccess ? (
-              <span className="text-xs font-bold text-brand-green flex items-center gap-1">
-                <Check className="w-4 h-4" />
-                <span>API Keys Saved & Activated!</span>
-              </span>
-            ) : (
-              <span className="text-xs text-surface-muted">
-                Stored securely in your local browser storage.
-              </span>
-            )}
-
-            <button
-              type="submit"
-              className="px-5 py-2 rounded-xl bg-brand-primary text-white font-bold text-xs shadow-md hover:brightness-110 active:scale-95 transition-all"
-            >
-              Save Keys
-            </button>
-          </div>
-        </form>
-      </div>
+      {/* AI & Generation Provider Manager */}
+      <AIProvidersManager />
 
       {/* Exam Preferences */}
       <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 shadow-sm space-y-4">
@@ -239,7 +158,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
         </h3>
 
         <div>
-          <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1.5">
             Default Question Timer:
           </label>
           <select
@@ -249,7 +168,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
               setTimerSeconds(val);
               onUpdateSettings({ ...settings, timerSeconds: val });
             }}
-            className="w-full sm:w-64 px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+            className="w-full sm:w-64 px-3 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
           >
             <option value={30}>30 Seconds (Speed Sprint)</option>
             <option value={60}>60 Seconds (Standard MCQ)</option>
@@ -288,23 +207,23 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
 
         <form onSubmit={handleUpdatePassword} className="space-y-4 max-w-md pt-1">
           <div>
-            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+            <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1">
               New Password:
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-surface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Lock className="w-4 h-4 text-surface-muted dark:text-darkSurface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="At least 6 characters"
                 required
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:ring-2 focus:ring-brand-primary/20 placeholder-surface-muted dark:placeholder-darkSurface-muted"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-surface-muted hover:text-surface-text"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text transition-colors"
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
@@ -312,18 +231,18 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+            <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1">
               Confirm New Password:
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-surface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Lock className="w-4 h-4 text-surface-muted dark:text-darkSurface-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Re-enter new password"
                 required
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs text-surface-text dark:text-darkSurface-text focus:outline-none focus:ring-2 focus:ring-brand-primary/20 placeholder-surface-muted dark:placeholder-darkSurface-muted"
               />
             </div>
           </div>
@@ -331,7 +250,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           <button
             type="submit"
             disabled={isPasswordLoading || !newPassword || !confirmPassword}
-            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-indigo-600 text-white font-bold text-xs shadow-md hover:brightness-110 active:scale-95 disabled:opacity-50 transition-all flex items-center gap-2"
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-xs shadow-glow hover:brightness-110 active:scale-95 disabled:opacity-50 transition-all flex items-center gap-2"
           >
             {isPasswordLoading ? (
               <>
@@ -357,7 +276,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={handleExportData}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-text dark:text-darkSurface-text text-xs font-bold hover:bg-surface-elev3 transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-text dark:text-darkSurface-text text-xs font-bold hover:bg-surface-elev3 dark:hover:bg-darkSurface-elev3 transition-all"
           >
             <Download className="w-4 h-4" />
             <span>Export Tests (JSON Backup)</span>
@@ -369,7 +288,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                 onResetData();
               }
             }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-red-500/30 text-brand-red text-xs font-bold hover:bg-red-500/10 transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-red-500/30 text-brand-red text-xs font-bold hover:bg-red-500/10 transition-all"
           >
             <RotateCcw className="w-4 h-4" />
             <span>Reset Tests & Progress</span>
@@ -379,11 +298,11 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
 
       {/* Trust & Legal Footer */}
       <div className="pt-4 border-t border-surface-border dark:border-darkSurface-border flex flex-col items-center gap-2 text-center">
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-surface-muted">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-surface-muted dark:text-darkSurface-muted">
           <button
             type="button"
             onClick={() => openLegalModal('privacy')}
-            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            className="hover:text-surface-text dark:hover:text-darkSurface-text transition-colors underline-offset-2 hover:underline"
           >
             Privacy Policy
           </button>
@@ -391,7 +310,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           <button
             type="button"
             onClick={() => openLegalModal('terms')}
-            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            className="hover:text-surface-text dark:hover:text-darkSurface-text transition-colors underline-offset-2 hover:underline"
           >
             Terms of Service
           </button>
@@ -399,7 +318,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           <button
             type="button"
             onClick={() => openLegalModal('status')}
-            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            className="hover:text-surface-text dark:hover:text-darkSurface-text transition-colors underline-offset-2 hover:underline"
           >
             System Status
           </button>
@@ -407,12 +326,12 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
           <button
             type="button"
             onClick={() => openLegalModal('security')}
-            className="hover:text-surface-text transition-colors underline-offset-2 hover:underline"
+            className="hover:text-surface-text dark:hover:text-darkSurface-text transition-colors underline-offset-2 hover:underline"
           >
             Security Compliance
           </button>
         </div>
-        <p className="text-[11px] text-surface-muted/60">
+        <p className="text-[11px] text-surface-muted/60 dark:text-darkSurface-muted/60">
           MOCK.AI &bull; Educational AI Exam Preparation Platform &bull; &copy; {new Date().getFullYear()}
         </p>
       </div>

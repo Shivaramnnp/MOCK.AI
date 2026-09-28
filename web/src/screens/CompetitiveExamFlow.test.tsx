@@ -614,6 +614,7 @@ describe('Competitive Exam Journey (Explore → SSC CHSL → Test → Results)',
     render(
       <CompetitiveExamPlayerScreen
         paper={aePaper!}
+        initialSession={session}
         onExit={handleExit}
         onSubmit={handleSubmit}
       />

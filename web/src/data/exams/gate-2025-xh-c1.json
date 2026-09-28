@@ -53,7 +53,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their\ndecreasing order of intensity. Identify the missing word in Group-II.\nGroup-I: Abuse → Insult → Ridicule\nGroup-II: ________ → Praise → Appreciate",
+      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Extol",
@@ -66,22 +77,62 @@
         {
           "id": "A",
           "text": "Extol",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Extol",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Prize",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Prize",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Appropriate",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Appropriate",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Espouse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Espouse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -111,7 +162,18 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "will be",
@@ -124,22 +186,62 @@
         {
           "id": "A",
           "text": "will be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "will be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "can be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "can be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "am going to be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "am going to be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "could have been",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "could have been",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -169,35 +271,86 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The 12 musical notes are given as 𝐶, 𝐶#, 𝐷, 𝐷#, 𝐸, 𝐹, 𝐹#, 𝐺, 𝐺#, 𝐴, 𝐴#, and 𝐵.\n12\nFrequency of each note is \\sqrt 2 times the frequency of the previous note. If the\nfrequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹# and 𝐶\nis:",
+      "questionText": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "6\n\\sqrt 2",
-        "\\sqrt 2",
-        "4\n\\sqrt 2",
+        "6 \\sqrt{2}",
+        "\\sqrt{2}",
+        "4 \\sqrt{2}",
         "2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "6\n\\sqrt 2",
-          "imageUrl": null
+          "text": "6 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
-          "imageUrl": null
+          "text": "\\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "4\n\\sqrt 2",
-          "imageUrl": null
+          "text": "4 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -227,35 +380,92 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The following figures show three curves generated using an iterative algorithm. The\ntotal length of the curve generated after 'Iteration 𝑛' is:\nNote: The figures shown are representative.\n1\nIteration 0:\n1\n1\nIteration 1:\nLength of each segment:\n3\n3\n1\n1\nIteration 2: 9 Length of each segment:\n9",
+      "questionText": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑛\n5 2\n( )\n3",
-        "𝑛\n5\n( )\n3",
-        "2𝑛\n5\n( )\n3",
-        "𝑛(2𝑛-1)\n5\n( )\n3"
+        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3) 𝑛",
+        "(5 3) 2𝑛",
+        "(5 3) 𝑛(2𝑛-1)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑛\n5 2\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 2𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 2𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑛(2𝑛-1)\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛(2𝑛-1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛(2𝑛-1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -287,35 +497,51 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "|𝑥|\nWhich one of the following plots represents 𝑓(𝑥) = - , where 𝑥 is a non-\n𝑥\nzero real number?\nNote: The figures shown are representative.",
+      "questionText": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(1,0)\nx\n(-1,0)",
-        "f(x)\n(0,1)\nx\n(0, -1)"
+        "",
+        "",
+        "(1,0) (-1,0) x",
+        ""
       ],
-      "optionImages": null,
+      "optionImages": [
+        "/exam-assets/gate/2025/xh-c1/q5_opt_a.png",
+        "/exam-assets/gate/2025/xh-c1/q5_opt_b.png",
+        "/exam-assets/gate/2025/xh-c1/q5_opt_c.png",
+        "/exam-assets/gate/2025/xh-c1/q5_opt_d.png"
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_a.png"
         },
         {
           "id": "B",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_b.png"
         },
         {
           "id": "C",
-          "text": "f(x)\n(1,0)\nx\n(-1,0)",
-          "imageUrl": null
+          "text": "(1,0) (-1,0) x",
+          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_c.png"
         },
         {
           "id": "D",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_d.png"
         }
       ],
       "correctAnswer": "A",
@@ -345,7 +571,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. Over time, such adaptations lead to significant evolutionary changes with\nthe potential to shape the development of new species.\nQ. In natural world, organisms constantly adapt to their environments in\nresponse to challenges and opportunities.\nR. This process of adaptation is driven by the principle of natural selection,\nwhere favorable traits increase an organism's chances of survival and\nreproduction.\nS. As environments change, organisms that can adapt their behavior, structure\nand physiology to such changes are more likely to survive.",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P → Q → R → S",
@@ -358,22 +595,62 @@
         {
           "id": "A",
           "text": "P → Q → R → S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P → Q → R → S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q → S → R → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q → S → R → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R → S → Q → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R → S → Q → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "S → P → R → Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S → P → R → Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -403,35 +680,96 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏 and 𝑏 from\n1 2\nthe origin (0), as shown in the figure. Note that 0 < 𝑏 < 𝑏 < 1. Which one of the\n1 2\nfollowing is NOT a necessary condition for forming a triangle using the three\npieces?\nNote: All lengths are in meter. The figure shown is representative.",
+      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q7_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑏 < 0.5\n1",
-        "𝑏 > 0.5\n2",
-        "𝑏 < 𝑏 + 0.5\n2 1",
-        "𝑏 + 𝑏 < 1\n1 2"
+        "\\(𝑏_{1} < 0.5\\)",
+        "\\(𝑏_{2} > 0.5\\)",
+        "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+        "\\(𝑏_{1} + 𝑏_{2} < 1\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑏 < 0.5\n1",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} < 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} < 0.5",
+              "content": "\\(𝑏_{1} < 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑏 > 0.5\n2",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} > 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} > 0.5",
+              "content": "\\(𝑏_{2} > 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑏 < 𝑏 + 0.5\n2 1",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} < 𝑏_{1} + 0.5",
+              "content": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑏 + 𝑏 < 1\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} + 𝑏_{2} < 1",
+              "content": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -463,7 +801,24 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure\nindicates their order of position at the start of the game. They play the game by\nmoving forward in a circle in the clockwise direction.\nAfter the 1st round, 4th student behind P leaves the game. After 2nd round, 5th student\nbehind Q leaves the game. After 3rd round, 3rd student behind V leaves the game.\nAfter 4th round, 4th student behind U leaves the game. Who all are left in the game\nafter the 4th round?\nNote: The figure shown is representative.",
+      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q8_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P; T; Q; S",
@@ -476,22 +831,62 @@
         {
           "id": "A",
           "text": "P; T; Q; S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P; T; Q; S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "V; P; T; Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "V; P; T; Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "W; R; Q; V",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "W; R; Q; V",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Q; T; V; W",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q; T; V; W",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "MTA",
@@ -503,8 +898,10 @@
       "answerRanges": null,
       "isMta": true,
       "explanation": "Marks to All (MTA) awarded by official GATE 2025 committee.",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2025/xh-c1/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/xh-c1/q8_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -521,35 +918,129 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a\ntournament; also included are the number of silver and the bronze medals won by\nthem. Based only on the data provided in the table, which one of the following\nstatements is INCORRECT?",
+      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?\n\n| Nation | Gold | Silver | Bronze |\n| :--- | :--- | :--- | :--- |\n| USA | 40 | 44 | 41 |\n| Canada | 39 | 27 | 24 |\n| Japan | 20 | 12 | 13 |\n| Australia | 17 | 19 | 16 |\n| France | 16 | 26 | 22 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nation",
+            "Gold",
+            "Silver",
+            "Bronze"
+          ],
+          "rows": [
+            [
+              "USA",
+              "40",
+              "44",
+              "41"
+            ],
+            [
+              "Canada",
+              "39",
+              "27",
+              "24"
+            ],
+            [
+              "Japan",
+              "20",
+              "12",
+              "13"
+            ],
+            [
+              "Australia",
+              "17",
+              "19",
+              "16"
+            ],
+            [
+              "France",
+              "16",
+              "26",
+              "22"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-        "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
-        "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
+        "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+        "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+        "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
         "Canada has won twice as many total medals as Japan."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-          "imageUrl": null
+          "text": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
-          "imageUrl": null
+          "text": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
-          "imageUrl": null
+          "text": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Canada has won twice as many total medals as Japan.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Canada has won twice as many total medals as Japan.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -579,7 +1070,18 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "An organization allows its employees to work independently on consultancy\nprojects but charges an overhead on the consulting fee. The overhead is 20% of the\nconsulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is\n₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The\ngovernment charges a Goods and Services Tax of 18% on the total amount (the\nconsulting fee plus the overhead). An employee of the organization charges this\nentire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client\ncannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the\nemployee can charge?",
+      "questionText": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "₹ 7,01,438",
@@ -592,22 +1094,62 @@
         {
           "id": "A",
           "text": "₹ 7,01,438",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,01,438",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "₹ 7,24,961",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,24,961",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "₹ 7,51,232",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,51,232",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "₹ 7,75,784",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,75,784",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -637,7 +1179,18 @@
       "questionNumber": 11,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Which one of the following numbers is odd one out?\n31541 42651 53791 64871 75981",
+      "questionText": "Which one of the following numbers is odd one out?\n\n31541 42651 53791 64871 75981",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following numbers is odd one out?\n\n31541 42651 53791 64871 75981",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "31541",
@@ -650,22 +1203,62 @@
         {
           "id": "A",
           "text": "31541",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "31541",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "42651",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "42651",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "53791",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "53791",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "75981",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "75981",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -695,7 +1288,18 @@
       "questionNumber": 12,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam has\none mango and one kiwi. Ankit has just bought one pineapple.\nWho has the least number of fruit(s)?",
+      "questionText": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam has one mango and one kiwi. Ankit has just bought one pineapple.\n\nWho has the least number of fruit(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam has one mango and one kiwi. Ankit has just bought one pineapple.\n\nWho has the least number of fruit(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Ankit",
@@ -708,22 +1312,62 @@
         {
           "id": "A",
           "text": "Ankit",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ankit",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Arun",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Arun",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Ankur",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ankur",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Alam",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Alam",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -753,7 +1397,18 @@
       "questionNumber": 13,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "If each vowel in the word RESIDE is changed to its previous letter in the English\nalphabet and each consonant is changed to the next letter in the English alphabet,\nwhich one of the following options will be the third from the right?",
+      "questionText": "If each vowel in the word RESIDE is changed to its previous letter in the English alphabet and each consonant is changed to the next letter in the English alphabet, which one of the following options will be the third from the right?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If each vowel in the word RESIDE is changed to its previous letter in the English alphabet and each consonant is changed to the next letter in the English alphabet, which one of the following options will be the third from the right?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "T",
@@ -766,22 +1421,62 @@
         {
           "id": "A",
           "text": "T",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "T",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "D",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "D",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "H",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -811,7 +1506,18 @@
       "questionNumber": 14,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are\npartners sitting opposite to each other. David faces towards South. If Vipul faces\ntowards West, then who faces towards the North?",
+      "questionText": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are partners sitting opposite to each other. David faces towards South. If Vipul faces towards West, then who faces towards the North?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are partners sitting opposite to each other. David faces towards South. If Vipul faces towards West, then who faces towards the North?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Alam",
@@ -824,22 +1530,62 @@
         {
           "id": "A",
           "text": "Alam",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Alam",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Santosh",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Santosh",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "David",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "David",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Vipul",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Vipul",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -869,7 +1615,18 @@
       "questionNumber": 15,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Consider the following sentence.\nWhat the country needs ____ ____ ____ ____ accordingly.\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining parts\nof the sentence, not necessarily in that order.\nP: and change tactics\nQ: who would encourage players\nR: are coaches and officials\nS: to read the game as it progresses\nWhich one of the following options is correct that gives the most appropriate order\nand meaning to the sentence?",
+      "questionText": "Consider the following sentence.\n\nWhat the country needs ____ ____ ____ ____ accordingly.\n\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining parts of the sentence, not necessarily in that order.\n\nP: and change tactics Q: who would encourage players R: are coaches and officials S: to read the game as it progresses\n\nWhich one of the following options is correct that gives the most appropriate order and meaning to the sentence?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following sentence.\n\nWhat the country needs ____ ____ ____ ____ accordingly.\n\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining parts of the sentence, not necessarily in that order.\n\nP: and change tactics Q: who would encourage players R: are coaches and officials S: to read the game as it progresses\n\nWhich one of the following options is correct that gives the most appropriate order and meaning to the sentence?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "QSPR",
@@ -882,22 +1639,62 @@
         {
           "id": "A",
           "text": "QSPR",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "QSPR",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "RQSP",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "RQSP",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "RQPS",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "RQPS",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "SPRQ",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "SPRQ",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -927,7 +1724,18 @@
       "questionNumber": 16,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "A car started from city P at 9.40am. The time taken for the car to reach the city Q\nis 4 hours and 50 minutes.\nThe time of arrival of the car at city Q is",
+      "questionText": "A car started from city P at 9.40am. The time taken for the car to reach the city Q is 4 hours and 50 minutes.\n\nThe time of arrival of the car at city Q is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A car started from city P at 9.40am. The time taken for the car to reach the city Q is 4 hours and 50 minutes.\n\nThe time of arrival of the car at city Q is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "15:10 Hours",
@@ -940,22 +1748,62 @@
         {
           "id": "A",
           "text": "15:10 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15:10 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "14:20 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:20 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "14:30 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:30 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "14:10 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:10 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -985,7 +1833,18 @@
       "questionNumber": 17,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "P is three years younger than R but one year older than S.\nS is one year older than Q but 4 years younger than R.\nR is 15 years old.\nThe age of Q is ____ years (answer in integer).",
+      "questionText": "P is three years younger than R but one year older than S.\n\nS is one year older than Q but 4 years younger than R.\n\nR is 15 years old.\n\nThe age of Q is ____ years (answer in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "P is three years younger than R but one year older than S.\n\nS is one year older than Q but 4 years younger than R.\n\nR is 15 years old.\n\nThe age of Q is ____ years (answer in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1020,7 +1879,18 @@
       "questionNumber": 18,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "In a certain code language, ATTITUDE is written as TAUJUEDU and CHILDREN\nis written as HCJMENER.\nHow LANGUAGE is written in that code language?",
+      "questionText": "In a certain code language, ATTITUDE is written as TAUJUEDU and CHILDREN is written as HCJMENER.\n\nHow LANGUAGE is written in that code language?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a certain code language, ATTITUDE is written as TAUJUEDU and CHILDREN is written as HCJMENER.\n\nHow LANGUAGE is written in that code language?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "ALOHVEGA",
@@ -1033,22 +1903,62 @@
         {
           "id": "A",
           "text": "ALOHVEGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALOHVEGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "ALHOVAGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALHOVAGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "LAVOHEGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "LAVOHEGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "ALHOVGEA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALHOVGEA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1078,7 +1988,66 @@
       "questionNumber": 19,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "The table shows the data of 450 candidates who appeared in the examination of\nthree subjects - Social Science, Mathematics, and Science.\nParticulars Number of candidates\nPassed in all the three subjects 167\nFailed in all the three subjects 60\nFailed in Social Science subject 175\nFailed in Mathematics subject 199\nFailed in Science subject 191\nPassed in only Social Science subject 62\nPassed in only Mathematics subject 48\nPassed in only Science subject 52\nHow many candidates have passed in at least one subject?",
+      "questionText": "The table shows the data of 450 candidates who appeared in the examination of three subjects – Social Science, Mathematics, and Science.\n\n| Particulars | Number of candidates |\n| :--- | :--- |\n| Passed in all the three subjects | 167 |\n| Failed in all the three subjects | 60 |\n| Failed in Social Science subject | 175 |\n| Failed in Mathematics subject | 199 |\n| Failed in Science subject | 191 |\n| Passed in only Social Science subject | 62 |\n| Passed in only Mathematics subject | 48 |\n| Passed in only Science subject | 52 |\n\nHow many candidates have passed in at least one subject?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table shows the data of 450 candidates who appeared in the examination of three subjects - Social Science, Mathematics, and Science.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Particulars",
+            "Number of candidates"
+          ],
+          "rows": [
+            [
+              "Passed in all the three subjects",
+              "167"
+            ],
+            [
+              "Failed in all the three subjects",
+              "60"
+            ],
+            [
+              "Failed in Social Science subject",
+              "175"
+            ],
+            [
+              "Failed in Mathematics subject",
+              "199"
+            ],
+            [
+              "Failed in Science subject",
+              "191"
+            ],
+            [
+              "Passed in only Social Science subject",
+              "62"
+            ],
+            [
+              "Passed in only Mathematics subject",
+              "48"
+            ],
+            [
+              "Passed in only Science subject",
+              "52"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "How many candidates have passed in at least one subject?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "48",
@@ -1091,22 +2060,62 @@
         {
           "id": "A",
           "text": "48",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "48",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "162",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "162",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "390",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "390",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "425",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "425",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1136,35 +2145,90 @@
       "questionNumber": 20,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "If \\times means +, + means \\div , - means \\times , and \\div means -,\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+      "questionText": "If \\times means +, + means \\div , - means \\times , and \\div means -,\n\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If \\times means +, + means \\div , - means \\times , and \\div means -,\n\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "8\n3\n5",
-        "2\n7\n5",
-        "7\n2\n5",
-        "3\n8\n5"
+        "\\(\\frac{8}{5}\\)",
+        "\\(\\frac{2}{5}\\)",
+        "\\(\\frac{7}{5}\\)",
+        "\\(\\frac{3}{5}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "8\n3\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{8}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{8}{5}",
+              "content": "\\(\\frac{8}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "2\n7\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{2}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{2}{5}",
+              "content": "\\(\\frac{2}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "7\n2\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{7}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{7}{5}",
+              "content": "\\(\\frac{7}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "3\n8\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{3}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{3}{5}",
+              "content": "\\(\\frac{3}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1194,7 +2258,18 @@
       "questionNumber": 21,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Given a series 5, 8, 11, 14, …\nIf the nth term of the given series is 320, then n (where, n \\ge 1) is",
+      "questionText": "Given a series 5, 8, 11, 14, … If the n^{th} term of the given series is 320, then n (where, n \\ge 1) is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given a series 5, 8, 11, 14, … If the n^{th} term of the given series is 320, then n (where, n \\ge 1) is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "104",
@@ -1207,22 +2282,62 @@
         {
           "id": "A",
           "text": "104",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "104",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "105",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "105",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "106",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "106",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "107",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "107",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1252,7 +2367,58 @@
       "questionNumber": 22,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your\ntaxable income this year is Rs. 34200. The details for tax calculation are given in\nthe table below.\nIncome range (Rs.) Tax slab (Rs.)\n0 to 5000 2 % of income\nGreater than 5000 to 10000 100 + 3 % of income over 5000\nGreater than 10000 to 20000 250 + 5 % of income over 10000\nGreater than 20000 to 30000 750 + 8 % of income over 20000\nGreater than 30000 to 50000 1550 + 10 % of income over 30000\nGreater than 50000 to 100000 3550 + 20 % of income over 50000\nConsider the appropriate tax slab corresponding to your income. What is the\nadditional amount of tax you need to pay this year compared to last year?",
+      "questionText": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your taxable income this year is Rs. 34200. The details for tax calculation are given in the table below.\n\n| Income range (Rs.) | Tax slab (Rs.) |\n| :--- | :--- |\n| 0 to 5000 | 2 % of income |\n| Greater than 5000 to 10000 | 100 + 3 % of income over 5000 |\n| Greater than 10000 to 20000 | 250 + 5 % of income over 10000 |\n| Greater than 20000 to 30000 | 750 + 8 % of income over 20000 |\n| Greater than 30000 to 50000 | 1550 + 10 % of income over 30000 |\n| Greater than 50000 to 100000 | 3550 + 20 % of income over 50000 |\n\nConsider the appropriate tax slab corresponding to your income. What is the additional amount of tax you need to pay this year compared to last year?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your taxable income this year is Rs. 34200. The details for tax calculation are given in the table below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Income range (Rs.)",
+            "Tax slab (Rs.)"
+          ],
+          "rows": [
+            [
+              "0 to 5000",
+              "2 % of income"
+            ],
+            [
+              "Greater than 5000 to 10000",
+              "100 + 3 % of income over 5000"
+            ],
+            [
+              "Greater than 10000 to 20000",
+              "250 + 5 % of income over 10000"
+            ],
+            [
+              "Greater than 20000 to 30000",
+              "750 + 8 % of income over 20000"
+            ],
+            [
+              "Greater than 30000 to 50000",
+              "1550 + 10 % of income over 30000"
+            ],
+            [
+              "Greater than 50000 to 100000",
+              "3550 + 20 % of income over 50000"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Consider the appropriate tax slab corresponding to your income. What is the additional amount of tax you need to pay this year compared to last year?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1970",
@@ -1265,22 +2431,62 @@
         {
           "id": "A",
           "text": "1970",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1970",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1060",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1060",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "910",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "910",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "420",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "420",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1310,35 +2516,86 @@
       "questionNumber": 23,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Anand, Hari, and Chris are engaged in one of the three type of occupations - clerk,\nteacher, and plumber, not necessarily in that order. Each person is assigned only\none type of occupation. No two or more persons can be assigned same type of\noccupation. Clerk is Chris's cousin. Hari lives next door to the plumber.\nAnand, who knows more facts than the teacher, has to drive more than 1 hour to\nreach Hari's home. Identify each of the person's correct type of occupation, and\naccordingly, which one of the following options is correct?",
+      "questionText": "An and, Hari, and Chris are engaged in one of the three type of occupations - clerk, teacher, and plumber, not necessarily in that order. Each person is assigned only one type of occupation. No two or more persons can be assigned same type of occupation. Clerk is Chris's cousin. Hari lives next door to the plumber. An and, who knows more facts than the teacher, has to drive more than 1 hour to reach Hari's home. Identify each of the person's correct type of occupation, and accordingly, which one of the following options is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An and, Hari, and Chris are engaged in one of the three type of occupations - clerk, teacher, and plumber, not necessarily in that order. Each person is assigned only one type of occupation. No two or more persons can be assigned same type of occupation. Clerk is Chris's cousin. Hari lives next door to the plumber. An and, who knows more facts than the teacher, has to drive more than 1 hour to reach Hari's home. Identify each of the person's correct type of occupation, and accordingly, which one of the following options is correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Anand is teacher and Chris is clerk.",
-        "Hari is clerk and Anand is plumber.",
+        "An and is teacher and Chris is clerk.",
+        "Hari is clerk and An and is plumber.",
         "Chris is teacher and Hari is clerk.",
-        "Anand is clerk and Chris is plumber."
+        "An and is clerk and Chris is plumber."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Anand is teacher and Chris is clerk.",
-          "imageUrl": null
+          "text": "An and is teacher and Chris is clerk.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An and is teacher and Chris is clerk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Hari is clerk and Anand is plumber.",
-          "imageUrl": null
+          "text": "Hari is clerk and An and is plumber.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hari is clerk and An and is plumber.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Chris is teacher and Hari is clerk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Chris is teacher and Hari is clerk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Anand is clerk and Chris is plumber.",
-          "imageUrl": null
+          "text": "An and is clerk and Chris is plumber.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An and is clerk and Chris is plumber.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1368,11 +2625,22 @@
       "questionNumber": 24,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Many countries are facing water shortage crises in the past few years. A report of\nthe United Nation has named India among the worst countries for poor quality of\nwater. The report ranks 122 countries according to the quality of their water as well\nas their commitment to improve the situation. Some countries in Europe are\nconsidered the worst because of the quality of its ground water. Rain failed in some\nparts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and Andhra\nPradesh were affected by severe drought. People without water turn desperate and\nviolent. Consequently, the food godowns were attacked in some of the states.\nBased on the details given in the passage, which of the following option(s) is/ are\ncorrect statement(s)?",
+      "questionText": "Many countries are facing water shortage crises in the past few years. A report of the United Nation has named India among the worst countries for poor quality of water. The report ranks 122 countries according to the quality of their water as well as their commitment to improve the situation. Some countries in Europe are considered the worst because of the quality of its ground water. Rain failed in some parts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and Andhra Pradesh were affected by severe drought. People without water turn desperate and violent. Consequently, the food godowns were attacked in some of the states.\n\nBased on the details given in the passage, which of the following option(s) is/ are correct statement(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Many countries are facing water shortage crises in the past few years. A report of the United Nation has named India among the worst countries for poor quality of water. The report ranks 122 countries according to the quality of their water as well as their commitment to improve the situation. Some countries in Europe are considered the worst because of the quality of its ground water. Rain failed in some parts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and Andhra Pradesh were affected by severe drought. People without water turn desperate and violent. Consequently, the food godowns were attacked in some of the states.\n\nBased on the details given in the passage, which of the following option(s) is/ are correct statement(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "There is no proof that India is affected by poor quality of water.",
-        "A few European countries are suffering due to occurrence of drought.",
+        "few European countries are suffering due to occurrence of drought.",
         "Lack of access to water can lead to social unrest.",
         "Intense shortage of water is visible in some states of India."
       ],
@@ -1381,22 +2649,62 @@
         {
           "id": "A",
           "text": "There is no proof that India is affected by poor quality of water.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "There is no proof that India is affected by poor quality of water.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "A few European countries are suffering due to occurrence of drought.",
-          "imageUrl": null
+          "text": "few European countries are suffering due to occurrence of drought.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "few European countries are suffering due to occurrence of drought.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Lack of access to water can lead to social unrest.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lack of access to water can lead to social unrest.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Intense shortage of water is visible in some states of India.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Intense shortage of water is visible in some states of India.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C;D",
@@ -1432,7 +2740,24 @@
       "questionNumber": 25,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and\nhexagon) are given.\nThe sum of the numbers which belong to only two overlapping shapes is_______.",
+      "questionText": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and hexagon) are given.\n\nThe sum of the numbers which belong to <u>only</u> two overlapping shapes is_______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and hexagon) are given.\n\nThe sum of the numbers which belong to <u>only</u> two overlapping shapes is_______.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q25_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1469,7 +2794,18 @@
       "questionNumber": 26,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying\ngrass in the field is Rs. 5 per square-meter. The total cost for laying grass in the field\nABCD is Rs. ________ (rounded off to two decimal places).",
+      "questionText": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying grass in the field is Rs. 5 per square-meter. The total cost for laying grass in the field ABCD is Rs. ________ (rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying grass in the field is Rs. 5 per square-meter. The total cost for laying grass in the field ABCD is Rs. ________ (rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1504,35 +2840,86 @@
       "questionNumber": 27,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "In the context of a perfectly competitive market, identify the statement that is\nNOT CORRECT.",
+      "questionText": "In the context of a perfectly competitive market, identify the statement that is NOT CORRECT.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the context of a perfectly competitive market, identify the statement that is NOT CORRECT.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Producing less than the competitive output lowers welfare.",
         "Producing more than the competitive output lowers welfare.",
         "The welfare is dependent on both price and the competitive output.",
-        "If a consumer values the last unit more than its marginal cost of production,\nproducing an additional unit shall lower welfare."
+        "If a consumer values the last unit more than its marginal cost of production, producing an additional unit shall lower welfare."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "Producing less than the competitive output lowers welfare.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Producing less than the competitive output lowers welfare.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Producing more than the competitive output lowers welfare.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Producing more than the competitive output lowers welfare.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The welfare is dependent on both price and the competitive output.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The welfare is dependent on both price and the competitive output.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "If a consumer values the last unit more than its marginal cost of production,\nproducing an additional unit shall lower welfare.",
-          "imageUrl": null
+          "text": "If a consumer values the last unit more than its marginal cost of production, producing an additional unit shall lower welfare.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "If a consumer values the last unit more than its marginal cost of production, producing an additional unit shall lower welfare.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1562,7 +2949,18 @@
       "questionNumber": 28,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "The demand function is given as log 𝑄 = log 𝐴+ 0.5 log 𝑃, where 𝑄 is quantity,\n𝑃 is the unit price of the good and 𝐴 is a positive real number. The own price\nelasticity of demand is",
+      "questionText": "The dem and function is given as log 𝑄= log 𝐴+ 0.5 log 𝑃, where 𝑄 is quantity, 𝑃 is the unit price of the good and 𝐴 is a positive real number. The own price elasticity of dem and is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The dem and function is given as log 𝑄= log 𝐴+ 0.5 log 𝑃, where 𝑄 is quantity, 𝑃 is the unit price of the good and 𝐴 is a positive real number. The own price elasticity of dem and is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Perfectly elastic",
@@ -1575,22 +2973,62 @@
         {
           "id": "A",
           "text": "Perfectly elastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perfectly elastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Perfectly inelastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perfectly inelastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Elastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Elastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Inelastic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Inelastic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1621,6 +3059,17 @@
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
       "questionText": "Which one of the following is part of the unconventional monetary policy?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following is part of the unconventional monetary policy?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Repo rate",
@@ -1633,22 +3082,62 @@
         {
           "id": "A",
           "text": "Repo rate",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Repo rate",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Quantitative easing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Quantitative easing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Fractional banking",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fractional banking",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Reverse Repo rate",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reverse Repo rate",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1678,35 +3167,86 @@
       "questionNumber": 30,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Which one of the following statements is NOT CORRECT in the context of\nKeynesian Absolute Income Hypothesis?",
+      "questionText": "Which one of the following statements is NOT CORRECT in the context of Keynesian Absolute Income Hypothesis?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following statements is NOT CORRECT in the context of Keynesian Absolute Income Hypothesis?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Average Propensity to Consume (APC) plus Average Propensity to Save (APS) is\nequal to one.",
+        "Average Propensity to Consume (APC) plus Average Propensity to Save (APS) is equal to one.",
         "Marginal Propensity to Consume (MPC) is constant.",
         "Average Propensity to Consume (APC) increases as income increases.",
-        "Marginal Propensity to Consume (MPC) plus Marginal Propensity to Save (MPS)\nis equal to one."
+        "Marginal Propensity to Consume (MPC) plus Marginal Propensity to Save (MPS) is equal to one."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Average Propensity to Consume (APC) plus Average Propensity to Save (APS) is\nequal to one.",
-          "imageUrl": null
+          "text": "Average Propensity to Consume (APC) plus Average Propensity to Save (APS) is equal to one.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Average Propensity to Consume (APC) plus Average Propensity to Save (APS) is equal to one.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Marginal Propensity to Consume (MPC) is constant.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Marginal Propensity to Consume (MPC) is constant.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Average Propensity to Consume (APC) increases as income increases.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Average Propensity to Consume (APC) increases as income increases.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Marginal Propensity to Consume (MPC) plus Marginal Propensity to Save (MPS)\nis equal to one.",
-          "imageUrl": null
+          "text": "Marginal Propensity to Consume (MPC) plus Marginal Propensity to Save (MPS) is equal to one.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Marginal Propensity to Consume (MPC) plus Marginal Propensity to Save (MPS) is equal to one.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1736,7 +3276,18 @@
       "questionNumber": 31,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑓(𝑥, 𝑦, 𝑧) = 𝑥2𝑦3𝑧.\nThen,\n𝜕𝑓 𝜕𝑓 𝜕𝑓\n𝑥 (𝑥, 𝑦, 𝑧) + 𝑦 (𝑥, 𝑦, 𝑧) + 𝑧 (𝑥, 𝑦, 𝑧) =\n𝜕𝑥 𝜕𝑦 𝜕𝑧",
+      "questionText": "Let 𝑓(𝑥, 𝑦, 𝑧) = 𝑥^{2}𝑦^{3}𝑧.\n\nThen, 𝑥 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑥(𝑥, 𝑦, 𝑧) + 𝑦 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑦(𝑥, 𝑦, 𝑧) + 𝑧 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑧(𝑥, 𝑦, 𝑧) =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑓(𝑥, 𝑦, 𝑧) = 𝑥^{2}𝑦^{3}𝑧.\n\nThen, 𝑥 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑥(𝑥, 𝑦, 𝑧) + 𝑦 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑦(𝑥, 𝑦, 𝑧) + 𝑧 <u>𝜕𝑓</u> <u>𝜕𝑓</u> <u>𝜕𝑓</u> 𝜕𝑧(𝑥, 𝑦, 𝑧) =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑓(𝑥, 𝑦, 𝑧)",
@@ -1749,22 +3300,62 @@
         {
           "id": "A",
           "text": "𝑓(𝑥, 𝑦, 𝑧)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑓(𝑥, 𝑦, 𝑧)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "2𝑓(𝑥, 𝑦, 𝑧)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2𝑓(𝑥, 𝑦, 𝑧)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3𝑓(𝑥, 𝑦, 𝑧)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3𝑓(𝑥, 𝑦, 𝑧)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6𝑓(𝑥, 𝑦, 𝑧)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6𝑓(𝑥, 𝑦, 𝑧)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1794,11 +3385,22 @@
       "questionNumber": 32,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑓(𝑥) = -3𝑥2(1 -𝑥) -3𝑥(1 -𝑥)2 -(1 -𝑥)3.\n𝑑𝑓(𝑥)\n=\nThen,\n𝑑𝑥",
+      "questionText": "Let 𝑓(𝑥) = -3𝑥^{2}(1 -𝑥) -3𝑥(1 -𝑥)^{2} -(1 -𝑥)^{3}.\n\nThen, \\(\\frac{𝑑𝑓(𝑥)}{𝑑𝑥}\\) =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑓(𝑥) = -3𝑥^{2}(1 -𝑥) -3𝑥(1 -𝑥)^{2} -(1 -𝑥)^{3}.\n\nThen, \\(\\frac{𝑑𝑓(𝑥)}{𝑑𝑥}\\) =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "3𝑥2",
-        "3(1 -𝑥)2",
+        "\\(3𝑥^{2}\\)",
+        "\\(3(1 -𝑥)^{2}\\)",
         "3𝑥(1 -𝑥)",
         "𝑥"
       ],
@@ -1806,23 +3408,65 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "3𝑥2",
-          "imageUrl": null
+          "text": "\\(3𝑥^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3𝑥^{2}",
+              "content": "\\(3𝑥^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "3(1 -𝑥)2",
-          "imageUrl": null
+          "text": "\\(3(1 -𝑥)^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3(1 -𝑥)^{2}",
+              "content": "\\(3(1 -𝑥)^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
           "text": "3𝑥(1 -𝑥)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3𝑥(1 -𝑥)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑥",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1852,35 +3496,86 @@
       "questionNumber": 33,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "In the context of environmental cost-benefit analysis, which of the following\nstatements is/are NOT CORRECT?",
+      "questionText": "In the context of environmental cost-benefit analysis, which of the following statements is/are NOT CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the context of environmental cost-benefit analysis, which of the following statements is/are NOT CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The discount rates do not impact the fixed and variable costs of the project but does\nimpact the perceived benefits in monetary terms.",
+        "The discount rates do not impact the fixed and variable costs of the project but does impact the perceived benefits in monetary terms.",
         "The analysis does not incorporate people's preferences for a policy.",
         "The analysis is dependent on the choice of the discount rates.",
-        "The discount rates are not easily observable and choice is often subject to value\njudgements."
+        "The discount rates are not easily observable and choice is often subject to value judgements."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The discount rates do not impact the fixed and variable costs of the project but does\nimpact the perceived benefits in monetary terms.",
-          "imageUrl": null
+          "text": "The discount rates do not impact the fixed and variable costs of the project but does impact the perceived benefits in monetary terms.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The discount rates do not impact the fixed and variable costs of the project but does impact the perceived benefits in monetary terms.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The analysis does not incorporate people's preferences for a policy.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The analysis does not incorporate people's preferences for a policy.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The analysis is dependent on the choice of the discount rates.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The analysis is dependent on the choice of the discount rates.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "The discount rates are not easily observable and choice is often subject to value\njudgements.",
-          "imageUrl": null
+          "text": "The discount rates are not easily observable and choice is often subject to value judgements.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The discount rates are not easily observable and choice is often subject to value judgements.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1914,35 +3609,86 @@
       "questionNumber": 34,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Which of the following statements is/are CORRECT in the context of National\nIncome Accounting?",
+      "questionText": "Which of the following statements is/are CORRECT in the context of National Income Accounting?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are CORRECT in the context of National Income Accounting?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Gross Domestic Product (GDP) is the sum of all factor payments.",
-        "Net Domestic Product (NDP) is equal to Gross Domestic Product (GDP) minus\ndepreciation.",
-        "Gross National Product (GNP) is equal to Gross Domestic Product (GDP) plus net\nincome from abroad.",
-        "Net National Product (NNP) is equal to Gross National Product (GNP) minus Gross\nDomestic Product (GDP)."
+        "Net Domestic Product (NDP) is equal to Gross Domestic Product (GDP) minus depreciation.",
+        "Gross National Product (GNP) is equal to Gross Domestic Product (GDP) plus net income from abroad.",
+        "Net National Product (NNP) is equal to Gross National Product (GNP) minus Gross Domestic Product (GDP)."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "Gross Domestic Product (GDP) is the sum of all factor payments.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Gross Domestic Product (GDP) is the sum of all factor payments.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Net Domestic Product (NDP) is equal to Gross Domestic Product (GDP) minus\ndepreciation.",
-          "imageUrl": null
+          "text": "Net Domestic Product (NDP) is equal to Gross Domestic Product (GDP) minus depreciation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Net Domestic Product (NDP) is equal to Gross Domestic Product (GDP) minus depreciation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Gross National Product (GNP) is equal to Gross Domestic Product (GDP) plus net\nincome from abroad.",
-          "imageUrl": null
+          "text": "Gross National Product (GNP) is equal to Gross Domestic Product (GDP) plus net income from abroad.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Gross National Product (GNP) is equal to Gross Domestic Product (GDP) plus net income from abroad.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Net National Product (NNP) is equal to Gross National Product (GNP) minus Gross\nDomestic Product (GDP).",
-          "imageUrl": null
+          "text": "Net National Product (NNP) is equal to Gross National Product (GNP) minus Gross Domestic Product (GDP).",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Net National Product (NNP) is equal to Gross National Product (GNP) minus Gross Domestic Product (GDP).",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -1978,35 +3724,86 @@
       "questionNumber": 35,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider the following system of linear equations:\n𝑥+ 2𝑦+ 3𝑧 = 0\n2𝑥 + 𝑝𝑦 = 0\n3𝑥 + 2𝑦+ 𝑝𝑧 = 0\nThe value(s) of 𝑝 for which the system of equations have infinitely many solutions\nis/are",
+      "questionText": "Consider the following system of linear equations:\n\n𝑥+ 2𝑦+ 3𝑧= 0\n\n2𝑥+ 𝑝𝑦= 0\n\n3𝑥+ 2𝑦+ 𝑝𝑧= 0\n\nThe value(s) of 𝑝 for which the system of equations have infinitely many solutions is/are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following system of linear equations:\n\n𝑥+ 2𝑦+ 3𝑧= 0\n\n2𝑥+ 𝑝𝑦= 0\n\n3𝑥+ 2𝑦+ 𝑝𝑧= 0\n\nThe value(s) of 𝑝 for which the system of equations have infinitely many solutions is/are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑝 = 1",
-        "𝑝 = 2",
-        "𝑝 = 6",
-        "𝑝 = 12"
+        "𝑝= 1",
+        "𝑝= 2",
+        "𝑝= 6",
+        "𝑝= 12"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑝 = 1",
-          "imageUrl": null
+          "text": "𝑝= 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑝 = 2",
-          "imageUrl": null
+          "text": "𝑝= 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑝 = 6",
-          "imageUrl": null
+          "text": "𝑝= 6",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑝 = 12",
-          "imageUrl": null
+          "text": "𝑝= 12",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2043,34 +3840,85 @@
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
       "questionText": "Which of the following statements is/are CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The difference between Human Poverty Index and the Human Development Index\nis that the former measure focuses on deprivations.",
-        "The Human Development Index is insensitive to inequalities in the distribution of\nhuman development in the population.",
-        "Income-based poverty lines are sufficient to capture the well-being of a country's\ncitizens.",
-        "Multi-dimensional Poverty Index considers differences in intra-household\ndistribution of resources."
+        "The difference between Human Poverty Index and the Human Development Index is that the former measure focuses on deprivations.",
+        "The Human Development Index is insensitive to inequalities in the distribution of human development in the population.",
+        "Income-based poverty lines are sufficient to capture the well-being of a country's citizens.",
+        "Multi-dimensional Poverty Index considers differences in intra-household distribution of resources."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The difference between Human Poverty Index and the Human Development Index\nis that the former measure focuses on deprivations.",
-          "imageUrl": null
+          "text": "The difference between Human Poverty Index and the Human Development Index is that the former measure focuses on deprivations.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The difference between Human Poverty Index and the Human Development Index is that the former measure focuses on deprivations.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The Human Development Index is insensitive to inequalities in the distribution of\nhuman development in the population.",
-          "imageUrl": null
+          "text": "The Human Development Index is insensitive to inequalities in the distribution of human development in the population.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The Human Development Index is insensitive to inequalities in the distribution of human development in the population.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Income-based poverty lines are sufficient to capture the well-being of a country's\ncitizens.",
-          "imageUrl": null
+          "text": "Income-based poverty lines are sufficient to capture the well-being of a country's citizens.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Income-based poverty lines are sufficient to capture the well-being of a country's citizens.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Multi-dimensional Poverty Index considers differences in intra-household\ndistribution of resources.",
-          "imageUrl": null
+          "text": "Multi-dimensional Poverty Index considers differences in intra-household distribution of resources.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Multi-dimensional Poverty Index considers differences in intra-household distribution of resources.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2106,7 +3954,18 @@
       "questionNumber": 37,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Which of the following statements is/are the key feature(s) of India's New Economic\nReforms (1991)?",
+      "questionText": "Which of the following statements is/are the key feature(s) of India's New Economic Reforms (1991)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are the key feature(s) of India's New Economic Reforms (1991)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Liberalization of the economy",
@@ -2119,22 +3978,62 @@
         {
           "id": "A",
           "text": "Liberalization of the economy",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Liberalization of the economy",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Privatization of public sector enterprises",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Privatization of public sector enterprises",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Complete nationalization of all industries",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Complete nationalization of all industries",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Globalization and increased foreign direct investment",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Globalization and increased foreign direct investment",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -2172,35 +4071,88 @@
       "questionNumber": 38,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "A Constant Elasticity of Substitution (CES) utility function is given as:\n1\n𝑈 (𝑧 , 𝑧 ) = (𝑧𝛿 + 𝑧𝛿)\n𝐶𝐸𝑆 1 2 𝛿 1 2\nwhere 𝑧 and 𝑧 are two goods, and 𝛿 \\le 1, 𝛿 \\ne 0.\n1 2\nA Quasi-linear (QL) utility function is given as:\n𝑈 𝑄𝐿(𝑧 1, 𝑧 2) = 2𝑧 + log 𝑧\n1 2\nwhere 𝑧 and 𝑧 are two goods.\n1 2\nWhich of the following statements is/are NOT CORRECT?",
+      "questionText": "A Constant Elasticity of Substitution (CES) utility function is given as:\n\nwhere 𝑧_{1} and 𝑧_{2} are two goods, and 𝛿 \\le 1, 𝛿 \\ne 0. 𝑈𝐶𝐸𝑆(𝑧1, 𝑧2) = <u>1</u> 𝛿+ 𝑧2 𝛿) 𝛿(𝑧1 𝛿+ 𝑧2 ^{𝛿})\n\nA Quasi-linear (QL) utility function is given as:\n\n𝑈_{𝑄𝐿}(𝑧_{1}, 𝑧_{2}) = 2𝑧_{1} + log 𝑧_{2} where 𝑧_{1} and 𝑧_{2} are two goods. Which of the following statements is/are NOT CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A Constant Elasticity of Substitution (CES) utility function is given as:\n\nwhere 𝑧_{1} and 𝑧_{2} are two goods, and 𝛿 \\le 1, 𝛿 \\ne 0. 𝑈𝐶𝐸𝑆(𝑧1, 𝑧2) = <u>1</u> 𝛿+ 𝑧2 𝛿) 𝛿(𝑧1 𝛿+ 𝑧2 ^{𝛿})\n\nA Quasi-linear (QL) utility function is given as:\n\n𝑈_{𝑄𝐿}(𝑧_{1}, 𝑧_{2}) = 2𝑧_{1} + log 𝑧_{2} where 𝑧_{1} and 𝑧_{2} are two goods. Which of the following statements is/are NOT CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The CES utility function is homothetic but the QL utility function is non-\nhomothetic.",
-        "For 𝛿 = 1, the CES utility function is not strictly convex.",
-        "The Marginal Rate of Substitution (𝑀𝑅𝑆 ) for the CES utility function and the\n𝑧1𝑧2\nQL utility function are dependent on both 𝑧 and 𝑧 .\n1 2",
-        "If 𝑧 = 𝑧 , the Marginal Rate of Substitution (𝑀𝑅𝑆 ) is 2 for both the CES and\n1 2 𝑧1𝑧2\nthe QL utility functions."
+        "The CES utility function is homothetic but the QL utility function is non- homothetic.",
+        "For 𝛿= 1, the CES utility function is not strictly convex.",
+        "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
+        "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The CES utility function is homothetic but the QL utility function is non-\nhomothetic.",
-          "imageUrl": null
+          "text": "The CES utility function is homothetic but the QL utility function is non- homothetic.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The CES utility function is homothetic but the QL utility function is non- homothetic.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "For 𝛿 = 1, the CES utility function is not strictly convex.",
-          "imageUrl": null
+          "text": "For 𝛿= 1, the CES utility function is not strictly convex.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "For 𝛿= 1, the CES utility function is not strictly convex.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "The Marginal Rate of Substitution (𝑀𝑅𝑆 ) for the CES utility function and the\n𝑧1𝑧2\nQL utility function are dependent on both 𝑧 and 𝑧 .\n1 2",
-          "imageUrl": null
+          "text": "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.",
+              "content": "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "If 𝑧 = 𝑧 , the Marginal Rate of Substitution (𝑀𝑅𝑆 ) is 2 for both the CES and\n1 2 𝑧1𝑧2\nthe QL utility functions.",
-          "imageUrl": null
+          "text": "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.",
+              "content": "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C;D",
@@ -2236,7 +4188,50 @@
       "questionNumber": 39,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider a lottery with three possible outcomes:\nOutcomes Probability Reward/Win (in INR)\nI 0.2 25\nII 0.3 50\nIII 0.5 100\nThe maximum amount that a risk-neutral person would be willing to pay to play the\nabove lottery is INR _____________ (in integer)",
+      "questionText": "Consider a lottery with three possible outcomes:\n\n| Outcomes | Probability | Reward/Win (in INR) |\n| :--- | :--- | :--- |\n| I | 0.2 | 25 |\n| II | 0.3 | 50 |\n| III | 0.5 | 100 |\n\nThe maximum amount that a risk-neutral person would be willing to pay to play the above lottery is INR _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a lottery with three possible outcomes:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Outcomes",
+            "Probability",
+            "Reward/Win (in INR)"
+          ],
+          "rows": [
+            [
+              "I",
+              "0.2",
+              "25"
+            ],
+            [
+              "II",
+              "0.3",
+              "50"
+            ],
+            [
+              "III",
+              "0.5",
+              "100"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The maximum amount that a risk-neutral person would be willing to pay to play the above lottery is INR _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2271,7 +4266,18 @@
       "questionNumber": 40,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "For a closed economy with no government expenditure and taxes, the aggregate\nconsumption function (𝐶) is given by:\n𝐶 = 100 + 0.75 𝑌\n𝑑\nwhere 𝑌 is the disposable income.\n𝑑\nIf the total investment is 80, the equilibrium output is _____________ (in integer)",
+      "questionText": "For a closed economy with no government expenditure and taxes, the aggregate consumption function (𝐶) is given by:\n\n𝐶= 100 + 0.75 𝑌_{𝑑} where 𝑌_{𝑑} is the disposable income. If the total investment is 80, the equilibrium output is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For a closed economy with no government expenditure and taxes, the aggregate consumption function (𝐶) is given by:\n\n𝐶= 100 + 0.75 𝑌_{𝑑} where 𝑌_{𝑑} is the disposable income. If the total investment is 80, the equilibrium output is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2306,7 +4312,18 @@
       "questionNumber": 41,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "If 𝑋 is a continuous random variable whose probability density function is given by\n1\nfor 1 < 𝑥 < \\infty\n𝑓 (𝑥) = {𝑥2\n𝑋\n0 elsewhere\nThen the median of 𝑋 is _____________ (in integer)",
+      "questionText": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { \\(\\frac{1}{{𝑥2}\\) for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { \\(\\frac{1}{{𝑥2}\\) for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2341,7 +4358,18 @@
       "questionNumber": 42,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "The inverse demand function for a monopolist is given by\n𝑃 = 100 -𝑘𝑄\nwhere 𝑃 is the unit price of the good, 𝑄 is the quantity and 𝑘 is a constant.\nThe cost function facing the monopolist is given as 𝐶(𝑄) = 50 + 2𝑄(1 + 𝑄).\nIf the profit maximizing output is 7, the maximum profit is _____________\n(in integer)",
+      "questionText": "The inverse dem and function for a monopolist is given by\n\n𝑃= 100 -𝑘𝑄\n\nwhere 𝑃 is the unit price of the good, 𝑄 is the quantity and 𝑘 is a constant.\n\nThe cost function facing the monopolist is given as 𝐶(𝑄) = 50 + 2𝑄(1 + 𝑄).\n\nIf the profit maximizing output is 7, the maximum profit is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The inverse dem and function for a monopolist is given by\n\n𝑃= 100 -𝑘𝑄\n\nwhere 𝑃 is the unit price of the good, 𝑄 is the quantity and 𝑘 is a constant.\n\nThe cost function facing the monopolist is given as 𝐶(𝑄) = 50 + 2𝑄(1 + 𝑄).\n\nIf the profit maximizing output is 7, the maximum profit is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2376,7 +4404,18 @@
       "questionNumber": 43,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider a simple Keynesian closed economy model with the following\ninformation:\nThe Marginal Propensity to Consume (MPC) is 0.9 and the initial level of saving is\nINR 120. When income rises by INR 100, then the new level of saving will be INR\n_____________ (in integer)",
+      "questionText": "Consider a simple Keynesian closed economy model with the following information:\n\nThe Marginal Propensity to Consume (MPC) is 0.9 and the initial level of saving is INR 120. When income rises by INR 100, then the new level of saving will be INR _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a simple Keynesian closed economy model with the following information:\n\nThe Marginal Propensity to Consume (MPC) is 0.9 and the initial level of saving is INR 120. When income rises by INR 100, then the new level of saving will be INR _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2411,7 +4450,18 @@
       "questionNumber": 44,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "If 𝑋 is a continuous random variable whose probability density function is given by\n𝑐𝑥3 + 0.25 for 0 \\le 𝑥 \\le 1, 𝑐 \\in ℝ\n𝑓 (𝑥) = {\n𝑋\n0 elsewhere\nThen the value of 𝑐 is _____________ (in integer)",
+      "questionText": ". If 𝑋 is a continuous random variable whose probability density function is given by 𝑐𝑥^{3} + 0.25 for 0 \\le 𝑥 \\le 1, 𝑐 \\in ℝ 𝑓_{𝑋}(𝑥) = { 0 elsewhere Then the value of 𝑐 is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": ". If 𝑋 is a continuous random variable whose probability density function is given by 𝑐𝑥^{3} + 0.25 for 0 \\le 𝑥 \\le 1, 𝑐 \\in ℝ 𝑓_{𝑋}(𝑥) = { 0 elsewhere Then the value of 𝑐 is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2446,7 +4496,24 @@
       "questionNumber": 45,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "",
+      "questionText": "Consider a three-firms oligopoly market with a linear dem and function given by\n\n𝑃= 25 -𝑄\n\nwhere 𝑃 is the unit price and 𝑄 is the total quantity supplied. The total quantity 𝑄= (𝑞_{1} + 𝑞_{2} + 𝑞_{3}), where 𝑞_{𝑖} is the output from the 𝑖^{th} firm with 𝑖= 1,2,3.\n\nThe total cost (𝑇𝐶) curve of firm 𝑖 is given by 𝑇𝐶_{𝑖}= (𝛼_{𝑖}+ 5𝑞_{𝑖}) , where 𝛼_{𝑖}'s are positive real numbers.\n\nAssuming a Cournot solution exists, the value of 𝑄 is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a three-firms oligopoly market with a linear dem and function given by\n\n𝑃= 25 -𝑄\n\nwhere 𝑃 is the unit price and 𝑄 is the total quantity supplied. The total quantity 𝑄= (𝑞_{1} + 𝑞_{2} + 𝑞_{3}), where 𝑞_{𝑖} is the output from the 𝑖^{th} firm with 𝑖= 1,2,3.\n\nThe total cost (𝑇𝐶) curve of firm 𝑖 is given by 𝑇𝐶_{𝑖}= (𝛼_{𝑖}+ 5𝑞_{𝑖}) , where 𝛼_{𝑖}'s are positive real numbers.\n\nAssuming a Cournot solution exists, the value of 𝑄 is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q45_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "9",
@@ -2459,22 +4526,62 @@
         {
           "id": "A",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "15",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "12",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "21",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "21",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2486,8 +4593,10 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2025/xh-c1/q45_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/xh-c1/q45_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.66,
       "examId": "gate",
@@ -2505,6 +4614,17 @@
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
       "questionText": "Transfer payments by governments are viewed as",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Transfer payments by governments are viewed as",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Negative taxes",
@@ -2517,22 +4637,62 @@
         {
           "id": "A",
           "text": "Negative taxes",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Negative taxes",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Indirect taxes",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Indirect taxes",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Non-tax revenues",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Non-tax revenues",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Transfer of wealth",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Transfer of wealth",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2562,7 +4722,45 @@
       "questionNumber": 47,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Match Column I with Column II.\nColumn I Column II\nP. Phillips Curve 1. Describes the relationship between devaluation\nand trade deficit\nQ. Kuznets Curve 2. Describes the relationship between tax revenue and\ntax rate\nR. Laffer Curve 3. Describes the relationship between rate of\nunemployment and inflation\nS. J-Curve 4. Describes the relationship between degree of\nincome inequality and level of per-capita income",
+      "questionText": "Match Column I with Column II.\n\n| Column I | Column II |\n| :--- | :--- |\n| P. Phillips Curve | 1. Describes the relationship between devaluation and trade deficit |\n| Q. Kuznets Curve | 2. Describes the relationship between tax revenue and tax rate |\n| R. Laffer Curve | 3. Describes the relationship between rate of unemployment and inflation |\n| S. J-Curve | 4. Describes the relationship between degree of income inequality and level of per-capita income |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match Column I with Column II.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column I",
+            "Column II"
+          ],
+          "rows": [
+            [
+              "P. Phillips Curve",
+              "1. Describes the relationship between devaluation and trade deficit"
+            ],
+            [
+              "Q. Kuznets Curve",
+              "2. Describes the relationship between tax revenue and tax rate"
+            ],
+            [
+              "R. Laffer Curve",
+              "3. Describes the relationship between rate of unemployment and inflation"
+            ],
+            [
+              "S. J-Curve",
+              "4. Describes the relationship between degree of income inequality and level of per-capita income"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(P → 3), (Q → 4), (R → 2), (S → 1)",
@@ -2575,22 +4773,62 @@
         {
           "id": "A",
           "text": "(P → 3), (Q → 4), (R → 2), (S → 1)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(P → 3), (Q → 4), (R → 2), (S → 1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(P → 3), (Q → 1), (R → 2), (S → 4)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(P → 3), (Q → 1), (R → 2), (S → 4)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(P → 2), (Q → 1), (R → 3), (S → 4)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(P → 2), (Q → 1), (R → 3), (S → 4)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(P → 2), (Q → 3), (R → 4), (S → 1)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(P → 2), (Q → 3), (R → 4), (S → 1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2620,7 +4858,18 @@
       "questionNumber": 48,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider the following statements:\nStatement 1: The new classical policy ineffectiveness proposition asserts that,\nsystematic monetary policy and fiscal policy actions that change aggregate demand\nwill not affect output and employment even in short run.\nStatement 2: According to Real Business Cycle (RBC) model, the aggregate\neconomic variables are the outcomes of the decisions made by many individual\nagents acting to maximize their utility subject to production possibilities and\nresource constraints.\nWhich one of the following options is CORRECT?",
+      "questionText": "Consider the following statements:\n\nStatement 1: The new classical policy ineffectiveness proposition asserts that, systematic monetary policy and fiscal policy actions that change aggregate dem and will not affect output and employment even in short run.\n\nStatement 2: According to Real Business Cycle (RBC) model, the aggregate economic variables are the outcomes of the decisions made by many individual agents acting to maximize their utility subject to production possibilities and resource constraints.\n\nWhich one of the following options is CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements:\n\nStatement 1: The new classical policy ineffectiveness proposition asserts that, systematic monetary policy and fiscal policy actions that change aggregate dem and will not affect output and employment even in short run.\n\nStatement 2: According to Real Business Cycle (RBC) model, the aggregate economic variables are the outcomes of the decisions made by many individual agents acting to maximize their utility subject to production possibilities and resource constraints.\n\nWhich one of the following options is CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "ONLY Statement 1 is TRUE",
@@ -2633,22 +4882,62 @@
         {
           "id": "A",
           "text": "ONLY Statement 1 is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ONLY Statement 1 is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "ONLY Statement 2 is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ONLY Statement 2 is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "BOTH Statements are TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "BOTH Statements are TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "BOTH Statements are FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "BOTH Statements are FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2678,35 +4967,90 @@
       "questionNumber": 49,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider a two-variables (𝑥, 𝑦) linear regression model\n𝑦 = 𝛼+ 𝛽𝑥+ 𝜀\nwhere 𝛼 and 𝛽 are the parameters, and 𝜀 is the error term.\nThe parameters are estimated using the Ordinary Least Squares (OLS) method.\nLet 𝑏 denote the estimated value of 𝛽. If 𝑏 = 0, then which one of the following\nstatements is CORRECT?",
+      "questionText": "Consider a two-variables (𝑥, 𝑦) linear regression model\n\n𝑦= 𝛼+ 𝛽𝑥+ 𝜀 where 𝛼 and 𝛽 are the parameters, and 𝜀 is the error term.\n\nThe parameters are estimated using the Ordinary Least Squares (OLS) method. Let 𝑏 denote the estimated value of 𝛽. If 𝑏= 0, then which one of the following statements is CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a two-variables (𝑥, 𝑦) linear regression model\n\n𝑦= 𝛼+ 𝛽𝑥+ 𝜀 where 𝛼 and 𝛽 are the parameters, and 𝜀 is the error term.\n\nThe parameters are estimated using the Ordinary Least Squares (OLS) method. Let 𝑏 denote the estimated value of 𝛽. If 𝑏= 0, then which one of the following statements is CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑅2 can be any real number in (0, 0.5]",
-        "𝑅2 can be any real number in (0.5, 1)",
-        "𝑅2 is any positive real number greater than 1",
-        "𝑅2 = 0"
+        "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
+        "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
+        "\\(𝑅^{2} is any positive real number greater than 1\\)",
+        "\\(𝑅^{2} = 0\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑅2 can be any real number in (0, 0.5]",
-          "imageUrl": null
+          "text": "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅^{2} can be any real number in (0, 0.5]",
+              "content": "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑅2 can be any real number in (0.5, 1)",
-          "imageUrl": null
+          "text": "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅^{2} can be any real number in (0.5, 1)",
+              "content": "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑅2 is any positive real number greater than 1",
-          "imageUrl": null
+          "text": "\\(𝑅^{2} is any positive real number greater than 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅^{2} is any positive real number greater than 1",
+              "content": "\\(𝑅^{2} is any positive real number greater than 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑅2 = 0",
-          "imageUrl": null
+          "text": "\\(𝑅^{2} = 0\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅^{2} = 0",
+              "content": "\\(𝑅^{2} = 0\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2736,35 +5080,87 @@
       "questionNumber": 50,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑋 , 𝑋 , 𝑋 , … , be independent and identically distributed random variables with\n1 2 3\n𝐸[𝑋 ] = 𝜇.\n1\nLet 𝑁 be a positive integer valued random variable with 𝐸[𝑁] = 𝑛.\nIf 𝑆 = 𝑋 + 𝑋 + ⋯+ 𝑋 𝑁, then 𝐸[𝑆 𝑁] =\n𝑁 1 2",
+      "questionText": "Let 𝑋_{1}, 𝑋_{2}, 𝑋_{3}, … , be independent and identically distributed random variables with 𝐸[𝑋_{1}] = 𝜇. Let 𝑁 be a positive integer valued random variable with 𝐸[𝑁] = 𝑛.\n\nIf 𝑆_{𝑁}= 𝑋_{1} + 𝑋_{2} + ⋯+ 𝑋_{𝑁}, then 𝐸[𝑆_{𝑁}] =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑋_{1}, 𝑋_{2}, 𝑋_{3}, … , be independent and identically distributed random variables with 𝐸[𝑋_{1}] = 𝜇. Let 𝑁 be a positive integer valued random variable with 𝐸[𝑁] = 𝑛.\n\nIf 𝑆_{𝑁}= 𝑋_{1} + 𝑋_{2} + ⋯+ 𝑋_{𝑁}, then 𝐸[𝑆_{𝑁}] =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝜇",
         "𝑁𝜇",
         "𝑛𝜇",
-        "𝜇𝑛"
+        "\\(𝜇^{𝑛}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "𝜇",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝜇",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑁𝜇",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑁𝜇",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑛𝜇",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑛𝜇",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝜇𝑛",
-          "imageUrl": null
+          "text": "\\(𝜇^{𝑛}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝜇^{𝑛}",
+              "content": "\\(𝜇^{𝑛}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2794,35 +5190,87 @@
       "questionNumber": 51,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "A Cobb-Douglas type short-run production function is given by\n𝑞 = 2 \\sqrt (𝐿𝐾)\nwhere 𝑞, 𝐿 and 𝐾 are the output, labour and capital, respectively.\n𝐾 is fixed at 𝐾̅. The unit price of 𝐿 is 𝑤 and the unit price of 𝐾 is 𝑟. It is given that\n𝑤 is 12.\nConsidering the above information, which of the following statements is/are\nCORRECT?",
+      "questionText": "A Cobb-Douglas type short-run production function is given by\n\n𝑞= 2\\sqrt{𝐿𝐾}\n\nwhere 𝑞, 𝐿 and 𝐾 are the output, labour and capital, respectively. 𝐾 is fixed at 𝐾̅. The unit price of 𝐿 is 𝑤 and the unit price of 𝐾 is 𝑟. It is given that 𝑤 is 12.\n\nConsidering the above information, which of the following statements is/are CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A Cobb-Douglas type short-run production function is given by\n\n𝑞= 2\\sqrt{𝐿𝐾}\n\nwhere 𝑞, 𝐿 and 𝐾 are the output, labour and capital, respectively. 𝐾 is fixed at 𝐾̅. The unit price of 𝐿 is 𝑤 and the unit price of 𝐾 is 𝑟. It is given that 𝑤 is 12.\n\nConsidering the above information, which of the following statements is/are CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The short-run marginal cost is\n6𝑞\n𝐾̅",
-        "The short-run average variable cost is\n3𝑞\n𝐾̅",
-        "To produce 10 units of the output, required 𝐿 is\n25\n𝐾̅",
-        "For 𝐾̅ = 3 and 𝑟 = 4, the total cost is 12 + 3𝑞2"
+        "The short-run marginal cost is \\(\\frac{6𝑞}{𝐾̅}\\)",
+        "The short-run average variable cost is \\(\\frac{3𝑞}{𝐾̅}\\)",
+        "To produce 10 units of the output, required 𝐿 is \\(\\frac{25}{𝐾̅}\\)",
+        "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The short-run marginal cost is\n6𝑞\n𝐾̅",
-          "imageUrl": null
+          "text": "The short-run marginal cost is \\(\\frac{6𝑞}{𝐾̅}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The short-run marginal cost is \\(\\frac{6𝑞}{𝐾̅}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The short-run average variable cost is\n3𝑞\n𝐾̅",
-          "imageUrl": null
+          "text": "The short-run average variable cost is \\(\\frac{3𝑞}{𝐾̅}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The short-run average variable cost is \\(\\frac{3𝑞}{𝐾̅}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "To produce 10 units of the output, required 𝐿 is\n25\n𝐾̅",
-          "imageUrl": null
+          "text": "To produce 10 units of the output, required 𝐿 is \\(\\frac{25}{𝐾̅}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "To produce 10 units of the output, required 𝐿 is \\(\\frac{25}{𝐾̅}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "For 𝐾̅ = 3 and 𝑟 = 4, the total cost is 12 + 3𝑞2",
-          "imageUrl": null
+          "text": "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}",
+              "content": "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -2860,35 +5308,92 @@
       "questionNumber": 52,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "",
+      "questionText": "A simple Keynesian open economy model is given by\n\n𝑆+ 𝑇+ 𝑀= 𝐺+ 𝐼+ 𝑋\n\nwhere 𝑆, 𝐼, 𝐺, 𝑇, 𝑋, and 𝑀 stands for saving, investment, government expenditure, taxes, exports and imports, respectively.\n\nIf the country has trade surplus, which strategy/strategies among the following will reduce the trade imbalance?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A simple Keynesian open economy model is given by\n\n𝑆+ 𝑇+ 𝑀= 𝐺+ 𝐼+ 𝑋\n\nwhere 𝑆, 𝐼, 𝐺, 𝑇, 𝑋, and 𝑀 stands for saving, investment, government expenditure, taxes, exports and imports, respectively.\n\nIf the country has trade surplus, which strategy/strategies among the following will reduce the trade imbalance?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c1/q52_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Everything else being constant, decrease in private saving would reduce trade\nsurplus.",
+        "Everything else being constant, decrease in private saving would reduce trade surplus.",
         "Everything else being constant, increase in investment would reduce trade surplus.",
-        "Everything else being constant, increase in government taxes would reduce trade\nsurplus.",
-        "Everything else being constant, decrease in government spending would reduce\ntrade surplus."
+        "Everything else being constant, increase in government taxes would reduce trade surplus.",
+        "Everything else being constant, decrease in government spending would reduce trade surplus."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Everything else being constant, decrease in private saving would reduce trade\nsurplus.",
-          "imageUrl": null
+          "text": "Everything else being constant, decrease in private saving would reduce trade surplus.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Everything else being constant, decrease in private saving would reduce trade surplus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Everything else being constant, increase in investment would reduce trade surplus.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Everything else being constant, increase in investment would reduce trade surplus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Everything else being constant, increase in government taxes would reduce trade\nsurplus.",
-          "imageUrl": null
+          "text": "Everything else being constant, increase in government taxes would reduce trade surplus.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Everything else being constant, increase in government taxes would reduce trade surplus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Everything else being constant, decrease in government spending would reduce\ntrade surplus.",
-          "imageUrl": null
+          "text": "Everything else being constant, decrease in government spending would reduce trade surplus.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Everything else being constant, decrease in government spending would reduce trade surplus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2906,8 +5411,10 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B.",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2025/xh-c1/q52_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/xh-c1/q52_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -2924,7 +5431,38 @@
       "questionNumber": 53,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider the two scenarios for a small open economy based on the Mundell-\nFleming IS-LM model with floating exchange rate and perfect capital mobility\nScenario I Scenario II\n𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒, 𝑌) 𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒)\n𝑀 𝑀\n= 𝐿(𝑟∗, 𝑌) = 𝐿(𝑟∗, 𝑌-𝑇)\n𝑃̅ 𝑃̅\nwhere 𝑌 is aggregate income, 𝐶 is aggregate consumption, 𝐼 is investment, 𝑟∗ is\nworld interest rate, 𝐺 is government expenditure, 𝑇 is taxes, 𝑁𝑋 is net exports,\n𝑒 is exchange rate, 𝑀 is money supply, and 𝑃̅ is general price level.\n𝐼 has a negative relationship with 𝑟∗, 𝑁𝑋 depends negatively on both 𝑒 and 𝑌,\nand 𝑃̅ is fixed.\nGiven the above information, which of the following statements is/are CORRECT?",
+      "questionText": "Consider the two scenarios for a small open economy based on the Mundell- Fleming IS-LM model with floating exchange rate and perfect capital mobility\n\n| Scenario I | Scenario II |\n| :--- | :--- |\n| 𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒, 𝑌) 𝑀 = 𝐿(𝑟∗, 𝑌) 𝑃̅ | 𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒) 𝑀 = 𝐿(𝑟∗, 𝑌-𝑇) 𝑃̅ |\n\nwhere 𝑌 is aggregate income, 𝐶 is aggregate consumption, 𝐼 is investment, 𝑟^{∗} is world interest rate,  𝐺 is government expenditure, 𝑇 is taxes, 𝑁𝑋 is net exports, 𝑒 is exchange rate, 𝑀 is money supply, and 𝑃̅ is general price level. 𝐼 has a negative relationship with 𝑟^{∗},  𝑁𝑋 depends negatively on both 𝑒 and 𝑌, and 𝑃̅ is fixed. Given the above information, which of the following statements is/are CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the two scenarios for a small open economy based on the Mundell- Fleming IS-LM model with floating exchange rate and perfect capital mobility",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Scenario I",
+            "Scenario II"
+          ],
+          "rows": [
+            [
+              "𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒, 𝑌) 𝑀 = 𝐿(𝑟∗, 𝑌) 𝑃̅",
+              "𝑌 = 𝐶(𝑌-𝑇) + 𝐼(𝑟∗) + 𝐺 + 𝑁𝑋(𝑒) 𝑀 = 𝐿(𝑟∗, 𝑌-𝑇) 𝑃̅"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "where 𝑌 is aggregate income, 𝐶 is aggregate consumption, 𝐼 is investment, 𝑟^{∗} is world interest rate, 𝐺 is government expenditure, 𝑇 is taxes, 𝑁𝑋 is net exports, 𝑒 is exchange rate, 𝑀 is money supply, and 𝑃̅ is general price level. 𝐼 has a negative relationship with 𝑟^{∗}, 𝑁𝑋 depends negatively on both 𝑒 and 𝑌, and 𝑃̅ is fixed.\n\nGiven the above information, which of the following statements is/are CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Increase in 𝐺 has no effect on income in Scenario I.",
@@ -2937,22 +5475,62 @@
         {
           "id": "A",
           "text": "Increase in 𝐺 has no effect on income in Scenario I.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Increase in 𝐺 has no effect on income in Scenario I.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Decrease in 𝑇 lowers income in Scenario II.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Decrease in 𝑇 lowers income in Scenario II.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Expansionary fiscal policy raises income in Scenario I and Scenario II.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Expansionary fiscal policy raises income in Scenario I and Scenario II.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Expansionary fiscal policy raises exchange rate in Scenario I and Scenario II.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Expansionary fiscal policy raises exchange rate in Scenario I and Scenario II.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;D",
@@ -2990,35 +5568,86 @@
       "questionNumber": 54,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Which of the following statements is/are CORRECT in the context of Foreign\nExchange Market?",
+      "questionText": "Which of the following statements is/are CORRECT in the context of Foreign Exchange Market?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are CORRECT in the context of Foreign Exchange Market?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "When the value of domestic currency increases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences appreciation.",
-        "When the value of domestic currency increases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences depreciation.",
-        "When the value of domestic currency decreases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences depreciation.",
-        "When the value of domestic currency decreases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences appreciation."
+        "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation.",
+        "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+        "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+        "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "When the value of domestic currency increases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences appreciation.",
-          "imageUrl": null
+          "text": "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "When the value of domestic currency increases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences depreciation.",
-          "imageUrl": null
+          "text": "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "When the value of domestic currency increases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "When the value of domestic currency decreases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences depreciation.",
-          "imageUrl": null
+          "text": "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences depreciation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "When the value of domestic currency decreases vis-à-vis the value of foreign\ncurrency, the domestic currency experiences appreciation.",
-          "imageUrl": null
+          "text": "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "When the value of domestic currency decreases vis-à-vis the value of foreign currency, the domestic currency experiences appreciation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3055,34 +5684,85 @@
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
       "questionText": "Which of the following statements characterize(s) the Indian labour market?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements characterize(s) the Indian labour market?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "High workforce participation in agriculture",
-        "A predominant formal sector employment",
+        "predominant formal sector employment",
         "Increasing Gig and contractual employment",
-        "A dual structure comprising organised and unorganised sector"
+        "dual structure comprising organised and unorganised sector"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "High workforce participation in agriculture",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "High workforce participation in agriculture",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "A predominant formal sector employment",
-          "imageUrl": null
+          "text": "predominant formal sector employment",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "predominant formal sector employment",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Increasing Gig and contractual employment",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Increasing Gig and contractual employment",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "A dual structure comprising organised and unorganised sector",
-          "imageUrl": null
+          "text": "dual structure comprising organised and unorganised sector",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "dual structure comprising organised and unorganised sector",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -3121,34 +5801,85 @@
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
       "questionText": "Which of the following statements is/are NOT CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are NOT CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "According to the \"Pollution Haven hypothesis\", trade liberalisation may lead to\nreallocation of production to countries where either environmental regulation are\nineffective or altogether absent.",
-        "According to the \"Porter hypothesis\", stringency in ensuring environmental\nstandards often induces firms to become more efficient and prevent technological\nadvancement and innovation.",
-        "According to the \"Race to the Bottom hypothesis\", the environmental regulation are\nprogressively made stringent so that economies gain in competition for inward\ninvestments.",
-        "According to the \"Environmental Kuznets curve hypothesis\", there is an inverted\nU-shape relationship between per-capita income and environmental quality."
+        "According to the \"Pollution Haven hypothesis\", trade liberalisation may lead to reallocation of production to countries where either environmental regulation are ineffective or altogether absent.",
+        "According to the \"Porter hypothesis\", stringency in ensuring environmental standards often induces firms to become more efficient and prevent technological advancement and innovation.",
+        "According to the \"Race to the Bottom hypothesis\", the environmental regulation are progressively made stringent so that economies gain in competition for inward investments.",
+        "According to the \"Environmental Kuznets curve hypothesis\", there is an inverted U-shape relationship between per-capita income and environmental quality."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "According to the \"Pollution Haven hypothesis\", trade liberalisation may lead to\nreallocation of production to countries where either environmental regulation are\nineffective or altogether absent.",
-          "imageUrl": null
+          "text": "According to the \"Pollution Haven hypothesis\", trade liberalisation may lead to reallocation of production to countries where either environmental regulation are ineffective or altogether absent.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "According to the \"Pollution Haven hypothesis\", trade liberalisation may lead to reallocation of production to countries where either environmental regulation are ineffective or altogether absent.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "According to the \"Porter hypothesis\", stringency in ensuring environmental\nstandards often induces firms to become more efficient and prevent technological\nadvancement and innovation.",
-          "imageUrl": null
+          "text": "According to the \"Porter hypothesis\", stringency in ensuring environmental standards often induces firms to become more efficient and prevent technological advancement and innovation.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "According to the \"Porter hypothesis\", stringency in ensuring environmental standards often induces firms to become more efficient and prevent technological advancement and innovation.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "According to the \"Race to the Bottom hypothesis\", the environmental regulation are\nprogressively made stringent so that economies gain in competition for inward\ninvestments.",
-          "imageUrl": null
+          "text": "According to the \"Race to the Bottom hypothesis\", the environmental regulation are progressively made stringent so that economies gain in competition for inward investments.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "According to the \"Race to the Bottom hypothesis\", the environmental regulation are progressively made stringent so that economies gain in competition for inward investments.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "According to the \"Environmental Kuznets curve hypothesis\", there is an inverted\nU-shape relationship between per-capita income and environmental quality.",
-          "imageUrl": null
+          "text": "According to the \"Environmental Kuznets curve hypothesis\", there is an inverted U-shape relationship between per-capita income and environmental quality.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "According to the \"Environmental Kuznets curve hypothesis\", there is an inverted U-shape relationship between per-capita income and environmental quality.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -3184,7 +5915,18 @@
       "questionNumber": 57,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "There are two firms in an industry producing a homogeneous product. The market\ndemand function is given by 𝑃 = 1 -(𝑞 + 𝑞 2), where 𝑞 and 𝑞 are the output\n1 1 2\nlevels of Firm 1 and Firm 2, respectively.\nFirm 1's cost function is common knowledge and equals zero. Firm 2's cost function\nis private information. Firm 1 believes that Firm 2's cost function is 0.5𝑞 with\n2\nprobability 0.5 and that Firm 2's cost function is 0.25𝑞 with probability 0.5.\n2\nThe firms choose their quantities simultaneously.\nLet 𝑞∗ denote the quantity produced by Firm 1 in the Bayesian Nash equilibrium of\n1\nthis game. Then, the value of 24𝑞∗ is _____________ (round off to one decimal\n1\nplace)",
+      "questionText": "There are two firms in an industry producing a homogeneous product. The market dem and function is given by 𝑃= 1 -(𝑞_{1} + 𝑞_{2}), where 𝑞_{1} and 𝑞_{2} are the output levels of Firm 1 and Firm 2, respectively.\n\nFirm 1's cost function is common knowledge and equals zero. Firm 2's cost function is private information. Firm 1 believes that Firm 2's cost function is 0.5𝑞_{2} with probability 0.5 and that Firm 2's cost function is 0.25𝑞_{2} with probability 0.5. The firms choose their quantities simultaneously.\n\nLet 𝑞_{1} this game. Then, the value of 24𝑞_{1} place) ^{∗} denote the quantity produced by Firm 1 in the Bayesian Nash equilibrium of ^{∗} is _____________ (round off to one decimal",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "There are two firms in an industry producing a homogeneous product. The market dem and function is given by 𝑃= 1 -(𝑞_{1} + 𝑞_{2}), where 𝑞_{1} and 𝑞_{2} are the output levels of Firm 1 and Firm 2, respectively.\n\nFirm 1's cost function is common knowledge and equals zero. Firm 2's cost function is private information. Firm 1 believes that Firm 2's cost function is 0.5𝑞_{2} with probability 0.5 and that Firm 2's cost function is 0.25𝑞_{2} with probability 0.5. The firms choose their quantities simultaneously.\n\nLet 𝑞_{1} this game. Then, the value of 24𝑞_{1} place) ^{∗} denote the quantity produced by Firm 1 in the Bayesian Nash equilibrium of ^{∗} is _____________ (round off to one decimal",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3219,7 +5961,18 @@
       "questionNumber": 58,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider a two-person exchange economy where two goods, 𝑥 and 𝑦 are available\nin limited quantities of 50 and 100, respectively. The preferences of the two persons,\nAnil and Binod are given by the utility functions\n𝑈 (𝑥 , 𝑦 ) = 𝑥0.4 𝑦0.6\nAnil Anil Anil Anil Anil\nand\n𝑈 (𝑥 , 𝑦 ) = 𝑥0.6 𝑦0.4\nBinod Binod Binod Binod Binod\nIf they decide to share good 𝑦 equally among themselves, the amount of good 𝑥\nAnil receives is _____________ (in integer)",
+      "questionText": "Consider a two-person exchange economy where two goods, 𝑥 and 𝑦 are available in limited quantities of 50 and 100, respectively. The preferences of the two persons, Anil and Binod are given by the utility functions\n\nand 𝑈_{Anil}(𝑥_{Anil}, 𝑦_{Anil}) = 𝑥_{Anil} 4 𝑦Anil 6\n\n𝑈_{Binod}(𝑥_{Binod}, 𝑦_{Binod}) = 𝑥_{Binod} 6 𝑦_{Binod} 4\n\nIf they decide to share good 𝑦 equally among themselves, the amount of good 𝑥 Anil receives is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a two-person exchange economy where two goods, 𝑥 and 𝑦 are available in limited quantities of 50 and 100, respectively. The preferences of the two persons, Anil and Binod are given by the utility functions\n\nand 𝑈_{Anil}(𝑥_{Anil}, 𝑦_{Anil}) = 𝑥_{Anil} 4 𝑦Anil 6\n\n𝑈_{Binod}(𝑥_{Binod}, 𝑦_{Binod}) = 𝑥_{Binod} 6 𝑦_{Binod} 4\n\nIf they decide to share good 𝑦 equally among themselves, the amount of good 𝑥 Anil receives is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3254,7 +6007,18 @@
       "questionNumber": 59,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀𝑠 be money\nsupply.\nConsider the following closed economy IS-LM equations with fixed general price\nlevel (𝑃̅)\nIS equation:\n𝑌 = 490 + 0.6 𝑌-4 𝑟+ 𝐺\nLM equation:\n𝑀𝑠\n= 20 + 0.25 𝑌-10 𝑟\n𝑃̅\n𝑀𝑠\nIf 𝐺 is 330 and is 500, then the equilibrium 𝑌 is _____________ (round off to\n𝑃̅\none decimal place)",
+      "questionText": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅place}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅place}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3289,7 +6053,18 @@
       "questionNumber": 60,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Consider the following Harrod-Domar growth equation\n𝑠\n= 𝑔+ 𝛿\n𝜃\nwhere 𝑠 = saving rate, 𝜃 = capital-output ratio, 𝑔 = overall growth rate, and\n𝛿 = capital depreciation rate.\nIf 𝛿 = 0 and 𝑠 = 20%, then to achieve 𝑔 = 10%, the capital-output ratio will be\n_____________ (in integer)",
+      "questionText": "Consider the following Harrod-Domar growth equation\n\n𝜃= 𝑔+ 𝛿 <u>𝑠</u>\n\nwhere 𝑠= saving rate, 𝜃 = capital-output ratio, 𝑔= overall growth rate, and 𝛿= capital depreciation rate.\n\nIf 𝛿= 0 and 𝑠= 20%, then to achieve 𝑔= 10%, the capital-output ratio will be _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following Harrod-Domar growth equation\n\n𝜃= 𝑔+ 𝛿 <u>𝑠</u>\n\nwhere 𝑠= saving rate, 𝜃 = capital-output ratio, 𝑔= overall growth rate, and 𝛿= capital depreciation rate.\n\nIf 𝛿= 0 and 𝑠= 20%, then to achieve 𝑔= 10%, the capital-output ratio will be _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3324,7 +6099,18 @@
       "questionNumber": 61,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "A coin has a true probability 𝜇 of turning up Heads. This coin is tossed 100 times\nand shows up Heads 60 times. The following hypothesis is tested:\n𝐻 : 𝜇 = 0.5 (Null Hypothesis)\n0\n𝐻 : 𝜇 > 0.5 (Alternative Hypothesis)\n1\nUsing the Central Limit Theorem, the 𝑝-value of the above test is _____________\n(round off to three decimal places)\n(Hint: If 𝑍 is a random variable that follows a standard normal distribution, then\n𝑃(𝑍 \\le 2) = 0.977)",
+      "questionText": "A coin has a true probability 𝜇 of turning up Heads. This coin is tossed 100 times and shows up Heads 60 times. The following hypothesis is tested:\n\n𝐻_{0}: 𝜇= 0.5 (Null Hypothesis) 𝐻_{1}: 𝜇> 0.5 (Alternative Hypothesis) Using the Central Limit Theorem, the 𝑝-value of the above test is _____________ (round off to three decimal places)\n\n(Hint: If 𝑍 is a random variable that follows a standard normal distribution, then 𝑃(𝑍 \\le 2) = 0.977)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A coin has a true probability 𝜇 of turning up Heads. This coin is tossed 100 times and shows up Heads 60 times. The following hypothesis is tested:\n\n𝐻_{0}: 𝜇= 0.5 (Null Hypothesis) 𝐻_{1}: 𝜇> 0.5 (Alternative Hypothesis) Using the Central Limit Theorem, the 𝑝-value of the above test is _____________ (round off to three decimal places)\n\n(Hint: If 𝑍 is a random variable that follows a standard normal distribution, then 𝑃(𝑍 \\le 2) = 0.977)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3359,7 +6145,71 @@
       "questionNumber": 62,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "The installation cost (IC) of a solar power plant is INR 89,000. The plant shall be\noperational for 5 years. The recurring costs for maintenance of the solar plant per\nyear is INR 5,000 but the benefits it creates including reduction in emissions\namounts to INR 25,000 per year. These are the only costs and benefits associated\nwith this project. The social discount rate (𝑟) considered is 4% per year. The year-\nwise information is presented below\nYear Discount Factor Benefits Costs\n(𝑡) (1 + 𝑟)-𝑡 (in '000) (in '000)\n0 1 IC\n1 0.96 25 5\n2 0.92 25 5\n3 0.89 25 5\n4 0.85 25 5\n5 0.82 25 5\nThe net present value of the plant is _____________ (in integer)",
+      "questionText": "The installation cost (IC) of a solar power plant is INR 89,000. The plant shall be operational for 5 years. The recurring costs for maintenance of the solar plant per year is INR 5,000 but the benefits it creates including reduction in emissions amounts to INR 25,000 per year. These are the only costs and benefits associated with this project. The social discount rate (𝑟) considered is 4% per year. The year- wise information is presented below\n\n| Year (𝑡) | Discount Factor (1 + 𝑟)-𝑡 | Benefits (in '000) | Costs (in '000) |\n| :--- | :--- | :--- | :--- |\n| 0 | 1 | IC |\n| 1 | 0.96 | 25 | 5 |\n| 2 | 0.92 | 25 | 5 |\n| 3 | 0.89 | 25 | 5 |\n| 4 | 0.85 | 25 | 5 |\n| 5 | 0.82 | 25 | 5 |\n\nThe net present value of the plant is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The installation cost (IC) of a solar power plant is INR 89,000. The plant shall be operational for 5 years. The recurring costs for maintenance of the solar plant per year is INR 5,000 but the benefits it creates including reduction in emissions amounts to INR 25,000 per year. These are the only costs and benefits associated with this project. The social discount rate (𝑟) considered is 4% per year. The year- wise information is presented below",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Year (𝑡)",
+            "Discount Factor (1 + 𝑟)-𝑡",
+            "Benefits (in '000)",
+            "Costs (in '000)"
+          ],
+          "rows": [
+            [
+              "0",
+              "1",
+              "IC"
+            ],
+            [
+              "1",
+              "0.96",
+              "25",
+              "5"
+            ],
+            [
+              "2",
+              "0.92",
+              "25",
+              "5"
+            ],
+            [
+              "3",
+              "0.89",
+              "25",
+              "5"
+            ],
+            [
+              "4",
+              "0.85",
+              "25",
+              "5"
+            ],
+            [
+              "5",
+              "0.82",
+              "25",
+              "5"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The net present value of the plant is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3394,7 +6244,18 @@
       "questionNumber": 63,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑓(𝑥, 𝑦) = -𝑥2 -𝑦2 + 2𝑥 + 4𝑦+ 5.\nLet (𝑥∗, 𝑦∗) denote the solution to the following optimization problem:\nMaximize 𝑓(𝑥, 𝑦)\nsubject to 𝑥 \\ge 0, 𝑦 \\ge 0, 2𝑥 + 𝑦 \\le 6\nThen the value of 𝑓(𝑥∗, 𝑦∗) is _____________ (in integer)",
+      "questionText": "Let 𝑓(𝑥, 𝑦) = -𝑥^{2} -𝑦^{2} + 2𝑥+ 4𝑦+ 5.\n\nLet (𝑥^{∗}, 𝑦^{∗}) denote the solution to the following optimization problem:\n\nMaximize 𝑓(𝑥, 𝑦)\n\nsubject to 𝑥 \\ge 0, 𝑦 \\ge 0, 2𝑥+ 𝑦 \\le 6\n\nThen the value of 𝑓(𝑥^{∗}, 𝑦^{∗}) is _____________ (in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑓(𝑥, 𝑦) = -𝑥^{2} -𝑦^{2} + 2𝑥+ 4𝑦+ 5.\n\nLet (𝑥^{∗}, 𝑦^{∗}) denote the solution to the following optimization problem:\n\nMaximize 𝑓(𝑥, 𝑦)\n\nsubject to 𝑥 \\ge 0, 𝑦 \\ge 0, 2𝑥+ 𝑦 \\le 6\n\nThen the value of 𝑓(𝑥^{∗}, 𝑦^{∗}) is _____________ (in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3429,7 +6290,44 @@
       "questionNumber": 64,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Two players 𝐴 and 𝐵 are playing a game. Player 𝐴 has two available actions 𝑎 and\n1\n𝑎 . Player 𝐵 has two available actions 𝑏 and 𝑏 . The payoff matrix arising from\n2 1 2\ntheir actions is presented below.\n𝑏 𝑏\n1 2\n𝑎 -1, 3 4, -1\n1\n𝑎 3, -4 -2, 2\n2\nLet 𝑝 be the probability that player 𝐴 plays action 𝑎 in the mixed strategy Nash\n1\nequilibrium of the game.\nThen the value of 𝑝 is _____________ (round off to one decimal place)",
+      "questionText": "Two players 𝐴 and 𝐵 are playing a game. Player 𝐴 has two available actions 𝑎_{1} and 𝑎_{2}. Player 𝐵 has two available actions 𝑏_{1} and 𝑏_{2}. The payoff matrix arising from their actions is presented below.\n\n| 𝑏 1 | 𝑏 2 |\n| :--- | :--- |\n| 𝑎 1 | -1, 3 | 4, -1 |\n| 𝑎 2 | 3, -4 | -2, 2 |\n\nLet 𝑝 be the probability that player 𝐴 plays action 𝑎_{1}in the mixed strategy Nash equilibrium of the game. Then the value of 𝑝 is _____________ (round off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two players 𝐴 and 𝐵 are playing a game. Player 𝐴 has two available actions 𝑎_{1} and 𝑎_{2}. Player 𝐵 has two available actions 𝑏_{1} and 𝑏_{2}. The payoff matrix arising from their actions is presented below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑏 1",
+            "𝑏 2"
+          ],
+          "rows": [
+            [
+              "𝑎 1",
+              "-1, 3",
+              "4, -1"
+            ],
+            [
+              "𝑎 2",
+              "3, -4",
+              "-2, 2"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Let 𝑝 be the probability that player 𝐴 plays action 𝑎_{1}in the mixed strategy Nash equilibrium of the game.\n\nThen the value of 𝑝 is _____________ (round off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3464,7 +6362,18 @@
       "questionNumber": 65,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "If the Marginal Propensity to Consume (MPC) of an economy is 0.75, then the\nvalue of expenditure multiplier will be _____________ (in integer).",
+      "questionText": "If the Marginal Propensity to Consume (MPC) of an economy is 0.75, then the value of expenditure multiplier will be _____________ (in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If the Marginal Propensity to Consume (MPC) of an economy is 0.75, then the value of expenditure multiplier will be _____________ (in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

@@ -26,8 +26,17 @@ const CONTENT_KEY: string =
 /**
  * Returns true if Project 2 environment variables are configured.
  * When false, repositories fall back to local JSON data.
+ * In automated test environments (Vitest/Node), defaults to false to prevent
+ * unintentional live network requests across worker threads.
  */
 export function isContentBackendAvailable(): boolean {
+  if (
+    typeof process !== 'undefined' &&
+    (process.env?.NODE_ENV === 'test' || process.env?.VITEST) &&
+    process.env?.MOCK_AI_TEST_LIVE_SUPABASE !== 'true'
+  ) {
+    return false;
+  }
   return Boolean(CONTENT_URL && CONTENT_KEY);
 }
 

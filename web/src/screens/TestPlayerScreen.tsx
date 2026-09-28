@@ -307,7 +307,7 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
                 </div>
 
                 {/* Option Text with LaTeX support */}
-                <div className="min-w-0 flex-1 text-sm sm:text-base font-medium text-surface-text dark:text-darkSurface-text">
+                <div className="min-w-0 flex-1 text-sm sm:text-base font-medium text-surface-text dark:text-darkSurface-text option-content text-left">
                   <LatexRenderer content={opt} />
                 </div>
               </div>

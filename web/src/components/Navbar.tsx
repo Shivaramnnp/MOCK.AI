@@ -12,8 +12,10 @@ import {
   School,
   LineChart,
   Compass,
+  ShieldCheck,
 } from 'lucide-react';
-import { AppRoute, UserRole } from '../types';
+import { AppRoute, UserRole, UserProfile } from '../types';
+import { NotificationBell } from './NotificationBell';
 
 interface NavbarProps {
   currentRoute: AppRoute;
@@ -26,6 +28,9 @@ interface NavbarProps {
   onOpenCreateModal: () => void;
   userName?: string;
   onSignOut?: () => void;
+  isStaff?: boolean;
+  user?: UserProfile | null;
+  onNavigateToCommunityPost?: (postId: string) => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -39,6 +44,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenCreateModal,
   userName = 'Scholar',
   onSignOut,
+  isStaff = false,
+  user = null,
+  onNavigateToCommunityPost,
 }) => {
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
 
@@ -94,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
               currentRoute === 'home'
                 ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
-                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
+                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
             }`}
           >
             Home
@@ -105,10 +113,21 @@ export const Navbar: React.FC<NavbarProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
               currentRoute === 'explore' || currentRoute === 'explore_exam' || currentRoute === 'exam_results'
                 ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
-                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
+                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
             }`}
           >
             Explore
+          </button>
+
+          <button
+            onClick={() => onNavigate('community')}
+            className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
+              currentRoute === 'community'
+                ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
+                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
+            }`}
+          >
+            Community
           </button>
 
           <button
@@ -116,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
               currentRoute === 'classroom'
                 ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
-                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
+                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
             }`}
           >
             Classroom
@@ -127,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
               currentRoute === 'analytics'
                 ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
-                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
+                : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
             }`}
           >
             Analytics
@@ -163,6 +182,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="hidden sm:inline">{badge.label}</span>
           </div>
 
+          {/* User Notification Bell */}
+          <NotificationBell user={user || null} onNavigateToPost={onNavigateToCommunityPost} />
+
           {/* Theme Toggle */}
           <button
             onClick={onToggleTheme}
@@ -193,12 +215,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <p className="font-bold text-xs text-surface-text dark:text-darkSurface-text truncate">
                     {userName}
                   </p>
-                  <p className="text-[11px] text-surface-muted truncate">{userRole} Account</p>
+                  <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted truncate">{userRole} Account</p>
                 </div>
 
                 <button
                   onClick={() => onNavigate('profile')}
-                  className="w-full px-4 py-2 text-left text-xs font-medium flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors"
+                  className="w-full px-4 py-2 text-left text-xs font-medium text-surface-text dark:text-darkSurface-text flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors"
                 >
                   <User className="w-4 h-4 text-brand-primary" />
                   <span>Profile Overview</span>
@@ -206,11 +228,21 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={() => onNavigate('settings')}
-                  className="w-full px-4 py-2 text-left text-xs font-medium flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors"
+                  className="w-full px-4 py-2 text-left text-xs font-medium text-surface-text dark:text-darkSurface-text flex items-center gap-2.5 hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev3 transition-colors"
                 >
                   <Settings className="w-4 h-4 text-brand-variant" />
                   <span>Settings & Preferences</span>
                 </button>
+
+                {isStaff && (
+                  <button
+                    onClick={() => onNavigate('staff')}
+                    className="w-full px-4 py-2 text-left text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2.5 hover:bg-emerald-500/10 transition-colors"
+                  >
+                    <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                    <span>Staff Operations Portal</span>
+                  </button>
+                )}
 
                 {onSignOut && (
                   <div className="pt-1 mt-1 border-t border-surface-border dark:border-darkSurface-border">

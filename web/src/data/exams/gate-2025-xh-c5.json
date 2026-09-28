@@ -53,7 +53,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their\ndecreasing order of intensity. Identify the missing word in Group-II.\nGroup-I: Abuse → Insult → Ridicule\nGroup-II: ________ → Praise → Appreciate",
+      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Extol",
@@ -66,22 +77,62 @@
         {
           "id": "A",
           "text": "Extol",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Extol",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Prize",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Prize",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Appropriate",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Appropriate",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Espouse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Espouse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -111,7 +162,18 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "will be",
@@ -124,22 +186,62 @@
         {
           "id": "A",
           "text": "will be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "will be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "can be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "can be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "am going to be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "am going to be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "could have been",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "could have been",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -169,35 +271,86 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The 12 musical notes are given as 𝐶, 𝐶#, 𝐷, 𝐷#, 𝐸, 𝐹, 𝐹#, 𝐺, 𝐺#, 𝐴, 𝐴#, and 𝐵.\n12\nFrequency of each note is \\sqrt 2 times the frequency of the previous note. If the\nfrequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹# and\n𝐶 is:",
+      "questionText": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "6\n\\sqrt 2",
-        "\\sqrt 2",
-        "4\n\\sqrt 2",
+        "6 \\sqrt{2}",
+        "\\sqrt{2}",
+        "4 \\sqrt{2}",
         "2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "6\n\\sqrt 2",
-          "imageUrl": null
+          "text": "6 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
-          "imageUrl": null
+          "text": "\\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "4\n\\sqrt 2",
-          "imageUrl": null
+          "text": "4 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -227,35 +380,92 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The following figures show three curves generated using an iterative algorithm.\nThe total length of the curve generated after 'Iteration 𝑛' is:\nNote: The figures shown are representative.\n1\nIteration 0:\n1\n1\nIteration 1:\nLength of each segment:\n3\n3\n1\n1\nIteration 2: 9 Length of each segment:\n9",
+      "questionText": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c5/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑛\n5 2\n( )\n3",
-        "𝑛\n5\n( )\n3",
-        "2𝑛\n5\n( )\n3",
-        "𝑛(2𝑛-1)\n5\n( )\n3"
+        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3) 𝑛",
+        "(5 3) 2𝑛",
+        "(5 3) 𝑛(2𝑛-1)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑛\n5 2\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 2𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 2𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑛(2𝑛-1)\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛(2𝑛-1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛(2𝑛-1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -287,35 +497,51 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "|𝑥|\nWhich one of the following plots represents 𝑓(𝑥) = - , where 𝑥 is a non-\n𝑥\nzero real number?\nNote: The figures shown are representative.",
+      "questionText": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(1,0)\nx\n(-1,0)",
-        "f(x)\n(0,1)\nx\n(0, -1)"
+        "(0,1) x (0, -1)",
+        "(0,1) x (0, -1)",
+        "(1,0) (-1,0) x",
+        ""
       ],
-      "optionImages": null,
+      "optionImages": [
+        null,
+        null,
+        null,
+        "/exam-assets/gate/2025/xh-c5/q5_opt_d.png"
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
+          "text": "(0,1) x (0, -1)",
           "imageUrl": null
         },
         {
           "id": "B",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
+          "text": "(0,1) x (0, -1)",
           "imageUrl": null
         },
         {
           "id": "C",
-          "text": "f(x)\n(1,0)\nx\n(-1,0)",
+          "text": "(1,0) (-1,0) x",
           "imageUrl": null
         },
         {
           "id": "D",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/xh-c5/q5_opt_d.png"
         }
       ],
       "correctAnswer": "A",
@@ -345,7 +571,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. Over time, such adaptations lead to significant evolutionary changes with\nthe potential to shape the development of new species.\nQ. In natural world, organisms constantly adapt to their environments in\nresponse to challenges and opportunities.\nR. This process of adaptation is driven by the principle of natural selection,\nwhere favorable traits increase an organism's chances of survival and\nreproduction.\nS. As environments change, organisms that can adapt their behavior, structure\nand physiology to such changes are more likely to survive.",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P → Q → R → S",
@@ -358,22 +595,62 @@
         {
           "id": "A",
           "text": "P → Q → R → S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P → Q → R → S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q → S → R → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q → S → R → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R → S → Q → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R → S → Q → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "S → P → R → Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S → P → R → Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -403,35 +680,96 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏 and 𝑏\n1 2\nfrom the origin (0), as shown in the figure. Note that 0 < 𝑏 < 𝑏 < 1. Which one\n1 2\nof the following is NOT a necessary condition for forming a triangle using the\nthree pieces?\nNote: All lengths are in meter. The figure shown is representative.",
+      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c5/q7_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑏 < 0.5\n1",
-        "𝑏 > 0.5\n2",
-        "𝑏 < 𝑏 + 0.5\n2 1",
-        "𝑏 + 𝑏 < 1\n1 2"
+        "\\(𝑏_{1} < 0.5\\)",
+        "\\(𝑏_{2} > 0.5\\)",
+        "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+        "\\(𝑏_{1} + 𝑏_{2} < 1\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑏 < 0.5\n1",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} < 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} < 0.5",
+              "content": "\\(𝑏_{1} < 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑏 > 0.5\n2",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} > 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} > 0.5",
+              "content": "\\(𝑏_{2} > 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑏 < 𝑏 + 0.5\n2 1",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} < 𝑏_{1} + 0.5",
+              "content": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑏 + 𝑏 < 1\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} + 𝑏_{2} < 1",
+              "content": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -463,7 +801,24 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure\nindicates their order of position at the start of the game. They play the game by\nmoving forward in a circle in the clockwise direction.\nAfter the 1st round, 4th student behind P leaves the game. After 2nd round, 5th\nstudent behind Q leaves the game. After 3rd round, 3rd student behind V leaves the\ngame. After 4th round, 4th student behind U leaves the game. Who all are left in the\ngame after the 4th round?\nNote: The figure shown is representative.",
+      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c5/q8_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P; T; Q; S",
@@ -476,22 +831,62 @@
         {
           "id": "A",
           "text": "P; T; Q; S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P; T; Q; S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "V; P; T; Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "V; P; T; Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "W; R; Q; V",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "W; R; Q; V",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Q; T; V; W",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q; T; V; W",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "MTA",
@@ -503,8 +898,10 @@
       "answerRanges": null,
       "isMta": true,
       "explanation": "Marks to All (MTA) awarded by official GATE 2025 committee.",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2025/xh-c5/q8_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/xh-c5/q8_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -521,35 +918,129 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a\ntournament; also included are the number of silver and the bronze medals won by\nthem. Based only on the data provided in the table, which one of the following\nstatements is INCORRECT?",
+      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?\n\n| Nation | Gold | Silver | Bronze |\n| :--- | :--- | :--- | :--- |\n| USA | 40 | 44 | 41 |\n| Canada | 39 | 27 | 24 |\n| Japan | 20 | 12 | 13 |\n| Australia | 17 | 19 | 16 |\n| France | 16 | 26 | 22 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nation",
+            "Gold",
+            "Silver",
+            "Bronze"
+          ],
+          "rows": [
+            [
+              "USA",
+              "40",
+              "44",
+              "41"
+            ],
+            [
+              "Canada",
+              "39",
+              "27",
+              "24"
+            ],
+            [
+              "Japan",
+              "20",
+              "12",
+              "13"
+            ],
+            [
+              "Australia",
+              "17",
+              "19",
+              "16"
+            ],
+            [
+              "France",
+              "16",
+              "26",
+              "22"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-        "The order of the top two nations will not change even if the list is made on the\nbasis of the total number of medals won.",
-        "USA and Canada together have less than 50% of the medals awarded to the\nnations in the above table.",
+        "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+        "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+        "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
         "Canada has won twice as many total medals as Japan."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-          "imageUrl": null
+          "text": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The order of the top two nations will not change even if the list is made on the\nbasis of the total number of medals won.",
-          "imageUrl": null
+          "text": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "USA and Canada together have less than 50% of the medals awarded to the\nnations in the above table.",
-          "imageUrl": null
+          "text": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Canada has won twice as many total medals as Japan.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Canada has won twice as many total medals as Japan.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -579,7 +1070,18 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "An organization allows its employees to work independently on consultancy\nprojects but charges an overhead on the consulting fee. The overhead is 20% of\nthe consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is\n₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The\ngovernment charges a Goods and Services Tax of 18% on the total amount (the\nconsulting fee plus the overhead). An employee of the organization charges this\nentire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client\ncannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the\nemployee can charge?",
+      "questionText": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "₹ 7,01,438",
@@ -592,22 +1094,62 @@
         {
           "id": "A",
           "text": "₹ 7,01,438",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,01,438",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "₹ 7,24,961",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,24,961",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "₹ 7,51,232",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,51,232",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "₹ 7,75,784",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,75,784",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -637,7 +1179,18 @@
       "questionNumber": 11,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Which one of the following numbers is odd one out?\n31541 42651 53791 64871 75981",
+      "questionText": "Which one of the following numbers is odd one out?\n\n31541 42651 53791 64871 75981",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following numbers is odd one out?\n\n31541 42651 53791 64871 75981",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "31541",
@@ -650,22 +1203,62 @@
         {
           "id": "A",
           "text": "31541",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "31541",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "42651",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "42651",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "53791",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "53791",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "75981",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "75981",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -695,7 +1288,18 @@
       "questionNumber": 12,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam\nhas one mango and one kiwi. Ankit has just bought one pineapple.\nWho has the least number of fruit(s)?",
+      "questionText": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam has one mango and one kiwi. Ankit has just bought one pineapple.\n\nWho has the least number of fruit(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Ankit, Arun, and Ankur have one apple each. Ankur also has one banana. Alam has one mango and one kiwi. Ankit has just bought one pineapple.\n\nWho has the least number of fruit(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Ankit",
@@ -708,22 +1312,62 @@
         {
           "id": "A",
           "text": "Ankit",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ankit",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Arun",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Arun",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Ankur",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ankur",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Alam",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Alam",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -753,7 +1397,18 @@
       "questionNumber": 13,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "If each vowel in the word RESIDE is changed to its previous letter in the English\nalphabet and each consonant is changed to the next letter in the English alphabet,\nwhich one of the following options will be the third from the right?",
+      "questionText": "If each vowel in the word RESIDE is changed to its previous letter in the English alphabet and each consonant is changed to the next letter in the English alphabet, which one of the following options will be the third from the right?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If each vowel in the word RESIDE is changed to its previous letter in the English alphabet and each consonant is changed to the next letter in the English alphabet, which one of the following options will be the third from the right?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "T",
@@ -766,22 +1421,62 @@
         {
           "id": "A",
           "text": "T",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "T",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "D",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "D",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "H",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "H",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -811,7 +1506,18 @@
       "questionNumber": 14,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are\npartners sitting opposite to each other. David faces towards South. If Vipul faces\ntowards West, then who faces towards the North?",
+      "questionText": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are partners sitting opposite to each other. David faces towards South. If Vipul faces towards West, then who faces towards the North?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Vipul, Ahmad, Santosh, and David are playing Carrom. Vipul and Ahmad are partners sitting opposite to each other. David faces towards South. If Vipul faces towards West, then who faces towards the North?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Alam",
@@ -824,22 +1530,62 @@
         {
           "id": "A",
           "text": "Alam",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Alam",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Santosh",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Santosh",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "David",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "David",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Vipul",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Vipul",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -869,7 +1615,18 @@
       "questionNumber": 15,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Consider the following sentence.\nWhat the country needs ____ ____ ____ ____ accordingly.\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining\nparts of the sentence, not necessarily in that order.\nP: and change tactics\nQ: who would encourage players\nR: are coaches and officials\nS: to read the game as it progresses\nWhich one of the following options is correct that gives the most appropriate order\nand meaning to the sentence?",
+      "questionText": "Consider the following sentence.\n\nWhat the country needs ____ ____ ____ ____ accordingly.\n\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining parts of the sentence, not necessarily in that order.\n\nP: and change tactics Q: who would encourage players R: are coaches and officials S: to read the game as it progresses\n\nWhich one of the following options is correct that gives the most appropriate order and meaning to the sentence?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following sentence.\n\nWhat the country needs ____ ____ ____ ____ accordingly.\n\nFirst and last parts of the sentence are given. P, Q, R, and S are the remaining parts of the sentence, not necessarily in that order.\n\nP: and change tactics Q: who would encourage players R: are coaches and officials S: to read the game as it progresses\n\nWhich one of the following options is correct that gives the most appropriate order and meaning to the sentence?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "QSPR",
@@ -882,22 +1639,62 @@
         {
           "id": "A",
           "text": "QSPR",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "QSPR",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "RQSP",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "RQSP",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "RQPS",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "RQPS",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "SPRQ",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "SPRQ",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -927,7 +1724,18 @@
       "questionNumber": 16,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "A car started from city P at 9.40am. The time taken for the car to reach the city Q\nis 4 hours and 50 minutes.\nThe time of arrival of the car at city Q is",
+      "questionText": "A car started from city P at 9.40am. The time taken for the car to reach the city Q is 4 hours and 50 minutes.\n\nThe time of arrival of the car at city Q is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A car started from city P at 9.40am. The time taken for the car to reach the city Q is 4 hours and 50 minutes.\n\nThe time of arrival of the car at city Q is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "15:10 Hours",
@@ -940,22 +1748,62 @@
         {
           "id": "A",
           "text": "15:10 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "15:10 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "14:20 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:20 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "14:30 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:30 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "14:10 Hours",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14:10 Hours",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -985,7 +1833,18 @@
       "questionNumber": 17,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "P is three years younger than R but one year older than S.\nS is one year older than Q but 4 years younger than R.\nR is 15 years old.\nThe age of Q is ____ years (answer in integer).",
+      "questionText": "P is three years younger than R but one year older than S.\n\nS is one year older than Q but 4 years younger than R.\n\nR is 15 years old.\n\nThe age of Q is ____ years (answer in integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "P is three years younger than R but one year older than S.\n\nS is one year older than Q but 4 years younger than R.\n\nR is 15 years old.\n\nThe age of Q is ____ years (answer in integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1020,7 +1879,18 @@
       "questionNumber": 18,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "In a certain code language, ATTITUDE is written as TAUJUEDU and\nCHILDREN is written as HCJMENER.\nHow LANGUAGE is written in that code language?",
+      "questionText": "In a certain code language, ATTITUDE is written as TAUJUEDU and CHILDREN is written as HCJMENER.\n\nHow LANGUAGE is written in that code language?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a certain code language, ATTITUDE is written as TAUJUEDU and CHILDREN is written as HCJMENER.\n\nHow LANGUAGE is written in that code language?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "ALOHVEGA",
@@ -1033,22 +1903,62 @@
         {
           "id": "A",
           "text": "ALOHVEGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALOHVEGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "ALHOVAGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALHOVAGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "LAVOHEGA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "LAVOHEGA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "ALHOVGEA",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ALHOVGEA",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1078,7 +1988,66 @@
       "questionNumber": 19,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "The table shows the data of 450 candidates who appeared in the examination of\nthree subjects - Social Science, Mathematics, and Science.\nParticulars Number of candidates\nPassed in all the three subjects 167\nFailed in all the three subjects 60\nFailed in Social Science subject 175\nFailed in Mathematics subject 199\nFailed in Science subject 191\nPassed in only Social Science subject 62\nPassed in only Mathematics subject 48\nPassed in only Science subject 52\nHow many candidates have passed in at least one subject?",
+      "questionText": "The table shows the data of 450 candidates who appeared in the examination of three subjects – Social Science, Mathematics, and Science.\n\n| Particulars | Number of candidates |\n| :--- | :--- |\n| Passed in all the three subjects | 167 |\n| Failed in all the three subjects | 60 |\n| Failed in Social Science subject | 175 |\n| Failed in Mathematics subject | 199 |\n| Failed in Science subject | 191 |\n| Passed in only Social Science subject | 62 |\n| Passed in only Mathematics subject | 48 |\n| Passed in only Science subject | 52 |\n\nHow many candidates have passed in at least one subject?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table shows the data of 450 candidates who appeared in the examination of three subjects - Social Science, Mathematics, and Science.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Particulars",
+            "Number of candidates"
+          ],
+          "rows": [
+            [
+              "Passed in all the three subjects",
+              "167"
+            ],
+            [
+              "Failed in all the three subjects",
+              "60"
+            ],
+            [
+              "Failed in Social Science subject",
+              "175"
+            ],
+            [
+              "Failed in Mathematics subject",
+              "199"
+            ],
+            [
+              "Failed in Science subject",
+              "191"
+            ],
+            [
+              "Passed in only Social Science subject",
+              "62"
+            ],
+            [
+              "Passed in only Mathematics subject",
+              "48"
+            ],
+            [
+              "Passed in only Science subject",
+              "52"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "How many candidates have passed in at least one subject?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "48",
@@ -1091,22 +2060,62 @@
         {
           "id": "A",
           "text": "48",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "48",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "162",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "162",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "390",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "390",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "425",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "425",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1136,35 +2145,90 @@
       "questionNumber": 20,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "If \\times means +, + means \\div , - means \\times , and \\div means -,\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+      "questionText": "If \\times means +, + means \\div , - means \\times , and \\div means -,\n\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If \\times means +, + means \\div , - means \\times , and \\div means -,\n\nthen 8 \\times 7 - 8 + 40 \\div 2 =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "8\n3\n5",
-        "2\n7\n5",
-        "7\n2\n5",
-        "3\n8\n5"
+        "\\(\\frac{8}{5}\\)",
+        "\\(\\frac{2}{5}\\)",
+        "\\(\\frac{7}{5}\\)",
+        "\\(\\frac{3}{5}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "8\n3\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{8}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{8}{5}",
+              "content": "\\(\\frac{8}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "2\n7\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{2}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{2}{5}",
+              "content": "\\(\\frac{2}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "7\n2\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{7}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{7}{5}",
+              "content": "\\(\\frac{7}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "3\n8\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{3}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{3}{5}",
+              "content": "\\(\\frac{3}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1194,7 +2258,18 @@
       "questionNumber": 21,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Given a series 5, 8, 11, 14, …\nIf the nth term of the given series is 320, then n (where, n \\ge 1) is",
+      "questionText": "Given a series 5, 8, 11, 14, … If the n^{th} term of the given series is 320, then n (where, n \\ge 1) is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given a series 5, 8, 11, 14, … If the n^{th} term of the given series is 320, then n (where, n \\ge 1) is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "104",
@@ -1207,22 +2282,62 @@
         {
           "id": "A",
           "text": "104",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "104",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "105",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "105",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "106",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "106",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "107",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "107",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1252,7 +2367,58 @@
       "questionNumber": 22,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your\ntaxable income this year is Rs. 34200. The details for tax calculation are given in\nthe table below.\nIncome range (Rs.) Tax slab (Rs.)\n0 to 5000 2 % of income\nGreater than 5000 to 10000 100 + 3 % of income over 5000\nGreater than 10000 to 20000 250 + 5 % of income over 10000\nGreater than 20000 to 30000 750 + 8 % of income over 20000\nGreater than 30000 to 50000 1550 + 10 % of income over 30000\nGreater than 50000 to 100000 3550 + 20 % of income over 50000\nConsider the appropriate tax slab corresponding to your income. What is the\nadditional amount of tax you need to pay this year compared to last year?",
+      "questionText": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your taxable income this year is Rs. 34200. The details for tax calculation are given in the table below.\n\n| Income range (Rs.) | Tax slab (Rs.) |\n| :--- | :--- |\n| 0 to 5000 | 2 % of income |\n| Greater than 5000 to 10000 | 100 + 3 % of income over 5000 |\n| Greater than 10000 to 20000 | 250 + 5 % of income over 10000 |\n| Greater than 20000 to 30000 | 750 + 8 % of income over 20000 |\n| Greater than 30000 to 50000 | 1550 + 10 % of income over 30000 |\n| Greater than 50000 to 100000 | 3550 + 20 % of income over 50000 |\n\nConsider the appropriate tax slab corresponding to your income. What is the additional amount of tax you need to pay this year compared to last year?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Suppose, your last year taxable income was Rs. 22000. Due to hike in salary, your taxable income this year is Rs. 34200. The details for tax calculation are given in the table below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Income range (Rs.)",
+            "Tax slab (Rs.)"
+          ],
+          "rows": [
+            [
+              "0 to 5000",
+              "2 % of income"
+            ],
+            [
+              "Greater than 5000 to 10000",
+              "100 + 3 % of income over 5000"
+            ],
+            [
+              "Greater than 10000 to 20000",
+              "250 + 5 % of income over 10000"
+            ],
+            [
+              "Greater than 20000 to 30000",
+              "750 + 8 % of income over 20000"
+            ],
+            [
+              "Greater than 30000 to 50000",
+              "1550 + 10 % of income over 30000"
+            ],
+            [
+              "Greater than 50000 to 100000",
+              "3550 + 20 % of income over 50000"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Consider the appropriate tax slab corresponding to your income. What is the additional amount of tax you need to pay this year compared to last year?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1970",
@@ -1265,22 +2431,62 @@
         {
           "id": "A",
           "text": "1970",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1970",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1060",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1060",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "910",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "910",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "420",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "420",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1310,35 +2516,86 @@
       "questionNumber": 23,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Anand, Hari, and Chris are engaged in one of the three type of occupations -\nclerk, teacher, and plumber, not necessarily in that order. Each person is assigned\nonly one type of occupation. No two or more persons can be assigned same type\nof occupation. Clerk is Chris's cousin. Hari lives next door to the plumber.\nAnand, who knows more facts than the teacher, has to drive more than 1 hour to\nreach Hari's home. Identify each of the person's correct type of occupation, and\naccordingly, which one of the following options is correct?",
+      "questionText": "An and, Hari, and Chris are engaged in one of the three type of occupations - clerk, teacher, and plumber, not necessarily in that order. Each person is assigned only one type of occupation. No two or more persons can be assigned same type of occupation. Clerk is Chris's cousin. Hari lives next door to the plumber. An and, who knows more facts than the teacher, has to drive more than 1 hour to reach Hari's home. Identify each of the person's correct type of occupation, and accordingly, which one of the following options is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An and, Hari, and Chris are engaged in one of the three type of occupations - clerk, teacher, and plumber, not necessarily in that order. Each person is assigned only one type of occupation. No two or more persons can be assigned same type of occupation. Clerk is Chris's cousin. Hari lives next door to the plumber. An and, who knows more facts than the teacher, has to drive more than 1 hour to reach Hari's home. Identify each of the person's correct type of occupation, and accordingly, which one of the following options is correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Anand is teacher and Chris is clerk.",
-        "Hari is clerk and Anand is plumber.",
+        "An and is teacher and Chris is clerk.",
+        "Hari is clerk and An and is plumber.",
         "Chris is teacher and Hari is clerk.",
-        "Anand is clerk and Chris is plumber."
+        "An and is clerk and Chris is plumber."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Anand is teacher and Chris is clerk.",
-          "imageUrl": null
+          "text": "An and is teacher and Chris is clerk.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An and is teacher and Chris is clerk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Hari is clerk and Anand is plumber.",
-          "imageUrl": null
+          "text": "Hari is clerk and An and is plumber.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Hari is clerk and An and is plumber.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Chris is teacher and Hari is clerk.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Chris is teacher and Hari is clerk.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Anand is clerk and Chris is plumber.",
-          "imageUrl": null
+          "text": "An and is clerk and Chris is plumber.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "An and is clerk and Chris is plumber.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1368,35 +2625,86 @@
       "questionNumber": 24,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Many countries are facing water shortage crises in the past few years. A report of\nthe United Nation has named India among the worst countries for poor quality of\nwater. The report ranks 122 countries according to the quality of their water as\nwell as their commitment to improve the situation. Some countries in Europe are\nconsidered the worst because of the quality of its ground water. Rain failed in\nsome parts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and\nAndhra Pradesh were affected by severe drought. People without water turn\ndesperate and violent. Consequently, the food godowns were attacked in some of\nthe states.\nBased on the details given in the passage, which of the following option(s) is/ are\ncorrect statement(s)?",
+      "questionText": "Many countries are facing water shortage crises in the past few years. A report of the United Nation has named India among the worst countries for poor quality of water. The report ranks 122 countries according to the quality of their water as well as their commitment to improve the situation. Some countries in Europe are considered the worst because of the quality of its ground water. Rain failed in some parts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and Andhra Pradesh were affected by severe drought. People without water turn desperate and violent. Consequently, the food godowns were attacked in some of the states.\n\nBased on the details given in the passage, which of the following option(s) is/ are correct statement(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Many countries are facing water shortage crises in the past few years. A report of the United Nation has named India among the worst countries for poor quality of water. The report ranks 122 countries according to the quality of their water as well as their commitment to improve the situation. Some countries in Europe are considered the worst because of the quality of its ground water. Rain failed in some parts of India in the past. The vast areas of Rajasthan, Madhya Pradesh, and Andhra Pradesh were affected by severe drought. People without water turn desperate and violent. Consequently, the food godowns were attacked in some of the states.\n\nBased on the details given in the passage, which of the following option(s) is/ are correct statement(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "There is no proof that India is affected by poor quality of water.",
-        "A few European countries are suffering due to occurrence of drought.",
+        "few European countries are suffering due to occurrence of drought.",
         "Lack of access to water can lead to social unrest.",
-        ""
+        "Intense shortage of water is visible in some states of India."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "There is no proof that India is affected by poor quality of water.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "There is no proof that India is affected by poor quality of water.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "A few European countries are suffering due to occurrence of drought.",
-          "imageUrl": null
+          "text": "few European countries are suffering due to occurrence of drought.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "few European countries are suffering due to occurrence of drought.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Lack of access to water can lead to social unrest.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lack of access to water can lead to social unrest.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": null
+          "text": "Intense shortage of water is visible in some states of India.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Intense shortage of water is visible in some states of India.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C;D",
@@ -1432,7 +2740,24 @@
       "questionNumber": 25,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and\nhexagon) are given.\nThe sum of the numbers which belong to only two overlapping shapes is_______.",
+      "questionText": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and hexagon) are given.\n\nThe sum of the numbers which belong to <u>only</u> two overlapping shapes is_______.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the following figure, four overlapping shapes (rectangle, triangle, circle, and hexagon) are given.\n\nThe sum of the numbers which belong to <u>only</u> two overlapping shapes is_______.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c5/q25_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1469,7 +2794,18 @@
       "questionNumber": 26,
       "sectionId": "xh_b1",
       "sectionName": "Section B1: Reasoning and Comprehension (Compulsory)",
-      "questionText": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying\ngrass in the field is Rs. 5 per square-meter. The total cost for laying grass in the\nfield ABCD is Rs. ________ (rounded off to two decimal places).",
+      "questionText": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying grass in the field is Rs. 5 per square-meter. The total cost for laying grass in the field ABCD is Rs. ________ (rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a square field ABCD. The diagonal AC is 50 meter. The cost of laying grass in the field is Rs. 5 per square-meter. The total cost for laying grass in the field ABCD is Rs. ________ (rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1504,7 +2840,18 @@
       "questionNumber": 27,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Parenting style in which parents are so involved that children are permitted to\nbehave without set limits is termed as________.",
+      "questionText": "Parenting style in which parents are so involved that children are permitted to behave without set limits is termed as________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Parenting style in which parents are so involved that children are permitted to behave without set limits is termed as________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Permissive neglectful parenting",
@@ -1517,22 +2864,62 @@
         {
           "id": "A",
           "text": "Permissive neglectful parenting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Permissive neglectful parenting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Permissive indulgent parenting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Permissive indulgent parenting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Authoritarian parenting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Authoritarian parenting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Willful parenting",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Willful parenting",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1562,7 +2949,18 @@
       "questionNumber": 28,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "_______ in both lobes of the brain are responsible for coordination and\ninterpretation of information as well as higher mental processing.",
+      "questionText": "_______ in both lobes of the brain are responsible for coordination and interpretation of information as well as higher mental processing.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "_______ in both lobes of the brain are responsible for coordination and interpretation of information as well as higher mental processing.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Broca's area",
@@ -1575,22 +2973,62 @@
         {
           "id": "A",
           "text": "Broca's area",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Broca's area",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Wernicke's area",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Wernicke's area",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Parietal area",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Parietal area",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Association area",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Association area",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1621,6 +3059,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "If Skinner : Behaviourism, then Howard Gardner : ______________?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If Skinner : Behaviourism, then Howard Gardner : ______________?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Sociocultural",
@@ -1633,22 +3082,62 @@
         {
           "id": "A",
           "text": "Sociocultural",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sociocultural",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Cognitivism",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cognitivism",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Evolutionary perspective",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evolutionary perspective",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Humanistic perspective",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Humanistic perspective",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1678,7 +3167,18 @@
       "questionNumber": 30,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "An experimental set-up where neither the experimenter nor the participants know\nwho are in the experimental or control groups is known as?",
+      "questionText": "An experimental set-up where neither the experimenter nor the participants know who are in the experimental or control groups is known as?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An experimental set-up where neither the experimenter nor the participants know who are in the experimental or control groups is known as?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Random experimentation",
@@ -1691,22 +3191,62 @@
         {
           "id": "A",
           "text": "Random experimentation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Random experimentation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Blind experimentation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Blind experimentation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Single blind study",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Single blind study",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Double blind study",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Double blind study",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1737,6 +3277,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "If Cultural Congruence : Social Psychology, then Evoked Culture : _______?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If Cultural Congruence : Social Psychology, then Evoked Culture : _______?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Evolutionary psychology",
@@ -1749,22 +3300,62 @@
         {
           "id": "A",
           "text": "Evolutionary psychology",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evolutionary psychology",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Cultural psychology",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cultural psychology",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Cross-cultural psychology",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cross-cultural psychology",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Clinical psychology",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Clinical psychology",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1794,7 +3385,45 @@
       "questionNumber": 32,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the following:\nColum I: Perspectives in Psychology. Column II: Concept of human nature\nP. Psychodynamic (i) Reactors to the environment\nQ. Behavioural (ii) As thinkers\nR. Humanistic (iii) Controlled by inner forces and\nconflicts\nS. Cognitive (iv) Free agent seeking self-realization",
+      "questionText": "Match the following:\n\n| Colum I: Perspectives in Psychology. | Column II: Concept of human nature |\n| :--- | :--- |\n| P. Psychodynamic | (i) Reactors to the environment |\n| Q. Behavioural | (ii) As thinkers |\n| R. Humanistic | (iii) Controlled by inner forces and conflicts |\n| S. Cognitive | (iv) Free agent seeking self-realization |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Colum I: Perspectives in Psychology.",
+            "Column II: Concept of human nature"
+          ],
+          "rows": [
+            [
+              "P. Psychodynamic",
+              "(i) Reactors to the environment"
+            ],
+            [
+              "Q. Behavioural",
+              "(ii) As thinkers"
+            ],
+            [
+              "R. Humanistic",
+              "(iii) Controlled by inner forces and conflicts"
+            ],
+            [
+              "S. Cognitive",
+              "(iv) Free agent seeking self-realization"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P-iv; Q-iii; R-ii; S-i",
@@ -1807,22 +3436,62 @@
         {
           "id": "A",
           "text": "P-iv; Q-iii; R-ii; S-i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-iii; R-ii; S-i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P-iii; Q-i; R-ii; S-iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-i; R-ii; S-iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P-iii; Q-i; R-iv; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-i; R-iv; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P-iv; Q-iii; R-i; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-iii; R-i; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1853,6 +3522,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Which statistical technique is used to analyze patterns of loading of coefficients?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which statistical technique is used to analyze patterns of loading of coefficients?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Correlation",
@@ -1865,22 +3545,62 @@
         {
           "id": "A",
           "text": "Correlation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Correlation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Regression",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Regression",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Factor Analysis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Factor Analysis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Item Analysis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Item Analysis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1910,7 +3630,41 @@
       "questionNumber": 34,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the following:\nP. Instinct i) Environmental motivation triggers\nQ. Incentive ii) Are fixed action patterns\nR. Self-actualization iii) Self-determination theory\nS. Intrinsic motivation iv) Considered by Maslow as the highest need",
+      "questionText": "Match the following:\n\n| P. Instinct | i) Environmental motivation triggers |\n| :--- | :--- |\n| Q. Incentive | ii) Are fixed action patterns |\n| R. Self-actualization | iii) Self-determination theory |\n| S. Intrinsic motivation | iv) Considered by Maslow as the highest need |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Instinct",
+            "i) Environmental motivation triggers"
+          ],
+          "rows": [
+            [
+              "Q. Incentive",
+              "ii) Are fixed action patterns"
+            ],
+            [
+              "R. Self-actualization",
+              "iii) Self-determination theory"
+            ],
+            [
+              "S. Intrinsic motivation",
+              "iv) Considered by Maslow as the highest need"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P:iv, Q: ii, R: iii, S: i",
@@ -1923,22 +3677,62 @@
         {
           "id": "A",
           "text": "P:iv, Q: ii, R: iii, S: i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P:iv, Q: ii, R: iii, S: i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P:ii, Q:i, R: iv, S:iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P:ii, Q:i, R: iv, S:iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P: i, Q: iii, R: ii, S: iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: i, Q: iii, R: ii, S: iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P: iii, Q: i, R: iv, S: ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: iii, Q: i, R: iv, S: ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1968,7 +3762,18 @@
       "questionNumber": 35,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "The tendency to observe behaviors of others in ways that are according to your\nexpectations about them is called:",
+      "questionText": "The tendency to observe behaviors of others in ways that are according to your expectations about them is called:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The tendency to observe behaviors of others in ways that are according to your expectations about them is called:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Schema",
@@ -1981,22 +3786,62 @@
         {
           "id": "A",
           "text": "Schema",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Schema",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Confirmation bias",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Confirmation bias",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Social judgment",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Social judgment",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Anchoring",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Anchoring",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2026,7 +3871,18 @@
       "questionNumber": 36,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "The tendency to explain other people's behavior as the result of personal factors is\ncalled __________________.",
+      "questionText": "The tendency to explain other people's behavior as the result of personal factors is called __________________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The tendency to explain other people's behavior as the result of personal factors is called __________________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Fundamental attribution error",
@@ -2039,22 +3895,62 @@
         {
           "id": "A",
           "text": "Fundamental attribution error",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fundamental attribution error",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Stereotypes",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Stereotypes",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Schemas",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Schemas",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Actor-observer bias",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Actor-observer bias",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2084,7 +3980,18 @@
       "questionNumber": 37,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Ankit was chased by a dog when he was a child. Now he is afraid of all animals.\nThis is an example of :",
+      "questionText": "Ankit was chased by a dog when he was a child. Now he is afraid of all animals. This is an example of :",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Ankit was chased by a dog when he was a child. Now he is afraid of all animals. This is an example of :",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Stimulus generalization",
@@ -2097,22 +4004,62 @@
         {
           "id": "A",
           "text": "Stimulus generalization",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Stimulus generalization",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Extinction",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Extinction",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Conditioned response",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conditioned response",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Secondary learning",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Secondary learning",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2142,7 +4089,18 @@
       "questionNumber": 38,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Identify \"False\" and \"True\" statements\nP. Little children wearing neon green color jacket on field trips illustrates the\nuse of exogenous attention\nQ. Scanning the room for green color because your friend said she will wear a\ngreen dress illustrates the use of endogenous attention\nR. Endogenous attention is voluntary - exogenous attention is involuntary\nS. Endogenous attention is a bottom up process and exogenous attention is a\ntop down process",
+      "questionText": "Identify \"False\" and \"True\" statements\n\nP. Little children wearing neon green color jacket on field trips illustrates the use of exogenous attention\n\nQ. Scanning the room for green color because your friend said she will wear a green dress illustrates the use of endogenous attention\n\nR. Endogenous attention is voluntary - exogenous attention is involuntary\n\nS. Endogenous attention is a bottom up process and exogenous attention is a top down process",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify \"False\" and \"True\" statements\n\nP. Little children wearing neon green color jacket on field trips illustrates the use of exogenous attention\n\nQ. Scanning the room for green color because your friend said she will wear a green dress illustrates the use of endogenous attention\n\nR. Endogenous attention is voluntary - exogenous attention is involuntary\n\nS. Endogenous attention is a bottom up process and exogenous attention is a top down process",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - false, Q - true, R- true, S - true",
@@ -2155,22 +4113,62 @@
         {
           "id": "A",
           "text": "P - false, Q - true, R- true, S - true",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - false, Q - true, R- true, S - true",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - true, Q - false, R - true, S - true",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - true, Q - false, R - true, S - true",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - true, Q - true, R - true, S - false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - true, Q - true, R - true, S - false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - false, Q - true, R - false, S - false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - false, Q - true, R - false, S - false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2201,6 +4199,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Specific description of a variable that allows it to be measured is called:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Specific description of a variable that allows it to be measured is called:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Experimental",
@@ -2213,22 +4222,62 @@
         {
           "id": "A",
           "text": "Experimental",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Experimental",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Designing a study",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Designing a study",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Operationalization",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Operationalization",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Conceptualization",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conceptualization",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2259,6 +4308,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "In which method(s) we gather detailed information of a small number of persons?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In which method(s) we gather detailed information of a small number of persons?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Surveys",
@@ -2271,22 +4331,62 @@
         {
           "id": "A",
           "text": "Surveys",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Surveys",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Depth Interview",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Depth Interview",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Correlational Research",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Correlational Research",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Case Study",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Case Study",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2322,7 +4422,18 @@
       "questionNumber": 41,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Which of the following option(s) do(es) NOT denote the state of internal\nphysiological equilibrium that the body strives to maintain?",
+      "questionText": "Which of the following option(s) do(es) NOT denote the state of internal physiological equilibrium that the body strives to maintain?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following option(s) do(es) NOT denote the state of internal physiological equilibrium that the body strives to maintain?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Intrinsic motivation",
@@ -2335,22 +4446,62 @@
         {
           "id": "A",
           "text": "Intrinsic motivation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Intrinsic motivation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Homeostasis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Homeostasis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Instincts",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Instincts",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Drive",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Drive",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -2389,6 +4540,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Which of the following option(s) refer(s) to secondary appraisal?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following option(s) refer(s) to secondary appraisal?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Thoughts about what to do in a stressful situation",
@@ -2401,22 +4563,62 @@
         {
           "id": "A",
           "text": "Thoughts about what to do in a stressful situation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Thoughts about what to do in a stressful situation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Thoughts about whether an event is generally threatening",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Thoughts about whether an event is generally threatening",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Evaluation of an event's relevance, threat and stressfulness",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaluation of an event's relevance, threat and stressfulness",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Evaluation of coping resources and options for dealing with a stressful event",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaluation of coping resources and options for dealing with a stressful event",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D OR C;D",
@@ -2461,7 +4663,18 @@
       "questionNumber": 43,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Which of the following is/are included as a basic type of intelligence in\nSternberg's Triarchic Theory?",
+      "questionText": "Which of the following is/are included as a basic type of intelligence in Sternberg's Triarchic Theory?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are included as a basic type of intelligence in Sternberg's Triarchic Theory?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Analytic",
@@ -2474,22 +4687,62 @@
         {
           "id": "A",
           "text": "Analytic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Analytic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Experiential/creative",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Experiential/creative",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Crystallization",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Crystallization",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Synthesis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Synthesis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2525,7 +4778,18 @@
       "questionNumber": 44,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "As per the ethical guidelines of American Psychological Association, which of the\noption(s) depict(s) unacceptable use of 'Deception' in psychology research?",
+      "questionText": "As per the ethical guidelines of American Psychological Association, which of the option(s) depict(s) unacceptable use of 'Deception' in psychology research?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As per the ethical guidelines of American Psychological Association, which of the option(s) depict(s) unacceptable use of 'Deception' in psychology research?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Falsifying the data",
@@ -2538,22 +4802,62 @@
         {
           "id": "A",
           "text": "Falsifying the data",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Falsifying the data",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Temporary withholding of information about the study from the participants",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Temporary withholding of information about the study from the participants",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Not taking informed consent",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Not taking informed consent",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Use of confederates",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Use of confederates",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -2589,7 +4893,41 @@
       "questionNumber": 45,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the following theories of ageing.\nP. Cellular-Clock Theory (i) Oxygen molecule with unstable\nelectron\nQ. Wear-and-Tear Theory (ii) Elderly person who remain active\nin some way adjust more positively to\nageing\nR. Free-radical Theory (iii) Cells are limited in number of\ntimes they can reproduce to repair\ndamage\nS. Activity Theory (iv) Body organs and cell tissues wear\nout with repeated use and abuse",
+      "questionText": "Match the following theories of ageing.\n\n| P. Cellular-Clock Theory | (i) Oxygen molecule with unstable electron |\n| :--- | :--- |\n| Q. Wear-and-Tear Theory | (ii) Elderly person who remain active in some way adjust more positively to ageing |\n| R. Free-radical Theory | (iii) Cells are limited in number of times they can reproduce to repair damage |\n| S. Activity Theory | (iv) Body organs and cell tissues wear out with repeated use and abuse |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following theories of ageing.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Cellular-Clock Theory",
+            "(i) Oxygen molecule with unstable electron"
+          ],
+          "rows": [
+            [
+              "Q. Wear-and-Tear Theory",
+              "(ii) Elderly person who remain active in some way adjust more positively to ageing"
+            ],
+            [
+              "R. Free-radical Theory",
+              "(iii) Cells are limited in number of times they can reproduce to repair damage"
+            ],
+            [
+              "S. Activity Theory",
+              "(iv) Body organs and cell tissues wear out with repeated use and abuse"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P-ii; Q-iv; R-i; S-iii",
@@ -2602,22 +4940,62 @@
         {
           "id": "A",
           "text": "P-ii; Q-iv; R-i; S-iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-ii; Q-iv; R-i; S-iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P-iv; Q-i; R-iii; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-i; R-iii; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P-iii; Q-ii; R-i; S-iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-ii; R-i; S-iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P-iii; Q-iv; R-i; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-iv; R-i; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2647,7 +5025,41 @@
       "questionNumber": 46,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the neurotransmitters with their functions\nP. Acetylcholine (i) Movement and pleasure sensation\nQ. Dopamine (ii) Sleep, anxiety, and appetite\nR. Serotonin (iii) Attention and memory\nS. Norepinephrine (iv) Arousal and mood",
+      "questionText": "Match the neurotransmitters with their functions\n\n| P. Acetylcholine | (i) Movement and pleasure sensation |\n| :--- | :--- |\n| Q. Dopamine | (ii) Sleep, anxiety, and appetite |\n| R. Serotonin | (iii) Attention and memory |\n| S. Norepinephrine | (iv) Arousal and mood |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the neurotransmitters with their functions",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Acetylcholine",
+            "(i) Movement and pleasure sensation"
+          ],
+          "rows": [
+            [
+              "Q. Dopamine",
+              "(ii) Sleep, anxiety, and appetite"
+            ],
+            [
+              "R. Serotonin",
+              "(iii) Attention and memory"
+            ],
+            [
+              "S. Norepinephrine",
+              "(iv) Arousal and mood"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P-ii; Q-i; R-iv; S-iii",
@@ -2660,22 +5072,62 @@
         {
           "id": "A",
           "text": "P-ii; Q-i; R-iv; S-iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-ii; Q-i; R-iv; S-iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P-iii; Q-i; R-ii; S-iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-i; R-ii; S-iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P-iv; Q-ii; R-i; S-iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-ii; R-i; S-iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P-iv; Q-iii; R-i; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-iii; R-i; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2705,7 +5157,41 @@
       "questionNumber": 47,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the concerned human nervous system with their associated functions.\nP. Sympathetic (i) Carrying messages from Central Nervous\nSystem to muscles and glands\nQ. Parasympathetic (ii) Carrying messages from senses to Central\nNervous System\nR. Afferent (iii) Maintaining body functions under normal\nconditions\nS. Efferent (iv) Fight-or-flight system",
+      "questionText": "Match the concerned human nervous system with their associated functions.\n\n| P. Sympathetic | (i) Carrying messages from Central Nervous System to muscles and glands |\n| :--- | :--- |\n| Q. Parasympathetic | (ii) Carrying messages from senses to Central Nervous System |\n| R. Afferent | (iii) Maintaining body functions under normal conditions |\n| S. Efferent | (iv) Fight-or-flight system |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the concerned human nervous system with their associated functions.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Sympathetic",
+            "(i) Carrying messages from Central Nervous System to muscles and glands"
+          ],
+          "rows": [
+            [
+              "Q. Parasympathetic",
+              "(ii) Carrying messages from senses to Central Nervous System"
+            ],
+            [
+              "R. Afferent",
+              "(iii) Maintaining body functions under normal conditions"
+            ],
+            [
+              "S. Efferent",
+              "(iv) Fight-or-flight system"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P-iv; Q-iii; R-ii; S-i",
@@ -2718,22 +5204,62 @@
         {
           "id": "A",
           "text": "P-iv; Q-iii; R-ii; S-i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-iii; R-ii; S-i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P-iii; Q-i; R-ii; S-iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iii; Q-i; R-ii; S-iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P-iv; Q-ii; R-i; S-iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-ii; R-i; S-iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P-iv; Q-iii; R-i; S-ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P-iv; Q-iii; R-i; S-ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2763,7 +5289,18 @@
       "questionNumber": 48,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "A researcher plans to study the long-term effect of Covid-19 on human cognitive\nfunctions. The plan is summarized below.\nSTUDY- I (Study conducted in 2022)\nGroup- A: 10 years old males and females\nGroup B: 20 years old males and females\nGroup- C: 30 years old males and females\nSTUDY- II (Study to be conducted in 2025)\nGroup D: 13 years old males and females\nGroup E: 23 years old males and females\nGroup F: 33 years old males and females\nThis research design is known as?",
+      "questionText": "A researcher plans to study the long-term effect of Covid-19 on human cognitive functions. The plan is summarized below.\n\nSTUDY- I (Study conducted in 2022)\n\nGroup- A: 10 years old males and females\n\nGroup B: 20 years old males and females\n\nGroup- C: 30 years old males and females\n\nSTUDY- II (Study to be conducted in 2025)\n\nGroup D: 13 years old males and females\n\nGroup E: 23 years old males and females\n\nGroup F: 33 years old males and females\n\nThis research design is known as?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A researcher plans to study the long-term effect of Covid-19 on human cognitive functions. The plan is summarized below.\n\nSTUDY- I (Study conducted in 2022)\n\nGroup- A: 10 years old males and females\n\nGroup B: 20 years old males and females\n\nGroup- C: 30 years old males and females\n\nSTUDY- II (Study to be conducted in 2025)\n\nGroup D: 13 years old males and females\n\nGroup E: 23 years old males and females\n\nGroup F: 33 years old males and females\n\nThis research design is known as?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Cross-sectional design",
@@ -2776,22 +5313,62 @@
         {
           "id": "A",
           "text": "Cross-sectional design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cross-sectional design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Longitudinal design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Longitudinal design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Cross-sequential design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cross-sequential design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Long-term design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Long-term design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2821,7 +5398,18 @@
       "questionNumber": 49,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "If Central Nervous System = Brain + Spinal Cord, then Peripheral Nervous\nSystem = _______?",
+      "questionText": "If Central Nervous System = Brain + Spinal Cord, then Peripheral Nervous System = _______?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If Central Nervous System = Brain + Spinal Cord, then Peripheral Nervous System = _______?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Sympathetic + Parasympathetic Systems",
@@ -2834,22 +5422,62 @@
         {
           "id": "A",
           "text": "Sympathetic + Parasympathetic Systems",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Sympathetic + Parasympathetic Systems",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Forebrain + Hindbrain",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Forebrain + Hindbrain",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Somatic + Autonomic Nervous Systems",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Somatic + Autonomic Nervous Systems",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Cerebrum + Cerebellum",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cerebrum + Cerebellum",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2879,7 +5507,41 @@
       "questionNumber": 50,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the following:\nP. Anima i) A universal idea, image, or pattern, found in the\ncollective unconscious.\nQ. Animus ii) An unconscious image representing unity,\nwholesome, completion, and balance.\nR. Self-Archetype iii) An archetype representing the female principles.\nS. Archetype iv) An archetype representing the male principles",
+      "questionText": "Match the following:\n\n| P. Anima | i) A universal idea, image, or pattern, found in the collective unconscious. |\n| :--- | :--- |\n| Q. Animus | ii) An unconscious image representing unity, wholesome, completion, and balance. |\n| R. Self-Archetype | iii) An archetype representing the female principles. |\n| S. Archetype | iv) An archetype representing the male principles |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Anima",
+            "i) A universal idea, image, or pattern, found in the collective unconscious."
+          ],
+          "rows": [
+            [
+              "Q. Animus",
+              "ii) An unconscious image representing unity, wholesome, completion, and balance."
+            ],
+            [
+              "R. Self-Archetype",
+              "iii) An archetype representing the female principles."
+            ],
+            [
+              "S. Archetype",
+              "iv) An archetype representing the male principles"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P: ii, Q: i, R: iv, S: iii",
@@ -2892,22 +5554,62 @@
         {
           "id": "A",
           "text": "P: ii, Q: i, R: iv, S: iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: ii, Q: i, R: iv, S: iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P: iv, Q: ii, R: iii, S: i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: iv, Q: ii, R: iii, S: i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P: iii, Q: iv, R: ii, S: i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: iii, Q: iv, R: ii, S: i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P: i, Q: iii, R: ii, S: iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: i, Q: iii, R: ii, S: iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2937,7 +5639,18 @@
       "questionNumber": 51,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Behavior modification programs aimed at extinction of an undesirable behavior\ntypically make use of:",
+      "questionText": "Behavior modification programs aimed at extinction of an undesirable behavior typically make use of:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Behavior modification programs aimed at extinction of an undesirable behavior typically make use of:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Punishment and stimulus control",
@@ -2950,22 +5663,62 @@
         {
           "id": "A",
           "text": "Punishment and stimulus control",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Punishment and stimulus control",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Punishment and shaping",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Punishment and shaping",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Stimulus control and time out",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Stimulus control and time out",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Non- reinforcement and time out",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Non- reinforcement and time out",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2995,7 +5748,41 @@
       "questionNumber": 52,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Match the concept to the correct answer :\nP. Confounding i) We can draw clear causal conclusions from an\nexperiment.\nQ. High internal validity ii) Presence of an uncontrolled variable creates\nuncertainty as to whether the dependent variable\nwas influenced by the independent variable.\nR. High external validity iii) Participant improves because of the\nexpectation of receiving a treatment, not because\nof the treatment itself.\nS. Placebo effect iv) The results of a study generalize to other\nsettings and populations.",
+      "questionText": "Match the concept to the correct answer :\n\n| P. Confounding | i) We can draw clear causal conclusions from an experiment. |\n| :--- | :--- |\n| Q. High internal validity | ii) Presence of an uncontrolled variable creates uncertainty as to whether the dependent variable was influenced by the independent variable. |\n| R. High external validity | iii) Participant improves because of the expectation of receiving a treatment, not because of the treatment itself. |\n| S. Placebo effect | iv) The results of a study generalize to other settings and populations. |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the concept to the correct answer :",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P. Confounding",
+            "i) We can draw clear causal conclusions from an experiment."
+          ],
+          "rows": [
+            [
+              "Q. High internal validity",
+              "ii) Presence of an uncontrolled variable creates uncertainty as to whether the dependent variable was influenced by the independent variable."
+            ],
+            [
+              "R. High external validity",
+              "iii) Participant improves because of the expectation of receiving a treatment, not because of the treatment itself."
+            ],
+            [
+              "S. Placebo effect",
+              "iv) The results of a study generalize to other settings and populations."
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P: ii, Q: i, R: iv, S: iii",
@@ -3008,22 +5795,62 @@
         {
           "id": "A",
           "text": "P: ii, Q: i, R: iv, S: iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: ii, Q: i, R: iv, S: iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P: iv, Q: ii, R: iii, S: i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: iv, Q: ii, R: iii, S: i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P: iii, Q: iv, R: ii, S: i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: iii, Q: iv, R: ii, S: i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P: i, Q: iii, R: ii, S: iv",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P: i, Q: iii, R: ii, S: iv",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3053,7 +5880,18 @@
       "questionNumber": 53,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Assertions-\nP. Factor analysis reduces a large number of measures to a smaller number of\nclusters.\nQ. The measures within each cluster are highly interconnected and reflect the\nsame underlying dimensions.\nWhich of the following is correct?",
+      "questionText": "Assertions-\n\nP. Factor analysis reduces a large number of measures to a smaller number of clusters.\n\nQ. The measures within each cluster are highly interconnected and reflect the same underlying dimensions.\n\nWhich of the following is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Assertions-\n\nP. Factor analysis reduces a large number of measures to a smaller number of clusters.\n\nQ. The measures within each cluster are highly interconnected and reflect the same underlying dimensions.\n\nWhich of the following is correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Only P is correct",
@@ -3066,22 +5904,62 @@
         {
           "id": "A",
           "text": "Only P is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Only P is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Only Q is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Only Q is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Both P and Q are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both P and Q are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Neither P nor Q is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Neither P nor Q is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -3111,7 +5989,18 @@
       "questionNumber": 54,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "___________ perspective is considered as the 'first force' in Psychology, whereas\n___________ perspective is considered as the 'third force' in Psychology.\nFill in the blanks using the suitable option given below",
+      "questionText": "___________ perspective is considered as the 'first force' in Psychology, whereas ___________ perspective is considered as the 'third force' in Psychology.\n\nFill in the blanks using the suitable option given below",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "___________ perspective is considered as the 'first force' in Psychology, whereas ___________ perspective is considered as the 'third force' in Psychology.\n\nFill in the blanks using the suitable option given below",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Psychodynamic and Humanistic",
@@ -3124,22 +6013,62 @@
         {
           "id": "A",
           "text": "Psychodynamic and Humanistic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Psychodynamic and Humanistic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Behavioural and Humanistic",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Behavioural and Humanistic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Humanistic and Cognitive",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Humanistic and Cognitive",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Cognitive and Gestalt",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cognitive and Gestalt",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3174,10 +6103,21 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "In language development which of the following statement(s) is/are true:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In language development which of the following statement(s) is/are true:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The ability to distinguish speech from non-speech sound is likely to develop\nbefore the age of three months.",
-        "The ability to distinguish between words, without understanding their meaning, is\nlikely to develop before the age of seven months.",
+        "The ability to distinguish speech from non-speech sound is likely to develop before the age of three months.",
+        "The ability to distinguish between words, without understanding their meaning, is likely to develop before the age of seven months.",
         "Babbling is not likely to develop before the age of six months.",
         "The ability to use single words is not likely to begin before the age of ten months."
       ],
@@ -3185,23 +6125,63 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "The ability to distinguish speech from non-speech sound is likely to develop\nbefore the age of three months.",
-          "imageUrl": null
+          "text": "The ability to distinguish speech from non-speech sound is likely to develop before the age of three months.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The ability to distinguish speech from non-speech sound is likely to develop before the age of three months.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The ability to distinguish between words, without understanding their meaning, is\nlikely to develop before the age of seven months.",
-          "imageUrl": null
+          "text": "The ability to distinguish between words, without understanding their meaning, is likely to develop before the age of seven months.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The ability to distinguish between words, without understanding their meaning, is likely to develop before the age of seven months.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Babbling is not likely to develop before the age of six months.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Babbling is not likely to develop before the age of six months.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The ability to use single words is not likely to begin before the age of ten months.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The ability to use single words is not likely to begin before the age of ten months.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3237,7 +6217,18 @@
       "questionNumber": 56,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Projective Techniques would NOT be of interest to which type(s) of personality\ntheorists?",
+      "questionText": "Projective Techniques would NOT be of interest to which type(s) of personality theorists?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Projective Techniques would NOT be of interest to which type(s) of personality theorists?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Humanistic theorists",
@@ -3250,22 +6241,62 @@
         {
           "id": "A",
           "text": "Humanistic theorists",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Humanistic theorists",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Cognitive theorists",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cognitive theorists",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Trait theorists",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Trait theorists",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Psychodynamic theorists",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Psychodynamic theorists",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -3304,6 +6335,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Which of the following is/are characteristic(s) of Type A personality:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are characteristic(s) of Type A personality:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Ambitious",
@@ -3316,22 +6358,62 @@
         {
           "id": "A",
           "text": "Ambitious",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ambitious",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Competitive",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Competitive",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Time conscious",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Time conscious",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Laid back",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Laid back",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -3369,7 +6451,18 @@
       "questionNumber": 58,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Which of the following is/are source(s) of variability that contribute(s) to errors in\nmeasurement of estimating reliability?",
+      "questionText": "Which of the following is/are source(s) of variability that contribute(s) to errors in measurement of estimating reliability?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are source(s) of variability that contribute(s) to errors in measurement of estimating reliability?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Reactivity carryover true change over time",
@@ -3382,22 +6475,62 @@
         {
           "id": "A",
           "text": "Reactivity carryover true change over time",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reactivity carryover true change over time",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Making incorrect predictions or decisions about individuals",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Making incorrect predictions or decisions about individuals",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Inconsistency of test content non parallel halves",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Inconsistency of test content non parallel halves",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Consistency of test content",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Consistency of test content",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3433,7 +6566,18 @@
       "questionNumber": 59,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "The humanistic approach to therapy would be the least effective in treating which\nof the following condition(s)?",
+      "questionText": "The humanistic approach to therapy would be the least effective in treating which of the following condition(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The humanistic approach to therapy would be the least effective in treating which of the following condition(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Schizophrenia",
@@ -3446,22 +6590,62 @@
         {
           "id": "A",
           "text": "Schizophrenia",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Schizophrenia",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Mild depression",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Mild depression",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Paranoia",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Paranoia",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Childhood abuse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Childhood abuse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3498,6 +6682,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Characteristic feature(s) of an aptitude test is/are:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Characteristic feature(s) of an aptitude test is/are:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Evaluate the effects of an unknown, uncontrolled set of experiences",
@@ -3510,22 +6705,62 @@
         {
           "id": "A",
           "text": "Evaluate the effects of an unknown, uncontrolled set of experiences",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaluate the effects of an unknown, uncontrolled set of experiences",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Rely heavily on content validation procedure",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Rely heavily on content validation procedure",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Evaluate the potential to profit from training",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaluate the potential to profit from training",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Evaluate the outcome of training",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Evaluate the outcome of training",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3562,6 +6797,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "From the following options, what is/are illusion(s)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "From the following options, what is/are illusion(s)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Erroneous perceptions",
@@ -3574,22 +6820,62 @@
         {
           "id": "A",
           "text": "Erroneous perceptions",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Erroneous perceptions",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Schemas",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Schemas",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Perceptual constancies",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perceptual constancies",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Incorrect perceptual hypothesis",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Incorrect perceptual hypothesis",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3625,35 +6911,137 @@
       "questionNumber": 62,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "Refer to Column I and Column II and mark the statement(s) that is/are \"True\"\nColumn I: Class 8, Column II: Class 8,\nSection A marks Section B marks\n12 18\n12 18\n11 15\n11 15\n10 10\n10 10\n9 5\n9 5\n8 2\n8 2",
+      "questionText": "Refer to Column I and Column II and mark the statement(s) that is/are “True”\n\n| Column I: Class 8, Section A marks | Column II: Class 8, Section B marks |\n| :--- | :--- |\n| 12 | 18 |\n| 12 | 18 |\n| 11 | 15 |\n| 11 | 15 |\n| 10 | 10 |\n| 10 | 10 |\n| 9 | 5 |\n| 9 | 5 |\n| 8 | 2 |\n| 8 | 2 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Refer to Column I and Column II and mark the statement(s) that is/are \"True\"",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column I: Class 8, Section A marks",
+            "Column II: Class 8, Section B marks"
+          ],
+          "rows": [
+            [
+              "12",
+              "18"
+            ],
+            [
+              "12",
+              "18"
+            ],
+            [
+              "11",
+              "15"
+            ],
+            [
+              "11",
+              "15"
+            ],
+            [
+              "10",
+              "10"
+            ],
+            [
+              "10",
+              "10"
+            ],
+            [
+              "9",
+              "5"
+            ],
+            [
+              "9",
+              "5"
+            ],
+            [
+              "8",
+              "2"
+            ],
+            [
+              "8",
+              "2"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "The mean of Section A is different from that of Section B",
         "The standard deviation of Section A is similar to that of Section B",
         "The mean and the standard deviation of Section A is the same",
-        "The mean of Section A and Section B are the same, the standard deviation is\ndifferent"
+        "The mean of Section A and Section B are the same, the standard deviation is different"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "The mean of Section A is different from that of Section B",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The mean of Section A is different from that of Section B",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The standard deviation of Section A is similar to that of Section B",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The standard deviation of Section A is similar to that of Section B",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The mean and the standard deviation of Section A is the same",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The mean and the standard deviation of Section A is the same",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "The mean of Section A and Section B are the same, the standard deviation is\ndifferent",
-          "imageUrl": null
+          "text": "The mean of Section A and Section B are the same, the standard deviation is different",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The mean of Section A and Section B are the same, the standard deviation is different",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -3688,6 +7076,17 @@
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
       "questionText": "Which of the following is/are true for conformity:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are true for conformity:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Size influences conformity only up to a certain level",
@@ -3700,22 +7099,62 @@
         {
           "id": "A",
           "text": "Size influences conformity only up to a certain level",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Size influences conformity only up to a certain level",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Size always influences conformity",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Size always influences conformity",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Group unanimity influences conformity",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Group unanimity influences conformity",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Status does not have any influence on conformity",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Status does not have any influence on conformity",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -3751,7 +7190,18 @@
       "questionNumber": 64,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "When the probability of Type I error (α) is 0.05 and the maximum acceptable\nprobability of Type II error (β) is 0.20, the researcher is willing to accept that\nType I error is __________ (answer in integer) times more serious than a Type II\nerror.",
+      "questionText": "When the probability of Type I error (α) is 0.05 and the maximum acceptable probability of Type II error (β) is 0.20, the researcher is willing to accept that Type I error is __________ (answer in integer) times more serious than a Type II error.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "When the probability of Type I error (α) is 0.05 and the maximum acceptable probability of Type II error (β) is 0.20, the researcher is willing to accept that Type I error is __________ (answer in integer) times more serious than a Type II error.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3786,7 +7236,24 @@
       "questionNumber": 65,
       "sectionId": "xh_c5",
       "sectionName": "Section C5: Psychology",
-      "questionText": "If Soni got an intelligence score of 115, then what percentage of the population\n(%, as given in the graph) will have intelligence scores higher than the score\nobtained by Soni? (rounded off to 2 decimal places)",
+      "questionText": "If Soni got an intelligence score of 115, then what percentage of the population (%, as given in the graph) will have intelligence scores higher than the score obtained by Soni? (rounded off to 2 decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If Soni got an intelligence score of 115, then what percentage of the population (%, as given in the graph) will have intelligence scores higher than the score obtained by Soni? (rounded off to 2 decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/xh-c5/q65_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

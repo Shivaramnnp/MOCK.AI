@@ -1,0 +1,66 @@
+question_number,official_type,official_key,marks,negative_marks,has_diagram,has_table,has_code,has_math,status,audit_notes
+1,MCQ,D,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+2,MCQ,A,1.0,0.33,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+3,MCQ,B,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+4,MCQ,B,1.0,0.33,False,False,False,True,VERIFIED,Infinite series with 7 fractions verified intact
+5,MCQ,B,1.0,0.33,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+6,MCQ,D,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+7,MCQ,A,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+8,MCQ,B,2.0,0.67,False,True,False,False,VERIFIED,Text prompt and options verified against official PDF
+9,MCQ,A,2.0,0.67,True,False,False,False,VERIFIED,Dice net prompt diagram + 4 visual options with single ownership
+10,MCQ,A,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+11,MCQ,A,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+12,MCQ,A,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+13,MCQ,B,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+14,MCQ,A,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+15,MCQ,A,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+16,MCQ,A,1.0,0.33,False,True,False,False,VERIFIED,Matching table (Column 1 vs Column 2) structured table block verified
+17,MCQ,D,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+18,MCQ,C,1.0,0.33,False,True,False,False,VERIFIED,Text prompt and options verified against official PDF
+19,MCQ,D,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+20,MCQ,B,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+21,MCQ,B,1.0,0.33,False,False,False,True,VERIFIED,Mathematical expressions balanced and KaTeX compliant
+22,MCQ,A,1.0,0.33,False,False,False,True,VERIFIED,Mathematical expressions balanced and KaTeX compliant
+23,MCQ,D,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+24,MCQ,C,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+25,MCQ,C,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+26,MCQ,C,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+27,MCQ,B,1.0,0.33,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+28,MSQ,A;B;C,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+29,MSQ,B;C;D,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+30,NAT,0 to 0,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+31,NAT,3 to 3,1.0,0.0,False,True,False,False,VERIFIED,Text prompt and options verified against official PDF
+32,NAT,17 to 17,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+33,NAT,0.24 to 0.24,1.0,0.0,False,False,False,True,VERIFIED,Mathematical expressions balanced and KaTeX compliant
+34,NAT,42 to 42,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+35,NAT,0 to 0,1.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+36,MCQ,C,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+37,MCQ,A,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+38,MCQ,D,2.0,0.67,False,False,True,False,VERIFIED,Python function preserved with 4-space indentation and clean intro/outro
+39,MCQ,C,2.0,0.67,False,False,True,False,VERIFIED,Text prompt and options verified against official PDF
+40,MCQ,A,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+41,MCQ,C,2.0,0.67,False,False,True,False,VERIFIED,Python function preserved with 4-space indentation and clean intro/outro
+42,MCQ,A,2.0,0.67,True,True,False,False,VERIFIED,Visual diagram asset verified on disk
+43,MCQ,A,2.0,0.67,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+44,MCQ,C,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+45,MCQ,B,2.0,0.67,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+46,MSQ,A;B;D,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+47,MSQ,A;C,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+48,MSQ,B;D,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+49,MSQ,B;C;D,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+50,MSQ,A;B,2.0,0.0,False,False,False,True,VERIFIED,Mathematical expressions balanced and KaTeX compliant
+51,MSQ,B;D,2.0,0.0,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+52,MSQ,A;B;C,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+53,MSQ,A;D,2.0,0.0,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+54,MSQ,A;C,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+55,MSQ,A;B,2.0,0.0,False,False,False,False,VERIFIED,"Relational DB schema, SQL query, and 4 non-empty options verified"
+56,NAT,0.125 to 0.125,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+57,NAT,0.2 to 0.2,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+58,NAT,0.25 to 0.25,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+59,NAT,MTA,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+60,NAT,0.5 to 0.5,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+61,NAT,55 to 55,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF
+62,NAT,0.12 to 0.13,2.0,0.0,False,True,False,False,VERIFIED,Text prompt and options verified against official PDF
+63,NAT,5 to 5,2.0,0.0,True,False,False,False,VERIFIED,Visual diagram asset verified on disk
+64,NAT,0.125 to 0.125,2.0,0.0,True,True,False,True,VERIFIED,Visual diagram asset verified on disk
+65,NAT,0.062 to 0.063,2.0,0.0,False,False,False,False,VERIFIED,Text prompt and options verified against official PDF

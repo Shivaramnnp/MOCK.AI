@@ -117,21 +117,25 @@ CREATE POLICY "Public can view competitive questions"
     ON public.competitive_questions FOR SELECT
     USING (true);
 
--- User Exam Attempts: Users can only view, create, and update their own attempts
+-- User Exam Attempts: Users can strictly only view, create, and update their own attempts
 DROP POLICY IF EXISTS "Users can view own exam attempts" ON public.user_exam_attempts;
 CREATE POLICY "Users can view own exam attempts"
     ON public.user_exam_attempts FOR SELECT
-    USING (auth.uid() = user_id OR user_id IS NULL);
+    TO authenticated
+    USING (auth.uid() = user_id);
 
 DROP POLICY IF EXISTS "Users can insert own exam attempts" ON public.user_exam_attempts;
 CREATE POLICY "Users can insert own exam attempts"
     ON public.user_exam_attempts FOR INSERT
-    WITH CHECK (auth.uid() = user_id OR user_id IS NULL);
+    TO authenticated
+    WITH CHECK (auth.uid() = user_id);
 
 DROP POLICY IF EXISTS "Users can update own exam attempts" ON public.user_exam_attempts;
 CREATE POLICY "Users can update own exam attempts"
     ON public.user_exam_attempts FOR UPDATE
-    USING (auth.uid() = user_id OR user_id IS NULL);
+    TO authenticated
+    USING (auth.uid() = user_id)
+    WITH CHECK (auth.uid() = user_id);
 
 -- 6. Initial Seed: Register SSC CHSL in catalog
 INSERT INTO public.competitive_exams (id, name, full_name, organization, category, description, status, available_years, tier, default_pattern, highlights)

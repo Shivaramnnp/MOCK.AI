@@ -49,12 +49,11 @@ const SEED_TESTS: TestHistory[] = [
     title: 'Kinematics & Newtonian Mechanics',
     category: 'Physics',
     createdAt: Date.now() - 86400000 * 2,
-    lastTakenAt: Date.now() - 86400000,
-    bestScore: 4,
-    bestScorePercent: 80,
+    lastTakenAt: null,
+    bestScore: null,
+    bestScorePercent: null,
     bestTotal: 5,
-    lastTimeSpentSeconds: 145,
-    wrongCount: 1,
+    wrongCount: 0,
     questions: [
       {
         questionText: 'An object is thrown vertically upwards with initial velocity $v_0$. What is the maximum height $H$ reached in terms of gravitational acceleration $g$?',
@@ -209,37 +208,37 @@ const SEED_PROFILE: UserProfile = {
 const SEED_TASKS: DailyTask[] = [
   {
     id: 'task-1',
-    title: 'Solve 10 Physics Practice MCQs',
-    description: 'Target Kinematics and Work-Energy',
+    title: 'Solve 10 Practice MCQs',
+    description: 'Target Kinematics and Mechanics questions',
     targetCount: 10,
-    completedCount: 5,
+    completedCount: 0,
     isDone: false,
     type: 'PRACTICE',
   },
   {
     id: 'task-2',
-    title: 'Review Weak Topics: Sorting Algorithms',
-    description: 'Re-attempt 3 questions from missed tests',
-    targetCount: 3,
-    completedCount: 3,
-    isDone: true,
+    title: 'Complete a Diagnostic Mock Test',
+    description: 'Take a test to establish your performance baseline',
+    targetCount: 1,
+    completedCount: 0,
+    isDone: false,
     type: 'REVISION',
   },
   {
     id: 'task-3',
     title: 'Keep Study Streak Alive',
-    description: 'Complete at least one mock test today',
+    description: 'Complete at least one mock test or practice set today',
     targetCount: 1,
-    completedCount: 1,
-    isDone: true,
+    completedCount: 0,
+    isDone: false,
     type: 'STREAK',
   },
 ];
 
 const SEED_INSIGHT: DailyInsight = {
-  title: 'Focus on Rotational Dynamics today 🎯',
-  summary: 'Based on your recent 80% score in Mechanics, focusing on torque and angular momentum will push your accuracy above 90%!',
-  focusArea: 'Rotational Motion',
+  title: 'Welcome to Mock.AI 🎯',
+  summary: 'Complete your first mock test or competitive exam to unlock data-driven performance analytics, real-time accuracy trends, and weak topic tracking.',
+  focusArea: 'Diagnostic Baseline',
   dateStr: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
 };
 
@@ -307,13 +306,31 @@ class StorageService {
   getTests(): TestHistory[] {
     const raw = localStorage.getItem(STORAGE_KEYS.TESTS);
     if (!raw) {
-      this.saveTests(SEED_TESTS);
-      return SEED_TESTS;
+      const cloned: TestHistory[] = JSON.parse(JSON.stringify(SEED_TESTS));
+      this.saveTests(cloned);
+      return cloned;
     }
     try {
-      return JSON.parse(raw);
+      const tests = JSON.parse(raw) as TestHistory[];
+      // Auto-migrate legacy cached seed-physics-01 if it contains fake mock data
+      let modified = false;
+      for (const t of tests) {
+        if (t.id === 'seed-physics-01' && t.lastTimeSpentSeconds === 145 && t.bestScore === 4) {
+          t.lastTakenAt = null;
+          t.bestScore = null;
+          t.bestScorePercent = null;
+          t.wrongCount = 0;
+          delete t.lastTimeSpentSeconds;
+          modified = true;
+        }
+      }
+      if (modified) {
+        this.saveTests(tests);
+      }
+      return tests;
     } catch {
-      return SEED_TESTS;
+      const cloned: TestHistory[] = JSON.parse(JSON.stringify(SEED_TESTS));
+      return cloned;
     }
   }
 
@@ -346,7 +363,8 @@ class StorageService {
     score: number,
     total: number,
     wrongCount: number,
-    timeSpentSeconds: number
+    timeSpentSeconds: number,
+    userAnswers?: Record<number, number>
   ): void {
     const tests = this.getTests();
     const target = tests.find((t) => t.id === id);
@@ -360,6 +378,9 @@ class StorageService {
       }
       target.wrongCount = wrongCount;
       target.lastTimeSpentSeconds = timeSpentSeconds;
+      if (userAnswers) {
+        target.userAnswers = userAnswers;
+      }
       this.saveTests(tests);
     }
     this.recordStreakActivity();
@@ -369,13 +390,14 @@ class StorageService {
   getProfile(): UserProfile {
     const raw = localStorage.getItem(STORAGE_KEYS.PROFILE);
     if (!raw) {
-      this.saveProfile(SEED_PROFILE);
-      return SEED_PROFILE;
+      const cloned: UserProfile = JSON.parse(JSON.stringify(SEED_PROFILE));
+      this.saveProfile(cloned);
+      return cloned;
     }
     try {
       return JSON.parse(raw);
     } catch {
-      return SEED_PROFILE;
+      return JSON.parse(JSON.stringify(SEED_PROFILE));
     }
   }
 
@@ -437,13 +459,14 @@ class StorageService {
   getDailyTasks(): DailyTask[] {
     const raw = localStorage.getItem(STORAGE_KEYS.TASKS);
     if (!raw) {
-      localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(SEED_TASKS));
-      return SEED_TASKS;
+      const cloned: DailyTask[] = JSON.parse(JSON.stringify(SEED_TASKS));
+      localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(cloned));
+      return cloned;
     }
     try {
       return JSON.parse(raw);
     } catch {
-      return SEED_TASKS;
+      return JSON.parse(JSON.stringify(SEED_TASKS));
     }
   }
 
@@ -462,13 +485,14 @@ class StorageService {
   getDailyInsight(): DailyInsight {
     const raw = localStorage.getItem(STORAGE_KEYS.INSIGHT);
     if (!raw) {
-      localStorage.setItem(STORAGE_KEYS.INSIGHT, JSON.stringify(SEED_INSIGHT));
-      return SEED_INSIGHT;
+      const cloned: DailyInsight = JSON.parse(JSON.stringify(SEED_INSIGHT));
+      localStorage.setItem(STORAGE_KEYS.INSIGHT, JSON.stringify(cloned));
+      return cloned;
     }
     try {
       return JSON.parse(raw);
     } catch {
-      return SEED_INSIGHT;
+      return JSON.parse(JSON.stringify(SEED_INSIGHT));
     }
   }
 

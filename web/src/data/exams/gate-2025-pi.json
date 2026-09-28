@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Courage : Bravery :: Yearning : __________\nSelect the most appropriate option to complete the analogy.",
+      "questionText": "Courage : Bravery :: Yearning : __________\n\nSelect the most appropriate option to complete the analogy.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Courage : Bravery :: Yearning : __________\n\nSelect the most appropriate option to complete the analogy.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Longing",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "Longing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Longing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Yelling",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Yelling",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Yawning",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Yawning",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Glaring",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Glaring",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -103,7 +154,18 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "We __________ tennis in the lawn when it suddenly started to rain.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "We __________ tennis in the lawn when it suddenly started to rain.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "We __________ tennis in the lawn when it suddenly started to rain.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "have been playing",
@@ -116,22 +178,62 @@
         {
           "id": "A",
           "text": "have been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "have been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "had been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "had been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "would have been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "would have been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "could be playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "could be playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -161,7 +263,24 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of\npixels with 𝑈 \\le 4 is:",
+      "questionText": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of pixels with 𝑈 \\le 4 is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of pixels with 𝑈 \\le 4 is:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q3_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3",
@@ -174,22 +293,62 @@
         {
           "id": "A",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "11",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -221,7 +380,24 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse\nare 1, 2, and 3, respectively. Which one among the given options is the most\nappropriate combination of P, Q, and R ?\n2\nR\n4\nQ\n1 P\n3",
+      "questionText": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse are 1, 2, and 3, respectively. Which one among the given options is the most appropriate combination of P, Q, and R ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse are 1, 2, and 3, respectively. Which one among the given options is the most appropriate combination of P, Q, and R ?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P = 6; Q = 5; R = 3",
@@ -234,22 +410,62 @@
         {
           "id": "A",
           "text": "P = 6; Q = 5; R = 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 6; Q = 5; R = 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P = 5; Q = 6; R = 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 5; Q = 6; R = 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P = 3; Q = 6; R = 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 3; Q = 6; R = 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P = 5; Q = 3; R = 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 5; Q = 3; R = 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -281,7 +497,18 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased\nby 10%, which one of the following statements is correct for all values of L and W?",
+      "questionText": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased by 10%, which one of the following statements is correct for all values of L and W?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased by 10%, which one of the following statements is correct for all values of L and W?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Perimeter increases by 10%.",
@@ -294,22 +521,62 @@
         {
           "id": "A",
           "text": "Perimeter increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perimeter increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Length of the diagonals increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Length of the diagonals increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Area increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Area increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The rectangle becomes a square.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The rectangle becomes a square.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -339,7 +606,50 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Column-I has statements made by Shanthala; and, Column-II has responses given\nby Kanishk.\nColumn-I Column-II\nP. This house is in a mess. 1. Alright, I won't bring it up during\nour conversations.\nQ. I am not happy with the marks 2. Well, you can easily look it up.\ngiven to me.\nR. Politics is a subject I avoid talking 3. No problem, let me clear it up for\nabout. you.\nS. I don't know what this word 4. Don't worry, I will take it up with\nmeans. your teacher.\nIdentify the option that has the correct match between Column-I and Column-II.",
+      "questionText": "Column-I has statements made by Shanthala; and, Column-II has responses given by Kanishk.\n\n| Column-I | Column-II |\n| :--- | :--- |\n| P. This house is in a mess. | 1. Alright, I won't bring it up during our conversations. |\n| Q. I am not happy with the marks given to me. | 2. Well, you can easily look it up. |\n| R. Politics is a subject I avoid talking about. | 3. No problem, let me clear it up for you. |\n| S. I don't know what this word means. | 4. Don't worry, I will take it up with your teacher. |\n\nIdentify the option that has the correct match between Column-I and Column-II.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Column-I has statements made by Shanthala; and, Column-II has responses given by Kanishk.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column-I",
+            "Column-II"
+          ],
+          "rows": [
+            [
+              "P. This house is in a mess.",
+              "1. Alright, I won't bring it up during our conversations."
+            ],
+            [
+              "Q. I am not happy with the marks given to me.",
+              "2. Well, you can easily look it up."
+            ],
+            [
+              "R. Politics is a subject I avoid talking about.",
+              "3. No problem, let me clear it up for you."
+            ],
+            [
+              "S. I don't know what this word means.",
+              "4. Don't worry, I will take it up with your teacher."
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Identify the option that has the correct match between Column-I and Column-II.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 2; Q - 3; R - 1; S - 4",
@@ -352,22 +662,62 @@
         {
           "id": "A",
           "text": "P - 2; Q - 3; R - 1; S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2; Q - 3; R - 1; S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3; Q - 4; R - 1; S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3; Q - 4; R - 1; S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4; Q - 1; R - 2; S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4; Q - 1; R - 2; S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 1; Q - 2; R - 4; S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1; Q - 2; R - 4; S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -397,35 +747,90 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Weight of a person can be expressed as a function of their age. The function usually\nvaries from person to person. Suppose this function is identical for two brothers,\nand it monotonically increases till the age of 50 years and then it monotonically\ndecreases. Let 𝑎 and 𝑎 (in years) denote the ages of the brothers and 𝑎 < 𝑎 2.\n1 2 1\nWhich one of the following statements is correct about their age on the day when\nthey attain the same weight?",
+      "questionText": "Weight of a person can be expressed as a function of their age. The function usually varies from person to person. Suppose this function is identical for two brothers, and it monotonically increases till the age of 50 years and then it monotonically decreases. Let 𝑎_{1} and 𝑎_{2} (in years) denote the ages of the brothers and 𝑎_{1} < 𝑎_{2}. Which one of the following statements is correct about their age on the day when they attain the same weight?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Weight of a person can be expressed as a function of their age. The function usually varies from person to person. Suppose this function is identical for two brothers, and it monotonically increases till the age of 50 years and then it monotonically decreases. Let 𝑎_{1} and 𝑎_{2} (in years) denote the ages of the brothers and 𝑎_{1} < 𝑎_{2}. Which one of the following statements is correct about their age on the day when they attain the same weight?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑎 < 𝑎 < 50\n1 2",
-        "𝑎 < 50 < 𝑎\n1 2",
-        "50 < 𝑎 < 𝑎\n1 2",
-        "Either 𝑎 = 50 or 𝑎 = 50\n1 2"
+        "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+        "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+        "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+        "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑎 < 𝑎 < 50\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑎_{1} < 𝑎_{2} < 50",
+              "content": "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑎 < 50 < 𝑎\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑎_{1} < 50 < 𝑎_{2}",
+              "content": "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "50 < 𝑎 < 𝑎\n1 2",
-          "imageUrl": null
+          "text": "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "50 < 𝑎_{1} < 𝑎_{2}",
+              "content": "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "Either 𝑎 = 50 or 𝑎 = 50\n1 2",
-          "imageUrl": null
+          "text": "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "Either 𝑎_{1} = 50 or 𝑎_{2} = 50",
+              "content": "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -455,7 +860,24 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r\ncm as shown in the figure. The side of the dodecagon is d cm. All the triangles\n(numbered 1 to 12) in the figure are used to form squares of side r cm and each\nnumbered triangle is used only once to form a square.\nThe number of squares that can be formed and the number of triangles required to\nform each square, respectively, are:\nNote: The figure shown is representative.",
+      "questionText": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r cm as shown in the figure. The side of the dodecagon is d cm. All the triangles (numbered 1 to 12) in the figure are used to form squares of side r cm and each numbered triangle is used only once to form a square.\n\nThe number of squares that can be formed and the number of triangles required to form each square, respectively, are:\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r cm as shown in the figure. The side of the dodecagon is d cm. All the triangles (numbered 1 to 12) in the figure are used to form squares of side r cm and each numbered triangle is used only once to form a square.\n\nThe number of squares that can be formed and the number of triangles required to form each square, respectively, are:\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q8_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3; 4",
@@ -468,22 +890,62 @@
         {
           "id": "A",
           "text": "3; 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "4; 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4; 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3; 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "3; 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -515,35 +977,90 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "2\n2𝑥\nIf a real variable 𝑥 satisfies 3𝑥2 = 27 \\times 9𝑥 , then the value of is:\n(2𝑥)2",
+      "questionText": "If a real variable 𝑥 satisfies 3^{𝑥2} = 27 \\times 9^{𝑥}, then the value of \\(\\frac{2𝑥2}{(2x)^2}\\) is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If a real variable 𝑥 satisfies 3^{𝑥2} = 27 \\times 9^{𝑥}, then the value of \\(\\frac{2𝑥2}{(2x)^2}\\) is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "2-1",
-        "20",
-        "23",
-        "215"
+        "\\(2^{-1}\\)",
+        "\\(2^{0}\\)",
+        "\\(2^{3}\\)",
+        "\\(2^{15}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "2-1",
-          "imageUrl": null
+          "text": "\\(2^{-1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{-1}",
+              "content": "\\(2^{-1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "20",
-          "imageUrl": null
+          "text": "\\(2^{0}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{0}",
+              "content": "\\(2^{0}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "23",
-          "imageUrl": null
+          "text": "\\(2^{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{3}",
+              "content": "\\(2^{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "215",
-          "imageUrl": null
+          "text": "\\(2^{15}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{15}",
+              "content": "\\(2^{15}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -573,7 +1090,24 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is\nshown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average\namount (in ₹) she has earned per shift in the past 100 shifts?\nNote: The figure shown is representative.\n50\n40\n40\nshifts\n30\n30\nof\n20\nNumber\n20\n10\n10\n0\n5 6 7 8\nNumber of patients per shift (X)",
+      "questionText": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is shown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average amount (in ₹) she has earned per shift in the past 100 shifts?\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is shown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average amount (in ₹) she has earned per shift in the past 100 shifts?\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q10_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "6,100",
@@ -586,22 +1120,62 @@
         {
           "id": "A",
           "text": "6,100",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,100",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "6,300",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,300",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6,500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -633,35 +1207,86 @@
       "questionNumber": 11,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "0 -1\nThe eigenvalues of the matrix are\n \n1 0 ",
+      "questionText": "The eigenvalues of the matrix 0    1 - 0 1    are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The eigenvalues of the matrix 0    1 - 0 1    are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "- -1 and -1",
+        "-- and 1 - 1",
         "-1 and 1",
-        "1+ -1 and 1- -1",
-        "-1+ -1 and -1- -1"
+        "1 + - and 1 1 - - 1",
+        "-+ 1 - and 1 1 --- 1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "- -1 and -1",
-          "imageUrl": null
+          "text": "-- and 1 - 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-- and 1 - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "-1 and 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-1 and 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "1+ -1 and 1- -1",
-          "imageUrl": null
+          "text": "1 + - and 1 1 - - 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1 + - and 1 1 - - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "-1+ -1 and -1- -1",
-          "imageUrl": null
+          "text": "-+ 1 - and 1 1 --- 1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-+ 1 - and 1 1 --- 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -691,11 +1316,22 @@
       "questionNumber": 12,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system,\nthe curl of the vector -2yi+xj is",
+      "questionText": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system, the curl of the vector 2y - i + x j is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system, the curl of the vector 2y - i + x j is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3k",
-        "-3k",
+        "-k 3",
         "-k",
         "k"
       ],
@@ -704,22 +1340,62 @@
         {
           "id": "A",
           "text": "3k",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3k",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "-3k",
-          "imageUrl": null
+          "text": "-k 3",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-k 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "-k",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-k",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "k",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "k",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -749,35 +1425,86 @@
       "questionNumber": 13,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "If F ( s )denotes the Laplace transform of some function f ( t ), then the Laplace\ntransform of ebt f ( t ), where 𝑏 is a real constant, is",
+      "questionText": "If F s denotes the Laplace transform of some function ( ) f t , then the Laplace ( ) transform of e^{bt} f t , where 𝑏 is a real constant, is ( )",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If F s denotes the Laplace transform of some function ( ) f t , then the Laplace ( ) transform of e^{bt} f t , where 𝑏 is a real constant, is ( )",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "F (s-b)",
-        "F (s+b)",
-        "-F ( s)",
-        "F (b-s)"
+        "F s ( - b )",
+        "F s ( + b )",
+        "- F s ( )",
+        "F b ( - s )"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "F (s-b)",
-          "imageUrl": null
+          "text": "F s ( - b )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "F s ( - b )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "F (s+b)",
-          "imageUrl": null
+          "text": "F s ( + b )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "F s ( + b )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "-F ( s)",
-          "imageUrl": null
+          "text": "- F s ( )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "- F s ( )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "F (b-s)",
-          "imageUrl": null
+          "text": "F b ( - s )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "F b ( - s )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -808,34 +1535,85 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "Which one of the following equations is a linear differential equation?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following equations is a linear differential equation?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "dy\n+2x= y2\ndx",
-        "dy\nx3 +xy= x2\ndx",
-        "d2y dy\nx +2y =0\ndx2 dx",
-        "2\ndy\n+2x= y\n \ndx"
+        "\\(\\frac{dy}{dx}\\) 2 x = y 2",
+        "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+        "\\(\\frac{dy}{2dx}\\) 2 \\(\\frac{dy}{dx}\\) 0 2",
+        "\\(\\frac{dy}{dx}\\) 2 x = y"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "dy\n+2x= y2\ndx",
-          "imageUrl": null
+          "text": "\\(\\frac{dy}{dx}\\) 2 x = y 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{dy}{dx}\\) 2 x = y 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "dy\nx3 +xy= x2\ndx",
-          "imageUrl": null
+          "text": "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "d2y dy\nx +2y =0\ndx2 dx",
-          "imageUrl": null
+          "text": "\\(\\frac{dy}{2dx}\\) 2 \\(\\frac{dy}{dx}\\) 0 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{dy}{2dx}\\) 2 \\(\\frac{dy}{dx}\\) 0 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "2\ndy\n+2x= y\n \ndx",
-          "imageUrl": null
+          "text": "\\(\\frac{dy}{dx}\\) 2 x = y",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{dy}{dx}\\) 2 x = y",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -865,35 +1643,90 @@
       "questionNumber": 15,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A bag contains 5 red, 7 green and 3 blue balls. Two balls are drawn at random from\nthe bag one-by-one. The probability of the second drawn ball being red is",
+      "questionText": "A bag contains 5 red, 7 green and 3 blue balls. Two balls are drawn at random from the bag one-by-one. The probability of the second drawn ball being red is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A bag contains 5 red, 7 green and 3 blue balls. Two balls are drawn at random from the bag one-by-one. The probability of the second drawn ball being red is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n5",
-        "1\n3",
-        "2\n5",
-        "2\n3"
+        "\\(\\frac{1}{5}\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(\\frac{2}{5}\\)",
+        "\\(\\frac{2}{3}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{5}",
+              "content": "\\(\\frac{1}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n3",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{3}",
+              "content": "\\(\\frac{1}{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "2\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{2}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{2}{5}",
+              "content": "\\(\\frac{2}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "2\n3",
-          "imageUrl": null
+          "text": "\\(\\frac{2}{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{2}{3}",
+              "content": "\\(\\frac{2}{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -924,6 +1757,17 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "Exit-hole occurrence is common in",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Exit-hole occurrence is common in",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Electron Beam Welding",
@@ -936,22 +1780,62 @@
         {
           "id": "A",
           "text": "Electron Beam Welding",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electron Beam Welding",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Submerged Arc Welding",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Submerged Arc Welding",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Friction Welding",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Friction Welding",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Friction Stir Welding",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Friction Stir Welding",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -981,35 +1865,89 @@
       "questionNumber": 17,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "An aircraft has two engines, each having a reliability R. The aircraft will crash only\nwhen both engines stop working. The reliability of the aircraft flying without crash\nis",
+      "questionText": "An aircraft has two engines, each having a reliability R. The aircraft will crash only when both engines stop working. The reliability of the aircraft flying without crash is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An aircraft has two engines, each having a reliability R. The aircraft will crash only when both engines stop working. The reliability of the aircraft flying without crash is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "R2",
+        "\\(\\mathbb{R}^{2}\\)",
         "2R",
-        "2R- R2",
-        "R2-2R"
+        "\\(2R- \\mathbb{R}^{2}\\)",
+        "\\(\\mathbb{R}^{2}-2R\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "R2",
-          "imageUrl": null
+          "text": "\\(\\mathbb{R}^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\mathbb{R}^{2}",
+              "content": "\\(\\mathbb{R}^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
           "text": "2R",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2R",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2R- R2",
-          "imageUrl": null
+          "text": "\\(2R- \\mathbb{R}^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2R- \\mathbb{R}^{2}",
+              "content": "\\(2R- \\mathbb{R}^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "R2-2R",
-          "imageUrl": null
+          "text": "\\(\\mathbb{R}^{2}-2R\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\mathbb{R}^{2}-2R",
+              "content": "\\(\\mathbb{R}^{2}-2R\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1040,6 +1978,17 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "The proper sequence of design of a product is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The proper sequence of design of a product is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Conceptual design, Embodiment design, Detailed design",
@@ -1052,22 +2001,62 @@
         {
           "id": "A",
           "text": "Conceptual design, Embodiment design, Detailed design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conceptual design, Embodiment design, Detailed design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Conceptual design, Detailed design, Embodiment design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conceptual design, Detailed design, Embodiment design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Embodiment design, Conceptual design, Detailed design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Embodiment design, Conceptual design, Detailed design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Embodiment design, Detailed design, Conceptual design",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Embodiment design, Detailed design, Conceptual design",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1097,34 +2086,50 @@
       "questionNumber": 19,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In a work sampling, out of n observations, a worker was sitting idle in x\nobservations. The standard deviation of the mean proportion of idle time is given\nby",
+      "questionText": "In a work sampling, out of n observations, a worker was sitting idle in x observations. The standard deviation of the mean proportion of idle time is given by",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a work sampling, out of n observations, a worker was sitting idle in x observations. The standard deviation of the mean proportion of idle time is given by",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "x2\nn 3",
-        "x (n-x)\nn3",
-        "x (n-x)\nn2",
-        "x\nn"
+        "\\(\\frac{2x}{3n}\\)",
+        "\\(\\frac{()xnx-}{3n}\\)",
+        "\\(\\frac{()xnx-}{2n}\\)",
+        "\\(\\frac{x}{n}\\)"
       ],
-      "optionImages": null,
+      "optionImages": [
+        null,
+        "/exam-assets/gate/2025/pi/q19_opt_b.png",
+        "/exam-assets/gate/2025/pi/q19_opt_c.png",
+        null
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "x2\nn 3",
+          "text": "\\(\\frac{2x}{3n}\\)",
           "imageUrl": null
         },
         {
           "id": "B",
-          "text": "x (n-x)\nn3",
-          "imageUrl": null
+          "text": "\\(\\frac{()xnx-}{3n}\\)",
+          "imageUrl": "/exam-assets/gate/2025/pi/q19_opt_b.png"
         },
         {
           "id": "C",
-          "text": "x (n-x)\nn2",
-          "imageUrl": null
+          "text": "\\(\\frac{()xnx-}{2n}\\)",
+          "imageUrl": "/exam-assets/gate/2025/pi/q19_opt_c.png"
         },
         {
           "id": "D",
-          "text": "x\nn",
+          "text": "\\(\\frac{x}{n}\\)",
           "imageUrl": null
         }
       ],
@@ -1156,6 +2161,17 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "Atomic packing factor of a body centered cubic structure is closest to",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Atomic packing factor of a body centered cubic structure is closest to",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0.34",
@@ -1168,22 +2184,62 @@
         {
           "id": "A",
           "text": "0.34",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.34",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0.52",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.52",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.68",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.68",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0.74",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.74",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1213,12 +2269,23 @@
       "questionNumber": 21,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Which one of the following statements is FALSE with respect to the injection\nmolding of polymer composite?",
+      "questionText": "Which one of the following statements is FALSE with respect to the injection molding of polymer composite?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following statements is FALSE with respect to the injection molding of polymer composite?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Molten polymer along with the reinforcements is injected into a closed mold cavity.",
         "Material deforms plastically to adopt the shape of the mold cavity.",
-        "Melt temperature, injection speed and screw speed are some important process\nparameters.",
+        "Melt temperature, injection speed and screw speed are some important process parameters.",
         "Commonly used reinforcements are particles, whiskers and short fibers."
       ],
       "optionImages": null,
@@ -1226,22 +2293,62 @@
         {
           "id": "A",
           "text": "Molten polymer along with the reinforcements is injected into a closed mold cavity.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Molten polymer along with the reinforcements is injected into a closed mold cavity.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Material deforms plastically to adopt the shape of the mold cavity.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Material deforms plastically to adopt the shape of the mold cavity.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Melt temperature, injection speed and screw speed are some important process\nparameters.",
-          "imageUrl": null
+          "text": "Melt temperature, injection speed and screw speed are some important process parameters.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Melt temperature, injection speed and screw speed are some important process parameters.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Commonly used reinforcements are particles, whiskers and short fibers.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Commonly used reinforcements are particles, whiskers and short fibers.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1271,7 +2378,18 @@
       "questionNumber": 22,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A through hole of 8 mm diameter is to be drilled in a 30 mm thick mild steel plate.\nWhich one of the following processes is the most appropriate to achieve high\ndimensional accuracy with less processing time?",
+      "questionText": "A through hole of 8 mm diameter is to be drilled in a 30 mm thick mild steel plate. Which one of the following processes is the most appropriate to achieve high dimensional accuracy with less processing time?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A through hole of 8 mm diameter is to be drilled in a 30 mm thick mild steel plate. Which one of the following processes is the most appropriate to achieve high dimensional accuracy with less processing time?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Conventional drilling using a carbide drill bit",
@@ -1284,22 +2402,62 @@
         {
           "id": "A",
           "text": "Conventional drilling using a carbide drill bit",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Conventional drilling using a carbide drill bit",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Die sinking EDM using a copper electrode",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Die sinking EDM using a copper electrode",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "ECM using a copper electrode",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ECM using a copper electrode",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Plasma arc machining",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Plasma arc machining",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1329,7 +2487,18 @@
       "questionNumber": 23,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Which one of the following casting defects is caused due to the supply of the molten\nmetal through two gates?",
+      "questionText": "Which one of the following casting defects is caused due to the supply of the molten metal through two gates?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following casting defects is caused due to the supply of the molten metal through two gates?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Cold shut",
@@ -1342,22 +2511,62 @@
         {
           "id": "A",
           "text": "Cold shut",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cold shut",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Shift",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Shift",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Pin hole",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Pin hole",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Rat tail",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Rat tail",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1387,7 +2596,41 @@
       "questionNumber": 24,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Match the following with reference to the CNC machine and its minimum number\nof axes available in the machine.\nType of CNC Machine Minimum number of axes\nP Turning center (CNC Lathe) i 3\nQ Machining center (CNC Vertical milling) ii 2\niii 4",
+      "questionText": "Match the following with reference to the CNC machine and its minimum number of axes available in the machine.\n\n| Type of CNC Machine | Minimum number of axes |\n| :--- | :--- |\n| P Turning center (CNC Lathe) | i 3 |\n| Q Machining center (CNC Vertical milling) | ii 2 |\n| iii | 4 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following with reference to the CNC machine and its minimum number of axes available in the machine.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type of CNC Machine",
+            "Minimum number of axes"
+          ],
+          "rows": [
+            [
+              "P Turning center (CNC Lathe)",
+              "i 3"
+            ],
+            [
+              "Q Machining center (CNC Vertical milling)",
+              "ii 2"
+            ],
+            [
+              "iii",
+              "4"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - i, Q - ii",
@@ -1400,22 +2643,62 @@
         {
           "id": "A",
           "text": "P - i, Q - ii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - i, Q - ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - ii, Q - i",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - ii, Q - i",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - i, Q - iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - i, Q - iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - ii, Q - iii",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - ii, Q - iii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1445,35 +2728,96 @@
       "questionNumber": 25,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A simply supported beam AB of span L is shown in the figure. A moment M is\napplied at point C. The magnitude of the reaction force at point A is",
+      "questionText": "A simply supported beam AB of span L is shown in the figure. A moment M is applied at point C. The magnitude of the reaction force at point A is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A simply supported beam AB of span L is shown in the figure. A moment M is applied at point C. The magnitude of the reaction force at point A is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q25_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "M\nL",
-        "M\na",
-        "M\nL-a",
-        "M\nL+a"
+        "\\(\\frac{M}{L}\\)",
+        "\\(\\frac{M}{a}\\)",
+        "\\(\\frac{M}{La-}\\)",
+        "\\(\\frac{M}{La+}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "M\nL",
-          "imageUrl": null
+          "text": "\\(\\frac{M}{L}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{M}{L}",
+              "content": "\\(\\frac{M}{L}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "M\na",
-          "imageUrl": null
+          "text": "\\(\\frac{M}{a}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{M}{a}",
+              "content": "\\(\\frac{M}{a}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "M\nL-a",
-          "imageUrl": null
+          "text": "\\(\\frac{M}{La-}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{M}{La-}",
+              "content": "\\(\\frac{M}{La-}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "M\nL+a",
-          "imageUrl": null
+          "text": "\\(\\frac{M}{La+}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{M}{La+}",
+              "content": "\\(\\frac{M}{La+}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1505,35 +2849,87 @@
       "questionNumber": 26,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The relationship between the hoop stress  and the longitudinal stress  of a\n1 2\nclosed cylindrical thin-walled pressure vessel is",
+      "questionText": "The relationship between the hoop stress \\(\\sigma\\) and the longitudinal stress 1 \\(\\sigma\\) of a 2 closed cylindrical thin-walled pressure vessel is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The relationship between the hoop stress \\(\\sigma\\) and the longitudinal stress 1 \\(\\sigma\\) of a 2 closed cylindrical thin-walled pressure vessel is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        " =2\n1 2",
-        " =\n1 2",
-        "\n = 2\n1 2",
-        "1\n = \n1 3 2"
+        "\\(\\sigma\\) 1 = 2 \\(\\sigma\\) 2",
+        "\\(\\sigma\\) 1 = \\(\\sigma\\) 2",
+        "\\(\\sigma\\)= 1 \\(\\frac{2\\(\\sigma\\)}{2}\\)",
+        "\\(\\sigma\\) 1 = \\(\\frac{1}{3}\\) 2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": " =2\n1 2",
-          "imageUrl": null
+          "text": "\\(\\sigma\\) 1 = 2 \\(\\sigma\\) 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\sigma\\) 1 = 2 \\(\\sigma\\) 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": " =\n1 2",
-          "imageUrl": null
+          "text": "\\(\\sigma\\) 1 = \\(\\sigma\\) 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\sigma\\) 1 = \\(\\sigma\\) 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "\n = 2\n1 2",
-          "imageUrl": null
+          "text": "\\(\\sigma\\)= 1 \\(\\frac{2\\(\\sigma\\)}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\sigma\\)= 1 \\(\\frac{2\\(\\sigma\\)}{2}",
+              "content": "\\(\\sigma\\)= 1 \\(\\frac{2\\(\\sigma\\)}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "1\n = \n1 3 2",
-          "imageUrl": null
+          "text": "\\(\\sigma\\) 1 = \\(\\frac{1}{3}\\) 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\sigma\\) 1 = \\(\\frac{1}{3}\\) 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1563,35 +2959,150 @@
       "questionNumber": 27,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The starting simplex table of a linear programming problem is given below, where\nS , S , S and S are the slack variables. The objective of the problem is\n1 2 3 4\nMaximize z =6x +4x\n1 2\nThe leaving variable among the basic variables is",
+      "questionText": "The starting simplex table of a linear programming problem is given below, where _{1}S , S , 2 S  and 3 S  are the slack variables. The objective of the problem is 4 Maximize z = 6 x 1 + 4 x 2 The leaving variable among the basic variables is\n\n| Basic | x 1 | x 2 | S 1 | S 2 | S 3 | S 4 | Solution |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| S 1 | 6 | 3 | 1 | 0 | 0 | 0 | 36 |\n| S 2 | 2 | 1 | 0 | 1 | 0 | 0 | 40 |\n| S 3 | -1 | 3 | 0 | 0 | 1 | 0 | 2 |\n| S 4 | 0 | 3 | 0 | 0 | 0 | 1 | 3 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The starting simplex table of a linear programming problem is given below, where _{1}S , S , 2 S and 3 S are the slack variables. The objective of the problem is 4\n\nMaximize z = 6 x 1 + 4 x 2\n\nThe leaving variable among the basic variables is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Basic",
+            "x 1",
+            "x 2",
+            "S 1",
+            "S 2",
+            "S 3",
+            "S 4",
+            "Solution"
+          ],
+          "rows": [
+            [
+              "S 1",
+              "6",
+              "3",
+              "1",
+              "0",
+              "0",
+              "0",
+              "36"
+            ],
+            [
+              "S 2",
+              "2",
+              "1",
+              "0",
+              "1",
+              "0",
+              "0",
+              "40"
+            ],
+            [
+              "S 3",
+              "-1",
+              "3",
+              "0",
+              "0",
+              "1",
+              "0",
+              "2"
+            ],
+            [
+              "S 4",
+              "0",
+              "3",
+              "0",
+              "0",
+              "0",
+              "1",
+              "3"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q27_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "S\n1",
-        "S\n2",
-        "S\n3",
-        "S\n4"
+        "\\(_{1}S\\)",
+        "S 2",
+        "S 3",
+        "S 4"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "S\n1",
-          "imageUrl": null
+          "text": "\\(_{1}S\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "_{1}S",
+              "content": "\\(_{1}S\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "S\n2",
-          "imageUrl": null
+          "text": "S 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "S\n3",
-          "imageUrl": null
+          "text": "S 3",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "S\n4",
-          "imageUrl": null
+          "text": "S 4",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1624,6 +3135,17 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "For an ideal Diesel cycle, the heat addition is an",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For an ideal Diesel cycle, the heat addition is an",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "isobaric process",
@@ -1636,22 +3158,62 @@
         {
           "id": "A",
           "text": "isobaric process",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isobaric process",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "isothermal process",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isothermal process",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "isochoric process",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isochoric process",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "isentropic process",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isentropic process",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1681,7 +3243,18 @@
       "questionNumber": 29,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Three principal stresses at a point in a material are 300 MPa, 250 MPa and 100\nMPa. If the yielding just starts at that point, the yield strength (in MPa) of the\nmaterial as per Tresca criterion is________. (Answer in integer)",
+      "questionText": "Three principal stresses at a point in a material are 300 MPa, 250 MPa and 100 MPa. If the yielding just starts at that point, the yield strength (in MPa) of the material as per Tresca criterion is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three principal stresses at a point in a material are 300 MPa, 250 MPa and 100 MPa. If the yielding just starts at that point, the yield strength (in MPa) of the material as per Tresca criterion is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1716,7 +3289,18 @@
       "questionNumber": 30,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In an orthogonal straight turning process, the feed is 0.1 mm/rev and the depth of\ncut is 0.5 mm. In ASA system, the side cutting edge angle of the cutting tool is 0.\nThe width (in mm) of the chip is________. (Rounded off to one decimal place)",
+      "questionText": "In an orthogonal straight turning process, the feed is 0.1 mm/rev and the depth of cut is 0.5 mm. In ASA system, the side cutting edge angle of the cutting tool is 0. The width (in mm) of the chip is________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In an orthogonal straight turning process, the feed is 0.1 mm/rev and the depth of cut is 0.5 mm. In ASA system, the side cutting edge angle of the cutting tool is 0. The width (in mm) of the chip is________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1751,7 +3335,18 @@
       "questionNumber": 31,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The pitch of the single-start lead screw of a lathe is 6 mm. It is used to cut double\nstart thread of 3 mm pitch on a cylindrical work piece. During the thread cutting,\nthe spindle rotates at 400 revolutions per minute (RPM). The speed (in RPM) of the\nlead screw is________. (Answer in integer)",
+      "questionText": "The pitch of the single-start lead screw of a lathe is 6 mm. It is used to cut double start thread of 3 mm pitch on a cylindrical work piece. During the thread cutting, the spindle rotates at 400 revolutions per minute (RPM). The speed (in RPM) of the lead screw is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The pitch of the single-start lead screw of a lathe is 6 mm. It is used to cut double start thread of 3 mm pitch on a cylindrical work piece. During the thread cutting, the spindle rotates at 400 revolutions per minute (RPM). The speed (in RPM) of the lead screw is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1786,7 +3381,18 @@
       "questionNumber": 32,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Two options are available to meet the annual demand of batteries in a toy company.\nIn option 1, batteries are manufactured in the plant having fixed cost of Rupees\n2,00,000 and a variable cost of Rupees 70 per unit. Option 2 consists of buying\nbatteries from the market at a price of Rupees 90 per unit. The annual demand (in\nnumber of batteries) at which the company should switch from buying to making\nthe batteries in the plant is________. (Answer in integer)",
+      "questionText": "Two options are available to meet the annual dem and of batteries in a toy company. In option 1, batteries are manufactured in the plant having fixed cost of Rupees 2,00,000 and a variable cost of Rupees 70 per unit. Option 2 consists of buying batteries from the market at a price of Rupees 90 per unit. The annual dem and (in number of batteries) at which the company should switch from buying to making the batteries in the plant is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two options are available to meet the annual dem and of batteries in a toy company. In option 1, batteries are manufactured in the plant having fixed cost of Rupees 2,00,000 and a variable cost of Rupees 70 per unit. Option 2 consists of buying batteries from the market at a price of Rupees 90 per unit. The annual dem and (in number of batteries) at which the company should switch from buying to making the batteries in the plant is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1821,7 +3427,18 @@
       "questionNumber": 33,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A company estimates the demand of 2000 bulbs for the next year. The ordering cost\nis Rupees 300 per order and the annual carrying cost per bulb is Rupees 30. The\neconomic order quantity (number of bulbs) is________. (Answer in integer)",
+      "questionText": "A company estimates the dem and of 2000 bulbs for the next year. The ordering cost is Rupees 300 per order and the annual carrying cost per bulb is Rupees 30. The economic order quantity (number of bulbs) is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A company estimates the dem and of 2000 bulbs for the next year. The ordering cost is Rupees 300 per order and the annual carrying cost per bulb is Rupees 30. The economic order quantity (number of bulbs) is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1856,7 +3473,18 @@
       "questionNumber": 34,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "While inspecting final assembly of automobile-gear-boxes, 15 features were\nconsidered critical-to-quality (CTQ). During last quarter, 40000 gear boxes were\nproduced among which 1500 defects were found of the CTQ features. The defects\nper million opportunities (DPMO) is________. (Answer in integer)",
+      "questionText": "While inspecting final assembly of automobile-gear-boxes, 15 features were considered critical-to-quality (CTQ). During last quarter, 40000 gear boxes were produced among which 1500 defects were found of the CTQ features. The defects per million opportunities (DPMO) is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "While inspecting final assembly of automobile-gear-boxes, 15 features were considered critical-to-quality (CTQ). During last quarter, 40000 gear boxes were produced among which 1500 defects were found of the CTQ features. The defects per million opportunities (DPMO) is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1891,7 +3519,18 @@
       "questionNumber": 35,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The hole and the shaft dimensions (in mm) are given as\nHole dimension =30+0.04\n-0.02\nShaft dimension =30 +0.06\n+0.03\nThe maximum possible clearance (in mm) is________. (Rounded off to two decimal\nplaces)",
+      "questionText": "The hole and the shaft dimensions (in mm) are given as\n\nHole dimension = 30_{-} +0.04 02\n\nShaft dimension = 30 +0.06 +0.03\n\nThe maximum possible clearance (in mm) is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The hole and the shaft dimensions (in mm) are given as\n\nHole dimension = 30_{-} +0.04 02\n\nShaft dimension = 30 +0.06 +0.03\n\nThe maximum possible clearance (in mm) is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1926,35 +3565,86 @@
       "questionNumber": 36,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The solution of the linear differential equation\ndy\n+ y =ex,\ndx\nwhen y( 0)=0, is",
+      "questionText": "The solution of the linear differential equation\n\n\\(\\frac{dy}{dx}\\) y = e x , _{when}( ) y 0 = 0 , is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The solution of the linear differential equation\n\n\\(\\frac{dy}{dx}\\) y = e x , _{when}( ) y 0 = 0 , is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1 1\ny = ex - e-x\n2 2",
-        "1 1\ny = ex + e-x\n2 2",
-        "y =ex -e-x",
-        "y =ex +e-x"
+        "y = \\(\\frac{1}{2}\\) x \\(\\frac{1}{2}\\) - x",
+        "y = \\(\\frac{1}{2}\\) x + \\(\\frac{1}{2}\\) - x",
+        "y = e x - e - x",
+        "y = e x + e - x"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1 1\ny = ex - e-x\n2 2",
-          "imageUrl": null
+          "text": "y = \\(\\frac{1}{2}\\) x \\(\\frac{1}{2}\\) - x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "y = \\(\\frac{1}{2}\\) x \\(\\frac{1}{2}\\) - x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1 1\ny = ex + e-x\n2 2",
-          "imageUrl": null
+          "text": "y = \\(\\frac{1}{2}\\) x + \\(\\frac{1}{2}\\) - x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "y = \\(\\frac{1}{2}\\) x + \\(\\frac{1}{2}\\) - x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "y =ex -e-x",
-          "imageUrl": null
+          "text": "y = e x - e - x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "y = e x - e - x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "y =ex +e-x",
-          "imageUrl": null
+          "text": "y = e x + e - x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "y = e x + e - x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1984,35 +3674,86 @@
       "questionNumber": 37,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Which one of the following functions is analytic, given i = -1?",
+      "questionText": "Which one of the following functions is analytic, given i = -? 1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following functions is analytic, given i = -? 1",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "ex(cosy+isiny)",
-        "ex(cosy-isiny)",
-        "ex(-cosy+isiny)",
-        "e-x(cosy+isiny)"
+        "e x ( cos y + i sin y )",
+        "e x ( cos y - i sin y )",
+        "e x ( - cos y + i sin y )",
+        "e - x ( cos y + i sin y )"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "ex(cosy+isiny)",
-          "imageUrl": null
+          "text": "e x ( cos y + i sin y )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "e x ( cos y + i sin y )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "ex(cosy-isiny)",
-          "imageUrl": null
+          "text": "e x ( cos y - i sin y )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "e x ( cos y - i sin y )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "ex(-cosy+isiny)",
-          "imageUrl": null
+          "text": "e x ( - cos y + i sin y )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "e x ( - cos y + i sin y )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "e-x(cosy+isiny)",
-          "imageUrl": null
+          "text": "e - x ( cos y + i sin y )",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "e - x ( cos y + i sin y )",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2042,7 +3783,45 @@
       "questionNumber": 38,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Match the following with reference to the machining process and its feature.",
+      "questionText": "Match the following with reference to the machining process and its feature.\n\n| Process | Feature |\n| :--- | :--- |\n| P EDM | 1 Loss of dimensional accuracy due to under cutting |\n| Q LBM | 2 Cutting edible items |\n| R CHM | 3 Machining of a deep square blind hole on a mild steel plate |\n| S WJM | 4 High speed profile cutting on a thin mild steel plate |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following with reference to the machining process and its feature.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Process",
+            "Feature"
+          ],
+          "rows": [
+            [
+              "P EDM",
+              "1 Loss of dimensional accuracy due to under cutting"
+            ],
+            [
+              "Q LBM",
+              "2 Cutting edible items"
+            ],
+            [
+              "R CHM",
+              "3 Machining of a deep square blind hole on a mild steel plate"
+            ],
+            [
+              "S WJM",
+              "4 High speed profile cutting on a thin mild steel plate"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 3, Q - 4, R - 1, S - 2",
@@ -2055,22 +3834,62 @@
         {
           "id": "A",
           "text": "P - 3, Q - 4, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3, Q - 4, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 4, Q - 3, R - 2, S - 1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 2, S - 1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4, Q - 2, R - 1, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 2, R - 1, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 1, Q - 2, R - 3, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1, Q - 2, R - 3, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2100,7 +3919,45 @@
       "questionNumber": 39,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Match the operation/phenomenon in a grinding process with the corresponding\ndefinition listed in the table.",
+      "questionText": "Match the operation/phenomenon in a grinding process with the corresponding definition listed in the table.\n\n| Operation/phenomenon | Definition |\n| :--- | :--- |\n| P Loading | 1 Regenerating the sharpness of the grinding wheel |\n| Q Glazing | 2 Filling of grinding chips in the space between the abrasive grits |\n| R Dressing | 3 Restoring the geometry/shape of the grinding wheel |\n| S Truing | 4 Condition of dull grinding wheel with worn-out grains |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the operation/phenomenon in a grinding process with the corresponding definition listed in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation/phenomenon",
+            "Definition"
+          ],
+          "rows": [
+            [
+              "P Loading",
+              "1 Regenerating the sharpness of the grinding wheel"
+            ],
+            [
+              "Q Glazing",
+              "2 Filling of grinding chips in the space between the abrasive grits"
+            ],
+            [
+              "R Dressing",
+              "3 Restoring the geometry/shape of the grinding wheel"
+            ],
+            [
+              "S Truing",
+              "4 Condition of dull grinding wheel with worn-out grains"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 4, Q - 1, R - 3, S - 2",
@@ -2113,22 +3970,62 @@
         {
           "id": "A",
           "text": "P - 4, Q - 1, R - 3, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 1, R - 3, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 2, Q - 3, R - 1, S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 3, R - 1, S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 2, Q - 4, R - 1, S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2, Q - 4, R - 1, S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 4, Q - 3, R - 1, S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4, Q - 3, R - 1, S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2158,7 +4055,24 @@
       "questionNumber": 40,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is\ndy\nlocated at point P. The slope of the straight line created by the cutter is 1.25.\n \ndx\nFeed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds\nis",
+      "questionText": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope \\(\\frac{dy}{dx}\\) of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope \\(\\frac{dy}{dx}\\) of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q40_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(50, 55)",
@@ -2171,22 +4085,62 @@
         {
           "id": "A",
           "text": "(50, 55)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(50, 55)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(60, 50)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(60, 50)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(60, 48)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(60, 48)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(100, 80)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(100, 80)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2218,7 +4172,24 @@
       "questionNumber": 41,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The network diagram of eight activities (A to H) along with their time durations (in\ndays, given in bracket) of a project is shown in the figure. The critical path of the\nproject is",
+      "questionText": "The network diagram of eight activities (A to H) along with their time durations (in days, given in bracket) of a project is shown in the figure. The critical path of the project is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The network diagram of eight activities (A to H) along with their time durations (in days, given in bracket) of a project is shown in the figure. The critical path of the project is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q41_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1-2-3-6",
@@ -2231,22 +4202,62 @@
         {
           "id": "A",
           "text": "1-2-3-6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-2-3-6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1-4-3-6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-4-3-6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1-5-6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-5-6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1-4-5-6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-4-5-6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2279,6 +4290,17 @@
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
       "questionText": "The benefit(s) of product standardization is/are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The benefit(s) of product standardization is/are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Need of less number of drawings",
@@ -2291,22 +4313,62 @@
         {
           "id": "A",
           "text": "Need of less number of drawings",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Need of less number of drawings",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Reduction in unit cost",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reduction in unit cost",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Reduction in inventory cost",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Reduction in inventory cost",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Greater product variety",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Greater product variety",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -2344,7 +4406,18 @@
       "questionNumber": 43,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "3\nThe value of the integral (x2 -2x)dx obtained by using Simpson's 1/3 rule with\n1\nn\n4 subintervals is equal to . The value of n is________. (Answer in integer)\n3",
+      "questionText": "_{The value of the integral}(  3 x 2 - 2 x ) d x obtained by using Simpson's 1/3 rule with\n\n4 subintervals is equal to \\(\\frac{n}{3}\\) . The value of n is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "_{The value of the integral}(  3 x 2 - 2 x ) d x obtained by using Simpson's 1/3 rule with\n\n4 subintervals is equal to \\(\\frac{n}{3}\\) . The value of n is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2379,7 +4452,18 @@
       "questionNumber": 44,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system,\nthe rate of change of the function f ( x, y , z)= x2 +2y2 +zat point (1, 1, 1) in the\ndirection of 3i+4k is________. (Answer in integer)",
+      "questionText": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system, the rate of change of the function f x y z ( , , ) = x 2 + 2 y 2 + z at point (1, 1, 1) in the direction of 3 i + 4 k is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If i , j and k are the orthogonal unit vectors in Cartesian x-y-z coordinate system, the rate of change of the function f x y z ( , , ) = x 2 + 2 y 2 + z at point (1, 1, 1) in the direction of 3 i + 4 k is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2414,7 +4498,18 @@
       "questionNumber": 45,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In a wire drawing of a perfectly-plastic material with flow stress of 300 MPa, the\nback tension is zero and front tension is 200 MPa. Assuming ideal deformation with\nzero friction, the percentage reduction of the cross-sectional area of the wire\nis________. (Rounded off to one decimal place)",
+      "questionText": "In a wire drawing of a perfectly-plastic material with flow stress of 300 MPa, the back tension is zero and front tension is 200 MPa. Assuming ideal deformation with zero friction, the percentage reduction of the cross-sectional area of the wire is________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a wire drawing of a perfectly-plastic material with flow stress of 300 MPa, the back tension is zero and front tension is 200 MPa. Assuming ideal deformation with zero friction, the percentage reduction of the cross-sectional area of the wire is________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2449,7 +4544,18 @@
       "questionNumber": 46,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In a cold rolling process without front and back tensions, the required minimum\ncoefficient of friction is 0.04. Assume large rolls. If the draft is doubled and roll\ndiameters are halved, then the required minimum coefficient of friction is________.\n(Rounded off to two decimal places)",
+      "questionText": "In a cold rolling process without front and back tensions, the required minimum coefficient of friction is 0.04. Assume large rolls. If the draft is doubled and roll diameters are halved, then the required minimum coefficient of friction is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a cold rolling process without front and back tensions, the required minimum coefficient of friction is 0.04. Assume large rolls. If the draft is doubled and roll diameters are halved, then the required minimum coefficient of friction is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2484,7 +4590,18 @@
       "questionNumber": 47,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In a direct current arc welding, the voltage V (in volt) is related to the arc length\nl (in cm) as\nV =(30 +30l).\nThe open circuit voltage is 80 volts. The maximum possible arc length (in cm)\nis________. (Rounded off to two decimal places)",
+      "questionText": "In a direct current arc welding, the voltage V (in volt) is related to the arc length l (in cm) as\n\nV = ( 30 30 + l ) .\n\nThe open circuit voltage is 80 volts. The maximum possible arc length (in cm) is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a direct current arc welding, the voltage V (in volt) is related to the arc length l (in cm) as\n\nV = ( 30 30 + l ) .\n\nThe open circuit voltage is 80 volts. The maximum possible arc length (in cm) is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2519,7 +4636,18 @@
       "questionNumber": 48,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A worker is allowed half an hour personal time in a normal 8-hour shift. If the\nnormal time for manufacturing a product is 5 minutes, the standard time (in second)\nis________. (Answer in integer)",
+      "questionText": "A worker is allowed half an hour personal time in a normal 8-hour shift. If the normal time for manufacturing a product is 5 minutes, the standard time (in second) is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A worker is allowed half an hour personal time in a normal 8-hour shift. If the normal time for manufacturing a product is 5 minutes, the standard time (in second) is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2554,7 +4682,18 @@
       "questionNumber": 49,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A product has to be manufactured in a single-line layout by carrying out the six\ntasks in a sequence. The time (in minute) of the six sequential tasks are 37, 8, 19,\n34, 36 and 17. These tasks cannot be further sub-divided. For minimizing the cycle\ntime, the number of stations to be used is________. (Answer in integer)",
+      "questionText": "A product has to be manufactured in a single-line layout by carrying out the six tasks in a sequence. The time (in minute) of the six sequential tasks are 37, 8, 19, 34, 36 and 17. These tasks cannot be further sub-divided. For minimizing the cycle time, the number of stations to be used is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A product has to be manufactured in a single-line layout by carrying out the six tasks in a sequence. The time (in minute) of the six sequential tasks are 37, 8, 19, 34, 36 and 17. These tasks cannot be further sub-divided. For minimizing the cycle time, the number of stations to be used is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2589,7 +4728,18 @@
       "questionNumber": 50,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A through hole of 10 mm diameter is to be drilled in a mild steel plate of 30 mm\nthickness. The selected spindle speed and feed for drilling hole are 600 revolutions\nper minute (RPM) and 0.3 mm/rev, respectively. Take initial approach and\nbreakthrough distances as 3 mm each. The total time (in minute) for drilling one\nhole is________. (Rounded off to two decimal places)",
+      "questionText": "A through hole of 10 mm diameter is to be drilled in a mild steel plate of 30 mm thickness. The selected spindle speed and feed for drilling hole are 600 revolutions per minute (RPM) and 0.3 mm/rev, respectively. Take initial approach and breakthrough distances as 3 mm each. The total time (in minute) for drilling one hole is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A through hole of 10 mm diameter is to be drilled in a mild steel plate of 30 mm thickness. The selected spindle speed and feed for drilling hole are 600 revolutions per minute (RPM) and 0.3 mm/rev, respectively. Take initial approach and breakthrough distances as 3 mm each. The total time (in minute) for drilling one hole is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2624,7 +4774,18 @@
       "questionNumber": 51,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In the iron-carbon equilibrium phase diagram, the eutectoid reaction occurs at\n723 C with the eutectoid composition of 0.83 weight % carbon. Ferrite and\ncementite phases are considered to contain 0.022 weight % carbon and 6.67 weight\n% carbon, respectively. If a steel specimen with 0.7 weight % carbon is cooled from\n950 C to below 723 C, the fraction of eutectoid ferrite is________. (Rounded off\nto two decimal places)",
+      "questionText": "In the iron-carbon equilibrium phase diagram, the eutectoid reaction occurs at 723 C with the eutectoid composition of 0.83 weight % carbon. Ferrite and cementite phases are considered to contain 0.022 weight % carbon and 6.67 weight % carbon, respectively. If a steel specimen with 0.7 weight % carbon is cooled from 950 C to below 723 C, the fraction of eutectoid ferrite is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the iron-carbon equilibrium phase diagram, the eutectoid reaction occurs at 723 C with the eutectoid composition of 0.83 weight % carbon. Ferrite and cementite phases are considered to contain 0.022 weight % carbon and 6.67 weight % carbon, respectively. If a steel specimen with 0.7 weight % carbon is cooled from 950 C to below 723 C, the fraction of eutectoid ferrite is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2659,7 +4820,18 @@
       "questionNumber": 52,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "During orthogonal cutting with a tool of 10 rake angle, the cutting and thrust forces\nare 900 N and 275 N, respectively. The coefficient of friction on the rake surface of\nthe tool is________. (Rounded off to two decimal places)",
+      "questionText": "During orthogonal cutting with a tool of 10 rake angle, the cutting and thrust forces are 900 N and 275 N, respectively. The coefficient of friction on the rake surface of the tool is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "During orthogonal cutting with a tool of 10 rake angle, the cutting and thrust forces are 900 N and 275 N, respectively. The coefficient of friction on the rake surface of the tool is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2694,7 +4866,18 @@
       "questionNumber": 53,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "In casting a cube of 80 mm side, the volumetric shrinkages due to solidification and\nsolid contraction are 4.5% and 2%, respectively. Assume uniform cooling in all\ndirections. The side (in mm) of the cubical pattern for getting the required size\ncasting is________. (Rounded off to two decimal places)",
+      "questionText": "In casting a cube of 80 mm side, the volumetric shrinkages due to solidification and solid contraction are 4.5% and 2%, respectively. Assume uniform cooling in all directions. The side (in mm) of the cubical pattern for getting the required size casting is________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In casting a cube of 80 mm side, the volumetric shrinkages due to solidification and solid contraction are 4.5% and 2%, respectively. Assume uniform cooling in all directions. The side (in mm) of the cubical pattern for getting the required size casting is________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2729,7 +4912,18 @@
       "questionNumber": 54,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The solidification of a casting starts at 10 AM. However, the solidification of the\nmolten metal at the center-line of the mold starts at 10:03 AM and ends at\n10:10 AM. The casting is considered solidified completely when the solidification\nis completed at the center-line of the mold. The center-line feeding resistance (CFR)\nin percentage is________. (Answer in integer)",
+      "questionText": "The solidification of a casting starts at 10 AM. However, the solidification of the molten metal at the center-line of the mold starts at 10:03 AM and ends at 10:10 AM. The casting is considered solidified completely when the solidification is completed at the center-line of the mold. The center-line feeding resistance (CFR) in percentage is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The solidification of a casting starts at 10 AM. However, the solidification of the molten metal at the center-line of the mold starts at 10:03 AM and ends at 10:10 AM. The casting is considered solidified completely when the solidification is completed at the center-line of the mold. The center-line feeding resistance (CFR) in percentage is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2764,7 +4958,24 @@
       "questionNumber": 55,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A link OA of length 200 mm is rotating counter clockwise about O in x-y plane with\na constant angular velocity of 100 rad/s, as shown in the figure. The absolute value\nof the x-component of the linear velocity (in m/s) of point A at the instant shown in\nthe figure is________. (Rounded off to one decimal place)",
+      "questionText": "A link OA of length 200 mm is rotating counter clockwise about O in x-y plane with a constant angular velocity of 100 rad/s, as shown in the figure. The absolute value of the x-component of the linear velocity (in m/s) of point A at the instant shown in the figure is________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A link OA of length 200 mm is rotating counter clockwise about O in x-y plane with a constant angular velocity of 100 rad/s, as shown in the figure. The absolute value of the x-component of the linear velocity (in m/s) of point A at the instant shown in the figure is________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q55_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2801,7 +5012,24 @@
       "questionNumber": 56,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A force of 1000 N is acting at point A on a bracket fixed at point B as shown in the\nfigure. The magnitude of the moment of the force about B (in Nm) is________.\n(Rounded off to one decimal place)",
+      "questionText": "A force of 1000 N is acting at point A on a bracket fixed at point B as shown in the figure. The magnitude of the moment of the force about B (in Nm) is________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A force of 1000 N is acting at point A on a bracket fixed at point B as shown in the figure. The magnitude of the moment of the force about B (in Nm) is________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q56_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2838,7 +5066,24 @@
       "questionNumber": 57,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A steel plate is fastened to a channel using three identical bolts as shown in the\nfigure. The bolts are made of carbon steel of permissible yield strength in shear as\n400 N/mm2. The plate is subjected to a force of 12 kN. Neglect the weight of the\nplate. The magnitude of the resultant shear force (in N) on bolt 2 is________.\n(Answer in integer)",
+      "questionText": "A steel plate is fastened to a channel using three identical bolts as shown in the figure. The bolts are made of carbon steel of permissible yield strength in shear as 400 N/mm^{2}. The plate is subjected to a force of 12 kN. Neglect the weight of the plate. The magnitude of the resultant shear force (in N) on bolt 2 is________. (Answer in integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A steel plate is fastened to a channel using three identical bolts as shown in the figure. The bolts are made of carbon steel of permissible yield strength in shear as 400 N/mm^{2}. The plate is subjected to a force of 12 kN. Neglect the weight of the plate. The magnitude of the resultant shear force (in N) on bolt 2 is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/pi/q57_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2875,7 +5120,45 @@
       "questionNumber": 58,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The annual profit of a company depends on its annual marketing expenditure. The\ninformation of preceding 3 years' annual profit and marketing expenditure is given\nin the table. Based on linear regression, the estimated profit (in units) of the 4th year\nat a marketing expenditure of 5 units is__________. (Rounded off to two decimal\nplaces)",
+      "questionText": "The annual profit of a company depends on its annual marketing expenditure. The information of preceding 3 years’ annual profit and marketing expenditure is given in the table. Based on linear regression, the estimated profit (in units) of the 4^{th} year at a marketing expenditure of 5 units is__________. (Rounded off to two decimal places)\n\n| Year | Expenditure for marketing (units) | Annual profit (units) |\n| :--- | :--- | :--- |\n| 1 | 3 | 22 |\n| 2 | 4 | 27 |\n| 3 | 6 | 36 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The annual profit of a company depends on its annual marketing expenditure. The information of preceding 3 years' annual profit and marketing expenditure is given in the table. Based on linear regression, the estimated profit (in units) of the 4^{th} year at a marketing expenditure of 5 units is__________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Year",
+            "Expenditure for marketing (units)",
+            "Annual profit (units)"
+          ],
+          "rows": [
+            [
+              "1",
+              "3",
+              "22"
+            ],
+            [
+              "2",
+              "4",
+              "27"
+            ],
+            [
+              "3",
+              "6",
+              "36"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2910,7 +5193,53 @@
       "questionNumber": 59,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Three plants P , P and P produce 6, 1 and 9 thousand liters of fruit juice,\n1 2 3\nrespectively. The produced fruit juice is transported to three distribution centers D ,\n1\nD and D with requirement of 7, 5 and 4 thousand liters of juice, respectively. The\n2 3\ntransportation cost (in hundreds of Rupees) from each plant to each distribution\ncenter is given in the table. The total transportation cost (in hundreds of Rupees) in\ninitial basic feasible solution using Vogel's approximation method is________.\n(Answer in integer)\nD D D Supply\n1 2 3\nP 2 3 11 6\n1\nP 1 0 6 1\n2\nP 5 8 15 9\n3\nDemand 7 5 4",
+      "questionText": "Three plants P_{1}, P_{2} and P_{3} produce 6, 1 and 9 thousand liters of fruit juice, respectively. The produced fruit juice is transported to three distribution centers D_{1}, D_{2} and D_{3} with requirement of 7, 5 and 4 thousand liters of juice, respectively. The transportation cost (in hundreds of Rupees) from each plant to each distribution center is given in the table. The total transportation cost (in hundreds of Rupees) in initial basic feasible solution using Vogel’s approximation method is________. (Answer in integer)\n\n| D 1 | D 2 | D 3 |\n| :--- | :--- | :--- |\n| P 1 | 2 | 3 | 11 |\n| P 2 | 1 | 0 | 6 |\n| P 3 | 5 | 8 | 15 |\n\nDemand 7 5 4",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three plants P_{1}, P_{2} and P_{3} produce 6, 1 and 9 thous and liters of fruit juice, respectively. The produced fruit juice is transported to three distribution centers D_{1}, D_{2} and D_{3} with requirement of 7, 5 and 4 thous and liters of juice, respectively. The transportation cost (in hundreds of Rupees) from each plant to each distribution center is given in the table. The total transportation cost (in hundreds of Rupees) in initial basic feasible solution using Vogel's approximation method is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "D 1",
+            "D 2",
+            "D 3"
+          ],
+          "rows": [
+            [
+              "P 1",
+              "2",
+              "3",
+              "11"
+            ],
+            [
+              "P 2",
+              "1",
+              "0",
+              "6"
+            ],
+            [
+              "P 3",
+              "5",
+              "8",
+              "15"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Dem and 7 5 4",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2945,7 +5274,42 @@
       "questionNumber": 60,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A company purchases items in bulk for getting quantity discount in the item's price.\nThe price break-up is given in the table. The annual demand for the item is\n5000 units. The ordering cost is Rupees 400 per order. The annual inventory\ncarrying cost is 30 percent of the purchase price per unit. The optimal order size (in\nunits) is________. (Answer in integer)\nQuantity of item (Qin units) Unit price of item\n(Rupees)\n0Q1200 10\n1200Q2000 8\n2000Q 7",
+      "questionText": "A company purchases items in bulk for getting quantity discount in the item’s price. The price break-up is given in the table. The annual demand for the item is 5000 units. The ordering cost is Rupees 400 per order. The annual inventory carrying cost is 30 percent of the purchase price per unit. The optimal order size (in units) is________. (Answer in integer)\n\n| Quantity of item (Qin units) | Unit price of item (Rupees) |\n| :--- | :--- |\n| 0Q1200 | 10 |\n| 1200Q2000 | 8 |\n\n2000  Q 7",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A company purchases items in bulk for getting quantity discount in the item's price. The price break-up is given in the table. The annual dem and for the item is 5000 units. The ordering cost is Rupees 400 per order. The annual inventory carrying cost is 30 percent of the purchase price per unit. The optimal order size (in units) is________. (Answer in integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Quantity of item (Qin units)",
+            "Unit price of item (Rupees)"
+          ],
+          "rows": [
+            [
+              "0Q1200",
+              "10"
+            ],
+            [
+              "1200Q2000",
+              "8"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "2000  Q 7",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2980,7 +5344,18 @@
       "questionNumber": 61,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The zero line of the Vernier scale lies between divisions 20 and 21 of the main scale.\nThe 4th Vernier scale division exactly coincides with a main scale division. The\n5 divisions of the Vernier scale are equal to 4 divisions of the main scale. If one\nmain scale division is 1 mm, the measured value (in mm) is __________. (Rounded\noff to one decimal place)",
+      "questionText": "The zero line of the Vernier scale lies between divisions 20 and 21 of the main scale. The 4^{th} Vernier scale division exactly coincides with a main scale division. The 5 divisions of the Vernier scale are equal to 4 divisions of the main scale. If one main scale division is 1 mm, the measured value (in mm) is __________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The zero line of the Vernier scale lies between divisions 20 and 21 of the main scale. The 4^{th} Vernier scale division exactly coincides with a main scale division. The 5 divisions of the Vernier scale are equal to 4 divisions of the main scale. If one main scale division is 1 mm, the measured value (in mm) is __________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3015,7 +5390,18 @@
       "questionNumber": 62,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A broaching machine makes key slots with a mean dimension of 10.56 mm and a\nstandard deviation of 0.05 mm. The upper control limit for mean of sample size 5\ncalculated using X-bar (X ) chart is __________. (Rounded off to two decimal\nplaces)",
+      "questionText": "A broaching machine makes key slots with a mean dimension of 10.56 mm and a standard deviation of 0.05 mm. The upper control limit for mean of sample size 5 calculated using X-bar (X ) chart is __________. (Rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A broaching machine makes key slots with a mean dimension of 10.56 mm and a standard deviation of 0.05 mm. The upper control limit for mean of sample size 5 calculated using X-bar (X ) chart is __________. (Rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3050,7 +5436,48 @@
       "questionNumber": 63,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The table shows the data of running a machine for five years. The original machine\ncost is Rupees 70,000. In order to minimize the average total cost per year for\nrunning the machine, the machine should be replaced after________ years. (Answer\nin integer)",
+      "questionText": "The table shows the data of running a machine for five years. The original machine cost is Rupees 70,000. In order to minimize the average total cost per year for running the machine, the machine should be replaced after________ years. (Answer in integer)\n\n| 1st year | 2nd year | 3rd year | 4th year | 5th year |\n| :--- | :--- | :--- | :--- | :--- |\n| Resale value (Rupees) | 40000 | 30000 | 25000 | 22000 | 20000 |\n| Maintenance cost (Rupees) | 19100 | 20300 | 23500 | 30500 | 40000 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table shows the data of running a machine for five years. The original machine cost is Rupees 70,000. In order to minimize the average total cost per year for running the machine, the machine should be replaced after________ years. (Answer in integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "1st year",
+            "2nd year",
+            "3rd year",
+            "4th year",
+            "5th year"
+          ],
+          "rows": [
+            [
+              "Resale value (Rupees)",
+              "40000",
+              "30000",
+              "25000",
+              "22000",
+              "20000"
+            ],
+            [
+              "Maintenance cost (Rupees)",
+              "19100",
+              "20300",
+              "23500",
+              "30500",
+              "40000"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3085,7 +5512,18 @@
       "questionNumber": 64,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "Water flows through a smooth circular pipe of diameter 10 cm and length 10 m. The\npressure drop across the length of the pipe is 0.2 Pa. Kinematic viscosity and density\nof water are 1 \\times 10-6 m2/s and 1000 kg/m3, respectively. Assuming laminar and fully\ndeveloped flow throughout the pipe, the velocity of water (in mm/s) at the center of\nthe pipe is __________. (Rounded off to one decimal place)",
+      "questionText": "Water flows through a smooth circular pipe of diameter 10 cm and length 10 m. The pressure drop across the length of the pipe is 0.2 Pa. Kinematic viscosity and density of water are 1 \\times 10^{-6} m^{2}/s and 1000 kg/m^{3}, respectively. Assuming laminar and fully developed flow throughout the pipe, the velocity of water (in mm/s) at the center of the pipe is __________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Water flows through a smooth circular pipe of diameter 10 cm and length 10 m. The pressure drop across the length of the pipe is 0.2 Pa. Kinematic viscosity and density of water are 1 \\times 10^{-6} m^{2}/s and 1000 kg/m^{3}, respectively. Assuming laminar and fully developed flow throughout the pipe, the velocity of water (in mm/s) at the center of the pipe is __________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3120,7 +5558,18 @@
       "questionNumber": 65,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "The left-hand side of a 20 cm thick wall is maintained at 25 C. The right-hand side\nof the wall is exposed to hot air at 50 C. There is no heat generation inside the wall\nand its thermal conductivity is 100 W/mK. The convective heat transfer coefficient\nis 50 W/m2K. Under steady state condition, the temperature (in C) of the right-\nhand side surface of the wall is________. (Rounded off to one decimal place)",
+      "questionText": "The left-h and side of a 20 cm thick wall is maintained at 25 C. The right-h and side of the wall is exposed to hot air at 50 C. There is no heat generation inside the wall and its thermal conductivity is 100 W/mK. The convective heat transfer coefficient is 50 W/m^{2}K. Under steady state condition, the temperature (in C) of the right- h and side surface of the wall is________. (Rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The left-h and side of a 20 cm thick wall is maintained at 25 C. The right-h and side of the wall is exposed to hot air at 50 C. There is no heat generation inside the wall and its thermal conductivity is 100 W/mK. The convective heat transfer coefficient is 50 W/m^{2}K. Under steady state condition, the temperature (in C) of the right- h and side surface of the wall is________. (Rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

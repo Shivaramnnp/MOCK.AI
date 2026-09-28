@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
   X,
   Shield,
@@ -49,6 +50,17 @@ export const LegalModal: React.FC<LegalModalProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
+  // Lock background scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const handleRefreshStatus = () => {
@@ -66,20 +78,27 @@ export const LegalModal: React.FC<LegalModalProps> = ({
     { id: 'security', label: 'Security Compliance', icon: <Shield className="w-4 h-4" /> },
   ];
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-md animate-in fade-in duration-200">
+  const modalContent = (
+    <div
+      role="dialog"
+      aria-modal="true"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/40 dark:bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
+    >
       <div
-        className="w-full max-w-3xl max-h-[90vh] bg-surface dark:bg-[#111625] rounded-3xl border border-surface-border dark:border-white/10 shadow-2xl flex flex-col overflow-hidden text-surface-text dark:text-darkSurface-text"
+        className="w-full max-w-3xl max-h-[90vh] bg-white dark:bg-darkSurface-elev1 rounded-3xl border border-surface-border dark:border-darkSurface-border shadow-2xl flex flex-col overflow-hidden text-surface-text dark:text-darkSurface-text"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-6 py-5 border-b border-surface-border dark:border-white/10 flex items-center justify-between shrink-0 bg-surface-elev1 dark:bg-white/[0.02]">
+        <div className="px-6 py-5 border-b border-surface-border dark:border-darkSurface-border flex items-center justify-between shrink-0 bg-surface-elev2 dark:bg-darkSurface-elev2">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-variant flex items-center justify-center text-white shadow-md">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-variant flex items-center justify-center text-white shadow-glow">
               <Shield className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base sm:text-lg font-bold font-display">
+              <h2 className="text-base sm:text-lg font-bold font-display text-surface-text dark:text-darkSurface-text">
                 MOCK.AI Trust, Terms & Infrastructure
               </h2>
               <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted">
@@ -89,7 +108,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-surface-muted hover:text-surface-text hover:bg-surface-elev2 dark:hover:bg-white/[0.06] transition-colors"
+            className="p-2 rounded-xl text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev3 dark:hover:bg-darkSurface-elev3 transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -97,7 +116,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
         </div>
 
         {/* Tab Navigation */}
-        <div className="px-6 pt-3 border-b border-surface-border dark:border-white/10 flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0 bg-surface dark:bg-[#111625]">
+        <div className="px-6 pt-3 border-b border-surface-border dark:border-darkSurface-border flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0 bg-white dark:bg-darkSurface-elev1">
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
@@ -107,7 +126,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 className={`flex items-center gap-2 px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all border-b-2 whitespace-nowrap ${
                   isActive
                     ? 'border-brand-primary text-brand-primary bg-brand-primary/10 dark:bg-brand-primary/15'
-                    : 'border-transparent text-surface-muted hover:text-surface-text hover:bg-surface-elev1 dark:hover:bg-white/[0.03]'
+                    : 'border-transparent text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2'
                 }`}
               >
                 {tab.icon}
@@ -128,7 +147,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 <span className="text-[10px] font-bold uppercase tracking-wider text-brand-primary">
                   Effective Date: September 2026
                 </span>
-                <h3 className="text-xl font-bold text-surface-text dark:text-white mt-1">
+                <h3 className="text-xl font-bold text-surface-text dark:text-darkSurface-text mt-1">
                   Privacy Policy & Data Protection
                 </h3>
                 <p className="text-surface-muted dark:text-darkSurface-muted text-xs mt-1">
@@ -148,7 +167,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     1. Information We Collect
                   </h4>
                   <ul className="list-disc pl-5 space-y-1 text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -160,7 +179,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     2. How Your Data Is Processed & Protected
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -169,7 +188,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     3. Data Export & Deletion
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -178,7 +197,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     4. Contact Our Data Protection Team
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -198,7 +217,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 <span className="text-[10px] font-bold uppercase tracking-wider text-brand-primary">
                   Last Updated: September 2026
                 </span>
-                <h3 className="text-xl font-bold text-surface-text dark:text-white mt-1">
+                <h3 className="text-xl font-bold text-surface-text dark:text-darkSurface-text mt-1">
                   Terms of Service
                 </h3>
                 <p className="text-surface-muted dark:text-darkSurface-muted text-xs mt-1">
@@ -208,7 +227,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     1. Acceptance of Terms
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -217,7 +236,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     2. Permitted Educational Use
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -226,7 +245,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     3. AI Question & Explanation Accuracy
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -235,7 +254,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     4. Educator & Classroom Conduct
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -244,7 +263,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm text-surface-text dark:text-white mb-1.5">
+                  <h4 className="font-bold text-sm text-surface-text dark:text-darkSurface-text mb-1.5">
                     5. Fair Usage & Rate Limits
                   </h4>
                   <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
@@ -260,13 +279,13 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           {/* ════════════════════════════════════════════════════════════════ */}
           {activeTab === 'status' && (
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-surface-border dark:border-white/10">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-surface-border dark:border-darkSurface-border">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold mb-1">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                     <span>All Systems Operational</span>
                   </div>
-                  <h3 className="text-xl font-bold text-surface-text dark:text-white">
+                  <h3 className="text-xl font-bold text-surface-text dark:text-darkSurface-text">
                     Live Infrastructure Status
                   </h3>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted">
@@ -277,7 +296,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 <button
                   onClick={handleRefreshStatus}
                   disabled={isRefreshingStatus}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.04] text-xs font-semibold hover:bg-surface-elev2 transition-all self-start sm:self-auto"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-xs font-semibold hover:bg-surface-elev3 dark:hover:bg-darkSurface-elev3 transition-all self-start sm:self-auto text-surface-text dark:text-darkSurface-text"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isRefreshingStatus ? 'animate-spin' : ''}`} />
                   <span>Refresh ({lastChecked})</span>
@@ -346,14 +365,14 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-2xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.02] flex items-center justify-between gap-3"
+                    className="p-3.5 rounded-2xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 flex items-center justify-between gap-3 shadow-sm"
                   >
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-8 h-8 rounded-xl bg-surface-elev2 dark:bg-white/[0.04] flex items-center justify-center shrink-0">
+                      <div className="w-8 h-8 rounded-xl bg-surface-elev1 dark:bg-darkSurface-elev1 flex items-center justify-center shrink-0 border border-surface-border dark:border-darkSurface-border">
                         {item.icon}
                       </div>
                       <div className="min-w-0">
-                        <h5 className="font-bold text-xs truncate text-surface-text dark:text-white">
+                        <h5 className="font-bold text-xs truncate text-surface-text dark:text-darkSurface-text">
                           {item.name}
                         </h5>
                         <p className="text-[10px] text-surface-muted dark:text-darkSurface-muted truncate">
@@ -374,9 +393,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               </div>
 
               {/* Uptime Guarantee Card */}
-              <div className="p-4 rounded-2xl bg-surface-elev1 dark:bg-white/[0.02] border border-surface-border dark:border-white/10 flex items-center justify-between text-xs">
+              <div className="p-4 rounded-2xl bg-surface-elev2 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border flex items-center justify-between text-xs shadow-sm">
                 <div>
-                  <span className="font-bold text-surface-text dark:text-white">99.98% Historical Uptime</span>
+                  <span className="font-bold text-surface-text dark:text-darkSurface-text">99.98% Historical Uptime</span>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted">
                     Monitored continuous health across 4 global edge regions. Zero major outages in the past 90 days.
                   </p>
@@ -397,7 +416,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                   Enterprise Security Standards
                 </span>
-                <h3 className="text-xl font-bold text-surface-text dark:text-white mt-1">
+                <h3 className="text-xl font-bold text-surface-text dark:text-darkSurface-text mt-1">
                   Security & Regulatory Compliance
                 </h3>
                 <p className="text-surface-muted dark:text-darkSurface-muted text-xs mt-1">
@@ -406,11 +425,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                <div className="p-4 rounded-2xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.02] space-y-2">
+                <div className="p-4 rounded-2xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 space-y-2 shadow-sm">
                   <div className="w-8 h-8 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
                     <Lock className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-xs text-surface-text dark:text-white">
+                  <h4 className="font-bold text-xs text-surface-text dark:text-darkSurface-text">
                     256-Bit SSL/TLS In Transit
                   </h4>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted leading-relaxed">
@@ -418,11 +437,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.02] space-y-2">
+                <div className="p-4 rounded-2xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 space-y-2 shadow-sm">
                   <div className="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
                     <Database className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-xs text-surface-text dark:text-white">
+                  <h4 className="font-bold text-xs text-surface-text dark:text-darkSurface-text">
                     PostgreSQL Row-Level Security
                   </h4>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted leading-relaxed">
@@ -430,11 +449,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.02] space-y-2">
+                <div className="p-4 rounded-2xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 space-y-2 shadow-sm">
                   <div className="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
                     <Shield className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-xs text-surface-text dark:text-white">
+                  <h4 className="font-bold text-xs text-surface-text dark:text-darkSurface-text">
                     OAuth 2.0 PKCE & Bcrypt
                   </h4>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted leading-relaxed">
@@ -442,11 +461,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl border border-surface-border dark:border-white/10 bg-surface-elev1 dark:bg-white/[0.02] space-y-2">
+                <div className="p-4 rounded-2xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 space-y-2 shadow-sm">
                   <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-xs text-surface-text dark:text-white">
+                  <h4 className="font-bold text-xs text-surface-text dark:text-darkSurface-text">
                     FERPA & GDPR Alignment
                   </h4>
                   <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted leading-relaxed">
@@ -455,8 +474,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-surface-elev1 dark:bg-white/[0.02] border border-surface-border dark:border-white/10 space-y-1.5">
-                <h4 className="font-bold text-xs text-surface-text dark:text-white">
+              <div className="p-4 rounded-2xl bg-surface-elev2 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border space-y-1.5 shadow-sm">
+                <h4 className="font-bold text-xs text-surface-text dark:text-darkSurface-text">
                   Vulnerability Reporting
                 </h4>
                 <p className="text-[11px] text-surface-muted dark:text-darkSurface-muted">
@@ -468,13 +487,13 @@ export const LegalModal: React.FC<LegalModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-surface-border dark:border-white/10 flex items-center justify-between shrink-0 bg-surface-elev1 dark:bg-white/[0.02]">
+        <div className="px-6 py-4 border-t border-surface-border dark:border-darkSurface-border flex items-center justify-between shrink-0 bg-surface-elev2 dark:bg-darkSurface-elev2">
           <span className="text-[11px] text-surface-muted dark:text-darkSurface-muted">
             MOCK.AI Platform &bull; All Rights Reserved &copy; {new Date().getFullYear()}
           </span>
           <button
             onClick={onClose}
-            className="px-5 py-2 rounded-xl bg-brand-primary hover:bg-brand-primary/90 text-white font-bold text-xs shadow-md transition-all active:scale-95"
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-xs shadow-glow hover:brightness-110 active:scale-95 transition-all"
           >
             Close
           </button>
@@ -482,4 +501,6 @@ export const LegalModal: React.FC<LegalModalProps> = ({
       </div>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 };

@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Kavya _________ go to work yesterday as she __________ feeling well.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "Kavya _________ go to work yesterday as she __________ feeling well.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Kavya _________ go to work yesterday as she __________ feeling well.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "didn't; isn't",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "didn't; isn't",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "didn't; isn't",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "wouldn't; wasn't",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "wouldn't; wasn't",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "wasn't; wasn't",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "wasn't; wasn't",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "couldn't; wasn't",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "couldn't; wasn't",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -103,11 +154,22 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Good : Evil :: Genuine : _______\nSelect the most appropriate option to complete the analogy.",
+      "questionText": "Good : Evil :: Genuine : _______\n\nSelect the most appropriate option to complete the analogy.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Good : Evil :: Genuine : _______\n\nSelect the most appropriate option to complete the analogy.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Counterfeit",
-        "Contraband",
+        "Contrab and",
         "Counterfoil",
         "Counterpart"
       ],
@@ -116,22 +178,62 @@
         {
           "id": "A",
           "text": "Counterfeit",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Counterfeit",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Contraband",
-          "imageUrl": null
+          "text": "Contrab and",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Contrab and",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Counterfoil",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Counterfoil",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Counterpart",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Counterpart",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -161,35 +263,92 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The relationship between two variables 𝑥 and 𝑦 is given by 𝑥+ 𝑝𝑦+ 𝑞 = 0 and is\nshown in the figure. Find the values of 𝑝 and 𝑞.\nNote: The figure shown is representative.\n12\n10\n8\n6\ny\n4\n2\n0\n-4 -3 -2 -1 0 1 2 3 4\nx",
+      "questionText": "The relationship between two variables 𝑥 and 𝑦 is given by 𝑥+ 𝑝𝑦+ 𝑞= 0 and is shown in the figure. Find the values of 𝑝 and 𝑞.\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The relationship between two variables 𝑥 and 𝑦 is given by 𝑥+ 𝑝𝑦+ 𝑞= 0 and is shown in the figure. Find the values of 𝑝 and 𝑞.\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q3_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n𝑝 = - ; 𝑞 = 2\n2",
-        "𝑝 = 2 ; 𝑞 = -2",
-        "1\n𝑝 = ; 𝑞 = 4\n2",
-        "𝑝 = 2 ; 𝑞 = 4"
+        "𝑝= -1 2 ; 𝑞= 2",
+        "𝑝= 2 ; 𝑞= -2",
+        "𝑝= \\(\\frac{1}{2}\\) ; 𝑞= 4",
+        "𝑝= 2 ; 𝑞= 4"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n𝑝 = - ; 𝑞 = 2\n2",
-          "imageUrl": null
+          "text": "𝑝= -1 2 ; 𝑞= 2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= -1 2 ; 𝑞= 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑝 = 2 ; 𝑞 = -2",
-          "imageUrl": null
+          "text": "𝑝= 2 ; 𝑞= -2",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 2 ; 𝑞= -2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "1\n𝑝 = ; 𝑞 = 4\n2",
-          "imageUrl": null
+          "text": "𝑝= \\(\\frac{1}{2}\\) ; 𝑞= 4",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= \\(\\frac{1}{2}\\) ; 𝑞= 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑝 = 2 ; 𝑞 = 4",
-          "imageUrl": null
+          "text": "𝑝= 2 ; 𝑞= 4",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑝= 2 ; 𝑞= 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -221,7 +380,55 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Each row of Column-I has three items and each item is represented by a circle in\nColumn-II. The arrangement of circles in Column-II represents the relationship\namong the items in Column-I.\nIdentify the option that has the most appropriate match between Column-I and\nColumn-II.\nNote: The figures shown are representative.\nColumn-I Column-II\n(1) Animals, Zebra, Giraffe (P)\n(2) Director, Producer, Actor (Q)\n(3) Word, Sentence, Novel (R)\n(4) Pianist, Guitarist, Instrumentalist (S)",
+      "questionText": "Each row of Column-I has three items and each item is represented by a circle in Column-II. The arrangement of circles in Column-II represents the relationship among the items in Column-I. Identify the option that has the most appropriate match between Column-I and Column-II. Note: The figures shown are representative.\n\n| Column-I | Column-II |\n| :--- | :--- |\n| (1) | Animals, Zebra, Giraffe | (P) |\n| (2) | Director, Producer, Actor | (Q) |\n| (3) | Word, Sentence, Novel | (R) |\n| (4) | Pianist, Guitarist, Instrumentalist | (S) |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Each row of Column-I has three items and each item is represented by a circle in Column-II. The arrangement of circles in Column-II represents the relationship among the items in Column-I.\n\nIdentify the option that has the most appropriate match between Column-I and Column-II.\n\nNote: The figures shown are representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column-I",
+            "Column-II"
+          ],
+          "rows": [
+            [
+              "(1)",
+              "Animals, Zebra, Giraffe",
+              "(P)"
+            ],
+            [
+              "(2)",
+              "Director, Producer, Actor",
+              "(Q)"
+            ],
+            [
+              "(3)",
+              "Word, Sentence, Novel",
+              "(R)"
+            ],
+            [
+              "(4)",
+              "Pianist, Guitarist, Instrumentalist",
+              "(S)"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(1) - (Q); (2) - (P); (3) - (S); (4) - (R)",
@@ -234,22 +441,62 @@
         {
           "id": "A",
           "text": "(1) - (Q); (2) - (P); (3) - (S); (4) - (R)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(1) - (Q); (2) - (P); (3) - (S); (4) - (R)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(1) - (Q); (2) - (R); (3) - (S); (4) - (P)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(1) - (Q); (2) - (R); (3) - (S); (4) - (P)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(1) - (S); (2) - (P); (3) - (R); (4) - (Q)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(1) - (S); (2) - (P); (3) - (R); (4) - (Q)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(1) - (R); (2) - (S); (3) - (Q); (4) - (P)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(1) - (R); (2) - (S); (3) - (Q); (4) - (P)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -281,35 +528,90 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "1\n381\n3\nWhat is the value of ( ) ?\n274",
+      "questionText": "What is the value of ( <u>381</u> 3 27^{4} \\(\\frac{1}{274)3}\\) ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "What is the value of ( <u>381</u> 3 27^{4} \\(\\frac{1}{274)3}\\) ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "313",
-        "396",
-        "323",
-        "369"
+        "\\(3^{13}\\)",
+        "\\(3^{96}\\)",
+        "\\(3^{23}\\)",
+        "\\(3^{69}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "313",
-          "imageUrl": null
+          "text": "\\(3^{13}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3^{13}",
+              "content": "\\(3^{13}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "396",
-          "imageUrl": null
+          "text": "\\(3^{96}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3^{96}",
+              "content": "\\(3^{96}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "323",
-          "imageUrl": null
+          "text": "\\(3^{23}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3^{23}",
+              "content": "\\(3^{23}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "369",
-          "imageUrl": null
+          "text": "\\(3^{69}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "3^{69}",
+              "content": "\\(3^{69}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -339,7 +641,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. It is because deer, like most of the animals that tigers normally prey on, run\nmuch faster! It simply means, another day of empty stomach for the big cats.\nQ. Tigers spend most of their life searching for food.\nR. If they trace the scent of deer, tigers follow the trail, chase the deer for a\nmile or two in the dark, and yet may not catch them.\nS. For several nights, they relentlessly prowl through the forest, hunting for a\ntrail that may lead to their prey.",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. It is because deer, like most of the animals that tigers normally prey on, run much faster! It simply means, another day of empty stomach for the big cats.\n\nQ. Tigers spend most of their life searching for food.\n\nR. If they trace the scent of deer, tigers follow the trail, chase the deer for a mile or two in the dark, and yet may not catch them.\n\nS. For several nights, they relentlessly prowl through the forest, hunting for a trail that may lead to their prey.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. It is because deer, like most of the animals that tigers normally prey on, run much faster! It simply means, another day of empty stomach for the big cats.\n\nQ. Tigers spend most of their life searching for food.\n\nR. If they trace the scent of deer, tigers follow the trail, chase the deer for a mile or two in the dark, and yet may not catch them.\n\nS. For several nights, they relentlessly prowl through the forest, hunting for a trail that may lead to their prey.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "S → P → R → Q",
@@ -352,22 +665,62 @@
         {
           "id": "A",
           "text": "S → P → R → Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S → P → R → Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "R → P → S → Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R → P → S → Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Q → S → R → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q → S → R → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P → Q → S → R",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P → Q → S → R",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -397,7 +750,24 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given figure, EF and HJ are coded as 30 and 80, respectively. Which one\namong the given options is most appropriate for the entries marked (i) and (ii) ?\nEF HJ\nFG (i)\n35 (ii)\n80 30",
+      "questionText": "In the given figure, EF and HJ are coded as 30 and 80, respectively. Which one among the given options is most appropriate for the entries marked (i) and (ii) ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the given figure, EF and HJ are coded as 30 and 80, respectively. Which one among the given options is most appropriate for the entries marked (i) and (ii) ?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q7_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(i) EH; (ii) 40",
@@ -410,22 +780,62 @@
         {
           "id": "A",
           "text": "(i) EH; (ii) 40",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) EH; (ii) 40",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(i) JK; (ii) 36",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) JK; (ii) 36",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(i) EG; (ii) 42",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) EG; (ii) 42",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(i) PS; (ii) 14",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) PS; (ii) 14",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -457,12 +867,23 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Scores obtained by two students P and Q in seven courses are given in the table\nbelow. Based on the information given in the table, which one of the following\nstatements is INCORRECT?\nP 22 89 50 45 78 60 39\nQ 35 65 60 56 81 45 50",
+      "questionText": "Scores obtained by two students P and Q in seven courses are given in the table below. Based on the information given in the table, which one of the following statements is INCORRECT?\n\n<u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u>\n\n<u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u>",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Scores obtained by two students P and Q in seven courses are given in the table below. Based on the information given in the table, which one of the following statements is INCORRECT?\n\n<u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u> <u>P</u> <u>22</u> <u>89</u> <u>50</u> <u>45</u> <u>78</u> <u>60</u> <u>39</u>\n\n<u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u> <u>Q</u> <u>35</u> <u>65</u> <u>60</u> <u>56</u> <u>81</u> <u>45</u> <u>50</u>",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Average score of P is less than the average score of Q.",
         "Median score of P is same as the median score of Q.",
-        "Difference between the maximum and minimum scores of P is greater than the\ndifference between the maximum and minimum scores of Q.",
+        "Difference between the maximum and minimum scores of P is greater than the difference between the maximum and minimum scores of Q.",
         "Median score and the average score of Q are same."
       ],
       "optionImages": null,
@@ -470,22 +891,62 @@
         {
           "id": "A",
           "text": "Average score of P is less than the average score of Q.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Average score of P is less than the average score of Q.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Median score of P is same as the median score of Q.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Median score of P is same as the median score of Q.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Difference between the maximum and minimum scores of P is greater than the\ndifference between the maximum and minimum scores of Q.",
-          "imageUrl": null
+          "text": "Difference between the maximum and minimum scores of P is greater than the difference between the maximum and minimum scores of Q.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Difference between the maximum and minimum scores of P is greater than the difference between the maximum and minimum scores of Q.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Median score and the average score of Q are same.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Median score and the average score of Q are same.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -515,35 +976,87 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible\ninteger values.\nThe distance between two spheres is computed from the center of one sphere to the\ncenter of the other sphere. For a given sphere, x is the distance to its nearest sphere and\n𝑦\ny is the distance to its next nearest sphere. The value of is:\n𝑥",
+      "questionText": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{distance𝑦}{𝑥}\\) is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{distance𝑦}{𝑥}\\) is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "2 \\sqrt 2",
-        "1\n\\sqrt 2",
-        "\\sqrt 2",
+        "2\\sqrt{2}",
+        "\\(\\frac{1}{\\sqrt{2}}\\)",
+        "\\sqrt{2}",
         "2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "2 \\sqrt 2",
-          "imageUrl": null
+          "text": "2\\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2\\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n\\sqrt 2",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{\\sqrt{2}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{\\sqrt{2}}",
+              "content": "\\(\\frac{1}{\\sqrt{2}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "\\sqrt 2",
-          "imageUrl": null
+          "text": "\\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -573,35 +1086,92 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the triangle PQR, the lengths of PT and TR are in the ratio of 3:2.\nST is parallel to QR. Two semicircles are drawn with PS and PQ as diameters, as\nshown in the figure.\nWhich one of the following statements is true about the shaded area PQS?\nNote: The figure shown is representative.",
+      "questionText": "In the triangle PQR, the lengths of PT and TR are in the ratio of 3:2.\n\nST is parallel to QR. Two semicircles are drawn with PS and PQ as diameters, as shown in the figure.\n\nWhich one of the following statements is true about the shaded area PQS?\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the triangle PQR, the lengths of PT and TR are in the ratio of 3:2.\n\nST is parallel to QR. Two semicircles are drawn with PS and PQ as diameters, as shown in the figure.\n\nWhich one of the following statements is true about the shaded area PQS?\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q10_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "16\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
+        "The shaded area is \\(\\frac{16}{9}\\) times the area of the semicircle with the diameter PS.",
         "The shaded area is equal to the area of the semicircle with the diameter PS.",
-        "14\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
-        "14\nThe shaded area is times the area of the semicircle with the diameter PQ.\n25"
+        "The shaded area is \\(\\frac{14}{9}\\) times the area of the semicircle with the diameter PS.",
+        "The shaded area is \\(\\frac{14}{25}\\) times the area of the semicircle with the diameter PQ."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "16\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
-          "imageUrl": null
+          "text": "The shaded area is \\(\\frac{16}{9}\\) times the area of the semicircle with the diameter PS.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The shaded area is \\(\\frac{16}{9}\\) times the area of the semicircle with the diameter PS.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The shaded area is equal to the area of the semicircle with the diameter PS.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The shaded area is equal to the area of the semicircle with the diameter PS.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "14\nThe shaded area is times the area of the semicircle with the diameter PS.\n9",
-          "imageUrl": null
+          "text": "The shaded area is \\(\\frac{14}{9}\\) times the area of the semicircle with the diameter PS.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The shaded area is \\(\\frac{14}{9}\\) times the area of the semicircle with the diameter PS.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "14\nThe shaded area is times the area of the semicircle with the diameter PQ.\n25",
-          "imageUrl": null
+          "text": "The shaded area is \\(\\frac{14}{25}\\) times the area of the semicircle with the diameter PQ.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The shaded area is \\(\\frac{14}{25}\\) times the area of the semicircle with the diameter PQ.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -633,7 +1203,18 @@
       "questionNumber": 11,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider the set 𝑆 of points (𝑥, 𝑦) \\in ℜ2 which minimize the real valued function\n𝑓(𝑥, 𝑦) = (𝑥+ 𝑦-1)2 + (𝑥+ 𝑦)2\nWhich of the following statements is true about the set 𝑆?",
+      "questionText": "Consider the set 𝑆 of points (𝑥, 𝑦) \\in ℜ^{2} which minimize the real valued function 𝑓(𝑥, 𝑦) = (𝑥+ 𝑦-1)^{2} + (𝑥+ 𝑦)^{2}\n\nWhich of the following statements is true about the set 𝑆?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the set 𝑆 of points (𝑥, 𝑦) \\in ℜ^{2} which minimize the real valued function 𝑓(𝑥, 𝑦) = (𝑥+ 𝑦-1)^{2} + (𝑥+ 𝑦)^{2}\n\nWhich of the following statements is true about the set 𝑆?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "The number of elements in the set 𝑆 is finite and more than one.",
@@ -646,22 +1227,62 @@
         {
           "id": "A",
           "text": "The number of elements in the set 𝑆 is finite and more than one.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The number of elements in the set 𝑆 is finite and more than one.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The number of elements in the set 𝑆 is infinite.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The number of elements in the set 𝑆 is infinite.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The set 𝑆 is empty.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The set 𝑆 is empty.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The number of elements in the set 𝑆 is exactly one.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The number of elements in the set 𝑆 is exactly one.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -691,35 +1312,90 @@
       "questionNumber": 12,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝒗 and 𝒗 be the two eigenvectors corresponding to distinct eigenvalues of a\n𝟏 𝟐\n3 \\times 3 real symmetric matrix. Which one of the following statements is true?",
+      "questionText": "Let 𝒗_{𝟏} and 𝒗_{𝟐} be the two eigenvectors corresponding to distinct eigenvalues of a 3 \\times 3 real symmetric matrix. Which one of the following statements is true?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝒗_{𝟏} and 𝒗_{𝟐} be the two eigenvectors corresponding to distinct eigenvalues of a 3 \\times 3 real symmetric matrix. Which one of the following statements is true?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝒗𝑻𝒗 \\ne 0\n𝟏 𝟐",
-        "𝒗𝑻𝒗 = 0\n𝟏 𝟐",
-        "𝒗 + 𝒗 = 𝟎\n𝟏 𝟐",
-        "𝒗 -𝒗 = 𝟎\n𝟏 𝟐"
+        "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐} \\ne 0\\)",
+        "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐}= 0\\)",
+        "\\(𝒗_{𝟏}+ 𝒗_{𝟐}= 𝟎\\)",
+        "\\(𝒗_{𝟏}-𝒗_{𝟐}= 𝟎\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝒗𝑻𝒗 \\ne 0\n𝟏 𝟐",
-          "imageUrl": null
+          "text": "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐} \\ne 0\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝒗_{𝟏} ^{𝑻}𝒗_{𝟐} \\ne 0",
+              "content": "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐} \\ne 0\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝒗𝑻𝒗 = 0\n𝟏 𝟐",
-          "imageUrl": null
+          "text": "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐}= 0\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝒗_{𝟏} ^{𝑻}𝒗_{𝟐}= 0",
+              "content": "\\(𝒗_{𝟏} ^{𝑻}𝒗_{𝟐}= 0\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝒗 + 𝒗 = 𝟎\n𝟏 𝟐",
-          "imageUrl": null
+          "text": "\\(𝒗_{𝟏}+ 𝒗_{𝟐}= 𝟎\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝒗_{𝟏}+ 𝒗_{𝟐}= 𝟎",
+              "content": "\\(𝒗_{𝟏}+ 𝒗_{𝟐}= 𝟎\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝒗 -𝒗 = 𝟎\n𝟏 𝟐",
-          "imageUrl": null
+          "text": "\\(𝒗_{𝟏}-𝒗_{𝟐}= 𝟎\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝒗_{𝟏}-𝒗_{𝟐}= 𝟎",
+              "content": "\\(𝒗_{𝟏}-𝒗_{𝟐}= 𝟎\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -749,7 +1425,18 @@
       "questionNumber": 13,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "1 1 1 1/3\nLet 𝑨 = [-1 -1 -1], and 𝒃 = [-1/3]. Then, the system of linear equations\n0 1 -1 0\n𝑨𝒙 = 𝒃 has",
+      "questionText": "1 1 1 1/3 Let 𝑨= [ -1 -1 -1 ], and 𝒃= [ -1/3 ]. Then, the system of linear equations\n\n𝑨𝒙= 𝒃 has 0 1 -1 0",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "1 1 1 1/3 Let 𝑨= [ -1 -1 -1 ], and 𝒃= [ -1/3 ]. Then, the system of linear equations\n\n𝑨𝒙= 𝒃 has 0 1 -1 0",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "a unique solution.",
@@ -762,22 +1449,62 @@
         {
           "id": "A",
           "text": "a unique solution.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "a unique solution.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "infinitely many solutions.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "infinitely many solutions.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "a finite number of solutions.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "a finite number of solutions.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "no solution.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "no solution.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -807,35 +1534,86 @@
       "questionNumber": 14,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "2 1 0\nLet 𝑃 = [-1 0 0] and let 𝐼 be the identity matrix. Then 𝑃2 is equal to\n0 0 1",
+      "questionText": "2 1 0 Let 𝑃= [ -1 0 0 ] and let 𝐼 be the identity matrix. Then 𝑃^{2} is equal to 0 0 1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "2 1 0 Let 𝑃= [ -1 0 0 ] and let 𝐼 be the identity matrix. Then 𝑃^{2} is equal to 0 0 1",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "2𝑃-𝐼",
         "𝑃",
         "𝐼",
-        "𝑃 + 𝐼"
+        "𝑃+ 𝐼"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "2𝑃-𝐼",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2𝑃-𝐼",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝐼",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝐼",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑃 + 𝐼",
-          "imageUrl": null
+          "text": "𝑃+ 𝐼",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑃+ 𝐼",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -865,35 +1643,90 @@
       "questionNumber": 15,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider discrete random variables 𝑋 and 𝑌 with probabilities as follows:\n1\n𝑃(𝑋 = 0 𝑎𝑛𝑑 𝑌 = 0) =\n4\n1\n𝑃(𝑋 = 1 𝑎𝑛𝑑 𝑌 = 0) =\n8\n1\n𝑃(𝑋 = 0 𝑎𝑛𝑑 𝑌 = 1) =\n2\n1\n𝑃(𝑋 = 1 𝑎𝑛𝑑 𝑌 = 1) =\n8\nGiven 𝑋 = 1, the expected value of 𝑌 is",
+      "questionText": "Consider discrete random variables 𝑋 and 𝑌 with probabilities as follows:\n\n𝑃(𝑋= 0 𝑎𝑛𝑑 𝑌= 0) = \\(\\frac{1}{4}\\)\n\n𝑃(𝑋= 1 𝑎𝑛𝑑 𝑌= 0) = \\(\\frac{1}{8}\\)\n\n𝑃(𝑋= 0 𝑎𝑛𝑑 𝑌= 1) = \\(\\frac{1}{2}\\)\n\n𝑃(𝑋= 1 𝑎𝑛𝑑 𝑌= 1) = \\(\\frac{1}{8}\\)\n\nGiven 𝑋= 1, the expected value of 𝑌 is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider discrete random variables 𝑋 and 𝑌 with probabilities as follows:\n\n𝑃(𝑋= 0 𝑎𝑛𝑑 𝑌= 0) = \\(\\frac{1}{4}\\)\n\n𝑃(𝑋= 1 𝑎𝑛𝑑 𝑌= 0) = \\(\\frac{1}{8}\\)\n\n𝑃(𝑋= 0 𝑎𝑛𝑑 𝑌= 1) = \\(\\frac{1}{2}\\)\n\n𝑃(𝑋= 1 𝑎𝑛𝑑 𝑌= 1) = \\(\\frac{1}{8}\\)\n\nGiven 𝑋= 1, the expected value of 𝑌 is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n4",
-        "1\n2",
-        "1\n8",
-        "1\n3"
+        "\\(\\frac{1}{4}\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(\\frac{1}{8}\\)",
+        "\\(\\frac{1}{3}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n4",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{4}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{4}",
+              "content": "\\(\\frac{1}{4}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n2",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{2}",
+              "content": "\\(\\frac{1}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "1\n8",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{8}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{8}",
+              "content": "\\(\\frac{1}{8}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "1\n3",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{3}",
+              "content": "\\(\\frac{1}{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -923,35 +1756,86 @@
       "questionNumber": 16,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Which one of the following statements is true about the small signal voltage gain of\na MOSFET based single stage amplifier?",
+      "questionText": "Which one of the following statements is true about the small signal voltage gain of a MOSFET based single stage amplifier?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following statements is true about the small signal voltage gain of a MOSFET based single stage amplifier?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Common source and common gate amplifiers are both inverting amplifiers",
         "Common source and common gate amplifiers are both non-inverting amplifiers",
-        "Common source amplifier is inverting and common gate amplifier is non-inverting\namplifier",
-        "Common source amplifier is non-inverting and common gate amplifier is inverting\namplifier"
+        "Common source amplifier is inverting and common gate amplifier is non-inverting amplifier",
+        "Common source amplifier is non-inverting and common gate amplifier is inverting amplifier"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "Common source and common gate amplifiers are both inverting amplifiers",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Common source and common gate amplifiers are both inverting amplifiers",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Common source and common gate amplifiers are both non-inverting amplifiers",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Common source and common gate amplifiers are both non-inverting amplifiers",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Common source amplifier is inverting and common gate amplifier is non-inverting\namplifier",
-          "imageUrl": null
+          "text": "Common source amplifier is inverting and common gate amplifier is non-inverting amplifier",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Common source amplifier is inverting and common gate amplifier is non-inverting amplifier",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Common source amplifier is non-inverting and common gate amplifier is inverting\namplifier",
-          "imageUrl": null
+          "text": "Common source amplifier is non-inverting and common gate amplifier is inverting amplifier",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Common source amplifier is non-inverting and common gate amplifier is inverting amplifier",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -981,7 +1865,24 @@
       "questionNumber": 17,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Assuming ideal op-amps, the circuit represents a\n+V\nDD\n+V\nDD\n-V\nEE\nV\nout\nV -V\nin EE",
+      "questionText": "Assuming ideal op-amps, the circuit represents a",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Assuming ideal op-amps, the circuit represents a",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q17_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "summing amplifier.",
@@ -994,22 +1895,62 @@
         {
           "id": "A",
           "text": "summing amplifier.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "summing amplifier.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "difference amplifier.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "difference amplifier.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "logarithmic amplifier.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "logarithmic amplifier.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "buffer.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "buffer.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1041,35 +1982,57 @@
       "questionNumber": 18,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The I-V characteristics of the element between the nodes X and Y is best depicted\nby\nX I\nXY\n1 A 1 kΩ\nY",
+      "questionText": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\nY",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\nY",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q18_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "I\nXY\n1 A\n0 V\nXY",
-        "I\nXY\n1 A\n0 V\nXY",
-        "I\nXY\n1 A\n0 V\nXY",
-        "I\nXY\n1 A\n0 V\nXY"
+        "\\(I_{XY} 1 A 0 V_{XY}\\)",
+        "\\(I_{XY} 1 A 0 V_{XY}\\)",
+        "\\(I_{XY} 1 A 0 V_{XY}\\)",
+        "\\(I_{XY} 1 A 0 V_{XY}\\)"
       ],
-      "optionImages": null,
+      "optionImages": [
+        "/exam-assets/gate/2025/ee/q18_opt_a.png",
+        "/exam-assets/gate/2025/ee/q18_opt_b.png",
+        "/exam-assets/gate/2025/ee/q18_opt_c.png",
+        "/exam-assets/gate/2025/ee/q18_opt_d.png"
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "I\nXY\n1 A\n0 V\nXY",
-          "imageUrl": null
+          "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_a.png"
         },
         {
           "id": "B",
-          "text": "I\nXY\n1 A\n0 V\nXY",
-          "imageUrl": null
+          "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_b.png"
         },
         {
           "id": "C",
-          "text": "I\nXY\n1 A\n0 V\nXY",
-          "imageUrl": null
+          "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_c.png"
         },
         {
           "id": "D",
-          "text": "I\nXY\n1 A\n0 V\nXY",
-          "imageUrl": null
+          "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_d.png"
         }
       ],
       "correctAnswer": "B",
@@ -1101,7 +2064,18 @@
       "questionNumber": 19,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A nullator is defined as a circuit element where the voltage across the device and\nthe current through the device are both zero. A series combination of a nullator and\na resistor of value, R, will behave as a",
+      "questionText": "A nullator is defined as a circuit element where the voltage across the device and the current through the device are both zero. A series combination of a nullator and a resistor of value, R, will behave as a",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A nullator is defined as a circuit element where the voltage across the device and the current through the device are both zero. A series combination of a nullator and a resistor of value, R, will behave as a",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "resistor of value R.",
@@ -1114,22 +2088,62 @@
         {
           "id": "A",
           "text": "resistor of value R.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "resistor of value R.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "nullator.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "nullator.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "open circuit.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "open circuit.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "short circuit.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "short circuit.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1159,7 +2173,18 @@
       "questionNumber": 20,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider a discrete-time linear time-invariant (LTI) system 𝑺, where\n𝑦[𝑛] = 𝑺{𝑥[𝑛]}\nLet\n1, 𝑛 \\in {0, 1, 2}\n𝑺{𝛿[𝑛]} = {\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nwhere 𝛿[𝑛] is the discrete-time unit impulse function. For an input signal 𝑥[𝑛], the\noutput 𝑦[𝑛] is",
+      "questionText": "Consider a discrete-time linear time-invariant (LTI) system 𝑺, where\n\n𝑦[𝑛] = 𝑺{𝑥[𝑛]}\n\nLet\n\n𝑺{𝛿[𝑛]} = {1, 0, 𝑛 \\in {0, 1, 2} 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 where 𝛿[𝑛] is the discrete-time unit impulse function. For an input signal 𝑥[𝑛], the output 𝑦[𝑛] is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a discrete-time linear time-invariant (LTI) system 𝑺, where\n\n𝑦[𝑛] = 𝑺{𝑥[𝑛]}\n\nLet\n\n𝑺{𝛿[𝑛]} = {1, 0, 𝑛 \\in {0, 1, 2} 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 where 𝛿[𝑛] is the discrete-time unit impulse function. For an input signal 𝑥[𝑛], the output 𝑦[𝑛] is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑥[𝑛] + 𝑥[𝑛-1] + 𝑥[𝑛-2]",
@@ -1172,22 +2197,62 @@
         {
           "id": "A",
           "text": "𝑥[𝑛] + 𝑥[𝑛-1] + 𝑥[𝑛-2]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥[𝑛] + 𝑥[𝑛-1] + 𝑥[𝑛-2]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑥[𝑛-1] + 𝑥[𝑛] + 𝑥[𝑛+ 1]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥[𝑛-1] + 𝑥[𝑛] + 𝑥[𝑛+ 1]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑥[𝑛] + 𝑥[𝑛+ 1] + 𝑥[𝑛+ 2]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥[𝑛] + 𝑥[𝑛+ 1] + 𝑥[𝑛+ 2]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑥[𝑛+ 1] + 𝑥[𝑛+ 2] + 𝑥[𝑛+ 3]",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑥[𝑛+ 1] + 𝑥[𝑛+ 2] + 𝑥[𝑛+ 3]",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1217,7 +2282,18 @@
       "questionNumber": 21,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider a continuous-time signal\n𝑥(𝑡) = -𝑡2{𝑢(𝑡+ 4) -𝑢(𝑡-4)}\nwhere 𝑢(𝑡) is the continuous-time unit step function. Let 𝛿(𝑡) be the continuous-\ntime unit impulse function. The value of\n\\infty\n\\int 𝑥(𝑡)𝛿(𝑡+ 3)𝑑𝑡\n- \\infty\nis",
+      "questionText": "Consider a continuous-time signal\n\n𝑥(𝑡) = -𝑡^{2}{𝑢(𝑡+ 4) -𝑢(𝑡-4)}\n\nwhere 𝑢(𝑡) is the continuous-time unit step function. Let 𝛿(𝑡) be the continuous- time unit impulse function. The value of \\infty \\int 𝑥(𝑡)𝛿(𝑡+ 3)𝑑𝑡 - \\infty is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a continuous-time signal\n\n𝑥(𝑡) = -𝑡^{2}{𝑢(𝑡+ 4) -𝑢(𝑡-4)}\n\nwhere 𝑢(𝑡) is the continuous-time unit step function. Let 𝛿(𝑡) be the continuous- time unit impulse function. The value of \\infty \\int 𝑥(𝑡)𝛿(𝑡+ 3)𝑑𝑡 - \\infty is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "-9",
@@ -1230,22 +2306,62 @@
         {
           "id": "A",
           "text": "-9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "-3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1275,7 +2391,18 @@
       "questionNumber": 22,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Selected data points of the step response of a stable first-order linear time-invariant\n(LTI) system are given below. The closest value of the time-constant, in sec, of the\nsystem is",
+      "questionText": "Selected data points of the step response of a stable first-order linear time-invariant (LTI) system are given below. The closest value of the time-constant, in sec, of the system is\n\n<u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u>\n\n<u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u>",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Selected data points of the step response of a stable first-order linear time-invariant (LTI) system are given below. The closest value of the time-constant, in sec, of the system is\n\n<u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u> <u>Time</u> (<u>sec</u>) <u>0.6</u> <u>1.6</u> <u>2.6</u> <u>10</u> <u> \\infty </u>\n\n<u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u> <u>Output</u> <u>0.78</u> <u>1.65</u> <u>2.18</u> <u>2.98</u> <u>3</u>",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1",
@@ -1288,22 +2415,62 @@
         {
           "id": "A",
           "text": "1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1333,7 +2500,24 @@
       "questionNumber": 23,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The Nyquist plot of a strictly stable 𝐺(𝑠) having the numerator polynomial as\n(𝑠-3) encircles the critical point -1 once in the anti-clockwise direction. Which\none of the following statements on the closed-loop system shown in figure, is\ncorrect?\nInput + Output\nG(s)\n_",
+      "questionText": "The Nyquist plot of a strictly stable 𝐺(𝑠) having the numerator polynomial as (𝑠-3) encircles the critical point -1 once in the anti-clockwise direction. Which one of the following statements on the closed-loop system shown in figure, is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The Nyquist plot of a strictly stable 𝐺(𝑠) having the numerator polynomial as (𝑠-3) encircles the critical point -1 once in the anti-clockwise direction. Which one of the following statements on the closed-loop system shown in figure, is correct?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q23_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "The system stability cannot be ascertained.",
@@ -1346,22 +2530,62 @@
         {
           "id": "A",
           "text": "The system stability cannot be ascertained.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The system stability cannot be ascertained.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "The system is marginally stable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The system is marginally stable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The system is stable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The system is stable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The system is unstable.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The system is unstable.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1393,7 +2617,18 @@
       "questionNumber": 24,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "During a power failure, a domestic household uninterruptible power supply (UPS)\nsupplies AC power to a limited number of lights and fans in various rooms. As per\na Newton-Raphson load-flow formulation, the UPS would be represented as a",
+      "questionText": "During a power failure, a domestic household uninterruptible power supply (UPS) supplies AC power to a limited number of lights and fans in various rooms. As per a Newton-Raphson load-flow formulation, the UPS would be represented as a",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "During a power failure, a domestic household uninterruptible power supply (UPS) supplies AC power to a limited number of lights and fans in various rooms. As per a Newton-Raphson load-flow formulation, the UPS would be represented as a",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Slack bus",
@@ -1406,22 +2641,62 @@
         {
           "id": "A",
           "text": "Slack bus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Slack bus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "PV bus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "PV bus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "PQ bus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "PQ bus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "PQV bus",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "PQV bus",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1451,7 +2726,24 @@
       "questionNumber": 25,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Which one of the following figures represents the radial electric field distribution\n𝐸 caused by a spherical cloud of electrons with a volume charge density,\n𝑅\n𝜌 = -3𝜌 for 0 \\le 𝑅 \\le 𝑎 (both 𝜌 , 𝑎 are positive and 𝑅 is the radial distance) and\n0 0\n𝜌 = 0 for 𝑅 > 𝑎 ?",
+      "questionText": "Which one of the following figures represents the radial electric field distribution 𝐸_{𝑅} caused by a spherical cloud of electrons with a volume charge density, 𝜌= -3𝜌_{0} for 0 \\le 𝑅 \\le 𝑎 (both 𝜌_{0}, 𝑎 are positive and 𝑅 is the radial distance) and 𝜌= 0 for 𝑅> 𝑎 ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following figures represents the radial electric field distribution 𝐸_{𝑅} caused by a spherical cloud of electrons with a volume charge density, 𝜌= -3𝜌_{0} for 0 \\le 𝑅 \\le 𝑎 (both 𝜌_{0}, 𝑎 are positive and 𝑅 is the radial distance) and 𝜌= 0 for 𝑅> 𝑎 ?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q25_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Fig. (i)",
@@ -1464,22 +2756,62 @@
         {
           "id": "A",
           "text": "Fig. (i)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (i)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Fig. (ii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (ii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Fig. (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Fig. (iv)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (iv)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1511,35 +2843,92 @@
       "questionNumber": 26,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The operating region of the developed torque (𝑇 ) and speed (𝜔) of an induction\n𝑒𝑚\nmotor drive is given by the shaded region OQRE in the figure. The load torque (𝑇 )\n𝐿\ncharacteristic is also shown. The motor drive moves from the initial operating point\nO to the final operating point S. Which one of the following trajectories will take\nthe shortest time?\nT\nem\nQ R\nP S\nT\nL\nF\nω\nO E",
+      "questionText": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\n\\(\\frac{F}{OE}\\) ω",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\n\\(\\frac{F}{OE}\\) ω",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q26_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑂-𝑄 -𝑅 -𝑆",
+        "𝑂-𝑄-𝑅-𝑆",
         "𝑂-𝑃-𝑆",
-        "𝑂-𝐸 -𝑆",
-        "𝑂-𝐹 -𝑆"
+        "𝑂-𝐸-𝑆",
+        "𝑂-𝐹-𝑆"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑂-𝑄 -𝑅 -𝑆",
-          "imageUrl": null
+          "text": "𝑂-𝑄-𝑅-𝑆",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑂-𝑄-𝑅-𝑆",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑂-𝑃-𝑆",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑂-𝑃-𝑆",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑂-𝐸 -𝑆",
-          "imageUrl": null
+          "text": "𝑂-𝐸-𝑆",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑂-𝐸-𝑆",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑂-𝐹 -𝑆",
-          "imageUrl": null
+          "text": "𝑂-𝐹-𝑆",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑂-𝐹-𝑆",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1571,7 +2960,18 @@
       "questionNumber": 27,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The input voltage 𝑣(𝑡) and current 𝑖(𝑡) of a converter are given by,\n𝑣(𝑡) = 300 sin(𝜔𝑡) 𝑉\n𝜋 𝜋 𝜋\n𝑖(𝑡) = 10 sin (𝜔𝑡- ) + 2 sin (3𝜔𝑡+ ) + sin (5𝜔𝑡+ ) 𝐴\n6 6 2\nwhere, 𝜔 = 2𝜋 \\times 50 rad/s. The input power factor of the converter is closest to",
+      "questionText": "The input voltage 𝑣(𝑡) and current 𝑖(𝑡) of a converter are given by,\n\n𝑣(𝑡) = 300 sin(𝜔𝑡) 𝑉 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 + 2 sin (3𝜔𝑡+ <u>𝜋</u> + sin (5𝜔𝑡+ <u>𝜋</u> 𝐴 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 6) + 2 sin (3𝜔𝑡+ <u>𝜋</u> 6) + sin (5𝜔𝑡+ <u>𝜋</u> 2) 𝐴 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 6) + 2 sin (3𝜔𝑡+ <u>𝜋</u> 6) + sin (5𝜔𝑡+ <u>𝜋</u> 2) 𝐴 2) 𝐴 where, 𝜔= 2𝜋 \\times 50 rad/s. The input power factor of the converter is closest to",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The input voltage 𝑣(𝑡) and current 𝑖(𝑡) of a converter are given by,\n\n𝑣(𝑡) = 300 sin(𝜔𝑡) 𝑉 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 + 2 sin (3𝜔𝑡+ <u>𝜋</u> + sin (5𝜔𝑡+ <u>𝜋</u> 𝐴 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 6) + 2 sin (3𝜔𝑡+ <u>𝜋</u> 6) + sin (5𝜔𝑡+ <u>𝜋</u> 2) 𝐴 𝑖(𝑡) = 10 sin (𝜔𝑡-𝜋 6) + 2 sin (3𝜔𝑡+ <u>𝜋</u> 6) + sin (5𝜔𝑡+ <u>𝜋</u> 2) 𝐴 2) 𝐴 where, 𝜔= 2𝜋 \\times 50 rad/s. The input power factor of the converter is closest to",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0.845",
@@ -1584,22 +2984,62 @@
         {
           "id": "A",
           "text": "0.845",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.845",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0.867",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.867",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.887",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.887",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1630,6 +3070,17 @@
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
       "questionText": "Instrument(s) required to synchronize an alternator to the grid is/are",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Instrument(s) required to synchronize an alternator to the grid is/are",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Voltmeter",
@@ -1642,22 +3093,62 @@
         {
           "id": "A",
           "text": "Voltmeter",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Voltmeter",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Wattmeter",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Wattmeter",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Synchroscope",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Synchroscope",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Stroboscope",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Stroboscope",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1693,7 +3184,24 @@
       "questionNumber": 29,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The open-loop transfer function of the system shown in the figure, is\n𝐾𝑠(𝑠+ 2)\n𝐺(𝑠) =\n(𝑠+ 5)(𝑠+ 7)\nFor 𝐾 \\ge 0, which of the following real axis point(s) is/are on the root locus?\nInput + Output\nG(s)\n_",
+      "questionText": "The open-loop transfer function of the system shown in the figure, is\n\n𝐺(𝑠) = \\(\\frac{𝐾𝑠(𝑠+2)}{(𝑠+5)(𝑠+7)}\\)\n\nFor 𝐾 \\ge 0, which of the following real axis point(s) is/are on the root locus?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The open-loop transfer function of the system shown in the figure, is\n\n𝐺(𝑠) = \\(\\frac{𝐾𝑠(𝑠+2)}{(𝑠+5)(𝑠+7)}\\)\n\nFor 𝐾 \\ge 0, which of the following real axis point(s) is/are on the root locus?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q29_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "-1",
@@ -1706,22 +3214,62 @@
         {
           "id": "A",
           "text": "-1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "-4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "-6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "-10",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-10",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1759,7 +3307,18 @@
       "questionNumber": 30,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A continuous time periodic signal 𝑥(𝑡) is\n𝑥(𝑡) = 1 + 2 cos 2𝜋𝑡 + 2 cos 4𝜋𝑡 + 2 cos 6𝜋𝑡 .\n1 𝑇\nIf 𝑇 is the period of 𝑥(𝑡), then \\int |𝑥(𝑡)|2𝑑𝑡 =____________ (round off to the\n𝑇 0\nnearest integer).",
+      "questionText": "A continuous time periodic signal 𝑥(𝑡) is\n\n𝑥(𝑡) = 1 + 2 cos 2𝜋𝑡+ 2 cos 4𝜋𝑡+ 2 cos 6𝜋𝑡 .\n\nIf 𝑇 is the period of 𝑥(𝑡), then nearest integer). _{𝑇} \\int |𝑥(𝑡)|^{2}𝑑𝑡 <u>1</u> 𝑇 0 <u>1</u> 𝑇 =____________ (round off to the",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A continuous time periodic signal 𝑥(𝑡) is\n\n𝑥(𝑡) = 1 + 2 cos 2𝜋𝑡+ 2 cos 4𝜋𝑡+ 2 cos 6𝜋𝑡 .\n\nIf 𝑇 is the period of 𝑥(𝑡), then nearest integer). _{𝑇} \\int |𝑥(𝑡)|^{2}𝑑𝑡 <u>1</u> 𝑇 0 <u>1</u> 𝑇 =____________ (round off to the",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1794,7 +3353,18 @@
       "questionNumber": 31,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The maximum percentage error in the equivalent resistance of two parallel-\nconnected resistors of 100 Ω and 900 Ω with each having a maximum 5% error is\n____________ % (round off to nearest integer value).",
+      "questionText": "The maximum percentage error in the equivalent resistance of two parallel- connected resistors of 100 Ω and 900 Ω with each having a maximum 5% error is ____________ % (round off to nearest integer value).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The maximum percentage error in the equivalent resistance of two parallel- connected resistors of 100 Ω and 900 Ω with each having a maximum 5% error is ____________ % (round off to nearest integer value).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1829,7 +3399,18 @@
       "questionNumber": 32,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider a distribution feeder, with 𝑅/𝑋 ratio of 5. At the receiving end, a 350 kVA\nload is connected. The maximum voltage drop will occur from the sending end to\nthe receiving end, when the power factor of the load is ___________(round off to\nthree decimal places).",
+      "questionText": "Consider a distribution feeder, with 𝑅/𝑋 ratio of 5. At the receiving end, a 350 kVA load is connected. The maximum voltage drop will occur from the sending end to the receiving end, when the power factor of the load is ___________(round off to three decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider a distribution feeder, with 𝑅/𝑋 ratio of 5. At the receiving end, a 350 kVA load is connected. The maximum voltage drop will occur from the sending end to the receiving end, when the power factor of the load is ___________(round off to three decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1864,7 +3445,18 @@
       "questionNumber": 33,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The bus impedance matrix of a 3-bus system (in pu) is\n𝑗0.059 𝑗0.061 𝑗0.038\n𝑍 = [𝑗0.061 𝑗0.093 𝑗0.066]\n𝑏𝑢𝑠\n𝑗0.038 𝑗0.066 𝑗0.110\nA symmetrical fault (through a fault impedance of 𝑗0.007 pu) occurs at bus 2.\nNeglecting pre-fault loading conditions, the voltage at bus 1, during the fault is\n________ pu (round off to three decimal places).",
+      "questionText": "The bus impedance matrix of a 3-bus system (in pu) is\n\n𝑗0.059 𝑗0.061 𝑗0.038 𝑍_{𝑏𝑢𝑠}= [ 𝑗0.061 𝑗0.093 𝑗0.066 ] 𝑗0.038 𝑗0.066 𝑗0.110\n\nA symmetrical fault (through a fault impedance of 𝑗0.007 pu) occurs at bus 2. Neglecting pre-fault loading conditions, the voltage at bus 1, during the fault is ________ pu (round off to three decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The bus impedance matrix of a 3-bus system (in pu) is\n\n𝑗0.059 𝑗0.061 𝑗0.038 𝑍_{𝑏𝑢𝑠}= [ 𝑗0.061 𝑗0.093 𝑗0.066 ] 𝑗0.038 𝑗0.066 𝑗0.110\n\nA symmetrical fault (through a fault impedance of 𝑗0.007 pu) occurs at bus 2. Neglecting pre-fault loading conditions, the voltage at bus 1, during the fault is ________ pu (round off to three decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1899,7 +3491,24 @@
       "questionNumber": 34,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the circuit with ideal devices, the power MOSFET is operated with a duty cycle\nof 0.4 in a switching cycle with 𝐼 =10 A and 𝑉 =15 V. The power delivered by the\ncurrent source, in W, is ____________ (round off to the nearest integer).",
+      "questionText": "In the circuit with ideal devices, the power MOSFET is operated with a duty cycle of 0.4 in a switching cycle with 𝐼=10 A and 𝑉=15 V. The power delivered by the current source, in W, is ____________ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the circuit with ideal devices, the power MOSFET is operated with a duty cycle of 0.4 in a switching cycle with 𝐼=10 A and 𝑉=15 V. The power delivered by the current source, in W, is ____________ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q34_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1936,7 +3545,18 @@
       "questionNumber": 35,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The induced emf in a 3.3 kV, 4 pole, 3-phase star connected synchronous motor is\nconsidered to be equal and in phase with the terminal voltage under no load\ncondition. On application of a mechanical load, the induced emf phasor is deflected\nby an angle of 2° mechanical with respect to the terminal voltage phasor. If the\nsynchronous reactance is 2 Ω, and stator resistance is negligible, then the motor\narmature current magnitude, in ampere, during loaded condition is closest to,\n____________ (round off to two decimal places).",
+      "questionText": "The induced emf in a 3.3 kV, 4 pole, 3-phase star connected synchronous motor is considered to be equal and in phase with the terminal voltage under no load condition. On application of a mechanical load, the induced emf phasor is deflected by an angle of 2° mechanical with respect to the terminal voltage phasor. If the synchronous reactance is 2 Ω, and stator resistance is negligible, then the motor armature current magnitude, in ampere, during loaded condition is closest to, ____________ (round off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The induced emf in a 3.3 kV, 4 pole, 3-phase star connected synchronous motor is considered to be equal and in phase with the terminal voltage under no load condition. On application of a mechanical load, the induced emf phasor is deflected by an angle of 2° mechanical with respect to the terminal voltage phasor. If the synchronous reactance is 2 Ω, and stator resistance is negligible, then the motor armature current magnitude, in ampere, during loaded condition is closest to, ____________ (round off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -1971,35 +3591,89 @@
       "questionNumber": 36,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝑋 and 𝑌 be continuous random variables with probability density functions\n𝑃 (𝑥) and 𝑃 (𝑦), respectively. Further, let 𝑌 = 𝑋2 and\n𝑋 𝑌\n1, 𝑥 \\in (0,1]\n𝑃 (𝑥) = { .\n𝑋 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nWhich one of the following options is correct?",
+      "questionText": "Let 𝑋 and 𝑌 be continuous random variables with probability density functions 𝑃_{𝑋}(𝑥) and 𝑃_{𝑌}(𝑦), respectively. Further, let 𝑌= 𝑋^{2} and 𝑃_{𝑋}(𝑥) = {1, 𝑥 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒. Which one of the following options is correct?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑋 and 𝑌 be continuous random variables with probability density functions 𝑃_{𝑋}(𝑥) and 𝑃_{𝑌}(𝑦), respectively. Further, let 𝑌= 𝑋^{2} and 𝑃_{𝑋}(𝑥) = {1, 𝑥 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒. Which one of the following options is correct?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {2 \\sqrt 𝑦\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-        "1, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-        "1.5 \\sqrt 𝑦, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-        "2𝑦, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒"
+        "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+        "\\(𝑃_{𝑌}(𝑦) = {1, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+        "\\(𝑃_{𝑌}(𝑦) = {1.5 \\sqrt 𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+        "\\(𝑃_{𝑌}(𝑦) = {2𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {2 \\sqrt 𝑦\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-          "imageUrl": null
+          "text": "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-          "imageUrl": null
+          "text": "\\(𝑃_{𝑌}(𝑦) = {1, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑃_{𝑌}(𝑦) = {1, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "content": "\\(𝑃_{𝑌}(𝑦) = {1, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "1.5 \\sqrt 𝑦, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-          "imageUrl": null
+          "text": "\\(𝑃_{𝑌}(𝑦) = {1.5 \\sqrt 𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑃_{𝑌}(𝑦) = {1.5 \\sqrt 𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "content": "\\(𝑃_{𝑌}(𝑦) = {1.5 \\sqrt 𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "2𝑦, 𝑦 \\in (0,1]\n𝑃 (𝑦) = {\n𝑌 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
-          "imageUrl": null
+          "text": "\\(𝑃_{𝑌}(𝑦) = {2𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑃_{𝑌}(𝑦) = {2𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "content": "\\(𝑃_{𝑌}(𝑦) = {2𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2029,35 +3703,51 @@
       "questionNumber": 37,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A Boolean function is given as\n𝑓 = (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥). (𝑢̅ + 𝑣 + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣 + 𝑤̅ + 𝑥)\nThe simplified form of this function is represented by",
+      "questionText": "A Boolean function is given as\n\n𝑓= (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥). (𝑢̅ + 𝑣+ 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣+ 𝑤̅ + 𝑥)\n\nThe simplified form of this function is represented by",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A Boolean function is given as\n\n𝑓= (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣̅ + 𝑤̅ + 𝑥). (𝑢̅ + 𝑣+ 𝑤̅ + 𝑥̅). (𝑢̅ + 𝑣+ 𝑤̅ + 𝑥)\n\nThe simplified form of this function is represented by",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "u\nf\nw",
-        "u\nf\nw",
-        "v f\nx",
-        "v f\nx"
+        "u f w",
+        "u f w",
+        "v f x",
+        "v f x"
       ],
-      "optionImages": null,
+      "optionImages": [
+        "/exam-assets/gate/2025/ee/q37_opt_a.png",
+        "/exam-assets/gate/2025/ee/q37_opt_b.png",
+        "/exam-assets/gate/2025/ee/q37_opt_c.png",
+        "/exam-assets/gate/2025/ee/q37_opt_d.png"
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "u\nf\nw",
-          "imageUrl": null
+          "text": "u f w",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_a.png"
         },
         {
           "id": "B",
-          "text": "u\nf\nw",
-          "imageUrl": null
+          "text": "u f w",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_b.png"
         },
         {
           "id": "C",
-          "text": "v f\nx",
-          "imageUrl": null
+          "text": "v f x",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_c.png"
         },
         {
           "id": "D",
-          "text": "v f\nx",
-          "imageUrl": null
+          "text": "v f x",
+          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_d.png"
         }
       ],
       "correctAnswer": "A",
@@ -2087,35 +3777,94 @@
       "questionNumber": 38,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the circuit, I is an ideal current source. The transistors M and M are assumed\nDC 1 2\nto be biased in saturation, wherein V is the input signal and V is fixed DC\nin DC\nvoltage. Both transistors have a small signal resistance of 𝑟 and trans-conductance\n𝑑𝑠\nof 𝑔 . The small signal output impedance of this circuit is\n𝑚\nV\nDD\nI\nDC\nV\nV out\nDC\nM\n2\nV\nin\nM\n1",
+      "questionText": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>\n\nI_{DC}\n\n<u>VDC</u> M_{2} V_{out}\n\n<u>Vin</u> M_{1}",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>\n\nI_{DC}\n\n<u>VDC</u> M_{2} V_{out}\n\n<u>Vin</u> M_{1}",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q38_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "2𝑟\n𝑑𝑠",
-        "1\n+ 𝑟\n𝑔 𝑑𝑠\n𝑚",
-        "𝑔 𝑟2 + 2𝑟\n𝑚 𝑑𝑠 𝑑𝑠",
+        "\\(2𝑟_{𝑑𝑠}\\)",
+        "\\(\\frac{1}{𝑔𝑚}\\) + 𝑟_{𝑑𝑠}",
+        "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
         "infinity"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "2𝑟\n𝑑𝑠",
-          "imageUrl": null
+          "text": "\\(2𝑟_{𝑑𝑠}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2𝑟_{𝑑𝑠}",
+              "content": "\\(2𝑟_{𝑑𝑠}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n+ 𝑟\n𝑔 𝑑𝑠\n𝑚",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{𝑔𝑚}\\) + 𝑟_{𝑑𝑠}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{1}{𝑔𝑚}\\) + 𝑟_{𝑑𝑠}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑔 𝑟2 + 2𝑟\n𝑚 𝑑𝑠 𝑑𝑠",
-          "imageUrl": null
+          "text": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑔_{𝑚}𝑟_{𝑑𝑠}",
+              "content": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
           "text": "infinity",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "infinity",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2147,35 +3896,96 @@
       "questionNumber": 39,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the circuit, shown below, if the values of R and C are very large, the form of the\noutput voltage for a very high frequency square wave input, is best represented by",
+      "questionText": "In the circuit, shown below, if the values of R and C are very large, the form of the output voltage for a very high frequency square wave input, is best represented by",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the circuit, shown below, if the values of R and C are very large, the form of the output voltage for a very high frequency square wave input, is best represented by",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q39_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "V\nout\n1 V\nt\n-1 V",
-        "V\nout\n1 V\nt\n-1 V",
-        "V\nout\n1 V\nt\n-1 V",
-        "V\nout\n1 V\nt\n-1 V"
+        "\\(V_{out} 1 V t -1 V\\)",
+        "\\(V_{out} 1 V t -1 V\\)",
+        "\\(V_{out} 1 V t -1 V\\)",
+        "\\(V_{out} 1 V t -1 V\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "V\nout\n1 V\nt\n-1 V",
-          "imageUrl": null
+          "text": "\\(V_{out} 1 V t -1 V\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "V_{out} 1 V t -1 V",
+              "content": "\\(V_{out} 1 V t -1 V\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "V\nout\n1 V\nt\n-1 V",
-          "imageUrl": null
+          "text": "\\(V_{out} 1 V t -1 V\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "V_{out} 1 V t -1 V",
+              "content": "\\(V_{out} 1 V t -1 V\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "V\nout\n1 V\nt\n-1 V",
-          "imageUrl": null
+          "text": "\\(V_{out} 1 V t -1 V\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "V_{out} 1 V t -1 V",
+              "content": "\\(V_{out} 1 V t -1 V\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "V\nout\n1 V\nt\n-1 V",
-          "imageUrl": null
+          "text": "\\(V_{out} 1 V t -1 V\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "V_{out} 1 V t -1 V",
+              "content": "\\(V_{out} 1 V t -1 V\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2207,7 +4017,18 @@
       "questionNumber": 40,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let continuous-time signals 𝑥 (𝑡) and 𝑥 (𝑡) be\n1 2\n1, 𝑡 \\in [0,1] 𝑡, 𝑡 \\in [0,1]\n𝑥 (𝑡) = {2 -𝑡, 𝑡 \\in [1,2] and 𝑥 (𝑡) = {2 -𝑡, 𝑡 \\in [1,2]\n1 2\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\n\\infty\nConsider the convolution 𝑦(𝑡) = 𝑥 (𝑡) ∗𝑥 (𝑡). Then \\int 𝑦(𝑡)𝑑𝑡 is\n1 2 - \\infty",
+      "questionText": "Let continuous-time signals 𝑥_{1}(𝑡) and 𝑥_{2}(𝑡) be 1, 𝑡 \\in [0,1] 𝑡, 𝑡 \\in [0,1] 𝑥_{1}(𝑡) = { 2 -𝑡, 𝑡 \\in [1,2] and 𝑥_{2}(𝑡) = { 2 -𝑡, 𝑡 \\in [1,2] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\n\nConsider the convolution 𝑦(𝑡) = 𝑥_{1}(𝑡) ∗𝑥_{2}(𝑡). Then \\int - \\infty \\infty 𝑦(𝑡)𝑑𝑡 is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let continuous-time signals 𝑥_{1}(𝑡) and 𝑥_{2}(𝑡) be 1, 𝑡 \\in [0,1] 𝑡, 𝑡 \\in [0,1] 𝑥_{1}(𝑡) = { 2 -𝑡, 𝑡 \\in [1,2] and 𝑥_{2}(𝑡) = { 2 -𝑡, 𝑡 \\in [1,2] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\n\nConsider the convolution 𝑦(𝑡) = 𝑥_{1}(𝑡) ∗𝑥_{2}(𝑡). Then \\int - \\infty \\infty 𝑦(𝑡)𝑑𝑡 is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1.5",
@@ -2220,22 +4041,62 @@
         {
           "id": "A",
           "text": "1.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "2.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2265,35 +4126,92 @@
       "questionNumber": 41,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "1\nLet 𝐺(𝑠) = . Then the closed-loop system shown in the figure below,\n(𝑠+1)(𝑠+2)\nis\nInput + Output\nK(s-1)G(s)\n_",
+      "questionText": "Let 𝐺(𝑠) = _{(𝑠+1)(𝑠+2)}. _{Then the closed-loop system shown in the figure below,} <u>1</u>\n\nis",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝐺(𝑠) = _{(𝑠+1)(𝑠+2)}. _{Then the closed-loop system shown in the figure below,} <u>1</u>\n\nis",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q41_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "stable for all 𝐾 > 2.",
-        "unstable for all 𝐾 > 2.",
-        "unstable for all 𝐾 > 1.",
-        "stable for all 𝐾 > 1."
+        "stable for all 𝐾> 2.",
+        "unstable for all 𝐾> 2.",
+        "unstable for all 𝐾> 1.",
+        "stable for all 𝐾> 1."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "stable for all 𝐾 > 2.",
-          "imageUrl": null
+          "text": "stable for all 𝐾> 2.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "stable for all 𝐾> 2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "unstable for all 𝐾 > 2.",
-          "imageUrl": null
+          "text": "unstable for all 𝐾> 2.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "unstable for all 𝐾> 2.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "unstable for all 𝐾 > 1.",
-          "imageUrl": null
+          "text": "unstable for all 𝐾> 1.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "unstable for all 𝐾> 1.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "stable for all 𝐾 > 1.",
-          "imageUrl": null
+          "text": "stable for all 𝐾> 1.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "stable for all 𝐾> 1.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2325,11 +4243,22 @@
       "questionNumber": 42,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The continuous-time unit impulse signal is applied as an input to a continuous-time\nlinear time-invariant system 𝑺. The output is observed to be the continuous-time\nunit step signal 𝑢(𝑡). Which one of the following statements is true?",
+      "questionText": "The continuous-time unit impulse signal is applied as an input to a continuous-time linear time-invariant system 𝑺. The output is observed to be the continuous-time unit step signal 𝑢(𝑡). Which one of the following statements is true?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The continuous-time unit impulse signal is applied as an input to a continuous-time linear time-invariant system 𝑺. The output is observed to be the continuous-time unit step signal 𝑢(𝑡). Which one of the following statements is true?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Every bounded input signal applied to 𝑺 results in a bounded output signal.",
-        "It is possible to find a bounded input signal which when applied to 𝑺 results in an\nunbounded output signal.",
+        "It is possible to find a bounded input signal which when applied to 𝑺 results in an unbounded output signal.",
         "On applying any input signal to 𝑺, the output signal is always bounded.",
         "On applying any input signal to 𝑺 the output signal is always unbounded."
       ],
@@ -2338,22 +4267,62 @@
         {
           "id": "A",
           "text": "Every bounded input signal applied to 𝑺 results in a bounded output signal.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Every bounded input signal applied to 𝑺 results in a bounded output signal.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "It is possible to find a bounded input signal which when applied to 𝑺 results in an\nunbounded output signal.",
-          "imageUrl": null
+          "text": "It is possible to find a bounded input signal which when applied to 𝑺 results in an unbounded output signal.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It is possible to find a bounded input signal which when applied to 𝑺 results in an unbounded output signal.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "On applying any input signal to 𝑺, the output signal is always bounded.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "On applying any input signal to 𝑺, the output signal is always bounded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "On applying any input signal to 𝑺 the output signal is always unbounded.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "On applying any input signal to 𝑺 the output signal is always unbounded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2383,35 +4352,92 @@
       "questionNumber": 43,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The transformer connection given in the figure is part of a balanced 3-phase circuit\nwhere the phase sequence is \"𝑎𝑏𝑐\". The primary to secondary turns ratio is 2:1. If\n(𝐼 + 𝐼 + 𝐼 = 0), then the relationship between 𝐼 and 𝐼 will be\n𝑎 𝑏 𝑐 𝐴 𝑎𝑑\nI\nA I\nA ad\na\nI\nc I\ncd\nI c\na\nI\nb\nI\nB I\nbd\nB I b\nC\nC\nprimary secondary",
+      "questionText": "The transformer connection given in the figure is part of a balanced 3-phase circuit where the phase sequence is \"𝑎𝑏𝑐\". The primary to secondary turns ratio is 2:1. If (𝐼_{𝑎}+ 𝐼_{𝑏}+ 𝐼_{𝑐}= 0), then the relationship between 𝐼_{𝐴} and 𝐼_{𝑎𝑑} will be",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The transformer connection given in the figure is part of a balanced 3-phase circuit where the phase sequence is \"𝑎𝑏𝑐\". The primary to secondary turns ratio is 2:1. If (𝐼_{𝑎}+ 𝐼_{𝑏}+ 𝐼_{𝑐}= 0), then the relationship between 𝐼_{𝐴} and 𝐼_{𝑎𝑑} will be",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q43_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "|𝐼𝐴| 1\n= and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2 \\sqrt 3\n𝑎𝑑",
-        "|𝐼𝐴| 1\n= and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2 \\sqrt 3\n𝑎𝑑",
-        "|𝐼𝐴|\n= 2 \\sqrt 3 and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
-        "|𝐼𝐴|\n= 2 \\sqrt 3 and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑"
+        "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+        "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°.",
+        "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+        "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "|𝐼𝐴| 1\n= and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2 \\sqrt 3\n𝑎𝑑",
-          "imageUrl": null
+          "text": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "|𝐼𝐴| 1\n= and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 | 2 \\sqrt 3\n𝑎𝑑",
-          "imageUrl": null
+          "text": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) \\(\\frac{1}{2\\sqrt{3}}\\) and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "|𝐼𝐴|\n= 2 \\sqrt 3 and 𝐼 lags 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
-          "imageUrl": null
+          "text": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} lags 𝐼_{𝐴} by 30°.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "|𝐼𝐴|\n= 2 \\sqrt 3 and 𝐼 leads 𝐼 by 30°.\n𝑎𝑑 𝐴\n|𝐼 |\n𝑎𝑑",
-          "imageUrl": null
+          "text": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{|𝐼𝐴|}{|𝐼𝑎𝑑|}\\) = 2\\sqrt{3} and 𝐼_{𝑎𝑑} leads 𝐼_{𝐴} by 30°.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2443,7 +4469,18 @@
       "questionNumber": 44,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A DC series motor with negligible series resistance is running at a certain speed\ndriving a load, where the load torque varies as cube of the speed. The motor is fed\nfrom a 400 V DC source and draws 40 A armature current. Assume linear magnetic\ncircuit. The external resistance, in Ω, that must be connected in series with the\narmature to reduce the speed of the motor by half, is closest to",
+      "questionText": "A DC series motor with negligible series resistance is running at a certain speed driving a load, where the load torque varies as cube of the speed. The motor is fed from a 400 V DC source and draws 40 A armature current. Assume linear magnetic circuit. The external resistance, in Ω, that must be connected in series with the armature to reduce the speed of the motor by half, is closest to",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A DC series motor with negligible series resistance is running at a certain speed driving a load, where the load torque varies as cube of the speed. The motor is fed from a 400 V DC source and draws 40 A armature current. Assume linear magnetic circuit. The external resistance, in Ω, that must be connected in series with the armature to reduce the speed of the motor by half, is closest to",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "23.28",
@@ -2456,22 +4493,62 @@
         {
           "id": "A",
           "text": "23.28",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "23.28",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "4.82",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4.82",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "46.7",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "46.7",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2501,7 +4578,18 @@
       "questionNumber": 45,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A 3-phase, 400 V, 4 pole, 50 Hz star connected induction motor has the following\nparameters referred to the stator:\n𝑅′ = 1Ω, 𝑋 = 𝑋′ = 2Ω\n𝑟 𝑠 𝑟\nStator resistance, magnetizing reactance and core loss of the motor are neglected.\nThe motor is run with constant V/f control from a drive. For maximum starting\ntorque, the voltage and frequency output, respectively, from the drive, is closest to,",
+      "questionText": "A 3-phase, 400 V, 4 pole, 50 Hz star connected induction motor has the following parameters referred to the stator:\n\n𝑅_{𝑟} ^{′} = 1Ω, 𝑋_{𝑠}= 𝑋_{𝑟} ^{′} = 2Ω\n\nStator resistance, magnetizing reactance and core loss of the motor are neglected. The motor is run with constant V/f control from a drive. For maximum starting torque, the voltage and frequency output, respectively, from the drive, is closest to,",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A 3-phase, 400 V, 4 pole, 50 Hz star connected induction motor has the following parameters referred to the stator:\n\n𝑅_{𝑟} ^{′} = 1Ω, 𝑋_{𝑠}= 𝑋_{𝑟} ^{′} = 2Ω\n\nStator resistance, magnetizing reactance and core loss of the motor are neglected. The motor is run with constant V/f control from a drive. For maximum starting torque, the voltage and frequency output, respectively, from the drive, is closest to,",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "400 V and 50 Hz",
@@ -2514,22 +4602,62 @@
         {
           "id": "A",
           "text": "400 V and 50 Hz",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "400 V and 50 Hz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "200 V and 25 Hz",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "200 V and 25 Hz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "100 V and 12.5 Hz",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "100 V and 12.5 Hz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "300 V and 37.5 Hz",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "300 V and 37.5 Hz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2559,7 +4687,18 @@
       "questionNumber": 46,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The 3-phase modulating waveforms (𝑣 (𝑡), 𝑣 (𝑡) and 𝑣 (𝑡)), used in sinusoidal\n𝑎 𝑏 𝑐\nPWM in a Voltage Source Inverter (VSI) are\n𝑣 (𝑡) = 0.8 sin (ω𝑡) V\n𝑎\n2𝜋\n𝑣 (𝑡) = 0.8 sin (ω𝑡- ) V\n𝑏\n3\n2𝜋\n𝑣 (𝑡) = 0.8 sin (ω𝑡+ ) V\n𝑐\n3\nwhere ω = 2𝜋 \\times 40 rad/s is the fundamental frequency. The modulating\nwaveforms are compared with a 10 kHz triangular carrier whose magnitude varies\nbetween +1 and -1. The VSI has a DC link voltage of 600 V and feeds a star\nconnected motor. The per phase fundamental RMS motor voltage, in volts, is closest\nto",
+      "questionText": "The 3-phase modulating waveforms (𝑣_{𝑎}(𝑡), 𝑣_{𝑏}(𝑡) and 𝑣_{𝑐}(𝑡)), used in sinusoidal PWM in a Voltage Source Inverter (VSI) are\n\n𝑣_{𝑎}(𝑡) = 0.8 sin (ω𝑡) V\n\n𝑣_{𝑏}(𝑡) = 0.8 sin (ω𝑡- \\(\\frac{2𝜋}{3}\\) V\n\n𝑣_{𝑐}(𝑡) = 0.8 sin (ω𝑡+ \\(\\frac{2𝜋}{3}\\) V where ω = 2𝜋 \\times 40 rad/s is the fundamental frequency. The modulating waveforms are compared with a 10 kHz triangular carrier whose magnitude varies between +1 and -1. The VSI has a DC link voltage of 600 V and feeds a star connected motor. The per phase fundamental RMS motor voltage, in volts, is closest to",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 3-phase modulating waveforms (𝑣_{𝑎}(𝑡), 𝑣_{𝑏}(𝑡) and 𝑣_{𝑐}(𝑡)), used in sinusoidal PWM in a Voltage Source Inverter (VSI) are\n\n𝑣_{𝑎}(𝑡) = 0.8 sin (ω𝑡) V\n\n𝑣_{𝑏}(𝑡) = 0.8 sin (ω𝑡- \\(\\frac{2𝜋}{3}\\) V\n\n𝑣_{𝑐}(𝑡) = 0.8 sin (ω𝑡+ \\(\\frac{2𝜋}{3}\\) V where ω = 2𝜋 \\times 40 rad/s is the fundamental frequency. The modulating waveforms are compared with a 10 kHz triangular carrier whose magnitude varies between +1 and -1. The VSI has a DC link voltage of 600 V and feeds a star connected motor. The per phase fundamental RMS motor voltage, in volts, is closest to",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "169.71",
@@ -2572,22 +4711,62 @@
         {
           "id": "A",
           "text": "169.71",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "169.71",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "300.00",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "300.00",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "424.26",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "424.26",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "212.13",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "212.13",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2617,7 +4796,24 @@
       "questionNumber": 47,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "An ideal sinusoidal voltage source 𝑣(𝑡) = 230 \\sqrt 2 sin(2𝜋 \\times 50𝑡) 𝑉 feeds an ideal\ninductor 𝐿 through an ideal SCR with firing angle 𝛼 = 0°. If 𝐿 = 100 𝑚𝐻, then the\npeak of the inductor current, in ampere, is closest to",
+      "questionText": "An ideal sinusoidal voltage source 𝑣(𝑡) = 230\\sqrt{2} sin(2𝜋 \\times 50𝑡) 𝑉 feeds an ideal inductor 𝐿 through an ideal SCR with firing angle 𝛼= 0°. If 𝐿= 100 𝑚𝐻, then the peak of the inductor current, in ampere, is closest to",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An ideal sinusoidal voltage source 𝑣(𝑡) = 230\\sqrt{2} sin(2𝜋 \\times 50𝑡) 𝑉 feeds an ideal inductor 𝐿 through an ideal SCR with firing angle 𝛼= 0°. If 𝐿= 100 𝑚𝐻, then the peak of the inductor current, in ampere, is closest to",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q47_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "20.71",
@@ -2630,22 +4826,62 @@
         {
           "id": "A",
           "text": "20.71",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20.71",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "10.35",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10.35",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "7.32",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7.32",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2677,7 +4913,24 @@
       "questionNumber": 48,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the following circuit, the average voltage\ncos 𝛼\n𝑉 = 400 (1 + ) V,\n𝑜\n3\nwhere 𝛼 is the firing angle. If the power dissipated in the resistor is 64 W, then the\nclosest value of 𝛼 in degrees is",
+      "questionText": "In the following circuit, the average voltage\n\n𝑉_{𝑜}= 400 (1 + \\(\\frac{cos𝛼}{3}\\) V, where 𝛼 is the firing angle. If the power dissipated in the resistor is 64 W, then the closest value of 𝛼 in degrees is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the following circuit, the average voltage\n\n𝑉_{𝑜}= 400 (1 + \\(\\frac{cos𝛼}{3}\\) V, where 𝛼 is the firing angle. If the power dissipated in the resistor is 64 W, then the closest value of 𝛼 in degrees is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q48_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "35.9",
@@ -2690,22 +4943,62 @@
         {
           "id": "A",
           "text": "35.9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "35.9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "46.4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "46.4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "41.4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "41.4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2737,7 +5030,24 @@
       "questionNumber": 49,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the system shown below, the generator was initially supplying power to the grid.\nA temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The\ncircuit breakers open to isolate the line. The fault self-clears. The circuit breakers\nreclose and restore the line. Which one of the following diagrams best indicates the\nrotor accelerating and decelerating areas?\nF\nCB1 CB2\nCB 1\nGen fault Grid\nFig. (ii)\nFig. (i)\nFig. (iii) Fig. (iv)",
+      "questionText": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q49_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Fig. (i)",
@@ -2750,22 +5060,62 @@
         {
           "id": "A",
           "text": "Fig. (i)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (i)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Fig. (ii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (ii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Fig. (iii)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (iii)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Fig. (iv)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Fig. (iv)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2797,7 +5147,24 @@
       "questionNumber": 50,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "An air filled cylindrical capacitor (capacitance 𝐶 ) of length L, with a and b as its\n0\ninner and outer radii, respectively, consists of two coaxial conducting surfaces. Its\ncross-sectional view is shown in Fig. (i). In order to increase the capacitance, a\ndielectric material of relative permittivity 𝜀 is inserted inside 50% of the annular\n𝑟\nregion as shown in Fig. (ii). The value of 𝜀 for which the capacitance of the\n𝑟\ncapacitor in Fig. (ii), becomes 5𝐶 is\n0\na a\nb b\n\n 0 r\n 0\n0\nFig. (i) Fig. (ii)",
+      "questionText": "An air filled cylindrical capacitor (capacitance 𝐶_{0}) of length L, with a and b as its inner and outer radii, respectively, consists of two coaxial conducting surfaces. Its cross-sectional view is shown in Fig. (i). In order to increase the capacitance, a dielectric material of relative permittivity 𝜀_{𝑟} is inserted inside 50% of the annular region as shown in Fig. (ii). The value of 𝜀_{𝑟} for which the capacitance of the capacitor in Fig. (ii), becomes 5𝐶_{0} is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An air filled cylindrical capacitor (capacitance 𝐶_{0}) of length L, with a and b as its inner and outer radii, respectively, consists of two coaxial conducting surfaces. Its cross-sectional view is shown in Fig. (i). In order to increase the capacitance, a dielectric material of relative permittivity 𝜀_{𝑟} is inserted inside 50% of the annular region as shown in Fig. (ii). The value of 𝜀_{𝑟} for which the capacitance of the capacitor in Fig. (ii), becomes 5𝐶_{0} is",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q50_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "4",
@@ -2810,22 +5177,62 @@
         {
           "id": "A",
           "text": "4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "10",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2857,7 +5264,18 @@
       "questionNumber": 51,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝒂 be the unit radial vector in the spherical co-ordinate system. For which of\n𝑹\n1\nthe following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂\n𝑹 𝑅𝑛\nis independent of R?",
+      "questionText": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{whichof^{1}}{𝑅𝑛}\\) is independent of R?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{whichof^{1}}{𝑅𝑛}\\) is independent of R?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "-2",
@@ -2870,22 +5288,62 @@
         {
           "id": "A",
           "text": "-2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "-1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2921,35 +5379,86 @@
       "questionNumber": 52,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider two coupled circuits, having self-inductances 𝐿 and 𝐿 , that carry non-\n1 2\nzero currents 𝐼 and 𝐼 , respectively. The mutual inductance between the circuits is\n1 2\nM with unity coupling coefficient. The stored magnetic energy of the coupled\n𝐼\n1\ncircuits is minimum at which of the following value(s) of ?\n𝐼\n2",
+      "questionText": "Consider two coupled circuits, having self-inductances 𝐿_{1} and 𝐿_{2}, that carry non- zero currents 𝐼_{1} and 𝐼_{2}, respectively. The mutual inductance between the circuits is M with unity coupling coefficient. The stored magnetic energy of the coupled circuits is minimum at which of the following value(s) of \\(\\frac{𝐼1}{𝐼2}\\) ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider two coupled circuits, having self-inductances 𝐿_{1} and 𝐿_{2}, that carry non- zero currents 𝐼_{1} and 𝐼_{2}, respectively. The mutual inductance between the circuits is M with unity coupling coefficient. The stored magnetic energy of the coupled circuits is minimum at which of the following value(s) of \\(\\frac{𝐼1}{𝐼2}\\) ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑀\n-\n𝐿\n1",
-        "𝑀\n-\n𝐿\n2",
-        "𝐿\n- 1\n𝑀",
-        "𝐿\n- 2\n𝑀"
+        "- \\(\\frac{𝑀}{𝐿1}\\)",
+        "- \\(\\frac{𝑀}{𝐿2}\\)",
+        "- \\(\\frac{𝐿1}{𝑀}\\)",
+        "- \\(\\frac{𝐿2}{𝑀}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑀\n-\n𝐿\n1",
-          "imageUrl": null
+          "text": "- \\(\\frac{𝑀}{𝐿1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "- \\(\\frac{𝑀}{𝐿1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑀\n-\n𝐿\n2",
-          "imageUrl": null
+          "text": "- \\(\\frac{𝑀}{𝐿2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "- \\(\\frac{𝑀}{𝐿2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝐿\n- 1\n𝑀",
-          "imageUrl": null
+          "text": "- \\(\\frac{𝐿1}{𝑀}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "- \\(\\frac{𝐿1}{𝑀}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝐿\n- 2\n𝑀",
-          "imageUrl": null
+          "text": "- \\(\\frac{𝐿2}{𝑀}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "- \\(\\frac{𝐿2}{𝑀}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2985,7 +5494,18 @@
       "questionNumber": 53,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let (𝑥, 𝑦) \\in ℜ2. The rate of change of the real valued function,\n𝑉(𝑥, 𝑦) = 𝑥2 + 𝑥 + 𝑦2 + 1\nat the origin in the direction of the point (1,2) is ___________ (round off to the\nnearest integer).",
+      "questionText": "Let (𝑥, 𝑦) \\in ℜ^{2}. The rate of change of the real valued function, 𝑉(𝑥, 𝑦) = 𝑥^{2} + 𝑥+ 𝑦^{2} + 1\n\nat the origin in the direction of the point (1,2) is ___________ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let (𝑥, 𝑦) \\in ℜ^{2}. The rate of change of the real valued function, 𝑉(𝑥, 𝑦) = 𝑥^{2} + 𝑥+ 𝑦^{2} + 1\n\nat the origin in the direction of the point (1,2) is ___________ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3020,7 +5540,18 @@
       "questionNumber": 54,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider ordinary differential equations given by\n𝑥̇ (𝑡) = 2𝑥 (𝑡)\n1 2\n𝑥̇ (𝑡) = 𝑟(𝑡)\n2\nwith initial conditions 𝑥 (0) = 1 and 𝑥 (0) = 0.\n1 2\n1, 𝑡 \\ge 0\nIf 𝑟(𝑡) = { , then at 𝑡 = 1, 𝑥 (𝑡) =__________ (round off to the nearest\n0, 𝑡 < 0 1\ninteger).",
+      "questionText": "Consider ordinary differential equations given by\n\n𝑥̇_{1}(𝑡) = 2𝑥_{2}(𝑡) 𝑥̇_{2}(𝑡) = 𝑟(𝑡) with initial conditions 𝑥_{1}(0) = 1 and 𝑥_{2}(0) = 0. If 𝑟(𝑡) = {1, 𝑡 \\ge 0 0, 𝑡< 0, then at 𝑡= 1, 𝑥_{1}(𝑡) =__________ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider ordinary differential equations given by\n\n𝑥̇_{1}(𝑡) = 2𝑥_{2}(𝑡) 𝑥̇_{2}(𝑡) = 𝑟(𝑡) with initial conditions 𝑥_{1}(0) = 1 and 𝑥_{2}(0) = 0. If 𝑟(𝑡) = {1, 𝑡 \\ge 0 0, 𝑡< 0, then at 𝑡= 1, 𝑥_{1}(𝑡) =__________ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3055,7 +5586,18 @@
       "questionNumber": 55,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by\n|𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗 = \\sqrt -1. Then,\n∮ 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).\n𝐶",
+      "questionText": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3090,7 +5632,24 @@
       "questionNumber": 56,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is\n____ (round off to the nearest integer).",
+      "questionText": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is <u>____</u> (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is <u>____</u> (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q56_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3127,7 +5686,24 @@
       "questionNumber": 57,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The switch (S) closes at 𝑡 = 0 sec. The time, in sec, the capacitor takes to charge to\n50 V is _____ (round off to one decimal place).\n5 F\nS\n100 V 25 Ω 3 A\n2 Ω",
+      "questionText": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q57_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3164,7 +5740,24 @@
       "questionNumber": 58,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In an experiment to measure the active power drawn by a single-phase RL Load\nconnected to an AC source through a 2 Ω resistor, three voltmeters are connected\nas shown in the figure below. The voltmeter readings are as follows:\n𝑉 = 200 𝑉, 𝑉 = 9 𝑉, 𝑉 = 199 𝑉. Assuming perfect resistors and ideal\n𝑆𝑜𝑢𝑟𝑐𝑒 𝑅 𝐿𝑜𝑎𝑑\nvoltmeters, the Load-active power measured in this experiment, in W, is ________\n(round off to one decimal place).\n2\nV\nR\nV\nRL\nV V V Load\nV Load\nSource",
+      "questionText": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q58_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3201,7 +5794,24 @@
       "questionNumber": 59,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the Wheatstone bridge shown below, the sensitivity of the bridge in terms of\nchange in balancing voltage 𝐸 for unit change in the resistance 𝑅, in mV/Ω, is\n______________ (round off to two decimal places).\nΩ P\n5 0 = 10\n=\nR Ω\n10 V E\nS = kΩ 5 = 1 k Ω\nQ",
+      "questionText": "In the Wheatstone bridge shown below, the sensitivity of the bridge in terms of change in balancing voltage 𝐸 for unit change in the resistance 𝑅, in mV/Ω, is ______________ (round off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the Wheatstone bridge shown below, the sensitivity of the bridge in terms of change in balancing voltage 𝐸 for unit change in the resistance 𝑅, in mV/Ω, is ______________ (round off to two decimal places).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q59_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3247,7 +5857,24 @@
       "questionNumber": 60,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The steady state capacitor current of a conventional DC-DC buck converter,\nworking in CCM, is shown in one switching cycle. If the input voltage is 30 V, the\nvalue of the inductor used, in mH, is _____________ (round off to one decimal\nplace).",
+      "questionText": "The steady state capacitor current of a conventional DC-DC buck converter, working in CCM, is shown in one switching cycle. If the input voltage is 30 V, the value of the inductor used, in mH, is _____________ (round off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The steady state capacitor current of a conventional DC-DC buck converter, working in CCM, is shown in one switching cycle. If the input voltage is 30 V, the value of the inductor used, in mH, is _____________ (round off to one decimal place).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q60_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3284,7 +5911,18 @@
       "questionNumber": 61,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "An ideal low pass filter has frequency response given by\n1, |𝜔| \\le 200𝜋\n𝐻(𝑗𝜔) = {\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\nLet ℎ(𝑡) be its time domain representation. Then ℎ(0) = ________ (round off to the\nnearest integer).",
+      "questionText": "An ideal low pass filter has frequency response given by\n\n𝐻(𝑗𝜔) = {1, |𝜔| \\le 200𝜋 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 Let ℎ(𝑡) be its time domain representation. Then ℎ(0) = ________ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An ideal low pass filter has frequency response given by\n\n𝐻(𝑗𝜔) = {1, |𝜔| \\le 200𝜋 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒 Let ℎ(𝑡) be its time domain representation. Then ℎ(0) = ________ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3319,7 +5957,18 @@
       "questionNumber": 62,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Consider the state-space model\n𝒙̇ (𝑡) = 𝐴𝒙(𝑡) + 𝐵𝑟(𝑡),\n𝑦(𝑡) = 𝐶𝒙(𝑡)\nwhere 𝒙(𝑡), 𝑟(𝑡) , 𝑦(𝑡) are the state, input and output, respectively. The matrices\n𝐴, 𝐵, 𝐶 are given below\n0 1 0\n𝐴 = [ ], 𝐵 = [ ], 𝐶 = [1 0]\n-2 -3 1\nThe sum of the magnitudes of the poles is _______________ (round off to nearest\ninteger).",
+      "questionText": "Consider the state-space model\n\n𝒙̇ (𝑡) = 𝐴𝒙(𝑡) + 𝐵𝑟(𝑡),\n\n𝑦(𝑡) = 𝐶𝒙(𝑡)\n\nwhere 𝒙(𝑡), 𝑟(𝑡) , 𝑦(𝑡) are the state, input and output, respectively. The matrices 𝐴, 𝐵, 𝐶 are given below\n\n𝐴= [ 0 -2 -3], 𝐵= [0 1 1], 𝐶= [1 0]\n\nThe sum of the magnitudes of the poles is _______________ (round off to nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the state-space model\n\n𝒙̇ (𝑡) = 𝐴𝒙(𝑡) + 𝐵𝑟(𝑡),\n\n𝑦(𝑡) = 𝐶𝒙(𝑡)\n\nwhere 𝒙(𝑡), 𝑟(𝑡) , 𝑦(𝑡) are the state, input and output, respectively. The matrices 𝐴, 𝐵, 𝐶 are given below\n\n𝐴= [ 0 -2 -3], 𝐵= [0 1 1], 𝐶= [1 0]\n\nThe sum of the magnitudes of the poles is _______________ (round off to nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3354,7 +6003,18 @@
       "questionNumber": 63,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Using shunt capacitors, the power factor of a 3-phase, 4 kV induction motor\n(drawing 390 kVA at 0.77 pf lag) is to be corrected to 0.85 pf lag. The line current\nof the capacitor bank, in A, is ____________ (round off to one decimal place).",
+      "questionText": "Using shunt capacitors, the power factor of a 3-phase, 4 kV induction motor (drawing 390 kVA at 0.77 pf lag) is to be corrected to 0.85 pf lag. The line current of the capacitor bank, in A, is ____________ (round off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Using shunt capacitors, the power factor of a 3-phase, 4 kV induction motor (drawing 390 kVA at 0.77 pf lag) is to be corrected to 0.85 pf lag. The line current of the capacitor bank, in A, is ____________ (round off to one decimal place).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3389,7 +6049,18 @@
       "questionNumber": 64,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Two units, rated at 100 MW and 150 MW, are enabled for economic load dispatch.\nWhen the overall incremental cost is 10,000 Rs./MWh, the units are dispatched to\n50 MW and 80 MW respectively. At an overall incremental cost of\n10,600 Rs./MWh, the power output of the units are 80 MW and 92 MW,\nrespectively. The total plant MW-output (without overloading any unit) at an overall\nincremental cost of 11,800 Rs./MWh is ________ (round off to the nearest integer).",
+      "questionText": "Two units, rated at 100 MW and 150 MW, are enabled for economic load dispatch. When the overall incremental cost is 10,000 Rs./MWh, the units are dispatched to 50 MW and 80 MW respectively. At an overall incremental cost of 10,600 Rs./MWh, the power output of the units are 80 MW and 92 MW, respectively. The total plant MW-output (without overloading any unit) at an overall incremental cost of 11,800 Rs./MWh is ________ (round off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two units, rated at 100 MW and 150 MW, are enabled for economic load dispatch. When the overall incremental cost is 10,000 Rs./MWh, the units are dispatched to 50 MW and 80 MW respectively. At an overall incremental cost of 10,600 Rs./MWh, the power output of the units are 80 MW and 92 MW, respectively. The total plant MW-output (without overloading any unit) at an overall incremental cost of 11,800 Rs./MWh is ________ (round off to the nearest integer).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3424,7 +6095,24 @@
       "questionNumber": 65,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A controller 𝐷(𝑠) of the form (1 + 𝐾 𝑠) is to be designed for the plant\n𝐷\n1000 \\sqrt 2\n𝐺(𝑠) = as shown in the figure. The value of 𝐾 that yields a phase margin\n𝑠(𝑠+10)2 𝐷\nof 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round\noff to one decimal place).\nInput + Output\nD(s) G(s)\n_",
+      "questionText": "A controller 𝐷(𝑠) of the form (1 + 𝐾_{𝐷}𝑠) is to be designed for the plant \\(\\frac{𝐷(𝑠)}{1000\\sqrt{2}\\}) 𝐺(𝑠) = \\(\\frac{controller𝐷(𝑠)1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A controller 𝐷(𝑠) of the form (1 + 𝐾_{𝐷}𝑠) is to be designed for the plant \\(\\frac{𝐷(𝑠)}{1000\\sqrt{2}\\}) 𝐺(𝑠) = \\(\\frac{controller𝐷(𝑠)1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/ee/q65_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

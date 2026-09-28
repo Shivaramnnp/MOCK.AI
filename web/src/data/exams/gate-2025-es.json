@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Courage : Bravery :: Yearning : __________\nSelect the most appropriate option to complete the analogy.",
+      "questionText": "Courage : Bravery :: Yearning : __________\n\nSelect the most appropriate option to complete the analogy.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Courage : Bravery :: Yearning : __________\n\nSelect the most appropriate option to complete the analogy.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Longing",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "Longing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Longing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Yelling",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Yelling",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Yawning",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Yawning",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Glaring",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Glaring",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -103,7 +154,18 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "We __________ tennis in the lawn when it suddenly started to rain.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "We __________ tennis in the lawn when it suddenly started to rain.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "We __________ tennis in the lawn when it suddenly started to rain.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "have been playing",
@@ -116,22 +178,62 @@
         {
           "id": "A",
           "text": "have been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "have been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "had been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "had been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "would have been playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "would have been playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "could be playing",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "could be playing",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -161,7 +263,24 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of\npixels with 𝑈 \\le 4 is:",
+      "questionText": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of pixels with 𝑈 \\le 4 is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A 4 \\times 4 digital image has pixel intensities (𝑈) as shown in the figure. The number of pixels with 𝑈 \\le 4 is:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q3_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3",
@@ -174,22 +293,62 @@
         {
           "id": "A",
           "text": "3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "11",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -221,7 +380,24 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse\nare 1, 2, and 3, respectively. Which one among the given options is the most\nappropriate combination of P, Q, and R ?\n2\nR\n4\nQ\n1 P\n3",
+      "questionText": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse are 1, 2, and 3, respectively. Which one among the given options is the most appropriate combination of P, Q, and R ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the given figure, the numbers associated with the rectangle, triangle, and ellipse are 1, 2, and 3, respectively. Which one among the given options is the most appropriate combination of P, Q, and R ?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P = 6; Q = 5; R = 3",
@@ -234,22 +410,62 @@
         {
           "id": "A",
           "text": "P = 6; Q = 5; R = 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 6; Q = 5; R = 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P = 5; Q = 6; R = 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 5; Q = 6; R = 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P = 3; Q = 6; R = 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 3; Q = 6; R = 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P = 5; Q = 3; R = 6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P = 5; Q = 3; R = 6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -281,7 +497,18 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased\nby 10%, which one of the following statements is correct for all values of L and W?",
+      "questionText": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased by 10%, which one of the following statements is correct for all values of L and W?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A rectangle has a length L and a width W, where L > W. If the width, W, is increased by 10%, which one of the following statements is correct for all values of L and W?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Perimeter increases by 10%.",
@@ -294,22 +521,62 @@
         {
           "id": "A",
           "text": "Perimeter increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Perimeter increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Length of the diagonals increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Length of the diagonals increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Area increases by 10%.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Area increases by 10%.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "The rectangle becomes a square.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The rectangle becomes a square.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -339,7 +606,50 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Column-I has statements made by Shanthala; and, Column-II has responses given\nby Kanishk.\nColumn-I Column-II\nP. This house is in a mess. 1. Alright, I won't bring it up during\nour conversations.\nQ. I am not happy with the marks 2. Well, you can easily look it up.\ngiven to me.\nR. Politics is a subject I avoid talking 3. No problem, let me clear it up for\nabout. you.\nS. I don't know what this word 4. Don't worry, I will take it up with\nmeans. your teacher.\nIdentify the option that has the correct match between Column-I and Column-II.",
+      "questionText": "Column-I has statements made by Shanthala; and, Column-II has responses given by Kanishk.\n\n| Column-I | Column-II |\n| :--- | :--- |\n| P. This house is in a mess. | 1. Alright, I won't bring it up during our conversations. |\n| Q. I am not happy with the marks given to me. | 2. Well, you can easily look it up. |\n| R. Politics is a subject I avoid talking about. | 3. No problem, let me clear it up for you. |\n| S. I don't know what this word means. | 4. Don't worry, I will take it up with your teacher. |\n\nIdentify the option that has the correct match between Column-I and Column-II.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Column-I has statements made by Shanthala; and, Column-II has responses given by Kanishk.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column-I",
+            "Column-II"
+          ],
+          "rows": [
+            [
+              "P. This house is in a mess.",
+              "1. Alright, I won't bring it up during our conversations."
+            ],
+            [
+              "Q. I am not happy with the marks given to me.",
+              "2. Well, you can easily look it up."
+            ],
+            [
+              "R. Politics is a subject I avoid talking about.",
+              "3. No problem, let me clear it up for you."
+            ],
+            [
+              "S. I don't know what this word means.",
+              "4. Don't worry, I will take it up with your teacher."
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Identify the option that has the correct match between Column-I and Column-II.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P - 2; Q - 3; R - 1; S - 4",
@@ -352,22 +662,62 @@
         {
           "id": "A",
           "text": "P - 2; Q - 3; R - 1; S - 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 2; Q - 3; R - 1; S - 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P - 3; Q - 4; R - 1; S - 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 3; Q - 4; R - 1; S - 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P - 4; Q - 1; R - 2; S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 4; Q - 1; R - 2; S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P - 1; Q - 2; R - 4; S - 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P - 1; Q - 2; R - 4; S - 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -397,35 +747,90 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Weight of a person can be expressed as a function of their age. The function usually\nvaries from person to person. Suppose this function is identical for two brothers,\nand it monotonically increases till the age of 50 years and then it monotonically\ndecreases. Let 𝑎 and 𝑎 (in years) denote the ages of the brothers and 𝑎 < 𝑎 2.\n1 2 1\nWhich one of the following statements is correct about their age on the day when\nthey attain the same weight?",
+      "questionText": "Weight of a person can be expressed as a function of their age. The function usually varies from person to person. Suppose this function is identical for two brothers, and it monotonically increases till the age of 50 years and then it monotonically decreases. Let 𝑎_{1} and 𝑎_{2} (in years) denote the ages of the brothers and 𝑎_{1} < 𝑎_{2}. Which one of the following statements is correct about their age on the day when they attain the same weight?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Weight of a person can be expressed as a function of their age. The function usually varies from person to person. Suppose this function is identical for two brothers, and it monotonically increases till the age of 50 years and then it monotonically decreases. Let 𝑎_{1} and 𝑎_{2} (in years) denote the ages of the brothers and 𝑎_{1} < 𝑎_{2}. Which one of the following statements is correct about their age on the day when they attain the same weight?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑎 < 𝑎 < 50\n1 2",
-        "𝑎 < 50 < 𝑎\n1 2",
-        "50 < 𝑎 < 𝑎\n1 2",
-        "Either 𝑎 = 50 or 𝑎 = 50\n1 2"
+        "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+        "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+        "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+        "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑎 < 𝑎 < 50\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑎_{1} < 𝑎_{2} < 50",
+              "content": "\\(𝑎_{1} < 𝑎_{2} < 50\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑎 < 50 < 𝑎\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑎_{1} < 50 < 𝑎_{2}",
+              "content": "\\(𝑎_{1} < 50 < 𝑎_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "50 < 𝑎 < 𝑎\n1 2",
-          "imageUrl": null
+          "text": "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "50 < 𝑎_{1} < 𝑎_{2}",
+              "content": "\\(50 < 𝑎_{1} < 𝑎_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "Either 𝑎 = 50 or 𝑎 = 50\n1 2",
-          "imageUrl": null
+          "text": "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "Either 𝑎_{1} = 50 or 𝑎_{2} = 50",
+              "content": "\\(Either 𝑎_{1} = 50 or 𝑎_{2} = 50\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -455,7 +860,24 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r\ncm as shown in the figure. The side of the dodecagon is d cm. All the triangles\n(numbered 1 to 12) in the figure are used to form squares of side r cm and each\nnumbered triangle is used only once to form a square.\nThe number of squares that can be formed and the number of triangles required to\nform each square, respectively, are:\nNote: The figure shown is representative.",
+      "questionText": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r cm as shown in the figure. The side of the dodecagon is d cm. All the triangles (numbered 1 to 12) in the figure are used to form squares of side r cm and each numbered triangle is used only once to form a square.\n\nThe number of squares that can be formed and the number of triangles required to form each square, respectively, are:\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A regular dodecagon (12-sided regular polygon) is inscribed in a circle of radius r cm as shown in the figure. The side of the dodecagon is d cm. All the triangles (numbered 1 to 12) in the figure are used to form squares of side r cm and each numbered triangle is used only once to form a square.\n\nThe number of squares that can be formed and the number of triangles required to form each square, respectively, are:\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q8_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "3; 4",
@@ -468,22 +890,62 @@
         {
           "id": "A",
           "text": "3; 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "4; 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4; 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "3; 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "3; 2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3; 2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -515,35 +977,90 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "2\n2𝑥\nIf a real variable 𝑥 satisfies 3𝑥2 = 27 \\times 9𝑥 , then the value of is:\n(2𝑥)2",
+      "questionText": "If a real variable 𝑥 satisfies 3^{𝑥2} = 27 \\times 9^{𝑥}, then the value of \\(\\frac{2𝑥2}{(2x)^2}\\) is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If a real variable 𝑥 satisfies 3^{𝑥2} = 27 \\times 9^{𝑥}, then the value of \\(\\frac{2𝑥2}{(2x)^2}\\) is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "2-1",
-        "20",
-        "23",
-        "215"
+        "\\(2^{-1}\\)",
+        "\\(2^{0}\\)",
+        "\\(2^{3}\\)",
+        "\\(2^{15}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "2-1",
-          "imageUrl": null
+          "text": "\\(2^{-1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{-1}",
+              "content": "\\(2^{-1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "20",
-          "imageUrl": null
+          "text": "\\(2^{0}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{0}",
+              "content": "\\(2^{0}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "23",
-          "imageUrl": null
+          "text": "\\(2^{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{3}",
+              "content": "\\(2^{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "215",
-          "imageUrl": null
+          "text": "\\(2^{15}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "2^{15}",
+              "content": "\\(2^{15}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -573,7 +1090,24 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is\nshown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average\namount (in ₹) she has earned per shift in the past 100 shifts?\nNote: The figure shown is representative.\n50\n40\n40\nshifts\n30\n30\nof\n20\nNumber\n20\n10\n10\n0\n5 6 7 8\nNumber of patients per shift (X)",
+      "questionText": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is shown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average amount (in ₹) she has earned per shift in the past 100 shifts?\n\nNote: The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The number of patients per shift (𝑋) consulting Dr. Gita in her past 100 shifts is shown in the figure. If the amount she earns is ₹ 1000(𝑋-0.2), what is the average amount (in ₹) she has earned per shift in the past 100 shifts?\n\nNote: The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q10_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "6,100",
@@ -586,22 +1120,62 @@
         {
           "id": "A",
           "text": "6,100",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,100",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "6,300",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,300",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6,000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "6,500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6,500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -633,35 +1207,90 @@
       "questionNumber": 11,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Assuming 𝑠 > |𝑎|; Laplace transform of 𝑓(𝑥) = cosh 𝑎𝑥 is",
+      "questionText": "Assuming 𝑠> |𝑎|; Laplace transform of 𝑓(𝑥) = cosh 𝑎𝑥 is",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Assuming 𝑠> |𝑎|; Laplace transform of 𝑓(𝑥) = cosh 𝑎𝑥 is",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑠\n𝑠2+𝑎2",
-        "𝑎\n𝑠2+𝑎2",
-        "𝑠\n𝑠2-𝑎2",
-        "𝑎\n𝑠2-𝑎2"
+        "\\(\\frac{𝑠}{𝑠2+𝑎2}\\)",
+        "\\(\\frac{𝑎}{𝑠2+𝑎2}\\)",
+        "\\(\\frac{𝑠}{𝑠2-𝑎2}\\)",
+        "\\(\\frac{𝑎}{𝑠2-𝑎2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑠\n𝑠2+𝑎2",
-          "imageUrl": null
+          "text": "\\(\\frac{𝑠}{𝑠2+𝑎2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝑠}{𝑠2+𝑎2}",
+              "content": "\\(\\frac{𝑠}{𝑠2+𝑎2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑎\n𝑠2+𝑎2",
-          "imageUrl": null
+          "text": "\\(\\frac{𝑎}{𝑠2+𝑎2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝑎}{𝑠2+𝑎2}",
+              "content": "\\(\\frac{𝑎}{𝑠2+𝑎2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑠\n𝑠2-𝑎2",
-          "imageUrl": null
+          "text": "\\(\\frac{𝑠}{𝑠2-𝑎2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝑠}{𝑠2-𝑎2}",
+              "content": "\\(\\frac{𝑠}{𝑠2-𝑎2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑎\n𝑠2-𝑎2",
-          "imageUrl": null
+          "text": "\\(\\frac{𝑎}{𝑠2-𝑎2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝑎}{𝑠2-𝑎2}",
+              "content": "\\(\\frac{𝑎}{𝑠2-𝑎2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -691,35 +1320,90 @@
       "questionNumber": 12,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "𝑑2𝑦\nFor the ordinary differential equation + 4𝑦 = 0, the general solution is\n𝑑𝑥2",
+      "questionText": "For the ordinary differential equation \\(\\frac{𝑑2𝑦}{𝑑𝑥2}\\) + 4𝑦= 0^{, the general solution is}",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For the ordinary differential equation \\(\\frac{𝑑2𝑦}{𝑑𝑥2}\\) + 4𝑦= 0^{, the general solution is}",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑦 = 𝑐 cos 2𝑥 + 𝑐 sin 2𝑥\n1 2",
-        "𝑦 = 𝑐 cosh 2𝑥 + 𝑐 sinh 2𝑥\n1 2",
-        "𝑦 = 𝑐 𝑒2𝑥 + 𝑐 𝑒-2𝑥\n1 2",
-        "𝑦 = 𝑐 𝑒2𝑥cos 2𝑥 + 𝑐 𝑒-2𝑥sin 2𝑥\n1 2"
+        "\\(𝑦= 𝑐_{1} cos 2𝑥+ 𝑐_{2} sin 2𝑥\\)",
+        "\\(𝑦= 𝑐_{1} cosh 2𝑥+ 𝑐_{2} sinh 2𝑥\\)",
+        "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}+ 𝑐_{2}𝑒^{-2𝑥}\\)",
+        "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}cos 2𝑥+ 𝑐_{2}𝑒^{-2𝑥}sin 2𝑥\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑦 = 𝑐 cos 2𝑥 + 𝑐 sin 2𝑥\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑦= 𝑐_{1} cos 2𝑥+ 𝑐_{2} sin 2𝑥\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑦= 𝑐_{1} cos 2𝑥+ 𝑐_{2} sin 2𝑥",
+              "content": "\\(𝑦= 𝑐_{1} cos 2𝑥+ 𝑐_{2} sin 2𝑥\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑦 = 𝑐 cosh 2𝑥 + 𝑐 sinh 2𝑥\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑦= 𝑐_{1} cosh 2𝑥+ 𝑐_{2} sinh 2𝑥\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑦= 𝑐_{1} cosh 2𝑥+ 𝑐_{2} sinh 2𝑥",
+              "content": "\\(𝑦= 𝑐_{1} cosh 2𝑥+ 𝑐_{2} sinh 2𝑥\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑦 = 𝑐 𝑒2𝑥 + 𝑐 𝑒-2𝑥\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}+ 𝑐_{2}𝑒^{-2𝑥}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑦= 𝑐_{1}𝑒^{2𝑥}+ 𝑐_{2}𝑒^{-2𝑥}",
+              "content": "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}+ 𝑐_{2}𝑒^{-2𝑥}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑦 = 𝑐 𝑒2𝑥cos 2𝑥 + 𝑐 𝑒-2𝑥sin 2𝑥\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}cos 2𝑥+ 𝑐_{2}𝑒^{-2𝑥}sin 2𝑥\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑦= 𝑐_{1}𝑒^{2𝑥}cos 2𝑥+ 𝑐_{2}𝑒^{-2𝑥}sin 2𝑥",
+              "content": "\\(𝑦= 𝑐_{1}𝑒^{2𝑥}cos 2𝑥+ 𝑐_{2}𝑒^{-2𝑥}sin 2𝑥\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -749,7 +1433,18 @@
       "questionNumber": 13,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following two series\n\\infty\n1\nP : \\sum\n𝑛\n𝑛=1\n\\infty\n1\nQ : \\sum\n𝑛2\n𝑛=1\nChoose the correct option from the following",
+      "questionText": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛𝑛=1}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2𝑛=1}\\) 𝑛=1 Choose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛𝑛=1}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2𝑛=1}\\) 𝑛=1 Choose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P is convergent series; Q is divergent series",
@@ -762,22 +1457,62 @@
         {
           "id": "A",
           "text": "P is convergent series; Q is divergent series",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is convergent series; Q is divergent series",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P is divergent series; Q is convergent series",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is divergent series; Q is convergent series",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Both P and Q are convergent series",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both P and Q are convergent series",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Both P and Q are divergent series",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both P and Q are divergent series",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -808,34 +1543,89 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the redox reaction from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the redox reaction from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "H CO  H+ + HCO -\n2 3 3",
-        "Hg2+ + 2 OH-  Hg(OH)\n2",
-        "C H O + 6 O  6 CO + 6 H O\n6 12 6 2 2 2",
-        "CaCO (s)  Ca2+ + CO 2-\n3 3"
+        "\\(H_{2}CO_{3} H^{+} + HCO_{3}^{-}\\)",
+        "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+        "\\(C_{6}H_{12}O_{6} + 6 O_{2}  6 CO_{2} + 6 H_{2}O\\)",
+        "\\(CaCO_{3} (s)  Ca^{2+} + CO_{3}^{2-}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "H CO  H+ + HCO -\n2 3 3",
-          "imageUrl": null
+          "text": "\\(H_{2}CO_{3} H^{+} + HCO_{3}^{-}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "H_{2}CO_{3} H^{+} + HCO_{3}^{-}",
+              "content": "\\(H_{2}CO_{3} H^{+} + HCO_{3}^{-}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "Hg2+ + 2 OH-  Hg(OH)\n2",
-          "imageUrl": null
+          "text": "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}",
+              "content": "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "C H O + 6 O  6 CO + 6 H O\n6 12 6 2 2 2",
-          "imageUrl": null
+          "text": "\\(C_{6}H_{12}O_{6} + 6 O_{2}  6 CO_{2} + 6 H_{2}O\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "C_{6}H_{12}O_{6} + 6 O_{2}  6 CO_{2} + 6 H_{2}O",
+              "content": "\\(C_{6}H_{12}O_{6} + 6 O_{2}  6 CO_{2} + 6 H_{2}O\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "CaCO (s)  Ca2+ + CO 2-\n3 3",
-          "imageUrl": null
+          "text": "\\(CaCO_{3} (s)  Ca^{2+} + CO_{3}^{2-}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "CaCO_{3} (s)  Ca^{2+} + CO_{3}^{2-}",
+              "content": "\\(CaCO_{3} (s)  Ca^{2+} + CO_{3}^{2-}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -866,6 +1656,17 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Which one of the following is performed by autotrophic bacteria?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following is performed by autotrophic bacteria?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Aerobic biodegradation of organic matter",
@@ -878,22 +1679,62 @@
         {
           "id": "A",
           "text": "Aerobic biodegradation of organic matter",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Aerobic biodegradation of organic matter",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Anaerobic biodegradation of organic matter",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Anaerobic biodegradation of organic matter",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Aerobic nitrification",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Aerobic nitrification",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Anaerobic de-nitrification",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Anaerobic de-nitrification",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -923,7 +1764,18 @@
       "questionNumber": 16,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "For flood routing, consider the following statements\nP : Hydrologic routing method uses continuity equation and momentum equation\nQ : Hydraulic routing method uses continuity equation and energy equation\nChoose the correct option from the following",
+      "questionText": "P : Hydrologic routing method uses continuity equation and momentum equation\n\nQ : Hydraulic routing method uses continuity equation and energy equation\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "P : Hydrologic routing method uses continuity equation and momentum equation\n\nQ : Hydraulic routing method uses continuity equation and energy equation\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P is TRUE; Q is TRUE",
@@ -936,22 +1788,62 @@
         {
           "id": "A",
           "text": "P is TRUE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P is TRUE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P is FALSE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P is FALSE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -981,7 +1873,18 @@
       "questionNumber": 17,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "For a gradually varied flow, consider the following statements\nP : 𝑦 > 𝑦 > 𝑦 in M surface profile\n𝑛 𝑐 3\nQ : 𝑦 < 𝑦 < 𝑦 in S surface profile\n𝑛 𝑐 1\nwhere, y is normal depth, y is critical depth, and yis flow depth.\nn c\nChoose the correct option from the following",
+      "questionText": "For a gradually varied flow, consider the following statements\n\nP : 𝑦_{𝑛}> 𝑦_{𝑐}> 𝑦 in M_{3}surface profile Q : 𝑦_{𝑛}< 𝑦_{𝑐}< 𝑦 in S_{1} surface profile where, y_{n} is normal depth, y_{c} is critical depth, and y is flow depth.\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For a gradually varied flow, consider the following statements\n\nP : 𝑦_{𝑛}> 𝑦_{𝑐}> 𝑦 in M_{3}surface profile Q : 𝑦_{𝑛}< 𝑦_{𝑐}< 𝑦 in S_{1} surface profile where, y_{n} is normal depth, y_{c} is critical depth, and y is flow depth.\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P is TRUE; Q is TRUE",
@@ -994,22 +1897,62 @@
         {
           "id": "A",
           "text": "P is TRUE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P is TRUE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P is FALSE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P is FALSE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1039,7 +1982,52 @@
       "questionNumber": 18,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Match the following and choose the correct option from the following\nType of reactor Diagram\n1.Plug flow reactor x.\n2.Continuously stirred tank y.\nreactor\nz.\n3.Batch reactor\nindicates stirrer for mixing (not to scale)",
+      "questionText": "Match the following and choose the correct option from the following\n\n| Type of reactor | Diagram |\n| :--- | :--- |\n| 1.Plug flow reactor | x. |\n| 2.Continuously stirred tank reactor | y. |\n| 3.Batch reactor | z. |\n\nindicates stirrer for mixing (not to scale)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Match the following and choose the correct option from the following",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type of reactor",
+            "Diagram"
+          ],
+          "rows": [
+            [
+              "1.Plug flow reactor",
+              "x."
+            ],
+            [
+              "2.Continuously stirred tank reactor",
+              "y."
+            ],
+            [
+              "3.Batch reactor",
+              "z."
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "indicates stirrer for mixing (not to scale)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q18_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1-x, 2-y, 3-z",
@@ -1052,22 +2040,62 @@
         {
           "id": "A",
           "text": "1-x, 2-y, 3-z",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-x, 2-y, 3-z",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1-z, 2-y, 3-x",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-z, 2-y, 3-x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "1-y, 2-z, 3-x",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-y, 2-z, 3-x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1-x, 2-z, 3-y",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1-x, 2-z, 3-y",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1099,7 +2127,18 @@
       "questionNumber": 19,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Multiple effect evaporator is commonly used, in the zero liquid discharge (ZLD)\nscheme, for __________",
+      "questionText": "Multiple effect evaporator is commonly used, in the zero liquid discharge (ZLD) scheme, for __________",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Multiple effect evaporator is commonly used, in the zero liquid discharge (ZLD) scheme, for __________",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "oxidation of organic pollutants",
@@ -1112,22 +2151,62 @@
         {
           "id": "A",
           "text": "oxidation of organic pollutants",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "oxidation of organic pollutants",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "precipitation of heavy metals",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "precipitation of heavy metals",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "concentrating reverse osmosis (RO) reject salts",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "concentrating reverse osmosis (RO) reject salts",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "performing selective ion exchange",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "performing selective ion exchange",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1157,7 +2236,18 @@
       "questionNumber": 20,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following statements\nP : According to the National Ambient Air Quality Standards (Central Pollution\nControl Board, Govt. of India, notification 2009), annual time weighted average\nPM standard is more than PM standard.\n10 2.5\nQ : According to the National Air Quality Index released by Govt. of India in 2015,\nsub index value of PM can be less than that of PM .\n10 2.5\nChoose the correct option from the following",
+      "questionText": "Consider the following statements\n\nP : According to the National Ambient Air Quality Standards (Central Pollution Control Board, Govt. of India, notification 2009), annual time weighted average PM_{10} standard is more than PM_{2.5}standard.\n\nQ : According to the National Air Quality Index released by Govt. of India in 2015, sub index value of PM_{10} can be less than that of PM_{2.5}.\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements\n\nP : According to the National Ambient Air Quality Standards (Central Pollution Control Board, Govt. of India, notification 2009), annual time weighted average PM_{10} standard is more than PM_{2.5}standard.\n\nQ : According to the National Air Quality Index released by Govt. of India in 2015, sub index value of PM_{10} can be less than that of PM_{2.5}.\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P is TRUE; Q is FALSE",
@@ -1170,22 +2260,62 @@
         {
           "id": "A",
           "text": "P is TRUE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P is FALSE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "P is TRUE; Q is TRUE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is TRUE; Q is TRUE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "P is FALSE; Q is FALSE",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P is FALSE; Q is FALSE",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1215,7 +2345,18 @@
       "questionNumber": 21,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Which option gives the components that are most likely to be present in the\nsegregated combustible fraction (SCF) separated from raw mixed municipal solid\nwaste (MSW)?",
+      "questionText": "Which option gives the components that are most likely to be present in the segregated combustible fraction (SCF) separated from raw mixed municipal solid waste (MSW)?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which option gives the components that are most likely to be present in the segregated combustible fraction (SCF) separated from raw mixed municipal solid waste (MSW)?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "plastics, paper, rubber, metals",
@@ -1228,22 +2369,62 @@
         {
           "id": "A",
           "text": "plastics, paper, rubber, metals",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "plastics, paper, rubber, metals",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "plastics, paper, leather, glass",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "plastics, paper, leather, glass",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "plastics, leather, textiles, rubber",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "plastics, leather, textiles, rubber",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "plastics, rubber, textiles, food waste",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "plastics, rubber, textiles, food waste",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1273,7 +2454,45 @@
       "questionNumber": 22,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Correctly match the sustainable development goal (SDG) with its theme\nSDG Theme\ni. SDG 6 p. Good Health and Well-being\nii. SDG 11 q. Responsible Consumption and Production\niii. SDG 3 r. Sustainable Cities and Communities\niv. SDG 12 s. Clean Water and Sanitation",
+      "questionText": "Correctly match the sustainable development goal (SDG) with its theme\n\n| SDG | Theme |\n| :--- | :--- |\n| i. SDG 6 | p. Good Health and Well-being |\n| ii. SDG 11 | q. Responsible Consumption and Production |\n| iii. SDG 3 | r. Sustainable Cities and Communities |\n| iv. SDG 12 | s. Clean Water and Sanitation |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Correctly match the sustainable development goal (SDG) with its theme",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "SDG",
+            "Theme"
+          ],
+          "rows": [
+            [
+              "i. SDG 6",
+              "p. Good Health and Well-being"
+            ],
+            [
+              "ii. SDG 11",
+              "q. Responsible Consumption and Production"
+            ],
+            [
+              "iii. SDG 3",
+              "r. Sustainable Cities and Communities"
+            ],
+            [
+              "iv. SDG 12",
+              "s. Clean Water and Sanitation"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "i -q ii-r iii-p iv-s",
@@ -1286,22 +2505,62 @@
         {
           "id": "A",
           "text": "i -q ii-r iii-p iv-s",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "i -q ii-r iii-p iv-s",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "i-s ii-r iii-p iv-q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "i-s ii-r iii-p iv-q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "i-s ii-r iii-q iv-p",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "i-s ii-r iii-q iv-p",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "i-p ii-q iii-r iv-s",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "i-p ii-q iii-r iv-s",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1332,34 +2591,86 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option regarding the Basel Convention",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option regarding the Basel Convention",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Almost all the nations of the world assembled for the first time in the history to\ndiscuss and find out the solution for a common environmental problem.",
-        "It was for formulating the strategies and guidelines to reduce CO and CH\n2 4\nemissions to control the global warming.",
-        "It was for formulating the strategies and guidelines to control the release of acidic\ngases that can cause acid rains in another country.",
-        "It was for formulating the strategies and guidelines for the trans-boundary\nmovement of hazardous wastes."
+        "Almost all the nations of the world assembled for the first time in the history to discuss and find out the solution for a common environmental problem.",
+        "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+        "It was for formulating the strategies and guidelines to control the release of acidic gases that can cause acid rains in another country.",
+        "It was for formulating the strategies and guidelines for the trans-boundary movement of hazardous wastes."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Almost all the nations of the world assembled for the first time in the history to\ndiscuss and find out the solution for a common environmental problem.",
-          "imageUrl": null
+          "text": "Almost all the nations of the world assembled for the first time in the history to discuss and find out the solution for a common environmental problem.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Almost all the nations of the world assembled for the first time in the history to discuss and find out the solution for a common environmental problem.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "It was for formulating the strategies and guidelines to reduce CO and CH\n2 4\nemissions to control the global warming.",
-          "imageUrl": null
+          "text": "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.",
+              "content": "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "It was for formulating the strategies and guidelines to control the release of acidic\ngases that can cause acid rains in another country.",
-          "imageUrl": null
+          "text": "It was for formulating the strategies and guidelines to control the release of acidic gases that can cause acid rains in another country.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It was for formulating the strategies and guidelines to control the release of acidic gases that can cause acid rains in another country.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "It was for formulating the strategies and guidelines for the trans-boundary\nmovement of hazardous wastes.",
-          "imageUrl": null
+          "text": "It was for formulating the strategies and guidelines for the trans-boundary movement of hazardous wastes.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "It was for formulating the strategies and guidelines for the trans-boundary movement of hazardous wastes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1389,7 +2700,18 @@
       "questionNumber": 24,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following statements\n(i) Environmental pollutant concentration is generally modeled using\nlognormal distribution.\n(ii) Environmental pollutant concentration is generally modeled using\nPoisson distribution.\n(iii) The weekly rate of exceedance of environmental pollutant concentration\nwith regards to a given standard is generally modeled using lognormal\ndistribution.\n(iv) The weekly rate of exceedance of environmental pollutant concentration\nwith regards to a given standard is generally modeled using Poisson\ndistribution.\nChoose the correct option(s) from the following",
+      "questionText": "Consider the following statements\n\n(i) Environmental pollutant concentration is generally modeled using lognormal distribution. (ii) Environmental pollutant concentration is generally modeled using Poisson distribution. (iii) The weekly rate of exceedance of environmental pollutant concentration with regards to a given standard is generally modeled using lognormal distribution. (iv) The weekly rate of exceedance of environmental pollutant concentration with regards to a given standard is generally modeled using Poisson distribution.\n\nChoose the correct option(s) from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements\n\n(i) Environmental pollutant concentration is generally modeled using lognormal distribution. (ii) Environmental pollutant concentration is generally modeled using Poisson distribution. (iii) The weekly rate of exceedance of environmental pollutant concentration with regards to a given standard is generally modeled using lognormal distribution. (iv) The weekly rate of exceedance of environmental pollutant concentration with regards to a given standard is generally modeled using Poisson distribution.\n\nChoose the correct option(s) from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "(i) and (iv) are correct",
@@ -1402,22 +2724,62 @@
         {
           "id": "A",
           "text": "(i) and (iv) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (iv) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(i) is correct and (iii) is incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is correct and (iii) is incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(ii) and (iv) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) and (iv) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(ii) and (iv) are incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) and (iv) are incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -1453,12 +2815,23 @@
       "questionNumber": 25,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Choose the correct statement(s) from the following regarding the structure/\nreproduction of microorganisms",
+      "questionText": "Choose the correct statement(s) from the following regarding the structure/ reproduction of microorganisms",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct statement(s) from the following regarding the structure/ reproduction of microorganisms",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Prokaryotes do not have nucleus but Eukaryotes have nucleus.",
         "Both Prokaryotes and Eukaryotes have nucleus.",
-        "No binary fission happens in Eukaryotes, however, Prokaryotes rely on binary\nfission for reproduction.",
+        "No binary fission happens in Eukaryotes, however, Prokaryotes rely on binary fission for reproduction.",
         "Both Prokaryotes and Eukaryotes rely on binary fission for reproduction."
       ],
       "optionImages": null,
@@ -1466,22 +2839,62 @@
         {
           "id": "A",
           "text": "Prokaryotes do not have nucleus but Eukaryotes have nucleus.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Prokaryotes do not have nucleus but Eukaryotes have nucleus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Both Prokaryotes and Eukaryotes have nucleus.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both Prokaryotes and Eukaryotes have nucleus.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "No binary fission happens in Eukaryotes, however, Prokaryotes rely on binary\nfission for reproduction.",
-          "imageUrl": null
+          "text": "No binary fission happens in Eukaryotes, however, Prokaryotes rely on binary fission for reproduction.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "No binary fission happens in Eukaryotes, however, Prokaryotes rely on binary fission for reproduction.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Both Prokaryotes and Eukaryotes rely on binary fission for reproduction.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both Prokaryotes and Eukaryotes rely on binary fission for reproduction.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1517,7 +2930,18 @@
       "questionNumber": 26,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following statements related to nitrification process:\n(i) Electron acceptor type vary depending on whether nitrosomonas or\nnitrobacter is involved.\n(ii) Predominant carbon source is organic matter.\n(iii) Predominant carbon source is inorganic carbon.\n(iv) Electron donor during conversion of ammonium ions to nitrite ions is\nammonium ions.\nChoose the correct option(s) from the following",
+      "questionText": "(i) Electron acceptor type vary depending on whether nitrosomonas or nitrobacter is involved. (ii) Predominant carbon source is organic matter. (iii) Predominant carbon source is inorganic carbon. (iv) Electron donor during conversion of ammonium ions to nitrite ions is ammonium ions.\n\nChoose the correct option(s) from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "(i) Electron acceptor type vary depending on whether nitrosomonas or nitrobacter is involved. (ii) Predominant carbon source is organic matter. (iii) Predominant carbon source is inorganic carbon. (iv) Electron donor during conversion of ammonium ions to nitrite ions is ammonium ions.\n\nChoose the correct option(s) from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "(iii) and (iv) are correct",
@@ -1530,22 +2954,62 @@
         {
           "id": "A",
           "text": "(iii) and (iv) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(iii) and (iv) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(i) and (ii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (ii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(i) is incorrect and (iii) is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is incorrect and (iii) is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(ii) is correct and (iii) is incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(ii) is correct and (iii) is incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -1581,35 +3045,86 @@
       "questionNumber": 27,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Stubble burning results in release of particulate matter, volatile organic compounds,\noxides of nitrogen and sulfur, to name a few. A researcher is planning to use a\nconventional Gaussian dispersion model to estimate the contribution of stubble\nburning in a nearby state to air pollution in New Delhi.\nChoose the option(s) which could explain the possible limitations in this approach",
+      "questionText": "Stubble burning results in release of particulate matter, volatile organic compounds, oxides of nitrogen and sulfur, to name a few. A researcher is planning to use a conventional Gaussian dispersion model to estimate the contribution of stubble burning in a nearby state to air pollution in New Delhi.\n\nChoose the option(s) which could explain the possible limitations in this approach",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Stubble burning results in release of particulate matter, volatile organic compounds, oxides of nitrogen and sulfur, to name a few. A researcher is planning to use a conventional Gaussian dispersion model to estimate the contribution of stubble burning in a nearby state to air pollution in New Delhi.\n\nChoose the option(s) which could explain the possible limitations in this approach",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "assumption of steady state conditions e.g. constant wind speed, wind direction, and\nemission, etc. in conventional Gaussian dispersion models",
-        "non-accounting of wet and dry deposition in conventional Gaussian dispersion\nmodels",
-        "non-handling of chemical transformation of pollutants in conventional Gaussian\ndispersion models",
-        "requirement of more computational resources by conventional Gaussian dispersion\nmodels compared to chemical transport models"
+        "assumption of steady state conditions e.g. constant wind speed, wind direction, and emission, etc. in conventional Gaussian dispersion models",
+        "non-accounting of wet and dry deposition in conventional Gaussian dispersion models",
+        "non-handling of chemical transformation of pollutants in conventional Gaussian dispersion models",
+        "requirement of more computational resources by conventional Gaussian dispersion models compared to chemical transport models"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "assumption of steady state conditions e.g. constant wind speed, wind direction, and\nemission, etc. in conventional Gaussian dispersion models",
-          "imageUrl": null
+          "text": "assumption of steady state conditions e.g. constant wind speed, wind direction, and emission, etc. in conventional Gaussian dispersion models",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "assumption of steady state conditions e.g. constant wind speed, wind direction, and emission, etc. in conventional Gaussian dispersion models",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "non-accounting of wet and dry deposition in conventional Gaussian dispersion\nmodels",
-          "imageUrl": null
+          "text": "non-accounting of wet and dry deposition in conventional Gaussian dispersion models",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "non-accounting of wet and dry deposition in conventional Gaussian dispersion models",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "non-handling of chemical transformation of pollutants in conventional Gaussian\ndispersion models",
-          "imageUrl": null
+          "text": "non-handling of chemical transformation of pollutants in conventional Gaussian dispersion models",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "non-handling of chemical transformation of pollutants in conventional Gaussian dispersion models",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "requirement of more computational resources by conventional Gaussian dispersion\nmodels compared to chemical transport models",
-          "imageUrl": null
+          "text": "requirement of more computational resources by conventional Gaussian dispersion models compared to chemical transport models",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "requirement of more computational resources by conventional Gaussian dispersion models compared to chemical transport models",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B;C",
@@ -1648,11 +3163,22 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option(s) from the following in the plastic waste management",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) from the following in the plastic waste management",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Plastic wastes may be burnt to generate fuel oil and fuel gas.",
         "Plastic wastes along with bitumen may be used for road/pavement construction.",
-        "Polyethylene terephthalate (PET) and high density polyethylene (HDPE) are the\nmost common plastics for recycling.",
+        "Polyethylene terephthalate (PET) and high density polyethylene (HDPE) are the most common plastics for recycling.",
         "Plastics made of branched monomers can be easily recycled."
       ],
       "optionImages": null,
@@ -1660,22 +3186,62 @@
         {
           "id": "A",
           "text": "Plastic wastes may be burnt to generate fuel oil and fuel gas.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Plastic wastes may be burnt to generate fuel oil and fuel gas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Plastic wastes along with bitumen may be used for road/pavement construction.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Plastic wastes along with bitumen may be used for road/pavement construction.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Polyethylene terephthalate (PET) and high density polyethylene (HDPE) are the\nmost common plastics for recycling.",
-          "imageUrl": null
+          "text": "Polyethylene terephthalate (PET) and high density polyethylene (HDPE) are the most common plastics for recycling.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Polyethylene terephthalate (PET) and high density polyethylene (HDPE) are the most common plastics for recycling.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Plastics made of branched monomers can be easily recycled.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Plastics made of branched monomers can be easily recycled.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -1711,7 +3277,18 @@
       "questionNumber": 29,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Choose the option(s) giving the correct process flow-sheet for producing refuse\nderived fuel (RDF) from the segregated waste collected in the dry waste containers\n(blue coloured containers of the municipal solid waste (MSW) collection scheme).",
+      "questionText": "Choose the option(s) giving the correct process flow-sheet for producing refuse derived fuel (RDF) from the segregated waste collected in the dry waste containers (blue coloured containers of the municipal solid waste (MSW) collection scheme).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the option(s) giving the correct process flow-sheet for producing refuse derived fuel (RDF) from the segregated waste collected in the dry waste containers (blue coloured containers of the municipal solid waste (MSW) collection scheme).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "",
@@ -1729,22 +3306,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/es/q29_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/es/q29_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/es/q29_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2025/es/q29_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/es/q29_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1778,35 +3395,86 @@
       "questionNumber": 30,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Choose the correct option(s) from the following regarding the symbiotic\nrelationships",
+      "questionText": "Choose the correct option(s) from the following regarding the symbiotic relationships",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) from the following regarding the symbiotic relationships",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Lichens are a symbiotic association of fungi and bacteria. They can survive in\nextreme conditions of air pollution.",
-        "Lichens are a symbiotic association of fungi and bacteria. The fungi can absorb\nwater and minerals from atmosphere, and bacteria can generate foods.",
-        "Lichens are a symbiotic association of fungi and algae. They can survive in extreme\nconditions, but are very sensitive to air pollution.",
-        "Lichens are a symbiotic association of fungi and algae. The fungi can absorb water\nand minerals from atmosphere, and algae can generate food through photosynthesis."
+        "Lichens are a symbiotic association of fungi and bacteria. They can survive in extreme conditions of air pollution.",
+        "Lichens are a symbiotic association of fungi and bacteria. The fungi can absorb water and minerals from atmosphere, and bacteria can generate foods.",
+        "Lichens are a symbiotic association of fungi and algae. They can survive in extreme conditions, but are very sensitive to air pollution.",
+        "Lichens are a symbiotic association of fungi and algae. The fungi can absorb water and minerals from atmosphere, and algae can generate food through photosynthesis."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Lichens are a symbiotic association of fungi and bacteria. They can survive in\nextreme conditions of air pollution.",
-          "imageUrl": null
+          "text": "Lichens are a symbiotic association of fungi and bacteria. They can survive in extreme conditions of air pollution.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lichens are a symbiotic association of fungi and bacteria. They can survive in extreme conditions of air pollution.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Lichens are a symbiotic association of fungi and bacteria. The fungi can absorb\nwater and minerals from atmosphere, and bacteria can generate foods.",
-          "imageUrl": null
+          "text": "Lichens are a symbiotic association of fungi and bacteria. The fungi can absorb water and minerals from atmosphere, and bacteria can generate foods.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lichens are a symbiotic association of fungi and bacteria. The fungi can absorb water and minerals from atmosphere, and bacteria can generate foods.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Lichens are a symbiotic association of fungi and algae. They can survive in extreme\nconditions, but are very sensitive to air pollution.",
-          "imageUrl": null
+          "text": "Lichens are a symbiotic association of fungi and algae. They can survive in extreme conditions, but are very sensitive to air pollution.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lichens are a symbiotic association of fungi and algae. They can survive in extreme conditions, but are very sensitive to air pollution.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Lichens are a symbiotic association of fungi and algae. The fungi can absorb water\nand minerals from atmosphere, and algae can generate food through photosynthesis.",
-          "imageUrl": null
+          "text": "Lichens are a symbiotic association of fungi and algae. The fungi can absorb water and minerals from atmosphere, and algae can generate food through photosynthesis.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lichens are a symbiotic association of fungi and algae. The fungi can absorb water and minerals from atmosphere, and algae can generate food through photosynthesis.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C;D",
@@ -1842,35 +3510,86 @@
       "questionNumber": 31,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Methane hydrates have special crystal structure of water, where methane gas\nmolecules are trapped. Choose the correct option(s) from the following",
+      "questionText": "Methane hydrates have special crystal structure of water, where methane gas molecules are trapped. Choose the correct option(s) from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Methane hydrates have special crystal structure of water, where methane gas molecules are trapped. Choose the correct option(s) from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Methane hydrates exist in abundance near the ocean bed, where the pressure is high\nenough for their existence.",
-        "Methane hydrates exist in abundance in the polar regions, where the temperature is\nlow enough for their existence.",
-        "Methane hydrates can be a huge source of energy, but can accelerate global\nwarming considerably if the entrapped methane is released to the atmosphere.",
-        "Methane hydrates can be a huge source of energy, but difficult to exploit\ncommercially."
+        "Methane hydrates exist in abundance near the ocean bed, where the pressure is high enough for their existence.",
+        "Methane hydrates exist in abundance in the polar regions, where the temperature is low enough for their existence.",
+        "Methane hydrates can be a huge source of energy, but can accelerate global warming considerably if the entrapped methane is released to the atmosphere.",
+        "Methane hydrates can be a huge source of energy, but difficult to exploit commercially."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Methane hydrates exist in abundance near the ocean bed, where the pressure is high\nenough for their existence.",
-          "imageUrl": null
+          "text": "Methane hydrates exist in abundance near the ocean bed, where the pressure is high enough for their existence.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Methane hydrates exist in abundance near the ocean bed, where the pressure is high enough for their existence.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Methane hydrates exist in abundance in the polar regions, where the temperature is\nlow enough for their existence.",
-          "imageUrl": null
+          "text": "Methane hydrates exist in abundance in the polar regions, where the temperature is low enough for their existence.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Methane hydrates exist in abundance in the polar regions, where the temperature is low enough for their existence.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Methane hydrates can be a huge source of energy, but can accelerate global\nwarming considerably if the entrapped methane is released to the atmosphere.",
-          "imageUrl": null
+          "text": "Methane hydrates can be a huge source of energy, but can accelerate global warming considerably if the entrapped methane is released to the atmosphere.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Methane hydrates can be a huge source of energy, but can accelerate global warming considerably if the entrapped methane is released to the atmosphere.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Methane hydrates can be a huge source of energy, but difficult to exploit\ncommercially.",
-          "imageUrl": null
+          "text": "Methane hydrates can be a huge source of energy, but difficult to exploit commercially.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Methane hydrates can be a huge source of energy, but difficult to exploit commercially.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C;D",
@@ -1909,34 +3628,85 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option(s) from the following regarding urban environment",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) from the following regarding urban environment",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Urban heat island can exacerbate urban flooding by intensifying rainfall intensity.",
-        "Urban canyons increase ventilation by trapping heat and thus enhancing urban heat\nisland effect.",
-        "Program evaluation and review technique (PERT) is always used to estimate the\neconomic impact of mitigation strategies for urban heat island effect.",
-        "In general, land surfaces in urban areas emit more long wave radiation compared to\nthose in rural areas, and thus contribute to higher night time temperature."
+        "Urban heat isl and can exacerbate urban flooding by intensifying rainfall intensity.",
+        "Urban canyons increase ventilation by trapping heat and thus enhancing urban heat isl and effect.",
+        "Program evaluation and review technique (PERT) is always used to estimate the economic impact of mitigation strategies for urban heat isl and effect.",
+        "In general, l and surfaces in urban areas emit more long wave radiation compared to those in rural areas, and thus contribute to higher night time temperature."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Urban heat island can exacerbate urban flooding by intensifying rainfall intensity.",
-          "imageUrl": null
+          "text": "Urban heat isl and can exacerbate urban flooding by intensifying rainfall intensity.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Urban heat isl and can exacerbate urban flooding by intensifying rainfall intensity.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Urban canyons increase ventilation by trapping heat and thus enhancing urban heat\nisland effect.",
-          "imageUrl": null
+          "text": "Urban canyons increase ventilation by trapping heat and thus enhancing urban heat isl and effect.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Urban canyons increase ventilation by trapping heat and thus enhancing urban heat isl and effect.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Program evaluation and review technique (PERT) is always used to estimate the\neconomic impact of mitigation strategies for urban heat island effect.",
-          "imageUrl": null
+          "text": "Program evaluation and review technique (PERT) is always used to estimate the economic impact of mitigation strategies for urban heat isl and effect.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Program evaluation and review technique (PERT) is always used to estimate the economic impact of mitigation strategies for urban heat isl and effect.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "In general, land surfaces in urban areas emit more long wave radiation compared to\nthose in rural areas, and thus contribute to higher night time temperature.",
-          "imageUrl": null
+          "text": "In general, l and surfaces in urban areas emit more long wave radiation compared to those in rural areas, and thus contribute to higher night time temperature.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In general, l and surfaces in urban areas emit more long wave radiation compared to those in rural areas, and thus contribute to higher night time temperature.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -1973,34 +3743,85 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option(s) from the following regarding cumulative toxicity",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) from the following regarding cumulative toxicity",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Bioaccumulation is the process by which a living organism keeps on accumulating\npollutants in its body due to continuous exposure, whereas, bio-magnification is the\nprocess by which higher order organisms accumulate more pollutants than the lower\norder organisms in a food chain.",
-        "Biomagnification is the process by which a living organism keeps on accumulating\npollutants in its body due to continuous exposure, whereas, bioaccumulation is the\nprocess by which higher order organisms accumulate more pollutants than the lower\norder organisms in a food chain.",
-        "Bioaccumulation and biomagnification are possible with heavy metals, but not with\npesticides and pharmaceutical compounds.",
-        "Bioaccumulation and biomagnification are possible with heavy metals, pesticides\nand pharmaceutical compounds."
+        "Bioaccumulation is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bio-magnification is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+        "Biomagnification is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bioaccumulation is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+        "Bioaccumulation and biomagnification are possible with heavy metals, but not with pesticides and pharmaceutical compounds.",
+        "Bioaccumulation and biomagnification are possible with heavy metals, pesticides and pharmaceutical compounds."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Bioaccumulation is the process by which a living organism keeps on accumulating\npollutants in its body due to continuous exposure, whereas, bio-magnification is the\nprocess by which higher order organisms accumulate more pollutants than the lower\norder organisms in a food chain.",
-          "imageUrl": null
+          "text": "Bioaccumulation is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bio-magnification is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Bioaccumulation is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bio-magnification is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Biomagnification is the process by which a living organism keeps on accumulating\npollutants in its body due to continuous exposure, whereas, bioaccumulation is the\nprocess by which higher order organisms accumulate more pollutants than the lower\norder organisms in a food chain.",
-          "imageUrl": null
+          "text": "Biomagnification is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bioaccumulation is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Biomagnification is the process by which a living organism keeps on accumulating pollutants in its body due to continuous exposure, whereas, bioaccumulation is the process by which higher order organisms accumulate more pollutants than the lower order organisms in a food chain.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Bioaccumulation and biomagnification are possible with heavy metals, but not with\npesticides and pharmaceutical compounds.",
-          "imageUrl": null
+          "text": "Bioaccumulation and biomagnification are possible with heavy metals, but not with pesticides and pharmaceutical compounds.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Bioaccumulation and biomagnification are possible with heavy metals, but not with pesticides and pharmaceutical compounds.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Bioaccumulation and biomagnification are possible with heavy metals, pesticides\nand pharmaceutical compounds.",
-          "imageUrl": null
+          "text": "Bioaccumulation and biomagnification are possible with heavy metals, pesticides and pharmaceutical compounds.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Bioaccumulation and biomagnification are possible with heavy metals, pesticides and pharmaceutical compounds.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2036,7 +3857,18 @@
       "questionNumber": 34,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "ln(1+𝑥)\nlim ( ) is _____________ (rounded off to two decimal places).\n𝑥→0 2 sin 𝑥",
+      "questionText": "𝑥→0 lim ( \\(\\frac{ln(1+𝑥)}{2sin}\\) is _____________ (rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "𝑥→0 lim ( \\(\\frac{ln(1+𝑥)}{2sin}\\) is _____________ (rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2071,7 +3903,18 @@
       "questionNumber": 35,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "An unconfined aquifer of areal extent 20 km \\times 20 km has hydraulic conductivity of\n4 m/day, porosity of 0.32, and storage coefficient (specific yield) of 0.18. If the\ninitial saturated thickness of the aquifer is 30 m, and 4 \\times 108 m3 of water is extracted\nfrom the aquifer, then the decline in the saturated thickness is ______________ m.\n(rounded off to two decimal places)",
+      "questionText": "An unconfined aquifer of areal extent 20 km \\times 20 km has hydraulic conductivity of 4 m/day, porosity of 0.32, and storage coefficient (specific yield) of 0.18. If the initial saturated thickness of the aquifer is 30 m, and 4 \\times 10^{8} m^{3} of water is extracted from the aquifer, then the decline in the saturated thickness is ______________ m. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An unconfined aquifer of areal extent 20 km \\times 20 km has hydraulic conductivity of 4 m/day, porosity of 0.32, and storage coefficient (specific yield) of 0.18. If the initial saturated thickness of the aquifer is 30 m, and 4 \\times 10^{8} m^{3} of water is extracted from the aquifer, then the decline in the saturated thickness is ______________ m. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2106,7 +3949,18 @@
       "questionNumber": 36,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A researcher added certain amount of HgCl to water at pH 10. He calculated the\n2\nexpected concentration of mercury in the water. He asked his student to measure\nthe concentration. His student used an instrument that can measure only the free\nmetal, Hg2+. The student observed that the concentration measured by him was\nsignificantly less than the concentration calculated by the researcher. How can he\nexplain the paradox to the researcher?\nExplanation 1: Significant fraction of the mercury would have changed phase from\naqueous to gaseous phase, thus leaving less mercury in the water\nExplanation 2: Fraction of the mercury added to water would have formed aqueous\ncomplexes\nExplanation 3: Fraction of the mercury added to water could have precipitated\nChoose the correct option from the following",
+      "questionText": "expected concentration of mercury in the water. He asked his student to measure the concentration. His student used an instrument that can measure only the free metal, Hg^{2+}. The student observed that the concentration measured by him was significantly less than the concentration calculated by the researcher. How can he explain the paradox to the researcher?\n\nExplanation 1: Significant fraction of the mercury would have changed phase from aqueous to gaseous phase, thus leaving less mercury in the water\n\nExplanation 2: Fraction of the mercury added to water would have formed aqueous complexes\n\nExplanation 3: Fraction of the mercury added to water could have precipitated\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "expected concentration of mercury in the water. He asked his student to measure the concentration. His student used an instrument that can measure only the free metal, Hg^{2+}. The student observed that the concentration measured by him was significantly less than the concentration calculated by the researcher. How can he explain the paradox to the researcher?\n\nExplanation 1: Significant fraction of the mercury would have changed phase from aqueous to gaseous phase, thus leaving less mercury in the water\n\nExplanation 2: Fraction of the mercury added to water would have formed aqueous complexes\n\nExplanation 3: Fraction of the mercury added to water could have precipitated\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "only Explanation 1 is correct",
@@ -2119,22 +3973,62 @@
         {
           "id": "A",
           "text": "only Explanation 1 is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "only Explanation 1 is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Explanations 1 and 2 are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Explanations 1 and 2 are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Explanations 1 and 3 are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Explanations 1 and 3 are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Explanations 2 and 3 are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Explanations 2 and 3 are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2165,34 +4059,91 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Correctly label the speciation diagram below:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Correctly label the speciation diagram below:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q37_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "I= PO 3-, II= HPO 2-, III= H PO -, IV= H PO\n4 4 2 4 3 4",
-        "I= H PO , II= HPO 2-, III= H PO -, IV=PO 3-\n3 4 4 2 4 4",
-        "I=H PO , II=H PO -, III=HPO 2-, IV=PO 3-\n3 4 2 4 4 4",
-        "I= PO 3-, II= H PO -, III= H PO , IV=HPO 2-\n4 2 4 3 4 4"
+        "I= PO43-, II= HPO42-, III= H2PO4-, IV= H3PO4",
+        "I= H3PO4, II= HPO42-, III= H2PO4-, IV=PO43-",
+        "I=H3PO4, II=H2PO4-, III=HPO42-, IV=PO43-",
+        "I= PO43-, II= H2PO4-, III= H3PO4, IV=HPO42-"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "I= PO 3-, II= HPO 2-, III= H PO -, IV= H PO\n4 4 2 4 3 4",
-          "imageUrl": null
+          "text": "I= PO43-, II= HPO42-, III= H2PO4-, IV= H3PO4",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "I= PO43-, II= HPO42-, III= H2PO4-, IV= H3PO4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "I= H PO , II= HPO 2-, III= H PO -, IV=PO 3-\n3 4 4 2 4 4",
-          "imageUrl": null
+          "text": "I= H3PO4, II= HPO42-, III= H2PO4-, IV=PO43-",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "I= H3PO4, II= HPO42-, III= H2PO4-, IV=PO43-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "I=H PO , II=H PO -, III=HPO 2-, IV=PO 3-\n3 4 2 4 4 4",
-          "imageUrl": null
+          "text": "I=H3PO4, II=H2PO4-, III=HPO42-, IV=PO43-",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "I=H3PO4, II=H2PO4-, III=HPO42-, IV=PO43-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "I= PO 3-, II= H PO -, III= H PO , IV=HPO 2-\n4 2 4 3 4 4",
-          "imageUrl": null
+          "text": "I= PO43-, II= H2PO4-, III= H3PO4, IV=HPO42-",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "I= PO43-, II= H2PO4-, III= H3PO4, IV=HPO42-",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2224,7 +4175,18 @@
       "questionNumber": 38,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following statements on microbial metabolism\n(i) Utilization of carbon for cell synthesis is termed as anabolism.\n(ii) During catabolism, adenosine triphosphate (ATP) is converted into\nadenosine diphosphate (ADP).\nChoose the correct option from the following",
+      "questionText": "Consider the following statements on microbial metabolism\n\n(i) Utilization of carbon for cell synthesis is termed as anabolism. (ii) During catabolism, adenosine triphosphate (ATP) is converted into adenosine diphosphate (ADP).\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements on microbial metabolism\n\n(i) Utilization of carbon for cell synthesis is termed as anabolism. (ii) During catabolism, adenosine triphosphate (ATP) is converted into adenosine diphosphate (ADP).\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(i) and (ii) are correct",
@@ -2237,22 +4199,62 @@
         {
           "id": "A",
           "text": "(i) and (ii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (ii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "(i) and (ii) are incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) and (ii) are incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "(i) is correct and (ii) is incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is correct and (ii) is incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "(i) is incorrect and (ii) is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i) is incorrect and (ii) is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2282,35 +4284,96 @@
       "questionNumber": 39,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following figure of an activated sludge process (ASP), depicting the\nflow (Q), substrate (S), and microorganism concentration (X) at various points in\nthe system, where subscripts \"0\", \"r\", \"w\", \"e\", and \"i\" indicate influent, recycle\nline, wastage, effluent, and flow from aeration tank to settling tank, respectively.\nNote that influent to the ASP has microbes too. V is volume of aeration tank.\nChoose the correct option for net rate of formation of microorganisms in the system\nat steady state, from the following",
+      "questionText": "Consider the following figure of an activated sludge process (ASP), depicting the flow (Q), substrate (S), and microorganism concentration (X) at various points in the system, where subscripts \"0\", \"r\", \"w\", \"e\", and \"i\" indicate influent, recycle line, wastage, effluent, and flow from aeration tank to settling tank, respectively. Note that influent to the ASP has microbes too. V is volume of aeration tank.\n\nChoose the correct option for net rate of formation of microorganisms in the system at steady state, from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following figure of an activated sludge process (ASP), depicting the flow (Q), substrate (S), and microorganism concentration (X) at various points in the system, where subscripts \"0\", \"r\", \"w\", \"e\", and \"i\" indicate influent, recycle line, wastage, effluent, and flow from aeration tank to settling tank, respectively. Note that influent to the ASP has microbes too. V is volume of aeration tank.\n\nChoose the correct option for net rate of formation of microorganisms in the system at steady state, from the following",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q39_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(Q-Q )X +Q X -QX\nw e w r 0\nV",
-        "(Q-Q )X +Q X\nw e w r\nV",
-        "(Q-Q )X +Q X\nw e w r\nVX",
-        "(Q+Q )X +Q X\nr i w r\nVX"
+        "\\(\\frac{(Q-Qw)Xe+QwXr-QX^{0}}{V}\\)",
+        "\\(\\frac{(Q-Qw)Xe+QwXr}{V}\\)",
+        "\\(\\frac{(Q-Qw)Xe+QwXr}{VX}\\)",
+        "\\(\\frac{(Q+Qr)Xi+QwXr}{VX}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(Q-Q )X +Q X -QX\nw e w r 0\nV",
-          "imageUrl": null
+          "text": "\\(\\frac{(Q-Qw)Xe+QwXr-QX^{0}}{V}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{(Q-Qw)Xe+QwXr-QX^{0}}{V}",
+              "content": "\\(\\frac{(Q-Qw)Xe+QwXr-QX^{0}}{V}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "(Q-Q )X +Q X\nw e w r\nV",
-          "imageUrl": null
+          "text": "\\(\\frac{(Q-Qw)Xe+QwXr}{V}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{(Q-Qw)Xe+QwXr}{V}",
+              "content": "\\(\\frac{(Q-Qw)Xe+QwXr}{V}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "(Q-Q )X +Q X\nw e w r\nVX",
-          "imageUrl": null
+          "text": "\\(\\frac{(Q-Qw)Xe+QwXr}{VX}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{(Q-Qw)Xe+QwXr}{VX}",
+              "content": "\\(\\frac{(Q-Qw)Xe+QwXr}{VX}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "(Q+Q )X +Q X\nr i w r\nVX",
-          "imageUrl": null
+          "text": "\\(\\frac{(Q+Qr)Xi+QwXr}{VX}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{(Q+Qr)Xi+QwXr}{VX}",
+              "content": "\\(\\frac{(Q+Qr)Xi+QwXr}{VX}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2342,7 +4405,18 @@
       "questionNumber": 40,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following statements\n(i) Sound pressure changes with distance from the source\n(ii) Sound power is a property of the source\n(iii) Sound intensity is sound power per unit volume\nChoose the correct option from the following",
+      "questionText": "Consider the following statements\n\n(i) Sound pressure changes with distance from the source (ii) Sound power is a property of the source (iii) Sound intensity is sound power per unit volume\n\nChoose the correct option from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider the following statements\n\n(i) Sound pressure changes with distance from the source (ii) Sound power is a property of the source (iii) Sound intensity is sound power per unit volume\n\nChoose the correct option from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "(i), (ii), and (iii) are correct",
@@ -2355,22 +4429,62 @@
         {
           "id": "A",
           "text": "(i), (ii), and (iii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(i), (ii), and (iii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "only (i) and (ii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "only (i) and (ii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "only (i) and (iii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "only (i) and (iii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "only (ii) and (iii) are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "only (ii) and (iii) are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2400,35 +4514,89 @@
       "questionNumber": 41,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "At a pressure of 1 atmosphere and temperature of 25 C, 365 µg m-3 of a pollutant\ncorresponds to mixing ratio of 139 parts per billion (ppb). The atomic weights: C -\n12, H - 1, O - 16, N - 14 and S - 32. Which one of the following options most\nclosely represents the pollutant",
+      "questionText": "At a pressure of 1 atmosphere and temperature of 25 C, 365 µg m^{-3} of a pollutant corresponds to mixing ratio of 139 parts per billion (ppb). The atomic weights: C - 12, H - 1, O - 16, N - 14 and S - 32. Which one of the following options most closely represents the pollutant",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "At a pressure of 1 atmosphere and temperature of 25 C, 365 µg m^{-3} of a pollutant corresponds to mixing ratio of 139 parts per billion (ppb). The atomic weights: C - 12, H - 1, O - 16, N - 14 and S - 32. Which one of the following options most closely represents the pollutant",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "SO\n2",
-        "NO\n2",
-        "O\n3",
+        "\\(SO_{2}\\)",
+        "\\(NO_{2}\\)",
+        "\\(O_{3}\\)",
         "CO"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "SO\n2",
-          "imageUrl": null
+          "text": "\\(SO_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "SO_{2}",
+              "content": "\\(SO_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "NO\n2",
-          "imageUrl": null
+          "text": "\\(NO_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "NO_{2}",
+              "content": "\\(NO_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "O\n3",
-          "imageUrl": null
+          "text": "\\(O_{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "O_{3}",
+              "content": "\\(O_{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
           "text": "CO",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "CO",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2458,35 +4626,86 @@
       "questionNumber": 42,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Which option gives the best control strategies for Dioxins and Furans in the flue gas\nemitted from waste incineration facilities?",
+      "questionText": "Which option gives the best control strategies for Dioxins and Furans in the flue gas emitted from waste incineration facilities?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which option gives the best control strategies for Dioxins and Furans in the flue gas emitted from waste incineration facilities?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Avoid burning polystyrene (PS) and polyethylene (PE); ensure the furnace\ntemperature above 1000 °C; and use a bag filter for cleaning the flue gas.",
-        "Avoid burning polyvinyl chloride (PVC); quickly cool down the flue gas through\nthe temperature range 400 - 250 °C; and use an activated carbon treatment for the\nflue gas.",
-        "Avoid burning food wastes; ensure the furnace temperature above 900 \\pm 50 °C; and\nuse an electrostatic precipitator (ESP) for cleaning the flue gas.",
-        "Avoid burning metal bearing waste; ensure the flue gas temperature above 1000 °C;\nand use a venturi scrubber for cleaning the flue gas."
+        "Avoid burning polystyrene (PS) and polyethylene (PE); ensure the furnace temperature above 1000 °C; and use a bag filter for cleaning the flue gas.",
+        "Avoid burning polyvinyl chloride (PVC); quickly cool down the flue gas through the temperature range 400 - 250 °C; and use an activated carbon treatment for the flue gas.",
+        "Avoid burning food wastes; ensure the furnace temperature above 900 \\pm 50 °C; and use an electrostatic precipitator (ESP) for cleaning the flue gas.",
+        "Avoid burning metal bearing waste; ensure the flue gas temperature above 1000 °C; and use a venturi scrubber for cleaning the flue gas."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Avoid burning polystyrene (PS) and polyethylene (PE); ensure the furnace\ntemperature above 1000 °C; and use a bag filter for cleaning the flue gas.",
-          "imageUrl": null
+          "text": "Avoid burning polystyrene (PS) and polyethylene (PE); ensure the furnace temperature above 1000 °C; and use a bag filter for cleaning the flue gas.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Avoid burning polystyrene (PS) and polyethylene (PE); ensure the furnace temperature above 1000 °C; and use a bag filter for cleaning the flue gas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Avoid burning polyvinyl chloride (PVC); quickly cool down the flue gas through\nthe temperature range 400 - 250 °C; and use an activated carbon treatment for the\nflue gas.",
-          "imageUrl": null
+          "text": "Avoid burning polyvinyl chloride (PVC); quickly cool down the flue gas through the temperature range 400 - 250 °C; and use an activated carbon treatment for the flue gas.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Avoid burning polyvinyl chloride (PVC); quickly cool down the flue gas through the temperature range 400 - 250 °C; and use an activated carbon treatment for the flue gas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Avoid burning food wastes; ensure the furnace temperature above 900 \\pm 50 °C; and\nuse an electrostatic precipitator (ESP) for cleaning the flue gas.",
-          "imageUrl": null
+          "text": "Avoid burning food wastes; ensure the furnace temperature above 900 \\pm 50 °C; and use an electrostatic precipitator (ESP) for cleaning the flue gas.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Avoid burning food wastes; ensure the furnace temperature above 900 \\pm 50 °C; and use an electrostatic precipitator (ESP) for cleaning the flue gas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Avoid burning metal bearing waste; ensure the flue gas temperature above 1000 °C;\nand use a venturi scrubber for cleaning the flue gas.",
-          "imageUrl": null
+          "text": "Avoid burning metal bearing waste; ensure the flue gas temperature above 1000 °C; and use a venturi scrubber for cleaning the flue gas.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Avoid burning metal bearing waste; ensure the flue gas temperature above 1000 °C; and use a venturi scrubber for cleaning the flue gas.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2517,34 +4736,85 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option(s) from the following regarding the solubility in water",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) from the following regarding the solubility in water",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Water is a polar molecule because of the asymmetric distribution of charge between\nthe oxygen and hydrogen atoms of the water molecule.",
-        "In a water molecule, the electrons shared between oxygen and hydrogen are\nattracted more towards the hydrogen atom.",
-        "Non-polar compounds are highly soluble in water because of their strong interaction\nwith water molecules.",
+        "Water is a polar molecule because of the asymmetric distribution of charge between the oxygen and hydrogen atoms of the water molecule.",
+        "In a water molecule, the electrons shared between oxygen and hydrogen are attracted more towards the hydrogen atom.",
+        "Non-polar compounds are highly soluble in water because of their strong interaction with water molecules.",
         "Aromaticity and charge of molecules influence their solubility in water."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Water is a polar molecule because of the asymmetric distribution of charge between\nthe oxygen and hydrogen atoms of the water molecule.",
-          "imageUrl": null
+          "text": "Water is a polar molecule because of the asymmetric distribution of charge between the oxygen and hydrogen atoms of the water molecule.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Water is a polar molecule because of the asymmetric distribution of charge between the oxygen and hydrogen atoms of the water molecule.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "In a water molecule, the electrons shared between oxygen and hydrogen are\nattracted more towards the hydrogen atom.",
-          "imageUrl": null
+          "text": "In a water molecule, the electrons shared between oxygen and hydrogen are attracted more towards the hydrogen atom.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In a water molecule, the electrons shared between oxygen and hydrogen are attracted more towards the hydrogen atom.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Non-polar compounds are highly soluble in water because of their strong interaction\nwith water molecules.",
-          "imageUrl": null
+          "text": "Non-polar compounds are highly soluble in water because of their strong interaction with water molecules.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Non-polar compounds are highly soluble in water because of their strong interaction with water molecules.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Aromaticity and charge of molecules influence their solubility in water.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Aromaticity and charge of molecules influence their solubility in water.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2580,7 +4850,18 @@
       "questionNumber": 44,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "If microbial growth occurs under substrate unlimited conditions, according to\nMonod's kinetics, choose the correct option(s) from the following",
+      "questionText": "If microbial growth occurs under substrate unlimited conditions, according to Monod's kinetics, choose the correct option(s) from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If microbial growth occurs under substrate unlimited conditions, according to Monod's kinetics, choose the correct option(s) from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Microbial growth follows zero order with respect to substrate concentration.",
@@ -2593,22 +4874,62 @@
         {
           "id": "A",
           "text": "Microbial growth follows zero order with respect to substrate concentration.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Microbial growth follows zero order with respect to substrate concentration.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Microbial growth follows first order with respect to substrate concentration.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Microbial growth follows first order with respect to substrate concentration.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Specific growth rate is half of maximum specific growth rate.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Specific growth rate is half of maximum specific growth rate.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Specific growth rate is almost equal to maximum specific growth rate.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Specific growth rate is almost equal to maximum specific growth rate.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2645,34 +4966,85 @@
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
       "questionText": "Choose the correct option(s) for removing solids from water.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Choose the correct option(s) for removing solids from water.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "chlorination",
-        "coagulation-flocculation-sedimentation followed by slow sand filtration",
+        "coagulation-flocculation-sedimentation followed by slow s and filtration",
         "chlorination followed by aeration",
-        "slow sand filtration"
+        "slow s and filtration"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "chlorination",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "chlorination",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "coagulation-flocculation-sedimentation followed by slow sand filtration",
-          "imageUrl": null
+          "text": "coagulation-flocculation-sedimentation followed by slow s and filtration",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "coagulation-flocculation-sedimentation followed by slow s and filtration",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "chlorination followed by aeration",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "chlorination followed by aeration",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "slow sand filtration",
-          "imageUrl": null
+          "text": "slow s and filtration",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "slow s and filtration",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2708,35 +5080,86 @@
       "questionNumber": 46,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "According to the Bio-Medical Waste Management Rules, 2016, choose the correct\noption(s) from the following",
+      "questionText": "option(s) from the following",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "option(s) from the following",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Bio-medical waste generated should be taken to a common bio-medical waste\nmanagement facility except for rural areas where common facility is not available.",
-        "Bio-medical waste generated should not be taken out of the hospital premise as it\nmay contain dangerous pathogenic organisms.",
-        "The red bag containing the human anatomical wastes like amputated body parts,\ncotton and bandages contaminated with body fluids, etc. should be treated using\nautoclave or hydroclave to kill the pathogenic organisms.",
-        "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to\n149 C (pressure 52 psi), the residence time requirement for treating bio-medical\nwaste will be reduced by 15 minutes."
+        "management facility except for rural areas where common facility is not available.",
+        "may contain dangerous pathogenic organisms.",
+        "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+        "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to 149 C (pressure 52 psi), the residence time requirement for treating bio-medical waste will be reduced by 15 minutes."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Bio-medical waste generated should be taken to a common bio-medical waste\nmanagement facility except for rural areas where common facility is not available.",
-          "imageUrl": null
+          "text": "management facility except for rural areas where common facility is not available.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "management facility except for rural areas where common facility is not available.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Bio-medical waste generated should not be taken out of the hospital premise as it\nmay contain dangerous pathogenic organisms.",
-          "imageUrl": null
+          "text": "may contain dangerous pathogenic organisms.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "may contain dangerous pathogenic organisms.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "The red bag containing the human anatomical wastes like amputated body parts,\ncotton and bandages contaminated with body fluids, etc. should be treated using\nautoclave or hydroclave to kill the pathogenic organisms.",
-          "imageUrl": null
+          "text": "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to\n149 C (pressure 52 psi), the residence time requirement for treating bio-medical\nwaste will be reduced by 15 minutes.",
-          "imageUrl": null
+          "text": "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to 149 C (pressure 52 psi), the residence time requirement for treating bio-medical waste will be reduced by 15 minutes.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to 149 C (pressure 52 psi), the residence time requirement for treating bio-medical waste will be reduced by 15 minutes.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2770,7 +5193,24 @@
       "questionNumber": 47,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A residential family is considering two cities for relocation. The data related to\npollutant exposure and associated health cost per year are given in the following\nfigure.\nThe pollutant exposure is characterized in high, mild and low exposure categories\nwith respective probability values. The difference in expected value of health cost\nof City1 with respect to that of City 2 is _____________ lakhs/year. (rounded off\nto two decimal places).",
+      "questionText": "The pollutant exposure is characterized in high, mild and low exposure categories with respective probability values. The difference in expected value of health cost of City1 with respect to that of City 2 is _____________ lakhs/year. (rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The pollutant exposure is characterized in high, mild and low exposure categories with respective probability values. The difference in expected value of health cost of City1 with respect to that of City 2 is _____________ lakhs/year. (rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q47_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2807,7 +5247,18 @@
       "questionNumber": 48,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "The following is a system of linear equations\n𝑥-2𝑦+ 𝑧 = 34\n2𝑥 + 𝑦+ 𝑧 = 102\n𝑥+ 𝑦-3𝑧 = 17\nThe value of (𝑥+ 𝑦+ 𝑧) is _________. (rounded off to two decimal places)",
+      "questionText": "The following is a system of linear equations\n\n𝑥-2𝑦+ 𝑧= 34\n\n2𝑥+ 𝑦+ 𝑧= 102\n\n𝑥+ 𝑦-3𝑧= 17\n\nThe value of (𝑥+ 𝑦+ 𝑧) is _________. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following is a system of linear equations\n\n𝑥-2𝑦+ 𝑧= 34\n\n2𝑥+ 𝑦+ 𝑧= 102\n\n𝑥+ 𝑦-3𝑧= 17\n\nThe value of (𝑥+ 𝑦+ 𝑧) is _________. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2842,7 +5293,18 @@
       "questionNumber": 49,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "\\infty sin 4𝑥\n\\int 𝑑𝑥\nThe value of is _________. (rounded off to two decimal places)\n0 𝜋𝑥",
+      "questionText": "The value of \\int 0 Q.49 \\infty <u>sin</u> <u>4𝑥</u> Q.49 \\infty <u>sin</u> <u>4𝑥</u> _{𝜋𝑥}𝑑𝑥 is _________. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The value of \\int 0 Q.49 \\infty <u>sin</u> <u>4𝑥</u> Q.49 \\infty <u>sin</u> <u>4𝑥</u> _{𝜋𝑥}𝑑𝑥 is _________. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2877,7 +5339,18 @@
       "questionNumber": 50,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A tank has inflow, outflow and stirring mechanism. Initially, the tank holds 500 L\nof a brine solution of concentration 200 g/L. At t = 0, an inflow of another brine\nsolution of concentration 100 g/L starts entering the tank at the rate of 15 L/minute.\nAt the same time the outflow of thoroughly stirred mixture also takes place at the\nsame rate so that the volume of brine in the tank remains constant. The brine\nconcentration C (g/L) in the tank at any time t (minute) can be expressed by the\nfollowing differential equation\n𝑑𝐶\n+ 0.03 𝐶 = 3\n𝑑𝑡\nThe brine concentration in the tank at t = 1.5 hour is _________ g/L. (rounded\noff to two decimal places)",
+      "questionText": "A tank has inflow, outflow and stirring mechanism. Initially, the tank holds 500 L of a brine solution of concentration 200 g/L. At t = 0, an inflow of another brine solution of concentration 100 g/L starts entering the tank at the rate of 15 L/minute. At the same time the outflow of thoroughly stirred mixture also takes place at the same rate so that the volume of brine in the tank remains constant. The brine concentration C (g/L) in the tank at any time t (minute) can be expressed by the following differential equation\n\n<u>𝑑𝐶</u> 𝑑𝑡+ 0.03 𝐶= 3 The brine concentration in the tank at t = 1.5 hour is _________ g/L. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A tank has inflow, outflow and stirring mechanism. Initially, the tank holds 500 L of a brine solution of concentration 200 g/L. At t = 0, an inflow of another brine solution of concentration 100 g/L starts entering the tank at the rate of 15 L/minute. At the same time the outflow of thoroughly stirred mixture also takes place at the same rate so that the volume of brine in the tank remains constant. The brine concentration C (g/L) in the tank at any time t (minute) can be expressed by the following differential equation\n\n<u>𝑑𝐶</u> 𝑑𝑡+ 0.03 𝐶= 3 The brine concentration in the tank at t = 1.5 hour is _________ g/L. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2912,7 +5385,18 @@
       "questionNumber": 51,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Aerobic biomass has yield coefficient value of 0.4 for glucose (molecular weight =\n180 g/mole) substrate. Bacteria is represented as C H O N (molecular weight = 113\n5 7 2\ng/mole). Assume that no endogenous metabolism occurs. The percentage of carbon\ngoing into CO from 1 mole/L glucose is _____________. (rounded off to two\n2\ndecimal places)",
+      "questionText": "Aerobic biomass has yield coefficient value of 0.4 for glucose (molecular weight = 180 g/mole) substrate. Bacteria is represented as C_{5}H_{7}O_{2}N (molecular weight = 113 g/mole). Assume that no endogenous metabolism occurs. The percentage of carbon going into CO_{2} from 1 mole/L glucose is _____________. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Aerobic biomass has yield coefficient value of 0.4 for glucose (molecular weight = 180 g/mole) substrate. Bacteria is represented as C_{5}H_{7}O_{2}N (molecular weight = 113 g/mole). Assume that no endogenous metabolism occurs. The percentage of carbon going into CO_{2} from 1 mole/L glucose is _____________. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2947,7 +5431,24 @@
       "questionNumber": 52,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "The following figure (not to scale) depicts a rainfall hyetograph for a storm over a\ncatchment\nIf the storm produced a direct runoff of 12.5 mm, then the -index of the storm for\nthe catchment is ________________ mm/hour. (rounded off to two decimal places)",
+      "questionText": "The following figure (not to scale) depicts a rainfall hyetograph for a storm over a catchment\n\nIf the storm produced a direct runoff of 12.5 mm, then the \\(\\phi\\)-index of the storm for the catchment is ________________ mm/hour. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following figure (not to scale) depicts a rainfall hyetograph for a storm over a catchment\n\nIf the storm produced a direct runoff of 12.5 mm, then the \\(\\phi\\)-index of the storm for the catchment is ________________ mm/hour. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q52_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -2984,7 +5485,66 @@
       "questionNumber": 53,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "The following table and figure (not to scale) show characteristics of a catchment\nSub- Area Runoff Time of\ncatch- (ha) coefficient concentration\nment\nP 750 0.5 1 hour\nQ 1000 0.6 2 hour\nR 1500 0.6 3 hour\nS 2000 0.7 4 hour\nThe hyetograph resulting from a storm that occurred uniformly over the catchment,\nis as follows\nAssuming a constant base flow of 40 m3/s, the peak of the runoff hydrograph\nproduced by storm for the catchment at the outlet O is ________________ m3/s.\n(rounded off to two decimal places)",
+      "questionText": "The following table and figure (not to scale) show characteristics of a catchment\n\n| Sub- catch- ment | Area (ha) | Runoff coefficient | Time of concentration |\n| :--- | :--- | :--- | :--- |\n| P | 750 | 0.5 | 1 hour |\n| Q | 1000 | 0.6 | 2 hour |\n| R | 1500 | 0.6 | 3 hour |\n| S | 2000 | 0.7 | 4 hour |\n\nAssuming a constant base flow of 40 m^{3}/s, the peak of the runoff hydrograph produced by storm for the catchment at the outlet O is ________________ m^{3}/s. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following table and figure (not to scale) show characteristics of a catchment",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sub- catch- ment",
+            "Area (ha)",
+            "Runoff coefficient",
+            "Time of concentration"
+          ],
+          "rows": [
+            [
+              "P",
+              "750",
+              "0.5",
+              "1 hour"
+            ],
+            [
+              "Q",
+              "1000",
+              "0.6",
+              "2 hour"
+            ],
+            [
+              "R",
+              "1500",
+              "0.6",
+              "3 hour"
+            ],
+            [
+              "S",
+              "2000",
+              "0.7",
+              "4 hour"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Assuming a constant base flow of 40 m^{3}/s, the peak of the runoff hydrograph produced by storm for the catchment at the outlet O is ________________ m^{3}/s. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q53_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3021,7 +5581,18 @@
       "questionNumber": 54,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A homogeneous isotropic confined aquifer of uniform thickness 30 m has hydraulic\nconductivity of 5 m/day and porosity of 0.3. There are two observation wells X and\nY along a radial line from a fully penetrating pumping well at 100 m and 200 m\ndistance, respectively. The well is pumped at a uniform rate to produce steady\ndrawdown of 5 m at X and 3 m at Y. If a non-reactive pollutant enters at the\nobservation well Y, then the time taken by the pollutant (under advection) to reach\nthe observation well X is ____________ days. (rounded off to two decimal places)",
+      "questionText": "A homogeneous isotropic confined aquifer of uniform thickness 30 m has hydraulic conductivity of 5 m/day and porosity of 0.3. There are two observation wells X and Y along a radial line from a fully penetrating pumping well at 100 m and 200 m distance, respectively. The well is pumped at a uniform rate to produce steady drawdown of 5 m at X and 3 m at Y. If a non-reactive pollutant enters at the observation well Y, then the time taken by the pollutant (under advection) to reach the observation well X is ____________ days. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A homogeneous isotropic confined aquifer of uniform thickness 30 m has hydraulic conductivity of 5 m/day and porosity of 0.3. There are two observation wells X and Y along a radial line from a fully penetrating pumping well at 100 m and 200 m distance, respectively. The well is pumped at a uniform rate to produce steady drawdown of 5 m at X and 3 m at Y. If a non-reactive pollutant enters at the observation well Y, then the time taken by the pollutant (under advection) to reach the observation well X is ____________ days. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3056,7 +5627,24 @@
       "questionNumber": 55,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A pipe line O P Q R branches into three pipes X, Y, and Z between points P and Q\nas shown in figure (not to scale)\nDiameter (d) and length (l) of each pipe are as presented in figure and all pipes are\nof same material having friction factor (f) of 0.02. Assume acceleration due to\ngravity (g) as 10.0 m/s2. If the head difference between P and Q is 10 m, then the\nhead loss between Q and R is ____________ m. (rounded off to two decimal places)",
+      "questionText": "A pipe line O P Q R branches into three pipes X, Y, and Z between points P and Q as shown in figure (not to scale)\n\nDiameter (d) and length (l) of each pipe are as presented in figure and all pipes are of same material having friction factor (f) of 0.02. Assume acceleration due to gravity (g) as 10.0 m/s^{2}. If the head difference between P and Q is 10 m, then the head loss between Q and R is ____________ m. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A pipe line O P Q R branches into three pipes X, Y, and Z between points P and Q as shown in figure (not to scale)\n\nDiameter (d) and length (l) of each pipe are as presented in figure and all pipes are of same material having friction factor (f) of 0.02. Assume acceleration due to gravity (g) as 10.0 m/s^{2}. If the head difference between P and Q is 10 m, then the head loss between Q and R is ____________ m. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q55_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3093,7 +5681,18 @@
       "questionNumber": 56,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A circular sewer pipe, having Manning's coefficient (n) of 0.01, is laid at a bed\nslope of 1:100. If it is flowing 80% full for a discharge of 2 m3/s, then its diameter\nis ____________ m. (rounded off to three decimal places)",
+      "questionText": "A circular sewer pipe, having Manning's coefficient (n) of 0.01, is laid at a bed slope of 1:100. If it is flowing 80% full for a discharge of 2 m^{3}/s, then its diameter is ____________ m. (rounded off to three decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A circular sewer pipe, having Manning's coefficient (n) of 0.01, is laid at a bed slope of 1:100. If it is flowing 80% full for a discharge of 2 m^{3}/s, then its diameter is ____________ m. (rounded off to three decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3128,7 +5727,18 @@
       "questionNumber": 57,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "You conducted a batch experiment in the lab for 10 minutes to degrade a toxic\ncompound, which follows first order kinetics. The compound degrades from\n2 \\times 10-3 M to 2 \\times 10-4 M. The information from the lab experiment will be used to\ndesign a plug flow reactor in field conditions.\nGiven field conditions:\n• Flow rate of contaminated water to be treated: 1 m3/hour\n• Concentration of toxic compound in contaminated water: 5 \\times 10-1 M\n• Target concentration of toxic compound in treated water: 1 \\times 10-4 M\n• Temperature is same in lab and field conditions.\nThe required volume of the plug flow reactor is ________ m3. (rounded off to two\ndecimal places)",
+      "questionText": "You conducted a batch experiment in the lab for 10 minutes to degrade a toxic compound, which follows first order kinetics. The compound degrades from 2 \\times 10-3 M to 2 \\times 10-4 M. The information from the lab experiment will be used to design a plug flow reactor in field conditions.\n\nGiven field conditions:\n\n• Flow rate of contaminated water to be treated: 1 m^{3}/hour • Concentration of toxic compound in contaminated water: 5 \\times 10^{-1} M • Target concentration of toxic compound in treated water: 1 \\times 10^{-4} M • Temperature is same in lab and field conditions.\n\nThe required volume of the plug flow reactor is ________ m^{3}. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "You conducted a batch experiment in the lab for 10 minutes to degrade a toxic compound, which follows first order kinetics. The compound degrades from 2 \\times 10-3 M to 2 \\times 10-4 M. The information from the lab experiment will be used to design a plug flow reactor in field conditions.\n\nGiven field conditions:\n\n• Flow rate of contaminated water to be treated: 1 m^{3}/hour • Concentration of toxic compound in contaminated water: 5 \\times 10^{-1} M • Target concentration of toxic compound in treated water: 1 \\times 10^{-4} M • Temperature is same in lab and field conditions.\n\nThe required volume of the plug flow reactor is ________ m^{3}. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3163,7 +5773,18 @@
       "questionNumber": 58,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A common effluent treatment plant with a capacity of 2 million litres per day (MLD)\nemploys reverse osmosis (RO) for water reuse. The RO unit removes 95% of the\ntotal dissolved solids (TDS) and the water recovery rate is 70%. If the TDS\nconcentration in the RO feed is 8000 parts per million (ppm), the TDS in the RO\nreject is _______ g/L. (rounded off to one decimal place)",
+      "questionText": "A common effluent treatment plant with a capacity of 2 million litres per day (MLD) employs reverse osmosis (RO) for water reuse. The RO unit removes 95% of the total dissolved solids (TDS) and the water recovery rate is 70%. If the TDS concentration in the RO feed is 8000 parts per million (ppm), the TDS in the RO reject is _______ g/L. (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A common effluent treatment plant with a capacity of 2 million litres per day (MLD) employs reverse osmosis (RO) for water reuse. The RO unit removes 95% of the total dissolved solids (TDS) and the water recovery rate is 70%. If the TDS concentration in the RO feed is 8000 parts per million (ppm), the TDS in the RO reject is _______ g/L. (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3198,7 +5819,18 @@
       "questionNumber": 59,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A boiler burns coal at a rate of 1 kg/s. If the coal has 3% sulfur content, assuming\nthat there is no sulfur in ash, SO emitted is _____ kg/day. (rounded off to nearest\n2\ninteger)",
+      "questionText": "A boiler burns coal at a rate of 1 kg/s. If the coal has 3% sulfur content, assuming that there is no sulfur in ash, SO_{2} emitted is _____ kg/day. (rounded off to nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A boiler burns coal at a rate of 1 kg/s. If the coal has 3% sulfur content, assuming that there is no sulfur in ash, SO_{2} emitted is _____ kg/day. (rounded off to nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3233,7 +5865,50 @@
       "questionNumber": 60,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A particle dispersoid has 1510 spherical particles of uniform density. An air purifier\nis proposed to be used to remove these particles. The diameter specific number of\nparticles in the dispersoid, along with the number removal efficiency of the\nproposed purifier is shown in the following table:\nDiameter of the Number of particles Number removal\nparticle (µm) efficiency (%)\n1 1000 99\n10 500 75\n100 10 10\nThe overall mass removal efficiency of the proposed purifier is ______ %.\n(rounded off to one decimal place)",
+      "questionText": "A particle dispersoid has 1510 spherical particles of uniform density. An air purifier is proposed to be used to remove these particles. The diameter specific number of particles in the dispersoid, along with the number removal efficiency of the proposed purifier is shown in the following table:\n\n| Diameter of the particle (µm) | Number of particles | Number removal efficiency (%) |\n| :--- | :--- | :--- |\n| 1 | 1000 | 99 |\n| 10 | 500 | 75 |\n| 100 | 10 | 10 |\n\nThe overall mass removal efficiency of the proposed purifier is ______ %. (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A particle dispersoid has 1510 spherical particles of uniform density. An air purifier is proposed to be used to remove these particles. The diameter specific number of particles in the dispersoid, along with the number removal efficiency of the proposed purifier is shown in the following table:",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diameter of the particle (µm)",
+            "Number of particles",
+            "Number removal efficiency (%)"
+          ],
+          "rows": [
+            [
+              "1",
+              "1000",
+              "99"
+            ],
+            [
+              "10",
+              "500",
+              "75"
+            ],
+            [
+              "100",
+              "10",
+              "10"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The overall mass removal efficiency of the proposed purifier is ______ %. (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3268,7 +5943,18 @@
       "questionNumber": 61,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "An incandescent light bulb operated for two hours per day uses 12.2 kWh of energy\nper month. Burning of one kg of coal generates 2 kWh of electrical energy and\nreleases 7 g of PM . The reduction in PM emitted per month, if this incandescent\n10 10\nbulb is replaced with a light emitting diode (LED) bulb which consumes 1/6th of\nenergy, is ______ g. (rounded off to one decimal place)",
+      "questionText": "An incandescent light bulb operated for two hours per day uses 12.2 kWh of energy per month. Burning of one kg of coal generates 2 kWh of electrical energy and releases 7 g of PM_{10}. The reduction in PM_{10} emitted per month, if this incandescent bulb is replaced with a light emitting diode (LED) bulb which consumes 1/6^{th} of energy, is ______ g. (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An incandescent light bulb operated for two hours per day uses 12.2 kWh of energy per month. Burning of one kg of coal generates 2 kWh of electrical energy and releases 7 g of PM_{10}. The reduction in PM_{10} emitted per month, if this incandescent bulb is replaced with a light emitting diode (LED) bulb which consumes 1/6^{th} of energy, is ______ g. (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3303,7 +5989,24 @@
       "questionNumber": 62,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A street sweeping machine starts from point P and ends at S, as shown in the\nnetwork of streets below. It sweeps all the streets at least once.\nLength of the streets, in km, are shown on the network. The minimum distance\ntravelled by the sweeping machine for completing the job of sweeping all the streets\nis _____ km. (rounded off to nearest integer)",
+      "questionText": "A street sweeping machine starts from point P and ends at S, as shown in the network of streets below. It sweeps all the streets at least once.\n\nLength of the streets, in km, are shown on the network. The minimum distance travelled by the sweeping machine for completing the job of sweeping all the streets is _____ km. (rounded off to nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A street sweeping machine starts from point P and ends at S, as shown in the network of streets below. It sweeps all the streets at least once.\n\nLength of the streets, in km, are shown on the network. The minimum distance travelled by the sweeping machine for completing the job of sweeping all the streets is _____ km. (rounded off to nearest integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/es/q62_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3340,7 +6043,18 @@
       "questionNumber": 63,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "A solid waste of composition C H O N is to be composted aerobically in a\n60 135 50 5\nclosed vessel mechanical composting facility. Given: all ammonia generated\nescapes the facility; air contains 23% of Oxygen by weight; 100% excess air\nrequirement for the closed vessel composting facility. The atomic weights: C - 12,\nH - 1, O - 16, N - 14. The actual air required for composting is_______ kg per\nkg waste. (rounded off to one decimal place)",
+      "questionText": "A solid waste of composition C_{60}H_{135}O_{50}N_{5} is to be composted aerobically in a closed vessel mechanical composting facility. Given: all ammonia generated escapes the facility; air contains 23% of Oxygen by weight; 100% excess air requirement for the closed vessel composting facility. The atomic weights: C - 12, H - 1, O - 16, N - 14. The actual air required for composting is_______ kg per kg waste. (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A solid waste of composition C_{60}H_{135}O_{50}N_{5} is to be composted aerobically in a closed vessel mechanical composting facility. Given: all ammonia generated escapes the facility; air contains 23% of Oxygen by weight; 100% excess air requirement for the closed vessel composting facility. The atomic weights: C - 12, H - 1, O - 16, N - 14. The actual air required for composting is_______ kg per kg waste. (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3375,7 +6089,18 @@
       "questionNumber": 64,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "An industry releases three greenhouse gases (GHGs), CO (5 kg/day), CH (0.5\n2 4\nkg/day), and N O (0.1 kg/day). The industry flares the CH before it is released to\n2 4\nthe atmosphere. The Global Warming Potential (GWP) are as follows: CO = 1,\n2\nCH = 21, N O = 310. The annual GWP of GHGs released from the industry is\n4 2\n______ kg CO equivalent. (rounded off to the nearest integer)\n2",
+      "questionText": "An industry releases three greenhouse gases (GHGs), CO_{2} (5 kg/day), CH_{4} (0.5 kg/day), and N_{2}O (0.1 kg/day). The industry flares the CH_{4} before it is released to the atmosphere. The Global Warming Potential (GWP) are as follows: CO_{2} = 1, CH_{4} = 21, N_{2}O = 310. The annual GWP of GHGs released from the industry is ______ kg CO_{2} equivalent. (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An industry releases three greenhouse gases (GHGs), CO_{2} (5 kg/day), CH_{4} (0.5 kg/day), and N_{2}O (0.1 kg/day). The industry flares the CH_{4} before it is released to the atmosphere. The Global Warming Potential (GWP) are as follows: CO_{2} = 1, CH_{4} = 21, N_{2}O = 310. The annual GWP of GHGs released from the industry is ______ kg CO_{2} equivalent. (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3410,7 +6135,18 @@
       "questionNumber": 65,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Water from a hand pump located near a landfill has 1 mg/L arsenic (oral\ncarcinogenic potency factor = 1.75 (kg-day)/mg). A person who lives nearby drinks\n2 L/day water from this hand pump for 10 years. Assume body weight of 70 kg and\n70 years as average life duration. Chances of this person getting excess risk of\ncancer is __________________ \\times 10-3. (rounded off to three decimal places)",
+      "questionText": "Water from a h and pump located near a landfill has 1 mg/L arsenic (oral carcinogenic potency factor = 1.75 (kg-day)/mg). A person who lives nearby drinks 2 L/day water from this h and pump for 10 years. Assume body weight of 70 kg and 70 years as average life duration. Chances of this person getting excess risk of cancer is __________________ \\times 10^{-3}. (rounded off to three decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Water from a h and pump located near a landfill has 1 mg/L arsenic (oral carcinogenic potency factor = 1.75 (kg-day)/mg). A person who lives nearby drinks 2 L/day water from this h and pump for 10 years. Assume body weight of 70 kg and 70 years as average life duration. Chances of this person getting excess risk of cancer is __________________ \\times 10^{-3}. (rounded off to three decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

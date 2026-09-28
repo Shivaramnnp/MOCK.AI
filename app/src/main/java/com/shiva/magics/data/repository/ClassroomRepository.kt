@@ -110,7 +110,7 @@ class ClassroomRepository {
                 val newStudentNames = classModel.studentNames + (uid to studentName)
                 doc.reference.update(
                     mapOf(
-                        "studentIds"           to newStudentIds,
+                        "studentIds"           to com.google.firebase.firestore.FieldValue.arrayUnion(uid),
                         "studentNames.$uid"    to studentName
                     )
                 )
@@ -130,10 +130,11 @@ class ClassroomRepository {
         db.collection("classes").document(classId).get()
             .addOnSuccessListener { doc ->
                 val model   = ClassModel.fromFirestore(doc.id, doc.data ?: emptyMap())
-                val newIds  = model.studentIds - studentUid
-                val newMap  = model.studentNames - studentUid
                 doc.reference.update(
-                    mapOf("studentIds" to newIds, "studentNames" to newMap)
+                    mapOf(
+                        "studentIds" to com.google.firebase.firestore.FieldValue.arrayRemove(studentUid),
+                        "studentNames.$studentUid" to com.google.firebase.firestore.FieldValue.delete()
+                    )
                 )
                 .addOnSuccessListener { onResult(true) }
                 .addOnFailureListener { onResult(false) }

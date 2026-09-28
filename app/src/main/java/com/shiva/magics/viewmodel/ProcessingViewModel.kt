@@ -274,7 +274,7 @@ class ProcessingViewModel(
         mimeType: String,
         fileName: String
     ) {
-        lastInput = LastInput.File(context, uri, mimeType, fileName)
+        lastInput = LastInput.File(context.applicationContext, uri, mimeType, fileName)
         resetStatusMessages()
         processingJob?.cancel()
         processingJob = viewModelScope.launch {
@@ -981,7 +981,7 @@ class ProcessingViewModel(
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return ProcessingViewModel(aiProviderManager, youtubeBackendService, geminiService, context) as T
+            return ProcessingViewModel(aiProviderManager, youtubeBackendService, geminiService, context.applicationContext) as T
         }
     }
 }

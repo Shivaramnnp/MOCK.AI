@@ -60,6 +60,30 @@
   max-width: 100% !important;
 }
 
+/* Option Content & Left-Aligned Math Rendering */
+.option-content,
+[data-testid="option-content"] {
+  text-align: left !important;
+}
+
+.option-content .katex-display,
+.option-content .katex-display > .katex,
+.option-content .katex-display > .katex > .katex-html,
+.katex-left,
+.katex-left .katex-display,
+.katex-left .katex-display > .katex,
+.katex-left .katex-display > .katex > .katex-html {
+  text-align: left !important;
+  margin: 0.2rem 0 !important;
+  padding: 0 !important;
+}
+
+.option-content .katex-display > .katex,
+.katex-left .katex-display > .katex {
+  display: inline-block !important;
+  text-align: left !important;
+}
+
 /* Text line clamps */
 .line-clamp-2 {
   display: -webkit-box;

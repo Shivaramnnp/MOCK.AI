@@ -12,11 +12,38 @@ const USER_SESSIONS_PREFIX = 'mockai_user_sessions_';
 
 type AutosaveListener = (status: 'saving' | 'saved' | 'error' | 'idle') => void;
 
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+/**
+ * Determine if a user ID is a valid remote Supabase user UUID.
+ * Guest, demo, and test accounts skip remote writes to avoid IDOR and PostgreSQL UUID syntax errors.
+ */
+export function isRemoteUser(userId?: string): boolean {
+  if (!userId) return false;
+  if (
+    userId === 'guest' ||
+    userId.startsWith('demo-') ||
+    userId.startsWith('usr-') ||
+    userId.startsWith('test_') ||
+    userId.startsWith('user_')
+  ) {
+    return false;
+  }
+  return UUID_REGEX.test(userId);
+}
+
 export class ExamSessionService {
   private static autosaveTimers: Map<string, NodeJS.Timeout> = new Map();
   private static pendingSessions: Map<string, ExamTestSession> = new Map();
   private static listeners: Set<AutosaveListener> = new Set();
   private static currentStatus: 'saving' | 'saved' | 'error' | 'idle' = 'idle';
+
+  // Scalability & Concurrency Locks
+  private static isDirty: boolean = false;
+  private static dirtySince: number | null = null;
+  private static isSyncInProgress: boolean = false;
+  private static pendingSyncSession: ExamTestSession | null = null;
+  private static heartbeatTimeout: NodeJS.Timeout | null = null;
 
   /**
    * Register a listener for autosave status changes (for UI badge updates)
@@ -32,6 +59,38 @@ export class ExamSessionService {
   private static setStatus(status: 'saving' | 'saved' | 'error' | 'idle') {
     this.currentStatus = status;
     this.listeners.forEach((fn) => fn(status));
+  }
+
+  /**
+   * Dirty-state tracking API:
+   * Marks that candidate has answered or mutated state since last cloud checkpoint.
+   */
+  static markDirty(): void {
+    this.isDirty = true;
+    if (!this.dirtySince) {
+      this.dirtySince = Date.now();
+    }
+  }
+
+  static clearDirty(): void {
+    this.isDirty = false;
+    this.dirtySince = null;
+  }
+
+  static isSessionDirty(): boolean {
+    return this.isDirty;
+  }
+
+  /**
+   * Helper to compute randomized jitter delay.
+   * In test environment, returns baseMs without jitter for determinism.
+   */
+  static getJitteredDelay(baseMs: number, jitterMs: number): number {
+    if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'test') {
+      return baseMs;
+    }
+    const delta = (Math.random() * 2 - 1) * jitterMs;
+    return Math.max(100, Math.floor(baseMs + delta));
   }
 
   /**
@@ -70,6 +129,8 @@ export class ExamSessionService {
 
   /**
    * Initialize a fresh exam test session with authoritative timestamps and metadata.
+   * Local session is saved synchronously (0ms UI latency).
+   * Remote session creation is staggered with randomized jitter (1s - 15s) to avoid 10,000 RPS burst.
    */
   static createSession(paper: ExamPaper, userId: string = 'guest'): ExamTestSession {
     const durationMinutes = Number.isFinite(paper.durationMinutes) && paper.durationMinutes > 0 ? paper.durationMinutes : 60;
@@ -110,13 +171,22 @@ export class ExamSessionService {
       version: 1,
     };
 
-    // Save locally immediately
+    // 1. Save locally immediately (0ms UI delay)
     this.saveSessionLocal(session);
+    this.clearDirty();
 
-    // Save to Supabase asynchronously
-    this.saveSessionRemote(session).catch((err) => {
-      console.warn('Non-fatal: initial remote session save skipped:', err?.message || err);
-    });
+    // 2. Schedule remote session registration with randomized jitter (1s to 15s)
+    // Smooths the 10,000 RPS burst shockwave at exam start into ~500 RPS
+    if (isRemoteUser(userId)) {
+      const isTestEnv = typeof process !== 'undefined' && process.env?.NODE_ENV === 'test';
+      const startJitterMs = isTestEnv ? 0 : Math.floor(1000 + Math.random() * 14000);
+
+      setTimeout(() => {
+        this.saveSessionRemote(session).catch((err) => {
+          console.warn('Non-fatal: initial remote session save skipped:', err?.message || err);
+        });
+      }, startJitterMs);
+    }
 
     return session;
   }
@@ -233,19 +303,14 @@ export class ExamSessionService {
 
   /**
    * Save session to Supabase Project 1 (authoritative remote backend with RLS).
+   * Guarded with timeout to prevent hanging on flaky connections.
    */
   static async saveSessionRemote(session: ExamTestSession): Promise<boolean> {
     const client = supabaseService.getClient();
     if (!client) return false;
 
     // Skip remote database writes for anonymous demo/guest accounts unless valid UUID
-    const isRealUser =
-      session.userId &&
-      session.userId !== 'guest' &&
-      !session.userId.startsWith('demo-') &&
-      !session.userId.startsWith('usr-');
-
-    if (!isRealUser) return false;
+    if (!isRemoteUser(session.userId)) return false;
 
     try {
       const payload = {
@@ -277,9 +342,15 @@ export class ExamSessionService {
         updated_at: new Date().toISOString(),
       };
 
-      const { error } = await client.from('user_exam_attempts').upsert(payload);
-      if (error) {
-        console.warn('Supabase session upsert warning:', error.message);
+      const timeoutPromise = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error('Supabase save timeout')), 5000)
+      );
+
+      const upsertPromise = client.from('user_exam_attempts').upsert(payload);
+      const res: any = await Promise.race([upsertPromise, timeoutPromise]);
+
+      if (res?.error) {
+        console.warn('Supabase session upsert warning:', res.error.message);
         return false;
       }
       return true;
@@ -287,6 +358,105 @@ export class ExamSessionService {
       console.warn('Network or Supabase error during remote session save:', err?.message || err);
       return false;
     }
+  }
+
+  /**
+   * Event-driven checkpoint synchronization.
+   * Fires on: section switch, answer milestone (every 20 questions), periodic 60s heartbeat, exit, submit.
+   * Guarded by dirty-state tracking and in-flight concurrency locks.
+   */
+  static async triggerRemoteCheckpoint(
+    session: ExamTestSession,
+    reason: 'section' | 'checkpoint' | 'heartbeat' | 'exit' | 'submit'
+  ): Promise<boolean> {
+    const updated: ExamTestSession = {
+      ...session,
+      lastSavedAt: Date.now(),
+      version: (session.version || 1) + 1,
+    };
+
+    // 1. Synchronous local save is always authoritative (RPO = 0)
+    this.saveSessionLocal(updated);
+
+    // If neither dirty nor forced (exit/submit), bypass network completely
+    if (reason !== 'exit' && reason !== 'submit' && !this.isDirty) {
+      return true;
+    }
+
+    // If user is guest/demo, skip remote
+    if (!isRemoteUser(session.userId)) {
+      this.clearDirty();
+      this.setStatus('saved');
+      return true;
+    }
+
+    // In-flight concurrency lock: if an HTTP request is already active,
+    // buffer this session and sync immediately after current finishes
+    if (this.isSyncInProgress) {
+      this.pendingSyncSession = updated;
+      return true;
+    }
+
+    this.isSyncInProgress = true;
+    this.setStatus('saving');
+
+    try {
+      const ok = await this.saveSessionRemote(updated);
+      if (ok) {
+        this.clearDirty();
+        this.setStatus('saved');
+      } else {
+        // Saved locally, maintain UI integrity
+        this.setStatus('saved');
+      }
+    } finally {
+      this.isSyncInProgress = false;
+
+      // Drain buffered session if one arrived while syncing
+      if (this.pendingSyncSession) {
+        const nextSession = this.pendingSyncSession;
+        this.pendingSyncSession = null;
+        await this.triggerRemoteCheckpoint(nextSession, reason);
+      }
+    }
+
+    return true;
+  }
+
+  /**
+   * Adaptive background sync heartbeat.
+   * Runs every 60 seconds with ±10s client-side randomized jitter.
+   * Only executes remote save when isDirty === true.
+   */
+  static startHeartbeat(
+    getSession: () => ExamTestSession | null
+  ): () => void {
+    let active = true;
+
+    const scheduleNext = () => {
+      if (!active) return;
+      // 60s base with ±10s jitter (50s - 70s)
+      const delay = this.getJitteredDelay(60000, 10000);
+
+      this.heartbeatTimeout = setTimeout(async () => {
+        if (!active) return;
+        const current = getSession();
+        if (current && this.isDirty) {
+          await this.triggerRemoteCheckpoint(current, 'heartbeat');
+        }
+        scheduleNext();
+      }, delay);
+    };
+
+    scheduleNext();
+
+    return () => {
+      active = false;
+      if (this.heartbeatTimeout) {
+        clearTimeout(this.heartbeatTimeout);
+        this.heartbeatTimeout = null;
+      }
+    };
   }
 
   /**
@@ -306,6 +476,7 @@ export class ExamSessionService {
     this.setStatus('saving');
     const remoteSuccess = await this.saveSessionRemote(updated);
     if (remoteSuccess) {
+      this.clearDirty();
       this.setStatus('saved');
     } else {
       // Still saved locally!
@@ -321,6 +492,7 @@ export class ExamSessionService {
   static queueAutosave(session: ExamTestSession): void {
     const sessionId = session.sessionId;
     this.pendingSessions.set(sessionId, session);
+    this.markDirty();
     this.setStatus('saving');
 
     // Clear existing debounce timer for this session
@@ -332,12 +504,18 @@ export class ExamSessionService {
     // Always perform local save synchronously right now so refresh never loses state!
     this.saveSessionLocal(session);
 
+    // If guest/demo user, local save is sufficient
+    if (!isRemoteUser(session.userId)) {
+      this.setStatus('saved');
+      return;
+    }
+
     const timer = setTimeout(async () => {
       this.autosaveTimers.delete(sessionId);
       const toSave = this.pendingSessions.get(sessionId);
       if (toSave) {
         this.pendingSessions.delete(sessionId);
-        await this.saveSession(toSave);
+        await this.triggerRemoteCheckpoint(toSave, 'checkpoint');
       }
     }, 600);
 
@@ -380,7 +558,12 @@ export class ExamSessionService {
     };
 
     this.saveSessionLocal(pausedSession);
-    await this.saveSessionRemote(pausedSession);
+
+    if (isRemoteUser(pausedSession.userId)) {
+      await this.saveSessionRemote(pausedSession);
+    }
+
+    this.clearDirty();
     this.setStatus('saved');
 
     return pausedSession;
@@ -403,7 +586,9 @@ export class ExamSessionService {
         timeRemainingSeconds: 0,
       };
       this.saveSessionLocal(expiredSession);
-      await this.saveSessionRemote(expiredSession);
+      if (isRemoteUser(userId)) {
+        await this.saveSessionRemote(expiredSession);
+      }
       return expiredSession;
     }
 
@@ -416,7 +601,9 @@ export class ExamSessionService {
     };
 
     this.saveSessionLocal(resumed);
-    await this.saveSessionRemote(resumed);
+    if (isRemoteUser(userId)) {
+      await this.saveSessionRemote(resumed);
+    }
 
     return resumed;
   }
@@ -426,13 +613,8 @@ export class ExamSessionService {
    */
   static async getSessionById(sessionId: string, userId: string = 'guest'): Promise<ExamTestSession | null> {
     const client = supabaseService.getClient();
-    const isRealUser =
-      userId &&
-      userId !== 'guest' &&
-      !userId.startsWith('demo-') &&
-      !userId.startsWith('usr-');
 
-    if (client && isRealUser) {
+    if (client && isRemoteUser(userId)) {
       try {
         const { data, error } = await client
           .from('user_exam_attempts')
@@ -489,14 +671,9 @@ export class ExamSessionService {
   static async getActiveSessionsForUser(userId: string = 'guest'): Promise<ExamTestSession[]> {
     const activeList: ExamTestSession[] = [];
     const client = supabaseService.getClient();
-    const isRealUser =
-      userId &&
-      userId !== 'guest' &&
-      !userId.startsWith('demo-') &&
-      !userId.startsWith('usr-');
 
-    // 1. Query remote if authenticated
-    if (client && isRealUser) {
+    // 1. Query remote if authenticated Supabase user
+    if (client && isRemoteUser(userId)) {
       try {
         const { data, error } = await client
           .from('user_exam_attempts')
@@ -632,11 +809,15 @@ export class ExamSessionService {
       version: (session.version || 1) + 1,
     };
 
-    // Update local cache
+    // Update local cache synchronously
     this.saveSessionLocal(finalizedSession);
 
     // Update remote Supabase
-    await this.saveSessionRemote(finalizedSession);
+    if (isRemoteUser(finalizedSession.userId)) {
+      await this.saveSessionRemote(finalizedSession);
+    }
+
+    this.clearDirty();
 
     // Clear legacy active key
     if (typeof localStorage !== 'undefined') {
@@ -663,7 +844,7 @@ export class ExamSessionService {
     this.setLocalSessions(userId, updated);
 
     const client = supabaseService.getClient();
-    if (client && userId && !userId.startsWith('demo-') && userId !== 'guest') {
+    if (client && isRemoteUser(userId)) {
       try {
         await client
           .from('user_exam_attempts')

@@ -25,6 +25,7 @@ import { supabaseService } from '../services/supabase';
 import { UserProfile, UserRole } from '../types';
 import { ForgotPasswordScreen } from './ForgotPasswordScreen';
 import { LegalModal, LegalTabType } from '../components/LegalModal';
+import { PlatformStatsBar } from '../components/PlatformStatsBar';
 
 interface AuthScreenProps {
   onAuthSuccess: (user: UserProfile) => void;
@@ -454,7 +455,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         </div>
 
         {/* ── Card Container ─────────────────────────────────────────── */}
-        <div className="w-full max-w-md bg-white dark:bg-[#111420]/90 border border-surface-border dark:border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl dark:shadow-2xl space-y-5">
+        <div className="w-full max-w-md bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl dark:shadow-2xl space-y-5">
           {mode === 'verify_otp' ? (
             <div className="space-y-5">
               {/* Header */}
@@ -1022,6 +1023,11 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
         )}
         </div>
 
+        {/* ── Compact Platform Statistics Trust Strip ─────────────── */}
+        <div className="w-full max-w-md mt-3">
+          <PlatformStatsBar variant="strip" />
+        </div>
+
         {/* ── Production Trust & Compliance Footer ───────────────────── */}
         <div className="mt-8 flex flex-col items-center gap-2 text-center">
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-surface-muted/70">
@@ -1072,18 +1078,18 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
 
       {/* ── Forgot Password Modal ────────────────────────────────────── */}
       {showForgotModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150">
-          <div className="w-full max-w-md bg-white dark:bg-[#151928] rounded-3xl border border-surface-border dark:border-white/10 p-6 shadow-2xl space-y-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 dark:bg-black/70 backdrop-blur-sm animate-in fade-in duration-150">
+          <div className="w-full max-w-md bg-white dark:bg-darkSurface-elev1 rounded-3xl border border-surface-border dark:border-darkSurface-border p-6 shadow-2xl space-y-4">
             <h3 className="font-bold text-xl text-surface-text dark:text-darkSurface-text">
               Reset Your Password
             </h3>
-            <p className="text-xs text-surface-muted">
+            <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
               Enter your registered email address to receive secure recovery instructions.
             </p>
 
             <form onSubmit={handleForgotPassword} className="space-y-4">
               <div>
-                <label className="block text-xs font-bold text-surface-muted uppercase tracking-wider mb-1">
+                <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1">
                   Email Address:
                 </label>
                 <input
@@ -1093,7 +1099,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                   value={forgotEmail}
                   onChange={(e) => setForgotEmail(e.target.value)}
                   placeholder="name@example.com"
-                  className="w-full px-4 py-2.5 rounded-xl border border-surface-border dark:border-white/10 bg-surface-elev2 dark:bg-white/[0.04] text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:border-brand-primary"
+                  className="w-full px-4 py-2.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-sm text-surface-text dark:text-darkSurface-text focus:outline-none focus:ring-2 focus:ring-brand-primary/20 placeholder-surface-muted dark:placeholder-darkSurface-muted"
                 />
               </div>
 
@@ -1105,14 +1111,14 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onAuthSuccess }) => {
                 <button
                   type="button"
                   onClick={() => setShowForgotModal(false)}
-                  className="px-4 py-2 text-xs font-semibold text-surface-muted hover:text-surface-text"
+                  className="px-4 py-2 text-xs font-semibold text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isForgotLoading}
-                  className="px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:brightness-110 disabled:opacity-50"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-variant text-white font-bold text-xs shadow-glow hover:brightness-110 active:scale-95 disabled:opacity-50 transition-all"
                 >
                   {isForgotLoading ? 'Sending...' : 'Send Recovery Email'}
                 </button>

@@ -85,14 +85,90 @@ function mapRowToPaper(row: RemotePaperRow, examName: string): Omit<ExamPaper, '
   };
 }
 
+const PAPERS_CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour (was 10 minutes)
+const SESSION_PAPERS_PREFIX = 'mockai_papers_cache_';
+
+interface CacheEntry<T> {
+  data: T;
+  timestamp: number;
+}
+
+const papersByExamCache = new Map<string, CacheEntry<Omit<ExamPaper, 'questions'>[]>>();
+const paperMetaCache = new Map<string, CacheEntry<Omit<ExamPaper, 'questions'>>>();
+
+function getSessionCachedPapers(examId: string): Omit<ExamPaper, 'questions'>[] | null {
+  if (typeof window === 'undefined' || !window.sessionStorage) return null;
+  try {
+    const raw = window.sessionStorage.getItem(SESSION_PAPERS_PREFIX + examId);
+    if (!raw) return null;
+    const entry: CacheEntry<Omit<ExamPaper, 'questions'>[]> = JSON.parse(raw);
+    if (entry && Date.now() - entry.timestamp < PAPERS_CACHE_TTL_MS) {
+      return entry.data;
+    }
+  } catch {
+    // ignore
+  }
+  return null;
+}
+
+function setSessionCachedPapers(examId: string, data: Omit<ExamPaper, 'questions'>[]): void {
+  if (typeof window === 'undefined' || !window.sessionStorage) return;
+  try {
+    const entry: CacheEntry<Omit<ExamPaper, 'questions'>[]> = { data, timestamp: Date.now() };
+    window.sessionStorage.setItem(SESSION_PAPERS_PREFIX + examId, JSON.stringify(entry));
+  } catch {
+    // ignore
+  }
+}
+
+export function _resetPaperRepositoryCache(): void {
+  papersByExamCache.clear();
+  paperMetaCache.clear();
+  if (typeof window !== 'undefined' && window.sessionStorage) {
+    try {
+      const keysToRemove: string[] = [];
+      for (let i = 0; i < window.sessionStorage.length; i++) {
+        const k = window.sessionStorage.key(i);
+        if (k && k.startsWith(SESSION_PAPERS_PREFIX)) keysToRemove.push(k);
+      }
+      for (const k of keysToRemove) window.sessionStorage.removeItem(k);
+    } catch {
+      // ignore
+    }
+  }
+}
+
 export const paperRepository = {
   /**
    * Get all papers for an exam, optionally filtered by year.
    * Returns local data as fallback.
    */
   async getPapers(examId: string, year?: number): Promise<Omit<ExamPaper, 'questions'>[]> {
+    const now = Date.now();
+    const cachedExam = papersByExamCache.get(examId);
+
+    if (cachedExam && now - cachedExam.timestamp < PAPERS_CACHE_TTL_MS) {
+      if (year) return cachedExam.data.filter((p) => p.editionYear === year);
+      return cachedExam.data;
+    }
+
+    const sessionCached = getSessionCachedPapers(examId);
+    if (sessionCached) {
+      papersByExamCache.set(examId, { data: sessionCached, timestamp: now });
+      for (const p of sessionCached) {
+        paperMetaCache.set(p.id, { data: p, timestamp: now });
+      }
+      if (year) return sessionCached.filter((p) => p.editionYear === year);
+      return sessionCached;
+    }
+
     if (!isContentBackendAvailable()) {
       const local = getPapersForExam(examId);
+      papersByExamCache.set(examId, { data: local, timestamp: now });
+      setSessionCachedPapers(examId, local);
+      for (const p of local) {
+        paperMetaCache.set(p.id, { data: p, timestamp: now });
+      }
       if (year) return local.filter((p) => p.editionYear === year);
       return local;
     }
@@ -100,6 +176,10 @@ export const paperRepository = {
     const client = getContentClient();
     if (!client) {
       const local = getPapersForExam(examId);
+      papersByExamCache.set(examId, { data: local, timestamp: now });
+      for (const p of local) {
+        paperMetaCache.set(p.id, { data: p, timestamp: now });
+      }
       return year ? local.filter((p) => p.editionYear === year) : local;
     }
 
@@ -131,10 +211,21 @@ export const paperRepository = {
       }
 
       const examName = data[0]?.exam_id ?? examId;
-      return (data as RemotePaperRow[]).map((row) => mapRowToPaper(row, examName));
+      const mapped = (data as RemotePaperRow[]).map((row) => mapRowToPaper(row, examName));
+      papersByExamCache.set(examId, { data: mapped, timestamp: now });
+      setSessionCachedPapers(examId, mapped);
+      for (const p of mapped) {
+        paperMetaCache.set(p.id, { data: p, timestamp: now });
+      }
+      return year ? mapped.filter((p) => p.editionYear === year) : mapped;
     } catch (err) {
       console.warn('[paperRepository] Remote fetch failed, using local:', err);
       const local = getPapersForExam(examId);
+      papersByExamCache.set(examId, { data: local, timestamp: now });
+      setSessionCachedPapers(examId, local);
+      for (const p of local) {
+        paperMetaCache.set(p.id, { data: p, timestamp: now });
+      }
       return year ? local.filter((p) => p.editionYear === year) : local;
     }
   },
@@ -143,11 +234,18 @@ export const paperRepository = {
    * Get paper metadata (without questions) by paper ID.
    */
   async getPaperMeta(paperId: string): Promise<Omit<ExamPaper, 'questions'> | undefined> {
+    const now = Date.now();
+    const cached = paperMetaCache.get(paperId);
+    if (cached && now - cached.timestamp < PAPERS_CACHE_TTL_MS) {
+      return cached.data;
+    }
+
     if (!isContentBackendAvailable()) {
       const local = getPaperById(paperId);
       if (!local) return undefined;
       const { questions: _q, ...meta } = local;
       void _q;
+      paperMetaCache.set(paperId, { data: meta, timestamp: now });
       return meta;
     }
 
@@ -157,6 +255,7 @@ export const paperRepository = {
       if (!local) return undefined;
       const { questions: _q, ...meta } = local;
       void _q;
+      paperMetaCache.set(paperId, { data: meta, timestamp: now });
       return meta;
     }
 
@@ -178,16 +277,20 @@ export const paperRepository = {
         if (!local) return undefined;
         const { questions: _q, ...meta } = local;
         void _q;
+        paperMetaCache.set(paperId, { data: meta, timestamp: now });
         return meta;
       }
 
-      return mapRowToPaper(data as RemotePaperRow, data.exam_id);
+      const mapped = mapRowToPaper(data as RemotePaperRow, data.exam_id);
+      paperMetaCache.set(paperId, { data: mapped, timestamp: now });
+      return mapped;
     } catch (err) {
       console.warn('[paperRepository] getPaperMeta fallback:', err);
       const local = getPaperById(paperId);
       if (!local) return undefined;
       const { questions: _q, ...meta } = local;
       void _q;
+      paperMetaCache.set(paperId, { data: meta, timestamp: now });
       return meta;
     }
   },

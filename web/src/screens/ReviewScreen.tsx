@@ -183,7 +183,7 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
                         >
                           {letter}
                         </div>
-                        <div className="min-w-0 flex-1 text-xs sm:text-sm">
+                        <div className="min-w-0 flex-1 text-xs sm:text-sm option-content text-left">
                           <LatexRenderer content={opt} />
                         </div>
                         {isCorrectAnswer && (

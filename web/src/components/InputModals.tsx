@@ -8,19 +8,29 @@ import {
   Sparkles,
   ArrowRight,
   HelpCircle,
+  Cpu,
 } from 'lucide-react';
+import { aiProviderService } from '../services/ai/aiProviderService';
 
 // --- TOPIC MODAL ---
 interface TopicModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (topic: string, difficulty: string, count: number) => void;
+  onOpenAiSettings?: () => void;
 }
 
-export const TopicModal: React.FC<TopicModalProps> = ({ isOpen, onClose, onSubmit }) => {
+export const TopicModal: React.FC<TopicModalProps> = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  onOpenAiSettings,
+}) => {
   const [topic, setTopic] = useState('');
   const [difficulty, setDifficulty] = useState('MEDIUM');
   const [count, setCount] = useState(8);
+
+  const activeConnection = aiProviderService.getDefaultConnection();
 
   if (!isOpen) return null;
 
@@ -58,6 +68,33 @@ export const TopicModal: React.FC<TopicModalProps> = ({ isOpen, onClose, onSubmi
         </div>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
+          {/* Active AI Provider Banner */}
+          <div className="p-3.5 rounded-2xl bg-surface-elev2 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
+              <div className="min-w-0">
+                <span className="text-xs font-bold text-surface-text dark:text-darkSurface-text block truncate">
+                  AI Provider: {activeConnection?.name || 'Google Gemini (Built-in)'}
+                </span>
+                <span className="text-[11px] text-surface-muted dark:text-darkSurface-muted block truncate">
+                  Model: {activeConnection?.selectedModel || 'gemini-2.5-flash'}
+                </span>
+              </div>
+            </div>
+            {onOpenAiSettings && (
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onOpenAiSettings();
+                }}
+                className="text-xs font-bold text-brand-primary hover:underline px-2.5 py-1 rounded-lg hover:bg-brand-primary/10 transition-colors shrink-0"
+              >
+                Change
+              </button>
+            )}
+          </div>
+
           <div>
             <label className="block text-xs font-bold text-surface-muted dark:text-darkSurface-muted uppercase tracking-wider mb-1.5">
               Topic or Subject:

@@ -45,7 +45,18 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their\ndecreasing order of intensity. Identify the missing word in Group-II.\nGroup-I: Abuse → Insult → Ridicule\nGroup-II: ________ → Praise → Appreciate",
+      "questionText": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Here are two analogous groups, Group-I and Group-II, that list words in their decreasing order of intensity. Identify the missing word in Group-II.\n\nGroup-I: Abuse → Insult → Ridicule\n\nGroup-II: ________ → Praise → Appreciate",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Extol",
@@ -58,22 +69,62 @@
         {
           "id": "A",
           "text": "Extol",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Extol",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Prize",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Prize",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Appropriate",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Appropriate",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Espouse",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Espouse",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -103,7 +154,18 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\nSelect the most appropriate option to complete the above sentence.",
+      "questionText": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Had I learnt acting as a child, I ________ a famous film star.\n\nSelect the most appropriate option to complete the above sentence.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "will be",
@@ -116,22 +178,62 @@
         {
           "id": "A",
           "text": "will be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "will be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "can be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "can be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "am going to be",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "am going to be",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "could have been",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "could have been",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -161,35 +263,86 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The 12 musical notes are given as 𝐶, 𝐶#, 𝐷, 𝐷#, 𝐸, 𝐹, 𝐹#, 𝐺, 𝐺#, 𝐴, 𝐴#, and 𝐵.\n12\nFrequency of each note is \\sqrt 2 times the frequency of the previous note. If the\nfrequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹# and 𝐶\nis:",
+      "questionText": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The 12 musical notes are given as 𝐶, 𝐶^{#}, 𝐷, 𝐷^{#}, 𝐸, 𝐹, 𝐹^{#}, 𝐺, 𝐺^{#}, 𝐴, 𝐴^{#}, and 𝐵. Frequency of each note is \\sqrt{2} 12 times the frequency of the previous note. If the frequency of the note C is 130.8 Hz, then the ratio of frequencies of notes 𝐹^{#} and 𝐶 is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "6\n\\sqrt 2",
-        "\\sqrt 2",
-        "4\n\\sqrt 2",
+        "6 \\sqrt{2}",
+        "\\sqrt{2}",
+        "4 \\sqrt{2}",
         "2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "6\n\\sqrt 2",
-          "imageUrl": null
+          "text": "6 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
-          "imageUrl": null
+          "text": "\\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "4\n\\sqrt 2",
-          "imageUrl": null
+          "text": "4 \\sqrt{2}",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4 \\sqrt{2}",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -219,35 +372,92 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The following figures show three curves generated using an iterative algorithm. The\ntotal length of the curve generated after 'Iteration 𝑛' is:\nNote: The figures shown are representative.\n1\nIteration 0:\n1\n1\nIteration 1:\nLength of each segment:\n3\n3\n1\n1\nIteration 2: 9 Length of each segment:\n9",
+      "questionText": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The following figures show three curves generated using an iterative algorithm. The total length of the curve generated after 'Iteration 𝑛' is:\n\nNote: The figures shown are representative.\n\n1",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q4_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑛\n5 2\n( )\n3",
-        "𝑛\n5\n( )\n3",
-        "2𝑛\n5\n( )\n3",
-        "𝑛(2𝑛-1)\n5\n( )\n3"
+        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3) 𝑛",
+        "(5 3) 2𝑛",
+        "(5 3) 𝑛(2𝑛-1)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑛\n5 2\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "2𝑛\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 2𝑛",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 2𝑛",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑛(2𝑛-1)\n5\n( )\n3",
-          "imageUrl": null
+          "text": "(5 3) 𝑛(2𝑛-1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(5 3) 𝑛(2𝑛-1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -279,35 +489,51 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "|𝑥|\nWhich one of the following plots represents 𝑓(𝑥) = - , where 𝑥 is a non-\n𝑥\nzero real number?\nNote: The figures shown are representative.",
+      "questionText": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "_{Which one of the following plots represents}𝑓(𝑥) = - zero real number? Q.5 <u>|𝑥|</u> 𝑥, where 𝑥 is a non-\n\nNote: The figures shown are representative.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(0,1)\nx\n(0, -1)",
-        "f(x)\n(1,0)\nx\n(-1,0)",
-        "f(x)\n(0,1)\nx\n(0, -1)"
+        "",
+        "",
+        "(1,0) (-1,0) x",
+        ""
       ],
-      "optionImages": null,
+      "optionImages": [
+        "/exam-assets/gate/2025/bm/q5_opt_a.png",
+        "/exam-assets/gate/2025/bm/q5_opt_b.png",
+        "/exam-assets/gate/2025/bm/q5_opt_c.png",
+        "/exam-assets/gate/2025/bm/q5_opt_d.png"
+      ],
       "richOptions": [
         {
           "id": "A",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_a.png"
         },
         {
           "id": "B",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_b.png"
         },
         {
           "id": "C",
-          "text": "f(x)\n(1,0)\nx\n(-1,0)",
-          "imageUrl": null
+          "text": "(1,0) (-1,0) x",
+          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_c.png"
         },
         {
           "id": "D",
-          "text": "f(x)\n(0,1)\nx\n(0, -1)",
-          "imageUrl": null
+          "text": "",
+          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_d.png"
         }
       ],
       "correctAnswer": "A",
@@ -337,7 +563,18 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Identify the option that has the most appropriate sequence such that a coherent\nparagraph is formed:\nP. Over time, such adaptations lead to significant evolutionary changes with\nthe potential to shape the development of new species.\nQ. In natural world, organisms constantly adapt to their environments in\nresponse to challenges and opportunities.\nR. This process of adaptation is driven by the principle of natural selection,\nwhere favorable traits increase an organism's chances of survival and\nreproduction.\nS. As environments change, organisms that can adapt their behavior, structure\nand physiology to such changes are more likely to survive.",
+      "questionText": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify the option that has the most appropriate sequence such that a coherent paragraph is formed:\n\nP. Over time, such adaptations lead to significant evolutionary changes with the potential to shape the development of new species.\n\nQ. In natural world, organisms constantly adapt to their environments in response to challenges and opportunities.\n\nR. This process of adaptation is driven by the principle of natural selection, where favorable traits increase an organism's chances of survival and reproduction.\n\nS. As environments change, organisms that can adapt their behavior, structure and physiology to such changes are more likely to survive.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P → Q → R → S",
@@ -350,22 +587,62 @@
         {
           "id": "A",
           "text": "P → Q → R → S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P → Q → R → S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Q → S → R → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q → S → R → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R → S → Q → P",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R → S → Q → P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "S → P → R → Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S → P → R → Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -395,35 +672,96 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏 and 𝑏 from\n1 2\nthe origin (0), as shown in the figure. Note that 0 < 𝑏 < 𝑏 < 1. Which one of the\n1 2\nfollowing is NOT a necessary condition for forming a triangle using the three\npieces?\nNote: All lengths are in meter. The figure shown is representative.",
+      "questionText": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A stick of length one meter is broken at two locations at distances of 𝑏_{1} and 𝑏_{2} from the origin (0), as shown in the figure. Note that 0 < 𝑏_{1} < 𝑏_{2} < 1. Which one of the following is NOT a necessary condition for forming a triangle using the three pieces?\n\nNote: All lengths are in meter. The figure shown is representative.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q7_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑏 < 0.5\n1",
-        "𝑏 > 0.5\n2",
-        "𝑏 < 𝑏 + 0.5\n2 1",
-        "𝑏 + 𝑏 < 1\n1 2"
+        "\\(𝑏_{1} < 0.5\\)",
+        "\\(𝑏_{2} > 0.5\\)",
+        "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+        "\\(𝑏_{1} + 𝑏_{2} < 1\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑏 < 0.5\n1",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} < 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} < 0.5",
+              "content": "\\(𝑏_{1} < 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑏 > 0.5\n2",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} > 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} > 0.5",
+              "content": "\\(𝑏_{2} > 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑏 < 𝑏 + 0.5\n2 1",
-          "imageUrl": null
+          "text": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{2} < 𝑏_{1} + 0.5",
+              "content": "\\(𝑏_{2} < 𝑏_{1} + 0.5\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑏 + 𝑏 < 1\n1 2",
-          "imageUrl": null
+          "text": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑏_{1} + 𝑏_{2} < 1",
+              "content": "\\(𝑏_{1} + 𝑏_{2} < 1\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -455,7 +793,24 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure\nindicates their order of position at the start of the game. They play the game by\nmoving forward in a circle in the clockwise direction.\nAfter the 1st round, 4th student behind P leaves the game. After 2nd round, 5th student\nbehind Q leaves the game. After 3rd round, 3rd student behind V leaves the game.\nAfter 4th round, 4th student behind U leaves the game. Who all are left in the game\nafter the 4th round?\nNote: The figure shown is representative.\nP\nW R\nU T\nQ\nV\nS",
+      "questionText": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.\n\nP\n\nS",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction. After the 1^{st} round, 4^{th} student behind P leaves the game. After 2^{nd} round, 5^{th} student behind Q leaves the game. After 3^{rd} round, 3^{rd} student behind V leaves the game. After 4^{th} round, 4^{th} student behind U leaves the game. Who all are left in the game after the 4^{th} round?\n\nNote: The figure shown is representative.\n\nP\n\nS",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q8_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P; T; Q; S",
@@ -468,22 +823,62 @@
         {
           "id": "A",
           "text": "P; T; Q; S",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P; T; Q; S",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "V; P; T; Q",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "V; P; T; Q",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "W; R; Q; V",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "W; R; Q; V",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Q; T; V; W",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Q; T; V; W",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "MTA",
@@ -515,35 +910,129 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a\ntournament; also included are the number of silver and the bronze medals won by\nthem. Based only on the data provided in the table, which one of the following\nstatements is INCORRECT?",
+      "questionText": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?\n\n| Nation | Gold | Silver | Bronze |\n| :--- | :--- | :--- | :--- |\n| USA | 40 | 44 | 41 |\n| Canada | 39 | 27 | 24 |\n| Japan | 20 | 12 | 13 |\n| Australia | 17 | 19 | 16 |\n| France | 16 | 26 | 22 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nation",
+            "Gold",
+            "Silver",
+            "Bronze"
+          ],
+          "rows": [
+            [
+              "USA",
+              "40",
+              "44",
+              "41"
+            ],
+            [
+              "Canada",
+              "39",
+              "27",
+              "24"
+            ],
+            [
+              "Japan",
+              "20",
+              "12",
+              "13"
+            ],
+            [
+              "Australia",
+              "17",
+              "19",
+              "16"
+            ],
+            [
+              "France",
+              "16",
+              "26",
+              "22"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-        "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
-        "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
+        "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+        "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+        "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
         "Canada has won twice as many total medals as Japan."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "France will occupy the third place if the list were made on the basis of the total\nnumber of medals won.",
-          "imageUrl": null
+          "text": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "France will occupy the third place if the list were made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The order of the top two nations will not change even if the list is made on the basis\nof the total number of medals won.",
-          "imageUrl": null
+          "text": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "USA and Canada together have less than 50% of the medals awarded to the nations\nin the above table.",
-          "imageUrl": null
+          "text": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "USA and Canada together have less than 50% of the medals awarded to the nations in the above table.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Canada has won twice as many total medals as Japan.",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Canada has won twice as many total medals as Japan.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -573,7 +1062,18 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "An organization allows its employees to work independently on consultancy\nprojects but charges an overhead on the consulting fee. The overhead is 20% of the\nconsulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is\n₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The\ngovernment charges a Goods and Services Tax of 18% on the total amount (the\nconsulting fee plus the overhead). An employee of the organization charges this\nentire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client\ncannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the\nemployee can charge?",
+      "questionText": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is 20% of the consulting fee, if the fee is up to ₹ 5,00,000. For higher fees, the overhead is ₹ 1,00,000 plus 10% of the amount by which the fee exceeds ₹ 5,00,000. The government charges a Goods and Services Tax of 18% on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than ₹ 10,00,000, what is the maximum consulting fee that the employee can charge?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "₹ 7,01,438",
@@ -586,22 +1086,62 @@
         {
           "id": "A",
           "text": "₹ 7,01,438",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,01,438",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "₹ 7,24,961",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,24,961",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "₹ 7,51,232",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,51,232",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "₹ 7,75,784",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "₹ 7,75,784",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -631,7 +1171,18 @@
       "questionNumber": 11,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Consider two cuboidal blocks of volume 1 cm3 each, one made of gold and the\nother of undoped silicon. What will happen to the resistivity of these blocks if the\ntemperature is increased from 300 K to 350 K? Choose one of the following.",
+      "questionText": "Consider two cuboidal blocks of volume 1 cm^{3}each, one made of gold and the other of undoped silicon. What will happen to the resistivity of these blocks if the temperature is increased from 300 K to 350 K? Choose one of the following.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Consider two cuboidal blocks of volume 1 cm^{3}each, one made of gold and the other of undoped silicon. What will happen to the resistivity of these blocks if the temperature is increased from 300 K to 350 K? Choose one of the following.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Resistivity of gold increases and undoped silicon decreases",
@@ -644,22 +1195,62 @@
         {
           "id": "A",
           "text": "Resistivity of gold increases and undoped silicon decreases",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Resistivity of gold increases and undoped silicon decreases",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Resistivity of gold decreases and undoped silicon increases",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Resistivity of gold decreases and undoped silicon increases",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Resistivity of gold remains same and undoped silicon increases",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Resistivity of gold remains same and undoped silicon increases",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Resistivity of gold decreases and undoped silicon remains same",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Resistivity of gold decreases and undoped silicon remains same",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -690,6 +1281,17 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "Which one of the following represents the frequency response of a notch filter?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following represents the frequency response of a notch filter?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "",
@@ -707,22 +1309,62 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_a.png"
+          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_a.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/bm/q12_opt_a.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_b.png"
+          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/bm/q12_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_c.png"
+          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_c.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/bm/q12_opt_c.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_d.png"
+          "imageUrl": "/exam-assets/gate/2025/bm/q12_opt_d.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/bm/q12_opt_d.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -752,7 +1394,18 @@
       "questionNumber": 13,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Given the following statements, which one of the options is correct?\nStatement (i): Histology is the study of histones\nStatement (ii): Cytology is the study of tissues",
+      "questionText": "Given the following statements, which one of the options is correct?\n\nStatement (i): Histology is the study of histones\n\nStatement (ii): Cytology is the study of tissues",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given the following statements, which one of the options is correct?\n\nStatement (i): Histology is the study of histones\n\nStatement (ii): Cytology is the study of tissues",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Both the statements are correct",
@@ -765,22 +1418,62 @@
         {
           "id": "A",
           "text": "Both the statements are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both the statements are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Both the statements are incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both the statements are incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Statement (i) is correct; statement (ii) is incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Statement (i) is correct; statement (ii) is incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Statement (i) is incorrect; statement (ii) is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Statement (i) is incorrect; statement (ii) is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -810,7 +1503,18 @@
       "questionNumber": 14,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Given the following statements, which one of the options is correct?\nStatement (i): Structural Magnetic Resonance Imaging (sMRI) has better spatial\nresolution than Electroencephalogram (EEG)\nStatement (ii): EEG has better temporal resolution than sMRI",
+      "questionText": "Given the following statements, which one of the options is correct?\n\nStatement (i): Structural Magnetic Resonance Imaging (sMRI) has better spatial resolution than Electroencephalogram (EEG)\n\nStatement (ii): EEG has better temporal resolution than sMRI",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given the following statements, which one of the options is correct?\n\nStatement (i): Structural Magnetic Resonance Imaging (sMRI) has better spatial resolution than Electroencephalogram (EEG)\n\nStatement (ii): EEG has better temporal resolution than sMRI",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Both the statements are correct",
@@ -823,22 +1527,62 @@
         {
           "id": "A",
           "text": "Both the statements are correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both the statements are correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Both the statements are incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both the statements are incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Statement (i) is correct; statement (ii) is incorrect",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Statement (i) is correct; statement (ii) is incorrect",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Statement (i) is incorrect; statement (ii) is correct",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Statement (i) is incorrect; statement (ii) is correct",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -868,7 +1612,24 @@
       "questionNumber": 15,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the circuit shown below, assuming an ideal op-amp, for an input voltage\nVin = 1V, the output voltage Vout = ______________ (in volts).",
+      "questionText": "In the circuit shown below, assuming an ideal op-amp, for an input voltage Vin = 1V, the output voltage Vout = ______________ (in volts).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the circuit shown below, assuming an ideal op-amp, for an input voltage Vin = 1V, the output voltage Vout = ______________ (in volts).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q15_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "1.0",
@@ -881,22 +1642,62 @@
         {
           "id": "A",
           "text": "1.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "2.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "0.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0.1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -928,11 +1729,22 @@
       "questionNumber": 16,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Consider the following statements:\nAssertion: Positron Emission Tomography (PET) uses radionuclides, such as 11C\nand 15N, to study tissue metabolism.\nReason: Positron-emitting nuclides are incorporated in molecules that are essential\nfor metabolism.",
+      "questionText": "Assertion: Positron Emission Tomography (PET) uses radionuclides, such as ^{11}C and ^{15}N, to study tissue metabolism.\n\nReason: Positron-emitting nuclides are incorporated in molecules that are essential for metabolism.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Assertion: Positron Emission Tomography (PET) uses radionuclides, such as ^{11}C and ^{15}N, to study tissue metabolism.\n\nReason: Positron-emitting nuclides are incorporated in molecules that are essential for metabolism.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Both Assertion and Reason are true; Reason is not the correct explanation for the\nAssertion",
-        "Both Assertion and Reason are true; Reason is the correct explanation for the\nAssertion",
+        "Both Assertion and Reason are true; Reason is not the correct explanation for the Assertion",
+        "Both Assertion and Reason are true; Reason is the correct explanation for the Assertion",
         "Assertion is true, but Reason is false",
         "Both Assertion and Reason are false"
       ],
@@ -940,23 +1752,63 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "Both Assertion and Reason are true; Reason is not the correct explanation for the\nAssertion",
-          "imageUrl": null
+          "text": "Both Assertion and Reason are true; Reason is not the correct explanation for the Assertion",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both Assertion and Reason are true; Reason is not the correct explanation for the Assertion",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Both Assertion and Reason are true; Reason is the correct explanation for the\nAssertion",
-          "imageUrl": null
+          "text": "Both Assertion and Reason are true; Reason is the correct explanation for the Assertion",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both Assertion and Reason are true; Reason is the correct explanation for the Assertion",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Assertion is true, but Reason is false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Assertion is true, but Reason is false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Both Assertion and Reason are false",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Both Assertion and Reason are false",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -986,7 +1838,18 @@
       "questionNumber": 17,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The determinant of a 3 \\times 3 matrix 𝑀 is 8. If every element of 𝑀 is multiplied\nby -2, the determinant of the modified matrix will be",
+      "questionText": "The determinant of a 3 \\times 3 matrix 𝑀 is 8. If every element of 𝑀 is multiplied by -2, the determinant of the modified matrix will be",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The determinant of a 3 \\times 3 matrix 𝑀 is 8. If every element of 𝑀 is multiplied by -2, the determinant of the modified matrix will be",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "-64",
@@ -999,22 +1862,62 @@
         {
           "id": "A",
           "text": "-64",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-64",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "-16",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "-16",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "8",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "8",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "64",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "64",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1044,7 +1947,18 @@
       "questionNumber": 18,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "For any continuous and differentiable function 𝑓(𝑥) with first derivative\n𝑓′(𝑥) \\ne 0 for all values of 𝑥, which one of the following is ALWAYS TRUE for\n𝑎 \\ne 𝑏?\nHere, 𝑎 and 𝑏 are finite and real.",
+      "questionText": "For any continuous and differentiable function 𝑓(𝑥) with first derivative 𝑓^{′}(𝑥) \\ne 0 for all values of 𝑥, which one of the following is ALWAYS TRUE for 𝑎 \\ne 𝑏?\n\nHere, 𝑎 and 𝑏 are finite and real.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For any continuous and differentiable function 𝑓(𝑥) with first derivative 𝑓^{′}(𝑥) \\ne 0 for all values of 𝑥, which one of the following is ALWAYS TRUE for 𝑎 \\ne 𝑏?\n\nHere, 𝑎 and 𝑏 are finite and real.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑓(𝑎) > 𝑓(𝑏)",
@@ -1057,22 +1971,62 @@
         {
           "id": "A",
           "text": "𝑓(𝑎) > 𝑓(𝑏)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑓(𝑎) > 𝑓(𝑏)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑓(𝑎) = 𝑓(𝑏)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑓(𝑎) = 𝑓(𝑏)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑓(𝑎) \\ne 𝑓(𝑏)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑓(𝑎) \\ne 𝑓(𝑏)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑓(𝑎) < 𝑓(𝑏)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑓(𝑎) < 𝑓(𝑏)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1103,6 +2057,23 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "The closed loop system shown below ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The closed loop system shown below ______________.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q19_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "is overdamped",
@@ -1115,22 +2086,62 @@
         {
           "id": "A",
           "text": "is overdamped",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "is overdamped",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "is underdamped",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "is underdamped",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "is critically damped",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "is critically damped",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "has sustained oscillations",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "has sustained oscillations",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1162,7 +2173,18 @@
       "questionNumber": 20,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which one of the following statements is CORRECT for any second order linear\nsystem with Proportional Integral Derivative (PID) controller?",
+      "questionText": "Which one of the following statements is CORRECT for any second order linear system with Proportional Integral Derivative (PID) controller?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following statements is CORRECT for any second order linear system with Proportional Integral Derivative (PID) controller?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Integral component decreases residual steady state error",
@@ -1175,22 +2197,62 @@
         {
           "id": "A",
           "text": "Integral component decreases residual steady state error",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Integral component decreases residual steady state error",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Integral component integrates the output signal only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Integral component integrates the output signal only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Integral component increases residual steady state error",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Integral component increases residual steady state error",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Integral component integrates the input signal only",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Integral component integrates the input signal only",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1220,11 +2282,22 @@
       "questionNumber": 21,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "𝑐𝑜𝑠𝜃 -𝑠𝑖𝑛𝜃\nThe eigenvalues of the matrix ( ) are ______________.\n𝑠𝑖𝑛𝜃 𝑐𝑜𝑠𝜃",
+      "questionText": "The eigenvalues of the matrix (𝑐𝑜𝑠𝜃 𝑠𝑖𝑛𝜃 -𝑠𝑖𝑛𝜃 𝑐𝑜𝑠𝜃) are ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The eigenvalues of the matrix (𝑐𝑜𝑠𝜃 𝑠𝑖𝑛𝜃 -𝑠𝑖𝑛𝜃 𝑐𝑜𝑠𝜃) are ______________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "𝑐𝑜𝑠𝜃 and 𝑠𝑖𝑛𝜃",
-        "𝑒𝑖𝜃 𝑒-𝑖𝜃,\nand where 𝑖 = \\sqrt -1",
+        "\\(𝑒^{𝑖𝜃} and 𝑒^{-𝑖𝜃}, where _{𝑖= \\sqrt -1}\\)",
         "𝑐𝑜𝑠𝜃 and - 𝑠𝑖𝑛𝜃",
         "𝑐𝑜𝑠2𝜃 and 𝑠𝑖𝑛2𝜃"
       ],
@@ -1233,22 +2306,63 @@
         {
           "id": "A",
           "text": "𝑐𝑜𝑠𝜃 and 𝑠𝑖𝑛𝜃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑐𝑜𝑠𝜃 and 𝑠𝑖𝑛𝜃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑒𝑖𝜃 𝑒-𝑖𝜃,\nand where 𝑖 = \\sqrt -1",
-          "imageUrl": null
+          "text": "\\(𝑒^{𝑖𝜃} and 𝑒^{-𝑖𝜃}, where _{𝑖= \\sqrt -1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑒^{𝑖𝜃} and 𝑒^{-𝑖𝜃}, where _{𝑖= \\sqrt -1}",
+              "content": "\\(𝑒^{𝑖𝜃} and 𝑒^{-𝑖𝜃}, where _{𝑖= \\sqrt -1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
           "text": "𝑐𝑜𝑠𝜃 and - 𝑠𝑖𝑛𝜃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑐𝑜𝑠𝜃 and - 𝑠𝑖𝑛𝜃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑐𝑜𝑠2𝜃 and 𝑠𝑖𝑛2𝜃",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑐𝑜𝑠2𝜃 and 𝑠𝑖𝑛2𝜃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1278,35 +2392,90 @@
       "questionNumber": 22,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Let 𝑅 , 𝑅 and 𝑅 be the Reynolds numbers corresponding to the following three\n1 2 3\ncases, respectively\nCase 1: A 1 𝜇m long bacterium swimming in water\nCase 2: A 10 cm long fish swimming in water\nCase 3: A 10 m long whale swimming in water\nIf each of them covers a distance equal to their respective body length in one\nsecond, which one of the following is CORRECT?",
+      "questionText": "Let 𝑅_{1}, 𝑅_{2} and 𝑅_{3} be the Reynolds numbers corresponding to the following three cases, respectively\n\nCase 1: A 1 𝜇m long bacterium swimming in water\n\nCase 2: A 10 cm long fish swimming in water\n\nCase 3: A 10 m long whale swimming in water\n\nIf each of them covers a distance equal to their respective body length in one second, which one of the following is CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Let 𝑅_{1}, 𝑅_{2} and 𝑅_{3} be the Reynolds numbers corresponding to the following three cases, respectively\n\nCase 1: A 1 𝜇m long bacterium swimming in water\n\nCase 2: A 10 cm long fish swimming in water\n\nCase 3: A 10 m long whale swimming in water\n\nIf each of them covers a distance equal to their respective body length in one second, which one of the following is CORRECT?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑅 > 𝑅 > 𝑅\n1 2 3",
-        "𝑅 < 𝑅 < 𝑅\n1 2 3",
-        "𝑅 < 𝑅 < 𝑅\n3 1 2",
-        "𝑅 < 𝑅 < 𝑅\n2 1 3"
+        "\\(𝑅_{1} > 𝑅_{2} > 𝑅_{3}\\)",
+        "\\(𝑅_{1} < 𝑅_{2} < 𝑅_{3}\\)",
+        "\\(𝑅_{3} < 𝑅_{1} < 𝑅_{2}\\)",
+        "\\(𝑅_{2} < 𝑅_{1} < 𝑅_{3}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑅 > 𝑅 > 𝑅\n1 2 3",
-          "imageUrl": null
+          "text": "\\(𝑅_{1} > 𝑅_{2} > 𝑅_{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅_{1} > 𝑅_{2} > 𝑅_{3}",
+              "content": "\\(𝑅_{1} > 𝑅_{2} > 𝑅_{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑅 < 𝑅 < 𝑅\n1 2 3",
-          "imageUrl": null
+          "text": "\\(𝑅_{1} < 𝑅_{2} < 𝑅_{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅_{1} < 𝑅_{2} < 𝑅_{3}",
+              "content": "\\(𝑅_{1} < 𝑅_{2} < 𝑅_{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑅 < 𝑅 < 𝑅\n3 1 2",
-          "imageUrl": null
+          "text": "\\(𝑅_{3} < 𝑅_{1} < 𝑅_{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅_{3} < 𝑅_{1} < 𝑅_{2}",
+              "content": "\\(𝑅_{3} < 𝑅_{1} < 𝑅_{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑅 < 𝑅 < 𝑅\n2 1 3",
-          "imageUrl": null
+          "text": "\\(𝑅_{2} < 𝑅_{1} < 𝑅_{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑅_{2} < 𝑅_{1} < 𝑅_{3}",
+              "content": "\\(𝑅_{2} < 𝑅_{1} < 𝑅_{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1336,35 +2505,90 @@
       "questionNumber": 23,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The shape of an elastic rod of length 𝑙 is represented by the position vector 𝑟⃗(𝑠)\ncorresponding to the arc length 𝑠. If the bending energy of the rod is\n𝑙 𝜕2𝑟⃗ 2\n𝐸 = 𝐾 \\int ( ) 𝑑𝑠,\n𝜕𝑠2\n0\nwhat is the dimension of 𝐾 in terms of mass M, length L and time T ?",
+      "questionText": "The shape of an elastic rod of length 𝑙 is represented by the position vector 𝑟⃗(𝑠) corresponding to the arc length 𝑠. If the bending energy of the rod is\n\n𝐸= 𝐾 \\int (𝜕^{2}𝑟⃗ 0 𝑙 𝜕𝑠_{2}) 2 𝑑𝑠 ,\n\nwhat is the dimension of 𝐾 in terms of mass M, length L and time T ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The shape of an elastic rod of length 𝑙 is represented by the position vector 𝑟⃗(𝑠) corresponding to the arc length 𝑠. If the bending energy of the rod is\n\n𝐸= 𝐾 \\int (𝜕^{2}𝑟⃗ 0 𝑙 𝜕𝑠_{2}) 2 𝑑𝑠 ,\n\nwhat is the dimension of 𝐾 in terms of mass M, length L and time T ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑀𝐿𝑇-2",
-        "𝑀𝐿3𝑇-2",
-        "𝑀𝐿2𝑇-2",
-        "𝑀𝐿3𝑇-1"
+        "\\(𝑀𝐿𝑇^{-2}\\)",
+        "\\(𝑀𝐿^{3}𝑇^{-2}\\)",
+        "\\(𝑀𝐿^{2}𝑇^{-2}\\)",
+        "\\(𝑀𝐿^{3}𝑇^{-1}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑀𝐿𝑇-2",
-          "imageUrl": null
+          "text": "\\(𝑀𝐿𝑇^{-2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑀𝐿𝑇^{-2}",
+              "content": "\\(𝑀𝐿𝑇^{-2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑀𝐿3𝑇-2",
-          "imageUrl": null
+          "text": "\\(𝑀𝐿^{3}𝑇^{-2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑀𝐿^{3}𝑇^{-2}",
+              "content": "\\(𝑀𝐿^{3}𝑇^{-2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑀𝐿2𝑇-2",
-          "imageUrl": null
+          "text": "\\(𝑀𝐿^{2}𝑇^{-2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑀𝐿^{2}𝑇^{-2}",
+              "content": "\\(𝑀𝐿^{2}𝑇^{-2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑀𝐿3𝑇-1",
-          "imageUrl": null
+          "text": "\\(𝑀𝐿^{3}𝑇^{-1}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "𝑀𝐿^{3}𝑇^{-1}",
+              "content": "\\(𝑀𝐿^{3}𝑇^{-1}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1394,7 +2618,18 @@
       "questionNumber": 24,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The duration of action potential in a ventricular muscle cell of a human heart ranges\nfrom ______________ milliseconds.",
+      "questionText": "The duration of action potential in a ventricular muscle cell of a human heart ranges from ______________ milliseconds.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The duration of action potential in a ventricular muscle cell of a human heart ranges from ______________ milliseconds.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "2 to 3",
@@ -1407,22 +2642,62 @@
         {
           "id": "A",
           "text": "2 to 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2 to 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "200 to 300",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "200 to 300",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "2000 to 3000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2000 to 3000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "20 to 30",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20 to 30",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1452,7 +2727,18 @@
       "questionNumber": 25,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "9C and 10C are ______________, whereas 9 C and 8B are ______________.\n6 6 6 5",
+      "questionText": "6 9 C and 10 6 C are ______________, whereas C 6 ^{9 and}B ^{8} are ______________. 5",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "6 9 C and 10 6 C are ______________, whereas C 6 ^{9 and}B ^{8} are ______________. 5",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "isotopes; isomers",
@@ -1465,22 +2751,62 @@
         {
           "id": "A",
           "text": "isotopes; isomers",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isotopes; isomers",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "isomers; isotopes",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isomers; isotopes",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "isotopes; isotones",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isotopes; isotones",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "isotones; isotopes",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "isotones; isotopes",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1511,6 +2837,17 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "Cerebrospinal fluid in humans is present in the ______________ space.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Cerebrospinal fluid in humans is present in the ______________ space.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "subdural",
@@ -1523,22 +2860,62 @@
         {
           "id": "A",
           "text": "subdural",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "subdural",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "subarachnoid",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "subarachnoid",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "pericardial",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "pericardial",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "epidural",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "epidural",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1568,7 +2945,18 @@
       "questionNumber": 27,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the context of temperature sensitive polymers, LCST stands for\n______________.",
+      "questionText": "In the context of temperature sensitive polymers, LCST stands for ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the context of temperature sensitive polymers, LCST stands for ______________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Large Critical Solution Temperature",
@@ -1581,22 +2969,62 @@
         {
           "id": "A",
           "text": "Large Critical Solution Temperature",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Large Critical Solution Temperature",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Local Critical Solute Temperature",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Local Critical Solute Temperature",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Large Critical Solvent Temperature",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Large Critical Solvent Temperature",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Lower/Lowest Critical Solution Temperature",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Lower/Lowest Critical Solution Temperature",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1626,7 +3054,18 @@
       "questionNumber": 28,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the electrocardiogram (ECG) of humans, the electrical signature of atrial\nrepolarization is masked by the ______________.",
+      "questionText": "In the electrocardiogram (ECG) of humans, the electrical signature of atrial repolarization is masked by the ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the electrocardiogram (ECG) of humans, the electrical signature of atrial repolarization is masked by the ______________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P wave",
@@ -1639,22 +3078,62 @@
         {
           "id": "A",
           "text": "P wave",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P wave",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "QRS complex",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "QRS complex",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "T wave",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "T wave",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "ST segment",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "ST segment",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1684,7 +3163,18 @@
       "questionNumber": 29,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which one of the following hormones is NOT secreted by the adrenal gland in\nhumans?",
+      "questionText": "Which one of the following hormones is NOT secreted by the adrenal gl and in humans?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following hormones is NOT secreted by the adrenal gl and in humans?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Cortisol",
@@ -1697,22 +3187,62 @@
         {
           "id": "A",
           "text": "Cortisol",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Cortisol",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Epinephrine",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Epinephrine",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Oxytocin",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Oxytocin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Aldosterone",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Aldosterone",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1743,6 +3273,17 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "Which one of the following does NOT use piezoelectric transducers?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which one of the following does NOT use piezoelectric transducers?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Ultrasonography",
@@ -1755,22 +3296,62 @@
         {
           "id": "A",
           "text": "Ultrasonography",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Ultrasonography",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Phonocardiography",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Phonocardiography",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Echocardiography",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Echocardiography",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Electroencephalography",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electroencephalography",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1800,7 +3381,18 @@
       "questionNumber": 31,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A low pass filter with cutoff frequency of 250 Hz is NOT suitable for recording\n______________.",
+      "questionText": "A low pass filter with cutoff frequency of 250 Hz is NOT suitable for recording ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A low pass filter with cutoff frequency of 250 Hz is NOT suitable for recording ______________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "Electrocardiogram (ECG)",
@@ -1813,22 +3405,62 @@
         {
           "id": "A",
           "text": "Electrocardiogram (ECG)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electrocardiogram (ECG)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Electroencephalogram (EEG)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electroencephalogram (EEG)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Electromyogram (EMG)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electromyogram (EMG)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Electrooculogram (EOG)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Electrooculogram (EOG)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -1858,11 +3490,22 @@
       "questionNumber": 32,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "1 𝑓(1+ ∆𝑥)- 𝑓(1)\nIf 𝑓(𝑥) = 𝑥 - , the value of lim is ______________.\n𝑥 ∆𝑥→0 ∆𝑥",
+      "questionText": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 \\(\\frac{𝑓(1+∆𝑥)-𝑓(1)}{∆𝑥→0∆𝑥}\\) is ______________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 \\(\\frac{𝑓(1+∆𝑥)-𝑓(1)}{∆𝑥→0∆𝑥}\\) is ______________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0",
-        "1\n2",
+        "\\(\\frac{1}{2}\\)",
         "1",
         "2"
       ],
@@ -1871,22 +3514,63 @@
         {
           "id": "A",
           "text": "0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n2",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{2}",
+              "content": "\\(\\frac{1}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
           "text": "1",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "2",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1916,7 +3600,18 @@
       "questionNumber": 33,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The elements of the dataset {-5,1, 𝑎, 5, 𝑏} are in ascending order. If both mean\nand median of the dataset are equal to 3, what is the value of 𝑏?",
+      "questionText": "The elements of the dataset {-5,1, 𝑎, 5, 𝑏} are in ascending order. If both mean and median of the dataset are equal to 3, what is the value of 𝑏?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The elements of the dataset {-5,1, 𝑎, 5, 𝑏} are in ascending order. If both mean and median of the dataset are equal to 3, what is the value of 𝑏?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "7",
@@ -1929,22 +3624,62 @@
         {
           "id": "A",
           "text": "7",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "7",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "11",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "11",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "9",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "9",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "12",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -1974,35 +3709,90 @@
       "questionNumber": 34,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "For a tissue with Young's modulus 4 kPa and shear modulus 1.5 kPa, what is the\nvalue of the Poisson's ratio?",
+      "questionText": "For a tissue with Young's modulus 4 kPa and shear modulus 1.5 kPa, what is the value of the Poisson's ratio?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For a tissue with Young's modulus 4 kPa and shear modulus 1.5 kPa, what is the value of the Poisson's ratio?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n5",
-        "1\n3",
-        "1\n4",
-        "1\n2"
+        "\\(\\frac{1}{5}\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(\\frac{1}{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n5",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{5}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{5}",
+              "content": "\\(\\frac{1}{5}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "1\n3",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{3}",
+              "content": "\\(\\frac{1}{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "1\n4",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{4}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{4}",
+              "content": "\\(\\frac{1}{4}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "1\n2",
-          "imageUrl": null
+          "text": "\\(\\frac{1}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{1}{2}",
+              "content": "\\(\\frac{1}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2032,7 +3822,18 @@
       "questionNumber": 35,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The Electroencephalogram (EEG) voltage measured by a test device is 2.4 µV,\nwhile the reference device measured it to be 3.0 µV. What is the percentage error\nof the test device?",
+      "questionText": "The Electroencephalogram (EEG) voltage measured by a test device is 2.4 µV, while the reference device measured it to be 3.0 µV. What is the percentage error of the test device?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The Electroencephalogram (EEG) voltage measured by a test device is 2.4 µV, while the reference device measured it to be 3.0 µV. What is the percentage error of the test device?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "25%",
@@ -2045,22 +3846,62 @@
         {
           "id": "A",
           "text": "25%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "25%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "20%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "20%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "10%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "10%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "0.6%",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.6%",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2090,7 +3931,18 @@
       "questionNumber": 36,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A time domain signal is given by\n𝑥(𝑡) = 20 sin(100𝜋𝑡) + 36 sin(150𝜋𝑡) -2sin (300𝜋𝑡),\nwhere time t is in seconds. Among the following options, what is the frequency (in\nHz) at which 𝑥(𝑡) should be sampled for accurate signal reconstruction?",
+      "questionText": "A time domain signal is given by\n\n𝑥(𝑡) = 20 sin(100𝜋𝑡) + 36 sin(150𝜋𝑡) -2sin (300𝜋𝑡),\n\nwhere time t is in seconds. Among the following options, what is the frequency (in Hz) at which 𝑥(𝑡) should be sampled for accurate signal reconstruction?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A time domain signal is given by\n\n𝑥(𝑡) = 20 sin(100𝜋𝑡) + 36 sin(150𝜋𝑡) -2sin (300𝜋𝑡),\n\nwhere time t is in seconds. Among the following options, what is the frequency (in Hz) at which 𝑥(𝑡) should be sampled for accurate signal reconstruction?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "500",
@@ -2103,22 +3955,62 @@
         {
           "id": "A",
           "text": "500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "150",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "150",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "200",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "200",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "250",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "250",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2148,7 +4040,18 @@
       "questionNumber": 37,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "𝜋\nA voltage source 𝑉𝑠 = 5sin (100𝑡 + ) volts is driving a current\n2\n𝜋\n𝐼 = 10 sin (100𝑡 + ) mA through a circuit.\n6\nThe average power dissipated in the circuit is ______________ mW.",
+      "questionText": "A voltage source 𝑉𝑠= 5sin (100𝑡+ <u>𝜋</u> _{2}) volts is driving a current 𝐼= 10 sin (100𝑡+ <u>𝜋</u> _{6}) mA through a circuit. The average power dissipated in the circuit is ______________ mW.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A voltage source 𝑉𝑠= 5sin (100𝑡+ <u>𝜋</u> _{2}) volts is driving a current 𝐼= 10 sin (100𝑡+ <u>𝜋</u> _{6}) mA through a circuit. The average power dissipated in the circuit is ______________ mW.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "0.0",
@@ -2161,22 +4064,62 @@
         {
           "id": "A",
           "text": "0.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "0.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "12.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "12.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "25.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "25.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "50.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "50.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2206,7 +4149,18 @@
       "questionNumber": 38,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "𝑁 independent trials of a binomial random variable yield an expectation value of 16\nand variance of 12. What is the value of 𝑁?",
+      "questionText": "𝑁 independent trials of a binomial random variable yield an expectation value of 16 and variance of 12. What is the value of 𝑁?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "𝑁 independent trials of a binomial random variable yield an expectation value of 16 and variance of 12. What is the value of 𝑁?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "80",
@@ -2219,22 +4173,62 @@
         {
           "id": "A",
           "text": "80",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "80",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "60",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "60",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "45",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "45",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "64",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "64",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -2264,7 +4258,18 @@
       "questionNumber": 39,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Given a function 𝑦(𝑥) satisfying the differential equation\n𝑦′′ -0.25𝑦 = 0,\nwith initial conditions 𝑦(0) = 1; 𝑦′(0) = 1, what is the value of 𝑦(log 100)?\n𝑒\nHere, 𝑦′ and 𝑦′′ are the first and second derivatives of 𝑦, respectively.",
+      "questionText": "Given a function 𝑦(𝑥) satisfying the differential equation 𝑦^{′′} -0.25𝑦= 0,\n\nwith initial conditions 𝑦(0) = 1; 𝑦^{′}(0) = 1, what is the value of 𝑦(log_{𝑒}100)? Here, 𝑦^{′} and 𝑦^{′′} are the first and second derivatives of 𝑦, respectively.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Given a function 𝑦(𝑥) satisfying the differential equation 𝑦^{′′} -0.25𝑦= 0,\n\nwith initial conditions 𝑦(0) = 1; 𝑦^{′}(0) = 1, what is the value of 𝑦(log_{𝑒}100)? Here, 𝑦^{′} and 𝑦^{′′} are the first and second derivatives of 𝑦, respectively.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "14.05",
@@ -2277,22 +4282,62 @@
         {
           "id": "A",
           "text": "14.05",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14.05",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "14.25",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14.25",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "14.95",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14.95",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "14.65",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "14.65",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2322,7 +4367,24 @@
       "questionNumber": 40,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the circuit shown below, Vin =10cos(1000𝑡) volts. The magnitude of the input\nimpedance of the circuit is ____________ kΩ. (rounded off to one decimal place)",
+      "questionText": "In the circuit shown below, Vin =10cos(1000𝑡) volts. The magnitude of the input impedance of the circuit is ____________ kΩ. (rounded off to one decimal place)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In the circuit shown below, Vin =10cos(1000𝑡) volts. The magnitude of the input impedance of the circuit is ____________ kΩ. (rounded off to one decimal place)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q40_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "5.0",
@@ -2335,22 +4397,62 @@
         {
           "id": "A",
           "text": "5.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "5.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "3.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "3.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "6.0",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "6.0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "4.5",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "4.5",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2382,7 +4484,18 @@
       "questionNumber": 41,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Gelatin solutions P and Q of concentrations 3.5% and 0.5%, respectively, need to\nbe mixed to obtain a 3% solution R. How much volume (in ml) of P needs to be\nmixed with 100 ml of Q to obtain R? (Choose the correct option)\nAll concentrations are in units of weight/volume.",
+      "questionText": "Gelatin solutions P and Q of concentrations 3.5% and 0.5%, respectively, need to be mixed to obtain a 3% solution R. How much volume (in ml) of P needs to be mixed with 100 ml of Q to obtain R? (Choose the correct option)\n\nAll concentrations are in units of weight/volume.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Gelatin solutions P and Q of concentrations 3.5% and 0.5%, respectively, need to be mixed to obtain a 3% solution R. How much volume (in ml) of P needs to be mixed with 100 ml of Q to obtain R? (Choose the correct option)\n\nAll concentrations are in units of weight/volume.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "100",
@@ -2395,22 +4508,62 @@
         {
           "id": "A",
           "text": "100",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "100",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "250",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "250",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "500",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "500",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "1000",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1000",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -2440,35 +4593,86 @@
       "questionNumber": 42,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which of the following is/are CORRECT about the value of 𝑦 = log (-𝑒𝑥),\n𝑒\nwhere 𝑥 is a real number.",
+      "questionText": "Which of the following is/are CORRECT about the value of 𝑦= log_{𝑒}(-𝑒^{𝑥}), where 𝑥 is a real number.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is/are CORRECT about the value of 𝑦= log_{𝑒}(-𝑒^{𝑥}), where 𝑥 is a real number.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "𝑦 is real valued",
         "𝑦 is complex valued",
-        "𝑦 = 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an odd integer and 𝑖 = \\sqrt -1",
-        "𝑦 = 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an even integer and 𝑖 = \\sqrt -1"
+        "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an odd integer and 𝑖= \\sqrt -1",
+        "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an even integer and 𝑖= \\sqrt -1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "𝑦 is real valued",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦 is real valued",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑦 is complex valued",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦 is complex valued",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "𝑦 = 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an odd integer and 𝑖 = \\sqrt -1",
-          "imageUrl": null
+          "text": "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an odd integer and 𝑖= \\sqrt -1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an odd integer and 𝑖= \\sqrt -1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "𝑦 = 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an even integer and 𝑖 = \\sqrt -1",
-          "imageUrl": null
+          "text": "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an even integer and 𝑖= \\sqrt -1",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦= 𝑥 \\pm 𝑖𝑛𝜋, where 𝑛 is an even integer and 𝑖= \\sqrt -1",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;C",
@@ -2505,10 +4709,21 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "Which of the following statement(s) about ultrasound waves is/are true?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statement(s) about ultrasound waves is/are true?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Acoustic impedance of biological tissues is directly proportional to its density",
-        "The reflection coefficient depends on the impedance mismatch at the interface of\ntwo biological tissues",
+        "The reflection coefficient depends on the impedance mismatch at the interface of two biological tissues",
         "The transmission coefficient is independent of the impedance of biological tissues",
         "Biological tissues do not reflect ultrasound waves"
       ],
@@ -2517,22 +4732,62 @@
         {
           "id": "A",
           "text": "Acoustic impedance of biological tissues is directly proportional to its density",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Acoustic impedance of biological tissues is directly proportional to its density",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "The reflection coefficient depends on the impedance mismatch at the interface of\ntwo biological tissues",
-          "imageUrl": null
+          "text": "The reflection coefficient depends on the impedance mismatch at the interface of two biological tissues",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The reflection coefficient depends on the impedance mismatch at the interface of two biological tissues",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "The transmission coefficient is independent of the impedance of biological tissues",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The transmission coefficient is independent of the impedance of biological tissues",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Biological tissues do not reflect ultrasound waves",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Biological tissues do not reflect ultrasound waves",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2568,7 +4823,24 @@
       "questionNumber": 44,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Two systems 𝑈 and 𝑉 are defined as shown below. Which of the following\nstatement(s) is/are CORRECT?",
+      "questionText": "Two systems 𝑈 and 𝑉 are defined as shown below. Which of the following statement(s) is/are CORRECT?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two systems 𝑈 and 𝑉 are defined as shown below. Which of the following statement(s) is/are CORRECT?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q44_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "System 𝑈 is nonlinear; System 𝑉 is linear",
@@ -2581,22 +4853,62 @@
         {
           "id": "A",
           "text": "System 𝑈 is nonlinear; System 𝑉 is linear",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "System 𝑈 is nonlinear; System 𝑉 is linear",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "System 𝑈 is causal; System 𝑉 is noncausal",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "System 𝑈 is causal; System 𝑉 is noncausal",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "System 𝑈 is noncausal; System 𝑉 is causal",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "System 𝑈 is noncausal; System 𝑉 is causal",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "System 𝑈 is nonlinear; System 𝑉 is nonlinear",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "System 𝑈 is nonlinear; System 𝑉 is nonlinear",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;B",
@@ -2635,34 +4947,85 @@
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
       "questionText": "Which of the following statement(s) about pulse oximetry is/are TRUE?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statement(s) about pulse oximetry is/are TRUE?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Oxygenated hemoglobin absorbs less infrared light (900 nm) compared to\ndeoxygenated hemoglobin",
-        "Oxygenated hemoglobin absorbs less visible light (600 nm) compared to\ndeoxygenated hemoglobin",
-        "Oxygenated hemoglobin absorbs more visible light (600 nm) compared to\ndeoxygenated hemoglobin",
-        "Oxygenated hemoglobin absorbs more infrared light (900 nm) compared to\ndeoxygenated hemoglobin"
+        "Oxygenated hemoglobin absorbs less infrared light (900 nm) compared to deoxygenated hemoglobin",
+        "Oxygenated hemoglobin absorbs less visible light (600 nm) compared to deoxygenated hemoglobin",
+        "Oxygenated hemoglobin absorbs more visible light (600 nm) compared to deoxygenated hemoglobin",
+        "Oxygenated hemoglobin absorbs more infrared light (900 nm) compared to deoxygenated hemoglobin"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Oxygenated hemoglobin absorbs less infrared light (900 nm) compared to\ndeoxygenated hemoglobin",
-          "imageUrl": null
+          "text": "Oxygenated hemoglobin absorbs less infrared light (900 nm) compared to deoxygenated hemoglobin",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Oxygenated hemoglobin absorbs less infrared light (900 nm) compared to deoxygenated hemoglobin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "Oxygenated hemoglobin absorbs less visible light (600 nm) compared to\ndeoxygenated hemoglobin",
-          "imageUrl": null
+          "text": "Oxygenated hemoglobin absorbs less visible light (600 nm) compared to deoxygenated hemoglobin",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Oxygenated hemoglobin absorbs less visible light (600 nm) compared to deoxygenated hemoglobin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Oxygenated hemoglobin absorbs more visible light (600 nm) compared to\ndeoxygenated hemoglobin",
-          "imageUrl": null
+          "text": "Oxygenated hemoglobin absorbs more visible light (600 nm) compared to deoxygenated hemoglobin",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Oxygenated hemoglobin absorbs more visible light (600 nm) compared to deoxygenated hemoglobin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Oxygenated hemoglobin absorbs more infrared light (900 nm) compared to\ndeoxygenated hemoglobin",
-          "imageUrl": null
+          "text": "Oxygenated hemoglobin absorbs more infrared light (900 nm) compared to deoxygenated hemoglobin",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Oxygenated hemoglobin absorbs more infrared light (900 nm) compared to deoxygenated hemoglobin",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2698,12 +5061,23 @@
       "questionNumber": 46,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which of the following statement(s) is/are CORRECT about neuronal membrane\nand neuronal action potential?",
+      "questionText": "Which of the following statement(s) is/are CORRECT about neuronal membrane and neuronal action potential?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statement(s) is/are CORRECT about neuronal membrane and neuronal action potential?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Application of an outward current depolarizes the neuronal membrane",
         "Application of an inward current depolarizes the neuronal membrane",
-        "Increasing the stimulus strength increases the amplitude of neuronal action\npotential",
+        "Increasing the stimulus strength increases the amplitude of neuronal action potential",
         "Increasing the stimulus strength decreases the latency of neuronal action potential"
       ],
       "optionImages": null,
@@ -2711,22 +5085,62 @@
         {
           "id": "A",
           "text": "Application of an outward current depolarizes the neuronal membrane",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Application of an outward current depolarizes the neuronal membrane",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Application of an inward current depolarizes the neuronal membrane",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Application of an inward current depolarizes the neuronal membrane",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "Increasing the stimulus strength increases the amplitude of neuronal action\npotential",
-          "imageUrl": null
+          "text": "Increasing the stimulus strength increases the amplitude of neuronal action potential",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Increasing the stimulus strength increases the amplitude of neuronal action potential",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Increasing the stimulus strength decreases the latency of neuronal action potential",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Increasing the stimulus strength decreases the latency of neuronal action potential",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2762,7 +5176,18 @@
       "questionNumber": 47,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A discrete linear time invariant system has an impulse response function given by\n1 1\nℎ[𝑛] = 𝛿[𝑛] + 𝛿[𝑛 - 1] + 𝛿[𝑛 - 2].\n2 3\nFor input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛 - 1], which of the following option(s)\nis/are CORRECT for the output signal 𝑦[𝑛]?",
+      "questionText": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{time^{1}}{2}\\) 𝛿[𝑛-1] + \\(\\frac{system^{1}}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{time^{1}}{2}\\) 𝛿[𝑛-1] + \\(\\frac{system^{1}}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "𝑦[2] = 11/6",
@@ -2775,22 +5200,62 @@
         {
           "id": "A",
           "text": "𝑦[2] = 11/6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦[2] = 11/6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "𝑦[2] = 5/6",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦[2] = 5/6",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "𝑦[𝑘] = 0 for all 𝑘 \\ge 3",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦[𝑘] = 0 for all 𝑘 \\ge 3",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "𝑦[𝑘] = 0 for all 𝑘 \\ge 4",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "𝑦[𝑘] = 0 for all 𝑘 \\ge 4",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B;D",
@@ -2826,35 +5291,86 @@
       "questionNumber": 48,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which of the following statement(s) is/are CORRECT about isotonic and\nisometric tests?",
+      "questionText": "Which of the following statement(s) is/are CORRECT about isotonic and isometric tests?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following statement(s) is/are CORRECT about isotonic and isometric tests?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "In an isotonic test, muscle is subjected to a constant tension and its length is\nrecorded.",
-        "In an isotonic test, muscle is held at constant length, and the contractile force\ngenerated by the muscle is recorded.",
-        "In an isometric test, muscle is held at constant length, and the contractile force\ngenerated by the muscle is recorded.",
-        "In an isometric test, muscle is subjected to a constant tension and its length is\nrecorded."
+        "In an isotonic test, muscle is subjected to a constant tension and its length is recorded.",
+        "In an isotonic test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+        "In an isometric test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+        "In an isometric test, muscle is subjected to a constant tension and its length is recorded."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "In an isotonic test, muscle is subjected to a constant tension and its length is\nrecorded.",
-          "imageUrl": null
+          "text": "In an isotonic test, muscle is subjected to a constant tension and its length is recorded.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In an isotonic test, muscle is subjected to a constant tension and its length is recorded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "In an isotonic test, muscle is held at constant length, and the contractile force\ngenerated by the muscle is recorded.",
-          "imageUrl": null
+          "text": "In an isotonic test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In an isotonic test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "In an isometric test, muscle is held at constant length, and the contractile force\ngenerated by the muscle is recorded.",
-          "imageUrl": null
+          "text": "In an isometric test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In an isometric test, muscle is held at constant length, and the contractile force generated by the muscle is recorded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "In an isometric test, muscle is subjected to a constant tension and its length is\nrecorded.",
-          "imageUrl": null
+          "text": "In an isometric test, muscle is subjected to a constant tension and its length is recorded.",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "In an isometric test, muscle is subjected to a constant tension and its length is recorded.",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;C",
@@ -2890,35 +5406,88 @@
       "questionNumber": 49,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A Newtonian fluid of viscosity 𝜇 is undergoing laminar flow in a tube of radius 𝑅.\nFor a constant pressure drop per unit length along the tube, which of the following\nstatement(s) is/are CORRECT?\nNote: 𝑟 represents the radial position; assume no slip condition at the boundaries.",
+      "questionText": "A Newtonian fluid of viscosity 𝜇 is undergoing laminar flow in a tube of radius 𝑅. For a constant pressure drop per unit length along the tube, which of the following statement(s) is/are CORRECT?\n\nNote: 𝑟 represents the radial position; assume no slip condition at the boundaries.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A Newtonian fluid of viscosity 𝜇 is undergoing laminar flow in a tube of radius 𝑅. For a constant pressure drop per unit length along the tube, which of the following statement(s) is/are CORRECT?\n\nNote: 𝑟 represents the radial position; assume no slip condition at the boundaries.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑟2\nThe radial profile of the flow velocity is proportional to (1 - )\n𝑅2",
-        "𝑟3\nThe radial profile of the flow velocity is proportional to (1 - )\n𝑅3",
-        "Shear stress is zero at 𝑟 = 𝑅",
-        "Shear stress is zero at 𝑟 = 0"
+        "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
+        "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+        "Shear stress is zero at 𝑟= 𝑅",
+        "Shear stress is zero at 𝑟= 0"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑟2\nThe radial profile of the flow velocity is proportional to (1 - )\n𝑅2",
-          "imageUrl": null
+          "text": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}",
+              "content": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "𝑟3\nThe radial profile of the flow velocity is proportional to (1 - )\n𝑅3",
-          "imageUrl": null
+          "text": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}",
+              "content": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "Shear stress is zero at 𝑟 = 𝑅",
-          "imageUrl": null
+          "text": "Shear stress is zero at 𝑟= 𝑅",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Shear stress is zero at 𝑟= 𝑅",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "Shear stress is zero at 𝑟 = 0",
-          "imageUrl": null
+          "text": "Shear stress is zero at 𝑟= 0",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Shear stress is zero at 𝑟= 0",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -2954,7 +5523,50 @@
       "questionNumber": 50,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "At a given frequency, the storage modulus (𝐺′) and loss modulus (𝐺′′) of four\nbiomaterials are shown in the table below. Which of the following option(s) is/are\nCORRECT?",
+      "questionText": "At a given frequency, the storage modulus (𝐺^{′}) and loss modulus (𝐺^{′′}) of four biomaterials are shown in the table below. Which of the following option(s) is/are CORRECT?\n\n| Biomaterial | 𝐺′ (Pa) | 𝐺′′ (Pa) |\n| :--- | :--- | :--- |\n| P | 1000 | 50 |\n| Q | 1000 | 80 |\n| R | 1000 | 100 |\n| S | 1000 | 0 |",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "At a given frequency, the storage modulus (𝐺^{′}) and loss modulus (𝐺^{′′}) of four biomaterials are shown in the table below. Which of the following option(s) is/are CORRECT?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Biomaterial",
+            "𝐺′ (Pa)",
+            "𝐺′′ (Pa)"
+          ],
+          "rows": [
+            [
+              "P",
+              "1000",
+              "50"
+            ],
+            [
+              "Q",
+              "1000",
+              "80"
+            ],
+            [
+              "R",
+              "1000",
+              "100"
+            ],
+            [
+              "S",
+              "1000",
+              "0"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "table",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "P, Q and R are viscoelastic solids",
@@ -2967,22 +5579,62 @@
         {
           "id": "A",
           "text": "P, Q and R are viscoelastic solids",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P, Q and R are viscoelastic solids",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "P, Q and R are viscoelastic fluids",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P, Q and R are viscoelastic fluids",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "R and S are viscoelastic solids",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R and S are viscoelastic solids",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "S is an elastic solid",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "S is an elastic solid",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A;D",
@@ -3018,7 +5670,18 @@
       "questionNumber": 51,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results\nin 0 V, and 1111 1111 results in 5 V. The output of the DAC for an input of\n1011 0111 is ______________ (in volts, rounded off to two decimal places).",
+      "questionText": "For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in 0 V, and 1111 1111 results in 5 V. The output of the DAC for an input of 1011 0111 is ______________ (in volts, rounded off to two decimal places).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in 0 V, and 1111 1111 results in 5 V. The output of the DAC for an input of 1011 0111 is ______________ (in volts, rounded off to two decimal places).",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3053,7 +5716,24 @@
       "questionNumber": 52,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "What is the output voltage Vout for the circuit shown below?\n______________ (in volts, rounded off to the nearest integer).",
+      "questionText": "What is the output voltage Vout for the circuit shown below?\n\n______________ (in volts, rounded off to the nearest integer).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "What is the output voltage Vout for the circuit shown below?\n\n______________ (in volts, rounded off to the nearest integer).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q52_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3090,7 +5770,18 @@
       "questionNumber": 53,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Resistance 𝑅 of a thermistor varies as a function of temperature 𝑇 such that\n1 1\n𝑅(𝑇) = 𝑅 exp [𝛽( - )],\n0\n𝑇 𝑇\n0\nwhere 𝛽 = 3100 K and, 𝑅 and 𝑇 are positive constants.\n0 0\nIf the relative error in measuring 𝑅 is 10%, what is the relative error (in percentage)\nin measuring 310 K temperature? ______________ (rounded off to the nearest\ninteger)",
+      "questionText": "Resistance 𝑅 of a thermistor varies as a function of temperature 𝑇 such that\n\n𝑅(𝑇) = 𝑅_{0} exp [𝛽( _{𝑇}- <u>1</u> <u>1</u> _{𝑇0})], <u>1</u> <u>1</u>\n\nwhere 𝛽= 3100 K and, 𝑅_{0} and 𝑇_{0} are positive constants. If the relative error in measuring 𝑅 is 10%, what is the relative error (in percentage) in measuring 310 K temperature? ______________ (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Resistance 𝑅 of a thermistor varies as a function of temperature 𝑇 such that\n\n𝑅(𝑇) = 𝑅_{0} exp [𝛽( _{𝑇}- <u>1</u> <u>1</u> _{𝑇0})], <u>1</u> <u>1</u>\n\nwhere 𝛽= 3100 K and, 𝑅_{0} and 𝑇_{0} are positive constants. If the relative error in measuring 𝑅 is 10%, what is the relative error (in percentage) in measuring 310 K temperature? ______________ (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3125,7 +5816,24 @@
       "questionNumber": 54,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The frequency of the oscillator circuit shown in the figure below is\n______________ kHz. (rounded off to two decimal places)\nGiven: R = 1 kΩ; R1 = 2 kΩ; R2 = 6 kΩ; C = 0.1 µF",
+      "questionText": "The frequency of the oscillator circuit shown in the figure below is ______________ kHz. (rounded off to two decimal places)\n\nGiven: R = 1 kΩ; R1 = 2 kΩ; R2 = 6 kΩ; C = 0.1 µF",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The frequency of the oscillator circuit shown in the figure below is ______________ kHz. (rounded off to two decimal places)\n\nGiven: R = 1 kΩ; R1 = 2 kΩ; R2 = 6 kΩ; C = 0.1 µF",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q54_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3142,8 +5850,10 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.50 to 1.70.",
-      "diagramUrl": null,
-      "diagramUrls": null,
+      "diagramUrl": "/exam-assets/gate/2025/bm/q54_diag.png",
+      "diagramUrls": [
+        "/exam-assets/gate/2025/bm/q54_diag.png"
+      ],
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -3160,7 +5870,24 @@
       "questionNumber": 55,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "For the RLC circuit shown below, the root mean square current (𝐼 ) at the\n𝑟𝑚𝑠\nresonance frequency is ______________ amperes. (rounded off to the nearest\ninteger)",
+      "questionText": "For the RLC circuit shown below, the root mean square current (𝐼_{𝑟𝑚𝑠}) at the resonance frequency is ______________ amperes. (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For the RLC circuit shown below, the root mean square current (𝐼_{𝑟𝑚𝑠}) at the resonance frequency is ______________ amperes. (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q55_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3197,7 +5924,24 @@
       "questionNumber": 56,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The plot of log (𝐵𝑀𝑅) as a function of log (𝑀) is a straight line with slope 0.75,\n10 10\nwhere 𝑀 is the mass of the person and 𝐵𝑀𝑅 is the Basal Metabolic Rate. If a child\nwith 𝑀 = 10 kg has a 𝐵𝑀𝑅 = 600 kcal/day, the 𝐵𝑀𝑅 for an adult with\n𝑀 = 100 kg is ______________ kcal/day. (rounded off to the nearest integer)",
+      "questionText": "The plot of log_{10}(𝐵𝑀𝑅) as a function of log_{10}(𝑀) is a straight line with slope 0.75, where 𝑀 is the mass of the person and 𝐵𝑀𝑅 is the Basal Metabolic Rate. If a child with 𝑀= 10 kg has a 𝐵𝑀𝑅= 600 kcal/day, the 𝐵𝑀𝑅 for an adult with 𝑀= 100 kg is ______________ kcal/day. (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The plot of log_{10}(𝐵𝑀𝑅) as a function of log_{10}(𝑀) is a straight line with slope 0.75, where 𝑀 is the mass of the person and 𝐵𝑀𝑅 is the Basal Metabolic Rate. If a child with 𝑀= 10 kg has a 𝐵𝑀𝑅= 600 kcal/day, the 𝐵𝑀𝑅 for an adult with 𝑀= 100 kg is ______________ kcal/day. (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q56_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3234,7 +5978,18 @@
       "questionNumber": 57,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Newton Raphson method is used to solve the equation 𝑥3 - 2𝑥 - 5 = 0 with an\ninitial guess 𝑥 = 3. What is 𝑥 , the value after ONE iteration? ______________\n0 1\n(rounded off to two decimal places)",
+      "questionText": "Newton Raphson method is used to solve the equation 𝑥^{3} -2𝑥-5 = 0 with an ^{initial guess}𝑥_{0} = 3^{. What is}𝑥_{1}^{, the value after ONE iteration?}______________ (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Newton Raphson method is used to solve the equation 𝑥^{3} -2𝑥-5 = 0 with an ^{initial guess}𝑥_{0} = 3^{. What is}𝑥_{1}^{, the value after ONE iteration?}______________ (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3269,7 +6024,18 @@
       "questionNumber": 58,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "For pulsatile blood flow through an artery of internal diameter 20 mm, wall\nthickness 1 mm and Young's Modulus 1 MPa, what is the wave speed in metres per\nsecond? ______________ (rounded off to one decimal place).\nAssume the density of blood to be 1050 kg/m3.",
+      "questionText": "For pulsatile blood flow through an artery of internal diameter 20 mm, wall thickness 1 mm and Young's Modulus 1 MPa, what is the wave speed in metres per second? ______________ (rounded off to one decimal place). Assume the density of blood to be 1050 kg/m^{3}.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "For pulsatile blood flow through an artery of internal diameter 20 mm, wall thickness 1 mm and Young's Modulus 1 MPa, what is the wave speed in metres per second? ______________ (rounded off to one decimal place). Assume the density of blood to be 1050 kg/m^{3}.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3304,7 +6070,24 @@
       "questionNumber": 59,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "An ideal, massless spring with spring constant 1 N/m (upper panel of the given\nfigure) is cut into 5 equal parts. If two of these parts are connected in parallel (lower\npanel of the given figure), what is the resultant spring constant in N/m?\n______________ (rounded off to the nearest integer)\nAssume linear behavior of the springs.",
+      "questionText": "An ideal, massless spring with spring constant 1 N/m (upper panel of the given figure) is cut into 5 equal parts. If two of these parts are connected in parallel (lower panel of the given figure), what is the resultant spring constant in N/m? ______________ (rounded off to the nearest integer)\n\nAssume linear behavior of the springs.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "An ideal, massless spring with spring constant 1 N/m (upper panel of the given figure) is cut into 5 equal parts. If two of these parts are connected in parallel (lower panel of the given figure), what is the resultant spring constant in N/m? ______________ (rounded off to the nearest integer)\n\nAssume linear behavior of the springs.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q59_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3341,7 +6124,18 @@
       "questionNumber": 60,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Polylactic-co-glycolic acid (PLGA) is combined with an equal amount (by weight)\nof hydroxyapatite (HA) to make a bone scaffold. If the porosity of the scaffold is\n80%, what is the scaffold density in g/cm3? ______________ (rounded off to two\ndecimal places)\nAssume densities of PLGA and HA to be 1 g/cm3 and 3 g/cm3, respectively.",
+      "questionText": "Polylactic-co-glycolic acid (PLGA) is combined with an equal amount (by weight) of hydroxyapatite (HA) to make a bone scaffold. If the porosity of the scaffold is 80%, what is the scaffold density in g/cm^{3}? ______________ (rounded off to two decimal places) Assume densities of PLGA and HA to be 1 g/cm^{3} and 3 g/cm^{3}, respectively.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Polylactic-co-glycolic acid (PLGA) is combined with an equal amount (by weight) of hydroxyapatite (HA) to make a bone scaffold. If the porosity of the scaffold is 80%, what is the scaffold density in g/cm^{3}? ______________ (rounded off to two decimal places) Assume densities of PLGA and HA to be 1 g/cm^{3} and 3 g/cm^{3}, respectively.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3376,7 +6170,18 @@
       "questionNumber": 61,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Strength (𝜎) of an implanted suture is given by the equation\n𝜎 = 𝜎 - 2 log (𝑡) for 𝑡 \\ge 1,\n0 𝑒\nwhere 𝜎 represents the original strength and time 𝑡 is measured in weeks. If the\n0\nstrength of the suture is 2 MPa at 4 weeks, what will be its strength (in MPa)\nat 8 weeks? ______________ (rounded off to two decimal places)",
+      "questionText": "Strength (𝜎) of an implanted suture is given by the equation\n\n𝜎= 𝜎_{0} -2 log_{𝑒}(𝑡) for 𝑡 \\ge 1, where 𝜎_{0} represents the original strength and time 𝑡 is measured in weeks. If the strength of the suture is 2 MPa at 4 weeks, what will be its strength (in MPa) at 8 weeks? ______________ (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Strength (𝜎) of an implanted suture is given by the equation\n\n𝜎= 𝜎_{0} -2 log_{𝑒}(𝑡) for 𝑡 \\ge 1, where 𝜎_{0} represents the original strength and time 𝑡 is measured in weeks. If the strength of the suture is 2 MPa at 4 weeks, what will be its strength (in MPa) at 8 weeks? ______________ (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3411,7 +6216,18 @@
       "questionNumber": 62,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "If the gyromagnetic ratio of proton is 42.58 MHz per Tesla, the resonance frequency\nfor protons in a magnetic field of 1.5 Tesla is ______________ MHz. (rounded off\nto two decimal places)",
+      "questionText": "If the gyromagnetic ratio of proton is 42.58 MHz per Tesla, the resonance frequency for protons in a magnetic field of 1.5 Tesla is ______________ MHz. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If the gyromagnetic ratio of proton is 42.58 MHz per Tesla, the resonance frequency for protons in a magnetic field of 1.5 Tesla is ______________ MHz. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3446,7 +6262,24 @@
       "questionNumber": 63,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A Wheatstone bridge is used to measure strain as shown in the figure below.\nInitially the bridge was balanced. When a strain is applied to the resistor R strain,\nalong its length, the output voltage V is 10 mV.\nOUT\nIf R strain is a cylindrical resistor of length 𝑙 and cross-sectional area 𝐴, the\nmagnitude of the applied strain is ______________. (rounded off to two decimal\nplaces)",
+      "questionText": "A Wheatstone bridge is used to measure strain as shown in the figure below. Initially the bridge was balanced. When a strain is applied to the resistor Rstrain, along its length, the output voltage V_{OUT} is 10 mV.\n\nIf Rstrain is a cylindrical resistor of length 𝑙 and cross-sectional area 𝐴, the magnitude of the applied strain is ______________. (rounded off to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A Wheatstone bridge is used to measure strain as shown in the figure below. Initially the bridge was balanced. When a strain is applied to the resistor Rstrain, along its length, the output voltage V_{OUT} is 10 mV.\n\nIf Rstrain is a cylindrical resistor of length 𝑙 and cross-sectional area 𝐴, the magnitude of the applied strain is ______________. (rounded off to two decimal places)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "diagram",
+          "assetUrl": "/exam-assets/gate/2025/bm/q63_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "diagram",
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3483,7 +6316,18 @@
       "questionNumber": 64,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The storage modulus (𝐺′) of a collagen gel scales as 𝐺′~[𝐶]3, where [𝐶] represents\nthe collagen concentration in mg/ml. If the storage modulus of a 1 mg/ml collagen\ngel is 100 Pa, then the storage modulus of a 3 mg/ml collagen gel is\n______________ Pa. (rounded off to the nearest integer)",
+      "questionText": "the collagen concentration in mg/ml. If the storage modulus of a 1 mg/ml collagen gel is 100 Pa, then the storage modulus of a 3 mg/ml collagen gel is ______________ Pa. (rounded off to the nearest integer)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "the collagen concentration in mg/ml. If the storage modulus of a 1 mg/ml collagen gel is 100 Pa, then the storage modulus of a 3 mg/ml collagen gel is ______________ Pa. (rounded off to the nearest integer)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,
@@ -3518,7 +6362,18 @@
       "questionNumber": 65,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The cardiac output of a person at rest is 5 litres per minute and the mean aortic\npressure is 100 mmHg. During exercise, if the cardiac output doubles and mean\naortic pressure rises to 110 mmHg, then the peripheral resistance in the systemic\ncirculation will decrease by ______________%. (rounded off to the nearest integer)\nAssume venous pressure in systemic circulation to be negligible.",
+      "questionText": "pressure is 100 mmHg. During exercise, if the cardiac output doubles and mean aortic pressure rises to 110 mmHg, then the peripheral resistance in the systemic circulation will decrease by ______________%. (rounded off to the nearest integer)\n\nAssume venous pressure in systemic circulation to be negligible.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "pressure is 100 mmHg. During exercise, if the cardiac output doubles and mean aortic pressure rises to 110 mmHg, then the peripheral resistance in the systemic circulation will decrease by ______________%. (rounded off to the nearest integer)\n\nAssume venous pressure in systemic circulation to be negligible.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
       "questionType": "NAT",
       "options": [],
       "optionImages": null,

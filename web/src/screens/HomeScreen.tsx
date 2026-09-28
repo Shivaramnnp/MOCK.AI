@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   Sparkles,
   Plus,
@@ -21,6 +21,8 @@ import {
 } from 'lucide-react';
 import { TestHistory, DailyTask, DailyInsight, UserProfile, ExamTestSession } from '../types';
 import { AdSlot } from '../components/ads/AdSlot';
+import { PlatformStatsBar } from '../components/PlatformStatsBar';
+import { AnalyticsService } from '../services/analyticsService';
 
 interface HomeScreenProps {
   tests: TestHistory[];
@@ -58,15 +60,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  // Calculate statistics
-  const completedTests = tests.filter((t) => t.lastTakenAt !== null);
-  const avgScore =
-    completedTests.length > 0
-      ? Math.round(
-          completedTests.reduce((acc, t) => acc + (t.bestScorePercent || 0), 0) /
-            completedTests.length
-        )
-      : 0;
+  // Calculate statistics from authoritative analytics service
+  const overallStats = useMemo(
+    () => AnalyticsService.getOverallStats(profile?.uid || 'guest'),
+    [profile?.uid, tests]
+  );
+  const avgScore = overallStats.avgScore;
 
   const unfinishedTest = tests.find((t) => t.lastTakenAt === null);
 
@@ -137,6 +136,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           </div>
         </div>
       </div>
+
+      {/* ── Compact Platform Statistics Strip ───────────────────────── */}
+      <PlatformStatsBar variant="compact" />
 
       {/* ── Daily AI Insight & Hero Create Button ─────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
