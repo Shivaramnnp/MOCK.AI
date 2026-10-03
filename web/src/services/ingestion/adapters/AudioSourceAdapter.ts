@@ -5,10 +5,19 @@ import { parseCanonicalQuestionsJson } from '../../ai/adapters/adapterHelpers';
 import { toLegacyQuestion } from '../questionMigrator';
 import { evaluateQualityGate, QualityGateEvaluation } from '../qualityGate';
 import { createIngestionError } from '../../../types/ingestionErrors';
+import { AudioFileInput, LiveVoiceInput } from '../audio/types';
+import { validateAudioInput } from '../audio/audioValidator';
+import { processAudioFile } from '../audio/audioEngine';
+import { normalizeVoiceTranscript } from '../audio/voiceNormalizer';
 
 export interface AudioInput {
-  transcript?: string;
-  audioBase64?: string;
+  // Feature A: Live Voice Dictation
+  liveVoice?: LiveVoiceInput;
+  transcript?: string; // Backwards-compatible string input
+
+  // Feature B: Audio File Ingestion
+  audioFile?: AudioFileInput;
+  audioBase64?: string; // Backwards-compatible Base64 input
   audioMimeType?: string;
   fileName?: string;
 }
@@ -20,88 +29,107 @@ export class AudioSourceAdapter implements SourceAdapter<AudioInput> {
     if (!input) {
       return { valid: false, error: 'Audio input payload is required.' };
     }
-    const hasTranscript = typeof input.transcript === 'string' && input.transcript.trim().length > 0;
-    const hasAudio = typeof input.audioBase64 === 'string' && input.audioBase64.trim().length > 0;
 
-    if (!hasTranscript && !hasAudio) {
-      return { valid: false, error: 'Please provide either a transcribed text or an audio recording.' };
+    // Branch B: Audio File Ingestion
+    if (input.audioFile || input.audioBase64) {
+      const fileInput: AudioFileInput = input.audioFile || {
+        base64Data: input.audioBase64,
+        fileName: input.fileName || 'uploaded_recording.mp3',
+        mimeType: input.audioMimeType || 'audio/mp3',
+      };
+      const v = await validateAudioInput(fileInput);
+      return v.valid ? { valid: true } : { valid: false, error: v.error };
     }
+
+    // Branch A: Live Voice Dictation
+    const transcriptText =
+      input.liveVoice?.confirmedTranscript || input.liveVoice?.rawTranscript || input.transcript;
+
+    if (!transcriptText || transcriptText.trim().length === 0) {
+      return {
+        valid: false,
+        error: 'Please provide either confirmed voice dictation or upload an audio file.',
+      };
+    }
+
+    if (transcriptText.trim().length < 10) {
+      return {
+        valid: false,
+        error: 'Spoken text is too brief to generate meaningful exam questions.',
+      };
+    }
+
     return { valid: true };
   }
 
   async process(input: AudioInput, options?: IngestionOptions): Promise<IngestionResult> {
-    let cleanTranscript = (input.transcript || '').trim();
+    // ══════════════════════════════════════════════════════════════════
+    // FEATURE B: AUDIO FILE INGESTION PIPELINE
+    // ══════════════════════════════════════════════════════════════════
+    if (input.audioFile || input.audioBase64) {
+      const fileInput: AudioFileInput = input.audioFile || {
+        base64Data: input.audioBase64,
+        fileName: input.fileName || 'Audio Lecture',
+        mimeType: input.audioMimeType || 'audio/mp3',
+      };
 
-    // If an audio file was uploaded without prior transcript, check if active provider or backend can transcribe
-    if (!cleanTranscript && input.audioBase64) {
-      const active = aiProviderService.getActiveAdapter();
-      if (active && active.adapter.extractFromBase64File) {
-        // Many multimodal LLMs (e.g. Gemini 2.5) support audio/mp3, audio/wav, audio/m4a directly!
-        const mime = input.audioMimeType || 'audio/mp3';
-        const questions = await active.adapter.extractFromBase64File(
-          input.audioBase64,
-          mime,
-          input.fileName || 'Audio Lecture',
-          active.connection
-        );
-        const jsonStr = JSON.stringify({ questions });
-        const canonicalQuestions = parseCanonicalQuestionsJson(jsonStr, {
-          sourceType: 'Audio',
-          sourceFile: input.fileName || 'Audio Lecture',
-        });
+      const audioResult = await processAudioFile(fileInput, {
+        requestedCount: options?.requestedCount || 6,
+        onProgress: options?.onProgress as any,
+      });
 
-        const evaluations: QualityGateEvaluation[] = [];
-        let verifiedCount = 0;
-        let partialCount = 0;
-        let reviewCount = 0;
-        let failedCount = 0;
+      const evaluations: QualityGateEvaluation[] = [];
+      let verifiedCount = 0;
+      let partialCount = 0;
+      let reviewCount = 0;
+      let failedCount = 0;
 
-        canonicalQuestions.forEach((q, index) => {
-          q.questionNumber = index + 1;
-          const evalRes = evaluateQualityGate(q);
-          evaluations.push(evalRes);
+      audioResult.questions.forEach((q, index) => {
+        q.questionNumber = index + 1;
+        const evalRes = evaluateQualityGate(q);
+        evaluations.push(evalRes);
 
-          q.verificationStatus = evalRes.status;
-          q.verificationReasons = evalRes.reasons;
-          q.confidence = evalRes.confidence;
+        q.verificationStatus = evalRes.status;
+        q.verificationReasons = evalRes.reasons;
+        q.confidence = evalRes.confidence;
 
-          if (evalRes.status === 'VERIFIED') verifiedCount++;
-          else if (evalRes.status === 'PARTIAL') partialCount++;
-          else if (evalRes.status === 'REVIEW_REQUIRED') reviewCount++;
-          else if (evalRes.status === 'FAILED') failedCount++;
-        });
+        if (evalRes.status === 'VERIFIED') verifiedCount++;
+        else if (evalRes.status === 'PARTIAL') partialCount++;
+        else if (evalRes.status === 'REVIEW_REQUIRED') reviewCount++;
+        else if (evalRes.status === 'FAILED') failedCount++;
+      });
 
-        return {
-          success: canonicalQuestions.length > 0,
-          sourceType: 'Audio',
-          sourceTitle: input.fileName || 'Audio Lecture Mock Exam',
-          questions: canonicalQuestions,
-          legacyQuestions: canonicalQuestions.map(toLegacyQuestion),
-          qualityReport: {
-            total: canonicalQuestions.length,
-            verified: verifiedCount,
-            partial: partialCount,
-            reviewRequired: reviewCount,
-            failed: failedCount,
-            evaluations,
-          },
-        };
-      } else {
-        throw createIngestionError(
-          'TRANSCRIPTION_FAILED',
-          'Direct audio file transcription requires an AI provider that supports audio input (e.g. Gemini 2.5). Please use voice dictation or switch providers in Settings.',
-          'Active adapter lacks audio multimodal capability',
-          false,
-          'AUDIO_TRANSCRIPTION'
-        );
-      }
+      return {
+        success: audioResult.questions.length > 0,
+        sourceType: 'Audio',
+        sourceTitle: audioResult.sourceTitle,
+        questions: audioResult.questions,
+        legacyQuestions: audioResult.questions.map(toLegacyQuestion),
+        qualityReport: {
+          total: audioResult.questions.length,
+          verified: verifiedCount,
+          partial: partialCount,
+          reviewRequired: reviewCount,
+          failed: failedCount,
+          evaluations,
+        },
+        warnings: audioResult.warnings,
+      };
     }
 
-    if (cleanTranscript.length < 20) {
+    // ══════════════════════════════════════════════════════════════════
+    // FEATURE A: LIVE VOICE DICTATION PIPELINE
+    // (User has reviewed and confirmed the speech transcript)
+    // ══════════════════════════════════════════════════════════════════
+    const rawText =
+      input.liveVoice?.confirmedTranscript || input.liveVoice?.rawTranscript || input.transcript || '';
+    const cleanTranscript = normalizeVoiceTranscript(rawText);
+
+    if (cleanTranscript.length < 15) {
       throw createIngestionError(
         'EXTRACTION_FAILED',
         'Recorded audio transcript is too brief to generate meaningful exam questions.',
-        `Transcript length was only ${cleanTranscript.length} chars`,
+        `Clean transcript length was only ${cleanTranscript.length} chars`,
         false,
         'TRANSCRIPT_LENGTH'
       );
@@ -109,19 +137,17 @@ export class AudioSourceAdapter implements SourceAdapter<AudioInput> {
 
     const count = options?.requestedCount || 6;
     const prompt = `
-Source Material: Audio Lecture Dictation
-Title: "${input.fileName || 'Dictated Notes'}"
-
-Spoken Transcript Content:
+Source Material: Confirmed Voice Dictation
+Spoken Transcript:
 """
 ${cleanTranscript.slice(0, 15000)}
 """
 
 Task:
-Extract and formulate exactly ${count} rigorous competitive examination questions based strictly on the ideas, formulas, and terminology spoken in this audio.
-If equations or formulas are mentioned, convert to LaTeX $...$.
+Extract and formulate exactly ${count} rigorous competitive examination questions based strictly on the spoken terminology, concepts, and formulas.
+If equations or formulas were spoken, represent them in valid LaTeX $...$.
 
-Return ONLY a valid JSON object:
+Return ONLY a valid JSON object matching this schema:
 {
   "questions": [
     {
@@ -130,10 +156,10 @@ Return ONLY a valid JSON object:
       "questionText": "Question stem here...",
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "correctAnswerIndex": 0,
-      "topic": "${input.fileName || 'Audio Notes'}",
+      "topic": "${input.fileName || 'Voice Dictation'}",
       "explanation": "Detailed step-by-step reasoning...",
       "citation": {
-        "sourceExactText": "Direct quote from audio transcript"
+        "sourceExactText": "Direct quote from spoken transcript"
       }
     }
   ]
@@ -154,7 +180,7 @@ Return ONLY a valid JSON object:
     const rawResponse = await active.adapter.generateQuestions(prompt, active.connection, { count });
     const questions = parseCanonicalQuestionsJson(JSON.stringify({ questions: rawResponse }), {
       sourceType: 'Audio',
-      sourceFile: input.fileName || 'Audio Dictation',
+      sourceFile: input.fileName || 'Live Voice Dictation',
     });
 
     const evaluations: QualityGateEvaluation[] = [];
@@ -165,6 +191,14 @@ Return ONLY a valid JSON object:
 
     questions.forEach((q, index) => {
       q.questionNumber = index + 1;
+      q.sourceType = 'Audio';
+      q.provenance = {
+        ...q.provenance,
+        sourceType: 'Audio',
+        sourceFile: input.fileName || 'Live Voice Dictation',
+        sourceExactText: q.citation?.sourceExactText || cleanTranscript.slice(0, 100),
+      };
+
       const evalRes = evaluateQualityGate(q);
       evaluations.push(evalRes);
 

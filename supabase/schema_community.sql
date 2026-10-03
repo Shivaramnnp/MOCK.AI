@@ -171,11 +171,11 @@ ALTER TABLE public.community_reports ENABLE ROW LEVEL SECURITY;
 
 -- 10. RLS Policies
 -- Community Posts:
--- Anyone (including anon) can view non-hidden, non-deleted posts
+-- Anyone (including anon) can view non-hidden posts
 DROP POLICY IF EXISTS "Public view non-hidden community posts" ON public.community_posts;
 CREATE POLICY "Public view non-hidden community posts"
     ON public.community_posts FOR SELECT
-    USING (is_hidden = false AND is_deleted = false);
+    USING (is_hidden = false);
 
 -- Authenticated users can create community posts
 DROP POLICY IF EXISTS "Authenticated users create community posts" ON public.community_posts;
@@ -269,84 +269,31 @@ CREATE INDEX IF NOT EXISTS idx_comm_posts_custom_year
     ON public.community_posts (custom_year);
 
 -- ==============================================================================
--- 11. Post Management: Edit & Soft Delete Architecture
+-- 11. Canonical Post Deletion Architecture (Hard Delete with Cascade)
 -- ==============================================================================
-ALTER TABLE public.community_posts
-    ADD COLUMN IF NOT EXISTS is_edited BOOLEAN NOT NULL DEFAULT false,
-    ADD COLUMN IF NOT EXISTS edited_at TIMESTAMPTZ,
-    ADD COLUMN IF NOT EXISTS is_deleted BOOLEAN NOT NULL DEFAULT false,
-    ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMPTZ,
-    ADD COLUMN IF NOT EXISTS deleted_by UUID REFERENCES auth.users(id) ON DELETE SET NULL;
+-- Post deletion in Mock.AI is canonical HARD DELETION:
+-- 1. Authorized post author or staff member issues DELETE on public.community_posts
+--    targeting exact primary key `id = postId`.
+-- 2. Foreign keys on community_comments and community_supports are configured
+--    with ON DELETE CASCADE, automatically pruning all relational dependencies.
+-- 3. duplicate_of_id self-reference uses ON DELETE SET NULL.
+-- 4. RLS Policy "Authors delete own community posts" enforces auth.uid() = author_id.
+-- ==============================================================================
 
-CREATE INDEX IF NOT EXISTS idx_comm_posts_is_deleted
-    ON public.community_posts (is_deleted);
-
--- RPC: Secure Author / Staff Soft Delete with Authorization Verification
-CREATE OR REPLACE FUNCTION public.delete_community_post(p_post_id TEXT, p_user_id UUID DEFAULT NULL)
-RETURNS JSONB
-LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public, auth, pg_temp
-AS $$
-DECLARE
-    v_caller_id UUID;
-    v_post RECORD;
-    v_is_staff BOOLEAN;
+-- 12. Realtime Publication Enablement for Community Posts Table
+DO $$
 BEGIN
-    v_caller_id := COALESCE(auth.uid(), p_user_id);
-    IF v_caller_id IS NULL THEN
-        RAISE EXCEPTION '401: Unauthorized - Please sign in to delete this post';
+    IF NOT EXISTS (
+        SELECT 1 FROM pg_publication_tables 
+        WHERE pubname = 'supabase_realtime' 
+          AND schemaname = 'public' 
+          AND tablename = 'community_posts'
+    ) THEN
+        ALTER PUBLICATION supabase_realtime ADD TABLE public.community_posts;
     END IF;
-
-    SELECT id, author_id, title INTO v_post
-    FROM public.community_posts
-    WHERE id = p_post_id;
-
-    IF v_post.id IS NULL THEN
-        RAISE EXCEPTION '404: Post not found';
-    END IF;
-
-    -- Check if user is the author or a verified staff member
-    v_is_staff := public.check_is_staff(v_caller_id);
-    IF v_post.author_id IS DISTINCT FROM v_caller_id AND NOT v_is_staff THEN
-        RAISE EXCEPTION '403: Forbidden - You do not have permission to delete this post';
-    END IF;
-
-    -- Soft delete post
-    UPDATE public.community_posts
-    SET is_deleted = true,
-        deleted_at = now(),
-        deleted_by = v_caller_id,
-        updated_at = now()
-    WHERE id = p_post_id;
-
-    -- Log staff deletion in audit log if performed by staff on another user's post
-    IF v_is_staff AND v_post.author_id IS DISTINCT FROM v_caller_id THEN
-        INSERT INTO public.community_audit_logs (
-            staff_user_id,
-            staff_user_name,
-            action,
-            target_type,
-            target_id,
-            reason
-        ) VALUES (
-            v_caller_id,
-            'Mock.AI Staff',
-            'POST_SOFT_DELETED',
-            'POST',
-            p_post_id,
-            'Post deleted by staff moderation'
-        );
-    END IF;
-
-    RETURN jsonb_build_object(
-        'success', true,
-        'postId', p_post_id,
-        'deletedAt', now()
-    );
-END;
-$$;
-
-GRANT EXECUTE ON FUNCTION public.delete_community_post(TEXT, UUID) TO anon, authenticated, service_role;
+EXCEPTION
+    WHEN OTHERS THEN
+        NULL;
+END $$;
 
 

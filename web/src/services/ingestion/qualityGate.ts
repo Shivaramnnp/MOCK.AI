@@ -18,6 +18,11 @@ export interface QualityGateEvaluation {
   isValid: boolean;
   canPublish: boolean;
   status: VerificationStatus;
+  contentStatus: VerificationStatus;
+  structureStatus: VerificationStatus;
+  answerStatus: VerificationStatus;
+  assetStatus: VerificationStatus;
+  scoringStatus: VerificationStatus;
   reasons: string[];
   issues: QualityIssue[];
   confidence: CanonicalConfidence;
@@ -396,7 +401,39 @@ export function evaluateQualityGate(
     asset: Math.max(0, Math.min(1.0, Math.round(assetConf * 100) / 100)),
   };
 
-  // Determine final status
+  // Dimensional Statuses (Section 22)
+  const contentIssues = issues.filter((i) => i.field === 'questionText' || i.field === 'math' || i.field === 'text');
+  let contentStatus: VerificationStatus = 'VERIFIED';
+  if (contentIssues.some((i) => i.severity === 'FATAL')) contentStatus = 'FAILED';
+  else if (contentIssues.some((i) => i.severity === 'REVIEW_REQUIRED')) contentStatus = 'REVIEW_REQUIRED';
+  else if (contentIssues.some((i) => i.severity === 'WARNING')) contentStatus = 'PARTIAL';
+
+  const structureIssues = issues.filter((i) => i.field.startsWith('options') || i.field.startsWith('contentBlocks'));
+  let structureStatus: VerificationStatus = 'VERIFIED';
+  if (structureIssues.some((i) => i.severity === 'FATAL')) structureStatus = 'FAILED';
+  else if (structureIssues.some((i) => i.severity === 'REVIEW_REQUIRED')) structureStatus = 'REVIEW_REQUIRED';
+  else if (structureIssues.some((i) => i.severity === 'WARNING')) structureStatus = 'PARTIAL';
+
+  const answerIssues = issues.filter((i) => i.field === 'answer');
+  let answerStatus: VerificationStatus = 'VERIFIED';
+  if (answerIssues.some((i) => i.severity === 'FATAL')) {
+    answerStatus = 'FAILED';
+  } else if (answerIssues.some((i) => i.severity === 'REVIEW_REQUIRED')) {
+    answerStatus = 'REVIEW_REQUIRED';
+  } else if (q.answer?.answerStatus === 'UNRESOLVED') {
+    answerStatus = 'UNVERIFIED';
+  }
+
+  const assetIssues = issues.filter((i) => i.field === 'diagramUrl' || i.code.includes('ASSET'));
+  let assetStatus: VerificationStatus = 'VERIFIED';
+  if (assetIssues.some((i) => i.severity === 'FATAL')) assetStatus = 'FAILED';
+  else if (assetIssues.some((i) => i.severity === 'REVIEW_REQUIRED')) assetStatus = 'REVIEW_REQUIRED';
+
+  const scoringIssues = issues.filter((i) => i.field.startsWith('scoring'));
+  let scoringStatus: VerificationStatus = 'VERIFIED';
+  if (scoringIssues.some((i) => i.severity === 'WARNING')) scoringStatus = 'PARTIAL';
+
+  // Overall status (Lowest common denominator, never falsely claims VERIFIED)
   let status: VerificationStatus = 'VERIFIED';
   for (const issue of issues) {
     reasons.push(issue.message);
@@ -406,6 +443,8 @@ export function evaluateQualityGate(
     status = 'FAILED';
   } else if (reviewCount > 0) {
     status = 'REVIEW_REQUIRED';
+  } else if (q.answer?.answerStatus === 'UNRESOLVED') {
+    status = 'UNVERIFIED';
   } else if (warningCount > 0 || answerConf < 0.85 || structureConf < 0.85) {
     status = 'PARTIAL';
   } else {
@@ -414,8 +453,13 @@ export function evaluateQualityGate(
 
   return {
     isValid: fatalCount === 0,
-    canPublish: status === 'VERIFIED' || status === 'PARTIAL',
+    canPublish: status === 'VERIFIED' || status === 'PARTIAL' || status === 'UNVERIFIED',
     status,
+    contentStatus,
+    structureStatus,
+    answerStatus,
+    assetStatus,
+    scoringStatus,
     reasons,
     issues,
     confidence,

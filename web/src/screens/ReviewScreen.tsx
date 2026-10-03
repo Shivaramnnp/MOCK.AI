@@ -9,9 +9,12 @@ import {
   ChevronUp,
   HelpCircle,
   ExternalLink,
+  X,
 } from 'lucide-react';
 import { TestSessionState } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { OptionContentRenderer } from '../components/StructuredContentRenderer';
+import { ExamAsset } from '../components/ExamAsset';
 import { AdSlot } from '../components/ads/AdSlot';
 
 interface ReviewScreenProps {
@@ -23,6 +26,7 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
   const { questions, userAnswers, bookmarkedIndices } = session;
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
   const [expandedExplanations, setExpandedExplanations] = useState<Record<number, boolean>>({});
+  const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
 
   const filters = ['All', 'Correct ✓', 'Wrong ✗', 'Skipped ⏭', 'Bookmarked 🔖'];
 
@@ -131,7 +135,7 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
                       {idx + 1}
                     </span>
                     <span className="text-xs font-bold text-surface-muted dark:text-darkSurface-muted">
-                      {q.topic || 'Concept Review'}
+                      {(typeof q.topic === 'string' ? q.topic : q.topic?.primaryTopicName) || 'Concept Review'}
                     </span>
                   </div>
 
@@ -151,12 +155,32 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
                   <LatexRenderer content={q.questionText} />
                 </div>
 
+                {/* Stem diagram if present */}
+                {(() => {
+                  const qAny = q as any;
+                  const diag = qAny.diagramUrl || (qAny.diagramUrls && qAny.diagramUrls[0]);
+                  if (diag) {
+                    return (
+                      <div className="my-2">
+                        <ExamAsset url={diag} alt="Question diagram" variant="diagram" onZoom={setZoomImageUrl} />
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
+
                 {/* Options List */}
                 <div className="space-y-2 pt-1">
                   {q.options.map((opt, optIdx) => {
                     const isCorrectAnswer = optIdx === q.correctAnswerIndex;
                     const isUserChoice = userChoice === optIdx;
                     const letter = String.fromCharCode(65 + optIdx);
+                    const qAny = q as any;
+                    const richOpt = qAny.richOptions?.[optIdx];
+                    const optImg = richOpt?.imageUrl || qAny.optionImages?.[optIdx] || null;
+                    const dispMode = richOpt?.displayMode || (optImg ? 'IMAGE_ONLY' : 'TEXT_ONLY');
+                    const optBlocks = richOpt?.contentBlocks;
+                    const fallback = richOpt?.text ?? opt;
 
                     let cardClass =
                       'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border text-surface-muted';
@@ -176,15 +200,22 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
                     return (
                       <div
                         key={optIdx}
-                        className={`flex items-center gap-3 p-3.5 rounded-2xl border transition-all ${cardClass}`}
+                        className={`flex items-start gap-3 p-3.5 rounded-2xl border transition-all ${cardClass}`}
                       >
                         <div
-                          className={`w-7 h-7 rounded-xl font-bold text-xs flex items-center justify-center shrink-0 ${letterClass}`}
+                          className={`w-7 h-7 rounded-xl font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 ${letterClass}`}
                         >
                           {letter}
                         </div>
                         <div className="min-w-0 flex-1 text-xs sm:text-sm option-content text-left">
-                          <LatexRenderer content={opt} />
+                          <OptionContentRenderer
+                            blocks={optBlocks}
+                            fallbackText={fallback}
+                            image={optImg}
+                            imageAlt={richOpt?.altText || `Option ${letter} figure`}
+                            displayMode={dispMode}
+                            onZoomImage={setZoomImageUrl}
+                          />
                         </div>
                         {isCorrectAnswer && (
                           <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider shrink-0">
@@ -250,6 +281,32 @@ export const ReviewScreen: React.FC<ReviewScreenProps> = ({ session, onBack }) =
         })
         )}
       </div>
+
+      {/* Zoom Image Lightbox Modal */}
+      {zoomImageUrl && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150"
+          onClick={() => setZoomImageUrl(null)}
+        >
+          <div
+            className="relative bg-white dark:bg-darkSurface-elev1 p-4 rounded-2xl max-w-4xl max-h-[90vh] overflow-auto shadow-2xl flex flex-col items-center border border-surface-border dark:border-darkSurface-border"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setZoomImageUrl(null)}
+              className="absolute top-3 right-3 p-1.5 rounded-full bg-surface-elev1 text-surface-muted hover:text-surface-text hover:bg-surface-elev2 transition-colors cursor-pointer"
+              title="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img
+              src={zoomImageUrl}
+              alt="Enlarged figure"
+              className="max-h-[80vh] w-auto object-contain mx-auto rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

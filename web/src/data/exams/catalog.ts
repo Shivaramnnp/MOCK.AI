@@ -34,6 +34,150 @@ export const COMPETITIVE_EXAMS_CATALOG: CompetitiveExam[] = [
       'Dedicated Tier 2 Descriptive Exam Simulation (Essay & Letter Writing)',
       'Complete Diagrams, Graphs, and Visual Option Choice Figures',
     ],
+    syllabus: {
+      officialNoticeRef: 'SSC CHSL Official Examination Notice',
+      sections: [
+        {
+          title: 'English Language',
+          description: 'Tests candidate comprehension and fundamental command over English language.',
+          topics: [
+            {
+              name: 'Grammar & Usage',
+              subtopics: [
+                'Spot the Error',
+                'Fill in the Blanks',
+                'Sentence Improvement',
+                'Active/Passive Voice of Verbs',
+                'Direct / Indirect Narration conversion',
+              ],
+            },
+            {
+              name: 'Vocabulary',
+              subtopics: [
+                'Synonyms & Homonyms',
+                'Antonyms',
+                'Spellings / Detecting misspelled words',
+                'Idioms & Phrases',
+                'One Word Substitution',
+              ],
+            },
+            {
+              name: 'Reading & Sentence Arrangement',
+              subtopics: [
+                'Shuffling of Sentence parts',
+                'Shuffling of Sentences in a passage',
+                'Cloze Passage',
+                'Comprehension Passage',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'General Intelligence & Reasoning',
+          description: 'Both verbal and non-verbal reasoning, visual spatial skills, and logical deduction.',
+          topics: [
+            {
+              name: 'Analogies & Classification',
+              subtopics: [
+                'Semantic Analogy',
+                'Symbolic & Number Analogy',
+                'Figural Analogy',
+                'Semantic Classification',
+                'Symbolic & Number Classification',
+                'Figural Classification',
+              ],
+            },
+            {
+              name: 'Series & Coding',
+              subtopics: [
+                'Semantic Series',
+                'Number Series',
+                'Figural Series',
+                'Coding and De-coding',
+                'Numerical & Symbolic Operations',
+              ],
+            },
+            {
+              name: 'Spatial & Logical Reasoning',
+              subtopics: [
+                'Space Orientation & Visualization',
+                'Venn Diagrams',
+                'Drawing Inferences',
+                'Punched hole / pattern-folding & unfolding',
+                'Figural Pattern folding and completion',
+                'Critical Thinking & Problem Solving',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'Quantitative Aptitude',
+          description: 'Mathematical concepts, computational efficiency, and geometric/statistical awareness.',
+          topics: [
+            {
+              name: 'Number Systems & Arithmetic',
+              subtopics: [
+                'Computation of Whole Numbers, Decimals & Fractions',
+                'Percentages, Ratio & Proportion, Square Roots',
+                'Averages, Simple & Compound Interest',
+                'Profit & Loss, Discount, Partnership Business',
+                'Mixture and Alligation, Time & Distance, Time & Work',
+              ],
+            },
+            {
+              name: 'Algebra',
+              subtopics: [
+                'Basic algebraic identities of School Algebra',
+                'Elementary Surds & Factorization',
+                'Graphs of Linear Equations',
+              ],
+            },
+            {
+              name: 'Geometry & Mensuration',
+              subtopics: [
+                'Triangles and centres of congruence/similarity',
+                'Circles, chords, tangents, and angles',
+                'Quadrilaterals & Regular Polygons',
+                'Right Prism, Cone, Cylinder, Sphere, Hemispheres',
+              ],
+            },
+            {
+              name: 'Trigonometry & Statistics',
+              subtopics: [
+                'Trigonometric ratios & Standard Identities',
+                'Heights and Distances',
+                'Histograms, Frequency Polygons, Bar Diagrams & Pie Charts',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'General Awareness',
+          description: 'Environment around the candidate, scientific observation, and national heritage.',
+          topics: [
+            {
+              name: 'Static General Knowledge',
+              subtopics: [
+                'History and Indian Freedom Struggle',
+                'Culture and Heritage',
+                'Physical & Political Geography',
+                'Economic Scene & Policies',
+                'Indian Polity & Constitution',
+              ],
+            },
+            {
+              name: 'Current Affairs & Science',
+              subtopics: [
+                'National & International Events',
+                'Scientific Research & Technology',
+                'India and its Neighboring Countries',
+                'Environmental Awareness & Sports',
+              ],
+            },
+          ],
+        },
+      ],
+    },
   },
   {
     id: 'ssc-cgl',
@@ -95,6 +239,117 @@ export const COMPETITIVE_EXAMS_CATALOG: CompetitiveExam[] = [
       'High-Resolution Vector Circuit Schematics, Diagrams & Mathematical Formulations',
       'Official Master Answer Keys, Multi-Session Separation & Range-Tolerance Verification',
     ],
+    syllabus: {
+      officialNoticeRef: 'GATE Official Information Brochure (IISc / IITs)',
+      sections: [
+        {
+          title: 'General Aptitude (GA)',
+          description: 'Common to all GATE papers (15 Marks total: 5 x 1-mark and 5 x 2-mark questions).',
+          topics: [
+            {
+              name: 'Verbal Aptitude',
+              subtopics: [
+                'Basic English Grammar: tenses, articles, prepositions, concord',
+                'Vocabulary: words, idioms and phrases in context',
+                'Reading Comprehension and narrative sequencing',
+              ],
+            },
+            {
+              name: 'Quantitative Aptitude',
+              subtopics: [
+                'Data Interpretation: data graphs, charts, tables',
+                'Numerical Computation and Estimation: ratios, percentages, powers, logarithms',
+                'Permutations, Combinations & Elementary Probability',
+              ],
+            },
+            {
+              name: 'Analytical & Spatial Aptitude',
+              subtopics: [
+                'Logic: deduction, induction, analogy, numerical reasoning',
+                'Spatial Aptitude: transformation of shapes, paper folding and cutting, patterns in 2D and 3D',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'Engineering Mathematics',
+          description: 'Fundamental mathematical formulations for engineering analysis and algorithm rigor.',
+          topics: [
+            {
+              name: 'Discrete Mathematics',
+              subtopics: [
+                'Propositional and First-Order Logic',
+                'Sets, Relations, Functions, Partial Orders and Lattices',
+                'Monoids, Groups, Graphs: connectivity, matching, coloring',
+                'Combinatorics: counting, recurrence relations, generating functions',
+              ],
+            },
+            {
+              name: 'Linear Algebra & Calculus',
+              subtopics: [
+                'Matrices, Determinants, Systems of Linear Equations',
+                'Eigenvalues, Eigenvectors, LU Decomposition',
+                'Limits, Continuity and Differentiability, Maxima and Minima',
+                'Mean Value Theorem, Integration, Vector Calculus',
+              ],
+            },
+            {
+              name: 'Probability and Statistics',
+              subtopics: [
+                'Random Variables, Uniform, Normal, Exponential, Poisson distributions',
+                'Mean, Median, Mode, Standard Deviation, Conditional Probability, Bayes Theorem',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'Core Technical Subjects (CS & Engineering)',
+          description: 'Discipline-specific subject modules evaluated through MCQ, MSQ, and NAT questions.',
+          topics: [
+            {
+              name: 'Digital Logic & Computer Architecture',
+              subtopics: [
+                'Boolean Algebra, Combinational & Sequential Circuits, Minimization',
+                'Machine Instructions & Addressing Modes, ALU, Data-Path & Control Unit',
+                'Instruction Pipelining & Hazards, Memory Hierarchy, Cache & I/O Interface',
+              ],
+            },
+            {
+              name: 'Programming, Data Structures & Algorithms',
+              subtopics: [
+                'Programming in C, Recursion, Arrays, Stacks, Queues, Linked Lists, Trees, Heaps, Graphs',
+                'Searching, Sorting, Hashing, Asymptotic Analysis (Worst, Average, Best Case)',
+                'Greedy Algorithms, Dynamic Programming, Divide-and-Conquer, Graph Algorithms',
+              ],
+            },
+            {
+              name: 'Theory of Computation & Compiler Design',
+              subtopics: [
+                'Regular Expressions, Finite Automata, Context-Free Grammars, Push-Down Automata',
+                'Pumping Lemma, Turing Machines, Undecidability',
+                'Lexical Analysis, Parsing, Syntax-Directed Translation, Runtime Environments',
+              ],
+            },
+            {
+              name: 'Operating Systems & Databases',
+              subtopics: [
+                'Processes, Threads, IPC, Concurrency, Synchronization, Deadlocks, CPU Scheduling',
+                'Memory Management, Virtual Memory, File Systems, Disk Scheduling',
+                'ER-Model, Relational Model, Relational Algebra, SQL, Normal Forms, Transactions & ACID',
+              ],
+            },
+            {
+              name: 'Computer Networks',
+              subtopics: [
+                'OSI and TCP/IP Layering, Framing, Error Detection & Correction',
+                'Routing Algorithms, IP Addressing, IPv4/IPv6, CIDR, Subnetting',
+                'TCP/UDP, Flow Control, Congestion Control, Sockets, HTTP, DNS, SMTP',
+              ],
+            },
+          ],
+        },
+      ],
+    },
   },
   {
     id: 'upsc-cse',
@@ -123,6 +378,85 @@ export const COMPETITIVE_EXAMS_CATALOG: CompetitiveExam[] = [
         'Environment & Ecology',
         'General Science & Tech',
         'Current Affairs',
+      ],
+    },
+    syllabus: {
+      officialNoticeRef: 'UPSC CSE Official Notification',
+      sections: [
+        {
+          title: 'Paper I — General Studies (Prelims)',
+          description: '100 Objective Multiple Choice Questions carrying 200 marks (2 hours duration).',
+          topics: [
+            {
+              name: 'History of India & Indian National Movement',
+              subtopics: [
+                'Ancient, Medieval, and Modern Indian History',
+                'Indian National Movement, Freedom Fighters & Constitutional milestones',
+                'Indian Art, Literature, Architecture & Cultural heritage',
+              ],
+            },
+            {
+              name: 'Indian & World Geography',
+              subtopics: [
+                'Physical Geography: geomorphology, climatology, oceanography',
+                'Social Geography: demographics, urbanization, migration patterns',
+                'Economic Geography: natural resources, agriculture, industrial locations',
+              ],
+            },
+            {
+              name: 'Indian Polity & Governance',
+              subtopics: [
+                'Constitution of India, Preamble, Fundamental Rights & Duties',
+                'Parliament, Union & State Executive, Judiciary & Constitutional bodies',
+                'Panchayati Raj, Public Policy, Governance, and Rights issues',
+              ],
+            },
+            {
+              name: 'Economic & Social Development',
+              subtopics: [
+                'Sustainable Development, Poverty alleviation, Demographics, Inclusion',
+                'Macroeconomic indicators, Fiscal & Monetary policies, Banking sector',
+                'Social sector initiatives, government welfare programs',
+              ],
+            },
+            {
+              name: 'Environment, Ecology & General Science',
+              subtopics: [
+                'Biodiversity, Conservation, Climate Change & International Treaties',
+                'Space technology, Biotechnology, IT & AI advancements',
+                'Everyday science and health awareness',
+              ],
+            },
+          ],
+        },
+        {
+          title: 'Paper II — CSAT (Aptitude Test)',
+          description: '80 Objective Multiple Choice Questions carrying 200 marks (Qualifying minimum 33%).',
+          topics: [
+            {
+              name: 'Comprehension & Interpersonal Skills',
+              subtopics: [
+                'Reading Comprehension & Critical inference',
+                'Interpersonal skills including communication',
+              ],
+            },
+            {
+              name: 'Reasoning & Mental Ability',
+              subtopics: [
+                'Logical reasoning and analytical ability',
+                'Decision making and problem solving',
+                'General mental ability',
+              ],
+            },
+            {
+              name: 'Basic Numeracy & Data Interpretation',
+              subtopics: [
+                'Numbers and their relations, orders of magnitude (Class X level)',
+                'Data Interpretation: charts, graphs, tables, data sufficiency (Class X level)',
+              ],
+            },
+          ],
+        },
       ],
     },
   },
@@ -259,3 +593,11 @@ export function getPapersForExam(examId: string): ExamPaper[] {
 export function getPaperById(paperId: string): ExamPaper | undefined {
   return EXAM_PAPERS_MAP[paperId];
 }
+
+// Dynamically register an ExamPaper / MockPaper into the runtime catalog
+export function registerExamPaper(paper: ExamPaper): void {
+  if (paper && paper.id) {
+    EXAM_PAPERS_MAP[paper.id] = paper;
+  }
+}
+

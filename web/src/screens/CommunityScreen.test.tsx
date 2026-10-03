@@ -7,6 +7,8 @@ import { PostDetailModal } from '../components/community/PostDetailModal';
 import { communityService } from '../services/communityService';
 import { UserProfile, CommunityPost } from '../types';
 
+import { supabaseService } from '../services/supabase';
+
 describe('CommunityScreen UI Integration Tests', () => {
   const mockUser: UserProfile = {
     uid: 'test-user-123',
@@ -19,6 +21,14 @@ describe('CommunityScreen UI Integration Tests', () => {
   beforeEach(() => {
     localStorage.clear();
     vi.restoreAllMocks();
+    vi.spyOn(supabaseService, 'getClient').mockReturnValue({
+      channel: () => ({
+        on: () => ({
+          subscribe: () => ({}),
+        }),
+      }),
+      removeChannel: () => Promise.resolve(),
+    } as any);
   });
 
   afterEach(() => {
@@ -271,6 +281,167 @@ describe('CommunityScreen UI Integration Tests', () => {
     fireEvent.keyDown(window, { key: 'Escape' });
     await waitFor(() => {
       expect(screen.queryByRole('dialog')).toBeNull();
+    });
+  });
+
+  it('removes post immediately from Community feed when author deletes their own post without requiring page refresh', async () => {
+    const postToDelete: CommunityPost = {
+      id: 'post-delete-test-1',
+      authorId: mockUser.uid,
+      authorName: mockUser.fullName,
+      authorRole: 'STUDENT',
+      type: 'DISCUSSION',
+      title: 'Post to be deleted by owner',
+      description: 'Owner is deleting this post.',
+      status: 'OPEN',
+      priority: 'NORMAL',
+      metadata: {},
+      isPinned: false,
+      isHidden: false,
+      supportCount: 0,
+      commentCount: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    vi.spyOn(communityService, 'getPosts').mockResolvedValue({
+      posts: [postToDelete],
+      total: 1,
+    });
+    vi.spyOn(communityService, 'deletePost').mockResolvedValue(true);
+
+    render(<CommunityScreen user={mockUser} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Post to be deleted by owner')).toBeTruthy();
+    });
+
+    // Open post menu
+    const menuBtn = screen.getByLabelText('Post actions');
+    fireEvent.click(menuBtn);
+
+    // Click "Delete Post"
+    const deleteMenuOption = screen.getByRole('menuitem', { name: /Delete Post/i });
+    fireEvent.click(deleteMenuOption);
+
+    // Delete modal opens
+    expect(screen.getByText('Delete this post?')).toBeTruthy();
+
+    // Confirm deletion
+    const confirmDeleteBtn = screen.getByRole('button', { name: 'Delete Post' });
+    fireEvent.click(confirmDeleteBtn);
+
+    // Verify post is immediately removed from feed
+    await waitFor(() => {
+      expect(screen.queryByText('Post to be deleted by owner')).toBeNull();
+    });
+  });
+
+  it('prunes nonexistent post from UI immediately and transitions modal to "Post no longer available" when server reports post no longer exists', async () => {
+    const stalePost: CommunityPost = {
+      id: 'stale-post-123',
+      authorId: mockUser.uid,
+      authorName: mockUser.fullName,
+      authorRole: 'STUDENT',
+      type: 'DISCUSSION',
+      title: 'Stale ghost post already removed in DB',
+      description: 'Already gone on remote server.',
+      status: 'OPEN',
+      priority: 'NORMAL',
+      metadata: {},
+      isPinned: false,
+      isHidden: false,
+      supportCount: 0,
+      commentCount: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    vi.spyOn(communityService, 'getPosts').mockResolvedValue({
+      posts: [stalePost],
+      total: 1,
+    });
+    // Server reports post no longer exists
+    vi.spyOn(communityService, 'deletePost').mockRejectedValue(new Error('This post no longer exists.'));
+
+    render(<CommunityScreen user={mockUser} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Stale ghost post already removed in DB')).toBeTruthy();
+    });
+
+    // Open action menu and click delete
+    const menuBtn = screen.getByLabelText('Post actions');
+    fireEvent.click(menuBtn);
+    const deleteMenuOption = screen.getByRole('menuitem', { name: /Delete Post/i });
+    fireEvent.click(deleteMenuOption);
+
+    // Confirm deletion
+    const confirmDeleteBtn = screen.getByRole('button', { name: 'Delete Post' });
+    fireEvent.click(confirmDeleteBtn);
+
+    // Modal must transition to "Post no longer available" with single Close button
+    await waitFor(() => {
+      expect(screen.getByText('Post no longer available')).toBeTruthy();
+      expect(screen.getByText('This post has already been deleted or is no longer available.')).toBeTruthy();
+    });
+
+    // Destructive Delete Post button must be gone
+    expect(screen.queryByRole('button', { name: 'Delete Post' })).toBeNull();
+
+    // The ghost post must be REMOVED from the background feed immediately!
+    expect(screen.queryByText('Stale ghost post already removed in DB')).toBeNull();
+
+    // Clicking Close closes the modal
+    const closeBtn = screen.getByText('Close');
+    fireEvent.click(closeBtn);
+
+    await waitFor(() => {
+      expect(screen.queryByText('Post no longer available')).toBeNull();
+    });
+  });
+
+  it('removes post from feed when mockai_community_post_deleted event is received from another tab', async () => {
+    const livePost: CommunityPost = {
+      id: 'multi-tab-post-1',
+      authorId: mockUser.uid,
+      authorName: mockUser.fullName,
+      authorRole: 'STUDENT',
+      type: 'DISCUSSION',
+      title: 'Multi-tab concurrent deletion test',
+      description: 'Post deleted in another tab.',
+      status: 'OPEN',
+      priority: 'NORMAL',
+      metadata: {},
+      isPinned: false,
+      isHidden: false,
+      supportCount: 0,
+      commentCount: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    vi.spyOn(communityService, 'getPosts').mockResolvedValue({
+      posts: [livePost],
+      total: 1,
+    });
+
+    render(<CommunityScreen user={mockUser} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Multi-tab concurrent deletion test')).toBeTruthy();
+    });
+
+    // Simulate cross-tab event
+    window.dispatchEvent(
+      new CustomEvent('mockai_community_post_deleted', {
+        detail: { postId: 'multi-tab-post-1' },
+      })
+    );
+
+    // Post must be removed from the feed immediately
+    await waitFor(() => {
+      expect(screen.queryByText('Multi-tab concurrent deletion test')).toBeNull();
     });
   });
 });

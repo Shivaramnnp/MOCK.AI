@@ -130,11 +130,11 @@ export class AnalyticsService {
         seenSessionIds.add(session.sessionId);
 
         const res = session.result;
-        const correctCount = res ? res.correctCount : 0;
-        const wrongCount = res ? res.wrongCount : 0;
-        const attemptedCount = correctCount + wrongCount;
+        const correctCount = res && res.correctCount !== null ? res.correctCount : 0;
+        const wrongCount = res && res.wrongCount !== null ? res.wrongCount : 0;
+        const attemptedCount = res?.attemptedCount !== undefined ? res.attemptedCount : correctCount + wrongCount;
         const totalQuestions = res ? res.totalQuestions : session.durationSeconds ? 100 : 0;
-        const score = res ? res.totalScore : 0;
+        const score = res && res.totalScore !== null ? res.totalScore : 0;
         const maxScore = res ? res.maxMarks : 100;
         const scorePercent = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
         const accuracy = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
@@ -405,7 +405,7 @@ export class AnalyticsService {
       if (userAnswers) {
         // Deterministic per-question mapping
         test.questions.forEach((q, idx) => {
-          const topicName = q.topic || test.category || 'General';
+          const topicName = (typeof q.topic === 'string' ? q.topic : q.topic?.primaryTopicName) || test.category || 'General';
           if (!topicMap[topicName]) {
             topicMap[topicName] = {
               topic: topicName,

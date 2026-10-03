@@ -544,6 +544,146 @@ describe('CommunityService Tests', () => {
       const fetched = await communityService.getPostById(post.id);
       expect(fetched).toBeNull();
     });
+
+    it('rejects deletion of a nonexistent post with "This post no longer exists."', async () => {
+      await expect(
+        communityService.deletePost('nonexistent-post-id', userA)
+      ).rejects.toThrow('This post no longer exists.');
+    });
+
+    it('rejects deletion of an already-deleted post with "This post no longer exists."', async () => {
+      const post = await communityService.createPost({
+        type: 'DISCUSSION',
+        title: 'Post to delete twice',
+        description: 'Testing double deletion idempotency and error reporting.',
+        user: userA,
+      });
+
+      // First delete succeeds
+      const first = await communityService.deletePost(post.id, userA);
+      expect(first).toBe(true);
+
+      // Second delete throws explicit "This post no longer exists."
+      await expect(
+        communityService.deletePost(post.id, userA)
+      ).rejects.toThrow('This post no longer exists.');
+    });
+
+    it('dispatches mockai_community_post_deleted event and sets storage key on deletion', async () => {
+      const post = await communityService.createPost({
+        type: 'FEATURE_REQUEST',
+        title: 'Dark mode graph contrast adjustment',
+        description: 'Adjust contrast on coordinate planes.',
+        user: userA,
+      });
+
+      const eventListener = vi.fn();
+      window.addEventListener('mockai_community_post_deleted', eventListener);
+
+      await communityService.deletePost(post.id, userA);
+
+      expect(eventListener).toHaveBeenCalledTimes(1);
+      const eventDetail = eventListener.mock.calls[0][0].detail;
+      expect(eventDetail.postId).toBe(post.id);
+
+      const lastDeleted = localStorage.getItem('mockai_community_last_deleted_id');
+      expect(lastDeleted).toContain(post.id);
+
+      window.removeEventListener('mockai_community_post_deleted', eventListener);
+    });
+
+    it('prevents deleted post from reappearing on subsequent re-fetches via tombstone', async () => {
+      const post = await communityService.createPost({
+        type: 'BUG_REPORT',
+        title: 'LaTeX frac rendering glitch in Section 3',
+        description: 'Fractions render without separator bar.',
+        user: userA,
+      });
+
+      await communityService.deletePost(post.id, userA);
+
+      // Even if local cache or mock query were re-queried
+      const res = await communityService.getPosts();
+      expect(res.posts.some((p) => p.id === post.id)).toBe(false);
+
+      const single = await communityService.getPostById(post.id);
+      expect(single).toBeNull();
+    });
+
+    it('handles remote delete via Supabase client and raises post not found if 0 rows deleted', async () => {
+      const mockClient = {
+        rpc: vi.fn().mockResolvedValue({ data: { isStaff: false }, error: null }),
+        from: vi.fn().mockReturnValue({
+          delete: vi.fn().mockReturnValue({
+            eq: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                select: vi.fn().mockResolvedValue({ data: [], error: null }),
+              }),
+              select: vi.fn().mockResolvedValue({ data: [], error: null }),
+            }),
+          }),
+          select: vi.fn().mockReturnValue({
+            eq: vi.fn().mockReturnValue({
+              maybeSingle: vi.fn().mockResolvedValue({ data: null, error: null }),
+            }),
+          }),
+        }),
+      };
+      vi.spyOn(supabaseService, 'getClient').mockReturnValue(mockClient as any);
+
+      await expect(
+        communityService.deletePost('stale-remote-post', userA)
+      ).rejects.toThrow('This post no longer exists.');
+    });
+
+    it('successfully executes canonical hard delete on Supabase and purges cache', async () => {
+      const mockClient = {
+        rpc: vi.fn().mockResolvedValue({ data: { isStaff: false }, error: null }),
+        from: vi.fn().mockReturnValue({
+          delete: vi.fn().mockReturnValue({
+            eq: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                select: vi.fn().mockResolvedValue({ data: [{ id: 'remote-post-1', author_id: userA.uid }], error: null }),
+              }),
+              select: vi.fn().mockResolvedValue({ data: [{ id: 'remote-post-1', author_id: userA.uid }], error: null }),
+            }),
+          }),
+        }),
+      };
+      vi.spyOn(supabaseService, 'getClient').mockReturnValue(mockClient as any);
+
+      const success = await communityService.deletePost('remote-post-1', userA);
+      expect(success).toBe(true);
+
+      const post = await communityService.getPostById('remote-post-1');
+      expect(post).toBeNull();
+    });
+
+    it('rejects remote delete with permission error when post belongs to someone else', async () => {
+      const mockClient = {
+        rpc: vi.fn().mockResolvedValue({ data: { isStaff: false }, error: null }),
+        from: vi.fn().mockReturnValue({
+          delete: vi.fn().mockReturnValue({
+            eq: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                select: vi.fn().mockResolvedValue({ data: [], error: null }),
+              }),
+              select: vi.fn().mockResolvedValue({ data: [], error: null }),
+            }),
+          }),
+          select: vi.fn().mockReturnValue({
+            eq: vi.fn().mockReturnValue({
+              maybeSingle: vi.fn().mockResolvedValue({ data: { id: 'other-post-1', author_id: 'other-author-id' }, error: null }),
+            }),
+          }),
+        }),
+      };
+      vi.spyOn(supabaseService, 'getClient').mockReturnValue(mockClient as any);
+
+      await expect(
+        communityService.deletePost('other-post-1', userA)
+      ).rejects.toThrow("You don't have permission to delete this post.");
+    });
   });
 
   describe('Staff Status Synchronization & Author Notifications', () => {

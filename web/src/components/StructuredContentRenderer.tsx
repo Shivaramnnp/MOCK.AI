@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentBlock, ContentBlockType } from '../types';
+import { ContentBlock, ContentBlockType, DisplayMode } from '../types';
 import { LatexRenderer } from './LatexRenderer';
 import { ExamAsset } from './ExamAsset';
 
@@ -408,7 +408,8 @@ export const ImageRenderer: React.FC<{
   className?: string;
   alt?: string;
   isOption?: boolean;
-}> = ({ assetUrl, caption, onZoom, className = '', alt, isOption = false }) => {
+  allowZoom?: boolean;
+}> = ({ assetUrl, caption, onZoom, className = '', alt, isOption = false, allowZoom }) => {
   if (!assetUrl) return null;
 
   return (
@@ -418,6 +419,7 @@ export const ImageRenderer: React.FC<{
         alt={alt || caption || 'Question Figure'}
         variant={isOption ? 'option' : 'diagram'}
         onZoom={onZoom}
+        allowZoom={allowZoom}
       />
       {caption && (
         <figcaption className="mt-1.5 text-xs text-surface-muted italic text-left">
@@ -554,17 +556,99 @@ export const StructuredContentRenderer: React.FC<StructuredContentRendererProps>
 };
 
 /**
+ * Helper to determine if a string only contains an option label or index.
+ */
+function isOptionLabelOrNumber(text: string | null | undefined): boolean {
+  if (!text) return true;
+  const trimmed = text.trim();
+  if (trimmed.length === 0) return true;
+  // Matches "Option (A)", "Option A", "(A)", "(1)", "A", "1", "1.", "A.", "[A]", "[1]", "(a)", "(d)"
+  if (/^(option\s*)?(\([a-d1-4]\)|\[[a-d1-4]\]|[a-d1-4]\.?)$/i.test(trimmed)) {
+    return true;
+  }
+  // Pure digits e.g. "28" or "25" (OCR-ed option index or number choice)
+  if (/^\d{1,4}\.?$/.test(trimmed)) {
+    return true;
+  }
+  return false;
+}
+
+/**
  * OptionContentRenderer: Dedicated shared renderer for exam question options.
- * Ensures consistent left-alignment across all option content types (text, math, images, code, tables).
+ * Ensures consistent left-alignment across all option content types (text, math, images, code, tables),
+ * and strictly enforces presentation policy:
+ * - IMAGE_ONLY / IMAGE_WITH_ACCESSIBILITY_TEXT: Renders source visual asset without OCR text duplication.
+ *   Exposes OCR text strictly as screen-reader accessibility (<span className="sr-only">).
+ * - TEXT_ONLY: Renders text / structured content blocks.
+ * - TEXT_AND_IMAGE: Renders both only when genuine dual content exists.
  */
 export const OptionContentRenderer: React.FC<{
   blocks?: ContentBlock[];
   fallbackText?: string;
-  image?: string;
+  image?: string | null;
   imageAlt?: string;
+  ocrText?: string;
+  displayMode?: DisplayMode;
   onZoomImage?: (url: string) => void;
   className?: string;
-}> = ({ blocks, fallbackText, image, imageAlt, onZoomImage, className = '' }) => {
+}> = ({
+  blocks,
+  fallbackText,
+  image,
+  imageAlt,
+  ocrText,
+  displayMode,
+  onZoomImage,
+  className = '',
+}) => {
+  const hasValidFallback = Boolean(
+    fallbackText && fallbackText.trim().length > 0 && (!image || !isOptionLabelOrNumber(fallbackText))
+  );
+  const hasText = Boolean((blocks && blocks.length > 0) || hasValidFallback);
+
+  const effectiveMode: DisplayMode =
+    displayMode ||
+    (image && !hasText ? 'IMAGE_ONLY' : image && hasText ? 'TEXT_AND_IMAGE' : image ? 'IMAGE_ONLY' : 'TEXT_ONLY');
+
+  if (effectiveMode === 'IMAGE_ONLY' || effectiveMode === 'IMAGE_WITH_ACCESSIBILITY_TEXT') {
+    return (
+      <div className={`option-content w-full min-w-0 text-left space-y-1.5 ${className}`}>
+        {image ? (
+          <>
+            <ExamAsset
+              url={image}
+              alt={imageAlt || 'Option figure'}
+              variant="option"
+              fallbackText={ocrText || fallbackText}
+              onZoom={onZoomImage}
+            />
+            {ocrText && <span className="sr-only">{ocrText}</span>}
+          </>
+        ) : (
+          <span className="text-xs text-amber-600 dark:text-amber-400 italic">Option content missing</span>
+        )}
+      </div>
+    );
+  }
+
+  if (effectiveMode === 'TEXT_ONLY') {
+    return (
+      <div className={`option-content w-full min-w-0 text-left space-y-1.5 ${className}`}>
+        {hasText ? (
+          <StructuredContentRenderer
+            blocks={blocks}
+            fallbackText={fallbackText}
+            isOption={true}
+            onZoomImage={onZoomImage}
+          />
+        ) : (
+          <span className="text-xs text-amber-600 dark:text-amber-400 italic">Option content missing</span>
+        )}
+      </div>
+    );
+  }
+
+  // TEXT_AND_IMAGE: Genuine dual representation
   return (
     <div className={`option-content w-full min-w-0 text-left space-y-1.5 ${className}`}>
       {image && (
@@ -572,16 +656,21 @@ export const OptionContentRenderer: React.FC<{
           url={image}
           alt={imageAlt || 'Option figure'}
           variant="option"
+          fallbackText={ocrText || fallbackText}
           onZoom={onZoomImage}
         />
       )}
-      {(blocks?.length || (fallbackText && fallbackText.trim().length > 0)) && (
+      {hasText && (
         <StructuredContentRenderer
           blocks={blocks}
           fallbackText={fallbackText}
           isOption={true}
           onZoomImage={onZoomImage}
         />
+      )}
+      {ocrText && !hasText && <span className="sr-only">{ocrText}</span>}
+      {!image && !hasText && (
+        <span className="text-xs text-amber-600 dark:text-amber-400 italic">Option content missing</span>
       )}
     </div>
   );

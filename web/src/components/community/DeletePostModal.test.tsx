@@ -176,4 +176,113 @@ describe('DeletePostModal Component', () => {
     );
     expect(document.body.style.overflow).toBe('');
   });
+
+  it('transitions to "Post no longer available" with single [Close] button when onConfirmDelete fails with already deleted', async () => {
+    const handleClose = vi.fn();
+    const handleConfirm = vi.fn().mockRejectedValue(new Error('This post no longer exists.'));
+    render(
+      <DeletePostModal
+        post={mockPost}
+        isOpen={true}
+        onClose={handleClose}
+        onConfirmDelete={handleConfirm}
+      />
+    );
+
+    const deleteBtn = screen.getByRole('button', { name: /Delete Post/i });
+    fireEvent.click(deleteBtn);
+
+    await waitFor(() => {
+      expect(screen.getByText('Post no longer available')).toBeDefined();
+      expect(screen.getByText('This post has already been deleted or is no longer available.')).toBeDefined();
+    });
+
+    // The destructive button must be completely gone
+    expect(screen.queryByRole('button', { name: /Delete Post/i })).toBeNull();
+    expect(screen.queryByRole('button', { name: /Cancel/i })).toBeNull();
+
+    // A single [Close] button must be present
+    const closeBtn = screen.getByText('Close');
+    expect(closeBtn).toBeDefined();
+    fireEvent.click(closeBtn);
+    expect(handleClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders "Post no longer available" immediately if post is marked isDeleted', () => {
+    const handleClose = vi.fn();
+    const handleConfirm = vi.fn();
+    const deletedPost = { ...mockPost, isDeleted: true };
+
+    render(
+      <DeletePostModal
+        post={deletedPost}
+        isOpen={true}
+        onClose={handleClose}
+        onConfirmDelete={handleConfirm}
+      />
+    );
+
+    expect(screen.getByText('Post no longer available')).toBeDefined();
+    expect(screen.queryByRole('button', { name: /Delete Post/i })).toBeNull();
+    expect(screen.getByText('Close')).toBeDefined();
+  });
+
+  it('transitions to "Post no longer available" when mockai_community_post_deleted event arrives for this post', async () => {
+    const handleClose = vi.fn();
+    const handleConfirm = vi.fn();
+
+    render(
+      <DeletePostModal
+        post={mockPost}
+        isOpen={true}
+        onClose={handleClose}
+        onConfirmDelete={handleConfirm}
+      />
+    );
+
+    expect(screen.getByText('Delete this post?')).toBeDefined();
+
+    // Dispatch external deletion event
+    window.dispatchEvent(
+      new CustomEvent('mockai_community_post_deleted', {
+        detail: { postId: mockPost.id },
+      })
+    );
+
+    await waitFor(() => {
+      expect(screen.getByText('Post no longer available')).toBeDefined();
+      expect(screen.queryByRole('button', { name: /Delete Post/i })).toBeNull();
+    });
+  });
+
+  it('prevents duplicate delete requests while mutation is in progress', async () => {
+    const handleClose = vi.fn();
+    let resolveDelete: () => void = () => {};
+    const handleConfirm = vi.fn().mockReturnValue(
+      new Promise<void>((resolve) => {
+        resolveDelete = resolve;
+      })
+    );
+
+    render(
+      <DeletePostModal
+        post={mockPost}
+        isOpen={true}
+        onClose={handleClose}
+        onConfirmDelete={handleConfirm}
+      />
+    );
+
+    const deleteBtn = screen.getByRole('button', { name: /Delete Post/i });
+    fireEvent.click(deleteBtn);
+    fireEvent.click(deleteBtn); // Duplicate rapid click
+
+    expect(handleConfirm).toHaveBeenCalledTimes(1);
+
+    // Resolve deletion
+    resolveDelete();
+    await waitFor(() => {
+      expect(handleClose).toHaveBeenCalledTimes(1);
+    });
+  });
 });

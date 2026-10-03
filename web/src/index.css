@@ -66,6 +66,15 @@
   text-align: left !important;
 }
 
+.option-content .katex {
+  font-size: 1.15em !important;
+  line-height: 1.6 !important;
+}
+
+.option-content .katex .mfrac .vlist-t {
+  font-size: 1.05em !important;
+}
+
 .option-content .katex-display,
 .option-content .katex-display > .katex,
 .option-content .katex-display > .katex > .katex-html,

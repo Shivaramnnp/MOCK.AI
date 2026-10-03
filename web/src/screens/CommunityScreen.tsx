@@ -11,7 +11,7 @@
  * - Discussions (threaded academic prep)
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   Search,
   Plus,
@@ -41,6 +41,7 @@ import {
 } from '../types';
 import { communityService } from '../services/communityService';
 import { staffService } from '../services/staffService';
+import { supabaseService } from '../services/supabase';
 import { CreatePostModal } from '../components/community/CreatePostModal';
 import { PostDetailModal } from '../components/community/PostDetailModal';
 import { ReportContentModal } from '../components/community/ReportContentModal';
@@ -89,6 +90,7 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const fetchRequestIdRef = useRef(0);
 
   // Modals & Action State
   const [createModalOpen, setCreateModalOpen] = useState(Boolean(initialContext));
@@ -165,10 +167,12 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
   );
 
   const loadPosts = useCallback(async () => {
+    const currentReqId = ++fetchRequestIdRef.current;
     setIsLoading(true);
     setError(null);
     try {
       const res = await fetchPostsData(0);
+      if (currentReqId !== fetchRequestIdRef.current) return;
       let fetched = res.posts;
       if (selectedExam === 'CUSTOM_EXAMS') {
         fetched = fetched.filter((p) => Boolean(p.customExamName || p.metadata?.customExamName));
@@ -176,10 +180,13 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
       setPosts(fetched);
       setTotalCount(res.total);
     } catch (err: any) {
+      if (currentReqId !== fetchRequestIdRef.current) return;
       console.error('[CommunityScreen] Failed to load posts:', err);
       setError("We couldn't load the community right now.");
     } finally {
-      setIsLoading(false);
+      if (currentReqId === fetchRequestIdRef.current) {
+        setIsLoading(false);
+      }
     }
   }, [fetchPostsData, selectedExam]);
 
@@ -187,7 +194,7 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
     loadPosts();
   }, [loadPosts]);
 
-  // Real-time synchronization: update post status immediately when changed by staff or when tab is refocused
+  // Real-time synchronization: update post status immediately when changed by staff, when tab is refocused, or when deleted
   useEffect(() => {
     const handlePostUpdated = (e: any) => {
       const detail = e.detail;
@@ -208,17 +215,105 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
       );
     };
 
+    const handlePostDeleted = (e: any) => {
+      const deletedId = e.detail?.postId;
+      if (!deletedId) return;
+      setPosts((prev) => prev.filter((p) => p.id !== deletedId));
+      setTotalCount((prev) => Math.max(0, prev - 1));
+      if (activePostId === deletedId) {
+        setActivePostId(null);
+      }
+      if (deletingPost?.id === deletedId) {
+        setDeletingPost(null);
+      }
+    };
+
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'mockai_community_last_deleted_id' && e.newValue) {
+        const deletedId = e.newValue.split(':')[0];
+        if (deletedId) {
+          setPosts((prev) => prev.filter((p) => p.id !== deletedId));
+          setTotalCount((prev) => Math.max(0, prev - 1));
+          if (activePostId === deletedId) {
+            setActivePostId(null);
+          }
+        }
+      }
+    };
+
     const handleFocus = () => {
       loadPosts();
     };
 
     window.addEventListener('mockai_community_post_updated', handlePostUpdated);
+    window.addEventListener('mockai_community_post_deleted', handlePostDeleted);
+    window.addEventListener('storage', handleStorageChange);
     window.addEventListener('focus', handleFocus);
+
+    // Supabase Realtime channel for live Postgres changes on community_posts
+    const client = supabaseService.getClient();
+    let channel: any = null;
+    if (client) {
+      try {
+        channel = client
+          .channel('public:community_posts_sync')
+          .on(
+            'postgres_changes',
+            { event: 'DELETE', schema: 'public', table: 'community_posts' },
+            (payload: any) => {
+              const deletedId = payload.old?.id;
+              if (deletedId) {
+                setPosts((prev) => prev.filter((p) => p.id !== deletedId));
+                setTotalCount((prev) => Math.max(0, prev - 1));
+              }
+            }
+          )
+          .on(
+            'postgres_changes',
+            { event: 'UPDATE', schema: 'public', table: 'community_posts' },
+            (payload: any) => {
+              const updated = payload.new;
+              if (!updated?.id) return;
+              if (updated.is_hidden) {
+                setPosts((prev) => prev.filter((p) => p.id !== updated.id));
+                setTotalCount((prev) => Math.max(0, prev - 1));
+              } else {
+                setPosts((prev) =>
+                  prev.map((p) =>
+                    p.id === updated.id
+                      ? {
+                          ...p,
+                          status: updated.status || p.status,
+                          isPinned: Boolean(updated.is_pinned),
+                          supportCount: updated.support_count ?? p.supportCount,
+                          commentCount: updated.comment_count ?? p.commentCount,
+                        }
+                      : p
+                  )
+                );
+              }
+            }
+          )
+          .subscribe();
+      } catch {
+        // ignore
+      }
+    }
+
     return () => {
       window.removeEventListener('mockai_community_post_updated', handlePostUpdated);
+      window.removeEventListener('mockai_community_post_deleted', handlePostDeleted);
+      window.removeEventListener('storage', handleStorageChange);
       window.removeEventListener('focus', handleFocus);
+      if (channel && client) {
+        try {
+          client.removeChannel(channel);
+        } catch {
+          // ignore
+        }
+      }
     };
-  }, [loadPosts]);
+  }, [loadPosts, activePostId, deletingPost?.id]);
 
   const handleLoadMore = async () => {
     if (isLoadingMore || posts.length >= totalCount) return;
@@ -266,10 +361,34 @@ export const CommunityScreen: React.FC<CommunityScreenProps> = ({
   };
 
   const handleConfirmDelete = async (p: CommunityPost) => {
-    await communityService.deletePost(p.id, user);
-    setPosts((prev) => prev.filter((item) => item.id !== p.id));
-    setTotalCount((prev) => Math.max(0, prev - 1));
-    showToast('Post deleted successfully.');
+    try {
+      await communityService.deletePost(p.id, user);
+      setPosts((prev) => prev.filter((item) => item.id !== p.id));
+      setTotalCount((prev) => Math.max(0, prev - 1));
+      if (activePostId === p.id) {
+        setActivePostId(null);
+      }
+      showToast('Post deleted successfully.');
+    } catch (err: any) {
+      const msg = err?.message || '';
+      const isGone =
+        msg.includes('no longer exists') ||
+        msg.includes('not found') ||
+        msg.includes('no longer available') ||
+        msg.includes('already deleted') ||
+        msg.includes('404');
+
+      if (isGone) {
+        // Prune the nonexistent post from UI state immediately
+        setPosts((prev) => prev.filter((item) => item.id !== p.id));
+        setTotalCount((prev) => Math.max(0, prev - 1));
+        if (activePostId === p.id) {
+          setActivePostId(null);
+        }
+        throw new Error('This post has already been deleted or is no longer available.');
+      }
+      throw err;
+    }
   };
 
   const handleStaffPinToggle = async (p: CommunityPost) => {

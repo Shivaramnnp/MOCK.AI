@@ -17,24 +17,34 @@ import {
   ZoomIn,
   X,
   LayoutGrid,
+  Flag,
 } from 'lucide-react';
 import {
   ExamPaper,
+  ExamPresentationPaper,
   ExamTestSession,
   QuestionAttemptStatus,
   CompetitiveQuestion,
+  UserProfile,
 } from '../types';
 import { ExamService } from '../services/examService';
 import { ExamSessionService } from '../services/examSessionService';
 import { LatexRenderer } from '../components/LatexRenderer';
-import { StructuredContentRenderer } from '../components/StructuredContentRenderer';
+import { StructuredContentRenderer, OptionContentRenderer } from '../components/StructuredContentRenderer';
 import { resolveAssetUrl } from '../lib/supabaseContent';
 import { ExamAsset } from '../components/ExamAsset';
+import { ReportQuestionModal } from '../components/exam/ReportQuestionModal';
+import { TopicNavigationMenu } from '../components/exam/TopicNavigationMenu';
+import {
+  calculateTopicProgress,
+  getQuestionTopicMetadata,
+} from '../services/taxonomy/topicClassifier';
 
 interface CompetitiveExamPlayerScreenProps {
-  paper: ExamPaper;
+  paper: ExamPaper | ExamPresentationPaper;
   initialSession?: ExamTestSession | null;
   userId?: string;
+  user?: UserProfile | null;
   onExit: () => void;
   onSubmit: (completedSession: ExamTestSession) => void;
 }
@@ -43,6 +53,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   paper,
   initialSession,
   userId = 'guest',
+  user,
   onExit,
   onSubmit,
 }) => {
@@ -57,19 +68,61 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   });
 
   const [currentIndex, setCurrentIndex] = useState<number>(session.currentQuestionIndex || 0);
-  const [userAnswers, setUserAnswers] = useState<Record<number, number>>(session.userAnswers || {});
-  const [userMsqAnswers, setUserMsqAnswers] = useState<Record<number, number[]>>(
-    session.userMsqAnswers || {}
-  );
-  const [userNatAnswers, setUserNatAnswers] = useState<Record<number, string>>(
-    session.userNatAnswers || {}
-  );
-  const [descriptiveAnswers, setDescriptiveAnswers] = useState<Record<number, string>>(
-    session.userDescriptiveAnswers || {}
-  );
-  const [statuses, setStatuses] = useState<Record<number, QuestionAttemptStatus>>(
-    session.questionStatuses || {}
-  );
+  const [userAnswers, setUserAnswers] = useState<Record<number, number>>(() => {
+    const answers = { ...(session.userAnswers || {}) };
+    if (session.canonicalAnswers) {
+      paper.questions.forEach((q, idx) => {
+        if (q?.id && session.canonicalAnswers![q.id] !== undefined && typeof session.canonicalAnswers![q.id] === 'number') {
+          answers[idx] = session.canonicalAnswers![q.id];
+        }
+      });
+    }
+    return answers;
+  });
+  const [userMsqAnswers, setUserMsqAnswers] = useState<Record<number, number[]>>(() => {
+    const answers = { ...(session.userMsqAnswers || {}) };
+    if (session.canonicalAnswers) {
+      paper.questions.forEach((q, idx) => {
+        if (q?.id && Array.isArray(session.canonicalAnswers![q.id])) {
+          answers[idx] = session.canonicalAnswers![q.id];
+        }
+      });
+    }
+    return answers;
+  });
+  const [userNatAnswers, setUserNatAnswers] = useState<Record<number, string>>(() => {
+    const answers = { ...(session.userNatAnswers || {}) };
+    if (session.canonicalAnswers) {
+      paper.questions.forEach((q, idx) => {
+        if (q?.id && typeof session.canonicalAnswers![q.id] === 'string') {
+          answers[idx] = session.canonicalAnswers![q.id];
+        }
+      });
+    }
+    return answers;
+  });
+  const [descriptiveAnswers, setDescriptiveAnswers] = useState<Record<number, string>>(() => {
+    const answers = { ...(session.userDescriptiveAnswers || {}) };
+    if (session.canonicalAnswers) {
+      paper.questions.forEach((q, idx) => {
+        if (q?.id && typeof session.canonicalAnswers![q.id] === 'string') {
+          answers[idx] = session.canonicalAnswers![q.id];
+        }
+      });
+    }
+    return answers;
+  });
+  const [statuses, setStatuses] = useState<Record<number, QuestionAttemptStatus>>(() => {
+    const st = { ...(session.questionStatuses || {}) };
+    if (session.canonicalQuestionStatuses) {
+      paper.questions.forEach((q, idx) => {
+        if (q?.id && session.canonicalQuestionStatuses![q.id]) {
+          st[idx] = session.canonicalQuestionStatuses![q.id];
+        }
+      });
+    }
+    return st;
+  });
   const [timeRemaining, setTimeRemaining] = useState<number>(() => {
     const remaining = ExamSessionService.calculateRemainingSeconds(session);
     return Number.isFinite(remaining) ? remaining : (session.durationSeconds || 3600);
@@ -83,10 +136,13 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
   const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState<boolean>(false);
+  const [isReportModalOpen, setIsReportModalOpen] = useState<boolean>(false);
+  const reportButtonRef = useRef<HTMLButtonElement>(null);
 
   // SEC-003: Sanitize questions in memory to withhold answer keys, options, and explanations during the active test session
-  const sanitizedQuestions = useMemo(() => {
+  const sanitizedQuestions: CompetitiveQuestion[] = useMemo(() => {
     return paper.questions.map((q) => {
+      const qAny = q as any;
       const {
         correctAnswer: _ca,
         correctAnswerIndex: _cai,
@@ -98,11 +154,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
         explanation: _exp,
         modelSolution: _ms,
         ...safeQ
-      } = q;
+      } = qAny;
       return {
         ...safeQ,
         rubrics: paper.paperType === 'DESCRIPTIVE' ? q.rubrics : undefined,
-      };
+      } as CompetitiveQuestion;
     });
   }, [paper.questions, paper.paperType]);
 
@@ -152,6 +208,75 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     );
   }, [paper.sections, currentIndex]);
 
+  // ── Topic Navigation State (NAV-001) ──────────────────────────────────────
+  const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null);
+
+  // Compute topic progress summaries for the current section
+  const {
+    topics: sectionTopics,
+    allTotal: topicAllTotal,
+    allAttempted: topicAllAttempted,
+    allReview: topicAllReview,
+  } = useMemo(() => {
+    const bookmarksRecord: Record<number, boolean> = {};
+    Object.entries(statuses).forEach(([idxStr, st]) => {
+      const idx = Number(idxStr);
+      if (st === 'MARKED_FOR_REVIEW' || st === 'ANSWERED_AND_MARKED_FOR_REVIEW') {
+        bookmarksRecord[idx] = true;
+      }
+    });
+
+    const mergedAnswers: Record<number, any> = { ...userAnswers };
+    Object.entries(userMsqAnswers).forEach(([idx, val]) => {
+      if (val && val.length > 0) mergedAnswers[Number(idx)] = val;
+    });
+    Object.entries(userNatAnswers).forEach(([idx, val]) => {
+      if (val !== undefined && val !== null && val !== '') mergedAnswers[Number(idx)] = val;
+    });
+    Object.entries(descriptiveAnswers).forEach(([idx, val]) => {
+      if (val && val.trim().length > 0) mergedAnswers[Number(idx)] = val;
+    });
+
+    return calculateTopicProgress(
+      questions,
+      mergedAnswers,
+      bookmarksRecord,
+      paper.examId,
+      currentSection.id
+    );
+  }, [
+    questions,
+    userAnswers,
+    userMsqAnswers,
+    userNatAnswers,
+    descriptiveAnswers,
+    statuses,
+    paper.examId,
+    currentSection.id,
+  ]);
+
+  // Reset selected topic if it doesn't exist in current section
+  useEffect(() => {
+    if (selectedTopicId && !sectionTopics.some((t) => t.topicId === selectedTopicId)) {
+      setSelectedTopicId(null);
+    }
+  }, [currentSection.id, sectionTopics, selectedTopicId]);
+
+  // Set of question indices belonging to the selected topic
+  const matchingTopicIndices = useMemo(() => {
+    if (!selectedTopicId) return null;
+    const topic = sectionTopics.find((t) => t.topicId === selectedTopicId);
+    return topic ? new Set(topic.questionIndices) : null;
+  }, [selectedTopicId, sectionTopics]);
+
+  const activeTopic = useMemo(() => {
+    return sectionTopics.find((t) => t.topicId === selectedTopicId) || null;
+  }, [sectionTopics, selectedTopicId]);
+
+  const currentQuestionTopic = useMemo(() => {
+    return getQuestionTopicMetadata(currentQuestion, paper.examId, currentQuestion.sectionName);
+  }, [currentQuestion, paper.examId]);
+
   // Keep stateRef synchronously up-to-date on each render
   useEffect(() => {
     stateRef.current = {
@@ -172,6 +297,27 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   const getCurrentSessionSnapshot = useCallback(
     (overrides?: Partial<ExamTestSession>): ExamTestSession => {
       const cur = stateRef.current;
+      const canonicalAnswers: Record<string, any> = { ...(cur.session.canonicalAnswers || {}) };
+      const canonicalStatuses: Record<string, QuestionAttemptStatus> = {
+        ...(cur.session.canonicalQuestionStatuses || {}),
+      };
+
+      questions.forEach((q, idx) => {
+        if (!q?.id) return;
+        if (cur.statuses[idx]) {
+          canonicalStatuses[q.id] = cur.statuses[idx];
+        }
+        if (q.questionType === 'MSQ' && cur.userMsqAnswers[idx]) {
+          canonicalAnswers[q.id] = cur.userMsqAnswers[idx];
+        } else if (q.questionType === 'NAT' && cur.userNatAnswers[idx]) {
+          canonicalAnswers[q.id] = cur.userNatAnswers[idx];
+        } else if (paper.paperType === 'DESCRIPTIVE' && cur.descriptiveAnswers[idx]) {
+          canonicalAnswers[q.id] = cur.descriptiveAnswers[idx];
+        } else if (cur.userAnswers[idx] !== undefined && cur.userAnswers[idx] !== null) {
+          canonicalAnswers[q.id] = cur.userAnswers[idx];
+        }
+      });
+
       return {
         ...cur.session,
         currentQuestionIndex: cur.currentIndex,
@@ -181,12 +327,14 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
         userNatAnswers: cur.userNatAnswers,
         userDescriptiveAnswers: cur.descriptiveAnswers,
         questionStatuses: cur.statuses,
+        canonicalAnswers,
+        canonicalQuestionStatuses: canonicalStatuses,
         timeRemainingSeconds: cur.timeRemaining,
         elapsedSeconds: cur.elapsedSeconds,
         ...overrides,
       };
     },
-    []
+    [questions, paper.paperType]
   );
 
   // Auto-sync session state to storage (kept for backwards-compatibility without dependency churn)
@@ -293,6 +441,17 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
       ExamSessionService.triggerRemoteCheckpoint(snapshot, 'checkpoint');
     }
   };
+
+  // Jump to first question in selected topic
+  const handleJumpToFirstInTopic = useCallback(
+    (topicId: string) => {
+      const topic = sectionTopics.find((t) => t.topicId === topicId);
+      if (topic && topic.questionIndices.length > 0) {
+        jumpToQuestion(topic.questionIndices[0]);
+      }
+    },
+    [sectionTopics, jumpToQuestion]
+  );
 
   // Select option (MCQ)
   const handleSelectOption = (optionIndex: number) => {
@@ -707,6 +866,15 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                   <span className="text-surface-muted bg-surface-elev2 dark:bg-darkSurface-elev2 px-2.5 py-1 rounded-lg font-medium">
                     {currentQuestion.wordLimit || '200 - 250 words'}
                   </span>
+                  <button
+                    type="button"
+                    onClick={() => setIsReportModalOpen(true)}
+                    aria-label={`Report Question ${currentIndex + 1}`}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold text-surface-muted dark:text-darkSurface-muted hover:text-red-600 dark:hover:text-red-400 bg-surface-elev1 dark:bg-darkSurface-elev2 hover:bg-red-500/10 dark:hover:bg-red-500/10 border border-surface-border dark:border-darkSurface-border hover:border-red-500/30 transition-all"
+                  >
+                    <Flag className="w-3.5 h-3.5 text-red-500/90" />
+                    <span>Report Question</span>
+                  </button>
                 </div>
               </div>
 
@@ -841,6 +1009,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                     <span className="px-2 py-0.5 rounded-md bg-brand-primary/10 text-brand-primary text-[11px] font-bold">
                       {currentQuestion.sectionName}
                     </span>
+                    {currentQuestionTopic && currentQuestionTopic.primaryTopicName && currentQuestionTopic.primaryTopicId !== 'uncategorized' && (
+                      <span className="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 text-[11px] font-medium border border-indigo-200/60 dark:border-indigo-800/60">
+                        {currentQuestionTopic.primaryTopicName}
+                      </span>
+                    )}
                     {currentQuestion.questionType && (
                       <span
                         className={`px-2 py-0.5 rounded-md text-[11px] font-bold ${
@@ -868,6 +1041,16 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                     <span className="text-red-500 font-bold bg-red-500/10 px-2 py-0.5 rounded">
                       -{currentQuestion.negativeMarks !== undefined ? currentQuestion.negativeMarks : paper.markingScheme.negativeMarks}
                     </span>
+                    <button
+                      ref={reportButtonRef}
+                      type="button"
+                      onClick={() => setIsReportModalOpen(true)}
+                      aria-label={`Report Question ${currentIndex + 1}`}
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold text-surface-muted dark:text-darkSurface-muted hover:text-red-600 dark:hover:text-red-400 bg-surface-elev1 dark:bg-darkSurface-elev2 hover:bg-red-500/10 dark:hover:bg-red-500/10 border border-surface-border dark:border-darkSurface-border hover:border-red-500/30 transition-all ml-1"
+                    >
+                      <Flag className="w-3 h-3 text-red-500/90" />
+                      <span>Report Question</span>
+                    </button>
                   </div>
                 </div>
 
@@ -897,7 +1080,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       : currentQuestion.diagramUrl
                       ? [currentQuestion.diagramUrl]
                       : []
-                  ).filter((url) => !contentBlockAssetUrls.has(url));
+                  ).filter((url): url is string => Boolean(url && typeof url === 'string' && url.trim().length > 0) && !contentBlockAssetUrls.has(url.trim()));
 
                   if (unrenderedDiagramUrls.length === 0) return null;
 
@@ -987,16 +1170,9 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       const optLetter = ['A', 'B', 'C', 'D'][optIdx];
                       const currentSelected = userMsqAnswers[currentIndex] || [];
                       const isSelected = currentSelected.includes(optIdx);
-                      const optImage = currentQuestion.optionImages?.[optIdx];
-                      const rawOptBlocks = currentQuestion.richOptions?.[optIdx]?.contentBlocks;
-                      const optBlocks = optImage
-                        ? rawOptBlocks?.filter((b) => !(b.type === 'image' && (b.assetUrl === optImage || !b.content)))
-                        : rawOptBlocks;
-                      const hasValidText =
-                        (optBlocks && optBlocks.length > 0) ||
-                        (optionText &&
-                          optionText.trim().length > 0 &&
-                          !/^Option\s*\([A-D]\)$/i.test(optionText.trim()));
+                      const richOpt = currentQuestion.richOptions?.[optIdx];
+                      const optImage = richOpt?.imageUrl || currentQuestion.optionImages?.[optIdx] || null;
+                      const optBlocks = richOpt?.contentBlocks;
 
                       return (
                         <div
@@ -1018,24 +1194,14 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                             {isSelected ? '✓' : optLetter}
                           </div>
                           <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2 option-content text-left">
-                            {optImage && (
-                              <ExamAsset
-                                key={`${currentQuestion.id}-msq-opt-${optIdx}`}
-                                url={optImage}
-                                alt={`Option ${optLetter} figure`}
-                                variant="option"
-                                onZoom={setZoomImageUrl}
-                              />
-                            )}
-                            {hasValidText && (
-                              <div className="w-full text-left">
-                                <StructuredContentRenderer
-                                  blocks={optBlocks}
-                                  fallbackText={optionText}
-                                  isOption={true}
-                                />
-                              </div>
-                            )}
+                            <OptionContentRenderer
+                              blocks={optBlocks}
+                              fallbackText={richOpt?.text ?? optionText}
+                              image={optImage}
+                              imageAlt={richOpt?.altText || `Option ${optLetter} figure`}
+                              displayMode={richOpt?.displayMode || (optImage ? 'IMAGE_ONLY' : 'TEXT_ONLY')}
+                              onZoomImage={setZoomImageUrl}
+                            />
                           </div>
                         </div>
                       );
@@ -1047,16 +1213,9 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                     {currentQuestion.options.map((optionText, optIdx) => {
                       const optLetter = ['A', 'B', 'C', 'D'][optIdx];
                       const isSelected = userAnswers[currentIndex] === optIdx;
-                      const optImage = currentQuestion.optionImages?.[optIdx];
-                      const rawOptBlocks = currentQuestion.richOptions?.[optIdx]?.contentBlocks;
-                      const optBlocks = optImage
-                        ? rawOptBlocks?.filter((b) => !(b.type === 'image' && (b.assetUrl === optImage || !b.content)))
-                        : rawOptBlocks;
-                      const hasValidText =
-                        (optBlocks && optBlocks.length > 0) ||
-                        (optionText &&
-                          optionText.trim().length > 0 &&
-                          !/^Option\s*\([A-D]\)$/i.test(optionText.trim()));
+                      const richOpt = currentQuestion.richOptions?.[optIdx];
+                      const optImage = richOpt?.imageUrl || currentQuestion.optionImages?.[optIdx] || null;
+                      const optBlocks = richOpt?.contentBlocks;
 
                       return (
                         <div
@@ -1078,24 +1237,14 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                             {optLetter}
                           </div>
                           <div className="flex-1 text-xs sm:text-sm font-medium pt-0.5 text-surface-text dark:text-darkSurface-text space-y-2 option-content text-left">
-                            {optImage && (
-                              <ExamAsset
-                                key={`${currentQuestion.id}-mcq-opt-${optIdx}`}
-                                url={optImage}
-                                alt={`Option ${optLetter} figure`}
-                                variant="option"
-                                onZoom={setZoomImageUrl}
-                              />
-                            )}
-                            {hasValidText && (
-                              <div className="w-full text-left">
-                                <StructuredContentRenderer
-                                  blocks={optBlocks}
-                                  fallbackText={optionText}
-                                  isOption={true}
-                                />
-                              </div>
-                            )}
+                            <OptionContentRenderer
+                              blocks={optBlocks}
+                              fallbackText={richOpt?.text ?? optionText}
+                              image={optImage}
+                              imageAlt={richOpt?.altText || `Option ${optLetter} figure`}
+                              displayMode={richOpt?.displayMode || (optImage ? 'IMAGE_ONLY' : 'TEXT_ONLY')}
+                              onZoomImage={setZoomImageUrl}
+                            />
                           </div>
                         </div>
                       );
@@ -1150,6 +1299,18 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
         {/* Right 1 Column: Question Palette or Descriptive Modules */}
         <div className="space-y-4">
+          {paper.paperType !== 'DESCRIPTIVE' && (
+            <TopicNavigationMenu
+              selectedTopicId={selectedTopicId}
+              onSelectTopic={setSelectedTopicId}
+              topicSummaries={sectionTopics}
+              allTotal={topicAllTotal}
+              allAttempted={topicAllAttempted}
+              allReview={topicAllReview}
+              onJumpToFirstInTopic={handleJumpToFirstInTopic}
+            />
+          )}
+
           <div className="bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-2xl p-5 shadow-sm space-y-4">
             {paper.paperType === 'DESCRIPTIVE' ? (
               <div className="space-y-4">
@@ -1260,6 +1421,23 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                   </div>
                 </div>
 
+                {/* Topic Active Filter Banner if topic is filtered */}
+                {selectedTopicId && activeTopic && (
+                  <div className="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 text-[11px] text-indigo-700 dark:text-indigo-300">
+                    <div className="truncate">
+                      <span>Highlighting: </span>
+                      <span className="font-semibold">{activeTopic.topicName}</span>{' '}
+                      <span className="opacity-75">({matchingTopicIndices?.size || 0} Qs)</span>
+                    </div>
+                    <button
+                      onClick={() => setSelectedTopicId(null)}
+                      className="font-bold underline hover:text-indigo-900 dark:hover:text-indigo-100 ml-2 shrink-0 cursor-pointer"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                )}
+
                 {/* Question Buttons Grid for Current Section */}
                 <div className="grid grid-cols-5 gap-2 max-h-[300px] overflow-y-auto pr-1">
                   {questions
@@ -1268,6 +1446,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       const actualIndex = currentSection.startIndex + idx;
                       const st = statuses[actualIndex] || 'NOT_VISITED';
                       const isCurrent = actualIndex === currentIndex;
+                      const isMatchingTopic = matchingTopicIndices ? matchingTopicIndices.has(actualIndex) : true;
 
                       let badgeColor =
                         'bg-surface-elev1 dark:bg-darkSurface-elev2 border-surface-border text-surface-muted';
@@ -1287,7 +1466,14 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                           onClick={() => jumpToQuestion(actualIndex)}
                           className={`h-8 rounded-lg text-xs font-bold flex items-center justify-center border transition-all ${badgeColor} ${
                             isCurrent ? 'ring-2 ring-brand-primary ring-offset-2 scale-105 shadow-sm' : ''
+                          } ${
+                            matchingTopicIndices !== null
+                              ? isMatchingTopic
+                                ? 'ring-2 ring-indigo-500/70 shadow-xs'
+                                : 'opacity-25 hover:opacity-100'
+                              : ''
                           }`}
+                          title={`Question ${actualIndex + 1}${matchingTopicIndices && !isMatchingTopic ? ' (Outside selected topic)' : ''}`}
                         >
                           {actualIndex + 1}
                         </button>
@@ -1642,6 +1828,25 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
               </div>
             </div>
 
+            {/* Topic Filter inside Mobile Drawer */}
+            {paper.paperType !== 'DESCRIPTIVE' && (
+              <div className="p-3 border-b border-surface-border dark:border-darkSurface-border">
+                <TopicNavigationMenu
+                  selectedTopicId={selectedTopicId}
+                  onSelectTopic={setSelectedTopicId}
+                  topicSummaries={sectionTopics}
+                  allTotal={topicAllTotal}
+                  allAttempted={topicAllAttempted}
+                  allReview={topicAllReview}
+                  onJumpToFirstInTopic={(tId) => {
+                    handleJumpToFirstInTopic(tId);
+                    setIsMobilePaletteOpen(false);
+                  }}
+                  isCompact={true}
+                />
+              </div>
+            )}
+
             {/* Palette Grid */}
             <div className="p-4 overflow-y-auto max-h-[45vh]">
               <div className="grid grid-cols-6 gap-2">
@@ -1651,6 +1856,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                     const actualIndex = currentSection.startIndex + idx;
                     const st = statuses[actualIndex] || 'NOT_VISITED';
                     const isCurrent = actualIndex === currentIndex;
+                    const isMatchingTopic = matchingTopicIndices ? matchingTopicIndices.has(actualIndex) : true;
 
                     let badgeColor = 'bg-surface-elev1 dark:bg-darkSurface-elev2 border-surface-border text-surface-muted';
                     if (st === 'ANSWERED') badgeColor = 'bg-emerald-500 text-white border-emerald-600';
@@ -1667,7 +1873,14 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                         }}
                         className={`h-9 rounded-lg text-xs font-bold flex items-center justify-center border transition-all cursor-pointer ${badgeColor} ${
                           isCurrent ? 'ring-2 ring-brand-primary ring-offset-2 scale-105 shadow-sm' : ''
+                        } ${
+                          matchingTopicIndices !== null
+                            ? isMatchingTopic
+                              ? 'ring-2 ring-indigo-500/70 shadow-xs'
+                              : 'opacity-25 hover:opacity-100'
+                            : ''
                         }`}
+                        title={`Question ${actualIndex + 1}`}
                       >
                         {actualIndex + 1}
                       </button>
@@ -1692,6 +1905,20 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
           </div>
         </div>
       )}
+
+      {/* In-Test Question Reporting Modal */}
+      <ReportQuestionModal
+        isOpen={isReportModalOpen}
+        onClose={() => setIsReportModalOpen(false)}
+        examId={paper.examId || 'competitive-exam'}
+        examName={paper.examId?.toUpperCase()}
+        paperId={paper.id}
+        paperTitle={paper.title}
+        questionId={currentQuestion.id}
+        questionNumber={currentIndex + 1}
+        sessionId={session.sessionId}
+        user={user}
+      />
     </div>
   );
 };

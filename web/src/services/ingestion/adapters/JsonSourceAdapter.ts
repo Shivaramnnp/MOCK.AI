@@ -1,13 +1,22 @@
+/**
+ * Production JSON Source Adapter
+ * Mock.AI Production Ingestion Engine - Prompt 10/10
+ *
+ * Integrates with the versioned JSON streaming engine, supporting mockai.question-set/v1,
+ * legacy migrations, strict validation, duplicate detection, and Quality Gate verification.
+ */
+
 import { SourceAdapter, IngestionOptions, IngestionResult } from './SourceAdapter';
 import { CanonicalQuestion } from '../../../types/canonicalQuestion';
-import { toCanonicalQuestion, toLegacyQuestion } from '../questionMigrator';
+import { toLegacyQuestion } from '../questionMigrator';
 import { evaluateQualityGate, QualityGateEvaluation } from '../qualityGate';
-import { extractJsonPayload } from '../../ai/adapters/adapterHelpers';
 import { createIngestionError } from '../../../types/ingestionErrors';
+import { jsonStreamingImporter, DuplicateHandlingMode } from '../json';
 
 export interface JsonInput {
   jsonText: string;
   sourceTitle?: string;
+  duplicateMode?: DuplicateHandlingMode;
 }
 
 export class JsonSourceAdapter implements SourceAdapter<JsonInput> {
@@ -18,7 +27,7 @@ export class JsonSourceAdapter implements SourceAdapter<JsonInput> {
       return { valid: false, error: 'JSON payload text is required.' };
     }
     try {
-      extractJsonPayload(input.jsonText);
+      JSON.parse(input.jsonText);
       return { valid: true };
     } catch (err: any) {
       return { valid: false, error: `Invalid JSON syntax: ${err.message}` };
@@ -26,55 +35,38 @@ export class JsonSourceAdapter implements SourceAdapter<JsonInput> {
   }
 
   async process(input: JsonInput, options?: IngestionOptions): Promise<IngestionResult> {
-    let parsed: any;
-    try {
-      parsed = extractJsonPayload(input.jsonText);
-    } catch (err: any) {
+    const report = await jsonStreamingImporter.importJsonString(input.jsonText, {
+      duplicateMode: input.duplicateMode || 'REJECT_DUPLICATES',
+      onProgress: options?.onProgress
+        ? (p) => options.onProgress?.(p.percent)
+        : undefined,
+    });
+
+    if (report.failed > 0 && report.imported === 0) {
+      const firstError = report.errors[0];
       throw createIngestionError(
         'INVALID_FILE',
-        `Failed to parse JSON file: ${err.message}`,
-        err.stack || String(err),
-        false,
-        'JSON_PARSE'
-      );
-    }
-
-    const rawList: any[] = Array.isArray(parsed)
-      ? parsed
-      : Array.isArray(parsed.questions)
-      ? parsed.questions
-      : [];
-
-    if (rawList.length === 0) {
-      throw createIngestionError(
-        'EXTRACTION_FAILED',
-        'JSON document contains no valid questions or question array.',
-        'Array is empty',
+        firstError ? `JSON validation failed: ${firstError.message}` : 'JSON import failed.',
+        JSON.stringify(report.errors.slice(0, 5)),
         false,
         'JSON_VALIDATION'
       );
     }
 
-    const title = input.sourceTitle || parsed.title || parsed.examName || 'Imported JSON Exam';
-    const canonicalQuestions: CanonicalQuestion[] = rawList.map((rawQ, idx) => {
-      // If it already is a CanonicalQuestion format
-      if (rawQ.questionId && rawQ.contentBlocks && rawQ.answer) {
-        return {
-          ...rawQ,
-          questionNumber: rawQ.questionNumber || idx + 1,
-        };
-      }
+    if (report.imported === 0) {
+      throw createIngestionError(
+        'EXTRACTION_FAILED',
+        'JSON document contains no valid questions.',
+        'Imported 0 questions',
+        false,
+        'JSON_EMPTY'
+      );
+    }
 
-      // Otherwise convert via toCanonicalQuestion
-      const migrated = toCanonicalQuestion(rawQ, {
-        sourceType: 'Json',
-        sourceFile: title,
-        jsonPointer: `/questions/${idx}`,
-      });
-      migrated.questionNumber = rawQ.questionNumber || idx + 1;
-      return migrated;
-    });
+    const title = input.sourceTitle || 'Imported JSON Exam';
+    const canonicalQuestions = report.questions;
 
+    // Run quality gate verification on imported questions
     const evaluations: QualityGateEvaluation[] = [];
     let verifiedCount = 0;
     let partialCount = 0;

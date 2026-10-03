@@ -23,12 +23,15 @@ import {
   BookOpen,
   Check,
   AlertCircle,
+  Upload,
 } from 'lucide-react';
-import { ExamPaper, ExamTestSession, CompetitiveQuestion } from '../types';
+import { ExamPaper, ExamTestSession, CompetitiveQuestion, ExamResultSummary } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
-import { StructuredContentRenderer } from '../components/StructuredContentRenderer';
+import { StructuredContentRenderer, OptionContentRenderer } from '../components/StructuredContentRenderer';
 import { ExamAsset } from '../components/ExamAsset';
 import { AdSlot } from '../components/ads/AdSlot';
+import { UniversalMockService } from '../services/ingestion/universal/universalMockService';
+import { ExamService } from '../services/examService';
 
 interface CompetitiveExamResultsScreenProps {
   session: ExamTestSession;
@@ -45,20 +48,41 @@ interface CompetitiveExamResultsScreenProps {
     tier?: string;
     shift?: string;
   }) => void;
+  onAttachAnswerKey?: (answerKeyInput: { file?: File; textData?: string }) => Promise<void> | void;
 }
 
 export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreenProps> = ({
   session,
-  paper,
+  paper: initialPaper,
   onRetake,
   onExplore,
   onReportQuestion,
+  onAttachAnswerKey,
 }) => {
-  const result = session.result;
+  const [currentPaper, setCurrentPaper] = useState<ExamPaper>(initialPaper);
+  const [currentResult, setCurrentResult] = useState<ExamResultSummary | undefined>(session.result);
+  const [isAttachModalOpen, setIsAttachModalOpen] = useState(false);
+  const [pastedAnswerKey, setPastedAnswerKey] = useState('');
+  const [selectedKeyFile, setSelectedKeyFile] = useState<File | null>(null);
+  const [attachLoading, setAttachLoading] = useState(false);
+  const [attachError, setAttachError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentPaper(initialPaper);
+    setCurrentResult(session.result);
+  }, [initialPaper, session.result]);
+
+  const paper = currentPaper;
+  const result = currentResult;
   const questions = paper.questions;
   const userAnswers = session.userAnswers || {};
   const descriptiveAnswers = session.userDescriptiveAnswers || {};
   const isDescriptive = paper.paperType === 'DESCRIPTIVE';
+
+  const isScoreUnavailable =
+    result?.isScoreCalculated === false ||
+    result?.answerKeyStatus === 'UNAVAILABLE' ||
+    paper.answerKeyStatus === 'UNAVAILABLE';
 
   const [selectedSectionFilter, setSelectedSectionFilter] = useState<string>('all');
   const [selectedStatusFilter, setSelectedStatusFilter] = useState<string>('all');
@@ -67,7 +91,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
 
   // Trigger celebration confetti for strong scores or descriptive completion
   useEffect(() => {
-    if (result && (isDescriptive || result.percentage >= 65)) {
+    if (result && !isScoreUnavailable && (isDescriptive || (typeof result.percentage === 'number' && result.percentage >= 65))) {
       confetti({
         particleCount: 75,
         spread: 70,
@@ -75,7 +99,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
         colors: ['#4F6EF7', '#9B4DFF', '#1DB974', '#FF9500'],
       });
     }
-  }, [result, isDescriptive]);
+  }, [result, isDescriptive, isScoreUnavailable]);
 
   if (!result) {
     return (
@@ -173,6 +197,12 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
         isSkipped = !isAttempted;
       }
 
+      if (isScoreUnavailable) {
+        isCorrect = false;
+        isWrong = false;
+        isSkipped = !isAttempted;
+      }
+
       const status = session.questionStatuses[idx] || 'NOT_VISITED';
       const isMarked =
         status === 'MARKED_FOR_REVIEW' || status === 'ANSWERED_AND_MARKED_FOR_REVIEW';
@@ -196,6 +226,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
         return false;
       }
       // Status filter
+      if (selectedStatusFilter === 'attempted') return item.isAttempted;
       if (selectedStatusFilter === 'correct') return item.isCorrect;
       if (selectedStatusFilter === 'wrong') return item.isWrong;
       if (selectedStatusFilter === 'skipped') return item.isSkipped;
@@ -203,9 +234,65 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
       return true;
     });
 
+  const attemptedTotal = questions.filter(
+    (_, idx) =>
+      session.userAnswers[idx] !== undefined ||
+      (session.userMsqAnswers?.[idx] && session.userMsqAnswers[idx].length > 0) ||
+      (session.userNatAnswers?.[idx] && session.userNatAnswers[idx].trim().length > 0) ||
+      (session.userDescriptiveAnswers?.[idx] && session.userDescriptiveAnswers[idx].trim().length > 0)
+  ).length;
+
+  const handleAttachKey = async () => {
+    if (!selectedKeyFile && !pastedAnswerKey.trim()) {
+      setAttachError('Please select an Answer Key file or paste answer key content.');
+      return;
+    }
+
+    setAttachLoading(true);
+    setAttachError(null);
+
+    try {
+      if (onAttachAnswerKey) {
+        await onAttachAnswerKey({
+          file: selectedKeyFile || undefined,
+          textData: pastedAnswerKey.trim() || undefined,
+        });
+      } else {
+        const { paper: updatedPaper, updatedCount } = await UniversalMockService.attachLateAnswerKey(
+          paper.id,
+          {
+            file: selectedKeyFile || undefined,
+            textData: pastedAnswerKey.trim() || undefined,
+          }
+        );
+        const recalculated = ExamService.calculateExamResult(session, updatedPaper);
+        session.result = recalculated;
+        setCurrentPaper(updatedPaper);
+        setCurrentResult(recalculated);
+      }
+
+      setIsAttachModalOpen(false);
+      setPastedAnswerKey('');
+      setSelectedKeyFile(null);
+
+      confetti({
+        particleCount: 80,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#1DB974', '#4F6EF7', '#9B4DFF'],
+      });
+    } catch (err: any) {
+      setAttachError(err?.message || 'Failed to attach answer key.');
+    } finally {
+      setAttachLoading(false);
+    }
+  };
+
   const handleShare = () => {
     const text = isDescriptive
       ? `📝 I completed "${paper.title}" descriptive practice on MOCK.AI!`
+      : isScoreUnavailable
+      ? `📝 I completed practice session for "${paper.title}" on MOCK.AI (${attemptedTotal}/${paper.totalQuestions} attempted)!`
       : `🎯 I scored ${result.totalScore}/${result.maxMarks} (${result.percentage}%) on "${paper.title}" on MOCK.AI!`;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text);
@@ -509,30 +596,59 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
            CBE OBJECTIVE RESULTS FLOW
            ═══════════════════════════════════════════════════════════════════ */
         <>
+          {/* ── Practice Mode (Answer Key Unavailable) Banner ─────────────── */}
+          {isScoreUnavailable && (
+            <div className="rounded-3xl bg-amber-500/10 border border-amber-500/30 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold text-amber-900 dark:text-amber-300 flex items-center gap-2">
+                    <span>Practice Mode — Answer Key Unavailable</span>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-700 dark:text-amber-300">
+                      Unscored Attempt
+                    </span>
+                  </h4>
+                  <p className="text-xs text-amber-800/80 dark:text-amber-400/80 leading-relaxed">
+                    This paper was converted in practice mode without an official answer key. Your attempted answers and timing have been recorded, but scoring and correctness evaluations are disabled. No negative deductions or penalties have been applied.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsAttachModalOpen(true)}
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shrink-0 transition-colors shadow-sm"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Attach Answer Key</span>
+              </button>
+            </div>
+          )}
+
           {/* ── Score Cards Overview ──────────────────────────────────────── */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Main Net Score Card */}
             <div className="md:col-span-2 rounded-3xl bg-gradient-to-br from-brand-primary/10 via-brand-purple/5 to-transparent dark:from-brand-primary/20 dark:via-brand-purple/10 border border-brand-primary/20 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
               <div className="space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
-                  Net Score (After Negative Deductions)
+                  {isScoreUnavailable ? 'Attempt Status (Unscored Practice)' : 'Net Score (After Negative Deductions)'}
                 </span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl sm:text-5xl font-extrabold font-display text-surface-text dark:text-darkSurface-text">
-                    {result.totalScore}
+                    {isScoreUnavailable ? 'Pending' : result.totalScore}
                   </span>
                   <span className="text-sm font-semibold text-surface-muted dark:text-darkSurface-muted">
-                    / {result.maxMarks} Marks
+                    {isScoreUnavailable ? `(${attemptedTotal} Attempted / ${result.totalQuestions} Questions)` : `/ ${result.maxMarks} Marks`}
                   </span>
                 </div>
                 <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
-                  Calculated at +{paper.markingScheme.marksPerCorrect} marks per correct answer and -{paper.markingScheme.negativeMarks} marks per incorrect answer.
+                  {isScoreUnavailable
+                    ? 'Official answer key has not been attached. Scoring will be computed automatically once answer key is uploaded.'
+                    : `Calculated at +${paper.markingScheme.marksPerCorrect} marks per correct answer and -${paper.markingScheme.negativeMarks} marks per incorrect answer.`}
                 </p>
               </div>
 
               <div className="pt-4 mt-4 border-t border-brand-primary/20 flex items-center justify-between text-xs">
                 <span className="font-bold text-surface-text dark:text-darkSurface-text">
-                  Accuracy: {result.accuracy}%
+                  {isScoreUnavailable ? 'Scoring: Disabled (Practice Mode)' : `Accuracy: ${result.accuracy}%`}
                 </span>
                 <span className="text-surface-muted">
                   Time Taken: {formatTime(result.timeSpentSeconds)}
@@ -546,43 +662,64 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                 Question Status
               </span>
               <div className="space-y-2 py-2">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5" /> Correct
-                  </span>
-                  <span className="font-bold">
-                    {result.correctCount} (+{result.correctCount * paper.markingScheme.marksPerCorrect})
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-xs">
-                  <span className="flex items-center gap-1.5 text-red-500 font-medium">
-                    <XCircle className="w-3.5 h-3.5" /> Incorrect
-                  </span>
-                  <span className="font-bold">
-                    {result.wrongCount} (-{result.wrongCount * paper.markingScheme.negativeMarks})
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-surface-muted font-medium">Unattempted</span>
-                  <span className="font-bold">{result.unansweredCount}</span>
-                </div>
+                {isScoreUnavailable ? (
+                  <>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> Attempted
+                      </span>
+                      <span className="font-bold">{attemptedTotal}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-surface-muted font-medium">Unattempted</span>
+                      <span className="font-bold">{result.unansweredCount}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs text-surface-muted">
+                      <span>Evaluation</span>
+                      <span className="font-medium text-amber-600 dark:text-amber-400">Awaiting Key</span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> Correct
+                      </span>
+                      <span className="font-bold">
+                        {result.correctCount ?? 0} (+{(result.correctCount ?? 0) * paper.markingScheme.marksPerCorrect})
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="flex items-center gap-1.5 text-red-500 font-medium">
+                        <XCircle className="w-3.5 h-3.5" /> Incorrect
+                      </span>
+                      <span className="font-bold">
+                        {result.wrongCount ?? 0} (-{(result.wrongCount ?? 0) * paper.markingScheme.negativeMarks})
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-surface-muted font-medium">Unattempted</span>
+                      <span className="font-bold">{result.unansweredCount}</span>
+                    </div>
+                  </>
+                )}
               </div>
               <div className="text-[11px] text-surface-muted pt-2 border-t border-surface-border">
-                Total Attempted: {result.correctCount + result.wrongCount} / {result.totalQuestions}
+                Total Attempted: {attemptedTotal} / {result.totalQuestions}
               </div>
             </div>
 
             {/* Percentile & Accuracy Metric */}
             <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 flex flex-col justify-between shadow-sm">
               <span className="text-xs font-bold uppercase tracking-wider text-surface-muted">
-                Overall Accuracy
+                {isScoreUnavailable ? 'Answer Key Status' : 'Overall Accuracy'}
               </span>
               <div className="text-center my-auto py-2">
-                <span className="text-4xl font-extrabold font-display text-emerald-600 dark:text-emerald-400">
-                  {result.accuracy}%
+                <span className={`text-4xl font-extrabold font-display ${isScoreUnavailable ? 'text-amber-500 text-2xl' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                  {isScoreUnavailable ? 'UNAVAILABLE' : `${result.accuracy}%`}
                 </span>
                 <span className="block text-xs text-surface-muted mt-1">
-                  Precision Rate
+                  {isScoreUnavailable ? 'Late Key Supported' : 'Precision Rate'}
                 </span>
               </div>
               <button
@@ -622,23 +759,27 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                       </td>
                       <td className="p-3 text-center text-surface-muted">{sec.totalQuestions}</td>
                       <td className="p-3 text-center">{sec.attempted}</td>
-                      <td className="p-3 text-center text-emerald-600 font-bold">{sec.correct}</td>
-                      <td className="p-3 text-center text-red-500 font-bold">{sec.wrong}</td>
+                      <td className="p-3 text-center text-emerald-600 font-bold">{isScoreUnavailable ? '—' : sec.correct}</td>
+                      <td className="p-3 text-center text-red-500 font-bold">{isScoreUnavailable ? '—' : sec.wrong}</td>
                       <td className="p-3 text-center font-bold">
-                        <span
-                          className={`px-2 py-0.5 rounded-full ${
-                            sec.accuracy >= 75
-                              ? 'bg-emerald-500/10 text-emerald-600'
-                              : sec.accuracy >= 50
-                              ? 'bg-amber-500/10 text-amber-600'
-                              : 'bg-red-500/10 text-red-500'
-                          }`}
-                        >
-                          {sec.accuracy}%
-                        </span>
+                        {isScoreUnavailable ? (
+                          <span className="text-surface-muted">—</span>
+                        ) : (
+                          <span
+                            className={`px-2 py-0.5 rounded-full ${
+                              sec.accuracy >= 75
+                                ? 'bg-emerald-500/10 text-emerald-600'
+                                : sec.accuracy >= 50
+                                ? 'bg-amber-500/10 text-amber-600'
+                                : 'bg-red-500/10 text-red-500'
+                            }`}
+                          >
+                            {sec.accuracy}%
+                          </span>
+                        )}
                       </td>
                       <td className="p-3 text-right font-extrabold text-brand-primary">
-                        {sec.score} / {sec.maxMarks}
+                        {isScoreUnavailable ? '—' : `${sec.score} / ${sec.maxMarks}`}
                       </td>
                     </tr>
                   ))}
@@ -677,12 +818,19 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
 
                 {/* Status Filter */}
                 <div className="flex items-center gap-1 bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-xl p-1 text-xs">
-                  {[
-                    { id: 'all', label: 'All' },
-                    { id: 'correct', label: 'Correct' },
-                    { id: 'wrong', label: 'Wrong' },
-                    { id: 'skipped', label: 'Skipped' },
-                  ].map((st) => (
+                  {(isScoreUnavailable
+                    ? [
+                        { id: 'all', label: 'All' },
+                        { id: 'attempted', label: 'Attempted' },
+                        { id: 'skipped', label: 'Unattempted' },
+                      ]
+                    : [
+                        { id: 'all', label: 'All' },
+                        { id: 'correct', label: 'Correct' },
+                        { id: 'wrong', label: 'Wrong' },
+                        { id: 'skipped', label: 'Skipped' },
+                      ]
+                  ).map((st) => (
                     <button
                       key={st.id}
                       onClick={() => setSelectedStatusFilter(st.id)}
@@ -702,7 +850,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
             {/* Questions List */}
             <div className="space-y-4">
               {filteredQuestions.map(
-                ({ q, idx, userChoice, isCorrect, isWrong, isSkipped, qMarks, qNegative }) => {
+                ({ q, idx, userChoice, isAttempted, isCorrect, isWrong, isSkipped, qMarks, qNegative }) => {
                   const isExpanded = expandedExplanations[idx] !== false; // expanded by default
 
                 return (
@@ -740,6 +888,17 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             <Award className="w-3.5 h-3.5" />
                             <span>Marks to All (+{qMarks})</span>
                           </span>
+                        ) : isScoreUnavailable ? (
+                          isAttempted ? (
+                            <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full">
+                              <CheckCircle2 className="w-3.5 h-3.5" />
+                              <span>Attempted (Unscored)</span>
+                            </span>
+                          ) : (
+                            <span className="text-xs font-semibold text-surface-muted bg-surface-elev2 dark:bg-darkSurface-elev2 px-2.5 py-0.5 rounded-full">
+                              Unattempted
+                            </span>
+                          )
                         ) : isCorrect ? (
                           <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
                             <CheckCircle2 className="w-3.5 h-3.5" />
@@ -836,7 +995,9 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             </span>
                             <span
                               className={`font-mono font-bold text-sm ${
-                                isCorrect
+                                isScoreUnavailable
+                                  ? 'text-surface-text dark:text-darkSurface-text'
+                                  : isCorrect
                                   ? 'text-emerald-600 dark:text-emerald-400'
                                   : isWrong
                                   ? 'text-red-500'
@@ -851,7 +1012,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                               Official Accepted Range
                             </span>
                             <span className="font-mono font-bold text-sm text-emerald-600 dark:text-emerald-400">
-                              {q.correctAnswer}
+                              {isScoreUnavailable ? 'Pending Official Answer Key' : q.correctAnswer || 'Not Available'}
                             </span>
                           </div>
                         </div>
@@ -860,23 +1021,23 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                       /* MSQ Review Options */
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                         {q.options.map((optText, optIndex) => {
-                          const optLetter = ['A', 'B', 'C', 'D'][optIndex];
+                          const optLetter = q.richOptions?.[optIndex]?.id || ['A', 'B', 'C', 'D', 'E', 'F'][optIndex] || String.fromCharCode(65 + optIndex);
                           const userMsq = session.userMsqAnswers?.[idx] || [];
                           const isUserPick = userMsq.includes(optIndex);
                           const isCorrectOpt = q.correctAnswerSet
                             ? q.correctAnswerSet.includes(optLetter)
                             : false;
-                          const optImage = q.optionImages?.[optIndex];
-                          const optBlocks = q.richOptions?.[optIndex]?.contentBlocks;
-                          const hasValidText =
-                            (optBlocks && optBlocks.length > 0) ||
-                            (optText &&
-                              optText.trim().length > 0 &&
-                              !/^Option\s*\([A-D]\)$/i.test(optText.trim()));
+                          const richOpt = q.richOptions?.[optIndex];
+                          const optImage = richOpt?.imageUrl || q.optionImages?.[optIndex] || null;
+                          const optBlocks = richOpt?.contentBlocks;
 
                           let optStyle =
                             'bg-surface-elev1/40 dark:bg-darkSurface-elev2/40 border-surface-border/60 text-surface-muted';
-                          if (isCorrectOpt) {
+                          if (isScoreUnavailable) {
+                            if (isUserPick) {
+                              optStyle = 'bg-purple-500/10 border-purple-500 text-purple-700 dark:text-purple-300 font-bold';
+                            }
+                          } else if (isCorrectOpt) {
                             optStyle =
                               'bg-emerald-500/10 border-emerald-500 text-emerald-700 dark:text-emerald-300 font-bold';
                           } else if (isUserPick && !isCorrectOpt) {
@@ -891,7 +1052,11 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             >
                               <span
                                 className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 ${
-                                  isCorrectOpt
+                                  isScoreUnavailable
+                                    ? isUserPick
+                                       ? 'bg-purple-600 text-white'
+                                       : 'bg-surface-elev2 text-surface-muted'
+                                    : isCorrectOpt
                                     ? 'bg-emerald-500 text-white'
                                     : isUserPick
                                     ? 'bg-red-500 text-white'
@@ -901,24 +1066,14 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                                 {isUserPick ? '✓' : optLetter}
                               </span>
                               <div className="flex-1 pt-0.5 space-y-1.5 option-content text-left">
-                                {optImage && (
-                                  <ExamAsset
-                                    key={`${q.id}-msq-res-opt-${optIndex}`}
-                                    url={optImage}
-                                    alt={`Option ${optLetter} figure`}
-                                    variant="option"
-                                    onZoom={setZoomImageUrl}
-                                  />
-                                )}
-                                {hasValidText && (
-                                  <div className="w-full text-left">
-                                    <StructuredContentRenderer
-                                      blocks={optBlocks}
-                                      fallbackText={optText}
-                                      isOption={true}
-                                    />
-                                  </div>
-                                )}
+                                <OptionContentRenderer
+                                  blocks={optBlocks}
+                                  fallbackText={richOpt?.text ?? optText}
+                                  image={optImage}
+                                  imageAlt={richOpt?.altText || `Option ${optLetter} figure`}
+                                  displayMode={richOpt?.displayMode || (optImage ? 'IMAGE_ONLY' : 'TEXT_ONLY')}
+                                  onZoomImage={setZoomImageUrl}
+                                />
                               </div>
                             </div>
                           );
@@ -928,20 +1083,20 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                       /* Standard MCQ Option Choices */
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                         {q.options.map((optText, optIndex) => {
-                          const optLetter = ['A', 'B', 'C', 'D'][optIndex];
+                          const optLetter = q.richOptions?.[optIndex]?.id || ['A', 'B', 'C', 'D', 'E', 'F'][optIndex] || String.fromCharCode(65 + optIndex);
                           const isCorrectOpt = optIndex === q.correctAnswerIndex;
                           const isUserPick = userChoice === optIndex;
-                          const optImage = q.optionImages?.[optIndex];
-                          const optBlocks = q.richOptions?.[optIndex]?.contentBlocks;
-                          const hasValidText =
-                            (optBlocks && optBlocks.length > 0) ||
-                            (optText &&
-                              optText.trim().length > 0 &&
-                              !/^Option\s*\([A-D]\)$/i.test(optText.trim()));
+                          const richOpt = q.richOptions?.[optIndex];
+                          const optImage = richOpt?.imageUrl || q.optionImages?.[optIndex] || null;
+                          const optBlocks = richOpt?.contentBlocks;
 
                           let optStyle =
                             'bg-surface-elev1/40 dark:bg-darkSurface-elev2/40 border-surface-border/60 text-surface-muted';
-                          if (isCorrectOpt) {
+                          if (isScoreUnavailable) {
+                            if (isUserPick) {
+                              optStyle = 'bg-brand-primary/10 border-brand-primary text-brand-primary font-bold';
+                            }
+                          } else if (isCorrectOpt) {
                             optStyle =
                               'bg-emerald-500/10 border-emerald-500 text-emerald-700 dark:text-emerald-300 font-bold';
                           } else if (isUserPick && !isCorrectOpt) {
@@ -956,7 +1111,11 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             >
                               <span
                                 className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 ${
-                                  isCorrectOpt
+                                  isScoreUnavailable
+                                    ? isUserPick
+                                      ? 'bg-brand-primary text-white'
+                                      : 'bg-surface-elev2 text-surface-muted'
+                                    : isCorrectOpt
                                     ? 'bg-emerald-500 text-white'
                                     : isUserPick
                                     ? 'bg-red-500 text-white'
@@ -966,24 +1125,14 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                                 {optLetter}
                               </span>
                               <div className="flex-1 pt-0.5 space-y-1.5 option-content text-left">
-                                {optImage && (
-                                  <ExamAsset
-                                    key={`${q.id}-mcq-res-opt-${optIndex}`}
-                                    url={optImage}
-                                    alt={`Option ${optLetter} figure`}
-                                    variant="option"
-                                    onZoom={setZoomImageUrl}
-                                  />
-                                )}
-                                {hasValidText && (
-                                  <div className="w-full text-left">
-                                    <StructuredContentRenderer
-                                      blocks={optBlocks}
-                                      fallbackText={optText}
-                                      isOption={true}
-                                    />
-                                  </div>
-                                )}
+                                <OptionContentRenderer
+                                  blocks={optBlocks}
+                                  fallbackText={richOpt?.text ?? optText}
+                                  image={optImage}
+                                  imageAlt={richOpt?.altText || `Option ${optLetter} figure`}
+                                  displayMode={richOpt?.displayMode || (optImage ? 'IMAGE_ONLY' : 'TEXT_ONLY')}
+                                  onZoomImage={setZoomImageUrl}
+                                />
                               </div>
                             </div>
                           );
@@ -1081,6 +1230,119 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
               alt="Enlarged figure"
               className="max-h-[80vh] w-auto object-contain mx-auto rounded-lg"
             />
+          </div>
+        </div>
+      )}
+      {/* ── Attach Late Answer Key Modal ───────────────────────────────── */}
+      {isAttachModalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150"
+          onClick={() => !attachLoading && setIsAttachModalOpen(false)}
+        >
+          <div
+            className="relative bg-white dark:bg-darkSurface-elev1 p-6 sm:p-8 rounded-3xl max-w-lg w-full shadow-2xl border border-surface-border dark:border-darkSurface-border space-y-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-surface-border dark:border-darkSurface-border">
+              <div className="flex items-center gap-2">
+                <span className="p-2 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                  <FileText className="w-5 h-5" />
+                </span>
+                <div>
+                  <h3 className="font-display font-bold text-lg text-surface-text dark:text-darkSurface-text">
+                    Attach Official Answer Key
+                  </h3>
+                  <p className="text-xs text-surface-muted">
+                    Score this paper without re-taking or losing recorded attempts
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => !attachLoading && setIsAttachModalOpen(false)}
+                className="p-1.5 rounded-xl text-surface-muted hover:bg-surface-elev2 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {attachError && (
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 text-xs flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                <span>{attachError}</span>
+              </div>
+            )}
+
+            {/* File Upload Option */}
+            <div className="space-y-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-surface-muted">
+                Option 1: Upload Answer Key File (.pdf, .txt, .csv)
+              </label>
+              <div className="border-2 border-dashed border-surface-border dark:border-darkSurface-border rounded-2xl p-4 text-center hover:border-brand-primary/50 transition-colors">
+                <input
+                  type="file"
+                  accept=".pdf,.txt,.csv"
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (f) setSelectedKeyFile(f);
+                  }}
+                  className="hidden"
+                  id="late-ak-file-input"
+                />
+                <label
+                  htmlFor="late-ak-file-input"
+                  className="cursor-pointer flex flex-col items-center gap-2"
+                >
+                  <Upload className="w-6 h-6 text-brand-primary" />
+                  <span className="text-xs font-semibold text-surface-text dark:text-darkSurface-text">
+                    {selectedKeyFile ? selectedKeyFile.name : 'Choose or drop answer key file'}
+                  </span>
+                  <span className="text-[11px] text-surface-muted">
+                    Supports official GATE, SSC, UPSC, and institute answer keys
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            {/* Paste Text Option */}
+            <div className="space-y-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-surface-muted">
+                Option 2: Paste Answer Key Text
+              </label>
+              <textarea
+                value={pastedAnswerKey}
+                onChange={(e) => setPastedAnswerKey(e.target.value)}
+                placeholder={"Example format:\n1 A\n2 B\n3 C\n4 24.5 to 25.5\n5 MTA"}
+                rows={4}
+                className="w-full p-3 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev1 dark:bg-darkSurface-elev2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-brand-primary"
+              />
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center justify-end gap-3 pt-3 border-t border-surface-border dark:border-darkSurface-border">
+              <button
+                type="button"
+                onClick={() => setIsAttachModalOpen(false)}
+                disabled={attachLoading}
+                className="px-4 py-2 rounded-xl text-xs font-semibold text-surface-muted hover:text-surface-text transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleAttachKey}
+                disabled={attachLoading || (!selectedKeyFile && !pastedAnswerKey.trim())}
+                className="px-5 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-primary/90 text-white text-xs font-bold transition-all shadow-md active:scale-95 disabled:opacity-50 flex items-center gap-2"
+              >
+                {attachLoading ? (
+                  <>Reconciling & Scoring...</>
+                ) : (
+                  <>
+                    <Check className="w-4 h-4" />
+                    <span>Apply & Score Mock</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       )}

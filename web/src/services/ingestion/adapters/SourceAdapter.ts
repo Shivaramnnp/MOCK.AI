@@ -9,6 +9,9 @@ export interface IngestionOptions {
   topicHint?: string;
   sourceTitle?: string;
   generateIfShort?: boolean;
+  skipDeduplication?: boolean;
+  targetExamType?: 'GATE' | 'SSC' | 'GENERAL';
+  onProgress?: (progress: any) => void;
 }
 
 export interface IngestionResult {

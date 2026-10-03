@@ -11,6 +11,12 @@ import { AudioSourceAdapter } from './adapters/AudioSourceAdapter';
 import { ManualSourceAdapter } from './adapters/ManualSourceAdapter';
 import { JsonSourceAdapter } from './adapters/JsonSourceAdapter';
 import { createIngestionError } from '../../types/ingestionErrors';
+import {
+  ingestPairedExamSources,
+  PairedIngestionInput,
+  PairingIngestionReport,
+  PairingOptions,
+} from './pairing';
 
 class IngestionService {
   private adapters: Map<InputSourceType, SourceAdapter> = new Map();
@@ -69,6 +75,18 @@ class IngestionService {
     }
 
     return adapter.process(payload, options);
+  }
+
+  /**
+   * Production Source-Pairing Ingestion:
+   * Ingests Question Paper and Answer Key independently, validates paper identity,
+   * performs deterministic matching, and produces a complete pairing report.
+   */
+  async ingestPairedSources(
+    input: PairedIngestionInput,
+    options?: PairingOptions
+  ): Promise<{ report: PairingIngestionReport; ingestionResult: IngestionResult }> {
+    return ingestPairedExamSources(input, options);
   }
 }
 

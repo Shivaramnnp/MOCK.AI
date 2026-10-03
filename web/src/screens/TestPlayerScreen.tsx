@@ -9,9 +9,14 @@ import {
   Send,
   AlertTriangle,
   ShieldAlert,
+  Flag,
+  X,
 } from 'lucide-react';
 import { Question, TestSessionState } from '../types';
 import { LatexRenderer } from '../components/LatexRenderer';
+import { OptionContentRenderer } from '../components/StructuredContentRenderer';
+import { ExamAsset } from '../components/ExamAsset';
+import { ReportQuestionModal } from '../components/exam/ReportQuestionModal';
 
 interface TestPlayerScreenProps {
   testId: string;
@@ -43,6 +48,8 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [tabSwitchWarnings, setTabSwitchWarnings] = useState(0);
   const [showAntiCheatAlert, setShowAntiCheatAlert] = useState(false);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
+  const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
 
   // Timer countdown
   useEffect(() => {
@@ -264,14 +271,26 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
       <div className="rounded-3xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border p-6 sm:p-8 shadow-sm space-y-6">
         {/* Topic Badge & Citation */}
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary">
-            {currentQuestion.topic || 'Concept Query'}
-          </span>
-          {currentQuestion.verificationStatus === 'VERIFIED' && (
-            <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
-              ✓ Verified Question
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary">
+              {(typeof currentQuestion.topic === 'string' ? currentQuestion.topic : currentQuestion.topic?.primaryTopicName) || 'Concept Query'}
             </span>
-          )}
+            {currentQuestion.verificationStatus === 'VERIFIED' && (
+              <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
+                ✓ Verified Question
+              </span>
+            )}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setIsReportModalOpen(true)}
+            aria-label={`Report Question ${currentIndex + 1}`}
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold text-surface-muted dark:text-darkSurface-muted hover:text-red-600 dark:hover:text-red-400 bg-surface-elev1 dark:bg-darkSurface-elev2 hover:bg-red-500/10 dark:hover:bg-red-500/10 border border-surface-border dark:border-darkSurface-border hover:border-red-500/30 transition-all"
+          >
+            <Flag className="w-3.5 h-3.5 text-red-500/90" />
+            <span>Report Question</span>
+          </button>
         </div>
 
         {/* Question Text with LaTeX rendering */}
@@ -279,17 +298,37 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
           <LatexRenderer content={currentQuestion.questionText} />
         </div>
 
+        {/* Stem diagram if present */}
+        {(() => {
+          const qAny = currentQuestion as any;
+          const diag = qAny.diagramUrl || (qAny.diagramUrls && qAny.diagramUrls[0]);
+          if (diag) {
+            return (
+              <div className="my-3">
+                <ExamAsset url={diag} alt="Question diagram" variant="diagram" onZoom={setZoomImageUrl} />
+              </div>
+            );
+          }
+          return null;
+        })()}
+
         {/* 4 Clear Option Choice Cards */}
         <div className="space-y-3 pt-2">
           {currentQuestion.options.map((opt, optIndex) => {
             const isSelected = userAnswers[currentIndex] === optIndex;
             const letter = String.fromCharCode(65 + optIndex);
+            const qAny = currentQuestion as any;
+            const richOpt = qAny.richOptions?.[optIndex];
+            const optImg = richOpt?.imageUrl || qAny.optionImages?.[optIndex] || null;
+            const dispMode = richOpt?.displayMode || (optImg ? 'IMAGE_ONLY' : 'TEXT_ONLY');
+            const optBlocks = richOpt?.contentBlocks;
+            const fallback = richOpt?.text ?? opt;
 
             return (
               <div
                 key={optIndex}
                 onClick={() => handleSelectOption(optIndex)}
-                className={`group cursor-pointer flex items-center gap-4 p-4 rounded-2xl border transition-all ${
+                className={`group cursor-pointer flex items-start gap-4 p-4 rounded-2xl border transition-all ${
                   isSelected
                     ? 'bg-brand-primary/10 border-brand-primary shadow-sm'
                     : 'bg-surface-elev2 dark:bg-darkSurface-elev2 border-surface-border dark:border-darkSurface-border hover:border-brand-primary/40'
@@ -297,7 +336,7 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
               >
                 {/* Letter Circle Indicator */}
                 <div
-                  className={`w-9 h-9 rounded-xl font-bold text-xs flex items-center justify-center shrink-0 transition-all ${
+                  className={`w-9 h-9 rounded-xl font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 transition-all ${
                     isSelected
                       ? 'bg-brand-primary text-white shadow-glow'
                       : 'bg-white dark:bg-darkSurface-elev1 text-surface-muted border border-surface-border dark:border-darkSurface-border group-hover:border-brand-primary'
@@ -306,9 +345,16 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
                   {letter}
                 </div>
 
-                {/* Option Text with LaTeX support */}
+                {/* Option Content with Visual & LaTeX support */}
                 <div className="min-w-0 flex-1 text-sm sm:text-base font-medium text-surface-text dark:text-darkSurface-text option-content text-left">
-                  <LatexRenderer content={opt} />
+                  <OptionContentRenderer
+                    blocks={optBlocks}
+                    fallbackText={fallback}
+                    image={optImg}
+                    imageAlt={richOpt?.altText || `Option ${letter} figure`}
+                    displayMode={dispMode}
+                    onZoomImage={setZoomImageUrl}
+                  />
                 </div>
               </div>
             );
@@ -444,6 +490,44 @@ export const TestPlayerScreen: React.FC<TestPlayerScreenProps> = ({
             >
               Dismiss
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* In-Test Question Reporting Modal */}
+      <ReportQuestionModal
+        isOpen={isReportModalOpen}
+        onClose={() => setIsReportModalOpen(false)}
+        examId={category || 'custom-test'}
+        examName={category}
+        paperId={testId}
+        paperTitle={title}
+        questionId={currentQuestion.id || `${testId}-q${currentIndex + 1}`}
+        questionNumber={currentIndex + 1}
+      />
+
+      {/* Zoom Image Lightbox Modal */}
+      {zoomImageUrl && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150"
+          onClick={() => setZoomImageUrl(null)}
+        >
+          <div
+            className="relative bg-white dark:bg-darkSurface-elev1 p-4 rounded-2xl max-w-4xl max-h-[90vh] overflow-auto shadow-2xl flex flex-col items-center border border-surface-border dark:border-darkSurface-border"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setZoomImageUrl(null)}
+              className="absolute top-3 right-3 p-1.5 rounded-full bg-surface-elev1 text-surface-muted hover:text-surface-text hover:bg-surface-elev2 transition-colors cursor-pointer"
+              title="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img
+              src={zoomImageUrl}
+              alt="Enlarged figure"
+              className="max-h-[80vh] w-auto object-contain mx-auto rounded-lg"
+            />
           </div>
         </div>
       )}

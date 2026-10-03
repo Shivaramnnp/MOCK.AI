@@ -5,6 +5,7 @@ import { parseCanonicalQuestionsJson } from '../../ai/adapters/adapterHelpers';
 import { toLegacyQuestion } from '../questionMigrator';
 import { evaluateQualityGate, QualityGateEvaluation } from '../qualityGate';
 import { createIngestionError } from '../../../types/ingestionErrors';
+import { ingestOfficeDocument } from '../office/officeIngestionEngine';
 
 export interface OfficeInput {
   arrayBuffer: ArrayBuffer;
@@ -101,6 +102,33 @@ export class OfficeSourceAdapter implements SourceAdapter<OfficeInput> {
       input.fileType?.includes('presentation') ||
       input.fileType?.includes('powerpoint');
 
+    // 1. First run deterministic OpenXML ingestion pipeline
+    try {
+      const deterministicResult = await ingestOfficeDocument(input.arrayBuffer, input.fileName, undefined, {
+        skipDeduplication: options?.skipDeduplication,
+        targetExamType: options?.targetExamType || 'GATE',
+        onProgress: options?.onProgress
+          ? (p) => {
+              options.onProgress?.({
+                stage: p.stage as any,
+                percent: p.percent,
+                message: p.message,
+                questionsFound: p.questionsFound,
+              });
+            }
+          : undefined,
+      });
+
+      // If document already contained explicit questions, return them directly
+      if (deterministicResult.questions.length > 0) {
+        return deterministicResult;
+      }
+    } catch (err: any) {
+      // If deterministic parser threw non-fatal error, continue to fallback
+      console.warn(`[OfficeSourceAdapter] Deterministic ingestion warning: ${err.message}`);
+    }
+
+    // 2. Fallback for lecture notes / study materials without explicit question numbering:
     let extractedText = '';
     if (isPptx) {
       extractedText = await extractTextFromPptx(input.arrayBuffer);
@@ -119,7 +147,6 @@ export class OfficeSourceAdapter implements SourceAdapter<OfficeInput> {
     }
 
     const count = options?.requestedCount || 8;
-    // Chunking strategy: if text is larger than 18,000 characters, chunk into sections rather than truncating!
     const textChunk = extractedText.length > 18000 ? extractedText.slice(0, 18000) : extractedText;
 
     const prompt = `

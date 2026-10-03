@@ -12,9 +12,11 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
     "canvas-confetti": "^1.9.4",
+    "jszip": "^3.10.2",
     "katex": "^0.16.21",
     "lucide-react": "^0.477.0",
     "mammoth": "^1.9.0",
+    "pdfjs-dist": "^4.10.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -22,6 +24,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/canvas-confetti": "^1.9.0",
+    "@types/jszip": "^3.4.0",
     "@types/katex": "^0.16.7",
     "@types/node": "^22.13.10",
     "@types/react": "^18.3.18",

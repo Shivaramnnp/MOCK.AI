@@ -1,10 +1,8 @@
 import { SourceAdapter, IngestionOptions, IngestionResult } from './SourceAdapter';
-import { CanonicalQuestion, CanonicalAsset } from '../../../types/canonicalQuestion';
-import { aiProviderService } from '../../ai/aiProviderService';
-import { parseCanonicalQuestionsJson } from '../../ai/adapters/adapterHelpers';
 import { toLegacyQuestion } from '../questionMigrator';
 import { evaluateQualityGate, QualityGateEvaluation } from '../qualityGate';
-import { createIngestionError } from '../../../types/ingestionErrors';
+import { createIngestionError, IngestionErrorCode } from '../../../types/ingestionErrors';
+import { processImage } from '../image/imageEngine';
 
 export interface ImageInput {
   base64Data: string;
@@ -14,6 +12,7 @@ export interface ImageInput {
 
 /**
  * Pre-processes image base64 if running in browser with DOM (resizes down to max 2048px).
+ * Backward-compatible helper.
  */
 export async function optimizeImageBase64(
   base64: string,
@@ -78,73 +77,32 @@ export class ImageSourceAdapter implements SourceAdapter<ImageInput> {
 
   async process(input: ImageInput, options?: IngestionOptions): Promise<IngestionResult> {
     const fileName = input.fileName || 'Uploaded Photo';
-    const { base64: optimizedBase64, mimeType } = await optimizeImageBase64(input.base64Data);
 
-    const active = aiProviderService.getActiveAdapter();
-    if (!active) {
-      throw createIngestionError(
-        'AI_PROVIDER_ERROR',
-        'No AI provider is configured to perform image vision extraction.',
-        'Active adapter missing in aiProviderService',
-        false,
-        'PROVIDER_SELECTION'
-      );
-    }
-
-    if (!active.adapter.extractFromBase64File) {
-      throw createIngestionError(
-        'UNSUPPORTED_FORMAT',
-        `Current AI provider (${active.connection.name}) does not support visual document extraction. Please switch to Google Gemini in Settings.`,
-        'Active adapter lacks extractFromBase64File method',
-        false,
-        'CAPABILITY_CHECK'
-      );
-    }
-
-    let rawQuestions: any[] = [];
-    try {
-      rawQuestions = await active.adapter.extractFromBase64File(
-        optimizedBase64,
-        mimeType,
+    const res = await processImage(
+      {
+        base64Data: input.base64Data,
+        mimeType: input.mimeType || 'image/jpeg',
         fileName,
-        active.connection
-      );
-    } catch (err: any) {
-      throw createIngestionError(
-        'OCR_FAILED',
-        `Vision extraction failed on ${fileName}: ${err.message || 'Image processing error'}`,
-        err.stack || String(err),
-        true,
-        'VISION_INFERENCE'
-      );
-    }
+        sourceType: 'Image',
+      },
+      {
+        requestedCount: options?.requestedCount || 6,
+        onProgress: options?.onProgress,
+      }
+    );
 
-    if (!rawQuestions || rawQuestions.length === 0) {
+    if (!res.success || res.questions.length === 0) {
+      const errCode: IngestionErrorCode =
+        res.error?.code === 'REVIEW_REQUIRED' ? 'REVIEW_REQUIRED' : 'EXTRACTION_FAILED';
+
       throw createIngestionError(
-        'EXTRACTION_FAILED',
-        `No exam questions could be recognized in ${fileName}. Ensure the image is focused and contains readable text.`,
-        'Model returned 0 questions from image',
+        errCode,
+        res.error?.message || 'Unable to extract questions from this image.',
+        `Image ingestion failed with code ${res.error?.code}: ${res.error?.message}`,
         false,
-        'OCR_RESULT_EMPTY'
+        'IMAGE_INGESTION'
       );
     }
-
-    // Convert to canonical questions
-    const jsonStr = JSON.stringify({ questions: rawQuestions });
-    const questions = parseCanonicalQuestionsJson(jsonStr, {
-      sourceType: 'Image',
-      sourceFile: fileName,
-    });
-
-    // CRITICAL: RETAIN THE SOURCE IMAGE AS AN ASSET! DO NOT DISCARD IT!
-    const imageAsset: CanonicalAsset = {
-      assetId: `asset-${Date.now()}-img`,
-      assetType: 'image',
-      assetUrl: optimizedBase64,
-      mimeType,
-      ownership: 'question',
-      caption: `Source figure: ${fileName}`,
-    };
 
     const evaluations: QualityGateEvaluation[] = [];
     let verifiedCount = 0;
@@ -152,36 +110,38 @@ export class ImageSourceAdapter implements SourceAdapter<ImageInput> {
     let reviewCount = 0;
     let failedCount = 0;
 
-    questions.forEach((q, index) => {
+    res.questions.forEach((q, index) => {
       q.questionNumber = index + 1;
-
-      // Associate the retained image asset if the question references visual data or if diagramUrl is missing
-      if (!q.diagramUrl && questions.length === 1) {
-        q.diagramUrl = optimizedBase64;
-        q.assets.push(imageAsset);
-      }
-
       const evalRes = evaluateQualityGate(q);
       evaluations.push(evalRes);
 
-      q.verificationStatus = evalRes.status;
-      q.verificationReasons = evalRes.reasons;
-      q.confidence = evalRes.confidence;
+      // If the image quality analyzer marked it as REVIEW_REQUIRED, preserve that status
+      if (res.quality.isBlurry || res.quality.qualityRating === 'UNUSABLE') {
+        q.verificationStatus = 'REVIEW_REQUIRED';
+        q.verificationReasons = [
+          res.quality.userMessage || 'Image quality is insufficient to reliably extract this question.',
+        ];
+        reviewCount++;
+      } else {
+        q.verificationStatus = evalRes.status;
+        q.verificationReasons = evalRes.reasons;
+        q.confidence = evalRes.confidence;
 
-      if (evalRes.status === 'VERIFIED') verifiedCount++;
-      else if (evalRes.status === 'PARTIAL') partialCount++;
-      else if (evalRes.status === 'REVIEW_REQUIRED') reviewCount++;
-      else if (evalRes.status === 'FAILED') failedCount++;
+        if (evalRes.status === 'VERIFIED') verifiedCount++;
+        else if (evalRes.status === 'PARTIAL') partialCount++;
+        else if (evalRes.status === 'REVIEW_REQUIRED') reviewCount++;
+        else if (evalRes.status === 'FAILED') failedCount++;
+      }
     });
 
     return {
-      success: questions.length > 0,
+      success: res.questions.length > 0,
       sourceType: 'Image',
-      sourceTitle: `${fileName} - Exam`,
-      questions,
-      legacyQuestions: questions.map(toLegacyQuestion),
+      sourceTitle: `${fileName} - Mock Exam`,
+      questions: res.questions,
+      legacyQuestions: res.questions.map(toLegacyQuestion),
       qualityReport: {
-        total: questions.length,
+        total: res.questions.length,
         verified: verifiedCount,
         partial: partialCount,
         reviewRequired: reviewCount,

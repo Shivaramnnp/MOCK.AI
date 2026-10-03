@@ -19,6 +19,7 @@ interface SourceSelectorModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSelectSource: (type: InputSourceType, payload?: any) => void;
+  onOpenPairingModal?: () => void;
 }
 
 interface SourceOption {
@@ -34,6 +35,7 @@ export const SourceSelectorModal: React.FC<SourceSelectorModalProps> = ({
   isOpen,
   onClose,
   onSelectSource,
+  onOpenPairingModal,
 }) => {
   const pdfInputRef = useRef<HTMLInputElement>(null);
   const docxInputRef = useRef<HTMLInputElement>(null);
@@ -128,6 +130,17 @@ export const SourceSelectorModal: React.FC<SourceSelectorModalProps> = ({
     const file = e.target.files?.[0];
     if (!file) return;
 
+    if (type === 'PDF') {
+      // Avoid loading entire large PDF into browser memory as Base64!
+      onSelectSource('PDF', {
+        file,
+        name: file.name,
+        byteSize: file.size,
+      });
+      onClose();
+      return;
+    }
+
     const reader = new FileReader();
     reader.onload = () => {
       onSelectSource(type, {
@@ -198,7 +211,12 @@ export const SourceSelectorModal: React.FC<SourceSelectorModalProps> = ({
                 key={src.type}
                 onClick={() => {
                   if (src.type === 'PDF') {
-                    pdfInputRef.current?.click();
+                    if (onOpenPairingModal) {
+                      onOpenPairingModal();
+                      onClose();
+                    } else {
+                      pdfInputRef.current?.click();
+                    }
                   } else if (src.type === 'Docx') {
                     docxInputRef.current?.click();
                   } else if (src.type === 'Image') {

@@ -115,6 +115,40 @@ export function checkRateLimit(action: 'post' | 'comment'): boolean {
 }
 
 class CommunityService {
+  // Tombstone set for deleted posts to prevent stale network responses or caches from resurrecting them
+  private deletedPostIds: Set<string> = new Set();
+
+  /**
+   * Dispatches custom event and storage event to synchronize post deletion across components and browser tabs.
+   */
+  broadcastPostDeleted(postId: string): void {
+    if (typeof window !== 'undefined') {
+      try {
+        window.dispatchEvent(
+          new CustomEvent('mockai_community_post_deleted', {
+            detail: { postId },
+          })
+        );
+      } catch {
+        // ignore
+      }
+      try {
+        localStorage.setItem('mockai_community_last_deleted_id', `${postId}:${Date.now()}`);
+      } catch {
+        // ignore
+      }
+    }
+  }
+
+  /**
+   * Completely purges a deleted post from client localStorage cache.
+   */
+  removeOrMarkDeletedLocally(postId: string, userId?: string): void {
+    const localPosts = this.getLocalPosts();
+    const updated = localPosts.filter((p) => p.id !== postId);
+    this.saveLocalPosts(updated);
+  }
+
   /**
    * Helper to load locally cached / offline user posts.
    * Never seeds fake/demo data. Cleanses any legacy seed posts.
@@ -127,9 +161,10 @@ class CommunityService {
       const parsed = JSON.parse(raw);
       if (!Array.isArray(parsed)) return [];
 
-      // Purge any legacy demo/seed posts from client localStorage
+      // Purge any legacy demo/seed posts or deleted posts from client localStorage
       const sanitized = parsed.filter((p: any) => {
         if (!p || typeof p.id !== 'string') return false;
+        if (p.isDeleted || this.deletedPostIds.has(p.id)) return false;
         if (p.id.startsWith('seed-post-')) return false;
         if (['Rohan Verma', 'Priya Patel', 'Vikram Rao', 'Ananya Sen'].includes(p.authorName)) {
           return false;
@@ -168,33 +203,33 @@ class CommunityService {
       const remoteMap = new Map(remotePosts.map((p) => [p.id, p]));
       let hasChanges = false;
 
-      const updatedLocals = currentLocals.map((lp) => {
-        const remote = remoteMap.get(lp.id);
-        if (remote) {
-          if (
-            lp.status !== remote.status ||
-            lp.isHidden !== remote.isHidden ||
-            lp.isDeleted !== remote.isDeleted ||
-            lp.resolutionNotes !== remote.resolutionNotes ||
-            lp.resolvedByName !== remote.resolvedByName
-          ) {
-            hasChanges = true;
-            return {
-              ...lp,
-              status: remote.status,
-              isHidden: remote.isHidden,
-              isDeleted: remote.isDeleted,
-              resolutionNotes: remote.resolutionNotes,
-              resolvedByName: remote.resolvedByName,
-              resolvedAt: remote.resolvedAt,
-              updatedAt: remote.updatedAt,
-            };
+      const updatedLocals = currentLocals
+        .filter((lp) => !this.deletedPostIds.has(lp.id))
+        .map((lp) => {
+          const remote = remoteMap.get(lp.id);
+          if (remote) {
+            if (
+              lp.status !== remote.status ||
+              lp.isHidden !== remote.isHidden ||
+              lp.resolutionNotes !== remote.resolutionNotes ||
+              lp.resolvedByName !== remote.resolvedByName
+            ) {
+              hasChanges = true;
+              return {
+                ...lp,
+                status: remote.status,
+                isHidden: remote.isHidden,
+                resolutionNotes: remote.resolutionNotes,
+                resolvedByName: remote.resolvedByName,
+                resolvedAt: remote.resolvedAt,
+                updatedAt: remote.updatedAt,
+              };
+            }
           }
-        }
-        return lp;
-      });
+          return lp;
+        });
 
-      if (hasChanges) {
+      if (hasChanges || updatedLocals.length !== currentLocals.length) {
         this.saveLocalPosts(updatedLocals);
       }
     } catch {
@@ -290,7 +325,7 @@ class CommunityService {
 
         if (!error && Array.isArray(data)) {
           const remotePosts: CommunityPost[] = data
-            .filter((d: any) => !d.is_deleted)
+            .filter((d: any) => !this.deletedPostIds.has(d.id))
             .map((d: any) => ({
             id: d.id,
             type: d.type,
@@ -319,9 +354,6 @@ class CommunityService {
             isHidden: Boolean(d.is_hidden),
             isEdited: Boolean(d.is_edited),
             editedAt: d.edited_at || null,
-            isDeleted: Boolean(d.is_deleted),
-            deletedAt: d.deleted_at || null,
-            deletedBy: d.deleted_by || null,
             createdAt: d.created_at,
             updatedAt: d.updated_at,
           }));
@@ -330,11 +362,11 @@ class CommunityService {
           this.syncLocalCacheWithRemote(remotePosts);
 
           // Merge local posts (only user-created posts created locally that are not yet in remote)
-          const localList = this.getLocalPosts().filter((p) => !p.isHidden && !p.isDeleted);
+          const localList = this.getLocalPosts().filter((p) => !p.isHidden && !this.deletedPostIds.has(p.id));
           const remoteIds = new Set(remotePosts.map((p) => p.id));
           const merged: CommunityPost[] = [...remotePosts];
           for (const lp of localList) {
-            if (!remoteIds.has(lp.id)) {
+            if (!remoteIds.has(lp.id) && !this.deletedPostIds.has(lp.id)) {
               if (
                 (!options?.type || options.type === 'ALL' || lp.type === options.type) &&
                 (!options?.status || options.status === 'ALL' || lp.status === options.status)
@@ -343,7 +375,7 @@ class CommunityService {
               }
             }
           }
-          posts = merged;
+          posts = merged.filter((p) => !this.deletedPostIds.has(p.id));
 
           // Augment with user supports if user is logged in
           if (options?.userId) {
@@ -389,7 +421,7 @@ class CommunityService {
     }
 
     // 2. Fallback to Local Storage (Client cache)
-    posts = this.getLocalPosts().filter((p) => !p.isHidden && !p.isDeleted);
+    posts = this.getLocalPosts().filter((p) => !p.isHidden && !this.deletedPostIds.has(p.id));
 
     if (options?.type && options.type !== 'ALL') {
       posts = posts.filter((p) => p.type === options.type);
@@ -449,6 +481,10 @@ class CommunityService {
    * Fetch single post with its threaded comments.
    */
   async getPostById(postId: string, userId?: string): Promise<{ post: CommunityPost; comments: CommunityComment[] } | null> {
+    if (this.deletedPostIds.has(postId)) {
+      return null;
+    }
+
     const client = supabaseService.getClient();
 
     if (client) {
@@ -460,10 +496,6 @@ class CommunityService {
           .single();
 
         if (!postErr && postData) {
-          if (postData.is_deleted) {
-            return null;
-          }
-
           const localPost = this.getLocalPosts().find((p) => p.id === postId);
           const post: CommunityPost = {
             id: postData.id,
@@ -493,9 +525,6 @@ class CommunityService {
             isHidden: Boolean(postData.is_hidden),
             isEdited: Boolean(postData.is_edited),
             editedAt: postData.edited_at || null,
-            isDeleted: Boolean(postData.is_deleted),
-            deletedAt: postData.deleted_at || null,
-            deletedBy: postData.deleted_by || null,
             createdAt: postData.created_at,
             updatedAt: postData.updated_at,
           };
@@ -560,7 +589,7 @@ class CommunityService {
     // Local fallback
     const localPosts = this.getLocalPosts();
     const post = localPosts.find((p) => p.id === postId);
-    if (!post || post.isDeleted) return null;
+    if (!post || this.deletedPostIds.has(postId)) return null;
 
     if (userId) {
       post.hasUserSupported = this.getUserSupports(userId).has(postId);
@@ -607,6 +636,8 @@ class CommunityService {
     tier?: string;
     shift?: string;
     questionId?: string;
+    paperId?: string;
+    userId?: string;
     isCustomExam?: boolean;
     customExamName?: string;
     customYear?: number;
@@ -615,13 +646,15 @@ class CommunityService {
   }): Promise<CommunityPost[]> {
     const { posts } = await this.getPosts({ type: candidate.type });
 
-    // 1. Strict duplicate key for Question Reports: canonical questionId
+    // 1. Strict duplicate key for Question Reports: canonical questionId (+ optional userId and paperId)
     if (candidate.type === 'QUESTION_REPORT' && candidate.questionId) {
       return posts.filter(
         (p) =>
           p.status !== 'RESOLVED' &&
           p.status !== 'REJECTED' &&
-          p.metadata?.questionId === candidate.questionId
+          p.metadata?.questionId === candidate.questionId &&
+          (!candidate.userId || p.authorId === candidate.userId) &&
+          (!candidate.paperId || !p.metadata?.paperId || p.metadata?.paperId === candidate.paperId)
       );
     }
 
@@ -1135,7 +1168,7 @@ class CommunityService {
   /**
    * Author or Staff: Edit an existing community post.
    * Enforces strict authorization: only author (or verified staff) can edit.
-   * System-controlled fields (author_id, created_at, status, is_pinned, is_deleted) are strictly immutable by normal users.
+   * System-controlled fields (author_id, created_at, status, is_pinned) are strictly immutable by normal users.
    */
   async updatePost(params: {
     postId: string;
@@ -1210,9 +1243,6 @@ class CommunityService {
             isHidden: Boolean(remoteData.is_hidden),
             isEdited: Boolean(remoteData.is_edited),
             editedAt: remoteData.edited_at || null,
-            isDeleted: Boolean(remoteData.is_deleted),
-            deletedAt: remoteData.deleted_at || null,
-            deletedBy: remoteData.deleted_by || null,
             createdAt: remoteData.created_at,
             updatedAt: remoteData.updated_at,
           };
@@ -1222,12 +1252,8 @@ class CommunityService {
       }
     }
 
-    if (!existingPost) {
+    if (!existingPost || this.deletedPostIds.has(params.postId)) {
       throw new Error('This post no longer exists.');
-    }
-
-    if (existingPost.isDeleted) {
-      throw new Error('This post has been deleted.');
     }
 
     // Permission check: caller must be author or staff
@@ -1342,99 +1368,119 @@ class CommunityService {
   /**
    * Author or Staff: Delete (soft delete) an existing community post.
    * Enforces strict authorization: only author or verified staff can delete.
+   * Targets canonical primary key `postId` exclusively.
    */
   async deletePost(postId: string, user?: UserProfile | null): Promise<boolean> {
     if (!user?.uid) {
       throw new Error('Please sign in to delete this post.');
     }
 
-    const localPosts = this.getLocalPosts();
-    let existingPost = localPosts.find((p) => p.id === postId);
-
-    const client = supabaseService.getClient();
-    if (client) {
-      try {
-        const { data: remoteData } = await client
-          .from('community_posts')
-          .select('id, author_id, title, is_deleted')
-          .eq('id', postId)
-          .single();
-        if (remoteData) {
-          existingPost = {
-            ...(existingPost || ({} as any)),
-            id: remoteData.id,
-            authorId: remoteData.author_id,
-            title: remoteData.title,
-            isDeleted: Boolean(remoteData.is_deleted),
-          };
-        }
-      } catch (err) {
-        console.warn('[CommunityService] Could not fetch remote post for delete auth check:', err);
-      }
-    }
-
-    if (!existingPost) {
+    if (!postId || typeof postId !== 'string') {
       throw new Error('This post no longer exists.');
     }
 
-    const isAuthor = existingPost.authorId === user.uid;
-    const isStaff = await staffService.checkIsStaff(user.uid);
+    // If already marked as deleted in this session's tombstone:
+    if (this.deletedPostIds.has(postId)) {
+      this.removeOrMarkDeletedLocally(postId, user.uid);
+      throw new Error('This post no longer exists.');
+    }
 
+    const isStaff = await staffService.checkIsStaff(user.uid);
+    const client = supabaseService.getClient();
+
+    if (client) {
+      try {
+        let deleteQuery = client
+          .from('community_posts')
+          .delete()
+          .eq('id', postId);
+
+        if (!isStaff) {
+          deleteQuery = deleteQuery.eq('author_id', user.uid);
+        }
+
+        const { data: deletedRows, error: deleteErr } = await deleteQuery.select('id, author_id');
+
+        if (deleteErr) {
+          const errMsg = deleteErr.message || '';
+          if (
+            errMsg.includes('403') ||
+            errMsg.toLowerCase().includes('permission') ||
+            errMsg.toLowerCase().includes('row-level security')
+          ) {
+            throw new Error("You don't have permission to delete this post.");
+          }
+          if (
+            errMsg.includes('401') ||
+            errMsg.toLowerCase().includes('unauthorized')
+          ) {
+            throw new Error('Please sign in to delete this post.');
+          }
+          throw new Error(deleteErr.message || 'Unable to delete post. Please try again.');
+        }
+
+        if (!deletedRows || deletedRows.length === 0) {
+          // 0 rows deleted: verify if post exists or was deleted or belongs to someone else
+          const { data: checkData } = await client
+            .from('community_posts')
+            .select('id, author_id')
+            .eq('id', postId)
+            .maybeSingle();
+
+          if (!checkData) {
+            this.deletedPostIds.add(postId);
+            this.removeOrMarkDeletedLocally(postId, user.uid);
+            this.broadcastPostDeleted(postId);
+            throw new Error('This post no longer exists.');
+          }
+
+          if (checkData.author_id !== user.uid && !isStaff) {
+            throw new Error("You don't have permission to delete this post.");
+          }
+
+          this.deletedPostIds.add(postId);
+          this.removeOrMarkDeletedLocally(postId, user.uid);
+          this.broadcastPostDeleted(postId);
+          throw new Error('This post no longer exists.');
+        }
+
+        // Hard delete succeeded in database!
+        this.deletedPostIds.add(postId);
+        this.removeOrMarkDeletedLocally(postId, user.uid);
+        this.broadcastPostDeleted(postId);
+        return true;
+      } catch (err: any) {
+        const msg = err?.message || '';
+        if (
+          msg.includes("You don't have permission") ||
+          msg.includes('Please sign in') ||
+          msg.includes('This post no longer exists')
+        ) {
+          throw err;
+        }
+        console.warn('[CommunityService] Remote delete encountered error:', err);
+        throw new Error(err?.message || 'Unable to delete the post. Please check your internet connection and try again.');
+      }
+    }
+
+    // 2. Offline / Local fallback (Supabase client not available)
+    const localPosts = this.getLocalPosts();
+    const target = localPosts.find((p) => p.id === postId);
+
+    if (!target) {
+      this.deletedPostIds.add(postId);
+      this.removeOrMarkDeletedLocally(postId, user.uid);
+      throw new Error('This post no longer exists.');
+    }
+
+    const isAuthor = target.authorId === user.uid;
     if (!isAuthor && !isStaff) {
       throw new Error("You don't have permission to delete this post.");
     }
 
-    const nowIso = new Date().toISOString();
-
-    // Attempt RPC delete_community_post or direct update
-    if (client) {
-      try {
-        const { error: rpcErr } = await client.rpc('delete_community_post', {
-          p_post_id: postId,
-          p_user_id: user.uid,
-        });
-
-        if (rpcErr) {
-          let updateQuery = client
-            .from('community_posts')
-            .update({
-              is_deleted: true,
-              deleted_at: nowIso,
-              deleted_by: user.uid,
-              updated_at: nowIso,
-            })
-            .eq('id', postId);
-
-          if (!isStaff) {
-            updateQuery = updateQuery.eq('author_id', user.uid);
-          }
-
-          const { error: updateErr } = await updateQuery;
-          if (updateErr) {
-            throw new Error(updateErr.message);
-          }
-        }
-      } catch (err: any) {
-        if (
-          err?.message?.includes('403') ||
-          err?.message?.includes('permission') ||
-          err?.message?.includes('Forbidden')
-        ) {
-          throw new Error("You don't have permission to delete this post.");
-        }
-        console.warn('[CommunityService] Remote delete error, saving locally:', err);
-      }
-    }
-
-    // Update local cache
-    const target = localPosts.find((p) => p.id === postId);
-    if (target) {
-      target.isDeleted = true;
-      target.deletedAt = nowIso;
-      target.deletedBy = user.uid;
-      this.saveLocalPosts(localPosts);
-    }
-
+    this.removeOrMarkDeletedLocally(postId, user.uid);
+    this.deletedPostIds.add(postId);
+    this.broadcastPostDeleted(postId);
     return true;
   }
 }

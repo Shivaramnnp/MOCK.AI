@@ -1,3 +1,15 @@
+import type {
+  TopicClassificationStatus,
+  TopicClassificationSource,
+  QuestionTopicMetadata,
+} from './canonicalQuestion';
+
+export type {
+  TopicClassificationStatus,
+  TopicClassificationSource,
+  QuestionTopicMetadata,
+};
+
 export type VerificationStatus = 'VERIFIED' | 'PARTIAL' | 'UNVERIFIED' | 'FAILED';
 
 export interface Citation {
@@ -11,7 +23,9 @@ export interface Question {
   questionText: string;
   options: string[]; // exactly 4 items always
   correctAnswerIndex: number; // 0-3, or -1 if not set
-  topic?: string;
+  topic?: string | QuestionTopicMetadata;
+  topicMetadata?: QuestionTopicMetadata;
+  subtopic?: string;
   explanation?: string;
   citation?: Citation;
   verificationStatus?: VerificationStatus;
@@ -170,7 +184,8 @@ export type AppRoute =
   | 'community'
   | 'staff'
   | 'profile'
-  | 'settings';
+  | 'settings'
+  | 'source_review';
 
 // ── Competitive Exams & PYP Architecture ──────────────────────────────────────────
 
@@ -188,6 +203,24 @@ export interface ExamPattern {
   sections: string[];
 }
 
+export interface SyllabusTopic {
+  name: string;
+  subtopics?: string[];
+}
+
+export interface SyllabusSection {
+  title: string;
+  description?: string;
+  topics: (string | SyllabusTopic)[];
+}
+
+export interface ExamSyllabus {
+  lastUpdated?: string;
+  sourceUrl?: string;
+  officialNoticeRef?: string;
+  sections: SyllabusSection[];
+}
+
 export interface CompetitiveExam {
   id: string;
   name: string;
@@ -201,6 +234,7 @@ export interface CompetitiveExam {
   tier?: string;
   defaultPattern: ExamPattern;
   highlights?: string[];
+  syllabus?: ExamSyllabus;
 }
 
 export interface ExamSection {
@@ -240,7 +274,14 @@ export type ContentBlockType =
 
 export type BlockConfidence = 'VERIFIED' | 'HIGH_CONFIDENCE' | 'NEEDS_REVIEW' | 'FAILED';
 
+export type DisplayMode =
+  | 'TEXT_ONLY'
+  | 'IMAGE_ONLY'
+  | 'IMAGE_WITH_ACCESSIBILITY_TEXT'
+  | 'TEXT_AND_IMAGE';
+
 export interface ContentBlock {
+  blockId?: string;
   type: ContentBlockType;
   content?: string;
   latex?: string;
@@ -248,7 +289,10 @@ export interface ContentBlock {
   headers?: string[];
   rows?: string[][];
   assetUrl?: string;
+  altText?: string;
+  ocrText?: string;
   caption?: string;
+  displayMode?: DisplayMode;
   confidence?: BlockConfidence;
   blocks?: ContentBlock[];
 }
@@ -257,6 +301,9 @@ export interface ExamQuestionOption {
   id: string; // 'A', 'B', 'C', 'D'
   text?: string;
   imageUrl?: string | null;
+  displayMode?: DisplayMode;
+  altText?: string;
+  ocrText?: string;
   contentBlocks?: ContentBlock[];
   contentTypes?: ContentBlockType[];
 }
@@ -283,6 +330,9 @@ export interface CompetitiveQuestion {
   answerRanges?: { min: number; max: number }[]; // for NAT with OR alternatives
   isMta?: boolean; // Marks To All
   explanation: string;
+  topic?: string | QuestionTopicMetadata;
+  topicMetadata?: QuestionTopicMetadata;
+  subtopic?: string;
   diagramUrl?: string | null;
   diagramUrls?: string[];
   questionAssets?: ExamQuestionAsset[];
@@ -299,7 +349,39 @@ export interface CompetitiveQuestion {
   wordLimit?: string;
   modelSolution?: string;
   rubrics?: string[];
+  verificationStatus?: VerificationStatus | 'REVIEW_REQUIRED';
 }
+
+/**
+ * Quarantined question schema strictly containing presentation data (R1).
+ * Strips correctAnswer, correctAnswerIndex, explanations, and solution keys
+ * to prevent answer leakage to active exam players, client memory, or network payloads.
+ */
+export type ExamPresentationQuestion = Omit<
+  CompetitiveQuestion,
+  | 'correctAnswer'
+  | 'correctAnswerIndex'
+  | 'correctAnswerSet'
+  | 'correctAnswerSets'
+  | 'correctAnswerIndices'
+  | 'answerRange'
+  | 'answerRanges'
+  | 'isMta'
+  | 'explanation'
+  | 'modelSolution'
+> & {
+  isPresentationOnly?: boolean;
+};
+
+export type PaperPublicationStatus =
+  | 'DRAFT'
+  | 'PROCESSING'
+  | 'REVIEW_REQUIRED'
+  | 'PARTIALLY_PUBLISHABLE'
+  | 'PUBLISHED'
+  | 'BLOCKED';
+
+export type ScoreStatus = 'CALCULATED' | 'NOT_CALCULATED' | 'PENDING_ANSWER_KEY';
 
 export interface ExamPaper {
   id: string;
@@ -322,6 +404,55 @@ export interface ExamPaper {
   markingScheme: MarkingScheme;
   sections: ExamSection[];
   questions: CompetitiveQuestion[];
+  /** Whether official answers are available for scoring ('AVAILABLE', 'UNAVAILABLE', 'PARTIAL') */
+  answerKeyStatus?: 'AVAILABLE' | 'UNAVAILABLE' | 'PARTIAL';
+  /** Whether this paper is configured for authoritative scoring */
+  isScored?: boolean;
+  /** Lifecycle publication status of paper */
+  publicationStatus?: PaperPublicationStatus;
+  /** Version of active answer key attached (e.g. 'v1_provisional', 'v2_final') */
+  answerKeyVersion?: string;
+  /** Version of scoring configuration applied */
+  scoringConfigVersion?: string;
+}
+
+/**
+ * Quarantined paper schema for active test sessions (R1).
+ * Questions contain only presentation data.
+ */
+export interface ExamPresentationPaper extends Omit<ExamPaper, 'questions'> {
+  questions: ExamPresentationQuestion[];
+  isPresentationOnly: true;
+}
+
+/**
+ * Discrete item in an isolated solution manifest used for post-test evaluation.
+ */
+export interface ExamSolutionItem {
+  questionId: string;
+  questionNumber: number;
+  questionType?: 'MCQ' | 'MSQ' | 'NAT';
+  correctAnswer: string;
+  correctAnswerIndex: number;
+  correctAnswerSet?: string[];
+  correctAnswerSets?: string[][];
+  correctAnswerIndices?: number[];
+  answerRange?: { min: number; max: number };
+  answerRanges?: { min: number; max: number }[];
+  isMta?: boolean;
+  explanation?: string;
+  modelSolution?: string;
+}
+
+/**
+ * Isolated solution manifest kept quarantined from active test clients (R1).
+ */
+export interface ExamSolutionManifest {
+  paperId: string;
+  examId: string;
+  editionYear: number;
+  answerKeyVersion?: string;
+  solutions: ExamSolutionItem[];
 }
 
 export type QuestionAttemptStatus =
@@ -352,15 +483,26 @@ export interface ExamResultSummary {
   paperTitle: string;
   totalQuestions: number;
   maxMarks: number;
-  totalScore: number;
-  percentage: number;
-  accuracy: number;
-  correctCount: number;
-  wrongCount: number;
+  totalScore: number | null;
+  percentage: number | null;
+  accuracy: number | null;
+  correctCount: number | null;
+  wrongCount: number | null;
+  attemptedCount?: number;
   unansweredCount: number;
   timeSpentSeconds: number;
   submittedAt: number;
   sectionResults: Record<string, SectionResultSummary>;
+  /** Indicates whether score calculation was possible (false if paper has no answer key) */
+  isScoreCalculated?: boolean;
+  /** Formal semantic status of score calculation */
+  scoreStatus?: ScoreStatus;
+  /** Status of answer key used for evaluation */
+  answerKeyStatus?: 'AVAILABLE' | 'UNAVAILABLE' | 'PARTIAL';
+  /** Version of answer key used to produce this result snapshot */
+  answerKeyVersion?: string;
+  /** Version of scoring configuration used to produce this result snapshot */
+  scoringConfigVersion?: string;
 }
 
 export type ExamSessionStatus =
@@ -396,6 +538,8 @@ export interface ExamTestSession {
   questionStatuses: Record<number, QuestionAttemptStatus>; // questionIndex -> QuestionAttemptStatus
   currentQuestionIndex: number;
   currentSectionId: string;
+  canonicalAnswers?: Record<string, any>; // canonical questionId -> student answer response
+  canonicalQuestionStatuses?: Record<string, QuestionAttemptStatus>; // canonical questionId -> QuestionAttemptStatus
   version: number; // Revision counter for concurrent multi-device sync
   result?: ExamResultSummary;
 }
@@ -424,11 +568,15 @@ export type QuestionReportCategory =
   | 'incorrect_question'
   | 'incorrect_option'
   | 'incorrect_answer'
+  | 'incorrect_key'
+  | 'ambiguous_question'
   | 'missing_image'
   | 'wrong_image'
   | 'broken_diagram'
   | 'incorrect_formula'
   | 'formatting_rendering'
+  | 'duplicate_question'
+  | 'marking_issue'
   | 'missing_content'
   | 'other';
 
@@ -482,9 +630,14 @@ export interface CommunityPostMetadata {
 
   // Question Report metadata
   paperId?: string;
+  paperTitle?: string;
   questionId?: string;
   questionNumber?: number;
   questionCategory?: QuestionReportCategory;
+  reportReason?: string;
+  questionReason?: string;
+  sessionId?: string;
+  examName?: string;
   supportingSource?: string;
 
   // Bug Report metadata

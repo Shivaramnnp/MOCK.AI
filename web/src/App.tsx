@@ -27,6 +27,12 @@ import { CompetitiveExamPlayerScreen } from './screens/CompetitiveExamPlayerScre
 import { CompetitiveExamResultsScreen } from './screens/CompetitiveExamResultsScreen';
 import { CommunityScreen } from './screens/CommunityScreen';
 import { StaffDashboardScreen } from './screens/StaffDashboardScreen';
+import { SourceReviewScreen } from './screens/SourceReviewScreen';
+import { SourcePairingModal } from './components/SourcePairingModal';
+import { PairingIngestionReport } from './services/ingestion/pairing/types';
+import { toLegacyQuestion } from './services/ingestion/questionMigrator';
+import { UniversalMockService } from './services/ingestion/universal/universalMockService';
+import { generateMockPaperFromQuestions } from './services/ingestion/universal/universalMockGenerator';
 import { AdProvider } from './lib/ads/AdContext';
 
 // Services & Types
@@ -123,6 +129,8 @@ export const App: React.FC = () => {
   const [isUrlModalOpen, setIsUrlModalOpen] = useState(false);
   const [isYouTubeModalOpen, setIsYouTubeModalOpen] = useState(false);
   const [isJsonModalOpen, setIsJsonModalOpen] = useState(false);
+  const [isSourcePairingModalOpen, setIsSourcePairingModalOpen] = useState(false);
+  const [pairingReport, setPairingReport] = useState<PairingIngestionReport | null>(null);
 
   // Competitive Exams State
   const [selectedExamId, setSelectedExamId] = useState<string>('ssc-chsl');
@@ -434,15 +442,132 @@ export const App: React.FC = () => {
         existingTest: null,
       });
       navigateTo('editor');
-    } else if (type === 'PDF' || type === 'Image') {
+    } else if (type === 'PDF') {
+      if (payload?.file) {
+        startProcessingPdf(payload.file, payload.name);
+      } else if (payload?.base64) {
+        startProcessingFile(payload.base64, 'application/pdf', payload.name);
+      }
+    } else if (type === 'Image') {
       if (payload?.base64) {
-        startProcessingFile(payload.base64, payload.file?.type || 'application/pdf', payload.name);
+        startProcessingFile(payload.base64, payload.file?.type || 'image/jpeg', payload.name);
       }
     } else if (type === 'Docx') {
       if (payload?.file) {
         startProcessingDocx(payload.file, payload.name);
       }
     }
+  };
+
+  const startProcessingPdf = async (file: File, fileName: string) => {
+    setProcessingStatus(`Analyzing, extracting layout and questions from ${fileName}...`);
+    setProcessingError(null);
+    navigateTo('processing');
+
+    try {
+      const res = await ingestionService.ingest('PDF', {
+        file,
+        fileName,
+        byteSize: file.size,
+        userId: profile?.uid,
+      });
+
+      if (res.warnings && res.warnings.length > 0) {
+        showToast(res.warnings[0], 'info');
+      }
+
+      setEditorInitialData({
+        title: res.sourceTitle || fileName.replace(/\.[^/.]+$/, '') || 'Extracted Test',
+        category: 'PDF Study',
+        questions: res.legacyQuestions,
+        existingTest: null,
+      });
+      navigateTo('editor');
+    } catch (err: any) {
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to extract questions from PDF.';
+      setProcessingError(msg);
+    }
+  };
+
+  const startProcessingPairedExam = async (data: {
+    questionPaperFile?: File;
+    answerKeyFile?: File;
+    continueWithoutAnswerKey: boolean;
+    exam: string;
+    year: number;
+    paperCode: string;
+  }) => {
+    setIsSourcePairingModalOpen(false);
+    setProcessingStatus('Analyzing, extracting layout and deterministically matching sources...');
+    setProcessingError(null);
+    navigateTo('processing');
+
+    try {
+      const { report, ingestionResult } = await ingestionService.ingestPairedSources(
+        {
+          questionPaper: data.questionPaperFile
+            ? {
+                file: data.questionPaperFile,
+                fileName: data.questionPaperFile.name,
+              }
+            : undefined,
+          answerKey: data.continueWithoutAnswerKey
+            ? undefined
+            : data.answerKeyFile
+            ? {
+                file: data.answerKeyFile,
+                fileName: data.answerKeyFile.name,
+              }
+            : undefined,
+        },
+        {
+          examHint: data.exam,
+          yearHint: data.year,
+          paperCodeHint: data.paperCode,
+          userId: profile?.uid,
+          onProgress: (p) => setProcessingStatus(`${p.message} (${p.percent}%)`),
+        }
+      );
+
+      setPairingReport(report);
+
+      if (report.warnings && report.warnings.length > 0) {
+        showToast(report.warnings[0], 'info');
+      }
+
+      // If review required or answer key was omitted, open forensic review screen
+      if (report.reviewRequiredCount > 0 || data.continueWithoutAnswerKey || !data.answerKeyFile) {
+        navigateTo('source_review');
+      } else {
+        setEditorInitialData({
+          title: report.questionPaperSummary?.fileName.replace(/\.[^/.]+$/, '') || 'Extracted Paired Exam',
+          category: 'Competitive Exam',
+          questions: ingestionResult.legacyQuestions,
+          existingTest: null,
+        });
+        navigateTo('editor');
+      }
+    } catch (err: any) {
+      const msg = isIngestionError(err) ? err.userMessage : err.message || 'Failed to process paired sources.';
+      setProcessingError(msg);
+    }
+  };
+
+  const handleLaunchMockFromReport = (report: PairingIngestionReport) => {
+    const paper = generateMockPaperFromQuestions(
+      report.canonicalQuestions,
+      report.questionPaperSummary?.detectedIdentity || {
+        exam: 'Custom',
+        confidence: 0.8,
+      },
+      {
+        paperTitle: report.questionPaperSummary?.fileName.replace(/\.[^/.]+$/, '') || 'Custom Practice Mock',
+      }
+    );
+    setActiveExamPaper(paper);
+    setActiveExamSession(null);
+    setIsSourcePairingModalOpen(false);
+    navigateTo('exam_player');
   };
 
   const startProcessingFile = async (base64: string, mimeType: string, fileName: string) => {
@@ -456,6 +581,7 @@ export const App: React.FC = () => {
         base64Data: base64,
         mimeType,
         fileName,
+        userId: profile?.uid,
       });
 
       if (res.warnings && res.warnings.length > 0) {
@@ -584,13 +710,19 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleCameraCapture = async (base64Data: string) => {
-    setProcessingStatus('Scanning page photo with AI Vision...');
+  const handleCameraCapture = async (
+    payload: { pages: Array<{ base64Data: string; pageNumber: number }> } | string
+  ) => {
+    const pageCount = typeof payload === 'object' && payload.pages ? payload.pages.length : 1;
+    setProcessingStatus(
+      `Scanning ${pageCount} document ${pageCount === 1 ? 'page' : 'pages'} with AI Vision...`
+    );
     setProcessingError(null);
     navigateTo('processing');
 
     try {
-      const res = await ingestionService.ingest('Camera', { base64Data });
+      const cameraInput = typeof payload === 'string' ? { base64Data: payload } : payload;
+      const res = await ingestionService.ingest('Camera', cameraInput);
 
       if (res.warnings && res.warnings.length > 0) {
         showToast(res.warnings[0], 'info');
@@ -609,13 +741,21 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleVoiceSubmit = async (transcript: string) => {
-    setProcessingStatus('Transforming voice lecture into structured questions...');
+  const handleVoiceSubmit = async (
+    payload: string | { liveVoice?: any; audioFile?: any }
+  ) => {
+    const isAudioFile = typeof payload === 'object' && payload.audioFile;
+    setProcessingStatus(
+      isAudioFile
+        ? 'Transcribing audio recording and structuring semantic chunks...'
+        : 'Transforming confirmed voice dictation into structured questions...'
+    );
     setProcessingError(null);
     navigateTo('processing');
 
     try {
-      const res = await ingestionService.ingest('Audio', { transcript });
+      const audioInput = typeof payload === 'string' ? { transcript: payload } : payload;
+      const res = await ingestionService.ingest('Audio', audioInput);
 
       if (res.warnings && res.warnings.length > 0) {
         showToast(res.warnings[0], 'info');
@@ -915,6 +1055,7 @@ export const App: React.FC = () => {
             paper={activeExamPaper}
             initialSession={activeExamSession}
             userId={profile.uid}
+            user={profile}
             onExit={() => {
               refreshUserActiveSessions();
               navigateTo('home');
@@ -940,6 +1081,13 @@ export const App: React.FC = () => {
               navigateTo('explore');
             }}
             onReportQuestion={handleReportQuestion}
+            onAttachAnswerKey={async (akInput) => {
+              const res = await UniversalMockService.attachLateAnswerKey(activeExamPaper.id, akInput);
+              setActiveExamPaper(res.paper);
+              const recalculated = ExamService.calculateExamResult(activeExamSession, res.paper);
+              activeExamSession.result = recalculated;
+              setActiveExamSession({ ...activeExamSession });
+            }}
           />
         )}
 
@@ -948,6 +1096,23 @@ export const App: React.FC = () => {
             statusMessage={processingStatus}
             error={processingError}
             onCancel={navigateBack}
+          />
+        )}
+
+        {currentRoute === 'source_review' && pairingReport && (
+          <SourceReviewScreen
+            report={pairingReport}
+            onBack={() => navigateTo('home')}
+            onTakeMockTest={() => handleLaunchMockFromReport(pairingReport)}
+            onConfirmImport={() => {
+              setEditorInitialData({
+                title: pairingReport.questionPaperSummary?.fileName.replace(/\.[^/.]+$/, '') || 'Extracted Paired Exam',
+                category: 'Competitive Exam',
+                questions: pairingReport.canonicalQuestions.map((q) => toLegacyQuestion(q)),
+                existingTest: null,
+              });
+              navigateTo('editor');
+            }}
           />
         )}
 
@@ -1189,6 +1354,19 @@ export const App: React.FC = () => {
         isOpen={isSourceModalOpen}
         onClose={() => setIsSourceModalOpen(false)}
         onSelectSource={handleSelectSource}
+        onOpenPairingModal={() => setIsSourcePairingModalOpen(true)}
+      />
+
+      <SourcePairingModal
+        isOpen={isSourcePairingModalOpen}
+        onClose={() => setIsSourcePairingModalOpen(false)}
+        onSubmit={startProcessingPairedExam}
+        report={pairingReport}
+        onTakeMockTest={handleLaunchMockFromReport}
+        onOpenReview={() => {
+          setIsSourcePairingModalOpen(false);
+          navigateTo('source_review');
+        }}
       />
 
       <CameraModal

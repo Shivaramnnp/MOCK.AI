@@ -168,9 +168,26 @@ def process_cbt_paper(doc, paper_data, year, paper_id):
                 if not q_imgs:
                     continue
                 
+                # Certified 2D Geometric Classifier for CBT papers
+                col_bound = 78
                 if ans_y:
-                    diag_imgs = [img for img in q_imgs if img['rect'].y0 < ans_y]
-                    opt_imgs = [img for img in q_imgs if img['rect'].y0 >= ans_y]
+                    opt_marker_ys = [b[1] for b in blocks if q_y <= b[1] < next_y and b[1] >= ans_y and re.search(r'(?:^|\n)\s*[1-4]\s*\.', b[4])]
+                    y_boundary = min([ans_y - 5] + opt_marker_ys)
+                    diag_imgs = []
+                    opt_imgs = []
+                    for img in q_imgs:
+                        r = img['rect']
+                        img_w = getattr(r, 'width', img.get('w', 0))
+                        if r.y1 <= ans_y + 1.0 or (r.y0 < y_boundary and (r.x0 < col_bound or img_w >= 150)):
+                            diag_imgs.append(img)
+                        elif r.y0 >= y_boundary:
+                            opt_imgs.append(img)
+                        else:
+                            # Fallback for borderline coordinates straddling boundary: width >= 150pt or left-margin is stem
+                            if img_w >= 150 or r.x0 < col_bound:
+                                diag_imgs.append(img)
+                            else:
+                                opt_imgs.append(img)
                 else:
                     diag_imgs = q_imgs
                     opt_imgs = []
@@ -179,6 +196,20 @@ def process_cbt_paper(doc, paper_data, year, paper_id):
                 diag_imgs = [img for img in diag_imgs if not (img['rect'].x1 < 78 and (img['w'] <= 35 or img['h'] <= 35))]
                 opt_imgs = [img for img in opt_imgs if not (img['rect'].x1 < 78 and (img['w'] <= 35 or img['h'] <= 35))]
                 
+                # 4-Option dimension clustering safeguard:
+                # If opt_imgs contains > 4 images, reclassify outlier diagrams back to stem
+                if len(opt_imgs) > 4:
+                    real_opts = []
+                    for img in opt_imgs:
+                        r = img['rect']
+                        img_w = getattr(r, 'width', img.get('w', 0))
+                        if r.y1 <= (ans_y + 1.0 if ans_y else 0) or (r.y0 < y_boundary and img_w >= 150):
+                            diag_imgs.append(img)
+                        else:
+                            real_opts.append(img)
+                    opt_imgs = real_opts
+
+                diag_imgs.sort(key=lambda img: img['rect'].y0)
                 opt_imgs.sort(key=lambda img: img['rect'].y0)
                 
                 # 1. Process Question Diagram(s)
@@ -231,14 +262,23 @@ def process_cbt_paper(doc, paper_data, year, paper_id):
                         lbl = ['A', 'B', 'C', 'D'][idx_opt]
                         img_u = option_images[idx_opt]
                         orig_txt = curr_q['options'][idx_opt] if idx_opt < len(curr_q['options']) else ""
-                        is_placeholder = bool(re.match(r'^Option\s*\([A-D]\)$', orig_txt.strip(), re.IGNORECASE))
-                        cleaned_txt = "" if (is_placeholder and img_u) else orig_txt
-                        curr_q['options'][idx_opt] = cleaned_txt
-                        rich_opts.append({
-                            'id': lbl,
-                            'text': cleaned_txt,
-                            'imageUrl': img_u
-                        })
+                        if img_u:
+                            curr_q['options'][idx_opt] = ""
+                            rich_opts.append({
+                                'id': lbl,
+                                'text': "",
+                                'imageUrl': img_u,
+                                'displayMode': 'IMAGE_ONLY',
+                                'altText': f"Option {lbl} figure"
+                            })
+                        else:
+                            curr_q['options'][idx_opt] = orig_txt
+                            rich_opts.append({
+                                'id': lbl,
+                                'text': orig_txt,
+                                'imageUrl': None,
+                                'displayMode': 'TEXT_ONLY'
+                            })
                     curr_q['richOptions'] = rich_opts
                 
                 if diag_urls or any(option_images):

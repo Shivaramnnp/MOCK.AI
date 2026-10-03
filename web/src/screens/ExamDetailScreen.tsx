@@ -16,6 +16,7 @@ import {
 import { ExamService } from '../services/examService';
 import { ExamPaper } from '../types';
 import { AdSlot } from '../components/ads/AdSlot';
+import { SyllabusModal } from '../components/exam/SyllabusModal';
 
 interface ExamDetailScreenProps {
   examId: string;
@@ -42,6 +43,7 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
   const [selectedDate, setSelectedDate] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showInstructions, setShowInstructions] = useState<boolean>(false);
+  const [showSyllabus, setShowSyllabus] = useState<boolean>(false);
 
   React.useEffect(() => {
     if (availableTiers.length > 0 && !availableTiers.includes(selectedTier)) {
@@ -171,13 +173,24 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
             </p>
           </div>
 
-          <button
-            onClick={() => setShowInstructions(!showInstructions)}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev1 dark:bg-darkSurface-elev2 text-xs font-bold text-surface-text dark:text-darkSurface-text hover:bg-surface-elev2 transition-colors self-start md:self-center"
-          >
-            <HelpCircle className="w-4 h-4 text-brand-primary" />
-            <span>Exam Pattern & Instructions</span>
-          </button>
+          <div className="flex flex-col gap-2 self-start md:self-center shrink-0 w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => setShowInstructions(!showInstructions)}
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev1 dark:bg-darkSurface-elev2 text-xs font-bold text-surface-text dark:text-darkSurface-text hover:bg-surface-elev2 transition-colors w-full"
+            >
+              <HelpCircle className="w-4 h-4 text-brand-primary" />
+              <span>Exam Pattern & Instructions</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowSyllabus(true)}
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev1 dark:bg-darkSurface-elev2 text-xs font-bold text-surface-text dark:text-darkSurface-text hover:bg-surface-elev2 transition-colors w-full"
+            >
+              <BookOpen className="w-4 h-4 text-brand-primary" />
+              <span>Syllabus</span>
+            </button>
+          </div>
         </div>
 
         {/* Exam Pattern Specs Grid */}
@@ -522,6 +535,12 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
           )}
         </div>
       </div>
+
+      <SyllabusModal
+        isOpen={showSyllabus}
+        onClose={() => setShowSyllabus(false)}
+        exam={exam}
+      />
     </div>
   );
 };

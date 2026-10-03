@@ -1178,16 +1178,16 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{2dy}{2dt}\\)",
-        "\\(\\frac{2dy}{2dt}\\)",
-        "\\(\\frac{2dy}{2dt}\\)",
-        "\\(\\frac{2dy}{2dt}\\)"
+        "\\(\\frac{d^2y}{dt^2} + 4\\frac{dy}{dt} + 4y = 0\\)",
+        "\\(\\frac{d^2y}{dt^2} - 4\\frac{dy}{dt} + 4y = 0\\)",
+        "\\(\\frac{d^2y}{dt^2} + 2\\frac{dy}{dt} + 4y = 0\\)",
+        "\\(\\frac{d^2y}{dt^2} + 4\\frac{dy}{dt} + 2y = 0\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{2dy}{2dt}\\)",
+          "text": "\\(\\frac{d^2y}{dt^2} + 4\\frac{dy}{dt} + 4y = 0\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
@@ -1203,7 +1203,7 @@
         },
         {
           "id": "B",
-          "text": "\\(\\frac{2dy}{2dt}\\)",
+          "text": "\\(\\frac{d^2y}{dt^2} - 4\\frac{dy}{dt} + 4y = 0\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
@@ -1219,7 +1219,7 @@
         },
         {
           "id": "C",
-          "text": "\\(\\frac{2dy}{2dt}\\)",
+          "text": "\\(\\frac{d^2y}{dt^2} + 2\\frac{dy}{dt} + 4y = 0\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
@@ -1235,7 +1235,7 @@
         },
         {
           "id": "D",
-          "text": "\\(\\frac{2dy}{2dt}\\)",
+          "text": "\\(\\frac{d^2y}{dt^2} + 4\\frac{dy}{dt} + 2y = 0\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
@@ -1258,7 +1258,7 @@
       "answerRange": null,
       "answerRanges": null,
       "isMta": false,
-      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "explanation": "Complementary function yc(t) = (A + Bt)e^(-2t) implies a repeated characteristic root r = -2 of multiplicity 2. Characteristic equation: (r + 2)² = r² + 4r + 4 = 0. The differential equation is d²y/dt² + 4 dy/dt + 4y = 0. Correct Option is (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "marks": 1.0,

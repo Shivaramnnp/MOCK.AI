@@ -22,6 +22,7 @@ export interface RemoteExamRow {
   tier: string | null;
   default_pattern: Record<string, unknown>;
   highlights: string[];
+  syllabus?: Record<string, unknown> | null;
 }
 
 function mapRowToExam(row: RemoteExamRow): CompetitiveExam {
@@ -51,6 +52,7 @@ function mapRowToExam(row: RemoteExamRow): CompetitiveExam {
       sections: pattern.sections ?? [],
     },
     highlights: row.highlights ?? [],
+    syllabus: (row.syllabus as unknown as CompetitiveExam['syllabus']) || undefined,
   };
 }
 

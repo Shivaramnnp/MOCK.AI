@@ -1,5 +1,6 @@
 import {
   ExamPaper,
+  ExamPresentationPaper,
   ExamTestSession,
   ExamSessionStatus,
   QuestionAttemptStatus,
@@ -132,7 +133,7 @@ export class ExamSessionService {
    * Local session is saved synchronously (0ms UI latency).
    * Remote session creation is staggered with randomized jitter (1s - 15s) to avoid 10,000 RPS burst.
    */
-  static createSession(paper: ExamPaper, userId: string = 'guest'): ExamTestSession {
+  static createSession(paper: ExamPaper | ExamPresentationPaper, userId: string = 'guest'): ExamTestSession {
     const durationMinutes = Number.isFinite(paper.durationMinutes) && paper.durationMinutes > 0 ? paper.durationMinutes : 60;
     const durationSeconds = durationMinutes * 60;
     const now = Date.now();

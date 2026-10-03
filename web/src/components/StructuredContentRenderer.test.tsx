@@ -291,5 +291,140 @@ Identify the option that has the correct match between Column-I and Column-II.`;
       expect(rows[0].textContent).toContain('(p) First In First Out');
       expect(rows[0].textContent).toContain('(i) Stacks');
     });
+
+    it('18. OptionContentRenderer resolves clean IMAGE_ONLY mode when fallbackText is only option label or digits', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q26_opt_a.png"
+          fallbackText="Option (A)"
+          ocrText="28"
+        />
+      );
+
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      // ocrText should be quarantined in .sr-only
+      const srOnly = container.querySelector('.sr-only');
+      expect(srOnly).not.toBeNull();
+      expect(srOnly?.textContent).toBe('28');
+      // Verify no visible text block beneath image
+      expect(container.querySelector('p')).toBeNull();
+    });
+
+    it('19. OptionContentRenderer renders zero duplicate visible text beneath visual option in IMAGE_ONLY mode', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q27_opt_a.png"
+          displayMode="IMAGE_ONLY"
+          ocrText="REASONING"
+        />
+      );
+
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      const srOnly = container.querySelector('.sr-only');
+      expect(srOnly).not.toBeNull();
+      expect(srOnly?.textContent).toBe('REASONING');
+      expect(container.querySelector('p')).toBeNull();
+    });
+  });
+
+  describe('Adversarial Challenge: OptionContentRenderer Synthetic Inputs & Display Modes', () => {
+    it('20. pure image + empty text: renders image and 0 visible text', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q30_opt_a.png"
+          fallbackText=""
+        />
+      );
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      expect(container.querySelector('p')).toBeNull();
+      expect(container.querySelector('.sr-only')).toBeNull();
+      expect(container.textContent).toBe('');
+    });
+
+    it('21. pure image + number string ("28"): suppresses visible number, quarantines OCR to .sr-only', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q26_opt_b.png"
+          fallbackText="28"
+          ocrText="28"
+        />
+      );
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      // No visible text outside screen-reader
+      const srOnly = container.querySelector('.sr-only');
+      expect(srOnly).not.toBeNull();
+      expect(srOnly?.textContent).toBe('28');
+      expect(container.querySelector('p')).toBeNull();
+
+      // Verify strictly 0 visible text by stripping sr-only
+      const clone = container.cloneNode(true) as HTMLElement;
+      clone.querySelectorAll('.sr-only').forEach((el) => el.remove());
+      expect(clone.textContent?.trim()).toBe('');
+    });
+
+    it('22. pure image + label ("(A)"): suppresses visible label, resolves clean IMAGE_ONLY', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q26_opt_a.png"
+          fallbackText="(A)"
+          ocrText="(A)"
+        />
+      );
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      const srOnly = container.querySelector('.sr-only');
+      expect(srOnly).not.toBeNull();
+      expect(srOnly?.textContent).toBe('(A)');
+      expect(container.querySelector('p')).toBeNull();
+    });
+
+    it('23. pure image + full paragraph text with explicit displayMode="IMAGE_ONLY": suppresses all paragraph text', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/gate/2025/cs-1/q5_opt_c.png"
+          fallbackText="This is a full descriptive paragraph text that should not be visible when IMAGE_ONLY is specified."
+          displayMode="IMAGE_ONLY"
+          ocrText="Figure C"
+        />
+      );
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      const srOnly = container.querySelector('.sr-only');
+      expect(srOnly?.textContent).toBe('Figure C');
+      // No visible paragraph text
+      expect(container.textContent).not.toContain('This is a full descriptive paragraph text');
+    });
+
+    it('24. pure image + math formula text with explicit displayMode="IMAGE_ONLY": suppresses math formula in visible DOM', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          image="/exam-assets/gate/2025/cs-1/q5_opt_d.png"
+          fallbackText="\\int_0^1 x^2 dx = \\frac{1}{3}"
+          displayMode="IMAGE_ONLY"
+          ocrText="Integral Formula"
+        />
+      );
+      const img = container.querySelector('img');
+      expect(img).not.toBeNull();
+      const katexSpan = container.querySelector('.katex');
+      expect(katexSpan).toBeNull();
+      expect(container.textContent).not.toContain('dx');
+    });
+
+    it('25. plain text number option without image (e.g. "28"): MUST render number, NOT "Option content missing"', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          fallbackText="28"
+        />
+      );
+      expect(container.textContent).toContain('28');
+      expect(container.textContent).not.toContain('Option content missing');
+    });
   });
 });
+
+

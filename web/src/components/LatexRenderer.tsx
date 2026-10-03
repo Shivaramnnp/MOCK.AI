@@ -132,7 +132,12 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     // 3. Inline math: \(...\) or \\(...\\)
     processed = processed.replace(/\\{1,2}\(([\s\S]+?)\\{1,2}\)/g, (_, math) => {
       try {
-        const html = katex.renderToString(math.trim(), {
+        const cleanMath = math.trim();
+        const mathToRender =
+          /^[-+]?\\frac\{/.test(cleanMath) && !cleanMath.includes('\n')
+            ? `\\displaystyle ${cleanMath}`
+            : cleanMath;
+        const html = katex.renderToString(mathToRender, {
           displayMode: false,
           throwOnError: false,
           output: 'html',
@@ -146,7 +151,12 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     // 4. Inline math: $...$
     processed = processed.replace(/\$([^\$\n]+?)\$/g, (_, math) => {
       try {
-        const html = katex.renderToString(math.trim(), {
+        const cleanMath = math.trim();
+        const mathToRender =
+          /^[-+]?\\frac\{/.test(cleanMath) && !cleanMath.includes('\n')
+            ? `\\displaystyle ${cleanMath}`
+            : cleanMath;
+        const html = katex.renderToString(mathToRender, {
           displayMode: false,
           throwOnError: false,
           output: 'html',
@@ -187,7 +197,12 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
       /(\\(?:lim|sum|int|iint|iiint|prod|frac|dfrac|tfrac|sqrt|cbrt|mathbb|mathbf|mathit|mathrm|mathcal|vec|hat|bar|tilde|dot|ddot|operatorname)(?:_\{[^\}]+\}|\^\{[^\}]+\}|_[a-zA-Z0-9]+|\^[a-zA-Z0-9]+|\{(?:[^{}]|\{[^{}]*\})*\})+(?:\([^\)]+\))?)/g;
     processed = processed.replace(compoundRegex, (match) => {
       try {
-        const html = katex.renderToString(match.trim(), {
+        const cleanMatch = match.trim();
+        const mathToRender =
+          cleanMatch.startsWith('\\frac{') || cleanMatch.startsWith('\\dfrac{')
+            ? `\\displaystyle ${cleanMatch}`
+            : cleanMatch;
+        const html = katex.renderToString(mathToRender, {
           displayMode: false,
           throwOnError: false,
           output: 'html',

@@ -73,8 +73,11 @@ export function toCanonicalQuestion(
 
       return {
         id: optId,
-        text: richOpt?.text || optText,
+        text: richOpt?.text ?? optText,
         imageUrl: optImg,
+        displayMode: richOpt?.displayMode,
+        altText: richOpt?.altText,
+        ocrText: richOpt?.ocrText,
         contentBlocks: richOpt?.contentBlocks?.map(toCanonicalContentBlock),
       };
     });
@@ -334,6 +337,9 @@ export function toCompetitiveQuestion(cq: CanonicalQuestion): CompetitiveQuestio
       id: o.id,
       text: o.text,
       imageUrl: o.imageUrl,
+      displayMode: o.displayMode,
+      altText: o.altText,
+      ocrText: o.ocrText,
       contentBlocks: o.contentBlocks?.map(fromCanonicalContentBlock),
     })),
     correctAnswer: cq.answer.correctOptionId || (cq.answer.correctOptionIndex !== undefined ? String.fromCharCode(65 + cq.answer.correctOptionIndex) : ''),

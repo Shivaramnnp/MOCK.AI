@@ -1,6 +1,11 @@
 import {
   CompetitiveExam,
+  CompetitiveQuestion,
   ExamPaper,
+  ExamPresentationPaper,
+  ExamPresentationQuestion,
+  ExamSolutionItem,
+  ExamSolutionManifest,
   ExamTestSession,
   ExamResultSummary,
   SectionResultSummary,
@@ -10,13 +15,71 @@ import {
   EXAM_PAPERS_MAP,
   getPapersForExam,
   getPaperById,
+  registerExamPaper,
 } from '../data/exams/catalog';
 import { examRepository, paperRepository, questionRepository } from '../repositories';
 import { ExamSessionService } from './examSessionService';
 
-
 const ACTIVE_SESSION_STORAGE_KEY = 'mockai_active_exam_session';
 const ATTEMPT_HISTORY_STORAGE_KEY = 'mockai_exam_attempt_history';
+
+/**
+ * Strips all answer keys, ranges, and explanations to produce a presentation-only paper (R1).
+ */
+export function toExamPresentationPaper(paper: ExamPaper): ExamPresentationPaper {
+  const questions: ExamPresentationQuestion[] = paper.questions.map((q) => {
+    const {
+      correctAnswer: _ca,
+      correctAnswerIndex: _cai,
+      correctAnswerSet: _cas,
+      correctAnswerSets: _cass,
+      correctAnswerIndices: _cais,
+      answerRange: _ar,
+      answerRanges: _ars,
+      isMta: _mta,
+      explanation: _exp,
+      modelSolution: _ms,
+      ...presentationQuestion
+    } = q;
+    return {
+      ...presentationQuestion,
+      isPresentationOnly: true,
+    };
+  });
+
+  return {
+    ...paper,
+    questions,
+    isPresentationOnly: true,
+  };
+}
+
+/**
+ * Extracts isolated solution manifest from a full ExamPaper.
+ */
+export function extractSolutionManifest(paper: ExamPaper): ExamSolutionManifest {
+  return {
+    paperId: paper.id,
+    examId: paper.examId,
+    editionYear: paper.editionYear,
+    answerKeyVersion: paper.answerKeyVersion,
+    solutions: paper.questions.map((q) => ({
+      questionId: q.id,
+      questionNumber: q.questionNumber,
+      questionType: q.questionType,
+      correctAnswer: q.correctAnswer,
+      correctAnswerIndex: q.correctAnswerIndex,
+      correctAnswerSet: q.correctAnswerSet,
+      correctAnswerSets: q.correctAnswerSets,
+      correctAnswerIndices: q.correctAnswerIndices,
+      answerRange: q.answerRange,
+      answerRanges: q.answerRanges,
+      isMta: q.isMta,
+      explanation: q.explanation,
+      modelSolution: q.modelSolution,
+    })),
+  };
+}
 
 export class ExamService {
   /**
@@ -46,6 +109,13 @@ export class ExamService {
    */
   static getPaperById(paperId: string): ExamPaper | undefined {
     return getPaperById(paperId);
+  }
+
+  /**
+   * Dynamically register an ExamPaper / MockPaper into the runtime service.
+   */
+  static registerPaper(paper: ExamPaper): void {
+    registerExamPaper(paper);
   }
 
   // ── Async Remote Methods (Project 2) ──────────────────────────────────────
@@ -168,11 +238,26 @@ export class ExamService {
   }
 
   /**
+   * Converts an ExamPaper to a quarantined ExamPresentationPaper.
+   */
+  static toExamPresentationPaper(paper: ExamPaper): ExamPresentationPaper {
+    return toExamPresentationPaper(paper);
+  }
+
+  /**
+   * Extracts an isolated ExamSolutionManifest from an ExamPaper.
+   */
+  static extractSolutionManifest(paper: ExamPaper): ExamSolutionManifest {
+    return extractSolutionManifest(paper);
+  }
+
+  /**
    * Calculate exact score based on exam-specific negative marking rules.
    */
   static calculateExamResult(
     session: ExamTestSession,
-    paper: ExamPaper
+    paper: ExamPaper | ExamPresentationPaper,
+    manifest?: ExamSolutionManifest
   ): ExamResultSummary {
     if (paper.paperType === 'DESCRIPTIVE') {
       const descriptiveAnswers = session.userDescriptiveAnswers || {};
@@ -234,7 +319,33 @@ export class ExamService {
 
     const marksPerCorrect = paper.markingScheme.marksPerCorrect;
     const negativeMarks = paper.markingScheme.negativeMarks;
-    const questions = paper.questions;
+
+    // If a solution manifest is provided for an isolated presentation paper, merge answers for scoring
+    let effectiveQuestions: (CompetitiveQuestion | ExamPresentationQuestion)[] = paper.questions;
+    if (manifest && manifest.solutions && manifest.solutions.length > 0) {
+      const solMap = new Map<string, ExamSolutionItem>(
+        manifest.solutions.map((s) => [s.questionId, s])
+      );
+      effectiveQuestions = paper.questions.map((q, idx) => {
+        const sol = solMap.get(q.id) || manifest.solutions[idx];
+        if (!sol) return q;
+        return {
+          ...q,
+          correctAnswer: sol.correctAnswer,
+          correctAnswerIndex: sol.correctAnswerIndex,
+          correctAnswerSet: sol.correctAnswerSet,
+          correctAnswerSets: sol.correctAnswerSets,
+          correctAnswerIndices: sol.correctAnswerIndices,
+          answerRange: sol.answerRange,
+          answerRanges: sol.answerRanges,
+          isMta: sol.isMta,
+          explanation: sol.explanation,
+          modelSolution: sol.modelSolution,
+        } as CompetitiveQuestion;
+      });
+    }
+
+    const questions = effectiveQuestions as CompetitiveQuestion[];
 
     let totalScore = 0;
     let correctCount = 0;
@@ -257,6 +368,64 @@ export class ExamService {
         score: 0,
         accuracy: 0,
         timeSpentSeconds: 0,
+      };
+    }
+
+    // Check if Answer Key is unavailable (Section 9 & 31: Paper -> Mock without answers)
+    const isPresentation = (paper as any).isPresentationOnly;
+    const isAnswerKeyUnavailable =
+      paper.answerKeyStatus === 'UNAVAILABLE' ||
+      (isPresentation && !manifest) ||
+      questions.every(
+        (q) =>
+          !q.isMta &&
+          !q.correctAnswer &&
+          (!q.correctAnswerSet || q.correctAnswerSet.length === 0) &&
+          !q.answerRange &&
+          (!q.answerRanges || q.answerRanges.length === 0) &&
+          (q.correctAnswerIndex === undefined || q.correctAnswerIndex === -1)
+      );
+
+    if (isAnswerKeyUnavailable) {
+      let attemptedCount = 0;
+      questions.forEach((q, index) => {
+        const secSummary = sectionResults[q.sectionId];
+        const isAttempted =
+          session.userAnswers[index] !== undefined ||
+          (session.userMsqAnswers?.[index] && session.userMsqAnswers[index].length > 0) ||
+          (session.userNatAnswers?.[index] && session.userNatAnswers[index].trim().length > 0) ||
+          (session.userDescriptiveAnswers?.[index] && session.userDescriptiveAnswers[index].trim().length > 0);
+
+        if (isAttempted) {
+          attemptedCount += 1;
+          if (secSummary) secSummary.attempted += 1;
+        } else {
+          if (secSummary) secSummary.skipped += 1;
+        }
+      });
+
+      return {
+        sessionId: session.sessionId,
+        paperId: paper.id,
+        examId: paper.examId,
+        paperTitle: paper.title,
+        totalQuestions: paper.totalQuestions,
+        maxMarks: paper.totalMarks,
+        totalScore: null,
+        percentage: null,
+        accuracy: null,
+        correctCount: null,
+        wrongCount: null,
+        attemptedCount,
+        unansweredCount: questions.length - attemptedCount,
+        timeSpentSeconds: session.elapsedSeconds,
+        submittedAt: Date.now(),
+        sectionResults,
+        isScoreCalculated: false,
+        scoreStatus: 'PENDING_ANSWER_KEY',
+        answerKeyStatus: 'UNAVAILABLE',
+        answerKeyVersion: paper.answerKeyVersion,
+        scoringConfigVersion: paper.scoringConfigVersion,
       };
     }
 
@@ -422,10 +591,16 @@ export class ExamService {
       accuracy: overallAccuracy,
       correctCount,
       wrongCount,
+      attemptedCount: attemptedTotal,
       unansweredCount,
       timeSpentSeconds: session.elapsedSeconds,
       submittedAt: Date.now(),
       sectionResults,
+      isScoreCalculated: true,
+      scoreStatus: 'CALCULATED',
+      answerKeyStatus: paper.answerKeyStatus || 'AVAILABLE',
+      answerKeyVersion: paper.answerKeyVersion || 'v1_official',
+      scoringConfigVersion: paper.scoringConfigVersion || 'v1_standard',
     };
   }
 
@@ -434,9 +609,10 @@ export class ExamService {
    */
   static submitExamSession(
     session: ExamTestSession,
-    paper: ExamPaper
+    paper: ExamPaper | ExamPresentationPaper,
+    manifest?: ExamSolutionManifest
   ): ExamTestSession {
-    const result = this.calculateExamResult(session, paper);
+    const result = this.calculateExamResult(session, paper, manifest);
 
     const completedSession: ExamTestSession = {
       ...session,
