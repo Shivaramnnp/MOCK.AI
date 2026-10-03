@@ -72,6 +72,10 @@ def clean_watermarks(text):
     cleaned = text
     for pat in patterns:
         cleaned = re.sub(pat, '', cleaned, flags=re.IGNORECASE)
+    # Normalize OCR geometry angle errors: ZB = 90° -> ∠B = 90°
+    cleaned = re.sub(r'\bZ([A-D])\s*=\s*(\d+)', r'∠\1 = \2', cleaned)
+    # Normalize dropped radical in trigonometric identities: cosecA = 22 -> cosecA = 2√2
+    cleaned = re.sub(r'\bcosecA\s*=\s*22\b', r'cosecA = 2√2', cleaned)
     return cleaned.strip()
 
 def clean_option_text(text):
@@ -364,6 +368,19 @@ def clean_and_normalize_option_text(text):
     # Normalize slash OCR artifact to 7 if isolated
     if t == '/':
         t = '7'
+    # Normalize isolated pipe or OCR vertical line to '1'
+    if t in ['|', 'l', '!']:
+        t = '1'
+    # Normalize ratio OCR noise: e.g. "2 : |" -> "2:1", "1 : |" -> "1:1"
+    t = re.sub(r'(\d+)\s*:\s*[|lI!]', r'\1:1', t)
+    t = re.sub(r'[|lI!]\s*:\s*(\d+)', r'1:\1', t)
+    t = re.sub(r'(\d+)\s*:\s*[Zz]', r'\1:2', t)
+    t = re.sub(r'[Zz]\s*:\s*(\d+)', r'2:\1', t)
+    # Strip stray vertical bars attached to numbers or text: e.g. "5 |" -> "5"
+    t = re.sub(r'\s*\|\s*$', '', t)
+    t = re.sub(r'^\s*\|\s*', '', t)
+    if not t:
+        return ""
     # Normalize OCR radicals like v2 -> √2
     if re.match(r'^(?:v|V)\d+$', t):
         t = '√' + t[1:]

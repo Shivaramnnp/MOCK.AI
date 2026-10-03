@@ -21,6 +21,7 @@ function escapeHtml(text: string): string {
 export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className = '' }) => {
   const renderedHtml = useMemo(() => {
     if (!content) return '';
+    if (content.trim() === '|') return '1';
 
     // Tokens to store rendered KaTeX HTML placeholders
     const mathTokens: string[] = [];

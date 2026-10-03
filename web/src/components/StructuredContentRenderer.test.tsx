@@ -424,6 +424,27 @@ Identify the option that has the correct match between Column-I and Column-II.`;
       expect(container.textContent).toContain('28');
       expect(container.textContent).not.toContain('Option content missing');
     });
+
+    it('26. isolated pipe option text (e.g. "|") in OptionContentRenderer: MUST auto-heal to "1"', () => {
+      const { container } = render(
+        <OptionContentRenderer
+          fallbackText="|"
+        />
+      );
+      expect(container.textContent).toBe('1');
+      expect(container.textContent).not.toBe('|');
+      expect(container.textContent).not.toContain('Option content missing');
+    });
+
+    it('27. StructuredContentRenderer with fallbackText="|" and isOption=true: renders "1"', () => {
+      const { container } = render(
+        <StructuredContentRenderer
+          fallbackText="|"
+          isOption={true}
+        />
+      );
+      expect(container.textContent?.trim()).toBe('1');
+    });
   });
 });
 

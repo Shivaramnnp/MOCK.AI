@@ -71,9 +71,12 @@ export function toCanonicalQuestion(
       const richOpt = cq.richOptions?.find((r) => r.id === optId);
       const optImg = cq.optionImages?.[idx] || richOpt?.imageUrl || null;
 
+      const rawOptText = richOpt?.text ?? optText;
+      const normalizedText = typeof rawOptText === 'string' && rawOptText.trim() === '|' ? '1' : rawOptText;
+
       return {
         id: optId,
-        text: richOpt?.text ?? optText,
+        text: normalizedText,
         imageUrl: optImg,
         displayMode: richOpt?.displayMode,
         altText: richOpt?.altText,

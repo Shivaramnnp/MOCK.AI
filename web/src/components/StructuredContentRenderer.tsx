@@ -187,7 +187,9 @@ export const TextRenderer: React.FC<{ content: string; className?: string; isOpt
 }) => {
   if (!content) return null;
 
-  const blocks = parseMarkdownContent(content);
+  // Auto-heal isolated pipe OCR artifacts in options
+  const sanitizedContent = isOption && content.trim() === '|' ? '1' : content;
+  const blocks = parseMarkdownContent(sanitizedContent);
 
   return (
     <div className={`${isOption ? 'space-y-1.5 text-left' : 'space-y-3'} ${className}`}>
@@ -535,6 +537,7 @@ export const StructuredContentRenderer: React.FC<StructuredContentRendererProps>
 }) => {
   const optionClass = isOption ? 'option-content text-left w-full' : '';
   const combinedClass = `${optionClass} ${className}`.trim();
+  const sanitizedFallback = isOption && fallbackText.trim() === '|' ? '1' : fallbackText;
 
   if (blocks && blocks.length > 0) {
     return (
@@ -548,8 +551,8 @@ export const StructuredContentRenderer: React.FC<StructuredContentRendererProps>
     );
   }
 
-  if (fallbackText && fallbackText.trim().length > 0) {
-    return <TextRenderer content={fallbackText} className={combinedClass} isOption={isOption} />;
+  if (sanitizedFallback && sanitizedFallback.trim().length > 0) {
+    return <TextRenderer content={sanitizedFallback} className={combinedClass} isOption={isOption} />;
   }
 
   return null;

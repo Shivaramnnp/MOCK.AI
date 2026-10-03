@@ -56,6 +56,26 @@ describe('SSC CHSL 2024 Visual & Mathematical Fidelity Suite', () => {
       ]);
       expect(q68!.verificationStatus).toBe('VERIFIED');
     });
+
+    it('verifies Q64 trigonometry options have 1 instead of pipe symbol | and clean angle notation', () => {
+      const q64 = paper.questions.find((q) => q.questionNumber === 64);
+      expect(q64).toBeDefined();
+      expect(q64!.options).toEqual(['\\sqrt{2}', '1', '0', '2\\sqrt{2}']);
+      expect(q64!.options?.[1]).toBe('1');
+      expect(q64!.options?.[1]).not.toBe('|');
+      expect(q64!.correctAnswer).toBe('B');
+      expect(q64!.questionText).toContain('∠B = 90°');
+      expect(q64!.questionText).not.toContain('ZB = 90°');
+      expect(q64!.questionText).toContain('cosecA = 2\\sqrt{2}');
+    });
+
+    it('verifies Q47 dice problem stem and options are restored without Z artifact', () => {
+      const q47 = paper.questions.find((q) => q.questionNumber === 47);
+      expect(q47).toBeDefined();
+      expect(q47!.options).toEqual(['5', '3', '7', '8']);
+      expect(q47!.options?.includes('Z')).toBe(false);
+      expect(q47!.questionText).toContain('Six numbers 1, 3, 5, 6, 7 and 8 are written on different faces of a dice');
+    });
   });
 
   describe('2. Prompt-Figure Separation & Deduplication', () => {
