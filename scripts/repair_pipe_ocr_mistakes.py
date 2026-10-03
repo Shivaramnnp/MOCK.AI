@@ -164,7 +164,10 @@ def apply_repairs():
                 patch = q_dict[qnum]
                 if 'options' in patch:
                     q['options'] = patch['options']
-                    if 'richOptions' in q and q['richOptions']:
+                    if not any(opt.startswith('Option (') for opt in patch['options']):
+                        q['optionImages'] = None
+                        q['richOptions'] = None
+                    elif 'richOptions' in q and q['richOptions']:
                         for idx, opt_text in enumerate(patch['options']):
                             if idx < len(q['richOptions']):
                                 q['richOptions'][idx]['text'] = opt_text

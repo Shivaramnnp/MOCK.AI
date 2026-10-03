@@ -147,8 +147,16 @@
       "sectionId": "quant",
       "sectionName": "Mathematical Abilities",
       "questionText": "",
-      "contentBlocks": null,
-      "contentTypes": null,
+      "contentBlocks": [
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q3_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "image"
+      ],
       "options": [
         "8",
         "9",
@@ -160,9 +168,16 @@
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q3_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q3_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q3_diag.png"
+        }
+      ],
       "marks": 3.0,
       "negativeMarks": 1.0,
       "examId": "ssc-chsl",
@@ -171,7 +186,7 @@
       "shift": "Shift 1",
       "tier": "Tier 2",
       "language": "English",
-      "verificationStatus": "REVIEW_REQUIRED"
+      "verificationStatus": "VERIFIED"
     },
     {
       "id": "ssc-chsl-2024-18nov-s1-tier2-q4",
@@ -184,115 +199,38 @@
           "type": "text",
           "content": "Q\n.\n4",
           "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_diag.png",
+          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "text"
+        "text",
+        "image"
       ],
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "a",
+        "1",
+        "a",
+        "1"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_a.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_b.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_c.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_a.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option A figure",
-          "ocrText": "a",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_a.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option A figure",
-              "ocrText": "a",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_b.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option B figure",
-          "ocrText": "P|",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_b.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option B figure",
-              "ocrText": "P|",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_c.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option C figure",
-          "ocrText": "iz!",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_c.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option C figure",
-              "ocrText": "iz!",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_d.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option D figure",
-          "ocrText": "P|",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_opt_d.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option D figure",
-              "ocrText": "P|",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q4_diag.png"
+        }
+      ],
       "marks": 3.0,
       "negativeMarks": 1.0,
       "examId": "ssc-chsl",
@@ -320,13 +258,103 @@
         "text"
       ],
       "options": [
-        "₹2,900",
-        "<3,100",
-        "₹2,800",
-        "₹3,200"
+        "",
+        "",
+        "",
+        ""
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_a.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_b.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_c.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_a.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "₹2,900",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_a.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "₹2,900",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_b.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": "<3,100",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_b.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": "<3,100",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_c.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": "2,800",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_c.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": "2,800",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_d.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": "₹3,200",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q5_opt_d.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": "₹3,200",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        }
+      ],
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
@@ -394,10 +422,16 @@
           "type": "text",
           "content": "Q\n.\n7",
           "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q7_diag.png",
+          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "text"
+        "text",
+        "image"
       ],
       "options": [
         "7",
@@ -410,9 +444,16 @@
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q7_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q7_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q7_diag.png"
+        }
+      ],
       "marks": 3.0,
       "negativeMarks": 1.0,
       "examId": "ssc-chsl",
@@ -674,10 +715,16 @@
           "type": "text",
           "content": "Q\n.\n1\n4",
           "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q14_diag.png",
+          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "text"
+        "text",
+        "image"
       ],
       "options": [
         "3",
@@ -690,9 +737,16 @@
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
+      "diagramUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q14_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q14_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q14_diag.png"
+        }
+      ],
       "marks": 3.0,
       "negativeMarks": 1.0,
       "examId": "ssc-chsl",
@@ -920,13 +974,103 @@
         "text"
       ],
       "options": [
-        "mz",
-        "pe",
-        "pe",
-        "mz"
+        "",
+        "",
+        "",
+        ""
       ],
-      "optionImages": null,
-      "richOptions": null,
+      "optionImages": [
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_a.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_b.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_c.png",
+        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_d.png"
+      ],
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_a.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "a",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_a.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "a",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_b.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": ";",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_b.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": ";",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_c.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": ";",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_c.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": ";",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_d.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": "iz",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-18nov-s1-tier2/q20_opt_d.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": "iz",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
+        }
+      ],
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
@@ -1201,9 +1345,9 @@
       ],
       "options": [
         "\\frac{1}{100}",
-        "788",
-        "700",
-        "50"
+        "\\frac{1}{288}",
+        "\\frac{1}{200}",
+        "\\frac{1}{50}"
       ],
       "optionImages": null,
       "richOptions": null,
@@ -1281,7 +1425,7 @@
       ],
       "options": [
         "50°",
-        "60",
+        "60°",
         "80°",
         "70"
       ],

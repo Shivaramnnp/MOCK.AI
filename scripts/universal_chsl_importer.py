@@ -72,10 +72,6 @@ def clean_watermarks(text):
     cleaned = text
     for pat in patterns:
         cleaned = re.sub(pat, '', cleaned, flags=re.IGNORECASE)
-    # Normalize OCR geometry angle errors: ZB = 90° -> ∠B = 90°
-    cleaned = re.sub(r'\bZ([A-D])\s*=\s*(\d+)', r'∠\1 = \2', cleaned)
-    # Normalize dropped radical in trigonometric identities: cosecA = 22 -> cosecA = 2√2
-    cleaned = re.sub(r'\bcosecA\s*=\s*22\b', r'cosecA = 2√2', cleaned)
     return cleaned.strip()
 
 def clean_option_text(text):
@@ -95,10 +91,15 @@ def ocr_crop(crop, psm=7):
     scale = max(6, int(150 / max(1, crop.height)))
     lg = crop.resize((crop.width * scale, crop.height * scale), Image.Resampling.LANCZOS)
     pad = ImageOps.expand(lg, border=30, fill=255)
-    pad_bin = pad.point(lambda p: 255 if p > 165 else 0)
-    t = pytesseract.image_to_string(pad_bin, config=f'--psm {psm}').strip()
+    t = pytesseract.image_to_string(pad, config=f'--psm {psm}').strip()
+    if not t:
+        pad_bin = pad.point(lambda p: 255 if p > 165 else 0)
+        t = pytesseract.image_to_string(pad_bin, config=f'--psm {psm}').strip()
     if not t and psm != 6:
-        t = pytesseract.image_to_string(pad_bin, config='--psm 6').strip()
+        t = pytesseract.image_to_string(pad, config='--psm 6').strip()
+        if not t:
+            pad_bin = pad.point(lambda p: 255 if p > 165 else 0)
+            t = pytesseract.image_to_string(pad_bin, config='--psm 6').strip()
     return clean_watermarks(t)
 
 def refine_diagram_crop(img_bytes, ext):
@@ -652,7 +653,7 @@ def parse_tcs_ion_cbt(pdf_path, year):
             xref = info[0]
             meta = doc.extract_image(xref)
             w, h = meta['width'], meta['height']
-            if (w, h) in AD_SIZES or (w, h) in [(595, 842), (595, 850), (600, 850), (595, 841), (464, 137), (2022, 423), (834, 719)] or (h <= 22 and w >= 300):
+            if (w, h) in AD_SIZES or (w, h) in [(595, 842), (595, 850), (600, 850), (595, 841)] or ((h <= 3 and w >= 100) or (w <= 3 and h >= 100)):
                 continue
             rects = page.get_image_rects(xref)
             for r in rects:
@@ -1418,8 +1419,19 @@ if __name__ == '__main__':
         fpath = folders.get(target_year)
         if not fpath or not os.path.exists(fpath):
             fpath = fpath.replace('exam ssc chsl/', 'exam ssc/') if fpath else None
-        pdf_files = sorted(glob.glob(os.path.join(fpath, '*.pdf'))) if fpath else []
-        print(f"Processing SSC CHSL {target_year}: {len(pdf_files)} PDFs in parallel...")
+        raw_files = sorted(glob.glob(os.path.join(fpath, '*.pdf'))) if fpath else []
+        seen_hashes = set()
+        pdf_files = []
+        for p in raw_files:
+            try:
+                with open(p, 'rb') as fp:
+                    h = hashlib.sha256(fp.read()).hexdigest()
+                if h not in seen_hashes:
+                    seen_hashes.add(h)
+                    pdf_files.append(p)
+            except Exception:
+                pdf_files.append(p)
+        print(f"Processing SSC CHSL {target_year}: {len(pdf_files)} unique PDFs in parallel...")
         import concurrent.futures
         workers = min(6, os.cpu_count() or 4)
         with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
