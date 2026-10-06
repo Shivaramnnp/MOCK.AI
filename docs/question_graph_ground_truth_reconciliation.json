@@ -1,0 +1,1249 @@
+{
+  "reconciliationMetadata": {
+    "timestamp": "2026-10-06T11:04:01.971Z",
+    "engine": "UADUE QuestionGraph Forensic Ground-Truth Reconciler",
+    "totalDocuments": 4,
+    "totalCorpusPages": 147,
+    "auditedPagesCount": 24,
+    "auditedPercentage": "16.33%",
+    "epistemologicalStatus": "FORENSIC GROUND-TRUTH RECONCILIATION COMPLETE — DEFECTS CATALOGUED"
+  },
+  "documentSummaries": [
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "title": "UPSC CSE Prelims 2023 GS Paper 1",
+      "authority": "UPSC",
+      "auditedPages": 6,
+      "expectedQuestions": 17,
+      "detectedQuestions": 10,
+      "expectedOptions": 68,
+      "detectedOptions": 144,
+      "expectedDiagrams": 0,
+      "detectedDiagrams": 0
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "title": "SSC CHSL 2023 Tier 1 02 Aug Shift 2",
+      "authority": "SSC",
+      "auditedPages": 6,
+      "expectedQuestions": 19,
+      "detectedQuestions": 19,
+      "expectedOptions": 76,
+      "detectedOptions": 85,
+      "expectedDiagrams": 0,
+      "detectedDiagrams": 50
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "title": "GATE 2024 Computer Science (CS1)",
+      "authority": "GATE_IIT",
+      "auditedPages": 6,
+      "expectedQuestions": 9,
+      "detectedQuestions": 12,
+      "expectedOptions": 36,
+      "detectedOptions": 53,
+      "expectedDiagrams": 1,
+      "detectedDiagrams": 67
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "title": "JEE Advanced 2023 Paper 1",
+      "authority": "NTA_JEE",
+      "auditedPages": 6,
+      "expectedQuestions": 13,
+      "detectedQuestions": 13,
+      "expectedOptions": 32,
+      "detectedOptions": 30,
+      "expectedDiagrams": 4,
+      "detectedDiagrams": 7
+    }
+  ],
+  "pageAudits": [
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 1,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "Front cover / candidate instructions (Test Booklet Series A, XDTG-F-GST)",
+        "expectedQuestions": [],
+        "expectedOptionCount": 0,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 802
+      },
+      "expectedQuestions": [],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 5,
+        "detectedQuestionLabels": [
+          "1.",
+          "2.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "detectedOptionCount": 3,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 10,
+        "questionCandidateIds": [
+          "qb_doc_14281f205282431f_node_p1_text_43",
+          "qb_doc_14281f205282431f_node_p1_text_122",
+          "qb_doc_14281f205282431f_node_p1_text_207",
+          "qb_doc_14281f205282431f_node_p1_text_259",
+          "qb_doc_14281f205282431f_node_p1_text_339"
+        ]
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 0 questions (), but detected 5 (1., 2., 3., 4., 5.)",
+        "Elevated Option Count: Expected ~0 options, but detected 3. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 2,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "Hindi side: Questions 1 to 4 with multi-statement clauses and (a)-(d) options",
+        "expectedQuestions": [
+          "1.",
+          "2.",
+          "3.",
+          "4."
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 523
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "1.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "2.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "3.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "4.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 2,
+        "detectedQuestionLabels": [
+          "6.",
+          "7."
+        ],
+        "detectedOptionCount": 29,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 12,
+        "questionCandidateIds": [
+          "qb_doc_14281f205282431f_node_p2_text_1177",
+          "qb_doc_14281f205282431f_node_p2_text_1233"
+        ]
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 4 questions (1., 2., 3., 4.), but detected 2 (6., 7.)",
+        "Elevated Option Count: Expected ~16 options, but detected 29. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 3,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "English side: Questions 1 to 4 with multi-statement clauses and (a)-(d) options",
+        "expectedQuestions": [
+          "1.",
+          "2.",
+          "3.",
+          "4."
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 623
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "1.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "2.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "3.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "4.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 0,
+        "detectedQuestionLabels": [],
+        "detectedOptionCount": 44,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 3,
+        "questionCandidateIds": []
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 4 questions (1., 2., 3., 4.), but detected 0 ()",
+        "Elevated Option Count: Expected ~16 options, but detected 44. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "FAIL"
+    },
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 4,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "Hindi side: Questions 5 to 7",
+        "expectedQuestions": [
+          "5.",
+          "6.",
+          "7."
+        ],
+        "expectedOptionCount": 12,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 596
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "5.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "6.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "7.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 0,
+        "detectedQuestionLabels": [],
+        "detectedOptionCount": 17,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 17,
+        "questionCandidateIds": []
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 3 questions (5., 6., 7.), but detected 0 ()"
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "FAIL"
+    },
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 5,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "English side: Questions 8 to 10 (Congo Basin, Marsupials, Invasive Species)",
+        "expectedQuestions": [
+          "8.",
+          "9.",
+          "10."
+        ],
+        "expectedOptionCount": 12,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 633
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "8.",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "9.",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "10.",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "8.",
+          "9.",
+          "10."
+        ],
+        "detectedOptionCount": 25,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 0,
+        "questionCandidateIds": [
+          "qb_doc_14281f205282431f_node_p5_text_2510",
+          "qb_doc_14281f205282431f_node_p5_text_2552",
+          "qb_doc_14281f205282431f_node_p5_text_2656"
+        ]
+      },
+      "discrepancies": [
+        "Elevated Option Count: Expected ~12 options, but detected 25. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+      "pageNumber": 6,
+      "sourceHash": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+      "visualGroundTruth": {
+        "pageDescription": "Hindi side: Questions 11 to 13",
+        "expectedQuestions": [
+          "11.",
+          "12.",
+          "13."
+        ],
+        "expectedOptionCount": 12,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 469
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "11.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "12.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "13.",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 0,
+        "detectedQuestionLabels": [],
+        "detectedOptionCount": 26,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 16,
+        "questionCandidateIds": []
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 3 questions (11., 12., 13.), but detected 0 ()",
+        "Elevated Option Count: Expected ~12 options, but detected 26. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "FAIL"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 1,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: English Comprehension Q.1 to Q.3 (spelling, series, algebra)",
+        "expectedQuestions": [
+          "Q.1",
+          "Q.2",
+          "Q.3"
+        ],
+        "expectedOptionCount": 12,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 439
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.1",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.2",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.3",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "Q.1",
+          "Q.2",
+          "Q.3"
+        ],
+        "detectedOptionCount": 12,
+        "detectedDiagramCount": 38,
+        "detectedTableCount": 0,
+        "detectedMathCount": 7,
+        "questionCandidateIds": [
+          "qb_doc_79911f24f2ca3438_node_p1_text_0",
+          "qb_doc_79911f24f2ca3438_node_p1_text_23",
+          "qb_doc_79911f24f2ca3438_node_p1_text_46"
+        ]
+      },
+      "discrepancies": [
+        "Elevated Diagram Count: Expected 0 assessment figures, but detected 38. Root cause: vector layout divider rules, border boxes, and background artifacts clustered as diagram candidates."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 2,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: Empty spacer / visual placeholder page",
+        "expectedQuestions": [],
+        "expectedOptionCount": 0,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 1
+      },
+      "expectedQuestions": [],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 0,
+        "detectedQuestionLabels": [],
+        "detectedOptionCount": 0,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 0,
+        "questionCandidateIds": []
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 3,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: Q.4 to Q.7 (passive voice, idioms, sentence improvement)",
+        "expectedQuestions": [
+          "Q.4",
+          "Q.5",
+          "Q.6",
+          "Q.7"
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 115
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.4",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.5",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.6",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.7",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 4,
+        "detectedQuestionLabels": [
+          "Q.4",
+          "Q.5",
+          "Q.6",
+          "Q.7"
+        ],
+        "detectedOptionCount": 16,
+        "detectedDiagramCount": 3,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_79911f24f2ca3438_node_p3_text_88",
+          "qb_doc_79911f24f2ca3438_node_p3_text_111",
+          "qb_doc_79911f24f2ca3438_node_p3_text_135",
+          "qb_doc_79911f24f2ca3438_node_p3_text_160"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 4,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: Q.8 to Q.11 (jumbled sentences, vocabulary)",
+        "expectedQuestions": [
+          "Q.8",
+          "Q.9",
+          "Q.10",
+          "Q.11"
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 119
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.8",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.9",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.10",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.11",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 4,
+        "detectedQuestionLabels": [
+          "Q.8",
+          "Q.9",
+          "Q.10",
+          "Q.11"
+        ],
+        "detectedOptionCount": 25,
+        "detectedDiagramCount": 3,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_79911f24f2ca3438_node_p4_text_184",
+          "qb_doc_79911f24f2ca3438_node_p4_text_213",
+          "qb_doc_79911f24f2ca3438_node_p4_text_236",
+          "qb_doc_79911f24f2ca3438_node_p4_text_262"
+        ]
+      },
+      "discrepancies": [
+        "Elevated Option Count: Expected ~16 options, but detected 25. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 5,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: Q.12 to Q.15 (synonyms, comprehension)",
+        "expectedQuestions": [
+          "Q.12",
+          "Q.13",
+          "Q.14",
+          "Q.15"
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 106
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.12",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.13",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.14",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.15",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 4,
+        "detectedQuestionLabels": [
+          "Q.12",
+          "Q.13",
+          "Q.14",
+          "Q.15"
+        ],
+        "detectedOptionCount": 16,
+        "detectedDiagramCount": 3,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_79911f24f2ca3438_node_p5_text_284",
+          "qb_doc_79911f24f2ca3438_node_p5_text_305",
+          "qb_doc_79911f24f2ca3438_node_p5_text_327",
+          "qb_doc_79911f24f2ca3438_node_p5_text_349"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-SSC-CHSL-2023-TIER1-02AUG-S2",
+      "pageNumber": 6,
+      "sourceHash": "79911f24f2ca34382b976019013901ec4678c6c07cd1fef3b84e277377dde7ac",
+      "visualGroundTruth": {
+        "pageDescription": "TCS Sheet: Q.16 to Q.19 (idioms, error detection)",
+        "expectedQuestions": [
+          "Q.16",
+          "Q.17",
+          "Q.18",
+          "Q.19"
+        ],
+        "expectedOptionCount": 16,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 0,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 105
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.16",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.17",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.18",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.19",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 4,
+        "detectedQuestionLabels": [
+          "Q.16",
+          "Q.17",
+          "Q.18",
+          "Q.19"
+        ],
+        "detectedOptionCount": 16,
+        "detectedDiagramCount": 3,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_79911f24f2ca3438_node_p6_text_371",
+          "qb_doc_79911f24f2ca3438_node_p6_text_392",
+          "qb_doc_79911f24f2ca3438_node_p6_text_414",
+          "qb_doc_79911f24f2ca3438_node_p6_text_436"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 1,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "General Aptitude: Q.1 (passage inference) and Q.2 (sentence completion)",
+        "expectedQuestions": [
+          "Q.1",
+          "Q.2"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 2,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 1019
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.1",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.2",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 4,
+        "detectedQuestionLabels": [
+          "Q.1",
+          "Q.5",
+          "Q.1",
+          "Q. 2"
+        ],
+        "detectedOptionCount": 8,
+        "detectedDiagramCount": 61,
+        "detectedTableCount": 0,
+        "detectedMathCount": 2,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p1_text_19",
+          "qb_doc_18cf9ac15c01bdbf_node_p1_text_23",
+          "qb_doc_18cf9ac15c01bdbf_node_p1_text_25",
+          "qb_doc_18cf9ac15c01bdbf_node_p1_text_51"
+        ]
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 2 questions (Q.1, Q.2), but detected 4 (Q.1, Q.5, Q.1, Q. 2)",
+        "Elevated Diagram Count: Expected 0 assessment figures, but detected 61. Root cause: vector layout divider rules, border boxes, and background artifacts clustered as diagram candidates."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 2,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "General Aptitude: Q.3 (sequence) and Q.4 (ratio percentages)",
+        "expectedQuestions": [
+          "Q.3",
+          "Q.4"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 4,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 73
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.3",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "Q.4",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 2,
+        "detectedQuestionLabels": [
+          "Q. 3",
+          "Q. 4"
+        ],
+        "detectedOptionCount": 8,
+        "detectedDiagramCount": 1,
+        "detectedTableCount": 0,
+        "detectedMathCount": 0,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p2_text_138",
+          "qb_doc_18cf9ac15c01bdbf_node_p2_text_166"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 3,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "General Aptitude: Q.5 (combinatorics/equations)",
+        "expectedQuestions": [
+          "Q.5"
+        ],
+        "expectedOptionCount": 4,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 6,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 96
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.5",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 1,
+        "detectedQuestionLabels": [
+          "Q. 5"
+        ],
+        "detectedOptionCount": 4,
+        "detectedDiagramCount": 1,
+        "detectedTableCount": 0,
+        "detectedMathCount": 1,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p3_text_210"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 4,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "Section Header (Q.6-Q.10 Carry TWO marks Each) & Q.6",
+        "expectedQuestions": [
+          "Q.6"
+        ],
+        "expectedOptionCount": 4,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 2,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 133
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.6",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "Q.6",
+          "Q.10",
+          "Q. 6"
+        ],
+        "detectedOptionCount": 25,
+        "detectedDiagramCount": 1,
+        "detectedTableCount": 0,
+        "detectedMathCount": 0,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p4_text_305",
+          "qb_doc_18cf9ac15c01bdbf_node_p4_text_309",
+          "qb_doc_18cf9ac15c01bdbf_node_p4_text_311"
+        ]
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 1 questions (Q.6), but detected 3 (Q.6, Q.10, Q. 6)",
+        "Elevated Option Count: Expected ~4 options, but detected 25. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 5,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "General Aptitude: Q.7 (geometric logic)",
+        "expectedQuestions": [
+          "Q.7"
+        ],
+        "expectedOptionCount": 4,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 3,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 53
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.7",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 1,
+        "detectedQuestionLabels": [
+          "Q. 7"
+        ],
+        "detectedOptionCount": 4,
+        "detectedDiagramCount": 1,
+        "detectedTableCount": 0,
+        "detectedMathCount": 5,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p5_text_437"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-GATE-2024-CSIT",
+      "pageNumber": 6,
+      "sourceHash": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd",
+      "visualGroundTruth": {
+        "pageDescription": "General Aptitude: Q.8 (pie-chart/graph) and Q.9",
+        "expectedQuestions": [
+          "Q.8",
+          "Q.9"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 1,
+        "expectedTableCount": 0,
+        "expectedMathCount": 4,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 99
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.8",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        },
+        {
+          "expectedNumber": "Q.9",
+          "ownershipStatus": "MISSED_OR_MERGED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 1,
+        "detectedQuestionLabels": [
+          "Q. 8"
+        ],
+        "detectedOptionCount": 4,
+        "detectedDiagramCount": 2,
+        "detectedTableCount": 0,
+        "detectedMathCount": 0,
+        "questionCandidateIds": [
+          "qb_doc_18cf9ac15c01bdbf_node_p6_text_489"
+        ]
+      },
+      "discrepancies": [
+        "Question Count Discrepancy: Expected 2 questions (Q.8, Q.9), but detected 1 (Q. 8)"
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 1,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Physics Section 1: Instructions & Q.1 (capacitors/mechanics with diagram)",
+        "expectedQuestions": [
+          "Q.1"
+        ],
+        "expectedOptionCount": 4,
+        "expectedDiagramCount": 1,
+        "expectedTableCount": 0,
+        "expectedMathCount": 6,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 364
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.1",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 1,
+        "detectedQuestionLabels": [
+          "Q.1"
+        ],
+        "detectedOptionCount": 4,
+        "detectedDiagramCount": 7,
+        "detectedTableCount": 0,
+        "detectedMathCount": 4,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p1_text_132"
+        ]
+      },
+      "discrepancies": [
+        "Elevated Diagram Count: Expected 1 assessment figures, but detected 7. Root cause: vector layout divider rules, border boxes, and background artifacts clustered as diagram candidates."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 2,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Physics Section 1: Q.2 and Q.3 (thermodynamics & kinematics)",
+        "expectedQuestions": [
+          "Q.2",
+          "Q.3"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 1,
+        "expectedTableCount": 0,
+        "expectedMathCount": 8,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 445
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.2",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.3",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 2,
+        "detectedQuestionLabels": [
+          "Q.2",
+          "Q.3"
+        ],
+        "detectedOptionCount": 8,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p2_text_199",
+          "qb_doc_7823ad451ebd269f_node_p2_text_368"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 3,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Physics Section 2 (Numerical): Q.4, Q.5, Q.6 (no options, numerical answer)",
+        "expectedQuestions": [
+          "Q.4",
+          "Q.5",
+          "Q.6"
+        ],
+        "expectedOptionCount": 0,
+        "expectedDiagramCount": 1,
+        "expectedTableCount": 0,
+        "expectedMathCount": 12,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 450
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.4",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.5",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.6",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "Q.4",
+          "Q.5",
+          "Q.6"
+        ],
+        "detectedOptionCount": 12,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 9,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p3_text_704",
+          "qb_doc_7823ad451ebd269f_node_p3_text_824",
+          "qb_doc_7823ad451ebd269f_node_p3_text_992"
+        ]
+      },
+      "discrepancies": [
+        "Elevated Option Count: Expected ~0 options, but detected 12. Root cause: text lines or statement bullets matched option prefix regex."
+      ],
+      "unresolvedItems": [],
+      "reviewerStatus": "PARTIAL"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 4,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Physics Section 3: Q.7 (parabola normal/mechanics equation)",
+        "expectedQuestions": [
+          "Q.7"
+        ],
+        "expectedOptionCount": 4,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 6,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 79
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.7",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 1,
+        "detectedQuestionLabels": [
+          "Q.7"
+        ],
+        "detectedOptionCount": 4,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 4,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p4_text_1094"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 5,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Physics Section 3: Q.8 to Q.10 (optics/circuits)",
+        "expectedQuestions": [
+          "Q.8",
+          "Q.9",
+          "Q.10"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 1,
+        "expectedTableCount": 0,
+        "expectedMathCount": 10,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 459
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.8",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.9",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.10",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "Q.8",
+          "Q.9",
+          "Q.10"
+        ],
+        "detectedOptionCount": 2,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p5_text_1173",
+          "qb_doc_7823ad451ebd269f_node_p5_text_1314",
+          "qb_doc_7823ad451ebd269f_node_p5_text_1490"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    },
+    {
+      "documentId": "REAL-JEE-ADVANCED-2023-PAPER1",
+      "pageNumber": 6,
+      "sourceHash": "7823ad451ebd269ffc1dcb36e2c29f2dff506a50a4a0f663f98b99864fa955be",
+      "visualGroundTruth": {
+        "pageDescription": "Chemistry Section 1: Instructions & Q.11, Q.12, Q.13",
+        "expectedQuestions": [
+          "Q.11",
+          "Q.12",
+          "Q.13"
+        ],
+        "expectedOptionCount": 8,
+        "expectedDiagramCount": 0,
+        "expectedTableCount": 0,
+        "expectedMathCount": 8,
+        "hasSharedStimulus": false,
+        "totalPhysicalElementsOnPage": 318
+      },
+      "expectedQuestions": [
+        {
+          "expectedNumber": "Q.11",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.12",
+          "ownershipStatus": "DETECTED"
+        },
+        {
+          "expectedNumber": "Q.13",
+          "ownershipStatus": "DETECTED"
+        }
+      ],
+      "questionGraphOutput": {
+        "detectedQuestionCount": 3,
+        "detectedQuestionLabels": [
+          "Q.11",
+          "Q.12",
+          "Q.13"
+        ],
+        "detectedOptionCount": 0,
+        "detectedDiagramCount": 0,
+        "detectedTableCount": 0,
+        "detectedMathCount": 8,
+        "questionCandidateIds": [
+          "qb_doc_7823ad451ebd269f_node_p6_text_1632",
+          "qb_doc_7823ad451ebd269f_node_p6_text_1689",
+          "qb_doc_7823ad451ebd269f_node_p6_text_1873"
+        ]
+      },
+      "discrepancies": [],
+      "unresolvedItems": [],
+      "reviewerStatus": "PASS"
+    }
+  ]
+}
