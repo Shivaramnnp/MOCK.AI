@@ -170,6 +170,7 @@ export type AppRoute =
   | 'home'
   | 'explore'
   | 'explore_exam'
+  | 'topic_practice'
   | 'exam_player'
   | 'exam_results'
   | 'exam_review'
@@ -414,6 +415,18 @@ export interface ExamPaper {
   answerKeyVersion?: string;
   /** Version of scoring configuration applied */
   scoringConfigVersion?: string;
+  /** Testing mode for simulation vs practice (strictly two official product modes) */
+  testingMode?: 'FULL_LENGTH' | 'TOPIC_PRACTICE';
+  /** Whether the test has no countdown timer */
+  isUntimed?: boolean;
+  /** Identifies generated topic practice papers */
+  isTopicPractice?: boolean;
+  /** Whether this practice paper explicitly opted into provisional (rule-based) questions */
+  isProvisionalPractice?: boolean;
+  /** Topics selected for this test */
+  selectedTopics?: string[];
+  /** Subject selected for this test */
+  selectedSubject?: string;
 }
 
 /**
@@ -476,6 +489,29 @@ export interface SectionResultSummary {
   timeSpentSeconds: number;
 }
 
+export interface TopicResultSummary {
+  topicId: string;
+  topicName: string;
+  totalQuestions: number;
+  maxMarks: number;
+  attempted: number;
+  correct: number;
+  wrong: number;
+  skipped: number;
+  score: number;
+  accuracy: number; // percentage
+}
+
+export interface DifficultyResultSummary {
+  difficulty: 'EASY' | 'MEDIUM' | 'HARD';
+  totalQuestions: number;
+  attempted: number;
+  correct: number;
+  wrong: number;
+  score: number;
+  accuracy: number; // percentage
+}
+
 export interface ExamResultSummary {
   sessionId: string;
   paperId: string;
@@ -493,6 +529,10 @@ export interface ExamResultSummary {
   timeSpentSeconds: number;
   submittedAt: number;
   sectionResults: Record<string, SectionResultSummary>;
+  /** Topic-wise breakdown for active test evaluation */
+  topicResults?: Record<string, TopicResultSummary>;
+  /** Difficulty-wise breakdown (1-mark vs 2-mark in GATE) */
+  difficultyResults?: Record<string, DifficultyResultSummary>;
   /** Indicates whether score calculation was possible (false if paper has no answer key) */
   isScoreCalculated?: boolean;
   /** Formal semantic status of score calculation */
@@ -503,6 +543,24 @@ export interface ExamResultSummary {
   answerKeyVersion?: string;
   /** Version of scoring configuration used to produce this result snapshot */
   scoringConfigVersion?: string;
+  /** Authoritative server evaluation indicators */
+  isAuthoritative?: boolean;
+  evaluationRunId?: string;
+  attempted?: number;
+  correct?: number;
+  incorrect?: number;
+  unanswered?: number;
+  totalRawScore?: number | null;
+  totalNormalizedScore?: number | null;
+  itemScores?: Record<
+    string,
+    {
+      isCorrect: boolean;
+      marksAwarded: number;
+      penaltyDeducted: number;
+      netScore: number;
+    }
+  >;
 }
 
 export type ExamSessionStatus =
@@ -531,6 +589,7 @@ export interface ExamTestSession {
   durationSeconds: number;
   timeRemainingSeconds: number;
   elapsedSeconds: number;
+  isUntimed?: boolean;
   userAnswers: Record<number, number>; // questionIndex (0-99) -> optionIndex (0-3)
   userMsqAnswers?: Record<number, number[]>; // questionIndex -> list of selected option indices
   userNatAnswers?: Record<number, string>; // questionIndex -> entered numeric string value
@@ -541,6 +600,7 @@ export interface ExamTestSession {
   canonicalAnswers?: Record<string, any>; // canonical questionId -> student answer response
   canonicalQuestionStatuses?: Record<string, QuestionAttemptStatus>; // canonical questionId -> QuestionAttemptStatus
   version: number; // Revision counter for concurrent multi-device sync
+  deliveryMode?: 'AUTHORITATIVE' | 'CLIENT';
   result?: ExamResultSummary;
 }
 
@@ -837,6 +897,4 @@ export interface CommunityNotification {
   readAt?: string | null;
   createdAt: string;
 }
-
-
-
+export * from './staffTesting';

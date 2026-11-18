@@ -238,23 +238,39 @@ export class ReadingOrderEngine {
     for (let bIdx = 0; bIdx < bands.length; bIdx++) {
       const band = bands[bIdx];
 
-      if (band.length === 1) {
-        // Single element band: strictly sequential
-        const node = band[0];
-        sortedSequence.push(node.nodeId);
+      const isAllText = band.every((n) => n.nodeType === 'TEXT_RUN' || n.nodeType === 'GLYPH_RUN');
 
+      if (band.length === 1 || isAllText) {
+        // Sequential text reading: words across the line left-to-right
+        for (const node of band) {
+          sortedSequence.push(node.nodeId);
+        }
+
+        // Connect previous band tails to the first element of this band
         for (const prevId of previousBandTails) {
           edges.push({
             fromNodeId: prevId,
-            toNodeId: node.nodeId,
+            toNodeId: band[0].nodeId,
             orderType: 'SEQUENTIAL',
             confidence: 0.95,
             isAmbiguous: false,
           });
         }
-        previousBandTails = [node.nodeId];
+
+        // Connect elements within the line sequentially left-to-right
+        for (let i = 0; i < band.length - 1; i++) {
+          edges.push({
+            fromNodeId: band[i].nodeId,
+            toNodeId: band[i + 1].nodeId,
+            orderType: 'SEQUENTIAL',
+            confidence: 0.95,
+            isAmbiguous: false,
+          });
+        }
+
+        previousBandTails = [band[band.length - 1].nodeId];
       } else {
-        // Multi-element band (Side-by-side elements, e.g. text + diagram)
+        // Multi-element band with visual assets (Side-by-side elements, e.g. text + diagram)
         const bandIds = band.map((n) => n.nodeId);
         sortedSequence.push(...bandIds);
 

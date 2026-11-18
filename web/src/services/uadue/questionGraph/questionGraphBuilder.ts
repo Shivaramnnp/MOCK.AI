@@ -34,6 +34,9 @@ import {
   QuestionGraphProvenanceRecord,
   EvidenceObservationState,
   QuestionVerificationStatus,
+  LanguageRepresentationCandidate,
+  QuestionRelationshipCandidate,
+  RelationshipEvidence,
 } from '../contracts/questionGraph';
 import { TokenClassifier, TokenClassificationResult } from './tokenClassifier';
 import { BoundaryDetector, CandidateQuestionBoundary } from './boundaryDetector';
@@ -82,7 +85,9 @@ export class QuestionGraphBuilder {
 
     // 1. Classify number-like tokens across all physical nodes
     const tokenResults = new Map<string, TokenClassificationResult>();
-    let previousQuestionNumber: number | undefined;
+    const pageFirstQ = new Map<number, number>();
+    const columnQuestionX = new Map<string, number>();
+    const previousQuestionNumberByScript = new Map<'LATIN' | 'DEVANAGARI' | 'OTHER', number>();
     let previousQuestionHasExplicitPrefix: boolean = false;
 
     // Use reading flow order
@@ -98,19 +103,46 @@ export class QuestionGraphBuilder {
       if (node.nodeType === 'TEXT_RUN' || node.nodeType === 'GLYPH_RUN') {
         const pageHeight = node.bbox.pageHeight || 842;
         const pageWidth = node.bbox.pageWidth || 595;
+
+        const pageCols = documentGraph.columns.filter((c) => c.pageNumber === node.pageNumber);
+        const col = pageCols.find((c) => {
+          const b = (c as any).bounds || (c as any).bbox;
+          const minX = b ? (b.minX ?? b.x0 ?? 0) : 0;
+          const maxX = b ? (b.maxX ?? b.x1 ?? pageWidth) : pageWidth;
+          return node.bbox.x0 >= minX - 10.0 && node.bbox.x0 <= maxX + 10.0;
+        });
+        const colIdx = col ? col.columnIndex : 0;
+        const colKey = `${node.pageNumber}_${colIdx}`;
+        const activeQuestionAnchorX = columnQuestionX.get(colKey);
+
+        const script = context.pageLanguageScript.get(node.pageNumber) || 'OTHER';
+        const previousQuestionNumber = previousQuestionNumberByScript.get(script);
+
+        const pageFirstQuestionNumber = pageFirstQ.get(node.pageNumber);
+        const previousPageFirstQuestionNumber = pageFirstQ.get(node.pageNumber - 1);
+
         const res = TokenClassifier.classifyToken(
           node,
           pageHeight,
           pageWidth,
           previousQuestionNumber,
           previousQuestionHasExplicitPrefix,
-          context
+          context,
+          pageFirstQuestionNumber,
+          previousPageFirstQuestionNumber,
+          activeQuestionAnchorX
         );
         tokenResults.set(node.nodeId, res);
 
         if (res.tokenType === 'QUESTION_NUMBER' && res.detectedNumber !== undefined) {
-          previousQuestionNumber = res.detectedNumber;
+          previousQuestionNumberByScript.set(script, res.detectedNumber);
           previousQuestionHasExplicitPrefix = /^(?:q(?:uestion)?|qn|que)\.?/i.test(res.rawLabel);
+          if (!pageFirstQ.has(node.pageNumber)) {
+            pageFirstQ.set(node.pageNumber, res.detectedNumber);
+          }
+          if (!columnQuestionX.has(colKey)) {
+            columnQuestionX.set(colKey, node.bbox.x0);
+          }
         }
       }
     }
@@ -126,13 +158,26 @@ export class QuestionGraphBuilder {
         const sn = documentGraph.nodes.get(sId);
         if (sn) stemBottomY = Math.max(stemBottomY, sn.bbox.y1);
       }
+
+      const pageCols = documentGraph.columns.filter((c) => c.pageNumber === b.startPageNumber);
+      let colIdx = 0;
+      if (pageCols.length > 1 && startNode) {
+        const c = pageCols.find((col) => {
+          const b = (col as any).bounds || (col as any).bbox;
+          const minX = b ? (b.minX ?? b.x0 ?? 0) : 0;
+          const maxX = b ? (b.maxX ?? b.x1 ?? 600) : 600;
+          return startNode.bbox.x0 >= minX - 10.0 && startNode.bbox.x0 <= maxX + 10.0;
+        });
+        if (c) colIdx = c.columnIndex;
+      }
+
       return {
         candidateId: b.boundaryId,
         numberNodeId: b.numberNodeId,
         stemTopY: startNode?.bbox.y0 || 0,
         stemBottomY,
         pageNumber: b.startPageNumber,
-        columnIndex: 0,
+        columnIndex: colIdx,
       };
     });
 
@@ -222,12 +267,14 @@ export class QuestionGraphBuilder {
       const qBottomY = qEndNode?.bbox.y1 || 1000;
       const qPage = boundary.startPageNumber;
 
+      const isMultiPage = boundary.startPageNumber !== boundary.endPageNumber;
+
       // P0 — Hard Page Isolation Invariant: Assert source.pageNumber === target.pageNumber
       // Coordinates alone are NEVER sufficient for semantic ownership.
       const associatedTables = tables.filter((tbl) => {
         const tblPage = documentGraph.nodes.get(tbl.physicalNodeIds[0])?.pageNumber;
         if (tblPage !== qPage) {
-          if (!boundary.isMultiPage || !tblPage || tblPage < boundary.startPageNumber || tblPage > boundary.endPageNumber) {
+          if (!isMultiPage || !tblPage || tblPage < boundary.startPageNumber || tblPage > boundary.endPageNumber) {
             return false;
           }
         }
@@ -238,7 +285,7 @@ export class QuestionGraphBuilder {
       const associatedDiagrams = diagrams.filter((diag) => {
         const diagPage = documentGraph.nodes.get(diag.physicalNodeIds[0])?.pageNumber;
         if (diagPage !== qPage) {
-          if (!boundary.isMultiPage || !diagPage || diagPage < boundary.startPageNumber || diagPage > boundary.endPageNumber) {
+          if (!isMultiPage || !diagPage || diagPage < boundary.startPageNumber || diagPage > boundary.endPageNumber) {
             return false;
           }
         }
@@ -249,7 +296,7 @@ export class QuestionGraphBuilder {
       const associatedMath = mathBlocks.filter((math) => {
         const mathPage = documentGraph.nodes.get(math.physicalNodeIds[0])?.pageNumber;
         if (mathPage !== qPage) {
-          if (!boundary.isMultiPage || !mathPage || mathPage < boundary.startPageNumber || mathPage > boundary.endPageNumber) {
+          if (!isMultiPage || !mathPage || mathPage < boundary.startPageNumber || mathPage > boundary.endPageNumber) {
             return false;
           }
         }
@@ -265,6 +312,11 @@ export class QuestionGraphBuilder {
         ...associatedMath.flatMap((m) => m.physicalNodeIds),
       ]);
 
+      // Filter out shared stimulus nodes from stemNodeIds and bodyNodeIds to uphold the Zero-Cloning Invariant
+      const sharedStimNodeIds = new Set(allLinkedStimuli.flatMap((s) => s.physicalNodeIds));
+      const cleanStemNodeIds = boundary.stemNodeIds.filter((id) => !sharedStimNodeIds.has(id));
+      const cleanBodyNodeIds = boundary.bodyNodeIds.filter((id) => !sharedStimNodeIds.has(id));
+
       const questionCandidate: QuestionCandidate = {
         candidateId: qId,
         physicalInstanceId: boundary.identityCandidate.physicalInstanceId,
@@ -278,8 +330,8 @@ export class QuestionGraphBuilder {
         isMultiPage: boundary.startPageNumber !== boundary.endPageNumber,
         includedPhysicalNodeIds: Array.from(allQuestionPhysicalNodes),
         numberNodeId: boundary.numberNodeId,
-        stemNodeIds: boundary.stemNodeIds,
-        bodyNodeIds: boundary.bodyNodeIds,
+        stemNodeIds: cleanStemNodeIds,
+        bodyNodeIds: cleanBodyNodeIds,
         optionCandidateIds: ownedOptions.map((o) => o.optionCandidateId),
         stimulusRefIds: allLinkedStimuli.map((s) => s.stimulusId), // Shared references, zero cloning!
         tableCandidateIds: associatedTables.map((t) => t.tableCandidateId),
@@ -296,6 +348,115 @@ export class QuestionGraphBuilder {
       };
 
       questions.push(questionCandidate);
+    }
+
+    // 10b. Reconcile bilingual facing-page question representations (e.g. UPSC GS1)
+    // Matches identical question numbers on facing pages (even p and odd p+1) with distinct scripts
+    const relationships: QuestionRelationshipCandidate[] = [];
+
+    for (let i = 0; i < questions.length; i++) {
+      const q1 = questions[i];
+      if (q1.identityCandidate.detectedNumber === undefined) continue;
+
+      for (let j = i + 1; j < questions.length; j++) {
+        const q2 = questions[j];
+        if (q2.identityCandidate.detectedNumber === undefined) continue;
+
+        const isFacingPage =
+          q1.startPageNumber % 2 === 0 &&
+          q2.startPageNumber === q1.startPageNumber + 1;
+
+        const isSameQuestionNum =
+          q1.identityCandidate.detectedNumber === q2.identityCandidate.detectedNumber;
+
+        if (isFacingPage && isSameQuestionNum) {
+          const s1 = context.pageLanguageScript.get(q1.startPageNumber) || 'OTHER';
+          const s2 = context.pageLanguageScript.get(q2.startPageNumber) || 'OTHER';
+
+          if (s1 !== s2) {
+            q1.isBilingual = true;
+            q2.isBilingual = true;
+
+            const rep1: LanguageRepresentationCandidate = {
+              languageScript: s1,
+              pageNumber: q1.startPageNumber,
+              sourceQuestionNumber: q1.sourceQuestionNumber,
+              numberNodeId: q1.numberNodeId,
+              stemNodeIds: q1.stemNodeIds,
+              bodyNodeIds: q1.bodyNodeIds,
+              optionCandidateIds: q1.optionCandidateIds,
+            };
+
+            const rep2: LanguageRepresentationCandidate = {
+              languageScript: s2,
+              pageNumber: q2.startPageNumber,
+              sourceQuestionNumber: q2.sourceQuestionNumber,
+              numberNodeId: q2.numberNodeId,
+              stemNodeIds: q2.stemNodeIds,
+              bodyNodeIds: q2.bodyNodeIds,
+              optionCandidateIds: q2.optionCandidateIds,
+            };
+
+            q1.languageRepresentations = [rep1, rep2];
+            q2.languageRepresentations = [rep2, rep1];
+
+            // Build Evidence-Backed RelationshipCandidate
+            const evidence: RelationshipEvidence[] = [
+              {
+                evidenceId: `ev_facing_${q1.startPageNumber}_${q2.startPageNumber}`,
+                evidenceType: 'FACING_PAGE_SPREAD_PAIR',
+                evidenceStrength: 'HARD',
+                sourceNodeIds: [q1.numberNodeId || '', q2.numberNodeId || ''].filter(Boolean),
+                description: `Facing page spread: Verso page ${q1.startPageNumber} faces Recto page ${q2.startPageNumber}`,
+                confidence: 0.99,
+              },
+              {
+                evidenceId: `ev_num_${q1.candidateId}_${q2.candidateId}`,
+                evidenceType: 'MATCHING_PRINTED_NUMERAL',
+                evidenceStrength: 'HARD',
+                sourceNodeIds: [q1.numberNodeId || '', q2.numberNodeId || ''].filter(Boolean),
+                description: `Matching question numeral: ${q1.identityCandidate.detectedNumber}`,
+                confidence: 0.99,
+              },
+              {
+                evidenceId: `ev_script_${q1.startPageNumber}_${q2.startPageNumber}`,
+                evidenceType: 'DISTINCT_SCRIPT_DETECTION',
+                evidenceStrength: 'HARD',
+                sourceNodeIds: [],
+                description: `Distinct page scripts: Page ${q1.startPageNumber} (${s1}) vs Page ${q2.startPageNumber} (${s2})`,
+                confidence: 0.98,
+              },
+            ];
+
+            if (q1.optionCandidateIds.length === q2.optionCandidateIds.length) {
+              evidence.push({
+                evidenceId: `ev_opts_${q1.candidateId}_${q2.candidateId}`,
+                evidenceType: 'IDENTICAL_OPTION_CARDINALITY',
+                evidenceStrength: 'HARD',
+                sourceNodeIds: [...q1.optionCandidateIds, ...q2.optionCandidateIds],
+                description: `Matching option count: ${q1.optionCandidateIds.length} options in both candidates`,
+                confidence: 0.95,
+              });
+            }
+
+            relationships.push({
+              relationshipId: `rel_${q1.candidateId}_${q2.candidateId}`,
+              sourceCandidateId: q1.candidateId,
+              targetCandidateId: q2.candidateId,
+              relationshipType: 'LANGUAGE_REPRESENTATION_OF',
+              evidence,
+              confidenceScore: 0.98,
+              verificationStatus: 'RELATIONSHIP_PROVEN',
+              isSymmetric: true,
+              provenance: {
+                sourceSnapshotId: documentGraph.sourceSnapshotId,
+                sourceDocumentId: documentGraph.sourceDocumentId,
+                createdAt: documentGraph.provenance.createdAt || Date.now(),
+              },
+            });
+          }
+        }
+      }
     }
 
     // 11. Generate competing segmentation hypotheses
@@ -387,6 +548,7 @@ export class QuestionGraphBuilder {
       hypotheses,
       activeHypothesisId,
       ambiguities,
+      relationships,
       verificationState,
       provenance,
       isSealed: false,

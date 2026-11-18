@@ -1,0 +1,130 @@
+{
+  "investigationId": "SSC_CHSL_2023_ROOT_CAUSE_INVESTIGATION",
+  "paperId": "ssc-chsl-2023-02aug-s2",
+  "sourcePDF": "SSC-CHSL-2023-02-08-2023-Shift-II-Paper.pdf",
+  "status": "COMPLETED_READ_ONLY",
+  "executiveSummary": {
+    "defect": "Systemic cascading 1-off skew where Question Stem is replaced by Option 1, Options shift left by one, and Option D is filled with the NEXT question's stem sentence.",
+    "affectedExam": "SSC CHSL Tier 1 — 02 Aug 2023 Shift 2 (General Intelligence & Reasoning Section)",
+    "primaryRootCause": "Zero-tolerance half-open interval slicing [Q.N, Q.{N+1}) excluded stem banner (starts 0.03-0.09pt above header text) and swallowed next question's stem banner (starts 0.09pt above next header).",
+    "secondaryRootCause": "Lack of downward clamp at TCS 'Question ID' metadata footer allowed inter-question element bleeding."
+  },
+  "coordinateForensicMap": {
+    "page": 9,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "sectionQuestion": 1,
+        "headerText": {
+          "text": "Q.1",
+          "bbox": [59.3, 75.97, 72.1, 84.8]
+        },
+        "stemBanner": {
+          "xref": 120,
+          "dimensions": [680, 36],
+          "bbox": [78.72, 75.94, 405.12, 93.16],
+          "deltaYFromHeader": -0.03,
+          "ocr": "GAMU is related to JDPX in a certain way based on the English alphabetical order. In the same way, LHTC is related to OKWF. To which of the following is BRLQ related following the same logic?",
+          "pipelineFate": "EXCLUDED_BECAUSE_Y0_LESS_THAN_HEADER_Y0"
+        },
+        "optionBanners": [
+          { "slot": 0, "xref": 121, "dimensions": [60, 21], "bbox": [107.2, 97.10, 146.7, 111.0], "ocr": "EUOT", "pipelineFate": "PROMOTED_TO_STEM" },
+          { "slot": 1, "xref": 122, "dimensions": [58, 21], "bbox": [105.7, 114.90, 143.8, 128.7], "ocr": "DINS", "pipelineFate": "MAPPED_TO_OPTION_A" },
+          { "slot": 2, "xref": 123, "dimensions": [56, 21], "bbox": [105.7, 132.60, 142.5, 146.5], "ocr": "ETOS", "pipelineFate": "MAPPED_TO_OPTION_B" },
+          { "slot": 3, "xref": 124, "dimensions": [60, 21], "bbox": [105.7, 150.50, 145.1, 164.3], "ocr": "CTOU", "pipelineFate": "MAPPED_TO_OPTION_C" }
+        ],
+        "footerMetadata": {
+          "questionId": "264330151986",
+          "bbox": [392.2, 178.8, 493.5, 211.3]
+        },
+        "swallowedForeignBanner": {
+          "xref": 125,
+          "owner": "Q27 Stem",
+          "bbox": [78.72, 229.18, 405.12, 251.44],
+          "pipelineFate": "MAPPED_TO_OPTION_D"
+        }
+      },
+      {
+        "questionNumber": 27,
+        "sectionQuestion": 2,
+        "headerText": {
+          "text": "Q.2",
+          "bbox": [59.3, 229.27, 72.1, 238.1]
+        },
+        "stemBanner": {
+          "xref": 125,
+          "dimensions": [680, 46],
+          "bbox": [78.72, 229.18, 405.12, 251.44],
+          "deltaYFromHeader": -0.09,
+          "ocr": "Which of the following numbers will replace the question mark (?) in the given series to make it logically complete? 8, 17, 2, 197. 773, 3077",
+          "pipelineFate": "EXCLUDED_BECAUSE_Y0_LESS_THAN_HEADER_Y0"
+        },
+        "optionBanners": [
+          { "slot": 0, "xref": 126, "dimensions": [27, 21], "bbox": [105.7, 255.40, 123.4, 269.2], "ocr": "57", "pipelineFate": "PROMOTED_TO_STEM" },
+          { "slot": 1, "xref": 127, "dimensions": [27, 21], "bbox": [107.2, 273.20, 125.0, 287.0], "ocr": "53", "pipelineFate": "MAPPED_TO_OPTION_A" },
+          { "slot": 2, "xref": 128, "dimensions": [28, 21], "bbox": [105.7, 290.90, 124.1, 304.7], "ocr": "45", "pipelineFate": "MAPPED_TO_OPTION_B" },
+          { "slot": 3, "xref": 129, "dimensions": [27, 21], "bbox": [105.7, 308.70, 123.4, 322.5], "ocr": "69", "pipelineFate": "MAPPED_TO_OPTION_C" }
+        ],
+        "footerMetadata": {
+          "questionId": "264330146750",
+          "bbox": [392.2, 337.0, 493.5, 369.6]
+        },
+        "swallowedForeignBanner": {
+          "xref": 130,
+          "owner": "Q28 Stem",
+          "bbox": [78.72, 387.40, 405.12, 418.96],
+          "pipelineFate": "MAPPED_TO_OPTION_D"
+        }
+      },
+      {
+        "questionNumber": 28,
+        "sectionQuestion": 3,
+        "headerText": {
+          "text": "Q.3",
+          "bbox": [59.3, 387.49, 72.1, 396.3]
+        },
+        "stemBanner": {
+          "xref": 130,
+          "dimensions": [680, 66],
+          "bbox": [78.72, 387.40, 405.12, 418.96],
+          "deltaYFromHeader": -0.09,
+          "ocr": "If ‘A’ stands for ‘=’, ‘B’ stands for ‘x’, ‘C’ stands for ‘+’ and ‘D’ stands for ‘—', what will come in place of the question mark ‘?’ in the following equation? 23C13B841A29D91=?",
+          "pipelineFate": "EXCLUDED_BECAUSE_Y0_LESS_THAN_HEADER_Y0"
+        },
+        "optionBanners": [
+          { "slot": 0, "xref": 131, "dimensions": [39, 22], "bbox": [105.7, 422.90, 131.3, 437.4], "ocr": "329", "pipelineFate": "PROMOTED_TO_STEM" },
+          { "slot": 1, "xref": 132, "dimensions": [39, 22], "bbox": [105.7, 441.30, 131.3, 455.8], "ocr": "319", "pipelineFate": "MAPPED_TO_OPTION_A" },
+          { "slot": 2, "xref": 133, "dimensions": [39, 22], "bbox": [105.7, 459.80, 131.3, 474.2], "ocr": "289", "pipelineFate": "MAPPED_TO_OPTION_B" },
+          { "slot": 3, "xref": 134, "dimensions": [39, 22], "bbox": [107.2, 478.20, 132.9, 492.6], "ocr": "309", "pipelineFate": "MAPPED_TO_OPTION_C" }
+        ],
+        "footerMetadata": {
+          "questionId": "264330147334",
+          "bbox": [392.2, 507.2, 493.5, 539.7]
+        },
+        "swallowedForeignBanner": {
+          "xref": 135,
+          "owner": "Q29 Stem",
+          "bbox": [78.72, 557.56, 405.12, 575.08],
+          "pipelineFate": "MAPPED_TO_OPTION_D"
+        }
+      }
+    ]
+  },
+  "testSuiteAudit": {
+    "totalPassingTestsClaimed": 753,
+    "passingFilesClaimed": 63,
+    "flawIdentified": "SscChsl2023UiForensicFidelity.test.tsx imported only ssc-chsl-2023-02aug-s1.json where reasoning questions are pure vector text. Zero tests existed for 02aug-s2 or any raster-strip reasoning paper.",
+    "isContentBackendAvailableInTests": false,
+    "categoryHCoverage": "0%"
+  },
+  "crossYearComparison": {
+    "gate2025": { "isolationStrategy": "Table Grid Cell row_rect", "interQuestionBleedRisk": "ZERO" },
+    "gate2024": { "isolationStrategy": "Table Grid Cell + Gutter Bounding", "interQuestionBleedRisk": "ZERO" },
+    "chsl2024": { "isolationStrategy": "Vector Font Text Stream + Footer ID", "interQuestionBleedRisk": "LOW" },
+    "chsl2023": { "isolationStrategy": "Naive Half-Open Interval [y_header, next_y_header)", "interQuestionBleedRisk": "CRITICAL" }
+  },
+  "recommendations": {
+    "proposedFix": "Two-Anchor Geometric Bounding: y_start = max(prev_footer_y + 1.0, header_y - 12.0) and y_end = question_footer_y (hard floor at Question ID box).",
+    "action": "AWAITING_USER_APPROVAL_BEFORE_ANY_CODE_OR_DATA_MODIFICATIONS"
+  }
+}

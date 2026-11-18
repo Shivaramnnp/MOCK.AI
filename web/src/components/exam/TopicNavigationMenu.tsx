@@ -22,6 +22,7 @@ export interface TopicNavigationMenuProps {
   onJumpToFirstInTopic?: (topicId: string) => void;
   className?: string;
   isCompact?: boolean;
+  defaultExpanded?: boolean;
 }
 
 export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
@@ -34,8 +35,9 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
   onJumpToFirstInTopic,
   className = '',
   isCompact = false,
+  defaultExpanded = true,
 }) => {
-  const [isExpanded, setIsExpanded] = useState<boolean>(true);
+  const [isExpanded, setIsExpanded] = useState<boolean>(defaultExpanded);
 
   const activeTopic = topicSummaries.find((t) => t.topicId === selectedTopicId);
 
@@ -81,8 +83,10 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
           )}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="p-1 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors"
+            className="p-1 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors cursor-pointer"
             aria-label={isExpanded ? 'Collapse topic menu' : 'Expand topic menu'}
+            aria-expanded={isExpanded}
+            data-testid="topic-menu-toggle-btn"
           >
             {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
@@ -91,22 +95,22 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
 
       {/* Collapsible Content */}
       {isExpanded && (
-        <div className="p-3 space-y-2.5">
+        <div className="p-3 space-y-2.5" data-testid="topic-menu-content">
           {/* All Topics Master Button */}
           <button
             onClick={() => onSelectTopic(null)}
-            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
               selectedTopicId === null
                 ? 'bg-indigo-600 text-white shadow-xs'
                 : 'bg-slate-100 hover:bg-slate-200/70 dark:bg-slate-800/80 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300'
             }`}
             data-testid="all-topics-btn"
           >
-            <div className="flex items-center gap-2">
-              <Filter className="w-3.5 h-3.5 opacity-80" />
-              <span>All Topics</span>
+            <div className="flex items-center gap-2 min-w-0">
+              <Filter className="w-3.5 h-3.5 opacity-80 shrink-0" />
+              <span className="truncate">All Topics</span>
             </div>
-            <div className="flex items-center gap-1.5 text-[11px]">
+            <div className="flex items-center gap-1.5 text-[11px] shrink-0 ml-2">
               <span className={selectedTopicId === null ? 'text-indigo-100' : 'text-slate-500 dark:text-slate-400'}>
                 {allTotal} Qs
               </span>
@@ -127,9 +131,10 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
 
           {/* Topics Grid / List */}
           <div
-            className={`space-y-1.5 overflow-y-auto pr-0.5 custom-scrollbar ${
-              isCompact ? 'max-h-44' : 'max-h-56'
+            className={`space-y-1.5 overflow-y-auto overscroll-contain pr-1 custom-scrollbar ${
+              isCompact ? 'max-h-36 sm:max-h-40' : 'max-h-40 sm:max-h-48'
             }`}
+            data-testid="topic-list-container"
           >
             {topicSummaries.map((topic) => {
               const isSelected = selectedTopicId === topic.topicId;
@@ -146,7 +151,8 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
                 >
                   <button
                     onClick={() => onSelectTopic(isSelected ? null : topic.topicId)}
-                    className="w-full text-left px-2.5 py-2 flex items-start justify-between gap-2"
+                    className="w-full text-left px-2.5 py-2 flex items-start justify-between gap-2 cursor-pointer"
+                    title={topic.topicName}
                     data-testid={`topic-item-${topic.topicId}`}
                   >
                     <div className="min-w-0 flex-1">
@@ -157,6 +163,7 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
                               ? 'text-indigo-950 dark:text-indigo-200'
                               : 'text-slate-800 dark:text-slate-200'
                           }`}
+                          title={topic.topicName}
                         >
                           {topic.topicName}
                         </span>
@@ -169,18 +176,18 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
 
                       {/* Topic Progress Badges (Attempted only, isolation compliant) */}
                       <div className="flex items-center gap-2 mt-1 text-[11px] text-slate-500 dark:text-slate-400">
-                        <span className="font-medium text-slate-700 dark:text-slate-300">
+                        <span className="font-medium text-slate-700 dark:text-slate-300 shrink-0">
                           {topic.totalQuestions} Qs
                         </span>
                         <span className="text-slate-300 dark:text-slate-700">•</span>
-                        <span className="flex items-center gap-0.5 text-emerald-600 dark:text-emerald-400">
+                        <span className="flex items-center gap-0.5 text-emerald-600 dark:text-emerald-400 shrink-0">
                           <CheckCircle2 className="w-3 h-3" />
                           {topic.attemptedQuestions}
                         </span>
                         {topic.reviewQuestions > 0 && (
                           <>
                             <span className="text-slate-300 dark:text-slate-700">•</span>
-                            <span className="flex items-center gap-0.5 text-amber-600 dark:text-amber-400">
+                            <span className="flex items-center gap-0.5 text-amber-600 dark:text-amber-400 shrink-0">
                               <Bookmark className="w-3 h-3" />
                               {topic.reviewQuestions}
                             </span>
@@ -213,7 +220,7 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
                           e.stopPropagation();
                           onJumpToFirstInTopic(topic.topicId);
                         }}
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 bg-white dark:bg-slate-900 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800 shadow-2xs hover:shadow-xs transition-all"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 bg-white dark:bg-slate-900 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
                       >
                         <span>Jump to Q{topic.questionNumbers[0]}</span>
                         <ArrowRight className="w-3 h-3" />
@@ -227,8 +234,11 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
 
           {/* Active Filter Summary Banner */}
           {activeTopic && (
-            <div className="p-2 bg-indigo-50/90 dark:bg-indigo-950/60 rounded-lg border border-indigo-200 dark:border-indigo-800/80 flex items-center justify-between text-xs">
-              <div className="truncate">
+            <div
+              className="p-2 bg-indigo-50/90 dark:bg-indigo-950/60 rounded-lg border border-indigo-200 dark:border-indigo-800/80 flex items-center justify-between text-xs"
+              data-testid="active-topic-banner"
+            >
+              <div className="truncate min-w-0 flex-1 mr-2" title={activeTopic.topicName}>
                 <span className="text-slate-600 dark:text-slate-400">Emphasizing: </span>
                 <span className="font-bold text-indigo-900 dark:text-indigo-200">{activeTopic.topicName}</span>
                 <span className="text-indigo-600 dark:text-indigo-400 font-semibold ml-1">
@@ -237,7 +247,8 @@ export const TopicNavigationMenu: React.FC<TopicNavigationMenuProps> = ({
               </div>
               <button
                 onClick={() => onSelectTopic(null)}
-                className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:underline shrink-0 ml-2"
+                className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:underline shrink-0 cursor-pointer"
+                data-testid="clear-active-topic-btn"
               >
                 Clear
               </button>

@@ -493,7 +493,7 @@ class CommunityService {
           .from('community_posts')
           .select('*')
           .eq('id', postId)
-          .single();
+          .maybeSingle();
 
         if (!postErr && postData) {
           const localPost = this.getLocalPosts().find((p) => p.id === postId);
@@ -1213,7 +1213,7 @@ class CommunityService {
           .from('community_posts')
           .select('*')
           .eq('id', params.postId)
-          .single();
+          .maybeSingle();
         if (remoteData) {
           existingPost = {
             id: remoteData.id,

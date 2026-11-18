@@ -10,13 +10,13 @@
   "tier": "Tier 1",
   "language": "English",
   "durationMinutes": 60,
-  "totalMarks": 200.0,
+  "totalMarks": 200,
   "totalQuestions": 100,
   "isComplete": true,
   "markingScheme": {
-    "marksPerCorrect": 2.0,
+    "marksPerCorrect": 2,
     "negativeMarks": 0.5,
-    "unansweredMarks": 0.0
+    "unansweredMarks": 0
   },
   "sections": [
     {
@@ -25,7 +25,7 @@
       "questionCount": 25,
       "startIndex": 0,
       "endIndex": 24,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "reasoning",
@@ -33,7 +33,7 @@
       "questionCount": 25,
       "startIndex": 25,
       "endIndex": 49,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "quant",
@@ -41,7 +41,7 @@
       "questionCount": 25,
       "startIndex": 50,
       "endIndex": 74,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "general_awareness",
@@ -49,7 +49,7 @@
       "questionCount": 25,
       "startIndex": 75,
       "endIndex": 99,
-      "maxMarks": 50.0
+      "maxMarks": 50
     }
   ],
   "questions": [
@@ -59,6 +59,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in the blank.\nShe raced ______ towards the train.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option to fill in the blank.\nShe raced ______ towards the train.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "crazily",
         "berserk",
@@ -73,14 +83,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q2",
@@ -88,6 +109,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Complete the sentence with an appropriate synonym of the word mentioned in the\nbracket.\nDiseases like Verminosis and Mastitis only ___________ (damage) domestic cattle.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Complete the sentence with an appropriate synonym of the word mentioned in the\nbracket.\nDiseases like Verminosis and Mastitis only ___________ (damage) domestic cattle.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "delight",
         "afflict",
@@ -102,14 +133,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q3",
@@ -117,6 +159,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate synonym of the highlighted word.\nThe hapless incident was a result of sheer negligence by the authorities.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate synonym of the highlighted word.\nThe hapless incident was a result of sheer negligence by the authorities.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "triumphant",
         "joyful",
@@ -131,14 +183,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q4",
@@ -146,6 +209,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in the blank.\nWe have _______ long weekend ahead.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option to fill in the blank.\nWe have _______ long weekend ahead.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "an",
         "one",
@@ -160,14 +233,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q5",
@@ -175,6 +259,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Spot the error in the given sentence and select the correct sentence from the options\ngiven.\nThere were more than thirty delegates who attend the training programme last\nsummer.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Spot the error in the given sentence and select the correct sentence from the options\ngiven.\nThere were more than thirty delegates who attend the training programme last\nsummer.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "There are more than thirty delegates who attend the training programme last summer",
         "There were more than thirty delegates who attends the training programme last\nsummer.",
@@ -189,14 +283,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.96
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q6",
@@ -204,6 +309,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the sentence which has no spelling error.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the sentence which has no spelling error.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "There are more than 3500 types of moskuitoes in the world.",
         "The common reaction to mosquiteo’s biting is itching.",
@@ -218,14 +333,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.71
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q7",
@@ -233,6 +359,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option that can substitute the underlined segment in the\ngiven sentence.\nSimba and snowy are cute than the other puppies.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option that can substitute the underlined segment in the\ngiven sentence.\nSimba and snowy are cute than the other puppies.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "more cute",
         "cuter",
@@ -247,14 +383,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q8",
@@ -262,6 +409,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option that can substitute the underlined words in the\ngiven sentence.\nUpon hearing the great achievements of the historic character, he was in a state of\nawed admiration and respect.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option that can substitute the underlined words in the\ngiven sentence.\nUpon hearing the great achievements of the historic character, he was in a state of\nawed admiration and respect.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "wonder",
         "awed",
@@ -276,14 +433,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.71
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q9",
@@ -291,6 +459,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate meaning of the given idiom.\nSnail’s pace",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate meaning of the given idiom.\nSnail’s pace",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Very fast",
         "Very slow",
@@ -305,14 +483,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q10",
@@ -320,6 +509,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in the blank.\nHopefully, things will return to normal in the __________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option to fill in the blank.\nHopefully, things will return to normal in the __________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "past",
         "future",
@@ -334,14 +533,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q11",
@@ -349,6 +559,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the option that expresses the given sentence in passive voice.\nThe teacher gave the question paper.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that expresses the given sentence in passive voice.\nThe teacher gave the question paper.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "The question paper was given by the teacher.",
         "The question paper was being given by the teacher.",
@@ -363,14 +583,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q12",
@@ -378,6 +609,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in the blank.\nThe young king tried to speak, but his tongue seemed to ________ the roof of his\nmouth, and his lips refused to move.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option to fill in the blank.\nThe young king tried to speak, but his tongue seemed to ________ the roof of his\nmouth, and his lips refused to move.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "divide to",
         "cleave to",
@@ -392,14 +633,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q13",
@@ -407,6 +659,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the option that can be used as a one-word substitute for the underlined group\nof words.\nIpshita knows many languages like French, Dutch and English, and she speaks them\nfluently.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that can be used as a one-word substitute for the underlined group\nof words.\nIpshita knows many languages like French, Dutch and English, and she speaks them\nfluently.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Translator",
         "Polyglot",
@@ -421,14 +683,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q14",
@@ -436,6 +709,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Identify the option that arranges the given parts in the correct order to form a\nmeaningful and coherent paragraph.\na) Jumped off the bus in front of the old woman’s home\nb) It was mid-morning and a very cold, bright day\nc) Holding a potted planted before her, a girl of fourteen\nd) On the outskirts of town",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Identify the option that arranges the given parts in the correct order to form a\nmeaningful and coherent paragraph.\na) Jumped off the bus in front of the old woman’s home\nb) It was mid-morning and a very cold, bright day\nc) Holding a potted planted before her, a girl of fourteen\nd) On the outskirts of town",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "a,b,c,d,",
         "a,d,c,b,",
@@ -450,14 +733,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q15",
@@ -465,6 +759,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the INCORRECTLY spelt word.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the INCORRECTLY spelt word.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Knowlege",
         "Marinate",
@@ -479,14 +783,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q16",
@@ -494,6 +809,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "From among the words given in bold, select the INCORRECTLY spelt word in the\nfollowing sentence.\nThe streets are crowded with tribal urchins in tattered jackets, bowlegged donkeys\nhauling firewood, steep mountain trails, and occasional palanquins for arthritic\nbussinessman.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "From among the words given in bold, select the INCORRECTLY spelt word in the\nfollowing sentence.\nThe streets are crowded with tribal urchins in tattered jackets, bowlegged donkeys\nhauling firewood, steep mountain trails, and occasional palanquins for arthritic\nbussinessman.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "bowlegged",
         "palanquins",
@@ -508,14 +833,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q17",
@@ -523,6 +859,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate meaning of the highlighted idiom.\nThe employee took the manager’s remark with a pinch of salt",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate meaning of the highlighted idiom.\nThe employee took the manager’s remark with a pinch of salt",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Doubt the truth or value of something",
         "Distasteful and boring",
@@ -537,14 +883,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q18",
@@ -552,6 +909,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate option to fill in the blank.\nAny resemblance of a character in this book to a living person is ______ incidental.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate option to fill in the blank.\nAny resemblance of a character in this book to a living person is ______ incidental.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "absolutely",
         "naturally",
@@ -566,14 +933,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q19",
@@ -581,6 +959,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the most appropriate meaning of the given idiom.\nThe movers and shakers",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the most appropriate meaning of the given idiom.\nThe movers and shakers",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "People who have a lot of power and influence",
         "Transportation company",
@@ -595,14 +983,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q20",
@@ -610,6 +1009,16 @@
       "sectionId": "english",
       "sectionName": "English Language",
       "questionText": "Select the INCORRECTLY spelt word.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the INCORRECTLY spelt word.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Appetight",
         "Reliance",
@@ -624,21 +1033,42 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q21",
       "questionNumber": 21,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate option to fill in blank number 1.",
+      "questionText": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 21\nQ.21 Select the most appropriate option to fill in blank number 1.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 21\nQ.21 Select the most appropriate option to fill in blank number 1.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Ruler",
         "Country",
@@ -653,21 +1083,46 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [
+          "grammar"
+        ],
+        "secondaryTopicNames": [
+          "Grammar"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q22",
       "questionNumber": 22,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate option to fill in blank number 2.",
+      "questionText": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 22\nQ.22 Select the most appropriate option to fill in blank number 2.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 22\nQ.22 Select the most appropriate option to fill in blank number 2.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "density",
         "bulk",
@@ -682,21 +1137,46 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [
+          "grammar"
+        ],
+        "secondaryTopicNames": [
+          "Grammar"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q23",
       "questionNumber": 23,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate option to fill in blank number 3",
+      "questionText": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 23\nQ.23 Select the most appropriate option to fill in blank number 3",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 23\nQ.23 Select the most appropriate option to fill in blank number 3",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "industrialist",
         "industriousness",
@@ -711,21 +1191,46 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [
+          "grammar"
+        ],
+        "secondaryTopicNames": [
+          "Grammar"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q24",
       "questionNumber": 24,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate option to fill in blank number 4.",
+      "questionText": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 24\nQ.24 Select the most appropriate option to fill in blank number 4.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 24\nQ.24 Select the most appropriate option to fill in blank number 4.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "resistance",
         "quest",
@@ -740,21 +1245,46 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [
+          "grammar"
+        ],
+        "secondaryTopicNames": [
+          "Grammar"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q25",
       "questionNumber": 25,
       "sectionId": "english",
       "sectionName": "English Language",
-      "questionText": "Select the most appropriate option to fill in blank number 5.",
+      "questionText": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 25\nQ.25 Select the most appropriate option to fill in blank number 5.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Comprehension:\nIn the following passage some words have been deleted. Fill in the blanks with the help of the\nalternatives given. Select the most appropriate option for each number.\n(1) _________ areas are also known as the ’countryside’ or a ‘village’ in India. It has a very\nlow population (2) _________. In rural areas, agriculture is the chief source of livelihood along\nwith fishing, cottage (3) ___________, pottery etc. The (4) ___________ to discover the real\nrural India still continues in great earnest. Almost (5) ___________ economic agency today\nhas a definition of rural India.\nSubQuestion No : 25\nQ.25 Select the most appropriate option to fill in blank number 5.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "every",
         "none",
@@ -769,14 +1299,29 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [
+          "grammar"
+        ],
+        "secondaryTopicNames": [
+          "Grammar"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q26",
@@ -784,6 +1329,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the option that is related to the fifth term in the same way as the second term is\nrelated to the first term and the fourth term is related to the third term.\nABROAD : BAILDA :: BEFORE : EBULER :: COUPLE : ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that is related to the fifth term in the same way as the second term is\nrelated to the first term and the fourth term is related to the third term.\nABROAD : BAILDA :: BEFORE : EBULER :: COUPLE : ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "OCFKLE",
         "OCFKEL",
@@ -798,14 +1353,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q27",
@@ -813,69 +1379,80 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "If 28 February 2015 was Saturday, then what was the day of the week on 28 February\n2021?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If 28 February 2015 was Saturday, then what was the day of the week on 28 February\n2021?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Thursday",
         "Friday",
         "Saturday",
         "Sunday"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q27_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "Saturday",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "Sunday",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q27_opt_d.png"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q28",
       "questionNumber": 28,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "",
+      "questionText": "Select the correct mirror image of the given combination when the mirror is placed at MN as shown below.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the correct mirror image of the given combination when the mirror is placed at MN as shown below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "",
-        "69¢L22P",
-        "69¢L22P",
-        "69¢L22P"
+        "",
+        "",
+        ""
       ],
       "optionImages": [
-        null,
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_a.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_b.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_c.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_d.png"
@@ -884,22 +1461,86 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_a.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "6d2V\\sb",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_a.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "6d2V\\sb",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
-          "text": "69¢L22P",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_b.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_b.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": "697Lzp",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_b.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": "697Lzp",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
-          "text": "69¢L22P",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_c.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_c.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": "@bSV¥zb",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_c.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": "@bSV¥zb",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
-          "text": "69¢L22P",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_d.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_d.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": "edSV¥sb",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_opt_d.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": "edSV¥sb",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -915,14 +1556,25 @@
           "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q28_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q29",
@@ -930,6 +1582,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the option that is related to the fifth number in the same way as the second\nnumber is related to the first number and the fourth number is related to the third\nnumber.\n9 : 32 :: 17 : 56 :: 15 : ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that is related to the fifth number in the same way as the second\nnumber is related to the first number and the fourth number is related to the third\nnumber.\n9 : 32 :: 17 : 56 :: 15 : ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "40",
         "45",
@@ -944,14 +1606,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q30",
@@ -959,61 +1632,72 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the correct combination of mathematical signs to replace the * signs and to\nbalance the given equation.\n78*3*12*5*59*17*44",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the correct combination of mathematical signs to replace the * signs and to\nbalance the given equation.\n78*3*12*5*59*17*44",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "−,+,×,−,=,×",
         "÷,+, ×,−,+,=",
         "+,=,−,+,×,÷",
         "=,−,+,×,−,+"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q30_opt_d.jpeg"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "−,+,×,−,=,×",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "÷,+, ×,−,+,=",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "+,=,−,+,×,÷",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "=,−,+,×,−,+",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q30_opt_d.jpeg"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q31",
       "questionNumber": 31,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "",
+      "questionText": "Select the figure that will replace the question mark (?) in the following figure",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the figure that will replace the question mark (?) in the following figure",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.jpeg",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "",
         "",
@@ -1021,7 +1705,7 @@
         ""
       ],
       "optionImages": [
-        null,
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_a.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_b.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_c.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_d.png"
@@ -1030,45 +1714,120 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_a.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "n",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_a.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "n",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_b.png"
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_b.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": "vs",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_b.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": "vs",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_c.png"
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_c.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": "Cc w Zz fe)",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_c.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": "Cc w Zz fe)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
           "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_d.png"
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_d.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": ") Z* fe)",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_opt_d.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": ") Z* fe)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.png",
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.jpeg",
       "diagramUrls": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.png"
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.jpeg"
       ],
       "questionAssets": [
         {
           "type": "image",
-          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.png"
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q31_diag.jpeg"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q32",
@@ -1076,6 +1835,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n12, 17, 29, 55, 102, 177, ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following numbers will replace the question mark (?) in the given series?\n12, 17, 29, 55, 102, 177, ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "288",
         "278",
@@ -1090,14 +1859,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q33",
@@ -1105,6 +1885,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n17, 34, 31, ?, 119, 714",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following numbers will replace the question mark (?) in the given series?\n17, 34, 31, ?, 119, 714",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "130",
         "120",
@@ -1119,14 +1909,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q34",
@@ -1134,6 +1935,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Study the given pattern carefully and select the number that can replace the question\nmark (?) in it.\nFirst row: 2, 3, 17\nSecond row: 4, 6, 100\nThird row: 5, 2, ?\n(NOTE: Operations should be performed on the whole numbers, without breaking\ndown the number into its constituent digits. For example, 13 – Operations on 13 such\nas adding/deleting/multiplying etc. to 13 can be performed. Breaking down 13 into 1\nand 3 and then performing mathematical operations on 1 and 3 is not allowed.)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Study the given pattern carefully and select the number that can replace the question\nmark (?) in it.\nFirst row: 2, 3, 17\nSecond row: 4, 6, 100\nThird row: 5, 2, ?\n(NOTE: Operations should be performed on the whole numbers, without breaking\ndown the number into its constituent digits. For example, 13 – Operations on 13 such\nas adding/deleting/multiplying etc. to 13 can be performed. Breaking down 13 into 1\nand 3 and then performing mathematical operations on 1 and 3 is not allowed.)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "129",
         "127",
@@ -1148,14 +1959,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q35",
@@ -1163,6 +1985,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which letter cluster will replace the question mark (?) to complete the given series?\nOHVY, NFSU, MDPQ, ? , KZJI",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which letter cluster will replace the question mark (?) to complete the given series?\nOHVY, NFSU, MDPQ, ? , KZJI",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "LAMM",
         "LBMM",
@@ -1177,14 +2009,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q36",
@@ -1192,6 +2035,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the option that is related to the fifth number in the same way as the second\nnumber is related to the first number and the fourth number is related to the third\nnumber.\n14 : 112 :: 24 : 312 :: 18 : ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that is related to the fifth number in the same way as the second\nnumber is related to the first number and the fourth number is related to the third\nnumber.\n14 : 112 :: 24 : 312 :: 18 : ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "198",
         "180",
@@ -1206,14 +2059,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q37",
@@ -1221,6 +2085,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n215, 226, 210, ?, 205, 236",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following numbers will replace the question mark (?) in the given series?\n215, 226, 210, ?, 205, 236",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "228",
         "231",
@@ -1235,14 +2109,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q38",
@@ -1250,6 +2135,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n21, 126, 131, ? , 527, 1054",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following numbers will replace the question mark (?) in the given series?\n21, 126, 131, ? , 527, 1054",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "500",
         "513",
@@ -1264,14 +2159,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q39",
@@ -1279,61 +2185,72 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "In a certain code language, 'MYRA' is written as '1426192' and 'VIAAN' is written as\n'23102215'. How will 'VIDHI' be written in that language?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a certain code language, 'MYRA' is written as '1426192' and 'VIAAN' is written as\n'23102215'. How will 'VIDHI' be written in that language?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "23105912",
         "23105913",
         "23105910",
         "23105911"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q39_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "23105912",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q39_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "23105913",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "23105910",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "23105911",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Coding & Decoding",
+      "topicMetadata": {
+        "primaryTopicId": "coding_decoding",
+        "primaryTopicName": "Coding & Decoding",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q40",
       "questionNumber": 40,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Question 40",
+      "questionText": "Two different positions of the same dice are shown. the six faces of which are numbered from | to 6. Select the number",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Two different positions of the same dice are shown. the six faces of which are numbered from | to 6. Select the number",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q40_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "6",
         "2",
@@ -1345,17 +2262,35 @@
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q40_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q40_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q40_diag.png"
+        }
+      ],
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q41",
@@ -1363,6 +2298,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "In a certain code language, ‘SCALE’ is written as ‘UACJG’ and ‘LIGHT’ is written as\n‘NGIFV’. How will ‘LIMIT’ be written in that language?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a certain code language, ‘SCALE’ is written as ‘UACJG’ and ‘LIGHT’ is written as\n‘NGIFV’. How will ‘LIMIT’ be written in that language?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "NOGGV",
         "GNOGV",
@@ -1377,14 +2322,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Coding & Decoding",
+      "topicMetadata": {
+        "primaryTopicId": "coding_decoding",
+        "primaryTopicName": "Coding & Decoding",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q42",
@@ -1392,61 +2348,72 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Which of the following letter-clusters will replace the question mark (?) in the given\nseries to make it logically complete?\nVYU, TWS, RUQ, PSO, ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following letter-clusters will replace the question mark (?) in the given\nseries to make it logically complete?\nVYU, TWS, RUQ, PSO, ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "MNQ",
         "QMN",
         "NQM",
         "NMQ"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q42_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "MNQ",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q42_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "QMN",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "NQM",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "NMQ",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q43",
       "questionNumber": 43,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "Question 43",
+      "questionText": "How many triangles are there in the given figure?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "How many triangles are there in the given figure?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q43_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "10",
         "12",
@@ -1458,17 +2425,35 @@
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q43_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q43_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q43_diag.png"
+        }
+      ],
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q44",
@@ -1476,69 +2461,80 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Three Statements are given followed by Three conclusions numbered I, II and III.\nAssuming the statements to be true, even if they seem to be at variance with\ncommonly known facts, decide which of the conclusions logically follow(s) from the\nstatements.\nStatements:\nAll jacks are aces.\nNo ace is a king.\nSome queens are kings.\nConclusions:\nI. Some queens are jacks.\nII. Some kings are jacks.\nIII. No jack is a king.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Three Statements are given followed by Three conclusions numbered I, II and III.\nAssuming the statements to be true, even if they seem to be at variance with\ncommonly known facts, decide which of the conclusions logically follow(s) from the\nstatements.\nStatements:\nAll jacks are aces.\nNo ace is a king.\nSome queens are kings.\nConclusions:\nI. Some queens are jacks.\nII. Some kings are jacks.\nIII. No jack is a king.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Only conclusion I follows.",
         "Only conclusion III follows.",
         "Only conclusion I and III follow.",
         "Only conclusion I and II follow."
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q44_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "Only conclusion I follows.",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q44_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "Only conclusion III follows.",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "Only conclusion I and III follow.",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "Only conclusion I and II follow.",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q45",
       "questionNumber": 45,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "",
+      "questionText": "Select the option figure which is embedded in the given figure as its part (rotation is NOT allowed).",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option figure which is embedded in the given figure as its part (rotation is NOT allowed).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "",
-        "EH",
-        "EH",
-        "EH"
+        "",
+        "",
+        ""
       ],
       "optionImages": [
-        null,
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_a.jpeg",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_b.jpeg",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_c.jpeg",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_d.jpeg"
@@ -1547,45 +2543,120 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_a.jpeg",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "ii",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_a.jpeg",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "ii",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
-          "text": "EH",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_b.jpeg"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_b.jpeg",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": "Le",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_b.jpeg",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": "Le",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
-          "text": "EH",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_c.jpeg"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_c.jpeg",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": "ar",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_c.jpeg",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": "ar",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
-          "text": "EH",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_d.jpeg"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_d.jpeg",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": "Et",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_opt_d.jpeg",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": "Et",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.jpeg",
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.png",
       "diagramUrls": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.jpeg"
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.png"
       ],
       "questionAssets": [
         {
           "type": "image",
-          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.jpeg"
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q45_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q46",
@@ -1593,6 +2664,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "In a certain code language, ‘FRIEND’ is written as ‘GQJDOC’, and ‘READER’ is written\nas ‘SDBCFQ’. How will ‘NUMBER’ be written in that language?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In a certain code language, ‘FRIEND’ is written as ‘GQJDOC’, and ‘READER’ is written\nas ‘SDBCFQ’. How will ‘NUMBER’ be written in that language?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "OTANFQ",
         "OTNAFQ",
@@ -1607,14 +2688,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Coding & Decoding",
+      "topicMetadata": {
+        "primaryTopicId": "coding_decoding",
+        "primaryTopicName": "Coding & Decoding",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q47",
@@ -1622,69 +2714,80 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "If 29th September 2015 was a Tuesday, then what was the day of the week on 28th\nSeptember 2019?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If 29th September 2015 was a Tuesday, then what was the day of the week on 28th\nSeptember 2019?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Thursday",
         "Saturday",
         "Friday",
         "Wednesday"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q47_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "Thursday",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q47_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "Saturday",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "Wednesday",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q48",
       "questionNumber": 48,
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
-      "questionText": "",
+      "questionText": "Select the correct mirror image of the given combination when the mirror is placed at MN as shown below.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the correct mirror image of the given combination when the mirror is placed at MN as shown below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text",
+        "image"
+      ],
       "options": [
         "",
-        "S9166\\M",
-        "S9166\\M",
-        "S9166\\M"
+        "",
+        "",
+        ""
       ],
       "optionImages": [
-        null,
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_a.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_b.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_c.png",
         "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_d.png"
@@ -1693,22 +2796,86 @@
         {
           "id": "A",
           "text": "",
-          "imageUrl": null
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_a.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option A figure",
+          "ocrText": "s16etw",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_a.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option A figure",
+              "ocrText": "s16etw",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "B",
-          "text": "S9166\\M",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_b.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_b.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option B figure",
+          "ocrText": "9x166TM",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_b.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option B figure",
+              "ocrText": "9x166TM",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
-          "text": "S9166\\M",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_c.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_c.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option C figure",
+          "ocrText": "ate atm",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_c.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option C figure",
+              "ocrText": "ate atm",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "D",
-          "text": "S9166\\M",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_d.png"
+          "text": "",
+          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_d.png",
+          "displayMode": "IMAGE_ONLY",
+          "altText": "Option D figure",
+          "ocrText": "eAe@siw",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_opt_d.png",
+              "displayMode": "IMAGE_ONLY",
+              "altText": "Option D figure",
+              "ocrText": "eAe@siw",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         }
       ],
       "correctAnswer": "D",
@@ -1724,14 +2891,25 @@
           "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q48_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q49",
@@ -1739,6 +2917,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "If I denotes ‘÷’, J denotes ‘×’, K denotes ‘−’ and L denotes ‘+’, then what will come in\nplace of ‘?’ in the following equation?\n19 L (22 J 4) K (66 I 11) L (16 J 2) = ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If I denotes ‘÷’, J denotes ‘×’, K denotes ‘−’ and L denotes ‘+’, then what will come in\nplace of ‘?’ in the following equation?\n19 L (22 J 4) K (66 I 11) L (16 J 2) = ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "141",
         "130",
@@ -1753,14 +2941,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q50",
@@ -1768,6 +2967,16 @@
       "sectionId": "reasoning",
       "sectionName": "General Intelligence & Reasoning",
       "questionText": "Select the option that is related to the fourth term in the same way as the first term is\nrelated to the second term and the fifth term is related to the sixth term\n24 : 171 :: ? :115 :: 4 : 31",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Select the option that is related to the fourth term in the same way as the first term is\nrelated to the second term and the fifth term is related to the sixth term\n24 : 171 :: ? :115 :: 4 : 31",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "20",
         "18",
@@ -1782,21 +2991,42 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q51",
       "questionNumber": 51,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 51",
+      "questionText": "The average ofa car is 1 : times the average ofa bus. A tractor covers 1150km in 23 hours. How much distance will the car cover in 4 hours if the speed of the bus is twice the speed of the tractor?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The average ofa car is 1 : times the average ofa bus. A tractor covers 1150km in 23 hours. How much distance will the car cover in 4 hours if the speed of the bus is twice the speed of the tractor?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "540 km",
         "740 km",
@@ -1811,14 +3041,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q52",
@@ -1826,116 +3067,99 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "If x2 – 9x + 1 = 0, what is the value of x8 – 6239x4 + 1?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "If x2 – 9x + 1 = 0, what is the value of x8 – 6239x4 + 1?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "1",
         "0",
         "–1",
         "2"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q52_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "1",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "0",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "–1",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "2",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q52_opt_d.png"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Algebra",
+      "topicMetadata": {
+        "primaryTopicId": "algebra",
+        "primaryTopicName": "Algebra",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q53",
       "questionNumber": 53,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "",
-      "options": [
-        "",
-        "——",
-        "——",
-        "——"
-      ],
-      "optionImages": [
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_b.png",
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_c.png",
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_d.png"
-      ],
-      "richOptions": [
+      "questionText": "(cosec6 — cot)? =,0°< 8 < 90°",
+      "contentBlocks": [
         {
-          "id": "A",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "——",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_b.png"
-        },
-        {
-          "id": "C",
-          "text": "——",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_c.png"
-        },
-        {
-          "id": "D",
-          "text": "——",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_opt_d.png"
+          "type": "text",
+          "content": "(cosec6 — cot)? =,0°< 8 < 90°",
+          "confidence": "VERIFIED"
         }
       ],
+      "contentTypes": [
+        "text"
+      ],
+      "options": [
+        "$\\frac{18}{18}$",
+        "$\\frac{186}{18}$",
+        "$\\frac{16}{18}$",
+        "$4\\frac{1486}{18}$"
+      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_diag.png",
-      "diagramUrls": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_diag.png"
-      ],
-      "questionAssets": [
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q53_diag.png"
-        }
-      ],
-      "marks": 2.0,
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "questionAssets": null,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Trigonometry",
+      "topicMetadata": {
+        "primaryTopicId": "trigonometry",
+        "primaryTopicName": "Trigonometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q54",
@@ -1943,6 +3167,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The weekly earnings of a shopkeeper in February 2021 are ₹21,980, ₹20,580, ₹22,380,\n₹22,616, respectively. What is his average daily income in February 2021?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The weekly earnings of a shopkeeper in February 2021 are ₹21,980, ₹20,580, ₹22,380,\n₹22,616, respectively. What is his average daily income in February 2021?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "₹3,227",
         "₹3,120",
@@ -1957,14 +3191,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.74
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q55",
@@ -1972,6 +3217,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "3 men and 7 women can complete a task in 10 days. On the other hand, 4 men and 6\nwomen, take 8 days to complete the same task. How long will it take 10 women to\ncomplete the same task?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "3 men and 7 women can complete a task in 10 days. On the other hand, 4 men and 6\nwomen, take 8 days to complete the same task. How long will it take 10 women to\ncomplete the same task?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "36 days",
         "43 days",
@@ -1986,14 +3241,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q56",
@@ -2001,61 +3267,66 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "What is the volume of a cylinder with radius 15 cm and height 119 cm? (Take π=22/7)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "What is the volume of a cylinder with radius 15 cm and height 119 cm? (Take π=22/7)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "84150 cm3",
         "85140 cm3",
         "84510 cm3",
         "85500 cm3"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q56_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "84150 cm3",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "85140 cm3",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "84510 cm3",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "85500 cm3",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q56_opt_d.png"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Mensuration",
+      "topicMetadata": {
+        "primaryTopicId": "mensuration",
+        "primaryTopicName": "Mensuration",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q57",
       "questionNumber": 57,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 57",
+      "questionText": "",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q57_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "image"
+      ],
       "options": [
         "₹82.92 crore",
         "₹78.56 crore",
@@ -2067,17 +3338,35 @@
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q57_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q57_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q57_diag.png"
+        }
+      ],
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q58",
@@ -2085,61 +3374,66 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "A table fan, passing through two hands, is sold finally at a profit of 30% of the original\ncost price. If the first dealer makes a profit of 25%, then the profit made by the second\ndealer is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A table fan, passing through two hands, is sold finally at a profit of 30% of the original\ncost price. If the first dealer makes a profit of 25%, then the profit made by the second\ndealer is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "5%",
         "10%",
         "15%",
         "4%"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q58_opt_a.jpeg",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "5%",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q58_opt_a.jpeg"
-        },
-        {
-          "id": "B",
-          "text": "10%",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "15%",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "4%",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q59",
       "questionNumber": 59,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 59",
+      "questionText": "A rectangular piece of paper is 52 cm long and 18 cm wide. A cylinder is formed by rolling the paper along its breadth. Find the volume of the cylinder.  [Take m =",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A rectangular piece of paper is 52 cm long and 18 cm wide. A cylinder is formed by rolling the paper along its breadth. Find the volume of the cylinder.  [Take m =",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "1870 cm3",
         "2002 cm3",
@@ -2154,14 +3448,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Mensuration",
+      "topicMetadata": {
+        "primaryTopicId": "mensuration",
+        "primaryTopicName": "Mensuration",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q60",
@@ -2169,6 +3474,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "A few boys and a few girls appeared for a test. The average score of the boys was 52,\nthe average score of the girls was 72, while the combined average was 60. What was\nthe ratio of the number of boys to the number of girls who took the test?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A few boys and a few girls appeared for a test. The average score of the boys was 52,\nthe average score of the girls was 72, while the combined average was 60. What was\nthe ratio of the number of boys to the number of girls who took the test?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "3 : 2",
         "13 : 18",
@@ -2183,14 +3498,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q61",
@@ -2198,61 +3524,66 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The number 123456 is divisible by:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The number 123456 is divisible by:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "4",
         "14",
         "56",
         "7"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q61_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "4",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q61_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "14",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "56",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "7",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Number System",
+      "topicMetadata": {
+        "primaryTopicId": "number_system",
+        "primaryTopicName": "Number System",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q62",
       "questionNumber": 62,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 62",
+      "questionText": "",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q62_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "image"
+      ],
       "options": [
         "74000",
         "68,000",
@@ -2264,17 +3595,35 @@
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q62_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q62_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q62_diag.png"
+        }
+      ],
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q63",
@@ -2282,6 +3631,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "Anjali and Babita are running on a circular track in opposite directions from same time\nat same point with speeds of 8 m/sec and 6 m/sec, respectively. If the length of the\ncircular track is 960 m, how many times distinct points they will meet?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Anjali and Babita are running on a circular track in opposite directions from same time\nat same point with speeds of 8 m/sec and 6 m/sec, respectively. If the length of the\ncircular track is 960 m, how many times distinct points they will meet?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "7 times",
         "6 times",
@@ -2296,14 +3655,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Trigonometry",
+      "topicMetadata": {
+        "primaryTopicId": "trigonometry",
+        "primaryTopicName": "Trigonometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q64",
@@ -2311,6 +3681,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The value of 272 ÷ 16 + [119 ÷ {1491 ÷ 3 (21 – 13 × 8 + 4 × 3)}] is.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The value of 272 ÷ 16 + [119 ÷ {1491 ÷ 3 (21 – 13 × 8 + 4 × 3)}] is.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "−9",
         "0",
@@ -2325,14 +3705,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q65",
@@ -2340,6 +3731,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "Khushi went to purchase a mixer. The marked price of the mixer was ₹6,000 and 20%\nflat discount was offered on it by the shopkeeper. How much does Khushi have to pay\nfor the mixer?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Khushi went to purchase a mixer. The marked price of the mixer was ₹6,000 and 20%\nflat discount was offered on it by the shopkeeper. How much does Khushi have to pay\nfor the mixer?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "₹4,200",
         "₹4,500",
@@ -2354,14 +3755,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q66",
@@ -2369,61 +3781,66 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The ratio in which a transverse common tangent drawn to two circles with radii 4 cm\nand 6 cm, respectively, divides the line joining their centres is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The ratio in which a transverse common tangent drawn to two circles with radii 4 cm\nand 6 cm, respectively, divides the line joining their centres is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "2 : 3",
         "1 : 1",
         "1: 2",
         "3 : 4"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q66_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "2 : 3",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "1 : 1",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "1: 2",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "3 : 4",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q66_opt_d.png"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "A",
       "correctAnswerIndex": 0,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (A).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q67",
       "questionNumber": 67,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "Question 67",
+      "questionText": "",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "assetUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q67_diag.png",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "image"
+      ],
       "options": [
         "108.4%",
         "109.6%",
@@ -2435,17 +3852,35 @@
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
-      "diagramUrl": null,
-      "diagramUrls": null,
-      "questionAssets": null,
-      "marks": 2.0,
+      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q67_diag.png",
+      "diagramUrls": [
+        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q67_diag.png"
+      ],
+      "questionAssets": [
+        {
+          "type": "image",
+          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q67_diag.png"
+        }
+      ],
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q68",
@@ -2453,54 +3888,49 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The ratio of income and expenditure of a person is 8 : 5. If her income increases by\n25% and her expenditure increases by 28%, then what is the percentage increase in\nher savings?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The ratio of income and expenditure of a person is 8 : 5. If her income increases by\n25% and her expenditure increases by 28%, then what is the percentage increase in\nher savings?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "18%",
         "20%",
-        "16=%",
-        "16=%"
+        "$16\\frac{2}{3}\\%$",
+        "$22\\frac{1}{2}\\%$"
       ],
-      "optionImages": [
-        null,
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q68_opt_c.jpeg",
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q68_opt_d.jpeg"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "18%",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "20%",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "16=%",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q68_opt_c.jpeg"
-        },
-        {
-          "id": "D",
-          "text": "16=%",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q68_opt_d.jpeg"
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q69",
@@ -2508,6 +3938,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The annual salary of Suhas has increased from ₹18,00,000 to ₹22,00,000. What is the\npercentage increase? (Correct to two decimal places)",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The annual salary of Suhas has increased from ₹18,00,000 to ₹22,00,000. What is the\npercentage increase? (Correct to two decimal places)",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "33.33%",
         "18.18%",
@@ -2522,14 +3962,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q70",
@@ -2537,6 +3988,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "A man borrows a sum of ₹1,025 and pays back in two equal yearly instalments. If the\nrate of interest is 5% p.a, compounded yearly, then how much is each instalments?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A man borrows a sum of ₹1,025 and pays back in two equal yearly instalments. If the\nrate of interest is 5% p.a, compounded yearly, then how much is each instalments?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "₹425.25",
         "₹525.32",
@@ -2551,14 +4012,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q71",
@@ -2566,6 +4038,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "Find the mean proportional between 0.04 and 0.0036.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Find the mean proportional between 0.04 and 0.0036.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "0.012",
         "0.12",
@@ -2580,14 +4062,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q72",
@@ -2595,116 +4088,99 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "Evaluate 107 × 93.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Evaluate 107 × 93.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "10047",
         "9951",
         "10049",
         "9953"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q72_opt_a.png",
-        null,
-        null,
-        null
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "10047",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q72_opt_a.png"
-        },
-        {
-          "id": "B",
-          "text": "9951",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "10049",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "9953",
-          "imageUrl": null
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "B",
       "correctAnswerIndex": 1,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (B).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q73",
       "questionNumber": 73,
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
-      "questionText": "",
-      "options": [
-        "",
-        "(a? ae",
-        "(a? ae",
-        "(a? ae"
-      ],
-      "optionImages": [
-        null,
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_b.png",
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_c.png",
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_d.png"
-      ],
-      "richOptions": [
+      "questionText": "Simplify: (a-? + b-4) + (a? + b=)",
+      "contentBlocks": [
         {
-          "id": "A",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "(a? ae",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_b.png"
-        },
-        {
-          "id": "C",
-          "text": "(a? ae",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_c.png"
-        },
-        {
-          "id": "D",
-          "text": "(a? ae",
-          "imageUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_opt_d.png"
+          "type": "text",
+          "content": "Simplify: (a-? + b-4) + (a? + b=)",
+          "confidence": "VERIFIED"
         }
       ],
+      "contentTypes": [
+        "text"
+      ],
+      "options": [
+        "eae",
+        "$\\frac{43}{22}$",
+        "$\\frac{42}{22}$",
+        "$\\frac{2}{22}$"
+      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "D",
       "correctAnswerIndex": 3,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (D).",
-      "diagramUrl": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_diag.png",
-      "diagramUrls": [
-        "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_diag.png"
-      ],
-      "questionAssets": [
-        {
-          "type": "image",
-          "url": "/exam-assets/ssc/chsl/2021/ssc-chsl-2021-09jun-s3/q73_diag.png"
-        }
-      ],
-      "marks": 2.0,
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "questionAssets": null,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q74",
@@ -2712,6 +4188,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "The length of the hypotenuse of a right-angled triangle is 37 cm and the length of one\nof its other two sides is 12 cm. What is the area of the triangle?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The length of the hypotenuse of a right-angled triangle is 37 cm and the length of one\nof its other two sides is 12 cm. What is the area of the triangle?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "222 cm2",
         "204 cm2",
@@ -2726,14 +4212,29 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [
+          "mensuration"
+        ],
+        "secondaryTopicNames": [
+          "Mensuration"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q75",
@@ -2741,6 +4242,16 @@
       "sectionId": "quant",
       "sectionName": "Quantitative Aptitude",
       "questionText": "A washing machine marked at ₹28,000 is sold at two successive discounts of 15% and\n10%. An additional discount of 5% is offered for cash payment. The selling price of the\nwashing machine at cash payment is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "A washing machine marked at ₹28,000 is sold at two successive discounts of 15% and\n10%. An additional discount of 5% is offered for cash payment. The selling price of the\nwashing machine at cash payment is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "₹21,458",
         "₹19,568",
@@ -2755,14 +4266,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q76",
@@ -2770,6 +4292,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following is NOT correct regarding the election of Vice-President?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is NOT correct regarding the election of Vice-President?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "He/she is qualified for election as a member of the House of People.",
         "He/she is qualified for election as a member of the Council of States.",
@@ -2784,14 +4316,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q77",
@@ -2799,6 +4342,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following autobiographies is written by the great Indian santoor player\nShiv Kumar Sharma in 2002?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following autobiographies is written by the great Indian santoor player\nShiv Kumar Sharma in 2002?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "The Life of a Musician",
         "That Long Silence",
@@ -2813,14 +4366,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q78",
@@ -2828,6 +4392,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following does NOT create any corresponding liability for the\ngovernment?\nRevenue receipts\nCapital receipts",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following does NOT create any corresponding liability for the\ngovernment?\nRevenue receipts\nCapital receipts",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Both (a) and (b)",
         "Only (b)",
@@ -2842,14 +4416,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q79",
@@ -2857,6 +4442,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "India finished its best-ever performance at World Athletics U20 Championship at\nNairobi in August 2021 with:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "India finished its best-ever performance at World Athletics U20 Championship at\nNairobi in August 2021 with:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "1 gold and 2 silver medals",
         "2 silver and 1 bronze medals",
@@ -2871,14 +4466,29 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "General Science",
+      "topicMetadata": {
+        "primaryTopicId": "general_science",
+        "primaryTopicName": "General Science",
+        "secondaryTopicIds": [
+          "current_affairs_static_gk"
+        ],
+        "secondaryTopicNames": [
+          "Static GK & Current Affairs"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q80",
@@ -2886,6 +4496,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Tanvi Shah, Indian musician to bring home a Grammy has been conferred the award\nfor which of the following contributions?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Tanvi Shah, Indian musician to bring home a Grammy has been conferred the award\nfor which of the following contributions?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Best Arrangement (Instruments and Vocals)",
         "Best Instrumental Composition",
@@ -2900,14 +4520,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q81",
@@ -2915,6 +4546,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Rashtriya Kalidas Samman was conferred to which of the following personalities in\n2019-20?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Rashtriya Kalidas Samman was conferred to which of the following personalities in\n2019-20?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Shanta Dhananjayan",
         "Priya Sisodia",
@@ -2929,14 +4570,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "History",
+      "topicMetadata": {
+        "primaryTopicId": "history",
+        "primaryTopicName": "History",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q82",
@@ -2944,6 +4596,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following novels is NOT written by the famous Hindi writer Premchand?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following novels is NOT written by the famous Hindi writer Premchand?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Idgah",
         "Mansarovar",
@@ -2958,14 +4620,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q83",
@@ -2973,6 +4646,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which Act was enacted in India with the aim of curbing illegal trade in wildlife and\nderivative parts?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which Act was enacted in India with the aim of curbing illegal trade in wildlife and\nderivative parts?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Environment Protection Act, 1986",
         "Forest Conservation Act, 1980",
@@ -2987,14 +4670,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q84",
@@ -3002,6 +4696,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "The Winter Olympics games 2022 was organised by which of the following city from 4\nFebruary to 25 February 2022?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "The Winter Olympics games 2022 was organised by which of the following city from 4\nFebruary to 25 February 2022?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Brasilia",
         "Beijing",
@@ -3016,14 +4720,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q85",
@@ -3031,6 +4746,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Guru Debaprasad Das Awardee Durga Charan Ranbir is a teacher and performer of\nwhich of the following classical dance forms?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Guru Debaprasad Das Awardee Durga Charan Ranbir is a teacher and performer of\nwhich of the following classical dance forms?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Kathak",
         "Kathakali",
@@ -3045,14 +4770,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.74
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q86",
@@ -3060,6 +4796,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Who among the following Hindustani classical instrumentalists won the Grammy\nAward in 1993 for his album ‘A Meeting by The River’ with Ry Cooder?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Who among the following Hindustani classical instrumentalists won the Grammy\nAward in 1993 for his album ‘A Meeting by The River’ with Ry Cooder?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Zakir Hussain",
         "Ricky Kej",
@@ -3074,14 +4820,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q87",
@@ -3089,6 +4846,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Manjusree Chatterjee was awarded with the honour of Padma Shri in 2019 for which of\nthe following styles of dance?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Manjusree Chatterjee was awarded with the honour of Padma Shri in 2019 for which of\nthe following styles of dance?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Manipuri",
         "Kathakali",
@@ -3103,14 +4870,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q88",
@@ -3118,6 +4896,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Hafiz Ali Khan was an Indian __________ player of the Bangash gharana.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Hafiz Ali Khan was an Indian __________ player of the Bangash gharana.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "sarangi",
         "flute",
@@ -3132,14 +4920,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q89",
@@ -3147,6 +4946,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following is an autobiography of the Indian boxer, Mary Kom?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following is an autobiography of the Indian boxer, Mary Kom?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Unbreakable: An Autobiography",
         "Undisputed Truth",
@@ -3161,14 +4970,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q90",
@@ -3176,6 +4996,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "What is a good way to measure the population density of fishes found in lakes?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "What is a good way to measure the population density of fishes found in lakes?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "The number of fish caught per trap",
         "The number of tadpoles trapped",
@@ -3190,14 +5020,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q91",
@@ -3205,6 +5046,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Who among the following personalities was awarded the Padma Shri in 2021 for\ncontributions to Folk dance ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Who among the following personalities was awarded the Padma Shri in 2021 for\ncontributions to Folk dance ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Manjamma Jogathi",
         "Tulsi Gowda",
@@ -3219,14 +5070,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q92",
@@ -3234,6 +5096,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "According to Köppen's climate classification scheme, dry climates are subdivided\nusing the capital letter S for semi-arid regions or steppe and W for ________ region.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "According to Köppen's climate classification scheme, dry climates are subdivided\nusing the capital letter S for semi-arid regions or steppe and W for ________ region.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "highland",
         "desert",
@@ -3248,14 +5120,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q93",
@@ -3263,6 +5146,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "As of March 2021, which state of India formulated a new education scheme that will\nfacilitate the upgradation and modernisation of the education sector in the state\ncomprehensively, at a total cost of ₹4,000 crore?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "As of March 2021, which state of India formulated a new education scheme that will\nfacilitate the upgradation and modernisation of the education sector in the state\ncomprehensively, at a total cost of ₹4,000 crore?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Tamil Nadu",
         "Gujarat",
@@ -3277,14 +5170,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q94",
@@ -3292,6 +5196,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which river in India flows through a rift valley?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which river in India flows through a rift valley?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Periyar",
         "Narmada",
@@ -3306,14 +5220,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q95",
@@ -3321,6 +5246,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "In 1972, ________ coined the term ‘pyramid of numbers’ that represented the total\nnumbers of individuals (population) present in each trophic level.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In 1972, ________ coined the term ‘pyramid of numbers’ that represented the total\nnumbers of individuals (population) present in each trophic level.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Eugene Odum",
         "Ernst Haeckel",
@@ -3335,14 +5270,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q96",
@@ -3350,6 +5296,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "With reference to the major regions of the northern plains, Bhabar is:",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "With reference to the major regions of the northern plains, Bhabar is:",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "the older alluvium along the river beds forming terraces higher than the flood plain",
         "a narrow belt of about 8 to 16 km that runs in the west-east direction along the foot of\nthe Himalayas from the river Indus to Teesta",
@@ -3364,14 +5320,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Geography",
+      "topicMetadata": {
+        "primaryTopicId": "geography",
+        "primaryTopicName": "Geography",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q97",
@@ -3379,6 +5346,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Which of the following launched People's Plan Campaign 2021- Sabki Yojana Sabka\nVikas in September 2021 ?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Which of the following launched People's Plan Campaign 2021- Sabki Yojana Sabka\nVikas in September 2021 ?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Ministry of Finance",
         "Ministry of Tourism",
@@ -3393,14 +5370,29 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [
+          "current_affairs_static_gk"
+        ],
+        "secondaryTopicNames": [
+          "Static GK & Current Affairs"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q98",
@@ -3408,6 +5400,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Who among the following was the founder of the Banaras Gharana of style of khayal\nsinging?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Who among the following was the founder of the Banaras Gharana of style of khayal\nsinging?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "Ustad Inayat Khan",
         "Pandit Gopal Mishra",
@@ -3422,14 +5424,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q99",
@@ -3437,6 +5450,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "Areas like the southern part of Gujarat, eastern Tamil Nadu, northeast peninsula\ncovering Odisha, Jharkhand, Bihar, and East Madhya Pradesh receive rainfall between\n_________.",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "Areas like the southern part of Gujarat, eastern Tamil Nadu, northeast peninsula\ncovering Odisha, Jharkhand, Bihar, and East Madhya Pradesh receive rainfall between\n_________.",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "200-300 cm",
         "250-350 cm",
@@ -3451,14 +5474,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2021-09jun-s3-q100",
@@ -3466,6 +5500,16 @@
       "sectionId": "general_awareness",
       "sectionName": "General Awareness",
       "questionText": "In which of the following years was India the host of Asian Games?",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "In which of the following years was India the host of Asian Games?",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
       "options": [
         "1994 and 2010",
         "1951 and 1986",
@@ -3480,14 +5524,25 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2021,
       "date": "2022-06-09",
       "shift": "Shift 3",
       "tier": "Tier 1",
-      "language": "English"
+      "language": "English",
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     }
   ]
 }

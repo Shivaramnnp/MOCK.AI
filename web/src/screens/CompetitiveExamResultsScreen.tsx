@@ -38,6 +38,7 @@ interface CompetitiveExamResultsScreenProps {
   paper: ExamPaper;
   onRetake: () => void;
   onExplore: () => void;
+  onPracticeTopic?: (topicId: string, topicName?: string) => void;
   onReportQuestion?: (context: {
     examId: string;
     editionYear?: number;
@@ -56,6 +57,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
   paper: initialPaper,
   onRetake,
   onExplore,
+  onPracticeTopic,
   onReportQuestion,
   onAttachAnswerKey,
 }) => {
@@ -78,11 +80,13 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
   const userAnswers = session.userAnswers || {};
   const descriptiveAnswers = session.userDescriptiveAnswers || {};
   const isDescriptive = paper.paperType === 'DESCRIPTIVE';
+  const isAuthoritative = Boolean(result?.isAuthoritative || (paper as any).isPresentationOnly);
 
   const isScoreUnavailable =
-    result?.isScoreCalculated === false ||
-    result?.answerKeyStatus === 'UNAVAILABLE' ||
-    paper.answerKeyStatus === 'UNAVAILABLE';
+    !isAuthoritative &&
+    (result?.isScoreCalculated === false ||
+      result?.answerKeyStatus === 'UNAVAILABLE' ||
+      paper.answerKeyStatus === 'UNAVAILABLE');
 
   const [selectedSectionFilter, setSelectedSectionFilter] = useState<string>('all');
   const [selectedStatusFilter, setSelectedStatusFilter] = useState<string>('all');
@@ -129,23 +133,45 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
   const filteredQuestions = questions
     .map((q, idx) => {
       const userChoice = userAnswers[idx];
-      const qMarks = q.marks !== undefined ? q.marks : paper.markingScheme.marksPerCorrect;
+      const qMarks = q.marks !== undefined ? q.marks : (paper.markingScheme?.marksPerCorrect ?? 2);
       const qNegative =
-        q.negativeMarks !== undefined ? q.negativeMarks : paper.markingScheme.negativeMarks;
+        q.negativeMarks !== undefined ? q.negativeMarks : (paper.markingScheme?.negativeMarks ?? 0);
 
       let isAttempted = false;
       let isCorrect = false;
       let isWrong = false;
       let isSkipped = false;
 
-      if (q.isMta) {
+      if (isAuthoritative) {
+        // In server-authoritative delivery, evaluation is done strictly by the backend scoring engine.
+        // Answer keys are stripped/withheld during presentation. Never evaluate client-side against stripped keys!
+        const userMsq = session.userMsqAnswers?.[idx] || [];
+        const userNat = session.userNatAnswers?.[idx];
+        isAttempted =
+          q.questionType === 'MSQ'
+            ? userMsq.length > 0
+            : q.questionType === 'NAT'
+            ? typeof userNat === 'string' && userNat.trim().length > 0
+            : userChoice !== undefined && userChoice !== null;
+
+        const itemScore = result?.itemScores?.[q.id || `q_${idx}`];
+        if (itemScore) {
+          isCorrect = itemScore.isCorrect;
+          isWrong = isAttempted && !itemScore.isCorrect;
+        } else {
+          // In authoritative delivery where answer keys are withheld, do not falsely label attempted questions as wrong
+          isCorrect = false;
+          isWrong = false;
+        }
+        isSkipped = !isAttempted;
+      } else if (q.isMta) {
         isAttempted = true;
         isCorrect = true;
       } else if (q.questionType === 'MSQ') {
         const userMsq = session.userMsqAnswers?.[idx] || [];
         isAttempted = userMsq.length > 0;
         if (isAttempted) {
-          const sortedUserLetters = [...userMsq].sort().map((i) => ['A', 'B', 'C', 'D'][i]);
+          const sortedUserLetters = [...userMsq].sort().map((i) => q.richOptions?.[i]?.id || ['A', 'B', 'C', 'D'][i] || String.fromCharCode(65 + i));
           if (q.correctAnswerSets && q.correctAnswerSets.length > 0) {
             isCorrect = q.correctAnswerSets.some((set) => {
               const sortedSet = [...set].sort();
@@ -596,6 +622,28 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
            CBE OBJECTIVE RESULTS FLOW
            ═══════════════════════════════════════════════════════════════════ */
         <>
+          {/* ── Authoritative Delivery (Server-Scored) Banner ─────────────── */}
+          {isAuthoritative && (
+            <div className="rounded-3xl bg-blue-500/10 border border-blue-500/30 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold text-blue-900 dark:text-blue-300 flex items-center gap-2">
+                    <span>Official Authoritative Evaluation</span>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-700 dark:text-blue-300">
+                      Server-Scored
+                    </span>
+                  </h4>
+                  <p className="text-xs text-blue-800/80 dark:text-blue-400/80 leading-relaxed">
+                    This examination attempt was evaluated server-side by the authoritative UADUE delivery engine.
+                    Raw score is sealed: {result?.totalRawScore ?? result?.totalScore} / {result?.maxMarks ?? paper.totalMarks}.
+                    Normalized scoring is withheld until batch normalization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* ── Practice Mode (Answer Key Unavailable) Banner ─────────────── */}
           {isScoreUnavailable && (
             <div className="rounded-3xl bg-amber-500/10 border border-amber-500/30 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -642,7 +690,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                 <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
                   {isScoreUnavailable
                     ? 'Official answer key has not been attached. Scoring will be computed automatically once answer key is uploaded.'
-                    : `Calculated at +${paper.markingScheme.marksPerCorrect} marks per correct answer and -${paper.markingScheme.negativeMarks} marks per incorrect answer.`}
+                    : `Calculated at +${paper.markingScheme?.marksPerCorrect ?? 2} marks per correct answer and -${paper.markingScheme?.negativeMarks ?? 0} marks per incorrect answer.`}
                 </p>
               </div>
 
@@ -686,7 +734,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                         <CheckCircle2 className="w-3.5 h-3.5" /> Correct
                       </span>
                       <span className="font-bold">
-                        {result.correctCount ?? 0} (+{(result.correctCount ?? 0) * paper.markingScheme.marksPerCorrect})
+                        {result.correctCount ?? 0} (+{(result.correctCount ?? 0) * (paper.markingScheme?.marksPerCorrect ?? 2)})
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-xs">
@@ -694,7 +742,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                         <XCircle className="w-3.5 h-3.5" /> Incorrect
                       </span>
                       <span className="font-bold">
-                        {result.wrongCount ?? 0} (-{(result.wrongCount ?? 0) * paper.markingScheme.negativeMarks})
+                        {result.wrongCount ?? 0} (-{(result.wrongCount ?? 0) * (paper.markingScheme?.negativeMarks ?? 0)})
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-xs">
@@ -752,7 +800,7 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-surface-border dark:divide-darkSurface-border font-medium">
-                  {Object.values(result.sectionResults).map((sec) => (
+                  {Object.values(result.sectionResults || {}).map((sec) => (
                     <tr key={sec.sectionId} className="hover:bg-surface-elev1/40 transition-colors">
                       <td className="p-3 font-bold text-surface-text dark:text-darkSurface-text">
                         {sec.sectionName}
@@ -787,6 +835,148 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
               </table>
             </div>
           </div>
+
+          {/* ── Topic-wise Performance Breakdown ───────────────────────── */}
+          {result.topicResults && Object.keys(result.topicResults).length > 0 && (
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h3 className="text-xl font-bold font-display text-surface-text dark:text-darkSurface-text">
+                    Topic-wise Performance Breakdown
+                  </h3>
+                  <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+                    Syllabus-level accuracy breakdown to pinpoint conceptual mastery and weak spots.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border overflow-hidden shadow-sm">
+                <table className="w-full text-xs text-left">
+                  <thead className="bg-surface-elev1 dark:bg-darkSurface-elev2 text-surface-muted font-bold border-b border-surface-border dark:border-darkSurface-border">
+                    <tr>
+                      <th className="p-3">Topic</th>
+                      <th className="p-3 text-center">Questions</th>
+                      <th className="p-3 text-center">Attempted</th>
+                      <th className="p-3 text-center text-emerald-600">Correct</th>
+                      <th className="p-3 text-center text-red-500">Wrong</th>
+                      <th className="p-3 text-center">Accuracy</th>
+                      <th className="p-3 text-right">Score</th>
+                      {onPracticeTopic && <th className="p-3 text-right">Action</th>}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-surface-border dark:divide-darkSurface-border font-medium">
+                    {Object.values(result.topicResults).map((top) => {
+                      const isWeak = top.attempted > 0 && (top.accuracy < 60 || top.wrong > top.correct);
+                      return (
+                        <tr key={top.topicId} className="hover:bg-surface-elev1/40 transition-colors">
+                          <td className="p-3 font-bold text-surface-text dark:text-darkSurface-text">
+                            <div className="flex items-center gap-2">
+                              <span>{top.topicName}</span>
+                              {isWeak && (
+                                <span className="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                                  Focus Needed
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="p-3 text-center text-surface-muted">{top.totalQuestions}</td>
+                          <td className="p-3 text-center">{top.attempted}</td>
+                          <td className="p-3 text-center text-emerald-600 font-bold">{isScoreUnavailable ? '—' : top.correct}</td>
+                          <td className="p-3 text-center text-red-500 font-bold">{isScoreUnavailable ? '—' : top.wrong}</td>
+                          <td className="p-3 text-center font-bold">
+                            {isScoreUnavailable ? (
+                              <span className="text-surface-muted">—</span>
+                            ) : (
+                              <span
+                                className={`px-2 py-0.5 rounded-full ${
+                                  top.accuracy >= 75
+                                    ? 'bg-emerald-500/10 text-emerald-600'
+                                    : top.accuracy >= 50
+                                    ? 'bg-amber-500/10 text-amber-600'
+                                    : 'bg-red-500/10 text-red-500'
+                                }`}
+                              >
+                                {top.accuracy}%
+                              </span>
+                            )}
+                          </td>
+                          <td className="p-3 text-right font-extrabold text-brand-primary">
+                            {isScoreUnavailable ? '—' : `${top.score} / ${top.maxMarks}`}
+                          </td>
+                          {onPracticeTopic && (
+                            <td className="p-3 text-right">
+                              <button
+                                type="button"
+                                onClick={() => onPracticeTopic(top.topicId)}
+                                className="px-2.5 py-1 rounded-lg bg-brand-primary/10 hover:bg-brand-primary text-brand-primary hover:text-white font-bold text-[11px] transition-colors"
+                              >
+                                Practice
+                              </button>
+                            </td>
+                          )}
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* ── Difficulty-wise Performance Breakdown ───────────────────── */}
+          {result.difficultyResults && Object.keys(result.difficultyResults).some((k) => (result.difficultyResults![k]?.totalQuestions || 0) > 0) && (
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold font-display text-surface-text dark:text-darkSurface-text">
+                  Difficulty-wise Performance
+                </h3>
+                <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+                  Accuracy comparison between foundational 1-mark and advanced 2-mark examination problems.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {(['EASY', 'MEDIUM', 'HARD'] as const).map((diff) => {
+                  const stat = result.difficultyResults?.[diff];
+                  if (!stat || stat.totalQuestions === 0) return null;
+                  const label = diff === 'HARD' ? '2-Mark Advanced' : '1-Mark Foundational';
+                  return (
+                    <div
+                      key={diff}
+                      className="p-5 rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border shadow-sm space-y-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-surface-muted uppercase">{label}</span>
+                        <span
+                          className={`px-2 py-0.5 rounded-full text-xs font-extrabold ${
+                            stat.accuracy >= 70
+                              ? 'bg-emerald-500/10 text-emerald-600'
+                              : stat.accuracy >= 45
+                              ? 'bg-amber-500/10 text-amber-600'
+                              : 'bg-red-500/10 text-red-500'
+                          }`}
+                        >
+                          {stat.accuracy}% Accuracy
+                        </span>
+                      </div>
+                      <div className="flex items-baseline justify-between pt-1">
+                        <span className="text-2xl font-black text-surface-text dark:text-darkSurface-text">
+                          {stat.correct} <span className="text-xs text-surface-muted font-normal">/ {stat.attempted} attempted</span>
+                        </span>
+                        <span className="text-xs font-bold text-brand-primary">
+                          {stat.score} Marks
+                        </span>
+                      </div>
+                      <div className="text-[11px] text-surface-muted flex justify-between">
+                        <span>Total Questions: {stat.totalQuestions}</span>
+                        <span>Wrong: {stat.wrong}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* ── Question-by-Question Solution Review ───────────────────────── */}
           <div className="space-y-4">
@@ -880,6 +1070,26 @@ export const CompetitiveExamResultsScreen: React.FC<CompetitiveExamResultsScreen
                             {q.questionType}
                           </span>
                         )}
+                        {(() => {
+                          const meta = q.topicMetadata;
+                          const topicName = meta?.primaryTopicName || (typeof q.topic === 'string' ? q.topic : null);
+                          const subtopicName = meta?.subtopicName || q.subtopic;
+                          return (
+                            <>
+                              {topicName && (
+                                <span className="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-[10px] font-semibold">
+                                  {topicName}
+                                  {subtopicName ? ` • ${subtopicName}` : ''}
+                                </span>
+                              )}
+                              {q.examId && (
+                                <span className="px-2 py-0.5 rounded-md bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-muted border border-surface-border dark:border-darkSurface-border text-[10px] font-medium">
+                                  PYQ: {q.examId.toUpperCase()}{q.year ? ` ${q.year}` : ''}
+                                </span>
+                              )}
+                            </>
+                          );
+                        })()}
                       </div>
 
                       <div className="flex items-center gap-2">

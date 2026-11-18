@@ -10,13 +10,13 @@
   "tier": "Tier 1",
   "language": "English",
   "durationMinutes": 60,
-  "totalMarks": 200.0,
+  "totalMarks": 200,
   "totalQuestions": 100,
   "isComplete": true,
   "markingScheme": {
-    "marksPerCorrect": 2.0,
+    "marksPerCorrect": 2,
     "negativeMarks": 0.5,
-    "unansweredMarks": 0.0
+    "unansweredMarks": 0
   },
   "sections": [
     {
@@ -25,7 +25,7 @@
       "questionCount": 25,
       "startIndex": 0,
       "endIndex": 24,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "reasoning",
@@ -33,7 +33,7 @@
       "questionCount": 25,
       "startIndex": 25,
       "endIndex": 49,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "quant",
@@ -41,7 +41,7 @@
       "questionCount": 25,
       "startIndex": 50,
       "endIndex": 74,
-      "maxMarks": 50.0
+      "maxMarks": 50
     },
     {
       "id": "general_awareness",
@@ -49,7 +49,7 @@
       "questionCount": 25,
       "startIndex": 75,
       "endIndex": 99,
-      "maxMarks": 50.0
+      "maxMarks": 50
     }
   ],
   "questions": [
@@ -83,7 +83,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -91,7 +91,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.96
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q2",
@@ -123,7 +133,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -131,7 +141,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q3",
@@ -163,7 +183,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -171,7 +191,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q4",
@@ -203,7 +233,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -211,7 +241,21 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [
+          "vocabulary"
+        ],
+        "secondaryTopicNames": [
+          "Vocabulary"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q5",
@@ -243,7 +287,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -251,7 +295,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q6",
@@ -283,7 +337,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -291,7 +345,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q7",
@@ -323,7 +387,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -331,7 +395,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q8",
@@ -363,7 +437,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -371,7 +445,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q9",
@@ -403,7 +487,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -411,7 +495,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Comprehension",
+      "topicMetadata": {
+        "primaryTopicId": "comprehension",
+        "primaryTopicName": "Comprehension",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q10",
@@ -443,7 +537,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -451,7 +545,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q11",
@@ -483,7 +587,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -491,7 +595,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q12",
@@ -523,7 +637,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -531,7 +645,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q13",
@@ -563,7 +687,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -571,7 +695,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q14",
@@ -603,7 +737,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -611,7 +745,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q15",
@@ -643,7 +787,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -651,7 +795,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q16",
@@ -683,7 +837,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -691,7 +845,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q17",
@@ -723,7 +887,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -731,7 +895,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q18",
@@ -763,7 +937,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -771,7 +945,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q19",
@@ -803,7 +987,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -811,7 +995,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q20",
@@ -843,7 +1037,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -851,7 +1045,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q21",
@@ -883,7 +1087,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -891,7 +1095,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.71
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q22",
@@ -923,7 +1137,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -931,7 +1145,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q23",
@@ -963,7 +1187,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -971,7 +1195,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Grammar",
+      "topicMetadata": {
+        "primaryTopicId": "grammar",
+        "primaryTopicName": "Grammar",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q24",
@@ -1003,7 +1237,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1011,7 +1245,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q25",
@@ -1043,7 +1287,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1051,7 +1295,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Vocabulary",
+      "topicMetadata": {
+        "primaryTopicId": "vocabulary",
+        "primaryTopicName": "Vocabulary",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.92
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q26",
@@ -1083,7 +1337,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1091,7 +1345,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q27",
@@ -1136,7 +1400,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q27_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1144,7 +1408,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q28",
@@ -1176,7 +1450,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1184,7 +1458,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "REVIEW_REQUIRED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.74
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q29",
@@ -1216,7 +1500,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1224,7 +1508,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q30",
@@ -1256,7 +1550,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1264,7 +1558,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q31",
@@ -1296,7 +1600,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1304,7 +1608,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q32",
@@ -1323,9 +1637,9 @@
         "text"
       ],
       "options": [
-        "4",
+        "A",
         "6",
-        "8",
+        "3",
         "5"
       ],
       "optionImages": null,
@@ -1336,7 +1650,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1344,7 +1658,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Coding & Decoding",
+      "topicMetadata": {
+        "primaryTopicId": "coding_decoding",
+        "primaryTopicName": "Coding & Decoding",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q33",
@@ -1387,14 +1711,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_a.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option A figure",
-          "ocrText": null,
+          "ocrText": "3 P 4 L = V",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_a.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option A figure",
-              "ocrText": null,
+              "ocrText": "3 P 4 L = V",
               "confidence": "VERIFIED"
             }
           ],
@@ -1408,14 +1732,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_b.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option B figure",
-          "ocrText": null,
+          "ocrText": "V L 4 P T 3",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_b.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option B figure",
-              "ocrText": null,
+              "ocrText": "V L 4 P T 3",
               "confidence": "VERIFIED"
             }
           ],
@@ -1429,14 +1753,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_c.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option C figure",
-          "ocrText": null,
+          "ocrText": "L P V T = 3",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_c.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option C figure",
-              "ocrText": null,
+              "ocrText": "L P V T = 3",
               "confidence": "VERIFIED"
             }
           ],
@@ -1450,14 +1774,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_d.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option D figure",
-          "ocrText": null,
+          "ocrText": "L P V T 3 ~=4",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_opt_d.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option D figure",
-              "ocrText": null,
+              "ocrText": "L P V T 3 ~=4",
               "confidence": "VERIFIED"
             }
           ],
@@ -1479,7 +1803,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q33_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1487,7 +1811,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q34",
@@ -1524,14 +1858,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_a.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option A figure",
-          "ocrText": null,
+          "ocrText": "° 7 © © ° ©",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_a.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option A figure",
-              "ocrText": null,
+              "ocrText": "° 7 © © ° ©",
               "confidence": "VERIFIED"
             }
           ],
@@ -1545,14 +1879,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_b.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option B figure",
-          "ocrText": null,
+          "ocrText": "oO Oo O oO OO",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_b.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option B figure",
-              "ocrText": null,
+              "ocrText": "oO Oo O oO OO",
               "confidence": "VERIFIED"
             }
           ],
@@ -1566,14 +1900,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_c.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option C figure",
-          "ocrText": null,
+          "ocrText": "385",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_c.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option C figure",
-              "ocrText": null,
+              "ocrText": "385",
               "confidence": "VERIFIED"
             }
           ],
@@ -1587,14 +1921,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_d.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option D figure",
-          "ocrText": null,
+          "ocrText": "7 © 7 7",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_opt_d.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option D figure",
-              "ocrText": null,
+              "ocrText": "7 © 7 7",
               "confidence": "VERIFIED"
             }
           ],
@@ -1616,7 +1950,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q34_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1624,7 +1958,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q35",
@@ -1656,7 +2000,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1664,7 +2008,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q36",
@@ -1696,7 +2050,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1704,7 +2058,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q37",
@@ -1839,7 +2203,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q37_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1847,7 +2211,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q38",
@@ -1879,7 +2253,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -1887,7 +2261,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q39",
@@ -2022,7 +2406,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q39_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2030,7 +2414,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q40",
@@ -2062,7 +2456,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2070,7 +2464,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q41",
@@ -2102,7 +2506,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2110,7 +2514,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Series",
+      "topicMetadata": {
+        "primaryTopicId": "series",
+        "primaryTopicName": "Series",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q42",
@@ -2142,7 +2556,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2150,7 +2564,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q43",
@@ -2182,7 +2606,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2190,7 +2614,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q44",
@@ -2235,7 +2669,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q44_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2243,7 +2677,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.93
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q45",
@@ -2275,7 +2719,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2283,7 +2727,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q46",
@@ -2315,7 +2769,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2323,7 +2777,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Coding & Decoding",
+      "topicMetadata": {
+        "primaryTopicId": "coding_decoding",
+        "primaryTopicName": "Coding & Decoding",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q47",
@@ -2355,7 +2819,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2363,7 +2827,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Analogy",
+      "topicMetadata": {
+        "primaryTopicId": "analogy",
+        "primaryTopicName": "Analogy",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q48",
@@ -2395,7 +2869,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2403,7 +2877,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Classification",
+      "topicMetadata": {
+        "primaryTopicId": "classification",
+        "primaryTopicName": "Classification",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q49",
@@ -2435,7 +2919,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2443,7 +2927,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Logical Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "logical_reasoning",
+        "primaryTopicName": "Logical Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q50",
@@ -2578,7 +3072,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q50_diag.jpeg"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2586,7 +3080,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Spatial & Visual Reasoning",
+      "topicMetadata": {
+        "primaryTopicId": "spatial_visual",
+        "primaryTopicName": "Spatial & Visual Reasoning",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q51",
@@ -2618,7 +3122,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2626,7 +3130,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q52",
@@ -2658,7 +3172,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2666,7 +3180,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q53",
@@ -2711,7 +3235,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q53_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2719,7 +3243,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q54",
@@ -2756,14 +3290,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_a.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option A figure",
-          "ocrText": "$\\frac{1}{2}\\text{ z : nz}$",
+          "ocrText": "$\\frac{1}{2}\\text{ z\n: nz}$",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_a.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option A figure",
-              "ocrText": "$\\frac{1}{2}\\text{ z : nz}$",
+              "ocrText": "$\\frac{1}{2}\\text{ z\n: nz}$",
               "confidence": "VERIFIED"
             }
           ],
@@ -2777,14 +3311,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_b.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option B figure",
-          "ocrText": "re rén",
+          "ocrText": "11 r'n",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_b.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option B figure",
-              "ocrText": "re rén",
+              "ocrText": "11 r'n",
               "confidence": "VERIFIED"
             }
           ],
@@ -2798,14 +3332,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_c.png",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option C figure",
-          "ocrText": "rh:t",
+          "ocrText": "es aes",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_c.png",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option C figure",
-              "ocrText": "rh:t",
+              "ocrText": "es aes",
               "confidence": "VERIFIED"
             }
           ],
@@ -2819,14 +3353,14 @@
           "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_d.jpeg",
           "displayMode": "IMAGE_ONLY",
           "altText": "Option D figure",
-          "ocrText": "fr: n?",
+          "ocrText": "rent",
           "contentBlocks": [
             {
               "type": "image",
               "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q54_opt_d.jpeg",
               "displayMode": "IMAGE_ONLY",
               "altText": "Option D figure",
-              "ocrText": "fr: n?",
+              "ocrText": "rent",
               "confidence": "VERIFIED"
             }
           ],
@@ -2841,7 +3375,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2849,7 +3383,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q55",
@@ -2881,7 +3425,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2889,7 +3433,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q56",
@@ -2908,10 +3462,10 @@
         "text"
       ],
       "options": [
-        "$3\\frac{5}{2}$",
-        "$3\\frac{4}{7}$",
+        "$3\\frac{5}{7}\\text{ hours}$",
+        "$3\\frac{4}{7}\\text{ hours}$",
         "$2\\frac{4}{7}\\text{ hours}$",
-        "$2\\frac{8}{11}\\text{ hours}$"
+        "$2\\frac{3}{11}\\text{ hours}$"
       ],
       "optionImages": null,
       "richOptions": null,
@@ -2921,7 +3475,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2929,7 +3483,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q57",
@@ -2961,7 +3525,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -2969,7 +3533,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Mensuration",
+      "topicMetadata": {
+        "primaryTopicId": "mensuration",
+        "primaryTopicName": "Mensuration",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.98
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q58",
@@ -3001,7 +3575,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3009,7 +3583,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q59",
@@ -3054,7 +3638,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q59_diag.jpeg"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3062,7 +3646,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Data Interpretation",
+      "topicMetadata": {
+        "primaryTopicId": "data_interpretation",
+        "primaryTopicName": "Data Interpretation",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q60",
@@ -3107,7 +3701,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q60_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3115,7 +3709,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q61",
@@ -3147,7 +3751,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3155,7 +3759,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q62",
@@ -3187,7 +3801,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3195,7 +3809,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q63",
@@ -3214,110 +3838,20 @@
         "text"
       ],
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "$\\pm \\frac{2}{172}$",
+        "$\\pm \\frac{2}{12}\\text{ £\nos\n#\nry}$",
+        "$\\pm \\frac{2}{12}$",
+        "\\frac{7 5 a tanz}{cos X.cos y - SIN X. sin y - cos x. SIN a 4 - tan2z}"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_a.jpeg",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_b.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_c.jpeg",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_d.jpeg"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_a.jpeg",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option A figure",
-          "ocrText": null,
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_a.jpeg",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option A figure",
-              "ocrText": null,
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_b.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option B figure",
-          "ocrText": "$\\frac{2}{1}\\text{ -  £ os # ry}$",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_b.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option B figure",
-              "ocrText": "$\\frac{2}{1}\\text{ -  £ os # ry}$",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_c.jpeg",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option C figure",
-          "ocrText": null,
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_c.jpeg",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option C figure",
-              "ocrText": null,
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_d.jpeg",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option D figure",
-          "ocrText": null,
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q63_opt_d.jpeg",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option D figure",
-              "ocrText": null,
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3325,7 +3859,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Trigonometry",
+      "topicMetadata": {
+        "primaryTopicId": "trigonometry",
+        "primaryTopicName": "Trigonometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q64",
@@ -3357,7 +3901,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3365,7 +3909,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.87
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q65",
@@ -3397,7 +3951,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3405,7 +3959,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q66",
@@ -3437,7 +4001,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3445,7 +4009,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q67",
@@ -3477,7 +4051,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3485,7 +4059,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Algebra",
+      "topicMetadata": {
+        "primaryTopicId": "algebra",
+        "primaryTopicName": "Algebra",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q68",
@@ -3517,7 +4101,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3525,7 +4109,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q69",
@@ -3564,7 +4158,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q69_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3572,7 +4166,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q70",
@@ -3604,7 +4208,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3612,7 +4216,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q71",
@@ -3644,7 +4258,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3652,7 +4266,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Number System",
+      "topicMetadata": {
+        "primaryTopicId": "number_system",
+        "primaryTopicName": "Number System",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q72",
@@ -3697,7 +4321,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q72_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3705,7 +4329,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.91
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q73",
@@ -3737,7 +4371,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3745,7 +4379,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geometry",
+      "topicMetadata": {
+        "primaryTopicId": "geometry",
+        "primaryTopicName": "Geometry",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q74",
@@ -3777,7 +4421,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3785,7 +4429,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q75",
@@ -3804,110 +4458,20 @@
         "text"
       ],
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Profit of 2%",
+        "Loss of 2%",
+        "Loss of 4%",
+        "Profit of 4%"
       ],
-      "optionImages": [
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_a.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_b.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_c.png",
-        "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_a.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option A figure",
-          "ocrText": "Profit of 2%",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_a.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option A figure",
-              "ocrText": "Profit of 2%",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_b.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option B figure",
-          "ocrText": "Loss of 2%",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_b.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option B figure",
-              "ocrText": "Loss of 2%",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_c.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option C figure",
-          "ocrText": "Loss of 4%",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_c.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option C figure",
-              "ocrText": "Loss of 4%",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        },
-        {
-          "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_d.png",
-          "displayMode": "IMAGE_ONLY",
-          "altText": "Option D figure",
-          "ocrText": "Profit of 4%",
-          "contentBlocks": [
-            {
-              "type": "image",
-              "assetUrl": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q75_opt_d.png",
-              "displayMode": "IMAGE_ONLY",
-              "altText": "Option D figure",
-              "ocrText": "Profit of 4%",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "image"
-          ]
-        }
-      ],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "C",
       "correctAnswerIndex": 2,
       "explanation": "The official answer key provided by Staff Selection Commission is Option (C).",
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3915,7 +4479,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Arithmetic",
+      "topicMetadata": {
+        "primaryTopicId": "arithmetic",
+        "primaryTopicName": "Arithmetic",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q76",
@@ -3947,7 +4521,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3955,7 +4529,21 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "History",
+      "topicMetadata": {
+        "primaryTopicId": "history",
+        "primaryTopicName": "History",
+        "secondaryTopicIds": [
+          "geography"
+        ],
+        "secondaryTopicNames": [
+          "Geography"
+        ],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q77",
@@ -3987,7 +4575,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -3995,7 +4583,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q78",
@@ -4027,7 +4625,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4035,7 +4633,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q79",
@@ -4067,7 +4675,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4075,7 +4683,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q80",
@@ -4107,7 +4725,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4115,7 +4733,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q81",
@@ -4147,7 +4775,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4155,7 +4783,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q82",
@@ -4187,7 +4825,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4195,7 +4833,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q83",
@@ -4227,7 +4875,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4235,7 +4883,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q84",
@@ -4267,7 +4925,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4275,7 +4933,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q85",
@@ -4307,7 +4975,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4315,7 +4983,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q86",
@@ -4347,7 +5025,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4355,7 +5033,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q87",
@@ -4387,7 +5075,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4395,7 +5083,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q88",
@@ -4427,7 +5125,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4435,7 +5133,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q89",
@@ -4467,7 +5175,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4475,7 +5183,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q90",
@@ -4507,7 +5225,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4515,7 +5233,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Static GK & Current Affairs",
+      "topicMetadata": {
+        "primaryTopicId": "current_affairs_static_gk",
+        "primaryTopicName": "Static GK & Current Affairs",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.95
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q91",
@@ -4547,7 +5275,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4555,7 +5283,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.97
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q92",
@@ -4587,7 +5325,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4595,7 +5333,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "History",
+      "topicMetadata": {
+        "primaryTopicId": "history",
+        "primaryTopicName": "History",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q93",
@@ -4640,7 +5388,7 @@
           "url": "/exam-assets/ssc/chsl/2024/ssc-chsl-2024-02jul-s1/q93_diag.png"
         }
       ],
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4648,7 +5396,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q94",
@@ -4680,7 +5438,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4688,7 +5446,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q95",
@@ -4720,7 +5488,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4728,7 +5496,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.85
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q96",
@@ -4760,7 +5538,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4768,7 +5546,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q97",
@@ -4800,7 +5588,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4808,7 +5596,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Polity & Constitution",
+      "topicMetadata": {
+        "primaryTopicId": "polity",
+        "primaryTopicName": "Polity & Constitution",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q98",
@@ -4840,7 +5638,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4848,7 +5646,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q99",
@@ -4880,7 +5688,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4888,7 +5696,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Geography",
+      "topicMetadata": {
+        "primaryTopicId": "geography",
+        "primaryTopicName": "Geography",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "VERIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0.89
+      }
     },
     {
       "id": "ssc-chsl-2024-02jul-s1-q100",
@@ -4920,7 +5738,7 @@
       "diagramUrl": null,
       "diagramUrls": null,
       "questionAssets": null,
-      "marks": 2.0,
+      "marks": 2,
       "negativeMarks": 0.5,
       "examId": "ssc-chsl",
       "year": 2024,
@@ -4928,7 +5746,17 @@
       "shift": "Shift 1",
       "tier": "Tier 1",
       "language": "English",
-      "verificationStatus": "VERIFIED"
+      "verificationStatus": "VERIFIED",
+      "topic": "Uncategorized",
+      "topicMetadata": {
+        "primaryTopicId": "uncategorized",
+        "primaryTopicName": "Uncategorized",
+        "secondaryTopicIds": [],
+        "secondaryTopicNames": [],
+        "classificationStatus": "UNCLASSIFIED",
+        "classificationSource": "RULE_BASED",
+        "confidence": 0
+      }
     }
   ]
 }

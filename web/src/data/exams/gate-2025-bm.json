@@ -392,7 +392,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -401,12 +401,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -503,37 +503,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "",
-        "",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/bm/q5_opt_a.png",
-        "/exam-assets/gate/2025/bm/q5_opt_b.png",
-        "/exam-assets/gate/2025/bm/q5_opt_c.png",
-        "/exam-assets/gate/2025/bm/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_a.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_b.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_c.png"
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/bm/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3490,11 +3525,11 @@
       "questionNumber": 32,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 \\(\\frac{𝑓(1+∆𝑥)-𝑓(1)}{∆𝑥→0∆𝑥}\\) is ______________.",
+      "questionText": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 1 <u>𝑓(1+</u> <u>∆𝑥)-</u> <u>𝑓(1</u>) ∆𝑥 is ______________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 \\(\\frac{𝑓(1+∆𝑥)-𝑓(1)}{∆𝑥→0∆𝑥}\\) is ______________.",
+          "content": "If 𝑓(𝑥) = 𝑥- \\(\\frac{1}{𝑥}\\) , the value of lim ∆𝑥→0 1 <u>𝑓(1+</u> <u>∆𝑥)-</u> <u>𝑓(1</u>) ∆𝑥 is ______________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5176,11 +5211,11 @@
       "questionNumber": 47,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{time^{1}}{2}\\) 𝛿[𝑛-1] + \\(\\frac{system^{1}}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
+      "questionText": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{1}{2}\\) 𝛿[𝑛-1] + \\(\\frac{1}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{time^{1}}{2}\\) 𝛿[𝑛-1] + \\(\\frac{system^{1}}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
+          "content": "A discrete linear time invariant system has an impulse response function given by ℎ[𝑛] = 𝛿[𝑛] + \\(\\frac{1}{2}\\) 𝛿[𝑛-1] + \\(\\frac{1}{3}\\) 𝛿[𝑛-2]. For input signal 𝑥[𝑛] = 𝛿[𝑛] + 𝛿[𝑛-1], which of the following option(s) is/are CORRECT for the output signal 𝑦[𝑛]?",
           "confidence": "VERIFIED"
         }
       ],
@@ -5420,8 +5455,8 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
-        "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+        "The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}",
+        "The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}",
         "Shear stress is zero at 𝑟= 𝑅",
         "Shear stress is zero at 𝑟= 0"
       ],
@@ -5429,34 +5464,32 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
+          "text": "The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}",
-              "content": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}\\)",
+              "type": "text",
+              "content": "The radial profile of the flow velocity is proportional to (1 - _{𝑅2}) 𝑟^{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+          "text": "The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}",
-              "content": "\\(The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}\\)",
+              "type": "text",
+              "content": "The radial profile of the flow velocity is proportional to (1 - _{𝑅3}) 𝑟^{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5822,15 +5855,9 @@
           "type": "text",
           "content": "The frequency of the oscillator circuit shown in the figure below is ______________ kHz. (rounded off to two decimal places)\n\nGiven: R = 1 kΩ; R1 = 2 kΩ; R2 = 6 kΩ; C = 0.1 µF",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/bm/q54_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5850,10 +5877,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IIT Roorkee is 1.50 to 1.70.",
-      "diagramUrl": "/exam-assets/gate/2025/bm/q54_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/bm/q54_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",

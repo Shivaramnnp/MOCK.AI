@@ -96,6 +96,21 @@ def apply_schema(password: str) -> bool:
 
 
 def main():
+    if os.environ.get("ALLOW_SCHEMA_APPLY") != "true":
+        print("=" * 70)
+        print("BLOCKED: Direct schema execution via legacy script is prohibited.")
+        print("To run in a confirmed test environment, set ALLOW_SCHEMA_APPLY=true.")
+        print("=" * 70)
+        sys.exit(1)
+
+    PROD_CONTENT_REF = "nvvscqxsrechenyqcwli"
+    if PROJECT_REF == PROD_CONTENT_REF and os.environ.get("CONFIRM_PRODUCTION_MUTATION") != "YES_I_AM_SURE":
+        print("=" * 70)
+        print(f"FATAL: Target project '{PROJECT_REF}' matches production! ABORTING.")
+        print("Production mutation is blocked. Set CONFIRM_PRODUCTION_MUTATION='YES_I_AM_SURE' to override.")
+        print("=" * 70)
+        sys.exit(1)
+
     password = None
 
     # Check command line arg

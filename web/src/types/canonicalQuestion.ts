@@ -48,8 +48,11 @@ export type DisplayMode =
 
 export type TopicClassificationStatus =
   | 'VERIFIED'
+  | 'PENDING_REVIEW'
   | 'REVIEW_REQUIRED'
-  | 'UNCLASSIFIED';
+  | 'UNCLASSIFIED'
+  | 'UNCATEGORIZED'
+  | 'REJECTED';
 
 export type TopicClassificationSource =
   | 'OFFICIAL'
@@ -63,9 +66,14 @@ export interface QuestionTopicMetadata {
   primaryTopicName: string | null;
   secondaryTopicIds: string[];
   secondaryTopicNames: string[];
+  subtopicId?: string | null;
+  subtopicName?: string | null;
   classificationStatus: TopicClassificationStatus;
   classificationSource: TopicClassificationSource;
   confidence: number | null;
+  reviewedBy?: string | null;
+  reviewedAt?: number | null;
+  reviewNotes?: string | null;
 }
 
 export interface CanonicalContentBlock {

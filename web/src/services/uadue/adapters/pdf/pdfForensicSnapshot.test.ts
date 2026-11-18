@@ -300,7 +300,7 @@ describe('PdfNativeSourceAdapter — ForensicSnapshot & Golden Corpus Suite (Pha
       const firstRef = snapshot.sourceReferences![0];
       expect(firstRef.documentId).toBe(snapshot.sourceDocumentId);
       expect(firstRef.pageNumber).toBe(1);
-      expect(firstRef.coordinateSpace).toBe('PDF_USER_SPACE');
+      expect(firstRef.coordinateSpace).toBe('PDF_PT_BOTTOM_LEFT');
       expect(firstRef.sourceObjectType).toBe('GLYPH');
       expect(firstRef.roleInDerivedObject).toBe('PRIMARY_SOURCE');
     });

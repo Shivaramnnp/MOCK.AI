@@ -24,7 +24,7 @@ function createMockSnapshot(overrides?: Partial<ForensicSnapshot>): ForensicSnap
       mimeType: 'application/pdf',
       contentHash: 'mock_content_hash',
     },
-    sourceFormat: 'PDF',
+    sourceFormat: 'PDF_NATIVE',
     adapterProvenance: {
       adapterId: 'PdfNativeSourceAdapter',
       adapterVersion: '2.0.0',
@@ -345,6 +345,8 @@ describe('DocumentGraph Validation Suite (Phase 2B)', () => {
           pathId: 'box_outer',
           operations: [],
           lineWidthPt: 1,
+          lineCap: 'butt',
+          lineJoin: 'miter',
           geometry: {
             bbox: { x0: 50, y0: 50, x1: 300, y1: 200, width: 250, height: 150, unit: 'pt' },
             rotationDeg: 0,
@@ -946,5 +948,73 @@ describe('DocumentGraph Validation Suite (Phase 2B)', () => {
     expect(graph.columns[1].bounds.maxX).toBeCloseTo(322, -1);
     expect(graph.columns[2].bounds.minX).toBeCloseTo(390, -1);
     expect(graph.columns[2].bounds.maxX).toBe(600);
+  });
+
+  it('REG-DAG-01: Validates ultra-deep reading order DAG (5,000 sequential nodes) iteratively without call-stack overflow', () => {
+    const nodes = new Map<string, any>();
+    const edges: any[] = [];
+    const nodeCount = 5000;
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.set(`node_${i}`, {
+        nodeId: `node_${i}`,
+        nodeType: 'TEXT_RUN',
+        pageNumber: 1,
+        bbox: { x0: 0, y0: 0, x1: 10, y1: 10, width: 10, height: 10, unit: 'pt' },
+        readingOrderIndex: i,
+        confidence: 1.0,
+        evidenceClassification: 'DERIVED_PHYSICAL_OBSERVATION',
+        sourceEvidence: { sourceSnapshotId: 'snap_deep', sourceDocumentId: 'doc_deep' },
+      });
+      if (i > 0) {
+        edges.push({
+          fromNodeId: `node_${i - 1}`,
+          toNodeId: `node_${i}`,
+          confidence: 1.0,
+          orderReason: 'SEQUENTIAL_FLOW',
+        });
+      }
+    }
+
+    const mockGraph: any = {
+      graphId: 'dg_deep_test',
+      documentId: 'doc_deep',
+      sourceSnapshotId: 'snap_deep',
+      schemaVersion: '2.0',
+      algorithmVersion: '2.0.0',
+      configurationVersion: 'default',
+      sourceSha256: 'sha_deep',
+      nodes,
+      edges: [],
+      readingOrderDAG: { edges },
+      columns: [],
+      structuralElements: [],
+      degradedNodes: [],
+      ambiguities: [],
+      provenance: {
+        algorithmId: 'doc_graph_builder',
+        algorithmVersion: '2.0.0',
+        configurationVersion: 'default',
+        sourceSnapshotId: 'snap_deep',
+        sourceDocumentId: 'doc_deep',
+        sourceSha256: 'sha_deep',
+        createdAt: Date.now(),
+        determinismScope: {
+          identicalSnapshot: true,
+          identicalAlgorithm: true,
+          identicalConfig: true,
+          runtime: 'Node.js',
+          floatPrecision: 'IEEE_754_64BIT',
+        },
+      },
+      isSealed: false,
+      sealedHash: '',
+      sealedAt: 0,
+    };
+
+    const validationResult = GraphValidator.validate(mockGraph);
+    expect(validationResult.isValid).toBe(true);
+    expect(validationResult.isAcyclicDAG).toBe(true);
+    expect(validationResult.errors.length).toBe(0);
   });
 });

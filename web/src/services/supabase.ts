@@ -182,6 +182,19 @@ class SupabaseService {
   }
 
   /**
+   * Retrieves the current Supabase access token for API authorization.
+   */
+  async getAccessToken(): Promise<string | null> {
+    if (!this.client) return null;
+    try {
+      const { data } = await this.client.auth.getSession();
+      return data.session?.access_token || null;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
    * Listen for Supabase Auth state changes (OAuth redirect callbacks, sign in, sign out, token refresh, recovery).
    */
   onAuthStateChange(callback: (user: UserProfile | null, event?: string) => void): (() => void) | undefined {

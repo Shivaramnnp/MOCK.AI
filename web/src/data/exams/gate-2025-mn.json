@@ -408,15 +408,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/mn/q4_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -500,10 +494,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
-      "diagramUrl": "/exam-assets/gate/2025/mn/q4_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/mn/q4_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -2569,75 +2561,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(NaHCO_{3} and Na_{2}SO_{4}\\)",
-        "\\(Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}\\)",
-        "\\(Al_{2}(SO_{4})_{3} and Al(OH)_{3}\\)",
-        "\\(NaHCO_{3} and Al_{2}(SO_{4})_{3}\\)"
+        "NaHCO_{3} and Na_{2}SO_{4}",
+        "Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}",
+        "Al_{2}(SO_{4})_{3} and Al(OH)_{3}",
+        "NaHCO_{3} and Al_{2}(SO_{4})_{3}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(NaHCO_{3} and Na_{2}SO_{4}\\)",
+          "text": "NaHCO_{3} and Na_{2}SO_{4}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "NaHCO_{3} and Na_{2}SO_{4}",
-              "content": "\\(NaHCO_{3} and Na_{2}SO_{4}\\)",
+              "type": "text",
+              "content": "NaHCO_{3} and Na_{2}SO_{4}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}\\)",
+          "text": "Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}",
-              "content": "\\(Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}\\)",
+              "type": "text",
+              "content": "Al_{2}(SO_{4})_{3} and Na_{2}SO_{4}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(Al_{2}(SO_{4})_{3} and Al(OH)_{3}\\)",
+          "text": "Al_{2}(SO_{4})_{3} and Al(OH)_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Al_{2}(SO_{4})_{3} and Al(OH)_{3}",
-              "content": "\\(Al_{2}(SO_{4})_{3} and Al(OH)_{3}\\)",
+              "type": "text",
+              "content": "Al_{2}(SO_{4})_{3} and Al(OH)_{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(NaHCO_{3} and Al_{2}(SO_{4})_{3}\\)",
+          "text": "NaHCO_{3} and Al_{2}(SO_{4})_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "NaHCO_{3} and Al_{2}(SO_{4})_{3}",
-              "content": "\\(NaHCO_{3} and Al_{2}(SO_{4})_{3}\\)",
+              "type": "text",
+              "content": "NaHCO_{3} and Al_{2}(SO_{4})_{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4767,11 +4755,11 @@
       "questionNumber": 53,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "extracted to form four equal square-shaped stooks as shown. The width of each gallery and crosscut is 5 m. The height of the working seam is 3 m. The reduction in safety factor after pillar splitting by using Bieniawski's pillar strength formula, in %, is_____ (rounded off to 2 decimal places)\n\nBieniawski's pillar strength formula, 𝑆_{𝑝}= 𝑆_{1} (0.64 + 0.36 \\(\\frac{𝑤}{height}\\) ; where, 𝑆_{1} = strength of 0.9 m^{3} of coal block, 𝑤 = pillar width and ℎ = mining height",
+      "questionText": "extracted to form four equal square-shaped stooks as shown. The width of each gallery and crosscut is 5 m. The height of the working seam is 3 m. The reduction in safety factor after pillar splitting by using Bieniawski's pillar strength formula, in %, is_____ (rounded off to 2 decimal places)\n\nBieniawski's pillar strength formula, 𝑆_{𝑝}= 𝑆_{1} (0.64 + 0.36 <u>𝑤</u> _{ℎ}); where, 𝑆_{1} = strength of 0.9 m^{3} of coal block, 𝑤 = pillar width and ℎ = mining height",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "extracted to form four equal square-shaped stooks as shown. The width of each gallery and crosscut is 5 m. The height of the working seam is 3 m. The reduction in safety factor after pillar splitting by using Bieniawski's pillar strength formula, in %, is_____ (rounded off to 2 decimal places)\n\nBieniawski's pillar strength formula, 𝑆_{𝑝}= 𝑆_{1} (0.64 + 0.36 \\(\\frac{𝑤}{height}\\) ; where, 𝑆_{1} = strength of 0.9 m^{3} of coal block, 𝑤 = pillar width and ℎ = mining height",
+          "content": "extracted to form four equal square-shaped stooks as shown. The width of each gallery and crosscut is 5 m. The height of the working seam is 3 m. The reduction in safety factor after pillar splitting by using Bieniawski's pillar strength formula, in %, is_____ (rounded off to 2 decimal places)\n\nBieniawski's pillar strength formula, 𝑆_{𝑝}= 𝑆_{1} (0.64 + 0.36 <u>𝑤</u> _{ℎ}); where, 𝑆_{1} = strength of 0.9 m^{3} of coal block, 𝑤 = pillar width and ℎ = mining height",
           "confidence": "VERIFIED"
         },
         {

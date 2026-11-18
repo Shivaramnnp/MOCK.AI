@@ -134,10 +134,16 @@ export class ExamSessionService {
    * Remote session creation is staggered with randomized jitter (1s - 15s) to avoid 10,000 RPS burst.
    */
   static createSession(paper: ExamPaper | ExamPresentationPaper, userId: string = 'guest'): ExamTestSession {
-    const durationMinutes = Number.isFinite(paper.durationMinutes) && paper.durationMinutes > 0 ? paper.durationMinutes : 60;
+    const isUntimed = Boolean((paper as any).isUntimed);
+    const durationMinutes = isUntimed
+      ? 0
+      : Number.isFinite(paper.durationMinutes) && paper.durationMinutes > 0
+      ? paper.durationMinutes
+      : 60;
     const durationSeconds = durationMinutes * 60;
     const now = Date.now();
-    const expiresAt = now + durationSeconds * 1000;
+    // Untimed practice sessions do not expire on a short timer (7-day safety TTL)
+    const expiresAt = isUntimed ? now + 7 * 24 * 60 * 60 * 1000 : now + durationSeconds * 1000;
     const initialStatuses: Record<number, QuestionAttemptStatus> = {};
 
     for (let i = 0; i < paper.questions.length; i++) {
@@ -162,6 +168,7 @@ export class ExamSessionService {
       durationSeconds,
       timeRemainingSeconds: durationSeconds,
       elapsedSeconds: 0,
+      isUntimed,
       userAnswers: {},
       userMsqAnswers: {},
       userNatAnswers: {},
@@ -233,6 +240,10 @@ export class ExamSessionService {
         (!paperId || s.paperId === paperId)
     );
     if (candidate) {
+      const isUntimedSession = Boolean(candidate.isUntimed || candidate.shift === 'Untimed Practice');
+      if (isUntimedSession) {
+        return candidate;
+      }
       const remaining = this.calculateRemainingSeconds(candidate);
       if (remaining <= 0) {
         candidate.status = 'EXPIRED';
@@ -248,8 +259,14 @@ export class ExamSessionService {
         const raw = localStorage.getItem(ACTIVE_LEGACY_KEY);
         if (!raw) return null;
         const session = JSON.parse(raw) as ExamTestSession;
+        // Enforce strict user isolation on legacy active-session fallback
+        if (session.userId && session.userId !== userId) return null;
         if (session.status !== 'IN_PROGRESS' && session.status !== 'PAUSED') return null;
         if (paperId && session.paperId !== paperId) return null;
+        const isUntimedSession = Boolean(session.isUntimed || session.shift === 'Untimed Practice');
+        if (isUntimedSession) {
+          return session;
+        }
         const remaining = this.calculateRemainingSeconds(session);
         if (remaining <= 0) {
           session.status = 'EXPIRED';
@@ -578,9 +595,10 @@ export class ExamSessionService {
     const session = await this.getSessionById(sessionId, userId);
     if (!session) return null;
 
-    // Check if session has expired while away
-    const remaining = this.calculateRemainingSeconds(session);
-    if (remaining <= 0) {
+    // Check if timed session has expired while away (untimed practice sessions do not expire)
+    const isUntimedSession = Boolean(session.isUntimed || session.shift === 'Untimed Practice');
+    const remaining = isUntimedSession ? 0 : this.calculateRemainingSeconds(session);
+    if (!isUntimedSession && remaining <= 0) {
       const expiredSession: ExamTestSession = {
         ...session,
         status: 'EXPIRED',

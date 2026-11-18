@@ -25,18 +25,60 @@ import { describe, it, expect } from 'vitest';
 import { DocumentGraph, DocumentGraphNode } from '../contracts/documentGraph';
 import { QuestionGraphBuilder } from './questionGraphBuilder';
 import { QuestionGraphValidator } from './questionGraphValidator';
+import { createMockBbox, createMockDocGraphNode } from '../test/mockGeometry';
+
+export interface TestNodeDef {
+  nodeId: string;
+  nodeType: DocumentGraphNode['nodeType'];
+  pageNumber: number;
+  bbox: { x0: number; y0: number; x1: number; y1: number; pageWidth?: number; pageHeight?: number };
+  textContent?: string;
+  readingOrderIndex?: number;
+  confidence?: number;
+  sourceEvidence?: Partial<DocumentGraphNode['sourceEvidence']>;
+}
 
 describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
   const builder = new QuestionGraphBuilder();
 
-  function makeMockDocGraph(nodes: DocumentGraphNode[], edges: any[] = []): DocumentGraph {
+  function makeMockDocGraph(nodes: (DocumentGraphNode | TestNodeDef)[], edges: any[] = []): DocumentGraph {
+    const fullNodes: DocumentGraphNode[] = nodes.map((n) => {
+      if ('elementId' in n && 'geometry' in n && 'unit' in (n.bbox as any)) {
+        return n as DocumentGraphNode;
+      }
+      const rawBbox = n.bbox;
+      const bbox = createMockBbox(
+        rawBbox.x0,
+        rawBbox.y0,
+        rawBbox.x1,
+        rawBbox.y1,
+        'pt',
+        rawBbox.pageWidth,
+        rawBbox.pageHeight
+      );
+      return createMockDocGraphNode(
+        n.nodeId,
+        n.nodeType,
+        n.pageNumber,
+        bbox,
+        n.textContent,
+        n.sourceEvidence ? { sourceEvidence: {
+          sourceSnapshotId: 'snap_regression_proof',
+          sourceDocumentId: 'doc_regression_proof',
+          resolutionStatus: 'EXACT_SOURCE_BYTE',
+          ...n.sourceEvidence,
+        } } : undefined
+      );
+    });
+
     const nodeMap = new Map<string, DocumentGraphNode>();
-    for (const n of nodes) nodeMap.set(n.nodeId, n);
+    for (const n of fullNodes) nodeMap.set(n.nodeId, n);
     return {
       schemaVersion: 'uadue_document_graph_v2b_schema',
       algorithmVersion: 'uadue_document_graph_builder_v2b_2026',
       configurationVersion: 'default_v2b_config_2026',
       graphId: 'dg_mock_regression',
+      documentId: 'doc_regression_proof',
       sourceDocumentId: 'doc_regression_proof',
       sourceSnapshotId: 'snap_regression_proof',
       sourceSha256: 'a'.repeat(64),
@@ -44,10 +86,10 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
       totalPages: 1,
       nodes: nodeMap,
       edges,
-      columns: [{ columnId: 'col_1', pageNumber: 1, columnIndex: 0, bbox: { x0: 0, y0: 0, x1: 595, y1: 842 }, elementIds: nodes.map(n => n.nodeId) }],
+      columns: [{ pageNumber: 1, columnIndex: 0, bounds: { minX: 0, minY: 0, maxX: 595, maxY: 842 }, elementIds: fullNodes.map(n => n.nodeId) }],
       spatialRegions: [],
-      readingFlow: nodes.map((n) => n.nodeId),
-      readingOrderDAG: { rootNodeIds: [nodes[0]?.nodeId || ''], terminalNodeIds: [nodes[nodes.length - 1]?.nodeId || ''], edges: [], topologicalOrder: nodes.map(n => n.nodeId), ambiguousRegions: [] },
+      readingFlow: fullNodes.map((n) => n.nodeId),
+      readingOrderDAG: { rootNodeIds: [fullNodes[0]?.nodeId || ''], terminalNodeIds: [fullNodes[fullNodes.length - 1]?.nodeId || ''], edges: [], topologicalOrder: fullNodes.map(n => n.nodeId), ambiguousRegions: [] },
       crossPageContinuations: [],
       degradedNodes: [],
       provenance: {
@@ -72,7 +114,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-01: Raster banner cascading ownership - full-page background images are not attached to questions as diagrams', async () => {
     // Reproduction of historical bug where full-page banner/print background was claimed as a diagram by Q1
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       // Full-page canvas background image emitted by printer driver
       {
         nodeId: 'node_bg_banner',
@@ -135,7 +177,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-02: Wiped question stems - questions preceding or following option blocks retain non-empty stems', async () => {
     // Historical failure: When options were encountered, stemNodeIds was inadvertently wiped
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       {
         nodeId: 'node_q1_num',
         nodeType: 'TEXT_RUN',
@@ -176,7 +218,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-03: Identical options - options are strictly partitioned to their owning question', async () => {
     // Historical failure: Q1 and Q2 shared or leaked identical option lists
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'First question stem.', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'node_q1_opt1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 130, x1: 200, y1: 145, pageWidth: 595, pageHeight: 842 }, textContent: '1. Opt A', readingOrderIndex: 2, confidence: 0.95 },
@@ -201,7 +243,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-04: Passage / stimulus leakage - shared comprehension passage is referenced via stimulusRefIds without cloning', async () => {
     // Historical failure: Reading passage text was absorbed into Question 1's stem
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_stim_hdr', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 80, x1: 350, y1: 95, pageWidth: 595, pageHeight: 842 }, textContent: 'Read the passage and answer questions 1 to 2.', readingOrderIndex: 0, confidence: 0.95 },
       { nodeId: 'node_stim_body', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 105, x1: 500, y1: 150, pageWidth: 595, pageHeight: 842 }, textContent: 'Artificial intelligence is transforming science and industry.', readingOrderIndex: 1, confidence: 0.95 },
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 170, x1: 80, y1: 185, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 2, confidence: 0.99 },
@@ -226,7 +268,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-05: Answer-key / question identity shift - zero canonical ID or answer key information appears in QuestionGraph', async () => {
     // Historical failure: Answer key and canonical schema leaked into intermediate representation
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Capital of India is:', readingOrderIndex: 1, confidence: 0.99 },
     ];
@@ -245,7 +287,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-SSC-06: TCS response status block isolation - official metadata table is isolated and officialQuestionId is preserved', async () => {
     // Historical failure: TCS metadata block ("Question ID : 63068012345") was swallowed as question body text or question numbers
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Question stem text.', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'node_q1_opt1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 130, x1: 200, y1: 145, pageWidth: 595, pageHeight: 842 }, textContent: '1. Option 1', readingOrderIndex: 2, confidence: 0.95 },
@@ -272,7 +314,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-01: Flattened mathematics - math runs retain physical glyph candidate grouping without lossy stringification', async () => {
     // Historical failure: Fractions and integrals collapsed into plain unstructured text
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 250, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Evaluate the expression:', readingOrderIndex: 1, confidence: 0.99 },
       // Math formula glyphs
@@ -293,7 +335,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-02: Duplicated option images - unique visual option cards are preserved without duplicate hashing', async () => {
     // Historical failure: Option images with similar dimensions were de-duplicated or overwritten
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Which graph is bipartite?', readingOrderIndex: 1, confidence: 0.99 },
       // Option A Card
@@ -320,7 +362,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-03: Flattened Column-I / Column-II - matching grid preserves structured cell geometry', async () => {
     // Historical failure: Column-I / Column-II tables collapsed into unstructured plain text
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Match Column-I with Column-II:', readingOrderIndex: 1, confidence: 0.99 },
       // Table cells
@@ -342,7 +384,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-04: Diagram-label leakage - internal diagram labels are not detached into question stem text', async () => {
     // Historical failure: Text labels inside circuit diagrams ("V_in", "5V", "R1") were extracted as question stem text
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'In the circuit shown below, find the output voltage.', readingOrderIndex: 1, confidence: 0.99 },
       // Diagram raster asset
@@ -369,7 +411,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-05: Duplicate diagrams - diagram candidate physical nodes are referenced rather than cloned', async () => {
     // Historical failure: Diagrams referenced in multiple questions had physical assets duplicated in memory
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_diag', nodeType: 'RASTER_IMAGE', pageNumber: 1, bbox: { x0: 100, y0: 80, x1: 250, y1: 150, pageWidth: 595, pageHeight: 842 }, textContent: '', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 170, x1: 80, y1: 185, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 170, x1: 300, y1: 185, pageWidth: 595, pageHeight: 842 }, textContent: 'Refer to figure above. What is node A?', readingOrderIndex: 2, confidence: 0.99 },
@@ -384,7 +426,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-GATE-06: Fraction splitting - fraction bar, numerator, and denominator remain in unified math candidate', async () => {
     // Historical failure: Fraction numerator and denominator split into distinct questions
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'node_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'node_q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 250, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Calculate limit:', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'node_num', nodeType: 'GLYPH_RUN', pageNumber: 1, bbox: { x0: 90, y0: 120, x1: 110, y1: 130, pageWidth: 595, pageHeight: 842 }, textContent: 'sin(x)', readingOrderIndex: 2, confidence: 0.99 },
@@ -409,7 +451,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-01: Split question-number tokens ("Q." + "2") unified into distinct question', async () => {
     // GATE 2024 failure mode: "Q." and "2" emitted as separate text runs on the same baseline
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_lbl', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 65, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 68, y0: 100, x1: 75, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: '1', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 85, y0: 100, x1: 250, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'First question stem.', readingOrderIndex: 2, confidence: 0.99 },
@@ -431,7 +473,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-02: Multi-statement enumeration protected from options under directive', async () => {
     // UPSC CSE failure mode: Statements "1. ..." and "2. ..." swallowed as options
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: '1.', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q1_dir', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Consider the following statements:', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'q1_s1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 125, x1: 350, y1: 140, pageWidth: 595, pageHeight: 842 }, textContent: '1. Jhelum River passes through Wular Lake.', readingOrderIndex: 2, confidence: 0.95 },
@@ -453,7 +495,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-03: Cross-page Y-coordinate collision prevention', async () => {
     // Failure mode: Diagram on Page 2 with identical y0, y1 was claimed by Q1 on Page 1
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       // Page 1: Q1
       { nodeId: 'p1_q1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'p1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 250, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Page 1 text.', readingOrderIndex: 1, confidence: 0.99 },
@@ -472,7 +514,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-04: Math vector vinculum is NOT a diagram candidate', async () => {
     // GATE failure mode: Horizontal division bar (w=80, h=1.5) classified as diagram
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'v_bar', nodeType: 'VECTOR_PATH', pageNumber: 1, bbox: { x0: 90, y0: 120, x1: 170, y1: 121.5, pageWidth: 595, pageHeight: 842 }, textContent: '', readingOrderIndex: 1, confidence: 0.99 },
     ];
@@ -485,7 +527,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-05: Full-page border containment does NOT turn page into a diagram', async () => {
     // SSC CHSL failure mode: Outer card frame (w=500, h=700) containing text nodes turned into giant diagram
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'border_box', nodeType: 'VECTOR_PATH', pageNumber: 1, bbox: { x0: 20, y0: 20, x1: 520, y1: 720, pageWidth: 595, pageHeight: 842 }, textContent: '', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 't1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 50, x1: 200, y1: 65, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1 Question text', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 't2', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 80, x1: 200, y1: 95, pageWidth: 595, pageHeight: 842 }, textContent: 'Option text A', readingOrderIndex: 2, confidence: 0.99 },
@@ -512,7 +554,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-06: Ordinary sentence starting with "A " is NOT an option candidate', async () => {
     // Failure mode: Ordinary sentence starting with indefinite article "A" classified as option
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'sent1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 400, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'A sudden noise frightened the horse into bolting across the field.', readingOrderIndex: 1, confidence: 0.99 },
     ];
@@ -525,7 +567,7 @@ describe('Historical Mock.AI Failure Regression Suite (Phase 2C)', () => {
 
   it('REG-UADUE-07: Metadata table "Chosen Option : 1" is NOT an option candidate', async () => {
     // TCS CBT failure mode: Status table "Chosen Option : 1" classified as option
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115, pageWidth: 595, pageHeight: 842 }, textContent: 'Question stem text.', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'meta_qid', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 400, y0: 200, x1: 550, y1: 215, pageWidth: 595, pageHeight: 842 }, textContent: 'Question ID : 654321', readingOrderIndex: 2, confidence: 0.99 },

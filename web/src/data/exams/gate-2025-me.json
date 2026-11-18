@@ -1169,7 +1169,7 @@
         "\\(A^{T} = A^{-1}\\)",
         "AB = BA",
         "\\((AB)^{T} = B^{T}A^{T}\\)",
-        "\\(= A^{-1}\\)"
+        "\\(A = A^{-1}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -1222,13 +1222,13 @@
         },
         {
           "id": "D",
-          "text": "\\(= A^{-1}\\)",
+          "text": "\\(A = A^{-1}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= A^{-1}",
-              "content": "\\(= A^{-1}\\)",
+              "latex": "A = A^{-1}",
+              "content": "\\(A = A^{-1}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1278,8 +1278,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y\\)",
-        "\\(𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y\\)",
+        "𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y",
+        "𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y",
         "𝑢= sin 𝑥 sin 𝑦 is a solution for all x and y",
         "𝑢= cos 𝑥 cos 𝑦 is a solution for all x and y"
       ],
@@ -1287,34 +1287,32 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y\\)",
+          "text": "𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y",
-              "content": "\\(𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y\\)",
+              "type": "text",
+              "content": "𝑢= 𝑒^{𝑥+𝑦} is a solution for all x and y",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y\\)",
+          "text": "𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y",
-              "content": "\\(𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y\\)",
+              "type": "text",
+              "content": "𝑢= 𝑒^{𝑥}sin 𝑦 is a solution for all x and y",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -1733,7 +1731,7 @@
         "\\(𝑉_{2} > 𝑉_{1}\\)",
         "\\(𝑉_{2} = 𝑉_{1}\\)",
         "\\(𝑉_{2} < 𝑉_{1}\\)",
-        "\\(Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}\\)"
+        "Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -1787,18 +1785,17 @@
         },
         {
           "id": "D",
-          "text": "\\(Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}\\)",
+          "text": "Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}",
-              "content": "\\(Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}\\)",
+              "type": "text",
+              "content": "Insufficient data to definitively conclude the relationship between 𝑉_{1} and 𝑉_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -2509,7 +2506,7 @@
       "options": [
         "boundary representation (B-rep)",
         "Bezier curves",
-        "-splines",
+        "B-splines",
         "nonuniform rational B-splines (NURBS)"
       ],
       "optionImages": null,
@@ -2546,12 +2543,12 @@
         },
         {
           "id": "C",
-          "text": "-splines",
+          "text": "B-splines",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "-splines",
+              "content": "B-splines",
               "confidence": "VERIFIED"
             }
           ],
@@ -3184,8 +3181,8 @@
       "options": [
         "An unbalanced rigid rotor can be completely balanced using a single balancing mass",
         "An unbalanced rigid rotor can be completely balanced using two balancing masses attached in two distinct planes",
-        "single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
-        "single-cylinder internal combustion engine can be completely balanced using two balancing masses"
+        "A single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
+        "A single-cylinder internal combustion engine can be completely balanced using two balancing masses"
       ],
       "optionImages": null,
       "richOptions": [
@@ -3221,12 +3218,12 @@
         },
         {
           "id": "C",
-          "text": "single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
+          "text": "A single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
+              "content": "A single-cylinder internal combustion engine can be completely balanced using a single balancing mass",
               "confidence": "VERIFIED"
             }
           ],
@@ -3236,12 +3233,12 @@
         },
         {
           "id": "D",
-          "text": "single-cylinder internal combustion engine can be completely balanced using two balancing masses",
+          "text": "A single-cylinder internal combustion engine can be completely balanced using two balancing masses",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "single-cylinder internal combustion engine can be completely balanced using two balancing masses",
+              "content": "A single-cylinder internal combustion engine can be completely balanced using two balancing masses",
               "confidence": "VERIFIED"
             }
           ],
@@ -4423,75 +4420,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{𝑚}\\)",
-        "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{𝑚}\\)",
-        "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{2𝑚}\\)",
-        "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{2𝑚}\\)"
+        "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 𝑚",
+        "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 𝑚",
+        "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 2𝑚",
+        "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 2𝑚"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{𝑚}\\)",
+          "text": "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 𝑚",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{𝑚}",
-              "content": "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{𝑚}\\)",
+              "type": "text",
+              "content": "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 𝑚",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{𝑚}\\)",
+          "text": "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 𝑚",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{𝑚}",
-              "content": "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{𝑚}\\)",
+              "type": "text",
+              "content": "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 𝑚",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{2𝑚}\\)",
+          "text": "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 2𝑚",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{2𝑚}",
-              "content": "\\(\\frac{3𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt{3}𝐸𝐼+𝐾}{2𝑚}\\)",
+              "type": "text",
+              "content": "\\sqrt{3}𝐸𝐼 𝐿3 + 𝐾 2𝑚",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{2𝑚}\\)",
+          "text": "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 2𝑚",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{2𝑚}",
-              "content": "\\(\\frac{𝐸𝐼}{\\sqrt 𝐿3}\\) \\(\\frac{\\sqrt 𝐸𝐼+𝐾}{2𝑚}\\)",
+              "type": "text",
+              "content": "\\sqrt 𝐸𝐼 𝐿3 + 𝐾 2𝑚",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4748,11 +4741,11 @@
       "questionNumber": 45,
       "sectionId": "me_core",
       "sectionName": "Mechanical Engineering",
-      "questionText": "If 𝐶 is the unit circle in the complex plane with its center at the origin, then the value of 𝑛 in the equation given below is __________ (rounded off to 1 decimal place).\n\n∮ \\(\\frac{𝑧3}{(𝑧2+4)(𝑧2-4)𝐶}\\) 𝑑𝑧= 2 𝜋 𝑖 𝑛",
+      "questionText": "If 𝐶 is the unit circle in the complex plane with its center at the origin, then the value of 𝑛 in the equation given below is __________ (rounded off to 1 decimal place).\n\n∮ \\(\\frac{𝑧3}{(𝑧2+4)(𝑧2-4)}\\) 𝑑𝑧= 2 𝜋 𝑖 𝑛",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝐶 is the unit circle in the complex plane with its center at the origin, then the value of 𝑛 in the equation given below is __________ (rounded off to 1 decimal place).\n\n∮ \\(\\frac{𝑧3}{(𝑧2+4)(𝑧2-4)𝐶}\\) 𝑑𝑧= 2 𝜋 𝑖 𝑛",
+          "content": "If 𝐶 is the unit circle in the complex plane with its center at the origin, then the value of 𝑛 in the equation given below is __________ (rounded off to 1 decimal place).\n\n∮ \\(\\frac{𝑧3}{(𝑧2+4)(𝑧2-4)}\\) 𝑑𝑧= 2 𝜋 𝑖 𝑛",
           "confidence": "VERIFIED"
         }
       ],
@@ -4794,11 +4787,11 @@
       "questionNumber": 46,
       "sectionId": "me_core",
       "sectionName": "Mechanical Engineering",
-      "questionText": "The directional derivative of the function 𝑓 given below at the point (1, 0) in the direction of \\(\\frac{directional^{1}}{2}\\) (𝑖̂ + \\sqrt{3} 𝑗̂) is ____________ (rounded off to 1 decimal place).\n\n𝑓(𝑥, 𝑦) = 𝑥^{2} + 𝑥𝑦^{2}",
+      "questionText": "Q.46 The directional derivative of the function 𝑓 given below at the point (1, 0) in the direction of \\(\\frac{1}{2}\\) (𝑖̂ + \\sqrt{3} 𝑗̂) is ____________ (rounded off to 1 decimal place).\n\n𝑓(𝑥, 𝑦) = 𝑥^{2} + 𝑥𝑦^{2}",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The directional derivative of the function 𝑓 given below at the point (1, 0) in the direction of \\(\\frac{directional^{1}}{2}\\) (𝑖̂ + \\sqrt{3} 𝑗̂) is ____________ (rounded off to 1 decimal place).\n\n𝑓(𝑥, 𝑦) = 𝑥^{2} + 𝑥𝑦^{2}",
+          "content": "Q.46 The directional derivative of the function 𝑓 given below at the point (1, 0) in the direction of \\(\\frac{1}{2}\\) (𝑖̂ + \\sqrt{3} 𝑗̂) is ____________ (rounded off to 1 decimal place).\n\n𝑓(𝑥, 𝑦) = 𝑥^{2} + 𝑥𝑦^{2}",
           "confidence": "VERIFIED"
         }
       ],
@@ -5361,11 +5354,11 @@
       "questionNumber": 57,
       "sectionId": "me_core",
       "sectionName": "Mechanical Engineering",
-      "questionText": "A simply supported beam of length 1 m is subjected to a uniformly distributed bending moment of 1 N m per m throughout the length as shown in the figure given below. The bending moment at the mid-point of the beam is <u>_____N</u> m (rounded off to the nearest integer).",
+      "questionText": "A simply supported beam of length 1 m is subjected to a uniformly distributed bending moment of 1 N m per m throughout the length as shown in the figure given below. The bending moment at the mid-point of the beam is _____N m (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A simply supported beam of length 1 m is subjected to a uniformly distributed bending moment of 1 N m per m throughout the length as shown in the figure given below. The bending moment at the mid-point of the beam is <u>_____N</u> m (rounded off to the nearest integer).",
+          "content": "A simply supported beam of length 1 m is subjected to a uniformly distributed bending moment of 1 N m per m throughout the length as shown in the figure given below. The bending moment at the mid-point of the beam is _____N m (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5415,11 +5408,11 @@
       "questionNumber": 58,
       "sectionId": "me_core",
       "sectionName": "Mechanical Engineering",
-      "questionText": "An isotropic brittle material is tested in the universal testing machine. The stress- strain diagram for the material shows a bi-linear elastic behavior as shown in the figure given below. The strain energy density is <u>________</u> MJ m-3 (rounded off to 2 decimal places).",
+      "questionText": "An isotropic brittle material is tested in the universal testing machine. The stress- strain diagram for the material shows a bi-linear elastic behavior as shown in the figure given below. The strain energy density is ________ MJ m^{-3} (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "An isotropic brittle material is tested in the universal testing machine. The stress- strain diagram for the material shows a bi-linear elastic behavior as shown in the figure given below. The strain energy density is <u>________</u> MJ m-3 (rounded off to 2 decimal places).",
+          "content": "An isotropic brittle material is tested in the universal testing machine. The stress- strain diagram for the material shows a bi-linear elastic behavior as shown in the figure given below. The strain energy density is ________ MJ m^{-3} (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -5636,11 +5629,11 @@
       "questionNumber": 62,
       "sectionId": "me_core",
       "sectionName": "Mechanical Engineering",
-      "questionText": "Two metal parts (a cylinder and a cube) of same volume are cast under identical conditions. The diameter of the cylinder is equal to its height. The ratio of the solidification time of the cube to that of the cylinder <u>is________</u> (rounded off to 2 decimal places).\n\nAssume that solidification time follows Chvorinov's rule with an exponent of 2.",
+      "questionText": "Two metal parts (a cylinder and a cube) of same volume are cast under identical conditions. The diameter of the cylinder is equal to its height. The ratio of the solidification time of the cube to that of the cylinder is________ (rounded off to 2 decimal places).\n\nAssume that solidification time follows Chvorinov's rule with an exponent of 2.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Two metal parts (a cylinder and a cube) of same volume are cast under identical conditions. The diameter of the cylinder is equal to its height. The ratio of the solidification time of the cube to that of the cylinder <u>is________</u> (rounded off to 2 decimal places).\n\nAssume that solidification time follows Chvorinov's rule with an exponent of 2.",
+          "content": "Two metal parts (a cylinder and a cube) of same volume are cast under identical conditions. The diameter of the cylinder is equal to its height. The ratio of the solidification time of the cube to that of the cylinder is________ (rounded off to 2 decimal places).\n\nAssume that solidification time follows Chvorinov's rule with an exponent of 2.",
           "confidence": "VERIFIED"
         }
       ],

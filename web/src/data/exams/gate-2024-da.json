@@ -2905,75 +2905,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
-        "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
-        "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
-        "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)"
+        "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
+        "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward))∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙",
+        "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
+        "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) ∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+          "text": "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙",
-              "content": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+              "type": "text",
+              "content": "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+          "text": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward))∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙",
-              "content": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap Π_{𝑛𝑎𝑚𝑒}(Forward))∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+              "type": "text",
+              "content": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cap \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward))∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+          "text": "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙",
-              "content": "\\(Π_{𝑛𝑎𝑚𝑒}(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) = 𝜙\\)",
+              "type": "text",
+              "content": "\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) ∖(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) = 𝜙",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+          "text": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) ∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙",
-              "content": "\\((Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup Π_{𝑛𝑎𝑚𝑒}(Forward)) ∖Π_{𝑛𝑎𝑚𝑒}(Team) = 𝜙\\)",
+              "type": "text",
+              "content": "(Π_{𝑛𝑎𝑚𝑒}(Defender) \\cup \\(Π_{𝑛𝑎𝑚𝑒}\\)(Forward)) ∖\\(Π_{𝑛𝑎𝑚𝑒}\\)(Team) = 𝜙",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -5169,75 +5165,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
-        "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
-        "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
-        "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)"
+        "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
+        "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.",
+        "There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
+        "There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+          "text": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
-              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+              "type": "text",
+              "content": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
+          "text": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.",
-              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.\\)",
+              "type": "text",
+              "content": "There exist 𝑴 \\in ℝ^{3 \\times 3}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has no solutions and M𝐱= 𝒒 has infinite solutions.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+          "text": "There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
-              "content": "\\(There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.\\)",
+              "type": "text",
+              "content": "There exist 𝑴 \\in ℝ^{2 \\times 3}, 𝒑 \\in ℝ^{2}, and 𝒒 \\in ℝ^{2} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has infinite solutions.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)",
+          "text": "There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.",
-              "content": "\\(There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.\\)",
+              "type": "text",
+              "content": "There exist 𝑴 \\in ℝ^{3 \\times 2}, 𝒑 \\in ℝ^{3}, and 𝒒 \\in ℝ^{3} such that 𝑴𝐱= 𝒑 has a unique solution and M𝐱= 𝒒 has no solutions.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -5288,8 +5280,8 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
-        "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+        "If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
+        "If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
         "\\(𝑴^{2} = 𝑴\\)",
         "\\(𝑴^{3} = 𝑴\\)"
       ],
@@ -5297,34 +5289,32 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+          "text": "If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
-              "content": "\\(If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+              "type": "text",
+              "content": "If 𝑈 is a 1-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+          "text": "If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
-              "content": "\\(If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.\\)",
+              "type": "text",
+              "content": "If 𝑈 is a 2-dimensional subspace of ℝ^{3}, then the null space of 𝑴 is a 1-dimensional subspace.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {

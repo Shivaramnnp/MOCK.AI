@@ -16,9 +16,11 @@ import hashlib
 from collections import defaultdict
 import fitz  # PyMuPDF
 
-EXAMS_DATA_DIR = '/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/src/data/exams'
-ASSETS_BASE_2024 = '/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public/exam-assets/gate/2024'
-ASSETS_BASE_2025 = '/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public/exam-assets/gate/2025'
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+EXAMS_DATA_DIR = os.path.join(REPO_ROOT, 'web/src/data/exams')
+ASSETS_BASE_2023 = os.path.join(REPO_ROOT, 'web/public/exam-assets/gate/2023')
+ASSETS_BASE_2024 = os.path.join(REPO_ROOT, 'web/public/exam-assets/gate/2024')
+ASSETS_BASE_2025 = os.path.join(REPO_ROOT, 'web/public/exam-assets/gate/2025')
 
 SECTION_METADATA = {
     'GA': {'id': 'ga', 'name': 'General Aptitude'},
@@ -32,6 +34,7 @@ SECTION_METADATA = {
     'CE-1': {'id': 'ce1_core', 'name': 'Civil Engineering (Session 1)'},
     'CE-2': {'id': 'ce2_core', 'name': 'Civil Engineering (Session 2)'},
     'CH': {'id': 'ch_core', 'name': 'Chemical Engineering'},
+    'CS': {'id': 'cs_core', 'name': 'Computer Science & Information Technology'},
     'CS-1': {'id': 'cs1_core', 'name': 'Computer Science & IT (Session 1)'},
     'CS-2': {'id': 'cs2_core', 'name': 'Computer Science & IT (Session 2)'},
     'CY': {'id': 'cy_core', 'name': 'Chemistry'},
@@ -166,9 +169,9 @@ def is_meaningful_visual(pix):
     total_bytes = len(samples)
     if total_bytes == 0:
         return False
-    step = max(1, total_bytes // 500)
+    step = max(1, total_bytes // 1000)
     non_white = sum(1 for b in samples[::step] if b < 240)
-    return non_white > 10
+    return non_white > 5
 
 def extract_rich_line(line):
     """
@@ -182,7 +185,7 @@ def extract_rich_line(line):
     if not content_spans:
         return ''.join(s['text'] for s in spans)
     sizes = [s['size'] for s in content_spans]
-    base_size = max(set(sizes), key=lambda sz: (sizes.count(sz), sz))
+    base_size = max(set(sizes), key=lambda sz: (sum(len(s['text'].strip()) for s in content_spans if abs(s['size'] - sz) < 0.5), sz))
     base_spans = [s for s in content_spans if abs(s['size'] - base_size) < 0.5]
     if base_spans:
         base_mid = sum((s['bbox'][1] + s['bbox'][3]) / 2.0 for s in base_spans) / len(base_spans)
@@ -196,11 +199,14 @@ def extract_rich_line(line):
             continue
         sz = s['size']
         s_mid = (s['bbox'][1] + s['bbox'][3]) / 2.0
-        if sz < 0.88 * base_size and txt.strip():
+        stripped_t = txt.strip()
+        # A genuine subscript or superscript cannot be multi-word English prose, start with punctuation, or be a long word
+        is_prose = len(stripped_t.split()) > 1 or stripped_t.startswith(',') or stripped_t.startswith(';') or (len(stripped_t) >= 5 and re.match(r'^[a-zA-Z]+$', stripped_t))
+        if sz < 0.88 * base_size and stripped_t and not is_prose:
             if s_mid < base_mid - 0.5:
-                tokens.append(('sup', txt.strip()))
+                tokens.append(('sup', stripped_t))
             elif s_mid > base_mid + 0.5:
-                tokens.append(('sub', txt.strip()))
+                tokens.append(('sub', stripped_t))
             else:
                 tokens.append(('normal', txt))
         else:
@@ -228,6 +234,17 @@ def sanitize_math_text(text):
     """Normalizes raw Unicode and LaTeX math symbols for consistent rendering."""
     if not text:
         return ''
+    # Convert 2x1 binomial / combinations from CMEX10 and MathType
+    text = re.sub(r'[\x0f\uf8eb]\s*([a-zA-Z0-9\.\-]+)\s+([a-zA-Z0-9\.\-]+)\s*[\x10\uf8f8]', lambda m: f'\\binom{{{m.group(1)}}}{{{m.group(2)}}}', text)
+    # Strip any non-printing ASCII control characters (preserving tab, newline)
+    text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', text)
+    # Normalize Unicode combining circumflex (U+0302) to \hat{...} and combining arrow (U+20D7) to \vec{...}
+    char_class = r'[A-Za-z0-9\u0370-\u03ff\U0001D400-\U0001D7FF\u2207]'
+    text = re.sub(rf'({char_class})\s*[\u0302̂]', lambda m: f'\\hat{{{m.group(1)}}}', text)
+    text = re.sub(rf'({char_class})\s*[\u20d7⃗]', lambda m: f'\\vec{{{m.group(1)}}}', text)
+    text = re.sub(r'\\vec\{\s*\\nabla\s*\}', r'\\vec{\\nabla}', text)
+    # Strip leaked page footers if any
+    text = re.sub(r'\b(?:[A-Z]{2,4}\s+)?Page\s+\d+\s+of\s+\d+\b', '', text).strip()
     # Convert 2x1 column vectors: e.g. [4; 4] or [2; 0]
     text = re.sub(r'[\uf8eb]\s*[\uf8ed]\s*([a-zA-Z0-9\.\-]+)\s+([a-zA-Z0-9\.\-]+)\s*[\uf8f6]\s*[\uf8f8]', r'\\begin{pmatrix} \1 \\\\ \2 \\end{pmatrix}', text)
     # Convert set braces:
@@ -249,16 +266,60 @@ def sanitize_math_text(text):
         '\uf044': r'\Delta', '\uf046': r'\Phi', '\uf047': r'\Gamma', '\uf04c': r'\Lambda',
         '\uf050': r'\Pi', '\uf051': r'\Theta', '\uf053': r'\Sigma', '\uf057': r'\Omega',
         '\uf058': r'\Xi', '\uf059': r'\Psi',
+        '\uf0b6': r'\partial', '\uf0a5': r'\infty', '\uf0b4': r'\times', '\uf0b3': r'\ge',
+        '\uf0b5': r'\propto', '\uf0b7': r'\cdot', '\uf0b8': r'\div', '\uf0b2': r'\le',
+        '\uf03c': '<', '\uf03e': '>', '\uf0d1': r'\nabla', '\uf0b1': r'\pm',
+        '\uf0b9': r'\ne', '\uf0a3': r'\le', '\uf0bb': r'\approx', '\uf0ba': r'\equiv',
+        '\uf0c7': r'\cap', '\uf0c8': r'\cup', '\uf0ce': r'\in', '\uf0cf': r'\notin',
+        '\uf0cc': r'\subset', '\uf0cd': r'\subseteq', '\uf0cb': r'\supset', '\uf0d0': r'\supseteq',
+        '\uf0ae': r'\rightarrow', '\uf0ac': r'\leftarrow', '\uf0de': r'\Rightarrow', '\uf0db': r'\Leftrightarrow',
+        '\uf0b0': r'^{\circ}', '\uf0c6': r'\emptyset', '\uf022': r'\forall', '\uf024': r'\exists',
+        '\uf0d8': r'\neg', '\uf0d9': r'\land', '\uf0da': r'\lor',
     }
     for k, v in symbol_font_map.items():
         if k in text:
-            text = text.replace(k, f"\\({v}\\)")
+            # If inside existing subscript or math delimiter, do not add nested \(...\)
+            text = re.sub(rf'_\{{\s*{re.escape(k)}\s*\}}', lambda m, val=v: f'_{{{val}}}', text)
+            text = re.sub(rf'\^\{{\s*{re.escape(k)}\s*\}}', lambda m, val=v: f'^{{{val}}}', text)
+            text = text.replace(k, f" {v} ")
+
+    # Unnest any accidental nested math delimiters e.g. k_{\(\theta\)} -> k_{\theta}
+    text = re.sub(r'_\{\s*(?:\\\\\(|\()([^{}]+?)(?:\\\\\)|\))\s*\}', r'_{\1}', text)
+    text = re.sub(r'\^\{\s*(?:\\\\\(|\()([^{}]+?)(?:\\\\\)|\))\s*\}', r'^{\1}', text)
+    text = re.sub(r'\\\\?\(\s*(?:\\\\\(|\()([^{}]+?)(?:\\\\\)|\))\s*\\\\?\)', r'\(\1\)', text)
+
+    # Normalize MathType bracket glyphs
+    text = re.sub(r'[\uf0e6\uf0e7\uf0e8]+', '(', text)
+    text = re.sub(r'[\uf0f6\uf0f7\uf0f8]+', ')', text)
+    text = re.sub(r'[\uf0e9\uf0ea\uf0eb]+', '[', text)
+    text = re.sub(r'[\uf0f9\uf0fa\uf0fb]+', ']', text)
+    text = re.sub(r'[\uf0ee\uf0ec]+', '{', text)
+    text = re.sub(r'[\uf0fe\uf0fd]+', '}', text)
+    text = re.sub(r'[\uf0ef\uf0ed\uf0fc]', '', text)
+
+    # Fix broken exponent notation: e.g. 10^{-}  3 or 10^{-} 3 -> \times 10^{-3}
+    text = re.sub(r'10\^?\{\s*[-−–—]\s*\}\s*(?:\\times|[×\uf0b4\*])\s*([0-9]+)', lambda m: rf'\times 10^{{-{m.group(1)}}}', text)
+    text = re.sub(r'10\^?\{\s*[-−–—]\s*\}\s*([0-9]+)', lambda m: rf'10^{{-{m.group(1)}}}', text)
+    text = re.sub(r'10\s*[-−–—]\s*(?:\\times|[×\uf0b4\*])\s*([0-9]+)', lambda m: rf'\times 10^{{-{m.group(1)}}}', text)
+
     text = re.sub(r'[\uf8f0-\uf8ff]', '', text)
     text = re.sub(r'[]', '', text)
     replacements = [
-        ('≤', r' \le '),
+        ('∞', r' \infty '),
+        ('', r' \infty '),
+        ('×', r' \times '),
+        ('', r' \times '),
         ('≥', r' \ge '),
+        ('', r' \ge '),
+        ('≤', r' \le '),
+        ('≦', r' \le '),
         ('≠', r' \ne '),
+        ('∇', r' \nabla '),
+        ('', r' \nabla '),
+        ('∂', r' \partial '),
+        ('', '<'),
+        ('', '>'),
+        ('±', r' \pm '),
         ('∈', r' \in '),
         ('∉', r' \notin '),
         ('×', r' \times '),
@@ -318,8 +379,8 @@ def is_prose_option(text: str) -> bool:
 
 def wrap_embedded_math_tokens(text: str) -> str:
     """Wraps isolated mathematical variables, subscripts, and expressions in inline \(...\)."""
-    # Wrap subscripts: e.g. C_{1}, V_{g}, \sigma_{xx}
-    text = re.sub(r'(?<!\\|\$|\()(\b[a-zA-Z\u0370-\u03ff\u1d400-\u1d7ff](?:_\{[^}]+\}|\^[a-zA-Z0-9]+|\^\{[^}]+\}|_[a-zA-Z0-9]+)+)(?!\)|\$)', r'\(\1\)', text)
+    # Wrap subscripts: e.g. C_{1}, V_{g}, \sigma_{xx} (ignore combining accents and subscripts with spaces)
+    text = re.sub(r'(?<!\\|\$|\()(\b[a-zA-Z\u0370-\u03ff\U0001D400-\U0001D7FF](?!\u0302|\u20d7)(?:_\{[^}\s]+\}|\^[a-zA-Z0-9]+|\^\{[^}\s]+\}|_[a-zA-Z0-9]+)+)(?!\)|\$)', r'\(\1\)', text)
     # Wrap fractions: e.g. \frac{a}{b}
     text = re.sub(r'(?<!\\|\$|\()(\\frac\{[^{}]+\}\{[^{}]+\})(?!\)|\$)', r'\(\1\)', text)
     return text
@@ -474,7 +535,8 @@ def detect_fractions_and_underlines(page, rect, exclude_bboxes=None):
             r.y1 += 1.0
         if exclude_bboxes and any(tb.contains(r) or (tb.intersects(r) and (tb & r).width > 0.8 * r.width) for tb in exclude_bboxes):
             continue
-        if orig_h <= 2.5 and 4.5 <= r.width <= 250 and rect.intersects(r) and rect.y0 < r.y0 < rect.y1:
+        # Sqrt ticks are < 5.2pt width; genuine fraction bars are >= 5.5pt width
+        if orig_h <= 2.5 and 5.5 <= r.width <= 250 and rect.intersects(r) and rect.y0 < r.y0 < rect.y1:
             h_lines.append(r)
 
     if not h_lines:
@@ -485,24 +547,22 @@ def detect_fractions_and_underlines(page, rect, exclude_bboxes=None):
     underlines = []
 
     for hl in h_lines:
-        above = [w for w in words if w[3] <= hl.y0 + 2.0 and w[1] < hl.y0 and abs(w[3] - hl.y0) < 6.0 and not (w[2] < hl.x0 - 4 or w[0] > hl.x1 + 4) and w[4] not in ['(A)', '(B)', '(C)', '(D)']]
-        below = [w for w in words if w[1] >= hl.y1 - 2.0 and w[3] > hl.y1 and abs(w[1] - hl.y1) < 6.0 and not (w[2] < hl.x0 - 4 or w[0] > hl.x1 + 4) and w[4] not in ['(A)', '(B)', '(C)', '(D)']]
-
-        if any(w[0] < hl.x0 - 6.0 or w[2] > hl.x1 + 6.0 for w in above + below):
-            if above:
-                underlines.append(hl)
-            continue
+        above = [
+            w for w in words
+            if w[3] <= hl.y0 + 2.0 and w[1] < hl.y0 and abs(w[3] - hl.y0) <= 8.5
+            and (hl.x0 - 2.5 <= (w[0] + w[2]) / 2.0 <= hl.x1 + 2.5)
+            and w[4] not in ['(A)', '(B)', '(C)', '(D)']
+        ]
+        below = [
+            w for w in words
+            if w[1] >= hl.y1 - 2.0 and w[3] > hl.y1 and abs(w[1] - hl.y1) <= 8.5
+            and (hl.x0 - 2.5 <= (w[0] + w[2]) / 2.0 <= hl.x1 + 2.5)
+            and w[4] not in ['(A)', '(B)', '(C)', '(D)']
+        ]
 
         if above and below and set(w[4] for w in above) != set(w[4] for w in below):
-            # If there are other horizontal lines on roughly the same y (fraction series), it's definitely fractions, not an underline
-            other_same_y = [other for other in h_lines if other != hl and abs(other.y0 - hl.y0) < 4.0]
-            if not other_same_y:
-                # Check if words in 'above' and 'below' are merely parts of running text lines (e.g. underline in paragraph)
-                above_line_words = [w for w in words if abs(w[1] - above[0][1]) < 3.0]
-                below_line_words = [w for w in words if abs(w[1] - below[0][1]) < 3.0]
-                if (any(w[2] < hl.x0 - 20 for w in above_line_words) and any(w[0] > hl.x1 + 20 for w in above_line_words) and
-                    any(w[2] < hl.x0 - 20 for w in below_line_words) and any(w[0] > hl.x1 + 20 for w in below_line_words)):
-                    continue
+            above.sort(key=lambda w: w[0])
+            below.sort(key=lambda w: w[0])
             num = ''.join(w[4] for w in above).strip().rstrip(',').rstrip('.').rstrip(';').rstrip(':')
             den = ''.join(w[4] for w in below).strip().rstrip(',').rstrip('.').rstrip(';').rstrip(':')
             if den.endswith(')') and '(' not in den and '(' not in num:
@@ -512,9 +572,61 @@ def detect_fractions_and_underlines(page, rect, exclude_bboxes=None):
             num = re.sub(r'e−x\b', 'e^{-x}', num)
             fractions.append((hl, num, den, f"\\frac{{{num}}}{{{den}}}"))
         elif above and not below:
-            underlines.append(hl)
+            if any(hl.x0 - 2.0 <= (w[0] + w[2]) / 2.0 <= hl.x1 + 2.0 for w in above):
+                underlines.append(hl)
 
     return fractions, underlines
+
+def format_frac_term(t):
+    if not t:
+        return ''
+    t = sanitize_math_text(t).strip()
+    t = re.sub(r'^[,\.\s]+', '', t)
+    t = re.sub(r'([a-zA-Z])([0-9]+)', r'\1^{\2}', t)
+    return t
+
+def collapse_mathtype_brackets(processed_lines):
+    bracket_left = {'\uf0e6', '\uf0e7', '\uf0e8', '', '', ''}
+    bracket_right = {'\uf0f6', '\uf0f7', '\uf0f8', '', '', ''}
+    bracket_sq_left = {'\uf0e9', '\uf0ea', '\uf0eb', '', '', ''}
+    bracket_sq_right = {'\uf0f9', '\uf0fa', '\uf0fb', '', '', ''}
+
+    collapsed = []
+    skip_idx = set()
+    for i, it in enumerate(processed_lines):
+        if i in skip_idx:
+            continue
+        txt = it[1].strip()
+        target_set = None
+        rep_char = None
+        if txt in bracket_left:
+            target_set, rep_char = bracket_left, '('
+        elif txt in bracket_right:
+            target_set, rep_char = bracket_right, ')'
+        elif txt in bracket_sq_left:
+            target_set, rep_char = bracket_sq_left, '['
+        elif txt in bracket_sq_right:
+            target_set, rep_char = bracket_sq_right, ']'
+
+        if target_set:
+            stack = [i]
+            for j in range(i + 1, len(processed_lines)):
+                if j not in skip_idx and processed_lines[j][1].strip() in target_set and abs(processed_lines[j][2]['bbox'][0] - it[2]['bbox'][0]) < 4.0:
+                    stack.append(j)
+            if len(stack) >= 2:
+                skip_idx.update(stack)
+                y0 = min(processed_lines[k][2]['bbox'][1] for k in stack)
+                y1 = max(processed_lines[k][2]['bbox'][3] for k in stack)
+                x0 = min(processed_lines[k][2]['bbox'][0] for k in stack)
+                x1 = max(processed_lines[k][2]['bbox'][2] for k in stack)
+                bracket_item = {
+                    'bbox': (x0, y0, x1, y1),
+                    'spans': [{'text': rep_char, 'bbox': (x0, y0, x1, y1), 'size': 12.0}]
+                }
+                collapsed.append(('text', rep_char, bracket_item))
+                continue
+        collapsed.append(it)
+    return collapsed
 
 def apply_underlines_to_text(line_spans, line_words, underlines):
     """
@@ -738,20 +850,20 @@ def validate_paper_boundaries(questions, ak_dict, paper_assets_dir):
 
     # 9. Watermark Cleanliness
     for q in questions:
-        for wm in ['IIT Roorkee', 'IISc Bangalore', 'IISc Bengaluru']:
+        for wm in ['IIT Roorkee', 'IISc Bangalore', 'IISc Bengaluru', 'IIT Kanpur']:
             if wm.lower() in q['questionText'].lower() and not ('gate' in q['questionText'].lower() and len(q['questionText']) < 35):
                 issues['WATERMARK_DETECTED'].append(f"Q{q['questionNumber']} contains {wm}")
 
     # 10. Visual Asset Integrity
     for q in questions:
         if q.get('diagramUrl'):
-            asset_full = os.path.join('/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public', q['diagramUrl'].lstrip('/'))
+            asset_full = os.path.join(REPO_ROOT, 'web/public', q['diagramUrl'].lstrip('/'))
             if not os.path.exists(asset_full) or os.path.getsize(asset_full) < 50:
                 issues['CORRUPT_OR_MISSING_DIAGRAM'].append(f"Q{q['questionNumber']}")
         if q.get('optionImages'):
             for oi, oimg in enumerate(q['optionImages']):
                 if oimg:
-                    asset_full = os.path.join('/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public', oimg.lstrip('/'))
+                    asset_full = os.path.join(REPO_ROOT, 'web/public', oimg.lstrip('/'))
                     if not os.path.exists(asset_full) or os.path.getsize(asset_full) < 50:
                         issues['CORRUPT_OR_MISSING_OPT_IMG'].append(f"Q{q['questionNumber']} opt {oi}")
 
@@ -846,6 +958,8 @@ def extract_clean_rect_text(page, rect, page_dict, words):
                 continue
             if re.search(r'Q\s*\.?\s*\d+\s*[–\-–—]\s*Q\s*\.?\s*\d+\s*carry', txt, re.IGNORECASE) or re.search(r'carry\s+\w+\s+mark', txt, re.IGNORECASE):
                 continue
+            if re.search(r'\bPage\s+\d+\s+of\s+\d+', txt, re.IGNORECASE) or re.search(r'Organizing Institute:', txt, re.IGNORECASE):
+                continue
 
             spans_to_process = []
             header_match = re.match(r'^(?:\([A-Da-d]\)|[A-Da-d][\.\:\)])\s*(.*)$', txt)
@@ -882,7 +996,7 @@ def extract_clean_rect_text(page, rect, page_dict, words):
                 s_mid_x = (s['bbox'][0] + s['bbox'][2]) / 2.0
                 matched_f = None
                 for fl, fnum, fden, fstr in fracs:
-                    if fl.x0 - 8 <= s_mid_x <= fl.x1 + 8 and fl.y0 - 20 <= s['bbox'][1] and s['bbox'][3] <= fl.y1 + 20:
+                    if fl.x0 - 2.5 <= s_mid_x <= fl.x1 + 2.5 and fl.y0 - 20 <= s['bbox'][1] and s['bbox'][3] <= fl.y1 + 20:
                         matched_f = (fl, fnum, fden, fstr)
                         break
                 if matched_f:
@@ -891,6 +1005,8 @@ def extract_clean_rect_text(page, rect, page_dict, words):
                         prefix = ''
                         if s_txt.endswith(matched_f[1]):
                             prefix = s_txt[:-len(matched_f[1])].strip()
+                        elif s_txt.endswith(matched_f[2]):
+                            prefix = s_txt[:-len(matched_f[2])].strip()
                         elif any(s_txt.startswith(op) for op in ['+', '-', '=', '(', '[', ',', ';']):
                             m = re.match(r'^([\+\-\=\(\[\,\;\s]+)', s_txt)
                             if m:
@@ -912,12 +1028,8 @@ def extract_clean_rect_text(page, rect, page_dict, words):
                     f_id = (round(fl_rect.x0), round(fl_rect.y0))
                     if f_id not in inserted_frac_ids:
                         inserted_frac_ids.add(f_id)
-                        num_fmt = re.sub(r'^[,\.\s]+', '', matched_f[1])
-                        num_fmt = re.sub(r'([a-zA-Z])([0-9]+)$', r'\1^{\2}', num_fmt)
-                        num_fmt = sanitize_math_text(num_fmt).strip()
-                        den_fmt = re.sub(r'^[,\.\s]+', '', matched_f[2])
-                        den_fmt = re.sub(r'([a-zA-Z])([0-9]+)$', r'\1^{\2}', den_fmt)
-                        den_fmt = sanitize_math_text(den_fmt).strip()
+                        num_fmt = format_frac_term(matched_f[1])
+                        den_fmt = format_frac_term(matched_f[2])
                         frac_latex = f"\\frac{{{num_fmt}}}{{{den_fmt}}}"
                         frac_item = {
                             'bbox': (fl_rect.x0, fl_rect.y0, fl_rect.x1, fl_rect.y1),
@@ -942,6 +1054,7 @@ def extract_clean_rect_text(page, rect, page_dict, words):
     if not processed_lines:
         return ''
 
+    processed_lines = collapse_mathtype_brackets(processed_lines)
     bands = []
     processed_lines.sort(key=lambda p: p[2]['bbox'][1])
     for p in processed_lines:
@@ -1476,7 +1589,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                             s_mid_x = (s['bbox'][0] + s['bbox'][2]) / 2.0
                             matched_f = None
                             for fl, fnum, fden, fstr in prompt_fractions:
-                                if fl.x0 - 5 <= s_mid_x <= fl.x1 + 5 and fl.y0 - 25 <= s['bbox'][1] and s['bbox'][3] <= fl.y1 + 25:
+                                if fl.x0 - 2.5 <= s_mid_x <= fl.x1 + 2.5 and fl.y0 - 25 <= s['bbox'][1] and s['bbox'][3] <= fl.y1 + 25:
                                     matched_f = (fl, fnum, fden, fstr)
                                     break
                             if matched_f:
@@ -1485,6 +1598,8 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                                     prefix = ''
                                     if s_txt.endswith(matched_f[1]):
                                         prefix = s_txt[:-len(matched_f[1])].strip()
+                                    elif s_txt.endswith(matched_f[2]):
+                                        prefix = s_txt[:-len(matched_f[2])].strip()
                                     elif any(s_txt.startswith(op) for op in ['+', '-', '=', '(', '[', ',', ';']):
                                         m = re.match(r'^([\+\-\=\(\[\,\;\s]+)', s_txt)
                                         if m:
@@ -1499,10 +1614,8 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                                 f_id = (round(matched_f[0].x0), round(matched_f[0].y0))
                                 if f_id not in inserted_frac_ids:
                                     inserted_frac_ids.add(f_id)
-                                    num_fmt = re.sub(r'([a-zA-Z])([0-9]+)$', r'\1^{\2}', matched_f[1])
-                                    num_fmt = re.sub(r'([a-zA-Z])2', r'\1^2', num_fmt)
-                                    den_fmt = re.sub(r'\(2𝑥\)2', r'(2x)^2', matched_f[2])
-                                    den_fmt = re.sub(r'([a-zA-Z])([0-9]+)$', r'\1^{\2}', den_fmt)
+                                    num_fmt = format_frac_term(matched_f[1])
+                                    den_fmt = format_frac_term(matched_f[2])
                                     frac_latex = f"\\frac{{{num_fmt}}}{{{den_fmt}}}"
                                     frac_item = {
                                         'bbox': (matched_f[0].x0, matched_f[0].y0, matched_f[0].x1, matched_f[0].y1),
@@ -1522,7 +1635,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                             l_syn['bbox'] = (min_x, min_y, max_x, max_y)
                             rl = extract_rich_line(l_syn).strip()
                             if rl:
-                                l_words = [w for w in words if min_y - 2 <= w[1] and w[3] <= max_y + 2]
+                                l_words = [w for w in words if min_y - 2 <= w[1] and w[3] <= max_y + 2 and min_x - 3 <= (w[0] + w[2]) / 2.0 <= max_x + 3]
                                 l_words.sort(key=lambda w: w[0])
                                 if is_genuine_relational_algebra(rl):
                                     formatted_expr = format_relational_algebra(rl)
@@ -1534,6 +1647,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                                     processed_lines.append(('text', rl, l_syn))
 
                 # 4. 2D Reading Order Clustering
+                processed_lines = collapse_mathtype_brackets(processed_lines)
                 bands = []
                 processed_lines.sort(key=lambda p: p[2]['bbox'][1])
                 for p in processed_lines:
@@ -1708,6 +1822,12 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                         elif b['type'] == 'math':
                             assembled_text_parts.append(f"$${b['latex']}$$")
                     assembled_prompt = '\n\n'.join(assembled_text_parts).strip()
+                    assembled_prompt = re.sub(r'\(\s+([a-zA-Z0-9]+)\s*,\s*', r'(\1, ', assembled_prompt)
+                    assembled_prompt = re.sub(r'\s+\)', ')', assembled_prompt)
+                    for b in c_blocks:
+                        if b['type'] == 'text':
+                            b['content'] = re.sub(r'\(\s+([a-zA-Z0-9]+)\s*,\s*', r'(\1, ', b['content'])
+                            b['content'] = re.sub(r'\s+\)', ')', b['content'])
 
                 assembled_prompt = re.sub(r'^(?:General Aptitude \(GA\)[\s\n]*)?(?:Q\s*\.?\s*\d+\s*[–\-–—]\s*Q\s*\.?\s*\d+\s*(?:carry|Carry)\s+[^\n]*(?:each|Each)[\.\s\n]*)', '', assembled_prompt, flags=re.IGNORECASE).strip()
                 assembled_prompt = re.sub(r'^(?:General Aptitude \(GA\)[\s\n]*)', '', assembled_prompt, flags=re.IGNORECASE).strip()
@@ -1716,9 +1836,9 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                 opt_texts = []
                 opt_images = []
                 letters = ['A', 'B', 'C', 'D']
+                opt_boxes = {}
                 for li, let in enumerate(letters):
                     if let in q_opts:
-                        val = q_opts[let][2]
                         if li == 0:
                             prompt_bottom = q_y0 + 10.0
                             if diagram_crop_rect:
@@ -1729,7 +1849,17 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                         else:
                             prev_y = q_opts[letters[li-1]][1]
                             opt_y0 = max(prev_y + 1.0, q_opts[let][0] - 18.0)
-                        opt_y1 = (q_opts[letters[li+1]][0] - 2.0) if li+1 < len(letters) and letters[li+1] in q_opts else (next_q_y0 - 5.0)
+                        opt_boxes[let] = opt_y0
+
+                for li, let in enumerate(letters):
+                    if let in q_opts:
+                        val = q_opts[let][2]
+                        opt_y0 = opt_boxes[let]
+                        if li + 1 < len(letters) and letters[li+1] in q_opts:
+                            opt_y1 = opt_boxes[letters[li+1]] - 1.0
+                        else:
+                            page_content_bottom = min(680.0, next_q_y0 - 5.0)
+                            opt_y1 = page_content_bottom
                         opt_rect = fitz.Rect(70, opt_y0, 530, opt_y1)
 
                         # Check for fraction bar or rich text in option
@@ -1739,19 +1869,24 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                             val = clean_opt
 
                         o_imgs = [im[1] for im in page_images if opt_rect.intersects(im[1]) and (opt_rect & im[1]).width > 12 and (opt_rect & im[1]).height > 12]
-                        o_drws = [dr for dr in page_drawings if opt_rect.intersects(dr) and (opt_rect & dr).width > 12 and (opt_rect & dr).height > 12 and not (fracs and any(dr.intersects(f[0]) for f in fracs))]
-                        is_visual_option = not val or len(val.strip()) == 0 or bool(re.match(r'^(?:Option\s*\(?[A-D]\)?|\(?[A-D]\)?)$', val.strip(), re.IGNORECASE))
+                        o_drws = [dr for dr in page_drawings if opt_rect.intersects(dr) and ((opt_rect & dr).width > 2 or (opt_rect & dr).height > 2) and not (fracs and any(dr.intersects(f[0]) for f in fracs))]
+                        has_math_type_or_radical = bool(re.search(r'[\uf0e6-\uf0fd\u239b-\u23ad]', val)) or any(d.height >= 12 and d.width >= 15 for d in o_drws if d.width < 350 and d.height < 70)
+                        is_visual_option = not val or len(val.strip()) == 0 or bool(re.match(r'^(?:Option\s*\(?[A-D]\)?|\(?[A-D]\)?)$', val.strip(), re.IGNORECASE)) or has_math_type_or_radical
                         has_img = False
-                        if is_visual_option and (o_imgs or o_drws):
-                            visuals = o_imgs + o_drws
-                            union_rect = visuals[0]
-                            for v in visuals[1:]:
-                                union_rect = union_rect | v
-                            if union_rect.height >= 12 and union_rect.width >= 20:
+                        if is_visual_option and (o_imgs or o_drws or has_math_type_or_radical):
+                            cell_words = [w for w in words if opt_rect.contains(fitz.Rect(w[:4])) and w[0] >= 110]
+                            cell_drws = [dr for dr in o_drws if dr.width < 380 and dr.height < 80 and dr.x0 > 105 and dr.x1 < 520 and dr.y0 > opt_y0 + 2 and dr.y1 < opt_y1 - 2]
+                            content_rects = [fitz.Rect(w[:4]) for w in cell_words] + cell_drws + o_imgs
+                            if not content_rects and (o_imgs or o_drws):
+                                content_rects = o_imgs + o_drws
+                            if content_rects:
+                                union_rect = content_rects[0]
+                                for v in content_rects[1:]:
+                                    union_rect = union_rect | v
                                 crop_rect = fitz.Rect(
-                                    max(70, union_rect.x0 - 4),
+                                    max(70, union_rect.x0 - 6),
                                     max(opt_y0, union_rect.y0 - 4),
-                                    min(530, union_rect.x1 + 4),
+                                    min(530, union_rect.x1 + 6),
                                     min(opt_y1, union_rect.y1 + 4)
                                 )
                                 if crop_rect.width > 12 and crop_rect.height > 12:
@@ -1765,7 +1900,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
                         if not has_img:
                             opt_images.append(None)
                         opt_text = sanitize_math_text(val)
-                        if any(sym in opt_text for sym in [r'\frac', r'\equiv', r'\rightarrow', r'\neg', r'\land', r'\lor', '^{', '_{', r'\mathbb', 'O(']):
+                        if any(sym in opt_text for sym in [r'\frac', r'\binom', r'\equiv', r'\rightarrow', r'\neg', r'\land', r'\lor', '^{', '_{', r'\mathbb', 'O(']):
                             if not ('$' in opt_text or r'\(' in opt_text or r'\[' in opt_text):
                                 if not is_prose_option(opt_text):
                                     opt_text = f"\\({opt_text}\\)"
@@ -1977,7 +2112,7 @@ def extract_and_verify_paper(paper_info, assets_base_dir, year, org_institute):
         answer_verified = bool(correct_answer and (correct_answer == 'MTA' or correct_answer_index != -1 or correct_answer_set is not None or answer_range is not None))
         asset_verified = True
         if extracted['diagram_url']:
-            asset_full = os.path.join('/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/web/public', extracted['diagram_url'].lstrip('/'))
+            asset_full = os.path.join(REPO_ROOT, 'web/public', extracted['diagram_url'].lstrip('/'))
             if not os.path.exists(asset_full):
                 asset_verified = False
 
@@ -2152,17 +2287,26 @@ def run_full_forensic_pipeline():
 
     all_manifest = []
     summary_stats = {
+        2023: {'papers': 0, 'questions': 0, 'verified': 0, 'fixed': 0, 'review': 0, 'failed': 0, 'paper_details': []},
         2024: {'papers': 0, 'questions': 0, 'verified': 0, 'fixed': 0, 'review': 0, 'failed': 0, 'paper_details': []},
         2025: {'papers': 0, 'questions': 0, 'verified': 0, 'fixed': 0, 'review': 0, 'failed': 0, 'paper_details': []},
     }
 
-    years_to_run = [(2024, 'IISc Bengaluru'), (2025, 'IIT Roorkee')]
+    years_to_run = [(2023, 'IIT Kanpur'), (2024, 'IISc Bengaluru'), (2025, 'IIT Roorkee')]
     if target_year:
         years_to_run = [y for y in years_to_run if y[0] == target_year]
 
     for year, org_institute in years_to_run:
         manifest_csv = f'/Users/shivarampatel/Downloads/GATE {year}/GATE_{year}_manifest.csv'
-        assets_base = ASSETS_BASE_2024 if year == 2024 else ASSETS_BASE_2025
+        if not os.path.exists(manifest_csv):
+            print(f"Manifest not found for year {year}: {manifest_csv}")
+            continue
+        if year == 2023:
+            assets_base = ASSETS_BASE_2023
+        elif year == 2024:
+            assets_base = ASSETS_BASE_2024
+        else:
+            assets_base = ASSETS_BASE_2025
 
         papers = {}
         with open(manifest_csv, 'r', encoding='utf-8') as f:
@@ -2203,52 +2347,11 @@ def run_full_forensic_pipeline():
             print(f"   [RESULT] {code}: {p_stats['totalQuestions']} Qs | {status_str} | Diagrams: {p_stats['diagrams']}, Visual Opts: {p_stats['visualOptions']}", flush=True)
 
     # Write machine-readable manifest
-    manifest_out = '/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/scripts/gate_verification_manifest.json'
+    manifest_out = os.path.join(REPO_ROOT, 'scripts/gate_verification_manifest.json')
     with open(manifest_out, 'w', encoding='utf-8') as f:
         json.dump(all_manifest, f, indent=2, ensure_ascii=False)
     print(f"\nSaved machine-readable verification manifest to {manifest_out} ({len(all_manifest)} records)")
 
-    # Write GATE_VERIFICATION_REPORT.md
-    report_out = '/Users/shivarampatel/AndroidStudioProjects/MOCK.AI/GATE_VERIFICATION_REPORT.md'
-    with open(report_out, 'w', encoding='utf-8') as f:
-        f.write("# MOCK.AI — GATE 2024 & GATE 2025 COMPLETE FORENSIC VERIFICATION REPORT\n\n")
-        f.write("Generated from official Master Question Papers and Official Final Answer Keys.\n\n")
-
-        f.write("## Executive Summary\n\n")
-        f.write("| Edition | Organizing Institute | Papers Audited | Questions Verified | Fixed & Verified | Review Required | Failed | Pass Rate |\n")
-        f.write("| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n")
-
-        for yr in [2024, 2025]:
-            st = summary_stats[yr]
-            pass_rate = ((st['verified'] + st['fixed']) / max(1, st['questions'])) * 100
-            inst = 'IISc Bengaluru' if yr == 2024 else 'IIT Roorkee'
-            f.write(f"| **GATE {yr}** | {inst} | {st['papers']} | {st['verified']} | {st['fixed']} | {st['review']} | {st['failed']} | **{pass_rate:.1f}%** |\n")
-
-        tot_q = summary_stats[2024]['questions'] + summary_stats[2025]['questions']
-        tot_v = summary_stats[2024]['verified'] + summary_stats[2025]['verified']
-        tot_fx = summary_stats[2024]['fixed'] + summary_stats[2025]['fixed']
-        tot_rv = summary_stats[2024]['review'] + summary_stats[2025]['review']
-        tot_fl = summary_stats[2024]['failed'] + summary_stats[2025]['failed']
-        tot_pass = ((tot_v + tot_fx) / max(1, tot_q)) * 100
-        f.write(f"| **TOTAL** | — | **76** | **{tot_v}** | **{tot_fx}** | **{tot_rv}** | **{tot_fl}** | **{tot_pass:.1f}%** |\n\n")
-
-        f.write("## Known Problem Questions Verification (GATE 2025 DA)\n\n")
-        f.write("| Question | Source Issue | Applied Root-Cause Fix | Final Status |\n")
-        f.write("| :--- | :--- | :--- | :--- |\n")
-        f.write("| **Q11** | Range instruction header swallowed prompt; Option B fraction lost denominator | Added range instruction filter `Q. \\d+ – Q. \\d+`; reconstructed Option B fraction $\\frac{E[X]}{E[Y]}$ | **FIXED_AND_VERIFIED** |\n")
-        f.write("| **Q19** | Piecewise CDF bracket glyphs `\\uf8f1` destroyed; formula flattened into disjoint lines | KaTeX `\\begin{cases}` piecewise reconstruction with $F_X(x)$, $\\le$, and fractions | **FIXED_AND_VERIFIED** |\n")
-        f.write("| **Q64** | Monospace pseudocode flattened into single paragraph; indentation and braces lost | Monospace font detection (`NimbusMonL-Regu`), 4-space indentation preservation, markdown block | **FIXED_AND_VERIFIED** |\n\n")
-
-        for yr in [2025, 2024]:
-            f.write(f"## GATE {yr} Paper-by-Paper Verification Breakdown\n\n")
-            f.write("| Paper Code | Discipline | Total Qs | Verified | Fixed | Review Req | Diagrams | Visual Opts | Status |\n")
-            f.write("| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |\n")
-            for pd in summary_stats[yr]['paper_details']:
-                p_status = "VERIFIED" if pd['review'] == 0 and pd['failed'] == 0 else "PARTIALLY_VERIFIED"
-                f.write(f"| **{pd['code']}** | {pd['code']} | {pd['totalQuestions']} | {pd['verified']} | {pd['fixed']} | {pd['review']} | {pd['diagrams']} | {pd['visualOptions']} | {p_status} |\n")
-            f.write("\n")
-
-    print(f"Generated comprehensive forensic audit report at {report_out}")
 
 if __name__ == '__main__':
     run_full_forensic_pipeline()

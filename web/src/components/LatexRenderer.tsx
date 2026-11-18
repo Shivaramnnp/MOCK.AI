@@ -33,6 +33,81 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
 
     let processed = content.normalize('NFKD');
 
+    // Pre-normalize Symbol font glyphs, private use area math characters, and MathType brackets
+    processed = processed
+      .replace(/[\uF0A5]/g, '\\infty ')
+      .replace(/[\uF0B4×]/g, '\\times ')
+      .replace(/[\uF0B6]/g, '\\partial ')
+      .replace(/[\uF0B3]/g, ' \\ge ')
+      .replace(/[\uF0B5]/g, ' \\propto ')
+      .replace(/[\uF0B7]/g, ' \\cdot ')
+      .replace(/[\uF0B8]/g, ' \\div ')
+      .replace(/[\uF0B2]/g, ' \\le ')
+      .replace(/[\uF03C]/g, '<')
+      .replace(/[\uF03E]/g, '>')
+      .replace(/[\uF0D1]/g, '\\nabla ')
+      .replace(/[\uF0B1]/g, ' \\pm ')
+      .replace(/[\uF0B9]/g, ' \\ne ')
+      .replace(/[\uF0B0]/g, '^{\\circ}')
+      .replace(/[\uF0A2]/g, "'")
+      .replace(/[\uF0C2]/g, '\\mathbb{R}')
+      .replace(/[\uF0C5]/g, '\\oplus ')
+      .replace(/[\uF0D0]/g, '\\angle ')
+      .replace(/[\uF0E6\uF0E7\uF0E8]+/g, '(')
+      .replace(/[\uF0F6\uF0F7\uF0F8]+/g, ')')
+      .replace(/[\uF0E9\uF0EA\uF0EB]+/g, '[')
+      .replace(/[\uF0F9\uF0FA\uF0FB]+/g, ']')
+      .replace(/[\uF0EE\uF0EC]+/g, '{')
+      .replace(/[\uF0FE\uF0FD]+/g, '}')
+      .replace(/[\uF0EF\uF0ED\uF0FC]/g, '');
+
+    // Normalize CMEX10 font 2x1 binomial / combination glyphs
+    processed = processed.replace(
+      /[\x0f\uF8EB]\s*([a-zA-Z0-9\.\-]+)\s+([a-zA-Z0-9\.\-]+)\s*[\x10\uF8F8]/g,
+      '\\binom{$1}{$2}'
+    );
+
+    // Eliminate non-printing ASCII control characters (preserving tab, newline)
+    processed = processed.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+
+    // Normalize Unicode combining circumflex (U+0302) to \hat{...} and combining right arrow (U+20D7) to \vec{...}
+    processed = processed.replace(
+      /([A-Za-z0-9\u0370-\u03FF\u{1D400}-\u{1D7FF}\u2207]|\\nabla|\\theta|\\phi|\\alpha|\\beta|\\gamma|\\omega|\\sigma|\\tau|\\lambda|\\mu|\\nu|\\rho|\\pi)\s*[\u0302̂]/gu,
+      '\\hat{$1}'
+    );
+    processed = processed.replace(
+      /([A-Za-z0-9\u0370-\u03FF\u{1D400}-\u{1D7FF}\u2207]|\\nabla|\\theta|\\phi|\\alpha|\\beta|\\gamma|\\omega|\\sigma|\\tau|\\lambda|\\mu|\\nu|\\rho|\\pi)\s*[\u20D7⃗]/gu,
+      '\\vec{$1}'
+    );
+    // Clean any orphaned combining accents
+    processed = processed.replace(/[\u0302̂\u20D7⃗]/g, '');
+
+    // Repair malformed closing delimiters like \}) -> }\)
+    processed = processed.replace(/\\+\}\)/g, '}\\)');
+
+    // Normalize Unicode combining overline (U+0305) to \overline{...}
+    processed = processed.replace(/([A-Za-z0-9])\u0305/g, '\\overline{$1}');
+    processed = processed.replace(/([A-Za-z0-9])\s*̅/g, '\\overline{$1}');
+
+    // Unnest accidental nested math delimiters inside subscripts / superscripts
+    processed = processed.replace(/([_^])\{[\\/]*\(([\s\S]*?)[\\/]*\)\}/g, '$1{$2}');
+    processed = processed.replace(/([_^])\{[\\/]*\[([\s\S]*?)[\\/]*\]\}/g, '$1{$2}');
+    processed = processed.replace(/([_^])\{[\\/]*\{([\s\S]*?)[\\/]*\}\}/g, '$1{$2}');
+
+    // Fix broken scientific notation (e.g. 10^{-}  3 or 10^{-} 3 -> \times 10^{-3})
+    processed = processed.replace(/10\^?\{\s*[-−–—]\s*\}\s*(?:\\times|[×\uF0B4\*])\s*([0-9]+)/g, '\\times 10^{-$1}');
+    processed = processed.replace(/10\^?\{\s*[-−–—]\s*\}\s*([0-9]+)/g, '10^{-$1}');
+    processed = processed.replace(/10\s*[-−–—]\s*(?:\\times|[×\uF0B4\*])\s*([0-9]+)/g, '\\times 10^{-$1}');
+
+    // Repair fragmented math exponent notation (e.g. e^{-} (x - 1) 2 -> e^{-(x - 1)^2}, e^{-} x 2 -> e^{-x^2})
+    processed = processed.replace(/e\^?\{\s*[-−–—]\s*\}\s*\(\s*([^()]+)\s*\)\s*([0-9]+)/g, 'e^{-($1)^$2}');
+    processed = processed.replace(/e\^?\{\s*[-−–—]\s*\}\s*([a-zA-Z0-9]+)\s*([0-9]+)/g, 'e^{-$1^$2}');
+    processed = processed.replace(/e\^?\{\s*[-−–—]\s*\}\s*([a-zA-Z0-9]+)/g, 'e^{-$1}');
+
+    // Repair fragmented function notation (e.g. u x ( ,0) -> u(x, 0) or u x (,1) -> u(x, 1))
+    processed = processed.replace(/\b([a-zA-Z])\s+([a-zA-Z])\s*\(\s*,\s*([0-9]+)\s*\)/g, '$1($2, $3)');
+    processed = processed.replace(/\b([a-zA-Z])\s+([a-zA-Z])\s*\(\s*([0-9]+)\s*,\s*\)/g, '$1($2, $3)');
+
     // Pre-normalize unicode symbols into standard LaTeX before delimiter tokenization
     processed = processed
       .replace(/µ|μ(?=[_^])/g, '\\mu')
@@ -133,38 +208,80 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     // 3. Inline math: \(...\) or \\(...\\)
     processed = processed.replace(/\\{1,2}\(([\s\S]+?)\\{1,2}\)/g, (_, math) => {
       try {
-        const cleanMath = math.trim();
+        let cleanMath = math.trim();
+        // Fix malformed fraction closing such as \frac{...}{\sqrt{2}\} where the closing brace was escaped
+        cleanMath = cleanMath.replace(/\\+(\})$/g, '$1');
         const mathToRender =
           /^[-+]?\\frac\{/.test(cleanMath) && !cleanMath.includes('\n')
             ? `\\displaystyle ${cleanMath}`
             : cleanMath;
-        const html = katex.renderToString(mathToRender, {
+        let html = katex.renderToString(mathToRender, {
           displayMode: false,
           throwOnError: false,
           output: 'html',
         });
+        if (html.includes('katex-error') && mathToRender !== cleanMath) {
+          // Fall back without prepending \displaystyle to prevent red raw \displaystyle rendering
+          html = katex.renderToString(cleanMath, {
+            displayMode: false,
+            throwOnError: false,
+            output: 'html',
+          });
+        }
         return createToken(html);
       } catch {
         return createToken(`\\(${escapeHtml(math)}\\)`);
       }
     });
 
-    // 4. Inline math: $...$
-    processed = processed.replace(/\$([^\$\n]+?)\$/g, (_, math) => {
+    // 4. Inline math: $...$ (requires non-whitespace inside delimiters, standard CommonMark/LaTeX math behavior)
+    processed = processed.replace(/\$(?!\s)([^\$\n]+?)(?<!\s)\$/g, (_, math) => {
+      // Avoid treating non-math code phrases or sentences as math
+      if (
+        !math.includes('\\') &&
+        /\b(?:means|father|mother|brother|sister|son|daughter|husband|wife|uncle|aunt)\b/i.test(math) &&
+        math.split(/\s+/).length >= 3
+      ) {
+        return `$${math}$`;
+      }
       try {
         const cleanMath = math.trim();
         const mathToRender =
           /^[-+]?\\frac\{/.test(cleanMath) && !cleanMath.includes('\n')
             ? `\\displaystyle ${cleanMath}`
             : cleanMath;
-        const html = katex.renderToString(mathToRender, {
+        let html = katex.renderToString(mathToRender, {
           displayMode: false,
+          throwOnError: false,
+          output: 'html',
+        });
+        if (html.includes('katex-error') && mathToRender !== cleanMath) {
+          html = katex.renderToString(cleanMath, {
+            displayMode: false,
+            throwOnError: false,
+            output: 'html',
+          });
+        }
+        return createToken(html);
+      } catch {
+        return createToken(`$${escapeHtml(math)}$`);
+      }
+    });
+
+    // 4b. Naked \left\{...\right\} / \left[...\right] / \left(...\right) expressions wrapping math environments
+    // Fixes cases like GATE 2025 DA Q53: \left\{ \begin{pmatrix} 2 \\ 0 \end{pmatrix}, ... \right\}
+    const wrappedEnvRegex =
+      /\\left\s*(?:\\\{|\[|\()[\s\S]*?\\begin\{(?:cases|matrix|pmatrix|bmatrix|vmatrix|aligned|array)\}[\s\S]*?\\end\{(?:cases|matrix|pmatrix|bmatrix|vmatrix|aligned|array)\}[\s\S]*?\\right\s*(?:\\\}|\]|\))/g;
+    processed = processed.replace(wrappedEnvRegex, (match) => {
+      try {
+        const html = katex.renderToString(match.trim(), {
+          displayMode: true,
           throwOnError: false,
           output: 'html',
         });
         return createToken(html);
       } catch {
-        return createToken(`$${escapeHtml(math)}$`);
+        return createToken(`\\[${escapeHtml(match)}\\]`);
       }
     });
 
@@ -195,19 +312,27 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
 
     // 7. Compound math constructs (limits, integrals, sums, fractions, roots, blackboard bold, operators)
     const compoundRegex =
-      /(\\(?:lim|sum|int|iint|iiint|prod|frac|dfrac|tfrac|sqrt|cbrt|mathbb|mathbf|mathit|mathrm|mathcal|vec|hat|bar|tilde|dot|ddot|operatorname)(?:_\{[^\}]+\}|\^\{[^\}]+\}|_[a-zA-Z0-9]+|\^[a-zA-Z0-9]+|\{(?:[^{}]|\{[^{}]*\})*\})+(?:\([^\)]+\))?)/g;
+      /(\\(?:lim|sum|int|iint|iiint|prod|frac|dfrac|tfrac|sqrt|cbrt|mathbb|mathbf|mathit|mathrm|mathcal|vec|hat|bar|tilde|dot|ddot|operatorname|binom)(?:_\{[^\}]+\}|\^\{[^\}]+\}|_[a-zA-Z0-9]+|\^[a-zA-Z0-9]+|\{(?:[^{}]|\{[^{}]*\})*\})+(?:\([^\)]+\))?)/g;
     processed = processed.replace(compoundRegex, (match) => {
+      if (match.includes('KATEX_TOKEN')) return match;
       try {
         const cleanMatch = match.trim();
         const mathToRender =
           cleanMatch.startsWith('\\frac{') || cleanMatch.startsWith('\\dfrac{')
             ? `\\displaystyle ${cleanMatch}`
             : cleanMatch;
-        const html = katex.renderToString(mathToRender, {
+        let html = katex.renderToString(mathToRender, {
           displayMode: false,
           throwOnError: false,
           output: 'html',
         });
+        if (html.includes('katex-error') && mathToRender !== cleanMatch) {
+          html = katex.renderToString(cleanMatch, {
+            displayMode: false,
+            throwOnError: false,
+            output: 'html',
+          });
+        }
         return createToken(html);
       } catch {
         return match;
@@ -218,6 +343,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     const greekWithIndexRegex =
       /(\\(?:alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|vartheta|iota|kappa|lambda|mu|nu|xi|pi|varpi|rho|varrho|sigma|varsigma|tau|upsilon|phi|varphi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega|hbar)(?:\s*(?:_\{[^\}]+\}|\^\{[^\}]+\}|_[a-zA-Z0-9]+|\^[a-zA-Z0-9]+))+)/g;
     processed = processed.replace(greekWithIndexRegex, (match) => {
+      if (match.includes('KATEX_TOKEN')) return match;
       try {
         const html = katex.renderToString(match.trim(), {
           displayMode: false,
@@ -234,6 +360,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     const varIndexRegex =
       /(?<![\\_a-zA-Z0-9])([a-zA-Z](?:_\{[^\}]+\}|\^[a-zA-Z0-9]+|\^\{[^\}]+\}|_[a-zA-Z0-9]+)+)(?=(?<=\})|(?![a-zA-Z0-9_]))/g;
     processed = processed.replace(varIndexRegex, (match) => {
+      if (match.includes('KATEX_TOKEN')) return match;
       try {
         const html = katex.renderToString(match.trim(), {
           displayMode: false,
@@ -250,6 +377,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     const symbolRegex =
       /(\\(?:in|notin|subset|subseteq|supset|supseteq|setminus|emptyset|forall|exists|neg|land|lor|implies|iff|le|ge|leq|geq|ne|neq|approx|sim|equiv|times|div|pm|mp|cdot|circ|degree|angle|infty|to|rightarrow|leftarrow|Rightarrow|Leftarrow|bowtie|Join|partial|nabla|surd|alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|vartheta|iota|kappa|lambda|mu|nu|xi|pi|varpi|rho|varrho|sigma|varsigma|tau|upsilon|phi|varphi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega|perp|bot|Vert|hbar|parallel)(?![a-zA-Z])|\\\|)/g;
     processed = processed.replace(symbolRegex, (match) => {
+      if (match.includes('KATEX_TOKEN')) return match;
       try {
         const html = katex.renderToString(match.trim(), {
           displayMode: false,
@@ -265,13 +393,33 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ content, className
     // Escape all remaining surrounding non-math text to neutralize any HTML / XSS payloads
     processed = escapeHtml(processed);
 
-    // Safely allow semantic inline formatting tags (e.g., <u> for underlined key attributes, <b>, <code>)
-    processed = processed.replace(/&lt;(\/?(?:u|b|strong|em|i|code))&gt;/gi, '<$1>');
+    // Safely allow semantic inline formatting tags (e.g., <u> for underlined key attributes, <mark> for highlights/replacement targets, <b>, <strong>, <em>, <i>, <code>, <span class="...">)
+    processed = processed.replace(
+      /&lt;(\/?(?:u|b|strong|em|i|code|mark|span))((?:\s+(?:class|data-[a-z0-9_-]+)=(?:&quot;[^"&<>]*&quot;|&#039;[^'&<>]*&#039;|"[^"<>]*"|'[^'<>]*'))*)\s*(\/?)&gt;/gi,
+      (_, tag, attrs, slash) => {
+        const cleanAttrs = attrs
+          ? attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")
+          : '';
+        return `<${tag}${cleanAttrs}${slash ? ' /' : ''}>`;
+      }
+    );
 
-    // Restore the KaTeX HTML tokens
-    mathTokens.forEach((html, i) => {
-      processed = processed.replace(`___KATEX_TOKEN_${i}___`, html);
-    });
+    // Restore the KaTeX HTML tokens recursively to handle any nested contexts safely
+    let hasToken = true;
+    let iterations = 0;
+    while (hasToken && iterations < 10) {
+      hasToken = false;
+      iterations++;
+      mathTokens.forEach((html, i) => {
+        const token = `___KATEX_TOKEN_${i}___`;
+        if (processed.includes(token)) {
+          processed = processed.split(token).join(html);
+          hasToken = true;
+        }
+      });
+    }
+    // Clean any orphaned token artifacts
+    processed = processed.replace(/\{\{__KATEX_TOKEN_\d+__\}\}|___KATEX_TOKEN_\d+___/g, '');
 
     return processed;
   }, [content]);

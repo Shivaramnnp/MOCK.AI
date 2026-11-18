@@ -154,11 +154,11 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
           "confidence": "VERIFIED"
         }
       ],
@@ -387,7 +387,7 @@
       "questionType": "MCQ",
       "options": [
         "21%",
-        "14 2 7%",
+        "\\(14 2 _{7}%\\)",
         "10%",
         "30%"
       ],
@@ -410,17 +410,18 @@
         },
         {
           "id": "B",
-          "text": "14 2 7%",
+          "text": "\\(14 2 _{7}%\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "14 2 7%",
+              "type": "math",
+              "latex": "14 2 _{7}%",
+              "content": "\\(14 2 _{7}%\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -481,11 +482,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
           "confidence": "VERIFIED"
         }
       ],
@@ -590,11 +591,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +605,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) down\n(ii) down\n(iii) on\n(iv) for",
-        "(i) on\n(ii) down\n(iii) for\n(iv) on",
-        "(i) down\n(ii) out\n(iii) for\n(iv) on",
-        "(i) on\n(ii) out\n(iii) on\n(iv) for"
+        "(i) down (ii) down (iii) on (iv) for",
+        "(i) on (ii) down (iii) for (iv) on",
+        "(i) down (ii) out (iii) for (iv) on",
+        "(i) on (ii) out (iii) on (iv) for"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+          "text": "(i) down (ii) down (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+              "content": "(i) down (ii) down (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +629,12 @@
         },
         {
           "id": "B",
-          "text": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+          "text": "(i) on (ii) down (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+              "content": "(i) on (ii) down (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +644,12 @@
         },
         {
           "id": "C",
-          "text": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+          "text": "(i) down (ii) out (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+              "content": "(i) down (ii) out (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +659,12 @@
         },
         {
           "id": "D",
-          "text": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+          "text": "(i) on (ii) out (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+              "content": "(i) on (ii) out (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -808,11 +809,46 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat 5% Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\n| Macronutrient | Energy density (kcal/g) |\n| :--- | :--- |\n| Carbohydrates | 4 |\n| Proteins | 4 |\n| Unsaturated fat | 9 |\n| Saturated fat | 9 |\n| Trans fat | 9 |\n\nThe total fat (all three types), in grams, this person consumes is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat 5% Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Macronutrient",
+            "Energy density (kcal/g)"
+          ],
+          "rows": [
+            [
+              "Carbohydrates",
+              "4"
+            ],
+            [
+              "Proteins",
+              "4"
+            ],
+            [
+              "Unsaturated fat",
+              "9"
+            ],
+            [
+              "Saturated fat",
+              "9"
+            ],
+            [
+              "Trans fat",
+              "9"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The total fat (all three types), in grams, this person consumes is",
           "confidence": "VERIFIED"
         },
         {
@@ -823,6 +859,7 @@
       ],
       "contentTypes": [
         "diagram",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -1151,11 +1188,11 @@
       "questionNumber": 11,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "The approximate value of the integral 3 \\int 𝑑𝑥 𝑥 2 using Simpson's rule with ℎ= 0.5 is",
+      "questionText": "The approximate value of the integral\n\n\\int 𝑑𝑥 3\n\n𝑥 2 using Simpson's rule with ℎ= 0.5 is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The approximate value of the integral 3 \\int 𝑑𝑥 𝑥 2 using Simpson's rule with ℎ= 0.5 is",
+          "content": "The approximate value of the integral\n\n\\int 𝑑𝑥 3\n\n𝑥 2 using Simpson's rule with ℎ= 0.5 is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1260,11 +1297,11 @@
       "questionNumber": 12,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "The differential equation\n\n𝑑𝑦 𝑑𝑥= 𝑀(𝑥, 𝑦) 𝑁(𝑥, 𝑦)\n\nis exact if",
+      "questionText": "The differential equation\n\n<u>𝑑𝑦</u> 𝑀(𝑥, 𝑦) = \\(\\frac{𝑀(𝑥,𝑦)}{𝑁(𝑥,𝑦)}\\) 𝑑𝑥\n\nis exact if",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The differential equation\n\n𝑑𝑦 𝑑𝑥= 𝑀(𝑥, 𝑦) 𝑁(𝑥, 𝑦)\n\nis exact if",
+          "content": "The differential equation\n\n<u>𝑑𝑦</u> 𝑀(𝑥, 𝑦) = \\(\\frac{𝑀(𝑥,𝑦)}{𝑁(𝑥,𝑦)}\\) 𝑑𝑥\n\nis exact if",
           "confidence": "VERIFIED"
         }
       ],
@@ -1274,8 +1311,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝜕𝑀 𝜕𝑦= 𝜕𝑁 𝜕𝑥",
-        "𝜕𝑀 𝜕𝑥= 𝜕𝑁 𝜕𝑦",
+        "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑥}\\) 𝜕𝑦",
+        "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑦}\\) 𝜕𝑥",
         "𝜕𝑀 𝜕𝑦+ 𝜕𝑁 𝜕𝑥= 0",
         "𝜕𝑀 𝜕𝑦 \\times 𝜕𝑁 𝜕𝑥= 0"
       ],
@@ -1283,12 +1320,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "𝜕𝑀 𝜕𝑦= 𝜕𝑁 𝜕𝑥",
+          "text": "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑥}\\) 𝜕𝑦",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜕𝑀 𝜕𝑦= 𝜕𝑁 𝜕𝑥",
+              "content": "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑥}\\) 𝜕𝑦",
               "confidence": "VERIFIED"
             }
           ],
@@ -1298,12 +1335,12 @@
         },
         {
           "id": "B",
-          "text": "𝜕𝑀 𝜕𝑥= 𝜕𝑁 𝜕𝑦",
+          "text": "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑦}\\) 𝜕𝑥",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜕𝑀 𝜕𝑥= 𝜕𝑁 𝜕𝑦",
+              "content": "𝜕𝑀 = \\(\\frac{𝜕𝑁}{𝜕𝑦}\\) 𝜕𝑥",
               "confidence": "VERIFIED"
             }
           ],
@@ -1369,11 +1406,11 @@
       "questionNumber": 13,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "The value of the integral \\infty 𝑑𝑥 \\int 𝑒𝑥+ 𝑒-𝑥 0 is",
+      "questionText": "The value of the integral \\infty \\int \\(\\frac{𝑑𝑥}{𝑒𝑥+𝑒-𝑥}\\)\n\n0 is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The value of the integral \\infty 𝑑𝑥 \\int 𝑒𝑥+ 𝑒-𝑥 0 is",
+          "content": "The value of the integral \\infty \\int \\(\\frac{𝑑𝑥}{𝑒𝑥+𝑒-𝑥}\\)\n\n0 is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1384,8 +1421,8 @@
       "questionType": "MCQ",
       "options": [
         "0",
-        "𝜋 4",
-        "𝜋 2",
+        "\\(\\frac{𝜋}{4}\\)",
+        "\\(\\frac{𝜋}{2}\\)",
         "𝜋"
       ],
       "optionImages": null,
@@ -1407,32 +1444,34 @@
         },
         {
           "id": "B",
-          "text": "𝜋 4",
+          "text": "\\(\\frac{𝜋}{4}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝜋 4",
+              "type": "math",
+              "latex": "\\frac{𝜋}{4}",
+              "content": "\\(\\frac{𝜋}{4}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝜋 2",
+          "text": "\\(\\frac{𝜋}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝜋 2",
+              "type": "math",
+              "latex": "\\frac{𝜋}{2}",
+              "content": "\\(\\frac{𝜋}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -2364,26 +2403,27 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "NaClO2",
+        "\\(NaClO_{2}\\)",
         "NaOCl",
-        "NaClO3",
-        "MgCl2"
+        "\\(NaClO_{3}\\)",
+        "\\(MgCl_{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "NaClO2",
+          "text": "\\(NaClO_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "NaClO2",
+              "type": "math",
+              "latex": "NaClO_{2}",
+              "content": "\\(NaClO_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -2403,32 +2443,34 @@
         },
         {
           "id": "C",
-          "text": "NaClO3",
+          "text": "\\(NaClO_{3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "NaClO3",
+              "type": "math",
+              "latex": "NaClO_{3}",
+              "content": "\\(NaClO_{3}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "MgCl2",
+          "text": "\\(MgCl_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "MgCl2",
+              "type": "math",
+              "latex": "MgCl_{2}",
+              "content": "\\(MgCl_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2473,8 +2515,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "LD can be used only as illuminant colour but HD cannot be used either as ground\nor as illuminant colour",
-        "HD can be used only as ground colour but LD cannot be used either as ground or\nas illuminant colour",
+        "LD can be used only as illuminant colour but HD cannot be used either as ground or as illuminant colour",
+        "HD can be used only as ground colour but LD cannot be used either as ground or as illuminant colour",
         "LD can be used only as ground colour and HD can be used only as illuminant colour",
         "HD can be used only as ground colour and LD can be used only as illuminant colour"
       ],
@@ -2482,12 +2524,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "LD can be used only as illuminant colour but HD cannot be used either as ground\nor as illuminant colour",
+          "text": "LD can be used only as illuminant colour but HD cannot be used either as ground or as illuminant colour",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "LD can be used only as illuminant colour but HD cannot be used either as ground\nor as illuminant colour",
+              "content": "LD can be used only as illuminant colour but HD cannot be used either as ground or as illuminant colour",
               "confidence": "VERIFIED"
             }
           ],
@@ -2497,12 +2539,12 @@
         },
         {
           "id": "B",
-          "text": "HD can be used only as ground colour but LD cannot be used either as ground or\nas illuminant colour",
+          "text": "HD can be used only as ground colour but LD cannot be used either as ground or as illuminant colour",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "HD can be used only as ground colour but LD cannot be used either as ground or\nas illuminant colour",
+              "content": "HD can be used only as ground colour but LD cannot be used either as ground or as illuminant colour",
               "confidence": "VERIFIED"
             }
           ],
@@ -3143,11 +3185,11 @@
       "questionNumber": 29,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "If 𝑔(𝑥) is a continuous function such that 𝑏 \\int 𝑔(𝑥)𝑑𝑥= 𝛽 𝑎 then the correct statement(s), amongst the following, is/are",
+      "questionText": "If 𝑔(𝑥) is a continuous function such that 𝑏 \\int 𝑔(𝑥)𝑑𝑥= 𝛽\n\nthen the correct statement(s), amongst the following, is/are 𝑎",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝑔(𝑥) is a continuous function such that 𝑏 \\int 𝑔(𝑥)𝑑𝑥= 𝛽 𝑎 then the correct statement(s), amongst the following, is/are",
+          "content": "If 𝑔(𝑥) is a continuous function such that 𝑏 \\int 𝑔(𝑥)𝑑𝑥= 𝛽\n\nthen the correct statement(s), amongst the following, is/are 𝑎",
           "confidence": "VERIFIED"
         }
       ],
@@ -3157,21 +3199,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑏+1 𝑎+1",
-        "\\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 1-𝑏 2 1-𝑎 2",
-        "\\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 𝑏-𝑎 0",
-        "\\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 𝑎-𝑏 0"
+        "𝑏+1 \\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑎+1",
+        "\\(\\frac{1-𝑏}{2}\\) \\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 \\(\\frac{1-𝑎}{2}\\)",
+        "𝑏-𝑎 \\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 0",
+        "𝑎-𝑏 \\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 0"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑏+1 𝑎+1",
+          "text": "𝑏+1 \\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑎+1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑏+1 𝑎+1",
+              "content": "𝑏+1 \\int 𝑔(𝑥-1)𝑑𝑥= 𝛽 𝑎+1",
               "confidence": "VERIFIED"
             }
           ],
@@ -3181,27 +3223,28 @@
         },
         {
           "id": "B",
-          "text": "\\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 1-𝑏 2 1-𝑎 2",
+          "text": "\\(\\frac{1-𝑏}{2}\\) \\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 \\(\\frac{1-𝑎}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 1-𝑏 2 1-𝑎 2",
+              "type": "math",
+              "latex": "\\frac{1-𝑏}{2}\\) \\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 \\(\\frac{1-𝑎}{2}",
+              "content": "\\(\\frac{1-𝑏}{2}\\) \\int 2 𝑔(1 -2𝑥)𝑑𝑥= 𝛽 \\(\\frac{1-𝑎}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "\\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 𝑏-𝑎 0",
+          "text": "𝑏-𝑎 \\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 0",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 𝑏-𝑎 0",
+              "content": "𝑏-𝑎 \\int 𝑔(𝑥+ 𝑎)𝑑𝑥= 𝛽 0",
               "confidence": "VERIFIED"
             }
           ],
@@ -3211,12 +3254,12 @@
         },
         {
           "id": "D",
-          "text": "\\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 𝑎-𝑏 0",
+          "text": "𝑎-𝑏 \\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 0",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 𝑎-𝑏 0",
+              "content": "𝑎-𝑏 \\int 𝑔(𝑎-𝑥)𝑑𝑥= 𝛽 0",
               "confidence": "VERIFIED"
             }
           ],
@@ -3534,11 +3577,11 @@
       "questionNumber": 36,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "The three eigenvalues of the matrix\n\n-2 𝑥 -3 ] 2 1 -6 [ -1 -2 𝑦 are _{1} = 5 and _{2} = _{3} = -3. The value of 𝑥 is",
+      "questionText": "The three eigenvalues of the matrix\n\n-2 𝑥 -3 [ 2 1 -6 ] -1 -2 𝑦 are \\(\\lambda\\)_{1} = 5 and \\(\\lambda\\)_{2} = \\(\\lambda\\)_{3} = -3. The value of 𝑥 is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The three eigenvalues of the matrix\n\n-2 𝑥 -3 ] 2 1 -6 [ -1 -2 𝑦 are _{1} = 5 and _{2} = _{3} = -3. The value of 𝑥 is",
+          "content": "The three eigenvalues of the matrix\n\n-2 𝑥 -3 [ 2 1 -6 ] -1 -2 𝑦 are \\(\\lambda\\)_{1} = 5 and \\(\\lambda\\)_{2} = \\(\\lambda\\)_{3} = -3. The value of 𝑥 is",
           "confidence": "VERIFIED"
         }
       ],
@@ -4079,11 +4122,11 @@
       "questionNumber": 41,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "Group I lists yarn manufacturing technologies and Group II contains typical structural features of the yarns. Match the manufacturing technology with the structural features of the yarn.\n\nGroup I Group II\n\nP. Rotor spinning arranged filament on surface\n\nQ. Air-jet spinning 2. Helically twisted core and distinct wrappers on surface\n\nR. Wrap spinning to molten polymer\n\nS. Bobtex spinning 4. Twistless core wrapped regularly and helically by thin fibre ribbons",
+      "questionText": "Group I lists yarn manufacturing technologies and Group II contains typical structural features of the yarns. Match the manufacturing technology with the structural features of the yarn.\n\nGroup I Group II\n\nP. Rotor spinning Twistless parallel fibres in core and helically arranged filament on surface\n\nQ. Air-jet spinning 2. Helically twisted core and distinct wrappers on surface\n\nR. Wrap spinning Multifilament core covered by staple fibres stuck to molten polymer\n\nS. Bobtex spinning 4. Twistless core wrapped regularly and helically by thin fibre ribbons",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Group I lists yarn manufacturing technologies and Group II contains typical structural features of the yarns. Match the manufacturing technology with the structural features of the yarn.\n\nGroup I Group II\n\nP. Rotor spinning arranged filament on surface\n\nQ. Air-jet spinning 2. Helically twisted core and distinct wrappers on surface\n\nR. Wrap spinning to molten polymer\n\nS. Bobtex spinning 4. Twistless core wrapped regularly and helically by thin fibre ribbons",
+          "content": "Group I lists yarn manufacturing technologies and Group II contains typical structural features of the yarns. Match the manufacturing technology with the structural features of the yarn.\n\nGroup I Group II\n\nP. Rotor spinning Twistless parallel fibres in core and helically arranged filament on surface\n\nQ. Air-jet spinning 2. Helically twisted core and distinct wrappers on surface\n\nR. Wrap spinning Multifilament core covered by staple fibres stuck to molten polymer\n\nS. Bobtex spinning 4. Twistless core wrapped regularly and helically by thin fibre ribbons",
           "confidence": "VERIFIED"
         }
       ],
@@ -4421,9 +4464,9 @@
       "questionType": "MCQ",
       "options": [
         "HCOOH",
-        "NH4OH",
-        "CH3COOH",
-        "MgCl2"
+        "\\(NH_{4}OH\\)",
+        "\\(CH_{3}COOH\\)",
+        "\\(MgCl_{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -4444,47 +4487,50 @@
         },
         {
           "id": "B",
-          "text": "NH4OH",
+          "text": "\\(NH_{4}OH\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "NH4OH",
+              "type": "math",
+              "latex": "NH_{4}OH",
+              "content": "\\(NH_{4}OH\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "CH3COOH",
+          "text": "\\(CH_{3}COOH\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "CH3COOH",
+              "type": "math",
+              "latex": "CH_{3}COOH",
+              "content": "\\(CH_{3}COOH\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "MgCl2",
+          "text": "\\(MgCl_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "MgCl2",
+              "type": "math",
+              "latex": "MgCl_{2}",
+              "content": "\\(MgCl_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4535,21 +4581,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝛾𝐹𝑊 decreases and the oil droplet tends to become rounder",
-        "𝛾𝐹𝑊 increases and the oil droplet tends to become flatter",
-        "𝛾𝐹𝑊 decreases and the oil droplet tends to become flatter",
-        "𝛾𝐹𝑊 increases and the oil droplet tends to become rounder"
+        "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become rounder",
+        "𝛾_{𝐹𝑊} increases and the oil droplet tends to become flatter",
+        "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become flatter",
+        "𝛾_{𝐹𝑊} increases and the oil droplet tends to become rounder"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝛾𝐹𝑊 decreases and the oil droplet tends to become rounder",
+          "text": "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become rounder",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝛾𝐹𝑊 decreases and the oil droplet tends to become rounder",
+              "content": "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become rounder",
               "confidence": "VERIFIED"
             }
           ],
@@ -4559,12 +4605,12 @@
         },
         {
           "id": "B",
-          "text": "𝛾𝐹𝑊 increases and the oil droplet tends to become flatter",
+          "text": "𝛾_{𝐹𝑊} increases and the oil droplet tends to become flatter",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝛾𝐹𝑊 increases and the oil droplet tends to become flatter",
+              "content": "𝛾_{𝐹𝑊} increases and the oil droplet tends to become flatter",
               "confidence": "VERIFIED"
             }
           ],
@@ -4574,12 +4620,12 @@
         },
         {
           "id": "C",
-          "text": "𝛾𝐹𝑊 decreases and the oil droplet tends to become flatter",
+          "text": "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become flatter",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝛾𝐹𝑊 decreases and the oil droplet tends to become flatter",
+              "content": "𝛾_{𝐹𝑊} decreases and the oil droplet tends to become flatter",
               "confidence": "VERIFIED"
             }
           ],
@@ -4589,12 +4635,12 @@
         },
         {
           "id": "D",
-          "text": "𝛾𝐹𝑊 increases and the oil droplet tends to become rounder",
+          "text": "𝛾_{𝐹𝑊} increases and the oil droplet tends to become rounder",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝛾𝐹𝑊 increases and the oil droplet tends to become rounder",
+              "content": "𝛾_{𝐹𝑊} increases and the oil droplet tends to become rounder",
               "confidence": "VERIFIED"
             }
           ],
@@ -4864,11 +4910,11 @@
       "questionNumber": 48,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "Consider the following equation\n\n𝐶= 𝐶1 + 𝐶2 - 𝐶1𝐶2 where 𝐶 stands for fractional cover of a fabric, 𝐶_{1} denotes the fractional cover of warp and 𝐶_{2} refers to the fractional cover of weft. Amongst the given options, the fabric structure(s) in which the aforesaid equation is valid is/are",
+      "questionText": "Consider the following equation\n\n𝐶= 𝐶_{1} + 𝐶_{2} - 𝐶_{1}𝐶_{2} where 𝐶 stands for fractional cover of a fabric, 𝐶_{1} denotes the fractional cover of warp and 𝐶_{2} refers to the fractional cover of weft. Amongst the given options, the fabric structure(s) in which the aforesaid equation is valid is/are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following equation\n\n𝐶= 𝐶1 + 𝐶2 - 𝐶1𝐶2 where 𝐶 stands for fractional cover of a fabric, 𝐶_{1} denotes the fractional cover of warp and 𝐶_{2} refers to the fractional cover of weft. Amongst the given options, the fabric structure(s) in which the aforesaid equation is valid is/are",
+          "content": "Consider the following equation\n\n𝐶= 𝐶_{1} + 𝐶_{2} - 𝐶_{1}𝐶_{2} where 𝐶 stands for fractional cover of a fabric, 𝐶_{1} denotes the fractional cover of warp and 𝐶_{2} refers to the fractional cover of weft. Amongst the given options, the fabric structure(s) in which the aforesaid equation is valid is/are",
           "confidence": "VERIFIED"
         }
       ],
@@ -5342,21 +5388,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Rate of dyeing at 100 oC is higher than that at 120 oC",
-        "Saturation dye-uptake at 120 oC is higher than that at 100 oC",
-        "Dye solubility at 120 oC is higher than that at 100 oC",
-        "Dye solubility at 120 oC is lower than that at 100 oC"
+        "Rate of dyeing at 100 ^{o}C is higher than that at 120 ^{o}C",
+        "Saturation dye-uptake at 120 ^{o}C is higher than that at 100 ^{o}C",
+        "Dye solubility at 120 ^{o}C is higher than that at 100 ^{o}C",
+        "Dye solubility at 120 ^{o}C is lower than that at 100 ^{o}C"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Rate of dyeing at 100 oC is higher than that at 120 oC",
+          "text": "Rate of dyeing at 100 ^{o}C is higher than that at 120 ^{o}C",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Rate of dyeing at 100 oC is higher than that at 120 oC",
+              "content": "Rate of dyeing at 100 ^{o}C is higher than that at 120 ^{o}C",
               "confidence": "VERIFIED"
             }
           ],
@@ -5366,12 +5412,12 @@
         },
         {
           "id": "B",
-          "text": "Saturation dye-uptake at 120 oC is higher than that at 100 oC",
+          "text": "Saturation dye-uptake at 120 ^{o}C is higher than that at 100 ^{o}C",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Saturation dye-uptake at 120 oC is higher than that at 100 oC",
+              "content": "Saturation dye-uptake at 120 ^{o}C is higher than that at 100 ^{o}C",
               "confidence": "VERIFIED"
             }
           ],
@@ -5381,12 +5427,12 @@
         },
         {
           "id": "C",
-          "text": "Dye solubility at 120 oC is higher than that at 100 oC",
+          "text": "Dye solubility at 120 ^{o}C is higher than that at 100 ^{o}C",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Dye solubility at 120 oC is higher than that at 100 oC",
+              "content": "Dye solubility at 120 ^{o}C is higher than that at 100 ^{o}C",
               "confidence": "VERIFIED"
             }
           ],
@@ -5396,12 +5442,12 @@
         },
         {
           "id": "D",
-          "text": "Dye solubility at 120 oC is lower than that at 100 oC",
+          "text": "Dye solubility at 120 ^{o}C is lower than that at 100 ^{o}C",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Dye solubility at 120 oC is lower than that at 100 oC",
+              "content": "Dye solubility at 120 ^{o}C is lower than that at 100 ^{o}C",
               "confidence": "VERIFIED"
             }
           ],
@@ -5558,11 +5604,11 @@
       "questionNumber": 54,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "Consider the following function\n\n𝑘, 𝑥= 1 𝑓(𝑥) = { \\sqrt 3𝑥+ 1 - \\sqrt 2𝑥+ 2 𝑥> -1 , 3 , 𝑥 \\ne 1 𝑥-1 If 𝑓(𝑥) is continuous at 𝑥= 1, the value of 𝑘 (correct up to 2 decimal places) is__________________.",
+      "questionText": "Consider the following function\n\n𝑘, 𝑥= 1 𝑓(𝑥) = { \\(\\frac{\\sqrt{3}𝑥+1-\\sqrt{2}𝑥+2}{𝑥-1}\\) 𝑥> -1 3 , 𝑥 \\ne 1 If 𝑓(𝑥) is continuous at 𝑥= 1, the value of 𝑘 (correct up to 2 decimal places) is__________________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following function\n\n𝑘, 𝑥= 1 𝑓(𝑥) = { \\sqrt 3𝑥+ 1 - \\sqrt 2𝑥+ 2 𝑥> -1 , 3 , 𝑥 \\ne 1 𝑥-1 If 𝑓(𝑥) is continuous at 𝑥= 1, the value of 𝑘 (correct up to 2 decimal places) is__________________.",
+          "content": "Consider the following function\n\n𝑘, 𝑥= 1 𝑓(𝑥) = { \\(\\frac{\\sqrt{3}𝑥+1-\\sqrt{2}𝑥+2}{𝑥-1}\\) 𝑥> -1 3 , 𝑥 \\ne 1 If 𝑓(𝑥) is continuous at 𝑥= 1, the value of 𝑘 (correct up to 2 decimal places) is__________________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5650,11 +5696,11 @@
       "questionNumber": 56,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "Three melt-spun fibre samples A, B and C produced from same polymer under different conditions are found to have densities 1.10 g/cm^{3}, 1.15 g/cm^{3} and\n\nof A and C is 0.45 and 0.75, respectively, then x_{c} for B (rounded off to 2 decimal places) is _________________.",
+      "questionText": "Three melt-spun fibre samples A, B and C produced from same polymer under different conditions are found to have densities 1.10 g/cm^{3}, 1.15 g/cm^{3} and 20 g/cm^{3}, respectively. If the mass fraction based degree of crystallinity (x_{c}) of A and C is 0.45 and 0.75, respectively, then x_{c} for B (rounded off to 2 decimal places) is _________________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Three melt-spun fibre samples A, B and C produced from same polymer under different conditions are found to have densities 1.10 g/cm^{3}, 1.15 g/cm^{3} and\n\nof A and C is 0.45 and 0.75, respectively, then x_{c} for B (rounded off to 2 decimal places) is _________________.",
+          "content": "Three melt-spun fibre samples A, B and C produced from same polymer under different conditions are found to have densities 1.10 g/cm^{3}, 1.15 g/cm^{3} and 20 g/cm^{3}, respectively. If the mass fraction based degree of crystallinity (x_{c}) of A and C is 0.45 and 0.75, respectively, then x_{c} for B (rounded off to 2 decimal places) is _________________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5696,11 +5742,11 @@
       "questionNumber": 57,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "A 200 m long bone-dry Nylon fibre with circular cross-section and density of\n\n4 % after moisture absorption, then the diameter (µm) of bone-dry Nylon fibre (rounded off to 1 decimal place) is _________________.",
+      "questionText": "A 200 m long bone-dry Nylon fibre with circular cross-section and density of 2 g/cm^{3}, absorbs 0.003 g moisture. If the moisture content of the fibre becomes 4 % after moisture absorption, then the diameter (µm) of bone-dry Nylon fibre (rounded off to 1 decimal place) is _________________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A 200 m long bone-dry Nylon fibre with circular cross-section and density of\n\n4 % after moisture absorption, then the diameter (µm) of bone-dry Nylon fibre (rounded off to 1 decimal place) is _________________.",
+          "content": "A 200 m long bone-dry Nylon fibre with circular cross-section and density of 2 g/cm^{3}, absorbs 0.003 g moisture. If the moisture content of the fibre becomes 4 % after moisture absorption, then the diameter (µm) of bone-dry Nylon fibre (rounded off to 1 decimal place) is _________________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5742,11 +5788,11 @@
       "questionNumber": 58,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "A parallel fibre strand of 30 tex count is coming out from the nip of the front delivery rollers of a ring spinning machine. This strand is given twist to produce a yarn such that the length of the yarn becomes 0.95 times the length of the parallel fibre strand. If 600 turns are present in 1 m length of the yarn, then the twist factor (tpmtex^{0.5}) of the yarn (rounded off to the nearest integer) is _______________.",
+      "questionText": "A parallel fibre str and of 30 tex count is coming out from the nip of the front delivery rollers of a ring spinning machine. This str and is given twist to produce a yarn such that the length of the yarn becomes 0.95 times the length of the parallel fibre str and. If 600 turns are present in 1 m length of the yarn, then the twist factor (tpmtex^{0.5}) of the yarn (rounded off to the nearest integer) is _______________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A parallel fibre strand of 30 tex count is coming out from the nip of the front delivery rollers of a ring spinning machine. This strand is given twist to produce a yarn such that the length of the yarn becomes 0.95 times the length of the parallel fibre strand. If 600 turns are present in 1 m length of the yarn, then the twist factor (tpmtex^{0.5}) of the yarn (rounded off to the nearest integer) is _______________.",
+          "content": "A parallel fibre str and of 30 tex count is coming out from the nip of the front delivery rollers of a ring spinning machine. This str and is given twist to produce a yarn such that the length of the yarn becomes 0.95 times the length of the parallel fibre str and. If 600 turns are present in 1 m length of the yarn, then the twist factor (tpmtex^{0.5}) of the yarn (rounded off to the nearest integer) is _______________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5972,27 +6018,15 @@
       "questionNumber": 63,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "$$\\text{The} relationship between tensile stress (σ) and tensile strain (ε) of a yarn is$$\n\n$$σ = 1.5√ε$$\n\nIf the breaking strain of the yarn is 1.2, the work factor of the yarn (rounded off to 2 decimal places) is __________________.",
+      "questionText": "The relationship between tensile stress (σ) and tensile strain (ε) of a yarn is\n\nσ = 1.5\\sqrt{ε} If the breaking strain of the yarn is 1.2, the work factor of the yarn (rounded off to 2 decimal places) is __________________.",
       "contentBlocks": [
         {
-          "type": "relational_algebra",
-          "latex": "\\text{The} relationship between tensile stress (σ) and tensile strain (ε) of a yarn is",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "relational_algebra",
-          "latex": "σ = 1.5√ε",
-          "confidence": "VERIFIED"
-        },
-        {
           "type": "text",
-          "content": "If the breaking strain of the yarn is 1.2, the work factor of the yarn (rounded off to 2 decimal places) is __________________.",
+          "content": "The relationship between tensile stress (σ) and tensile strain (ε) of a yarn is\n\nσ = 1.5\\sqrt{ε} If the breaking strain of the yarn is 1.2, the work factor of the yarn (rounded off to 2 decimal places) is __________________.",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "math",
-        "relational_algebra",
         "text"
       ],
       "confidence": "VERIFIED",

@@ -93,6 +93,93 @@ export function checkMathInvariants(text: string): InvariantValidationReport[] {
   return reports;
 }
 
+const MOJIBAKE_REGEX = /[ȵÏȷȺƺȹƽÔÖÕÛÜÝþÊæɇàͧͬçéèêíìîóòôúùûāēīōūšžćč]/;
+const OCR_MATH_CORRUPTION_REGEX = /(?:coté|\bCS\s+s\b|@\s*\)|sin\s*@|cos\s*@|tan\s*@)/i;
+
+/**
+ * Checks for corrupted legacy font encoding (mojibake) and OCR math corruption artifacts.
+ */
+export function checkEncodingAndMojibakeInvariants(text: string): InvariantValidationReport[] {
+  const reports: InvariantValidationReport[] = [];
+  if (!text) return reports;
+
+  if (MOJIBAKE_REGEX.test(text)) {
+    reports.push({
+      invariantName: 'MOJIBAKE_ENCODING_DETECTED',
+      category: 'IDENTITY',
+      passed: false,
+      message: 'Detected corrupted legacy font or mojibake glyphs in question text.',
+      severity: 'REVIEW_REQUIRED',
+    });
+  } else {
+    reports.push({
+      invariantName: 'MOJIBAKE_ENCODING_DETECTED',
+      category: 'IDENTITY',
+      passed: true,
+      severity: 'REVIEW_REQUIRED',
+    });
+  }
+
+  if (OCR_MATH_CORRUPTION_REGEX.test(text)) {
+    reports.push({
+      invariantName: 'OCR_MATH_CORRUPTION_DETECTED',
+      category: 'MATH',
+      passed: false,
+      message: 'Detected OCR artifact symbol (such as @ or corrupted trigonometric symbol) in mathematical expression.',
+      severity: 'REVIEW_REQUIRED',
+    });
+  } else {
+    reports.push({
+      invariantName: 'OCR_MATH_CORRUPTION_DETECTED',
+      category: 'MATH',
+      passed: true,
+      severity: 'REVIEW_REQUIRED',
+    });
+  }
+
+  return reports;
+}
+
+/**
+ * Validates question stem completeness:
+ * Prohibits empty stems without visual figures, and prohibits placeholder/omitted text.
+ */
+export function checkStemCompletenessInvariants(q: CanonicalQuestionIR): InvariantValidationReport[] {
+  const reports: InvariantValidationReport[] = [];
+  const text = (q.prompt?.text || '').trim();
+  const hasAssets =
+    (q.prompt?.contentBlocks || []).some(
+      (b) => b.type === 'image' || b.type === 'figure' || b.type === 'diagram' || b.type === 'chart' || b.type === 'graph'
+    ) || (q.associatedAssetIds && q.associatedAssetIds.length > 0);
+
+  if (!text && !hasAssets) {
+    reports.push({
+      invariantName: 'EMPTY_STEM_NO_ASSET',
+      category: 'IDENTITY',
+      passed: false,
+      message: 'Question stem is completely empty and possesses no visual diagram asset.',
+      severity: 'FATAL',
+    });
+  } else if (/omitted in official candidate sheet|\[Question text/i.test(text)) {
+    reports.push({
+      invariantName: 'PLACEHOLDER_STEM_DETECTED',
+      category: 'IDENTITY',
+      passed: false,
+      message: 'Question contains placeholder or omitted prompt text.',
+      severity: 'REVIEW_REQUIRED',
+    });
+  } else {
+    reports.push({
+      invariantName: 'COMPLETE_STEM_VERIFIED',
+      category: 'IDENTITY',
+      passed: true,
+      severity: 'REVIEW_REQUIRED',
+    });
+  }
+
+  return reports;
+}
+
 /**
  * Checks for stem leakage / option stem entanglement:
  * Detects if a subsequent question stem or numbering pattern was accidentally absorbed into an option.
@@ -326,6 +413,11 @@ export function evaluateUadueInvariants(q: CanonicalQuestionIR): CertificationVe
     ...checkMathInvariants(q.prompt.text),
     ...q.options.flatMap((o) => checkMathInvariants(o.text)),
   ];
+  const encodingReports = [
+    ...checkEncodingAndMojibakeInvariants(q.prompt.text),
+    ...q.options.flatMap((o) => checkEncodingAndMojibakeInvariants(o.text)),
+  ];
+  const stemCompletenessReports = checkStemCompletenessInvariants(q);
   const stemLeakageReports = checkStemLeakageInvariants(q);
   const optionReports = checkOptionInvariants(q);
   const scoringReports = checkScoringInvariants(q);
@@ -333,6 +425,8 @@ export function evaluateUadueInvariants(q: CanonicalQuestionIR): CertificationVe
 
   const allReports: InvariantValidationReport[] = [
     ...mathReports,
+    ...encodingReports,
+    ...stemCompletenessReports,
     ...stemLeakageReports,
     ...optionReports,
     ...scoringReports,
@@ -351,7 +445,12 @@ export function evaluateUadueInvariants(q: CanonicalQuestionIR): CertificationVe
 
   // 1. Math confidence
   const mathFailures = mathReports.filter((r) => !r.passed);
-  confVector.mathConfidence = mathFailures.length > 0 ? 0.0 : 1.0;
+  const encodingFailures = encodingReports.filter((r) => !r.passed);
+  if (mathFailures.length > 0 || encodingFailures.some((r) => r.invariantName === 'OCR_MATH_CORRUPTION_DETECTED')) {
+    confVector.mathConfidence = 0.0;
+  } else {
+    confVector.mathConfidence = 1.0;
+  }
 
   // 2. Ownership confidence (stem leakage, clean option boundary)
   const ownershipFailures = stemLeakageReports.filter((r) => !r.passed);
@@ -372,8 +471,13 @@ export function evaluateUadueInvariants(q: CanonicalQuestionIR): CertificationVe
     confVector.answerConfidence = 0.0;
   }
 
-  // 5. Text confidence (corrupted byte check)
-  if (mathReports.some((r) => r.invariantName === 'CORRUPTED_ESCAPE_BYTE' && !r.passed)) {
+  // 5. Text confidence (corrupted byte check, mojibake, placeholder stems)
+  const stemFailures = stemCompletenessReports.filter((r) => !r.passed);
+  if (encodingFailures.some((r) => r.invariantName === 'MOJIBAKE_ENCODING_DETECTED')) {
+    confVector.textConfidence = 0.0;
+  } else if (stemFailures.length > 0) {
+    confVector.textConfidence = 0.2;
+  } else if (mathReports.some((r) => r.invariantName === 'CORRUPTED_ESCAPE_BYTE' && !r.passed)) {
     confVector.textConfidence = 0.5;
   }
 

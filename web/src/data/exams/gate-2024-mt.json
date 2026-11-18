@@ -154,11 +154,11 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
           "confidence": "VERIFIED"
         }
       ],
@@ -387,7 +387,7 @@
       "questionType": "MCQ",
       "options": [
         "21%",
-        "14 2 7%",
+        "\\(14 2 _{7}%\\)",
         "10%",
         "30%"
       ],
@@ -410,17 +410,18 @@
         },
         {
           "id": "B",
-          "text": "14 2 7%",
+          "text": "\\(14 2 _{7}%\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "14 2 7%",
+              "type": "math",
+              "latex": "14 2 _{7}%",
+              "content": "\\(14 2 _{7}%\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -481,11 +482,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
           "confidence": "VERIFIED"
         }
       ],
@@ -590,11 +591,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +605,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) down\n(ii) down\n(iii) on\n(iv) for",
-        "(i) on\n(ii) down\n(iii) for\n(iv) on",
-        "(i) down\n(ii) out\n(iii) for\n(iv) on",
-        "(i) on\n(ii) out\n(iii) on\n(iv) for"
+        "(i) down (ii) down (iii) on (iv) for",
+        "(i) on (ii) down (iii) for (iv) on",
+        "(i) down (ii) out (iii) for (iv) on",
+        "(i) on (ii) out (iii) on (iv) for"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+          "text": "(i) down (ii) down (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+              "content": "(i) down (ii) down (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +629,12 @@
         },
         {
           "id": "B",
-          "text": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+          "text": "(i) on (ii) down (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+              "content": "(i) on (ii) down (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +644,12 @@
         },
         {
           "id": "C",
-          "text": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+          "text": "(i) down (ii) out (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+              "content": "(i) down (ii) out (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +659,12 @@
         },
         {
           "id": "D",
-          "text": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+          "text": "(i) on (ii) out (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+              "content": "(i) on (ii) out (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -808,11 +809,46 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat… Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\n| Macronutrient | Energy density (kcal/g) |\n| :--- | :--- |\n| Carbohydrates | 4 |\n| Proteins | 4 |\n| Unsaturated fat | 9 |\n| Saturated fat | 9 |\n| Trans fat | 9 |\n\nThe total fat (all three types), in grams, this person consumes is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat… Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Macronutrient",
+            "Energy density (kcal/g)"
+          ],
+          "rows": [
+            [
+              "Carbohydrates",
+              "4"
+            ],
+            [
+              "Proteins",
+              "4"
+            ],
+            [
+              "Unsaturated fat",
+              "9"
+            ],
+            [
+              "Saturated fat",
+              "9"
+            ],
+            [
+              "Trans fat",
+              "9"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The total fat (all three types), in grams, this person consumes is",
           "confidence": "VERIFIED"
         },
         {
@@ -823,6 +859,7 @@
       ],
       "contentTypes": [
         "diagram",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -1165,71 +1202,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "µ = µ1 + µ2 and 𝜌 = 𝜌1 + 𝜌2",
-        "μ2 = µ1",
-        "µ = µ1 + µ2 and 𝜌2 = 𝜌1",
-        "μ2 = µ1"
+        "\\(µ = µ_{1} + µ_{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
+        "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
+        "\\(µ = µ_{1} + µ_{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)",
+        "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "µ = µ1 + µ2 and 𝜌 = 𝜌1 + 𝜌2",
+          "text": "\\(µ = µ_{1} + µ_{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "µ = µ1 + µ2 and 𝜌 = 𝜌1 + 𝜌2",
+              "type": "math",
+              "latex": "µ = µ_{1} + µ_{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}",
+              "content": "\\(µ = µ_{1} + µ_{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "μ2 = µ1",
+          "text": "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "μ2 = µ1",
+              "type": "math",
+              "latex": "μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}",
+              "content": "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌 = 𝜌_{1} + 𝜌_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "µ = µ1 + µ2 and 𝜌2 = 𝜌1",
+          "text": "\\(µ = µ_{1} + µ_{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "µ = µ1 + µ2 and 𝜌2 = 𝜌1",
+              "type": "math",
+              "latex": "µ = µ_{1} + µ_{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2",
+              "content": "\\(µ = µ_{1} + µ_{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "μ2 = µ1",
+          "text": "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "μ2 = µ1",
+              "type": "math",
+              "latex": "μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2",
+              "content": "\\(μ^{2} = µ_{1} 2 + µ2 ^{2} and 𝜌^{2} = 𝜌_{1} 2 + 𝜌2 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -1260,11 +1301,11 @@
       "questionNumber": 12,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "1+𝑥 Which one of the following is the Taylor-series expansion of 𝑙𝑛( _{1-𝑥}) about the origin for |𝑥| < 1? 𝑥 is a real number.",
+      "questionText": "Which one of the following is the Taylor-series expansion of 𝑙𝑛( <u>1+𝑥</u> _{1-𝑥}) about the origin for |𝑥| < 1? 𝑥 is a real number.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "1+𝑥 Which one of the following is the Taylor-series expansion of 𝑙𝑛( _{1-𝑥}) about the origin for |𝑥| < 1? 𝑥 is a real number.",
+          "content": "Which one of the following is the Taylor-series expansion of 𝑙𝑛( <u>1+𝑥</u> _{1-𝑥}) about the origin for |𝑥| < 1? 𝑥 is a real number.",
           "confidence": "VERIFIED"
         }
       ],
@@ -1274,37 +1315,36 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑥-𝑥^{2} 2 + 𝑥^{3} 3 -⋯\\)",
-        "2 (𝑥-𝑥2",
-        "𝑥+ 𝑥3",
-        "2 (𝑥+ 𝑥3"
+        "𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯",
+        "2 (𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯)",
+        "𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯",
+        "2 (𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑥-𝑥^{2} 2 + 𝑥^{3} 3 -⋯\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "𝑥-𝑥^{2} 2 + 𝑥^{3} 3 -⋯",
-              "content": "\\(𝑥-𝑥^{2} 2 + 𝑥^{3} 3 -⋯\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "2 (𝑥-𝑥2",
+          "text": "𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "2 (𝑥-𝑥2",
+              "content": "𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "2 (𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "2 (𝑥-𝑥^{2} 2 + \\(\\frac{𝑥3}{3}\\) -⋯)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1314,12 +1354,12 @@
         },
         {
           "id": "C",
-          "text": "𝑥+ 𝑥3",
+          "text": "𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑥+ 𝑥3",
+              "content": "𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯",
               "confidence": "VERIFIED"
             }
           ],
@@ -1329,12 +1369,12 @@
         },
         {
           "id": "D",
-          "text": "2 (𝑥+ 𝑥3",
+          "text": "2 (𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "2 (𝑥+ 𝑥3",
+              "content": "2 (𝑥+ \\(\\frac{𝑥3}{3}\\) + \\(\\frac{𝑥5}{5}\\) + ⋯)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1370,11 +1410,11 @@
       "questionNumber": 13,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Consider the normal (Gaussian) distributions 𝑎, 𝑏, 𝑐 shown in the figure.\n\n\n\n\n\n𝜎_{𝑝} and µ_{𝑝} are the standard deviation and mean of a distribution 𝑝, respectively, and the means are positive. Which one of the following deductions is correct?",
+      "questionText": "Consider the normal (Gaussian) distributions 𝑎, 𝑏, 𝑐 shown in the figure.\n\n𝜎_{𝑝} and µ_{𝑝} are the standard deviation and mean of a distribution 𝑝, respectively, and the means are positive. Which one of the following deductions is correct?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the normal (Gaussian) distributions 𝑎, 𝑏, 𝑐 shown in the figure.\n\n\n\n\n\n𝜎_{𝑝} and µ_{𝑝} are the standard deviation and mean of a distribution 𝑝, respectively, and the means are positive. Which one of the following deductions is correct?",
+          "content": "Consider the normal (Gaussian) distributions 𝑎, 𝑏, 𝑐 shown in the figure.\n\n𝜎_{𝑝} and µ_{𝑝} are the standard deviation and mean of a distribution 𝑝, respectively, and the means are positive. Which one of the following deductions is correct?",
           "confidence": "VERIFIED"
         },
         {
@@ -1390,71 +1430,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝜎𝑎 < 𝜎𝑏 < 𝜎𝑐",
-        "𝜎𝑎 > 𝜎𝑏 > 𝜎𝑐",
-        "µ𝑎= µ𝑏= µ𝑐",
-        "µ𝑎 > µ𝑏 > µ𝑐"
+        "\\(𝜎_{𝑎} < 𝜎_{𝑏} < 𝜎_{𝑐}\\)",
+        "\\(𝜎_{𝑎} > 𝜎_{𝑏} > 𝜎_{𝑐}\\)",
+        "\\(µ_{𝑎}= µ_{𝑏}= µ_{𝑐}\\)",
+        "\\(µ_{𝑎} > µ_{𝑏} > µ_{𝑐}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝜎𝑎 < 𝜎𝑏 < 𝜎𝑐",
+          "text": "\\(𝜎_{𝑎} < 𝜎_{𝑏} < 𝜎_{𝑐}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝜎𝑎 < 𝜎𝑏 < 𝜎𝑐",
+              "type": "math",
+              "latex": "𝜎_{𝑎} < 𝜎_{𝑏} < 𝜎_{𝑐}",
+              "content": "\\(𝜎_{𝑎} < 𝜎_{𝑏} < 𝜎_{𝑐}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝜎𝑎 > 𝜎𝑏 > 𝜎𝑐",
+          "text": "\\(𝜎_{𝑎} > 𝜎_{𝑏} > 𝜎_{𝑐}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝜎𝑎 > 𝜎𝑏 > 𝜎𝑐",
+              "type": "math",
+              "latex": "𝜎_{𝑎} > 𝜎_{𝑏} > 𝜎_{𝑐}",
+              "content": "\\(𝜎_{𝑎} > 𝜎_{𝑏} > 𝜎_{𝑐}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "µ𝑎= µ𝑏= µ𝑐",
+          "text": "\\(µ_{𝑎}= µ_{𝑏}= µ_{𝑐}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "µ𝑎= µ𝑏= µ𝑐",
+              "type": "math",
+              "latex": "µ_{𝑎}= µ_{𝑏}= µ_{𝑐}",
+              "content": "\\(µ_{𝑎}= µ_{𝑏}= µ_{𝑐}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "µ𝑎 > µ𝑏 > µ𝑐",
+          "text": "\\(µ_{𝑎} > µ_{𝑏} > µ_{𝑐}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "µ𝑎 > µ𝑏 > µ𝑐",
+              "type": "math",
+              "latex": "µ_{𝑎} > µ_{𝑏} > µ_{𝑐}",
+              "content": "\\(µ_{𝑎} > µ_{𝑏} > µ_{𝑐}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -1501,71 +1545,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑎𝐴\n𝑋𝐴",
-        "𝑋𝐴\n𝑎𝐴",
-        "𝑎𝐴 𝑋𝐴",
-        "𝑎𝐴 𝑋𝐴"
+        "\\(\\frac{𝑎𝐴}{𝑋𝐴}\\)",
+        "\\(\\frac{𝑋𝐴}{𝑎𝐴}\\)",
+        "\\(𝑎_{𝐴} 𝑋_{𝐴}\\)",
+        "\\(𝑎_{𝐴} 𝑋_{𝐴} 2\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑎𝐴\n𝑋𝐴",
+          "text": "\\(\\frac{𝑎𝐴}{𝑋𝐴}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑎𝐴\n𝑋𝐴",
+              "type": "math",
+              "latex": "\\frac{𝑎𝐴}{𝑋𝐴}",
+              "content": "\\(\\frac{𝑎𝐴}{𝑋𝐴}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑋𝐴\n𝑎𝐴",
+          "text": "\\(\\frac{𝑋𝐴}{𝑎𝐴}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑋𝐴\n𝑎𝐴",
+              "type": "math",
+              "latex": "\\frac{𝑋𝐴}{𝑎𝐴}",
+              "content": "\\(\\frac{𝑋𝐴}{𝑎𝐴}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑎𝐴 𝑋𝐴",
+          "text": "\\(𝑎_{𝐴} 𝑋_{𝐴}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑎𝐴 𝑋𝐴",
+              "type": "math",
+              "latex": "𝑎_{𝐴} 𝑋_{𝐴}",
+              "content": "\\(𝑎_{𝐴} 𝑋_{𝐴}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑎𝐴 𝑋𝐴",
+          "text": "\\(𝑎_{𝐴} 𝑋_{𝐴} 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑎𝐴 𝑋𝐴",
+              "type": "math",
+              "latex": "𝑎_{𝐴} 𝑋_{𝐴} 2",
+              "content": "\\(𝑎_{𝐴} 𝑋_{𝐴} 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -1596,11 +1644,11 @@
       "questionNumber": 15,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "𝐿 As shown in the figure, two rods of different metals of equal lengths, _{2}, diameter 𝑑 (𝑑 ≪ 𝐿), and constant thermal conductivities 𝑘_{1} and 𝑘_{2} (with 𝑘_{1} > 𝑘_{2}) are connected perfectly (i.e., zero interface thermal resistance).\n\n\n\n\n\nThe left and right ends of the connected rod are maintained at temperatures 𝑇_{1} and 𝑇_{2} (𝑇_{1} > 𝑇_{2}). Assume that the rods are insulated from the environment, apart from the two flat ends.\n\nWhich one of the following graphs represents the temperature distribution at steady-state? The thickest line shows the temperature profile. The horizontal axis shows the distance from the left end of the rod to the right and the vertical axis denotes temperature.",
+      "questionText": "As shown in the figure, two rods of different metals of equal lengths, (𝑑 ≪ 𝐿), and constant thermal conductivities 𝑘_{1} and 𝑘_{2} (with 𝑘_{1} > 𝑘_{2}) are connected perfectly (i.e., zero interface thermal resistance). <u>𝐿</u> _{2}, diameter 𝑑\n\nThe left and right ends of the connected rod are maintained at temperatures 𝑇_{1} and 𝑇_{2} (𝑇_{1} > 𝑇_{2}). Assume that the rods are insulated from the environment, apart from the two flat ends.\n\nWhich one of the following graphs represents the temperature distribution at steady-state? The thickest line shows the temperature profile. The horizontal axis shows the distance from the left end of the rod to the right and the vertical axis denotes temperature.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝐿 As shown in the figure, two rods of different metals of equal lengths, _{2}, diameter 𝑑 (𝑑 ≪ 𝐿), and constant thermal conductivities 𝑘_{1} and 𝑘_{2} (with 𝑘_{1} > 𝑘_{2}) are connected perfectly (i.e., zero interface thermal resistance).\n\n\n\n\n\nThe left and right ends of the connected rod are maintained at temperatures 𝑇_{1} and 𝑇_{2} (𝑇_{1} > 𝑇_{2}). Assume that the rods are insulated from the environment, apart from the two flat ends.\n\nWhich one of the following graphs represents the temperature distribution at steady-state? The thickest line shows the temperature profile. The horizontal axis shows the distance from the left end of the rod to the right and the vertical axis denotes temperature.",
+          "content": "As shown in the figure, two rods of different metals of equal lengths, (𝑑 ≪ 𝐿), and constant thermal conductivities 𝑘_{1} and 𝑘_{2} (with 𝑘_{1} > 𝑘_{2}) are connected perfectly (i.e., zero interface thermal resistance). <u>𝐿</u> _{2}, diameter 𝑑\n\nThe left and right ends of the connected rod are maintained at temperatures 𝑇_{1} and 𝑇_{2} (𝑇_{1} > 𝑇_{2}). Assume that the rods are insulated from the environment, apart from the two flat ends.\n\nWhich one of the following graphs represents the temperature distribution at steady-state? The thickest line shows the temperature profile. The horizontal axis shows the distance from the left end of the rod to the right and the vertical axis denotes temperature.",
           "confidence": "VERIFIED"
         },
         {
@@ -2059,71 +2107,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝐶 (𝑠) + 𝐻2𝑂 (𝑙) →𝐻2 (𝑔) + 𝐶𝑂 (𝑔)",
-        "𝐶 (𝑠) + 𝑂2 (𝑔) →𝐶𝑂2 (𝑔)",
-        "𝐶 (𝑠) + 𝐶𝑂2 (𝑔) →2𝐶𝑂 (𝑔)",
-        "2𝐶 (𝑠) + 𝑂2 (𝑔) →2𝐶𝑂 (𝑔)"
+        "\\(𝐶 (𝑠) + 𝐻_{2}𝑂 (𝑙) →𝐻_{2} (𝑔) + 𝐶𝑂 (𝑔)\\)",
+        "\\(𝐶 (𝑠) + 𝑂_{2} (𝑔) →𝐶𝑂_{2} (𝑔)\\)",
+        "\\(𝐶 (𝑠) + 𝐶𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)",
+        "\\(2𝐶 (𝑠) + 𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝐶 (𝑠) + 𝐻2𝑂 (𝑙) →𝐻2 (𝑔) + 𝐶𝑂 (𝑔)",
+          "text": "\\(𝐶 (𝑠) + 𝐻_{2}𝑂 (𝑙) →𝐻_{2} (𝑔) + 𝐶𝑂 (𝑔)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐶 (𝑠) + 𝐻2𝑂 (𝑙) →𝐻2 (𝑔) + 𝐶𝑂 (𝑔)",
+              "type": "math",
+              "latex": "𝐶 (𝑠) + 𝐻_{2}𝑂 (𝑙) →𝐻_{2} (𝑔) + 𝐶𝑂 (𝑔)",
+              "content": "\\(𝐶 (𝑠) + 𝐻_{2}𝑂 (𝑙) →𝐻_{2} (𝑔) + 𝐶𝑂 (𝑔)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝐶 (𝑠) + 𝑂2 (𝑔) →𝐶𝑂2 (𝑔)",
+          "text": "\\(𝐶 (𝑠) + 𝑂_{2} (𝑔) →𝐶𝑂_{2} (𝑔)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐶 (𝑠) + 𝑂2 (𝑔) →𝐶𝑂2 (𝑔)",
+              "type": "math",
+              "latex": "𝐶 (𝑠) + 𝑂_{2} (𝑔) →𝐶𝑂_{2} (𝑔)",
+              "content": "\\(𝐶 (𝑠) + 𝑂_{2} (𝑔) →𝐶𝑂_{2} (𝑔)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝐶 (𝑠) + 𝐶𝑂2 (𝑔) →2𝐶𝑂 (𝑔)",
+          "text": "\\(𝐶 (𝑠) + 𝐶𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐶 (𝑠) + 𝐶𝑂2 (𝑔) →2𝐶𝑂 (𝑔)",
+              "type": "math",
+              "latex": "𝐶 (𝑠) + 𝐶𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)",
+              "content": "\\(𝐶 (𝑠) + 𝐶𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "2𝐶 (𝑠) + 𝑂2 (𝑔) →2𝐶𝑂 (𝑔)",
+          "text": "\\(2𝐶 (𝑠) + 𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "2𝐶 (𝑠) + 𝑂2 (𝑔) →2𝐶𝑂 (𝑔)",
+              "type": "math",
+              "latex": "2𝐶 (𝑠) + 𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)",
+              "content": "\\(2𝐶 (𝑠) + 𝑂_{2} (𝑔) →2𝐶𝑂 (𝑔)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2821,11 +2873,11 @@
       "questionNumber": 26,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Match the defects listed in Column I with the associated manufacturing processes listed in Column II. Column I Column II\n\nP. Misrun 1. Extrusion\n\nQ. Earing 2. Rolling\n\nR. Alligatoring 3. Casting\n\nS. Chevron cracking 4. Deep drawing",
+      "questionText": "Match the defects listed in Column I with the associated manufacturing processes listed in Column II.\n\nColumn I Column II\n\nP. Misrun 1. Extrusion\n\nQ. Earing 2. Rolling\n\nR. Alligatoring 3. Casting\n\nS. Chevron cracking 4. Deep drawing",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Match the defects listed in Column I with the associated manufacturing processes listed in Column II. Column I Column II\n\nP. Misrun 1. Extrusion\n\nQ. Earing 2. Rolling\n\nR. Alligatoring 3. Casting\n\nS. Chevron cracking 4. Deep drawing",
+          "content": "Match the defects listed in Column I with the associated manufacturing processes listed in Column II.\n\nColumn I Column II\n\nP. Misrun 1. Extrusion\n\nQ. Earing 2. Rolling\n\nR. Alligatoring 3. Casting\n\nS. Chevron cracking 4. Deep drawing",
           "confidence": "VERIFIED"
         }
       ],
@@ -3039,11 +3091,11 @@
       "questionNumber": 28,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Which of the following statements is/are correct for a square matrix 𝑨 with real number entries? 𝑨^{𝑇}denotes the transpose of 𝑨 and 𝑨^{-1} denotes the inverse of 𝑨.",
+      "questionText": "Which of the following statements is/are correct for a square matrix 𝑨 with real number entries?\n\n𝑨^{𝑇}denotes the transpose of 𝑨 and 𝑨^{-1} denotes the inverse of 𝑨.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statements is/are correct for a square matrix 𝑨 with real number entries? 𝑨^{𝑇}denotes the transpose of 𝑨 and 𝑨^{-1} denotes the inverse of 𝑨.",
+          "content": "Which of the following statements is/are correct for a square matrix 𝑨 with real number entries?\n\n𝑨^{𝑇}denotes the transpose of 𝑨 and 𝑨^{-1} denotes the inverse of 𝑨.",
           "confidence": "VERIFIED"
         }
       ],
@@ -3053,36 +3105,37 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑨 is symmetric if 𝑨𝑇= -𝑨.",
-        "𝑨 is skew-symmetric if 𝑨𝑇= -𝑨.",
-        "If 𝑨 is orthogonal, then 𝑨𝑇= 𝑨-1.",
+        "\\(𝑨 is symmetric if 𝑨^{𝑇}= -𝑨.\\)",
+        "𝑨 is skew-symmetric if 𝑨^{𝑇}= -𝑨.",
+        "If 𝑨 is orthogonal, then 𝑨^{𝑇}= 𝑨^{-1}.",
         "If 𝑨 is orthogonal, then its determinant is zero."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑨 is symmetric if 𝑨𝑇= -𝑨.",
+          "text": "\\(𝑨 is symmetric if 𝑨^{𝑇}= -𝑨.\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑨 is symmetric if 𝑨𝑇= -𝑨.",
+              "type": "math",
+              "latex": "𝑨 is symmetric if 𝑨^{𝑇}= -𝑨.",
+              "content": "\\(𝑨 is symmetric if 𝑨^{𝑇}= -𝑨.\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑨 is skew-symmetric if 𝑨𝑇= -𝑨.",
+          "text": "𝑨 is skew-symmetric if 𝑨^{𝑇}= -𝑨.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑨 is skew-symmetric if 𝑨𝑇= -𝑨.",
+              "content": "𝑨 is skew-symmetric if 𝑨^{𝑇}= -𝑨.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3092,12 +3145,12 @@
         },
         {
           "id": "C",
-          "text": "If 𝑨 is orthogonal, then 𝑨𝑇= 𝑨-1.",
+          "text": "If 𝑨 is orthogonal, then 𝑨^{𝑇}= 𝑨^{-1}.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "If 𝑨 is orthogonal, then 𝑨𝑇= 𝑨-1.",
+              "content": "If 𝑨 is orthogonal, then 𝑨^{𝑇}= 𝑨^{-1}.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3430,11 +3483,11 @@
       "questionNumber": 32,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "The pair-interaction energy between two atoms is given by the following expression:\n\n𝑈= -1.6 𝑟_{6} + 51.2 𝑟12 where 𝑈 is the interaction energy in 𝑒𝑉 and 𝑟 is the interatomic distance in Å. The equilibrium bond-length between the atoms is Å. (Round off to the nearest integer)",
+      "questionText": "The pair-interaction energy between two atoms is given by the following expression:\n\n𝑈= -1.6 𝑟^{6} + \\(\\frac{51.2}{𝑟12}\\)\n\nwhere 𝑈 is the interaction energy in 𝑒𝑉 and 𝑟 is the interatomic distance in Å. The equilibrium bond-length between the atoms is Å. (Round off to the nearest integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The pair-interaction energy between two atoms is given by the following expression:\n\n𝑈= -1.6 𝑟_{6} + 51.2 𝑟12 where 𝑈 is the interaction energy in 𝑒𝑉 and 𝑟 is the interatomic distance in Å. The equilibrium bond-length between the atoms is Å. (Round off to the nearest integer)",
+          "content": "The pair-interaction energy between two atoms is given by the following expression:\n\n𝑈= -1.6 𝑟^{6} + \\(\\frac{51.2}{𝑟12}\\)\n\nwhere 𝑈 is the interaction energy in 𝑒𝑉 and 𝑟 is the interatomic distance in Å. The equilibrium bond-length between the atoms is Å. (Round off to the nearest integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -3476,11 +3529,11 @@
       "questionNumber": 33,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "For a solid embryo in contact with a perfectly flat mould wall as shown in the schematic, the wetting angle 𝜃 is_______ degrees. (Round off to one decimal place).\n\n\n\n\n\nGiven:\n\nSurface tension between liquid and mould wall = 0.35 𝐽. 𝑚^{-2}\n\nSurface tension between solid and mould wall = 0.02 𝐽. 𝑚^{-2}\n\nSurface tension between liquid and solid = 0.40 𝐽. 𝑚^{-2}",
+      "questionText": "For a solid embryo in contact with a perfectly flat mould wall as shown in the schematic, the wetting angle 𝜃 is_______ degrees. (Round off to one decimal place).\n\nGiven:\n\nSurface tension between liquid and mould wall = 0.35 𝐽. 𝑚^{-2}\n\nSurface tension between solid and mould wall = 0.02 𝐽. 𝑚^{-2}\n\nSurface tension between liquid and solid = 0.40 𝐽. 𝑚^{-2}",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For a solid embryo in contact with a perfectly flat mould wall as shown in the schematic, the wetting angle 𝜃 is_______ degrees. (Round off to one decimal place).\n\n\n\n\n\nGiven:\n\nSurface tension between liquid and mould wall = 0.35 𝐽. 𝑚^{-2}\n\nSurface tension between solid and mould wall = 0.02 𝐽. 𝑚^{-2}\n\nSurface tension between liquid and solid = 0.40 𝐽. 𝑚^{-2}",
+          "content": "For a solid embryo in contact with a perfectly flat mould wall as shown in the schematic, the wetting angle 𝜃 is_______ degrees. (Round off to one decimal place).\n\nGiven:\n\nSurface tension between liquid and mould wall = 0.35 𝐽. 𝑚^{-2}\n\nSurface tension between solid and mould wall = 0.02 𝐽. 𝑚^{-2}\n\nSurface tension between liquid and solid = 0.40 𝐽. 𝑚^{-2}",
           "confidence": "VERIFIED"
         },
         {
@@ -3622,11 +3675,11 @@
       "questionNumber": 36,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "1] [𝑥 𝑦] = 𝜆[𝑥 If [1 2 𝑦], where 𝑥, 𝑦 are not identically zero, then the 8 values of 𝜆 are",
+      "questionText": "If [1 values of 𝜆 are 8 1] [𝑥 2 𝑦] = 𝜆[𝑥 𝑦], where 𝑥, 𝑦 are not identically zero, then the",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "1] [𝑥 𝑦] = 𝜆[𝑥 If [1 2 𝑦], where 𝑥, 𝑦 are not identically zero, then the 8 values of 𝜆 are",
+          "content": "If [1 values of 𝜆 are 8 1] [𝑥 2 𝑦] = 𝜆[𝑥 𝑦], where 𝑥, 𝑦 are not identically zero, then the",
           "confidence": "VERIFIED"
         }
       ],
@@ -3731,11 +3784,11 @@
       "questionNumber": 37,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "𝑑𝑦 If _{𝑑𝑥}= 4𝑥𝑦, 𝑦(0) = 1, then",
+      "questionText": "If <u>𝑑𝑦</u> _{𝑑𝑥}= 4𝑥𝑦, 𝑦(0) = 1, then",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑑𝑦 If _{𝑑𝑥}= 4𝑥𝑦, 𝑦(0) = 1, then",
+          "content": "If <u>𝑑𝑦</u> _{𝑑𝑥}= 4𝑥𝑦, 𝑦(0) = 1, then",
           "confidence": "VERIFIED"
         }
       ],
@@ -3745,71 +3798,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑦= 2𝑥2 + 1",
-        "𝑦= 2𝑒2𝑥2 -1",
-        "𝑦= 2𝑒𝑥2 -1",
-        "𝑦= 𝑒2𝑥2"
+        "\\(𝑦= 2𝑥^{2} + 1\\)",
+        "\\(𝑦= 2𝑒^{2𝑥2} -1\\)",
+        "\\(𝑦= 2𝑒^{𝑥2} -1\\)",
+        "\\(𝑦= 𝑒^{2𝑥2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑦= 2𝑥2 + 1",
+          "text": "\\(𝑦= 2𝑥^{2} + 1\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑦= 2𝑥2 + 1",
+              "type": "math",
+              "latex": "𝑦= 2𝑥^{2} + 1",
+              "content": "\\(𝑦= 2𝑥^{2} + 1\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑦= 2𝑒2𝑥2 -1",
+          "text": "\\(𝑦= 2𝑒^{2𝑥2} -1\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑦= 2𝑒2𝑥2 -1",
+              "type": "math",
+              "latex": "𝑦= 2𝑒^{2𝑥2} -1",
+              "content": "\\(𝑦= 2𝑒^{2𝑥2} -1\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑦= 2𝑒𝑥2 -1",
+          "text": "\\(𝑦= 2𝑒^{𝑥2} -1\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑦= 2𝑒𝑥2 -1",
+              "type": "math",
+              "latex": "𝑦= 2𝑒^{𝑥2} -1",
+              "content": "\\(𝑦= 2𝑒^{𝑥2} -1\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑦= 𝑒2𝑥2",
+          "text": "\\(𝑦= 𝑒^{2𝑥2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑦= 𝑒2𝑥2",
+              "type": "math",
+              "latex": "𝑦= 𝑒^{2𝑥2}",
+              "content": "\\(𝑦= 𝑒^{2𝑥2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3860,21 +3917,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) ℎ𝐿",
-        "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) ℎ𝐿",
-        "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) 𝑘",
-        "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) 𝑘"
+        "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
+        "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
+        "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)",
+        "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) ℎ𝐿",
+          "text": "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) ℎ𝐿",
+              "content": "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3884,12 +3941,12 @@
         },
         {
           "id": "B",
-          "text": "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) ℎ𝐿",
+          "text": "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) ℎ𝐿",
+              "content": "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{ℎ𝐿}{𝑘}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3899,12 +3956,12 @@
         },
         {
           "id": "C",
-          "text": "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) 𝑘",
+          "text": "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑇1 = 𝑇2 -(𝑇2 -𝑇0) 𝑘",
+              "content": "𝑇_{1} = 𝑇_{2} -(𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3914,12 +3971,12 @@
         },
         {
           "id": "D",
-          "text": "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) 𝑘",
+          "text": "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑇1 = 𝑇2 + (𝑇2 -𝑇0) 𝑘",
+              "content": "𝑇_{1} = 𝑇_{2} + (𝑇_{2} -𝑇_{0} \\(\\frac{𝑘}{ℎ𝐿}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3957,11 +4014,11 @@
       "questionNumber": 39,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Match the dimensionless numbers listed in Column I with their applications to transport phenomena listed in Column II.\n\nColumn I Column II\n\nP. Reynolds number\n\nQ. Schmidt number\n\nR. Prandtl number\n\nS. Biot number",
+      "questionText": "Match the dimensionless numbers listed in Column I with their applications to transport phenomena listed in Column II.\n\nColumn I Column II\n\nP. Reynolds number Momentum and mass transfer\n\nQ. Schmidt number Momentum and heat transfer\n\nR. Prandtl number Convective and conductive heat transfer\n\nS. Biot number Laminar to turbulent flow",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Match the dimensionless numbers listed in Column I with their applications to transport phenomena listed in Column II.\n\nColumn I Column II\n\nP. Reynolds number\n\nQ. Schmidt number\n\nR. Prandtl number\n\nS. Biot number",
+          "content": "Match the dimensionless numbers listed in Column I with their applications to transport phenomena listed in Column II.\n\nColumn I Column II\n\nP. Reynolds number Momentum and mass transfer\n\nQ. Schmidt number Momentum and heat transfer\n\nR. Prandtl number Convective and conductive heat transfer\n\nS. Biot number Laminar to turbulent flow",
           "confidence": "VERIFIED"
         }
       ],
@@ -4292,11 +4349,11 @@
       "questionNumber": 42,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "The microstructures of a quenched steel tempered at three temperatures 𝑇_{1}< 𝑇_{2} < 𝑇_{3} for a fixed time are schematically illustrated. The solid circles represent cementite particles in ferrite matrix; 𝑟̅_{1}, 𝑟̅_{2} and 𝑟̅_{3} are average radii of cementite particles, and 𝑉_{1}, 𝑉_{2} and 𝑉_{3} are volume fractions of cementite at temperatures 𝑇_{1}, 𝑇_{2} and 𝑇_{3}, respectively.\n\n\n\nIf the cementite in steel is more noble than ferrite, then which one of the three microstructures will have the highest corrosion rate when exposed to an aqueous solution of 3.5 wt. % NaCl?",
+      "questionText": "The microstructures of a quenched steel tempered at three temperatures 𝑇_{1}< 𝑇_{2} < 𝑇_{3} for a fixed time are schematically illustrated. The solid circles represent cementite particles in ferrite matrix; 𝑟̅_{1}, 𝑟̅_{2} and 𝑟̅_{3} are average radii of cementite particles, and 𝑉_{1}, 𝑉_{2} and 𝑉_{3} are volume fractions of cementite at temperatures 𝑇_{1}, 𝑇_{2} and 𝑇_{3}, respectively.\n\nIf the cementite in steel is more noble than ferrite, then which one of the three microstructures will have the highest corrosion rate when exposed to an aqueous solution of 3.5 wt. % NaCl?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The microstructures of a quenched steel tempered at three temperatures 𝑇_{1}< 𝑇_{2} < 𝑇_{3} for a fixed time are schematically illustrated. The solid circles represent cementite particles in ferrite matrix; 𝑟̅_{1}, 𝑟̅_{2} and 𝑟̅_{3} are average radii of cementite particles, and 𝑉_{1}, 𝑉_{2} and 𝑉_{3} are volume fractions of cementite at temperatures 𝑇_{1}, 𝑇_{2} and 𝑇_{3}, respectively.\n\n\n\nIf the cementite in steel is more noble than ferrite, then which one of the three microstructures will have the highest corrosion rate when exposed to an aqueous solution of 3.5 wt. % NaCl?",
+          "content": "The microstructures of a quenched steel tempered at three temperatures 𝑇_{1}< 𝑇_{2} < 𝑇_{3} for a fixed time are schematically illustrated. The solid circles represent cementite particles in ferrite matrix; 𝑟̅_{1}, 𝑟̅_{2} and 𝑟̅_{3} are average radii of cementite particles, and 𝑉_{1}, 𝑉_{2} and 𝑉_{3} are volume fractions of cementite at temperatures 𝑇_{1}, 𝑇_{2} and 𝑇_{3}, respectively.\n\nIf the cementite in steel is more noble than ferrite, then which one of the three microstructures will have the highest corrosion rate when exposed to an aqueous solution of 3.5 wt. % NaCl?",
           "confidence": "VERIFIED"
         },
         {
@@ -4312,56 +4369,59 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Microstructure at 𝑇1",
-        "Microstructure at 𝑇2",
-        "Microstructure at 𝑇3",
+        "\\(Microstructure at 𝑇_{1}\\)",
+        "\\(Microstructure at 𝑇_{2}\\)",
+        "\\(Microstructure at 𝑇_{3}\\)",
         "Independent of microstructure"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Microstructure at 𝑇1",
+          "text": "\\(Microstructure at 𝑇_{1}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "Microstructure at 𝑇1",
+              "type": "math",
+              "latex": "Microstructure at 𝑇_{1}",
+              "content": "\\(Microstructure at 𝑇_{1}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "Microstructure at 𝑇2",
+          "text": "\\(Microstructure at 𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "Microstructure at 𝑇2",
+              "type": "math",
+              "latex": "Microstructure at 𝑇_{2}",
+              "content": "\\(Microstructure at 𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "Microstructure at 𝑇3",
+          "text": "\\(Microstructure at 𝑇_{3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "Microstructure at 𝑇3",
+              "type": "math",
+              "latex": "Microstructure at 𝑇_{3}",
+              "content": "\\(Microstructure at 𝑇_{3}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -4409,11 +4469,11 @@
       "questionNumber": 43,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "An isotropic metallic cuboid block shown in the figure has a coefficient of linear thermal expansion 𝛼, Young's modulus 𝐸 and Poisson's ratio 𝜈. The dimensions of the cuboid are 𝑎, 𝑏 and 𝑐 in the X, Y and Z directions, respectively. It is rigidly constrained against expansion in the X direction. However, it is free to expand in the Y and Z directions. It is initially stress-free. Subsequently, it is heated so that its temperature increases by 𝛥𝑇. What would be the CHANGE in the dimension of the cuboid in the Y direction?\n\nAssume linear elasticity, and that thermal as well as mechanical strains are infinitesimally small.",
+      "questionText": "An isotropic metallic cuboid block shown in the figure has a coefficient of linear thermal expansion 𝛼, Young's modulus 𝐸 and Poisson's ratio 𝜈. The dimensions of the cuboid are 𝑎, 𝑏 and 𝑐 in the X, Y and Z directions, respectively. It is rigidly constrained against expansion in the X direction. However, it is free to exp and in the Y and Z directions. It is initially stress-free. Subsequently, it is heated so that its temperature increases by 𝛥𝑇. What would be the CHANGE in the dimension of the cuboid in the Y direction?\n\nAssume linear elasticity, and that thermal as well as mechanical strains are infinitesimally small.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "An isotropic metallic cuboid block shown in the figure has a coefficient of linear thermal expansion 𝛼, Young's modulus 𝐸 and Poisson's ratio 𝜈. The dimensions of the cuboid are 𝑎, 𝑏 and 𝑐 in the X, Y and Z directions, respectively. It is rigidly constrained against expansion in the X direction. However, it is free to expand in the Y and Z directions. It is initially stress-free. Subsequently, it is heated so that its temperature increases by 𝛥𝑇. What would be the CHANGE in the dimension of the cuboid in the Y direction?\n\nAssume linear elasticity, and that thermal as well as mechanical strains are infinitesimally small.",
+          "content": "An isotropic metallic cuboid block shown in the figure has a coefficient of linear thermal expansion 𝛼, Young's modulus 𝐸 and Poisson's ratio 𝜈. The dimensions of the cuboid are 𝑎, 𝑏 and 𝑐 in the X, Y and Z directions, respectively. It is rigidly constrained against expansion in the X direction. However, it is free to exp and in the Y and Z directions. It is initially stress-free. Subsequently, it is heated so that its temperature increases by 𝛥𝑇. What would be the CHANGE in the dimension of the cuboid in the Y direction?\n\nAssume linear elasticity, and that thermal as well as mechanical strains are infinitesimally small.",
           "confidence": "VERIFIED"
         },
         {
@@ -4526,11 +4586,11 @@
       "questionNumber": 44,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Match the entries in Column I with the stacking sequences of the close-packed planes listed in Column II. Column I Column II\n\nP. Face centered cubic (FCC) structure 1. ABCABABC\n\nQ. Intrinsic stacking fault in FCC 2. ABABABAB\n\nR. Across an annealing twin boundary in FCC 3. ABCABCABC\n\nS. Hexagonal close-packed structure 4. ABCABCACBACBA",
+      "questionText": "Match the entries in Column I with the stacking sequences of the close-packed planes listed in Column II.\n\nColumn I Column II\n\nP. Face centered cubic (FCC) structure 1. ABCABABC\n\nQ. Intrinsic stacking fault in FCC 2. ABABABAB\n\nR. Across an annealing twin boundary in FCC 3. ABCABCABC\n\nS. Hexagonal close-packed structure 4. ABCABCACBACBA",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Match the entries in Column I with the stacking sequences of the close-packed planes listed in Column II. Column I Column II\n\nP. Face centered cubic (FCC) structure 1. ABCABABC\n\nQ. Intrinsic stacking fault in FCC 2. ABABABAB\n\nR. Across an annealing twin boundary in FCC 3. ABCABCABC\n\nS. Hexagonal close-packed structure 4. ABCABCACBACBA",
+          "content": "Match the entries in Column I with the stacking sequences of the close-packed planes listed in Column II.\n\nColumn I Column II\n\nP. Face centered cubic (FCC) structure 1. ABCABABC\n\nQ. Intrinsic stacking fault in FCC 2. ABABABAB\n\nR. Across an annealing twin boundary in FCC 3. ABCABCABC\n\nS. Hexagonal close-packed structure 4. ABCABCACBACBA",
           "confidence": "VERIFIED"
         }
       ],
@@ -4635,11 +4695,11 @@
       "questionNumber": 45,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "Which one of the following graphs represents Griffith's criterion for the growth of a crack in a brittle isotropic infinitely large plate with a center crack? In the graph, 𝛥𝑆𝐸 is the magnitude of the total strain energy released (shown by solid curve) and Γ_{𝑠} is the total surface energy (shown by dashed line) and 𝑎_{𝑐} is the critical crack length (shown by downward arrow) at which the crack starts growing. The tangent to the 𝛥𝑆𝐸 curve parallel to the Γ_{𝑠} line is shown by the dotted line.",
+      "questionText": "Which one of the following graphs represents Griffith's criterion for the growth of a crack in a brittle isotropic infinitely large plate with a center crack?\n\nIn the graph, 𝛥𝑆𝐸 is the magnitude of the total strain energy released (shown by solid curve) and Γ_{𝑠} is the total surface energy (shown by dashed line) and 𝑎_{𝑐} is the critical crack length (shown by downward arrow) at which the crack starts growing. The tangent to the 𝛥𝑆𝐸 curve parallel to the Γ_{𝑠} line is shown by the dotted line.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which one of the following graphs represents Griffith's criterion for the growth of a crack in a brittle isotropic infinitely large plate with a center crack? In the graph, 𝛥𝑆𝐸 is the magnitude of the total strain energy released (shown by solid curve) and Γ_{𝑠} is the total surface energy (shown by dashed line) and 𝑎_{𝑐} is the critical crack length (shown by downward arrow) at which the crack starts growing. The tangent to the 𝛥𝑆𝐸 curve parallel to the Γ_{𝑠} line is shown by the dotted line.",
+          "content": "Which one of the following graphs represents Griffith's criterion for the growth of a crack in a brittle isotropic infinitely large plate with a center crack?\n\nIn the graph, 𝛥𝑆𝐸 is the magnitude of the total strain energy released (shown by solid curve) and Γ_{𝑠} is the total surface energy (shown by dashed line) and 𝑎_{𝑐} is the critical crack length (shown by downward arrow) at which the crack starts growing. The tangent to the 𝛥𝑆𝐸 curve parallel to the Γ_{𝑠} line is shown by the dotted line.",
           "confidence": "VERIFIED"
         }
       ],
@@ -4749,11 +4809,11 @@
       "questionNumber": 46,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "For rolling of slabs, determine the correctness or otherwise of the following Assertion [a] and Reason [r]. Assertion [a]: Grooves are made on the surface of the rolls parallel to their roll axes to achieve large thickness reduction in a short time.\n\nReason [r]: Given 𝜇 is the coefficient of friction between the rolls and the slab, and  is the angle of bite between the entrance plane and the centerline of the rolls, unaided entry of slab in the rolls can take place only if 𝜇 < tan 𝛼.",
+      "questionText": "For rolling of slabs, determine the correctness or otherwise of the following Assertion [a] and Reason [r].\n\nAssertion [a]: Grooves are made on the surface of the rolls parallel to their roll axes to achieve large thickness reduction in a short time.\n\nReason [r]: Given 𝜇 is the coefficient of friction between the rolls and the slab, and \\(\\alpha\\) is the angle of bite between the entrance plane and the centerline of the rolls, unaided entry of slab in the rolls can take place only if 𝜇 < tan 𝛼.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For rolling of slabs, determine the correctness or otherwise of the following Assertion [a] and Reason [r]. Assertion [a]: Grooves are made on the surface of the rolls parallel to their roll axes to achieve large thickness reduction in a short time.\n\nReason [r]: Given 𝜇 is the coefficient of friction between the rolls and the slab, and  is the angle of bite between the entrance plane and the centerline of the rolls, unaided entry of slab in the rolls can take place only if 𝜇 < tan 𝛼.",
+          "content": "For rolling of slabs, determine the correctness or otherwise of the following Assertion [a] and Reason [r].\n\nAssertion [a]: Grooves are made on the surface of the rolls parallel to their roll axes to achieve large thickness reduction in a short time.\n\nReason [r]: Given 𝜇 is the coefficient of friction between the rolls and the slab, and \\(\\alpha\\) is the angle of bite between the entrance plane and the centerline of the rolls, unaided entry of slab in the rolls can take place only if 𝜇 < tan 𝛼.",
           "confidence": "VERIFIED"
         }
       ],
@@ -4872,21 +4932,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Ultimate analysis of coal involves determination of moisture, volatile matter,\nfixed carbon and ash.",
+        "Ultimate analysis of coal involves determination of moisture, volatile matter, fixed carbon and ash.",
         "Reduction of wustite in blast furnace occurs at the lower part of the stack.",
         "Roasting involves reduction of sulfide ores to pure metals.",
-        "White metal (impure Cu2S) is produced by oxidizing Fe and S during\nsmelting of Cu-Fe matte."
+        "White metal (impure Cu_{2}S) is produced by oxidizing Fe and S during smelting of Cu-Fe matte."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Ultimate analysis of coal involves determination of moisture, volatile matter,\nfixed carbon and ash.",
+          "text": "Ultimate analysis of coal involves determination of moisture, volatile matter, fixed carbon and ash.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Ultimate analysis of coal involves determination of moisture, volatile matter,\nfixed carbon and ash.",
+              "content": "Ultimate analysis of coal involves determination of moisture, volatile matter, fixed carbon and ash.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4926,12 +4986,12 @@
         },
         {
           "id": "D",
-          "text": "White metal (impure Cu2S) is produced by oxidizing Fe and S during\nsmelting of Cu-Fe matte.",
+          "text": "White metal (impure Cu_{2}S) is produced by oxidizing Fe and S during smelting of Cu-Fe matte.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "White metal (impure Cu2S) is produced by oxidizing Fe and S during\nsmelting of Cu-Fe matte.",
+              "content": "White metal (impure Cu_{2}S) is produced by oxidizing Fe and S during smelting of Cu-Fe matte.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5100,21 +5160,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "In case of soldering and brazing, the filler material has a melting point\nlower than that of the metals joined.",
+        "In case of soldering and brazing, the filler material has a melting point lower than that of the metals joined.",
         "In tungsten inert gas welding, tungsten is the filler material.",
         "Friction welding is a solid-state joining process.",
-        "The following reaction is associated with thermit welding:"
+        "The following reaction is associated with thermit welding: 𝐶_{2}𝐻_{2} (𝑔) + \\(\\frac{5}{2}\\) _{2} (𝑔) →2𝐶𝑂_{2} (𝑔) + 𝐻_{2}𝑂 (𝑔) + Heat (∆𝐻) Note: (𝑔) stands for gas."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "In case of soldering and brazing, the filler material has a melting point\nlower than that of the metals joined.",
+          "text": "In case of soldering and brazing, the filler material has a melting point lower than that of the metals joined.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In case of soldering and brazing, the filler material has a melting point\nlower than that of the metals joined.",
+              "content": "In case of soldering and brazing, the filler material has a melting point lower than that of the metals joined.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5154,12 +5214,12 @@
         },
         {
           "id": "D",
-          "text": "The following reaction is associated with thermit welding:",
+          "text": "The following reaction is associated with thermit welding: 𝐶_{2}𝐻_{2} (𝑔) + \\(\\frac{5}{2}\\) _{2} (𝑔) →2𝐶𝑂_{2} (𝑔) + 𝐻_{2}𝑂 (𝑔) + Heat (∆𝐻) Note: (𝑔) stands for gas.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The following reaction is associated with thermit welding:",
+              "content": "The following reaction is associated with thermit welding: 𝐶_{2}𝐻_{2} (𝑔) + \\(\\frac{5}{2}\\) _{2} (𝑔) →2𝐶𝑂_{2} (𝑔) + 𝐻_{2}𝑂 (𝑔) + Heat (∆𝐻) Note: (𝑔) stands for gas.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5217,8 +5277,8 @@
       "options": [
         "Liquid dye penetration technique can be utilized for detecting surface cracks.",
         "In radiographic examination, internal cracks cannot be detected.",
-        "Eddy current-based techniques can be used for detecting sub-surface defects in\npure alumina at room temperature.",
-        "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high\ndamping capacity material (e.g., cast iron)."
+        "Eddy current-based techniques can be used for detecting sub-surface defects in pure alumina at room temperature.",
+        "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high damping capacity material (e.g., cast iron)."
       ],
       "optionImages": null,
       "richOptions": [
@@ -5254,12 +5314,12 @@
         },
         {
           "id": "C",
-          "text": "Eddy current-based techniques can be used for detecting sub-surface defects in\npure alumina at room temperature.",
+          "text": "Eddy current-based techniques can be used for detecting sub-surface defects in pure alumina at room temperature.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Eddy current-based techniques can be used for detecting sub-surface defects in\npure alumina at room temperature.",
+              "content": "Eddy current-based techniques can be used for detecting sub-surface defects in pure alumina at room temperature.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5269,12 +5329,12 @@
         },
         {
           "id": "D",
-          "text": "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high\ndamping capacity material (e.g., cast iron).",
+          "text": "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high damping capacity material (e.g., cast iron).",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high\ndamping capacity material (e.g., cast iron).",
+              "content": "Ultrasonic inspection is unsuitable for inspecting sub-surface defects in high damping capacity material (e.g., cast iron).",
               "confidence": "VERIFIED"
             }
           ],
@@ -5316,11 +5376,11 @@
       "questionNumber": 51,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "\\(\\frac{obtained}{x}\\)\n\n<u>𝑦</u> <u>8</u> <u>15</u> <u>19</u>\n\nIf the data is fit using the straight line\n\n𝑦 = 𝑚𝑥+ 𝑐 (where m and c are constants)\n\nusing the least-squares method, then the value of m is _________. (Round off to one decimal place).",
+      "questionText": "The following data is obtained from an experiment:\n\n\\(\\frac{x}{𝑦}\\) \\(\\frac{1}{8}\\) \\(\\frac{2}{15}\\) \\(\\frac{3}{19}\\)\n\nIf the data is fit using the straight line\n\n𝑦 = 𝑚𝑥+ 𝑐 (where m and c are constants)\n\nusing the least-squares method, then the value of m is _________. (Round off to one decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{obtained}{x}\\)\n\n<u>𝑦</u> <u>8</u> <u>15</u> <u>19</u>\n\nIf the data is fit using the straight line\n\n𝑦 = 𝑚𝑥+ 𝑐 (where m and c are constants)\n\nusing the least-squares method, then the value of m is _________. (Round off to one decimal place).",
+          "content": "The following data is obtained from an experiment:\n\n\\(\\frac{x}{𝑦}\\) \\(\\frac{1}{8}\\) \\(\\frac{2}{15}\\) \\(\\frac{3}{19}\\)\n\nIf the data is fit using the straight line\n\n𝑦 = 𝑚𝑥+ 𝑐 (where m and c are constants)\n\nusing the least-squares method, then the value of m is _________. (Round off to one decimal place).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5362,11 +5422,11 @@
       "questionNumber": 52,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "1 The integral \\int 𝑥𝑒^{-𝑥}𝑑𝑥 evaluates to ________. 0 (Round off to two decimal places)",
+      "questionText": "The integral \\int 𝑥𝑒^{-𝑥}𝑑𝑥 (Round off to two decimal places) 0 1 evaluates to ________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "1 The integral \\int 𝑥𝑒^{-𝑥}𝑑𝑥 evaluates to ________. 0 (Round off to two decimal places)",
+          "content": "The integral \\int 𝑥𝑒^{-𝑥}𝑑𝑥 (Round off to two decimal places) 0 1 evaluates to ________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5500,11 +5560,11 @@
       "questionNumber": 55,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "During carburization of a steel at 950 ℃, carbon concentration is measured as\n\ncarbon concentration at a depth of 0.6 𝑚𝑚 at the same carburization temperature is _____ ℎ𝑜𝑢𝑟𝑠. (Round off to the nearest integer).",
+      "questionText": "During carburization of a steel at 950 ℃, carbon concentration is measured as 8 wt.% at a depth of 0.3 𝑚𝑚 after one hour. The time required to get the same carbon concentration at a depth of 0.6 𝑚𝑚 at the same carburization temperature is _____ ℎ𝑜𝑢𝑟𝑠. (Round off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "During carburization of a steel at 950 ℃, carbon concentration is measured as\n\ncarbon concentration at a depth of 0.6 𝑚𝑚 at the same carburization temperature is _____ ℎ𝑜𝑢𝑟𝑠. (Round off to the nearest integer).",
+          "content": "During carburization of a steel at 950 ℃, carbon concentration is measured as 8 wt.% at a depth of 0.3 𝑚𝑚 after one hour. The time required to get the same carbon concentration at a depth of 0.6 𝑚𝑚 at the same carburization temperature is _____ ℎ𝑜𝑢𝑟𝑠. (Round off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5776,11 +5836,11 @@
       "questionNumber": 61,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "800 𝑔𝑟𝑎𝑚𝑠 of A-B alloy containing 20 wt.% B is held at temperature 𝑇_{1}. The weight of B dissolved in  at that temperature is ________ 𝑔𝑟𝑎𝑚𝑠. (Round off to the nearest integer).",
+      "questionText": "800 𝑔𝑟𝑎𝑚𝑠 of A-B alloy containing 20 wt.% B is held at temperature 𝑇_{1}. The weight of B dissolved in \\(\\alpha\\) at that temperature is ________ 𝑔𝑟𝑎𝑚𝑠. (Round off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "800 𝑔𝑟𝑎𝑚𝑠 of A-B alloy containing 20 wt.% B is held at temperature 𝑇_{1}. The weight of B dissolved in  at that temperature is ________ 𝑔𝑟𝑎𝑚𝑠. (Round off to the nearest integer).",
+          "content": "800 𝑔𝑟𝑎𝑚𝑠 of A-B alloy containing 20 wt.% B is held at temperature 𝑇_{1}. The weight of B dissolved in \\(\\alpha\\) at that temperature is ________ 𝑔𝑟𝑎𝑚𝑠. (Round off to the nearest integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5876,11 +5936,11 @@
       "questionNumber": 63,
       "sectionId": "mt_core",
       "sectionName": "Metallurgical Engineering",
-      "questionText": "A large rectangular component is undergoing fully-reversed cyclic loading, and the component is known to grow the dominant fatigue crack from the outer surface. If the stress amplitude (𝜎_{𝐴}) is 100 𝑀𝑃𝑎 and the critical stress 1 intensity factor 𝐾_{𝐼𝐶} of the material is 50 𝑀𝑃𝑎. 𝑚 2 then the crack length at which the component will fail catastrophically is ____ 𝑚𝑚. (Round off to one decimal place)\n\nGiven: The geometric factor 𝛼 for this loading condition is 1.12.",
+      "questionText": "A large rectangular component is undergoing fully-reversed cyclic loading, and the component is known to grow the dominant fatigue crack from the outer surface. If the stress amplitude (𝜎_{𝐴}) is 100 𝑀𝑃𝑎 and the critical stress intensity factor 𝐾_{𝐼𝐶} of the material is 50 𝑀𝑃𝑎. 𝑚 1 _{2} then the crack length at which the component will fail catastrophically is ____ 𝑚𝑚. (Round off to one decimal place)\n\nGiven: The geometric factor 𝛼 for this loading condition is 1.12.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A large rectangular component is undergoing fully-reversed cyclic loading, and the component is known to grow the dominant fatigue crack from the outer surface. If the stress amplitude (𝜎_{𝐴}) is 100 𝑀𝑃𝑎 and the critical stress 1 intensity factor 𝐾_{𝐼𝐶} of the material is 50 𝑀𝑃𝑎. 𝑚 2 then the crack length at which the component will fail catastrophically is ____ 𝑚𝑚. (Round off to one decimal place)\n\nGiven: The geometric factor 𝛼 for this loading condition is 1.12.",
+          "content": "A large rectangular component is undergoing fully-reversed cyclic loading, and the component is known to grow the dominant fatigue crack from the outer surface. If the stress amplitude (𝜎_{𝐴}) is 100 𝑀𝑃𝑎 and the critical stress intensity factor 𝐾_{𝐼𝐶} of the material is 50 𝑀𝑃𝑎. 𝑚 1 _{2} then the crack length at which the component will fail catastrophically is ____ 𝑚𝑚. (Round off to one decimal place)\n\nGiven: The geometric factor 𝛼 for this loading condition is 1.12.",
           "confidence": "VERIFIED"
         }
       ],

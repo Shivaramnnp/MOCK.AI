@@ -1,3 +1,4 @@
+/** @vitest-environment jsdom */
 import React from 'react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
@@ -36,8 +37,8 @@ describe('Competitive Exam Journey (Explore → SSC CHSL → Test → Results)',
     expect(screen.getByText('GATE')).toBeDefined();
     expect(screen.getByText(/Available \(76 Papers\)/i)).toBeDefined();
 
-    // Click on SSC CHSL
-    const viewButtons = screen.getAllByText('View Previous-Year Papers');
+    // Click on SSC CHSL (Full Mock Papers CTA for Whole Mock Test mode)
+    const viewButtons = screen.getAllByText('Full Mock Papers');
     expect(viewButtons.length).toBe(2);
     fireEvent.click(viewButtons[0]);
     expect(handleSelectExam).toHaveBeenCalledWith('ssc-chsl');

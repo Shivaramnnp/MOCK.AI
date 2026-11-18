@@ -60,7 +60,7 @@ describe('SSC CHSL 2024 Visual & Mathematical Fidelity Suite', () => {
     it('verifies Q64 trigonometry options have 1 instead of pipe symbol | and clean angle notation', () => {
       const q64 = paper.questions.find((q) => q.questionNumber === 64);
       expect(q64).toBeDefined();
-      expect(q64!.options).toEqual(['\\sqrt{2}', '1', '0', '2\\sqrt{2}']);
+      expect(q64!.options).toEqual(['√2', '1', '0', '2√2']);
       expect(q64!.options?.[1]).toBe('1');
       expect(q64!.options?.[1]).not.toBe('|');
       expect(q64!.correctAnswer).toBe('B');
@@ -69,12 +69,12 @@ describe('SSC CHSL 2024 Visual & Mathematical Fidelity Suite', () => {
       expect(q64!.questionText).toContain('cosecA = 2\\sqrt{2}');
     });
 
-    it('verifies Q47 dice problem stem and options are restored without Z artifact', () => {
+    it('verifies Q47 dice problem stem diagram and options are restored without Z artifact', () => {
       const q47 = paper.questions.find((q) => q.questionNumber === 47);
       expect(q47).toBeDefined();
       expect(q47!.options).toEqual(['5', '3', '7', '8']);
       expect(q47!.options?.includes('Z')).toBe(false);
-      expect(q47!.questionText).toContain('Six numbers 1, 3, 5, 6, 7 and 8 are written on different faces of a dice');
+      expect(q47!.diagramUrls).toEqual(['/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q47_diag.png']);
     });
   });
 
@@ -107,8 +107,8 @@ describe('SSC CHSL 2024 Visual & Mathematical Fidelity Suite', () => {
       const q62 = paper.questions.find((q) => q.questionNumber === 62);
       expect(q62).toBeDefined();
       expect(q62!.diagramUrls).toEqual(['/exam-assets/ssc/chsl/2024/ssc-chsl-2024-01jul-s1/q62_diag.png']);
-      // Stem text does not duplicate full OCR prompt
-      expect(q62!.questionText).toBe('');
+      // Stem text contains the recovered prompt text
+      expect(q62!.questionText).toContain('percentage of students enrolled in different activities');
       // Options are promoted to clean percentage text
       expect(q62!.options).toEqual(['6.82%', '7.11%', '5.82%', '5.81%']);
       expect(q62!.optionImages).toBeNull();

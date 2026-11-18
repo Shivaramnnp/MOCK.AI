@@ -109,6 +109,25 @@ export function buildPageSpatialGraph(
   const edges: DocumentGraphEdge[] = [];
   const elements = page.elements;
 
+  const makeEdge = (
+    src: string,
+    tgt: string,
+    rel: any,
+    dist: number,
+    wt: number
+  ): DocumentGraphEdge => ({
+    edgeId: `edge_${src}_${tgt}_${rel}`,
+    sourceNodeId: src,
+    targetNodeId: tgt,
+    sourceElementId: src,
+    targetElementId: tgt,
+    relation: rel,
+    distancePt: dist,
+    weight: wt,
+    confidence: wt,
+    decisionBasis: 'GEOMETRIC_HEURISTIC',
+  });
+
   for (let i = 0; i < elements.length; i++) {
     const a = elements[i];
 
@@ -123,20 +142,8 @@ export function buildPageSpatialGraph(
         b.bbox.y0 >= a.bbox.y0 - 1 &&
         b.bbox.y1 <= a.bbox.y1 + 1
       ) {
-        edges.push({
-          sourceElementId: a.elementId,
-          targetElementId: b.elementId,
-          relation: 'CONTAINS',
-          distancePt: 0,
-          weight: 1.0,
-        });
-        edges.push({
-          sourceElementId: b.elementId,
-          targetElementId: a.elementId,
-          relation: 'INSIDE',
-          distancePt: 0,
-          weight: 1.0,
-        });
+        edges.push(makeEdge(a.elementId, b.elementId, 'CONTAINS', 0, 1.0));
+        edges.push(makeEdge(b.elementId, a.elementId, 'INSIDE', 0, 1.0));
       }
 
       // Calculate center distances
@@ -153,33 +160,15 @@ export function buildPageSpatialGraph(
 
       // B. Alignment Relations
       if (Math.abs(a.bbox.x0 - b.bbox.x0) <= alignTol) {
-        edges.push({
-          sourceElementId: a.elementId,
-          targetElementId: b.elementId,
-          relation: 'ALIGNED_LEFT',
-          distancePt: Math.abs(a.bbox.x0 - b.bbox.x0),
-          weight: 0.95,
-        });
+        edges.push(makeEdge(a.elementId, b.elementId, 'ALIGNED_LEFT', Math.abs(a.bbox.x0 - b.bbox.x0), 0.95));
       }
 
       if (Math.abs(a.bbox.x1 - b.bbox.x1) <= alignTol) {
-        edges.push({
-          sourceElementId: a.elementId,
-          targetElementId: b.elementId,
-          relation: 'ALIGNED_RIGHT',
-          distancePt: Math.abs(a.bbox.x1 - b.bbox.x1),
-          weight: 0.95,
-        });
+        edges.push(makeEdge(a.elementId, b.elementId, 'ALIGNED_RIGHT', Math.abs(a.bbox.x1 - b.bbox.x1), 0.95));
       }
 
       if (Math.abs(a.bbox.y0 - b.bbox.y0) <= baseTol) {
-        edges.push({
-          sourceElementId: a.elementId,
-          targetElementId: b.elementId,
-          relation: 'ALIGNED_BASELINE',
-          distancePt: Math.abs(a.bbox.y0 - b.bbox.y0),
-          weight: 0.95,
-        });
+        edges.push(makeEdge(a.elementId, b.elementId, 'ALIGNED_BASELINE', Math.abs(a.bbox.y0 - b.bbox.y0), 0.95));
       }
 
       // C. Positional Direct Adjacency (ABOVE / BELOW / LEFT_OF / RIGHT_OF)
@@ -188,20 +177,8 @@ export function buildPageSpatialGraph(
       if (horizOverlap > 0) {
         // b is directly below a
         if (b.bbox.y0 >= a.bbox.y1 - 2 && b.bbox.y0 - a.bbox.y1 <= 60) {
-          edges.push({
-            sourceElementId: a.elementId,
-            targetElementId: b.elementId,
-            relation: 'ABOVE',
-            distancePt: Math.max(0, b.bbox.y0 - a.bbox.y1),
-            weight: 0.9,
-          });
-          edges.push({
-            sourceElementId: b.elementId,
-            targetElementId: a.elementId,
-            relation: 'BELOW',
-            distancePt: Math.max(0, b.bbox.y0 - a.bbox.y1),
-            weight: 0.9,
-          });
+          edges.push(makeEdge(a.elementId, b.elementId, 'ABOVE', Math.max(0, b.bbox.y0 - a.bbox.y1), 0.9));
+          edges.push(makeEdge(b.elementId, a.elementId, 'BELOW', Math.max(0, b.bbox.y0 - a.bbox.y1), 0.9));
         }
       }
 
@@ -210,20 +187,8 @@ export function buildPageSpatialGraph(
       if (vertOverlap > 0) {
         // b is directly to the right of a
         if (b.bbox.x0 >= a.bbox.x1 - 2 && b.bbox.x0 - a.bbox.x1 <= 100) {
-          edges.push({
-            sourceElementId: a.elementId,
-            targetElementId: b.elementId,
-            relation: 'LEFT_OF',
-            distancePt: Math.max(0, b.bbox.x0 - a.bbox.x1),
-            weight: 0.9,
-          });
-          edges.push({
-            sourceElementId: b.elementId,
-            targetElementId: a.elementId,
-            relation: 'RIGHT_OF',
-            distancePt: Math.max(0, b.bbox.x0 - a.bbox.x1),
-            weight: 0.9,
-          });
+          edges.push(makeEdge(a.elementId, b.elementId, 'LEFT_OF', Math.max(0, b.bbox.x0 - a.bbox.x1), 0.9));
+          edges.push(makeEdge(b.elementId, a.elementId, 'RIGHT_OF', Math.max(0, b.bbox.x0 - a.bbox.x1), 0.9));
         }
       }
 
@@ -232,13 +197,7 @@ export function buildPageSpatialGraph(
         const aCol = a.bbox.x1 <= midX ? 0 : 1;
         const bCol = b.bbox.x1 <= midX ? 0 : 1;
         if (aCol === bCol) {
-          edges.push({
-            sourceElementId: a.elementId,
-            targetElementId: b.elementId,
-            relation: 'SAME_COLUMN',
-            distancePt: euclideanDist,
-            weight: 0.8,
-          });
+          edges.push(makeEdge(a.elementId, b.elementId, 'SAME_COLUMN', euclideanDist, 0.8));
         }
       }
     }
@@ -285,9 +244,9 @@ export function buildPageSpatialGraph(
   return {
     documentId,
     pageNumber: page.pageNumber,
-    nodes,
+    nodes: nodes as any,
     edges,
     columns,
     readingFlow,
-  };
+  } as unknown as DocumentGraph;
 }

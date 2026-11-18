@@ -1,0 +1,32 @@
+# MOCK.AI — Supabase Staging Deployment Configuration
+# Specification: UADUE-P3.6-STAGING-001
+
+[project]
+id = "mockai-candidate-delivery-staging"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[db.pooler]
+enabled = true
+port = 54329
+pool_mode = "transaction"
+default_pool_size = 20
+
+[auth]
+enabled = true
+site_url = "https://staging.mockai.org"
+additional_redirect_urls = ["https://staging.mockai.org/callback"]
+jwt_expiry = 3600
+enable_signup = true
+
+[functions.candidate-delivery]
+verify_jwt = false # JWT is verified directly in handleCandidateDeliveryRequest for exact error reporting

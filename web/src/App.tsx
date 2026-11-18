@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Sparkles, CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { BottomNav } from './components/BottomNav';
@@ -23,6 +23,7 @@ import { AuthScreen } from './screens/AuthScreen';
 import { ForgotPasswordScreen } from './screens/ForgotPasswordScreen';
 import { ExploreScreen } from './screens/ExploreScreen';
 import { ExamDetailScreen } from './screens/ExamDetailScreen';
+import { TopicPracticeScreen } from './screens/TopicPracticeScreen';
 import { CompetitiveExamPlayerScreen } from './screens/CompetitiveExamPlayerScreen';
 import { CompetitiveExamResultsScreen } from './screens/CompetitiveExamResultsScreen';
 import { CommunityScreen } from './screens/CommunityScreen';
@@ -42,9 +43,15 @@ import { supabaseService } from './services/supabase';
 import { staffService } from './services/staffService';
 import { ExamService } from './services/examService';
 import { ExamSessionService } from './services/examSessionService';
+import { TopicPracticeCloudSync } from './services/practice/topicPracticeCloudSync';
+import { TopicPracticeService } from './services/practice/topicPracticeService';
+import { TopicClassificationStore } from './services/taxonomy/topicClassificationStore';
+import { clearDynamicPracticePapers } from './data/exams/catalog';
 import { ClassroomService } from './services/classroomService';
 import { ingestionService } from './services/ingestion/ingestionService';
 import { isIngestionError } from './types/ingestionErrors';
+import { CandidateApiClient } from './services/uadue/delivery/candidateApiClient';
+import { HttpCandidateDeliveryAdapter } from './services/uadue/delivery/httpCandidateDeliveryAdapter';
 import {
   AppRoute,
   TestHistory,
@@ -59,10 +66,52 @@ import {
   CommunityPostType,
 } from './types';
 
+function parseAppHash(rawHash: string): { route: AppRoute | null; subRoute?: string; paperId?: string } {
+  if (!rawHash) return { route: null };
+  const clean = rawHash.replace(/^#+/, '');
+  let paperIdFromQuery: string | undefined;
+  const qMatch = clean.match(/[?&]paperId=([a-zA-Z0-9_-]+)/i);
+  if (qMatch) paperIdFromQuery = qMatch[1];
+
+  const pathPart = clean.split('?')[0];
+  const parts = pathPart.split(/[#/]/).filter(Boolean);
+  const root = parts[0]?.toLowerCase() as AppRoute;
+
+  const validHashRoutes: AppRoute[] = [
+    'home',
+    'explore',
+    'explore_exam',
+    'topic_practice',
+    'exam_player',
+    'exam_results',
+    'community',
+    'staff',
+    'marketplace',
+    'classroom',
+    'analytics',
+    'profile',
+    'settings',
+  ];
+
+  if (root && validHashRoutes.includes(root)) {
+    const subRoute = parts[1];
+    const paperId = parts[2] || paperIdFromQuery;
+    return { route: root, subRoute, paperId };
+  }
+  return { route: null };
+}
+
 export const App: React.FC = () => {
   // Navigation & Screen State
   const [currentRoute, setCurrentRoute] = useState<AppRoute>('home');
   const [navigationStack, setNavigationStack] = useState<AppRoute[]>(['home']);
+  const [staffInitialPaperId, setStaffInitialPaperId] = useState<string | null>(() => {
+    if (typeof window !== 'undefined') {
+      const parsed = parseAppHash(window.location.hash);
+      return parsed.paperId || null;
+    }
+    return null;
+  });
 
   // Toast Notification State
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' | 'error' } | null>(null);
@@ -139,6 +188,43 @@ export const App: React.FC = () => {
   });
   const [activeExamSession, setActiveExamSession] = useState<ExamTestSession | null>(null);
   const [userActiveSessions, setUserActiveSessions] = useState<ExamTestSession[]>([]);
+  const [topicPracticeInitialState, setTopicPracticeInitialState] = useState<{
+    examId?: string;
+    subjectId?: string;
+    topicId?: string;
+  } | null>(null);
+
+  // Authoritative Delivery Gateway & Feature Gate (Phase 3.6O)
+  const isAuthoritativeDeliveryEnabled = import.meta.env.VITE_ENABLE_AUTHORITATIVE_DELIVERY === 'true';
+
+  const deliveryApiClient = useMemo(() => {
+    if (!activeExamPaper) return undefined;
+    const isAuth = Boolean(
+      (activeExamPaper as any).isPresentationOnly ||
+      (activeExamPaper as any).deliveryMode === 'AUTHORITATIVE'
+    );
+    if (!isAuth) return undefined;
+    if (!isAuthoritativeDeliveryEnabled) return undefined;
+
+    const deliveryApiUrl =
+      import.meta.env.VITE_UADUE_DELIVERY_API_URL ||
+      (import.meta.env.VITE_SUPABASE_STAGING_URL
+        ? `${import.meta.env.VITE_SUPABASE_STAGING_URL}/functions/v1/delivery-api`
+        : '/api/uadue/delivery');
+
+    const adapter = new HttpCandidateDeliveryAdapter({
+      baseUrl: deliveryApiUrl,
+      getAuthToken: async () => {
+        return await supabaseService.getAccessToken();
+      },
+    });
+
+    return new CandidateApiClient({
+      api: adapter,
+      tenantId: (profile as any).tenantId || 'mockai-staging',
+      candidateId: profile.uid,
+    });
+  }, [activeExamPaper, isAuthoritativeDeliveryEnabled, profile.uid, (profile as any).tenantId]);
 
   // Community State & Prefilled Context
   const [communityInitialContext, setCommunityInitialContext] = useState<{
@@ -197,30 +283,22 @@ export const App: React.FC = () => {
     }
 
     // Sync initial hash route if valid
-    const validHashRoutes: AppRoute[] = [
-      'home',
-      'explore',
-      'explore_exam',
-      'exam_player',
-      'exam_results',
-      'community',
-      'staff',
-      'marketplace',
-      'classroom',
-      'analytics',
-      'profile',
-      'settings',
-    ];
-    const hash = window.location.hash.replace('#', '') as AppRoute;
-    if (hash && validHashRoutes.includes(hash)) {
-      setCurrentRoute(hash);
-      setNavigationStack(['home', hash]);
+    const initialParsed = parseAppHash(window.location.hash);
+    if (initialParsed.route) {
+      setCurrentRoute(initialParsed.route);
+      setNavigationStack(['home', initialParsed.route]);
+      if (initialParsed.paperId) {
+        setStaffInitialPaperId(initialParsed.paperId);
+      }
     }
 
     const handleHashChange = () => {
-      const newHash = window.location.hash.replace('#', '') as AppRoute;
-      if (newHash && validHashRoutes.includes(newHash)) {
-        setCurrentRoute(newHash);
+      const parsed = parseAppHash(window.location.hash);
+      if (parsed.route) {
+        const nextRoute = parsed.route;
+        setCurrentRoute((prev) => (prev === nextRoute ? prev : nextRoute));
+        const nextPaperId = parsed.paperId || null;
+        setStaffInitialPaperId((prev) => (prev === nextPaperId ? prev : nextPaperId));
       }
     };
 
@@ -229,14 +307,26 @@ export const App: React.FC = () => {
     async function checkAuthSession() {
       try {
         const { user, isAuthenticated: authed } = await supabaseService.getInitialSession();
+        // Hydrate authoritative staff-verified & rejected classifications on boot
+        TopicPracticeCloudSync.hydrateVerifiedClassificationsRemote()
+          .then((res) => {
+            if (res.applied > 0) TopicPracticeService.clearIndexCache();
+          })
+          .catch(() => {});
+
         if (authed && user) {
           setProfile(user);
           setIsAuthenticated(true);
           refreshUserActiveSessions(user.uid);
-          staffService.getStaffAuthStatus(user.uid).then((res) => setIsStaff(res.isStaff));
+          TopicPracticeCloudSync.flushPendingCloudSync(user.uid).catch(() => {});
+          staffService.getStaffAuthStatus(user.uid).then((res) => {
+            setIsStaff(res.isStaff);
+            TopicClassificationStore.setActiveStaffUser(res.isStaff ? user.uid : null);
+          });
         } else {
           setIsAuthenticated(false);
           setIsStaff(false);
+          TopicClassificationStore.clearSensitiveSessionState();
           refreshUserActiveSessions('guest');
         }
       } catch (err) {
@@ -250,28 +340,46 @@ export const App: React.FC = () => {
 
     checkAuthSession();
 
-    // Subscribe to auth state changes (OAuth redirects, session refreshes, password recovery)
+    // Subscribe to auth state changes (OAuth redirects, session refreshes, account switching, sign-out)
     const unsubscribeAuth = supabaseService.onAuthStateChange((user, event) => {
       if (event === 'PASSWORD_RECOVERY') {
         setIsPasswordRecoveryMode(true);
       }
-      if (user) {
-        setProfile(user);
-        setIsAuthenticated(true);
-        refreshUserActiveSessions(user.uid);
-        staffService.getStaffAuthStatus(user.uid).then((res) => setIsStaff(res.isStaff));
-        // Only strip URL tokens if NOT currently in password recovery mode
-        if (
-          typeof window !== 'undefined' &&
-          !window.location.hash.includes('reset-password') &&
-          !window.location.hash.includes('type=recovery') &&
-          !window.location.search.includes('type=recovery') &&
-          (window.location.hash.includes('access_token=') || window.location.search.includes('code='))
-        ) {
-          window.history.replaceState(null, '', window.location.pathname);
-        }
-      } else {
+      if (event === 'SIGNED_OUT' || !user) {
+        TopicPracticeCloudSync.abortActiveFlushes();
+        TopicClassificationStore.clearSensitiveSessionState();
+        clearDynamicPracticePapers();
+        TopicPracticeService.clearIndexCache();
+        setIsStaff(false);
         refreshUserActiveSessions('guest');
+        return;
+      }
+
+      TopicPracticeCloudSync.abortActiveFlushes();
+      TopicClassificationStore.clearSensitiveSessionState();
+      clearDynamicPracticePapers();
+      setProfile(user);
+      setIsAuthenticated(true);
+      refreshUserActiveSessions(user.uid);
+      TopicPracticeCloudSync.flushPendingCloudSync(user.uid).catch(() => {});
+      TopicPracticeCloudSync.hydrateVerifiedClassificationsRemote()
+        .then((res) => {
+          if (res.applied > 0) TopicPracticeService.clearIndexCache();
+        })
+        .catch(() => {});
+      staffService.getStaffAuthStatus(user.uid).then((res) => {
+        setIsStaff(res.isStaff);
+        TopicClassificationStore.setActiveStaffUser(res.isStaff ? user.uid : null);
+      });
+      // Only strip URL tokens if NOT currently in password recovery mode
+      if (
+        typeof window !== 'undefined' &&
+        !window.location.hash.includes('reset-password') &&
+        !window.location.hash.includes('type=recovery') &&
+        !window.location.search.includes('type=recovery') &&
+        (window.location.hash.includes('access_token=') || window.location.search.includes('code='))
+      ) {
+        window.history.replaceState(null, '', window.location.pathname);
       }
     });
 
@@ -281,6 +389,23 @@ export const App: React.FC = () => {
     };
   }, []);
 
+  // Flush offline Topic Practice queue & re-hydrate classifications automatically on network reconnect
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleOnline = () => {
+      if (isAuthenticated && profile.uid) {
+        TopicPracticeCloudSync.flushPendingCloudSync(profile.uid, { forceRetry: true }).catch(() => {});
+      }
+      TopicPracticeCloudSync.hydrateVerifiedClassificationsRemote()
+        .then((res) => {
+          if (res.applied > 0) TopicPracticeService.clearIndexCache();
+        })
+        .catch(() => {});
+    };
+    window.addEventListener('online', handleOnline);
+    return () => window.removeEventListener('online', handleOnline);
+  }, [isAuthenticated, profile.uid]);
+
   // Refresh active sessions on route changes to 'home'
   useEffect(() => {
     if (currentRoute === 'home') {
@@ -289,9 +414,10 @@ export const App: React.FC = () => {
   }, [currentRoute, refreshUserActiveSessions]);
 
   const handleResumeExamSession = async (sess: ExamTestSession) => {
-    let paper = ExamService.getPaperById(sess.paperId);
+    const activeUid = isAuthenticated ? profile.uid : 'guest';
+    let paper = ExamService.getPaperById(sess.paperId, activeUid);
     if (!paper) {
-      const fetched = await ExamService.getPaperByIdAsync(sess.paperId);
+      const fetched = await ExamService.getPaperByIdAsync(sess.paperId, activeUid);
       if (fetched) paper = fetched;
     }
 
@@ -359,7 +485,8 @@ export const App: React.FC = () => {
   };
 
   const handleNavigateToQuestion = (examId: string, paperId: string, _questionNumber?: number) => {
-    const paper = ExamService.getPaperById(paperId);
+    const activeUid = isAuthenticated ? profile.uid : 'guest';
+    const paper = ExamService.getPaperById(paperId, activeUid);
     if (paper) {
       setActiveExamPaper(paper);
       setActiveExamSession(null);
@@ -371,7 +498,8 @@ export const App: React.FC = () => {
   };
 
   const handleNavigateToPaper = (paperId: string) => {
-    const paper = ExamService.getPaperById(paperId);
+    const activeUid = isAuthenticated ? profile.uid : 'guest';
+    const paper = ExamService.getPaperById(paperId, activeUid);
     if (paper) {
       setActiveExamPaper(paper);
       setActiveExamSession(null);
@@ -380,6 +508,28 @@ export const App: React.FC = () => {
       navigateTo('explore');
     }
   };
+
+  const handleStaffNavigateToPaper = useCallback((paperId: string | null) => {
+    setStaffInitialPaperId(paperId);
+    if (typeof window !== 'undefined') {
+      if (paperId) {
+        if (!window.location.hash.includes(paperId)) {
+          window.location.hash = `staff#paper-testing#${paperId}`;
+        }
+      } else {
+        window.location.hash = 'staff#paper-testing';
+      }
+    }
+    setCurrentRoute((prev) => {
+      if (prev === 'staff') return prev;
+      setNavigationStack((stack) => (stack[stack.length - 1] === 'staff' ? stack : [...stack, 'staff']));
+      return 'staff';
+    });
+  }, []);
+
+  const handleStaffNavigateToQuestion = useCallback((_examId: string, paperId: string, _questionNumber?: number) => {
+    handleStaffNavigateToPaper(paperId);
+  }, [handleStaffNavigateToPaper]);
 
   const navigateBack = () => {
     setNavigationStack((prev) => {
@@ -898,6 +1048,10 @@ export const App: React.FC = () => {
   };
 
   const handleSignOut = async () => {
+    TopicPracticeCloudSync.abortActiveFlushes();
+    TopicClassificationStore.clearSensitiveSessionState(profile.uid);
+    clearDynamicPracticePapers();
+    TopicPracticeService.clearIndexCache();
     try {
       await supabaseService.signOut();
     } catch (err) {
@@ -1026,6 +1180,10 @@ export const App: React.FC = () => {
               setTests(storage.getTests());
               showToast('Test deleted from library.', 'info');
             }}
+            onTopicPractice={() => {
+              setTopicPracticeInitialState({ examId: 'gate' });
+              navigateTo('topic_practice');
+            }}
           />
         )}
 
@@ -1035,6 +1193,11 @@ export const App: React.FC = () => {
               setSelectedExamId(examId);
               navigateTo('explore_exam');
             }}
+            onTopicPractice={(examId) => {
+              setSelectedExamId(examId);
+              setTopicPracticeInitialState({ examId });
+              navigateTo('topic_practice');
+            }}
           />
         )}
 
@@ -1042,7 +1205,44 @@ export const App: React.FC = () => {
           <ExamDetailScreen
             examId={selectedExamId}
             onBack={() => navigateTo('explore')}
+            isStaff={isStaff}
+            onStaffTestPaper={handleStaffNavigateToPaper}
+            onTopicPractice={(examId) => {
+              setSelectedExamId(examId);
+              setTopicPracticeInitialState({ examId });
+              navigateTo('topic_practice');
+            }}
             onStartPaper={(paper) => {
+              const isAuth = Boolean(
+                (paper as any).isPresentationOnly ||
+                (paper as any).deliveryMode === 'AUTHORITATIVE'
+              );
+              if (isAuth && !isAuthoritativeDeliveryEnabled) {
+                showToast(
+                  'Authoritative Delivery Locked: Production release is not authorized. Candidate player remains locked.',
+                  'error'
+                );
+                return;
+              }
+              setActiveExamPaper(paper);
+              setActiveExamSession(null);
+              navigateTo('exam_player');
+            }}
+          />
+        )}
+
+        {currentRoute === 'topic_practice' && (
+          <TopicPracticeScreen
+            initialExamId={topicPracticeInitialState?.examId || selectedExamId || 'gate'}
+            initialSubjectId={topicPracticeInitialState?.subjectId}
+            initialTopicId={topicPracticeInitialState?.topicId}
+            userId={profile.uid}
+            onBack={() => navigateTo('home')}
+            onNavigateToFullLength={(examId) => {
+              setSelectedExamId(examId);
+              navigateTo('explore_exam');
+            }}
+            onStartTest={(paper) => {
               setActiveExamPaper(paper);
               setActiveExamSession(null);
               navigateTo('exam_player');
@@ -1056,6 +1256,7 @@ export const App: React.FC = () => {
             initialSession={activeExamSession}
             userId={profile.uid}
             user={profile}
+            deliveryApiClient={deliveryApiClient}
             onExit={() => {
               refreshUserActiveSessions();
               navigateTo('home');
@@ -1079,6 +1280,13 @@ export const App: React.FC = () => {
             onExplore={() => {
               refreshUserActiveSessions();
               navigateTo('explore');
+            }}
+            onPracticeTopic={(topicId: string, topicName?: string) => {
+              setTopicPracticeInitialState({
+                examId: activeExamPaper.examId,
+                topicId,
+              });
+              navigateTo('topic_practice');
             }}
             onReportQuestion={handleReportQuestion}
             onAttachAnswerKey={async (akInput) => {
@@ -1166,10 +1374,11 @@ export const App: React.FC = () => {
             onNavigateExplore={() => navigateTo('explore')}
             onReviewTest={(testId, isCompetitive, paperId) => {
               if (isCompetitive && paperId) {
-                const paper = ExamService.getPaperById(paperId);
-                const session = ExamSessionService.getLocalSessions(
-                  isAuthenticated ? profile.uid : 'guest'
-                ).find((s) => s.sessionId === testId);
+                const activeUid = isAuthenticated ? profile.uid : 'guest';
+                const paper = ExamService.getPaperById(paperId, activeUid);
+                const session = ExamSessionService.getLocalSessions(activeUid).find(
+                  (s) => s.sessionId === testId
+                );
                 if (paper && session) {
                   setActiveExamPaper(paper);
                   setActiveExamSession(session);
@@ -1198,9 +1407,10 @@ export const App: React.FC = () => {
         {currentRoute === 'staff' && (
           <StaffDashboardScreen
             user={isAuthenticated ? profile : null}
+            initialPaperId={staffInitialPaperId || undefined}
             onNavigate={navigateTo}
-            onNavigateToQuestion={handleNavigateToQuestion}
-            onNavigateToPaper={handleNavigateToPaper}
+            onNavigateToQuestion={handleStaffNavigateToQuestion}
+            onNavigateToPaper={handleStaffNavigateToPaper}
           />
         )}
 
@@ -1330,6 +1540,7 @@ export const App: React.FC = () => {
         <BottomNav
           currentRoute={currentRoute}
           onNavigate={handleNavClick}
+          isStaff={isStaff}
         />
       )}
 

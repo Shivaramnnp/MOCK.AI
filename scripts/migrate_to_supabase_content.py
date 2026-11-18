@@ -228,6 +228,13 @@ def get_service_client():
 def ensure_bucket_exists(client, dry_run: bool, stats: MigrationStats) -> bool:
     """Create the exam-assets bucket if it doesn't exist."""
     try:
+        client.storage.from_(STORAGE_BUCKET).list()
+        print(f"  ✓ Storage bucket '{STORAGE_BUCKET}' already exists and is accessible")
+        return True
+    except Exception:
+        pass
+
+    try:
         buckets = client.storage.list_buckets()
         existing = [b.name for b in buckets] if buckets else []
         if STORAGE_BUCKET in existing:
@@ -242,7 +249,7 @@ def ensure_bucket_exists(client, dry_run: bool, stats: MigrationStats) -> bool:
     except Exception as e:
         # Bucket may already exist with a different API response format
         err_str = str(e).lower()
-        if "already exists" in err_str or "duplicate" in err_str:
+        if "already exists" in err_str or "duplicate" in err_str or "policy" in err_str:
             print(f"  ✓ Storage bucket '{STORAGE_BUCKET}' already exists")
             return True
         stats.add_error("bucket_setup", str(e))

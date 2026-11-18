@@ -464,15 +464,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/xe/q4_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -556,10 +550,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
-      "diagramUrl": "/exam-assets/gate/2025/xe/q4_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/xe/q4_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -1251,11 +1243,11 @@
       "questionNumber": 11,
       "sectionId": "xe_a",
       "sectionName": "Section A: Engineering Mathematics (Compulsory)",
-      "questionText": "Let 𝑋 and be two random variables with mean 0, variance 1, and correlation coefficient \\(\\frac{𝑌be^{1}}{3}\\) . Then the value of Var(𝑋+ 3𝑌) is equal to",
+      "questionText": "Let 𝑋 and be two random variables with mean 0, variance 1, and correlation coefficient \\(\\frac{1}{3}\\) . Then the value of Var(𝑋+ 3𝑌) is equal to",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑋 and be two random variables with mean 0, variance 1, and correlation coefficient \\(\\frac{𝑌be^{1}}{3}\\) . Then the value of Var(𝑋+ 3𝑌) is equal to",
+          "content": "Let 𝑋 and be two random variables with mean 0, variance 1, and correlation coefficient \\(\\frac{1}{3}\\) . Then the value of Var(𝑋+ 3𝑌) is equal to",
           "confidence": "VERIFIED"
         }
       ],
@@ -1374,75 +1366,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}\\)",
-        "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)",
-        "\\(The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}\\)",
-        "\\(The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)"
+        "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}",
+        "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
+        "The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}",
+        "The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}\\)",
+          "text": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}",
-              "content": "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}\\)",
+              "type": "text",
+              "content": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: -1 < 𝑥< 0, 𝑦< 0}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)",
+          "text": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
-              "content": "\\(The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)",
+              "type": "text",
+              "content": "The PDE is hyperbolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}\\)",
+          "text": "The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}",
-              "content": "\\(The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}\\)",
+              "type": "text",
+              "content": "The PDE is elliptic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 0 < 𝑥< 1, 𝑦> 0}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)",
+          "text": "The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
-              "content": "\\(The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}\\)",
+              "type": "text",
+              "content": "The PDE is parabolic in the region {(𝑥, 𝑦) \\in ℝ^{2}: 1 < 𝑥< \\infty , 𝑦< 0}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -2020,7 +2008,7 @@
       "questionType": "MCQ",
       "options": [
         "( \\(\\frac{3}{2}\\), 0) is a point of local maxima of 𝑓.",
-        "\\((0, 3 _{4}) is a point of local minima of 𝑓.\\)",
+        "(0, 3 _{4}) is a point of local minima of 𝑓.",
         "( \\(\\frac{3}{2}\\), 3 _{4}) is a point of local maxima of 𝑓.",
         "( \\(\\frac{3}{2}\\), 3 _{4}) is a saddle point of 𝑓."
       ],
@@ -2043,18 +2031,17 @@
         },
         {
           "id": "B",
-          "text": "\\((0, 3 _{4}) is a point of local minima of 𝑓.\\)",
+          "text": "(0, 3 _{4}) is a point of local minima of 𝑓.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(0, 3 _{4}) is a point of local minima of 𝑓.",
-              "content": "\\((0, 3 _{4}) is a point of local minima of 𝑓.\\)",
+              "type": "text",
+              "content": "(0, 3 _{4}) is a point of local minima of 𝑓.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -2825,11 +2812,11 @@
       "questionNumber": 27,
       "sectionId": "xe_b",
       "sectionName": "Section B: Fluid Mechanics",
-      "questionText": "Conservation of mass for a steady axisymmetric flow field in the cylindrical (r, z) coordinates is:\n\n\\(\\frac{1𝜕(𝑟𝑉𝑟)}{𝑟}\\) \\(\\frac{1𝜕(𝑟𝑉𝑟)}{𝑟𝜕𝑟}\\) 1 𝜕(𝑟𝑉𝑟) + <u>𝜕𝑉𝑧</u> 0 𝜕𝑧= 0 Here, 𝑉_{𝑟} and 𝑉_{𝑧} are radial and axial components of velocity, respectively. Which one of the following options is correct if 𝜓 is the stream function?",
+      "questionText": "Conservation of mass for a steady axisymmetric flow field in the cylindrical (r, z) coordinates is:\n\n<u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) <u>𝜕𝑉𝑧</u> 𝑟 <u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) <u>𝜕𝑉𝑧</u> 𝜕𝑟 <u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) + <u>𝜕𝑉𝑧</u> 0 𝜕𝑧= 0 Here, 𝑉_{𝑟} and 𝑉_{𝑧} are radial and axial components of velocity, respectively. Which one of the following options is correct if 𝜓 is the stream function?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Conservation of mass for a steady axisymmetric flow field in the cylindrical (r, z) coordinates is:\n\n\\(\\frac{1𝜕(𝑟𝑉𝑟)}{𝑟}\\) \\(\\frac{1𝜕(𝑟𝑉𝑟)}{𝑟𝜕𝑟}\\) 1 𝜕(𝑟𝑉𝑟) + <u>𝜕𝑉𝑧</u> 0 𝜕𝑧= 0 Here, 𝑉_{𝑟} and 𝑉_{𝑧} are radial and axial components of velocity, respectively. Which one of the following options is correct if 𝜓 is the stream function?",
+          "content": "Conservation of mass for a steady axisymmetric flow field in the cylindrical (r, z) coordinates is:\n\n<u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) <u>𝜕𝑉𝑧</u> 𝑟 <u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) <u>𝜕𝑉𝑧</u> 𝜕𝑟 <u>1</u> <u>𝜕(𝑟𝑉𝑟</u>) + <u>𝜕𝑉𝑧</u> 0 𝜕𝑧= 0 Here, 𝑉_{𝑟} and 𝑉_{𝑧} are radial and axial components of velocity, respectively. Which one of the following options is correct if 𝜓 is the stream function?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2839,21 +2826,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
-        "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
-        "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
-        "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)"
+        "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟",
+        "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
+        "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
+        "𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+          "text": "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+              "content": "𝑉_{𝑟} = \\(\\frac{𝜕𝜓}{𝜕𝑧}\\) and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟",
               "confidence": "VERIFIED"
             }
           ],
@@ -2863,42 +2850,44 @@
         },
         {
           "id": "B",
-          "text": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+          "text": "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+              "type": "math",
+              "latex": "𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟",
+              "content": "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+          "text": "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑟}\\)",
+              "type": "math",
+              "latex": "𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= 1 𝑟 𝜕𝜓 𝜕𝑟",
+              "content": "\\(𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= 1 𝑟 𝜕𝜓 𝜕𝑟\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)",
+          "text": "𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑉_{𝑟} = \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) \\(\\frac{1𝜕𝜓}{𝑟𝜕𝑧}\\) and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)",
+              "content": "𝑉_{𝑟}= 1 𝑟 𝜕𝜓 _{𝜕𝑧} and 𝑉_{𝑧}= - \\(\\frac{𝜕𝜓}{𝜕𝑟}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3805,22 +3794,22 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
-        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
-        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
-        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)"
+        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
+        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
+        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)",
+        "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2",
-              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2",
+              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3830,13 +3819,13 @@
         },
         {
           "id": "B",
-          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2",
-              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2",
+              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 = 𝑉𝑆𝑑𝑆 2\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3846,13 +3835,13 @@
         },
         {
           "id": "C",
-          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2",
-              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2",
+              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3862,13 +3851,13 @@
         },
         {
           "id": "D",
-          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+          "text": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2",
-              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2\\)",
+              "latex": "∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2",
+              "content": "\\(∆ℎ= ℎ_{𝑃}+ ℎ_{𝑄}+ ℎ_{𝑅}+ ℎ_{𝑆} and 𝑉_{𝑃}𝑑_{𝑃} 2 = 𝑉𝑄𝑑𝑄 2 = 𝑉𝑅𝑑𝑅 2 + 𝑉𝑆𝑑𝑆 2\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4457,8 +4446,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(m^{2}\\)",
-        "m-1",
+        "\\(A m^{2}\\)",
+        "A m-1",
         "Wb m-2",
         "\\(Wb m^{2}\\)"
       ],
@@ -4466,13 +4455,13 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(m^{2}\\)",
+          "text": "\\(A m^{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "m^{2}",
-              "content": "\\(m^{2}\\)",
+              "latex": "A m^{2}",
+              "content": "\\(A m^{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4482,12 +4471,12 @@
         },
         {
           "id": "B",
-          "text": "m-1",
+          "text": "A m-1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "m-1",
+              "content": "A m-1",
               "confidence": "VERIFIED"
             }
           ],
@@ -4568,22 +4557,22 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(= 0 at T \\le T_{c}\\)",
-        "\\(= 0 at T > T_{c}\\)",
-        "\\(\\ne 0 at T \\le T_{c}\\)",
+        "\\(B = 0 at T \\le T_{c}\\)",
+        "\\(B = 0 at T > T_{c}\\)",
+        "\\(B \\ne 0 at T \\le T_{c}\\)",
         "\\(\\nabla B = 0 at T = T_{c}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(= 0 at T \\le T_{c}\\)",
+          "text": "\\(B = 0 at T \\le T_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= 0 at T \\le T_{c}",
-              "content": "\\(= 0 at T \\le T_{c}\\)",
+              "latex": "B = 0 at T \\le T_{c}",
+              "content": "\\(B = 0 at T \\le T_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4593,13 +4582,13 @@
         },
         {
           "id": "B",
-          "text": "\\(= 0 at T > T_{c}\\)",
+          "text": "\\(B = 0 at T > T_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= 0 at T > T_{c}",
-              "content": "\\(= 0 at T > T_{c}\\)",
+              "latex": "B = 0 at T > T_{c}",
+              "content": "\\(B = 0 at T > T_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4609,13 +4598,13 @@
         },
         {
           "id": "C",
-          "text": "\\(\\ne 0 at T \\le T_{c}\\)",
+          "text": "\\(B \\ne 0 at T \\le T_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "\\ne 0 at T \\le T_{c}",
-              "content": "\\(\\ne 0 at T \\le T_{c}\\)",
+              "latex": "B \\ne 0 at T \\le T_{c}",
+              "content": "\\(B \\ne 0 at T \\le T_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5682,11 +5671,11 @@
       "questionNumber": 57,
       "sectionId": "xe_c",
       "sectionName": "Section C: Materials Science",
-      "questionText": "A diffraction pattern is obtained from a powdered sample of a pure element, which has FCC crystal structure. If x and are the Bragg angles of the first and the third peaks, respectively, then the ratio, \\(\\frac{yarethesin𝑦}{sin𝑥}\\) , is (rounded off to one decimal place) ________________",
+      "questionText": "A diffraction pattern is obtained from a powdered sample of a pure element, which has FCC crystal structure. If x and are the Bragg angles of the first and the third peaks, respectively, then the ratio, \\(\\frac{sin𝑦}{sin𝑥}\\) , is (rounded off to one decimal place) ________________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A diffraction pattern is obtained from a powdered sample of a pure element, which has FCC crystal structure. If x and are the Bragg angles of the first and the third peaks, respectively, then the ratio, \\(\\frac{yarethesin𝑦}{sin𝑥}\\) , is (rounded off to one decimal place) ________________",
+          "content": "A diffraction pattern is obtained from a powdered sample of a pure element, which has FCC crystal structure. If x and are the Bragg angles of the first and the third peaks, respectively, then the ratio, \\(\\frac{sin𝑦}{sin𝑥}\\) , is (rounded off to one decimal place) ________________",
           "confidence": "VERIFIED"
         }
       ],
@@ -5728,11 +5717,11 @@
       "questionNumber": 58,
       "sectionId": "xe_c",
       "sectionName": "Section C: Materials Science",
-      "questionText": "For a pure element with a BCC crystal structure, the surface energies per unit area of {100} and {110} free surfaces are S_{100} and S_{110}, respectively. The ratio, \\(\\frac{unitarea𝑆100}{S^{110}}\\) , is (rounded off to one decimal place) __________",
+      "questionText": "For a pure element with a BCC crystal structure, the surface energies per unit area of {100} and {110} free surfaces are S_{100} and S_{110}, respectively. The ratio, \\(\\frac{𝑆100}{S^{110}}\\) , is (rounded off to one decimal place) __________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For a pure element with a BCC crystal structure, the surface energies per unit area of {100} and {110} free surfaces are S_{100} and S_{110}, respectively. The ratio, \\(\\frac{unitarea𝑆100}{S^{110}}\\) , is (rounded off to one decimal place) __________",
+          "content": "For a pure element with a BCC crystal structure, the surface energies per unit area of {100} and {110} free surfaces are S_{100} and S_{110}, respectively. The ratio, \\(\\frac{𝑆100}{S^{110}}\\) , is (rounded off to one decimal place) __________",
           "confidence": "VERIFIED"
         }
       ],
@@ -5912,11 +5901,11 @@
       "questionNumber": 62,
       "sectionId": "xe_c",
       "sectionName": "Section C: Materials Science",
-      "questionText": "The standard free energy change for the reaction, SO_{2} + is given by ∆G^{o} = - 94600 + 89.37T, where T is in Kelvin and ∆G^{o} is in Joule. The \\(\\frac{1}{2Kelvin}\\) O_{2} ⇌SO_{3} at equilibrium\n\nequilibrium constant (K_{P}) at 1050 K is (rounded off to two decimal places) ____________\n\nGiven: Universal gas constant (R) = 8.314 J K-1 mol-1",
+      "questionText": "The standard free energy change for the reaction, SO_{2} + is given by ∆G^{o} = - 94600 + 89.37T, where T is in Kelvin and ∆G^{o} is in Joule. The \\(\\frac{1}{2}\\) O_{2} ⇌SO_{3} at equilibrium\n\nequilibrium constant (K_{P}) at 1050 K is (rounded off to two decimal places) ____________\n\nGiven: Universal gas constant (R) = 8.314 J K-1 mol-1",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The standard free energy change for the reaction, SO_{2} + is given by ∆G^{o} = - 94600 + 89.37T, where T is in Kelvin and ∆G^{o} is in Joule. The \\(\\frac{1}{2Kelvin}\\) O_{2} ⇌SO_{3} at equilibrium\n\nequilibrium constant (K_{P}) at 1050 K is (rounded off to two decimal places) ____________\n\nGiven: Universal gas constant (R) = 8.314 J K-1 mol-1",
+          "content": "The standard free energy change for the reaction, SO_{2} + is given by ∆G^{o} = - 94600 + 89.37T, where T is in Kelvin and ∆G^{o} is in Joule. The \\(\\frac{1}{2}\\) O_{2} ⇌SO_{3} at equilibrium\n\nequilibrium constant (K_{P}) at 1050 K is (rounded off to two decimal places) ____________\n\nGiven: Universal gas constant (R) = 8.314 J K-1 mol-1",
           "confidence": "VERIFIED"
         }
       ],
@@ -5958,11 +5947,11 @@
       "questionNumber": 63,
       "sectionId": "xe_c",
       "sectionName": "Section C: Materials Science",
-      "questionText": "The slopes of reduction potential versus pH plots for the two reactions, NiO + 2H^{+} + 2e^{-}⇌Ni + H_{2}O and 2H^{+} + 2e^{-}⇌H_{2} , at 298 K and one atmospheric pressure are S1 and S2, respectively. The ratio \\(\\frac{,at𝑆1}{𝑆2}\\) is (rounded off to one decimal place) __________",
+      "questionText": "The slopes of reduction potential versus pH plots for the two reactions, NiO + 2H^{+} + 2e^{-}⇌Ni + H_{2}O and 2H^{+} + 2e^{-}⇌H_{2} , at 298 K and one atmospheric pressure are S1 and S2, respectively. The ratio \\(\\frac{𝑆1}{𝑆2}\\) is (rounded off to one decimal place) __________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The slopes of reduction potential versus pH plots for the two reactions, NiO + 2H^{+} + 2e^{-}⇌Ni + H_{2}O and 2H^{+} + 2e^{-}⇌H_{2} , at 298 K and one atmospheric pressure are S1 and S2, respectively. The ratio \\(\\frac{,at𝑆1}{𝑆2}\\) is (rounded off to one decimal place) __________",
+          "content": "The slopes of reduction potential versus pH plots for the two reactions, NiO + 2H^{+} + 2e^{-}⇌Ni + H_{2}O and 2H^{+} + 2e^{-}⇌H_{2} , at 298 K and one atmospheric pressure are S1 and S2, respectively. The ratio \\(\\frac{𝑆1}{𝑆2}\\) is (rounded off to one decimal place) __________",
           "confidence": "VERIFIED"
         }
       ],
@@ -7531,8 +7520,8 @@
       "questionType": "MSQ",
       "options": [
         "Percentage change in length of the diagonal PR is 0.03.",
-        "\\(Change in angle between PR and QS is 4 \\times 10^{-4} rad.\\)",
-        "\\(Change in angle between PR and QS is 2 \\times 10^{-4} rad.\\)",
+        "Change in angle between PR and QS is 4 \\times 10^{-4} rad.",
+        "Change in angle between PR and QS is 2 \\times 10^{-4} rad.",
         "Percentage change in length of the diagonal QS is 0.03."
       ],
       "optionImages": null,
@@ -7554,34 +7543,32 @@
         },
         {
           "id": "B",
-          "text": "\\(Change in angle between PR and QS is 4 \\times 10^{-4} rad.\\)",
+          "text": "Change in angle between PR and QS is 4 \\times 10^{-4} rad.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Change in angle between PR and QS is 4 \\times 10^{-4} rad.",
-              "content": "\\(Change in angle between PR and QS is 4 \\times 10^{-4} rad.\\)",
+              "type": "text",
+              "content": "Change in angle between PR and QS is 4 \\times 10^{-4} rad.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(Change in angle between PR and QS is 2 \\times 10^{-4} rad.\\)",
+          "text": "Change in angle between PR and QS is 2 \\times 10^{-4} rad.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Change in angle between PR and QS is 2 \\times 10^{-4} rad.",
-              "content": "\\(Change in angle between PR and QS is 2 \\times 10^{-4} rad.\\)",
+              "type": "text",
+              "content": "Change in angle between PR and QS is 2 \\times 10^{-4} rad.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -7806,11 +7793,11 @@
       "questionNumber": 83,
       "sectionId": "xe_d",
       "sectionName": "Section D: Solid Mechanics",
-      "questionText": "A simply-supported beam, with a point load P = 150 kN at a distance of L/3 from the left end, is shown in the figure. The elastic-strain energy (U) of the beam is given by the following expression:\n\nU = \\(\\frac{2P^2L^{3}}{243}\\) \\(\\frac{P^2L^{3}}{243EI}\\)\n\nwhere the section modulus, EI, is 16.66 \\times 10^{5} Nm^{2} and the length of the beam L is 1 m.\n\nThe deflection at the loading point is ____ mm (rounded off to two decimal places).",
+      "questionText": "A simply-supported beam, with a point load P = 150 kN at a distance of L/3 from the left end, is shown in the figure. The elastic-strain energy (U) of the beam is given by the following expression:\n\nU = 243 <u>2</u> <u>P2L3</u> <u>2</u> <u>P2L3</u> EI where the section modulus, EI, is 16.66 \\times 10^{5} Nm^{2} and the length of the beam L is 1 m.\n\nThe deflection at the loading point is ____ mm (rounded off to two decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A simply-supported beam, with a point load P = 150 kN at a distance of L/3 from the left end, is shown in the figure. The elastic-strain energy (U) of the beam is given by the following expression:\n\nU = \\(\\frac{2P^2L^{3}}{243}\\) \\(\\frac{P^2L^{3}}{243EI}\\)\n\nwhere the section modulus, EI, is 16.66 \\times 10^{5} Nm^{2} and the length of the beam L is 1 m.\n\nThe deflection at the loading point is ____ mm (rounded off to two decimal places).",
+          "content": "A simply-supported beam, with a point load P = 150 kN at a distance of L/3 from the left end, is shown in the figure. The elastic-strain energy (U) of the beam is given by the following expression:\n\nU = 243 <u>2</u> <u>P2L3</u> <u>2</u> <u>P2L3</u> EI where the section modulus, EI, is 16.66 \\times 10^{5} Nm^{2} and the length of the beam L is 1 m.\n\nThe deflection at the loading point is ____ mm (rounded off to two decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -8519,7 +8506,7 @@
       "questionType": "MCQ",
       "options": [
         "1 - \\(\\frac{1}{(Compressionratio)𝛾}\\)",
-        "1 - \\(\\frac{1}{(Pressureratio)(𝛾-1𝛾)}\\) (Pressure ratio)",
+        "1 - \\(\\frac{1}{(𝛾-1𝛾)}\\) (Pressure ratio)",
         "1 - \\(\\frac{1}{(Compressionratio)(𝛾-1)}\\)",
         "1 - \\(\\frac{1}{(Pressureratio)(𝛾-1)}\\)"
       ],
@@ -8542,12 +8529,12 @@
         },
         {
           "id": "B",
-          "text": "1 - \\(\\frac{1}{(Pressureratio)(𝛾-1𝛾)}\\) (Pressure ratio)",
+          "text": "1 - \\(\\frac{1}{(𝛾-1𝛾)}\\) (Pressure ratio)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1 - \\(\\frac{1}{(Pressureratio)(𝛾-1𝛾)}\\) (Pressure ratio)",
+              "content": "1 - \\(\\frac{1}{(𝛾-1𝛾)}\\) (Pressure ratio)",
               "confidence": "VERIFIED"
             }
           ],
@@ -8627,21 +8614,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{1}{𝑇𝐻𝑇𝐿-1}\\) 𝑇_{𝐿}",
-        "\\(\\frac{1}{1-𝑇𝐻}\\) 𝑇_{𝐿}",
-        "\\(\\frac{1}{𝑇𝐿𝑇𝐻-1}\\) 𝑇_{𝐻}",
-        "\\(\\frac{1}{𝑇𝐿𝑇𝐻+1}\\) 𝑇_{𝐻}"
+        "\\(\\frac{1}{𝑇𝐻}\\) 𝑇_{𝐿}",
+        "\\(\\frac{1}{-𝑇𝐻}\\) 𝑇_{𝐿}",
+        "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}",
+        "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{1}{𝑇𝐻𝑇𝐿-1}\\) 𝑇_{𝐿}",
+          "text": "\\(\\frac{1}{𝑇𝐻}\\) 𝑇_{𝐿}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{1}{𝑇𝐻𝑇𝐿-1}\\) 𝑇_{𝐿}",
+              "content": "\\(\\frac{1}{𝑇𝐻}\\) 𝑇_{𝐿}",
               "confidence": "VERIFIED"
             }
           ],
@@ -8651,12 +8638,12 @@
         },
         {
           "id": "B",
-          "text": "\\(\\frac{1}{1-𝑇𝐻}\\) 𝑇_{𝐿}",
+          "text": "\\(\\frac{1}{-𝑇𝐻}\\) 𝑇_{𝐿}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{1}{1-𝑇𝐻}\\) 𝑇_{𝐿}",
+              "content": "\\(\\frac{1}{-𝑇𝐻}\\) 𝑇_{𝐿}",
               "confidence": "VERIFIED"
             }
           ],
@@ -8666,12 +8653,12 @@
         },
         {
           "id": "C",
-          "text": "\\(\\frac{1}{𝑇𝐿𝑇𝐻-1}\\) 𝑇_{𝐻}",
+          "text": "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{1}{𝑇𝐿𝑇𝐻-1}\\) 𝑇_{𝐻}",
+              "content": "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}",
               "confidence": "VERIFIED"
             }
           ],
@@ -8681,12 +8668,12 @@
         },
         {
           "id": "D",
-          "text": "\\(\\frac{1}{𝑇𝐿𝑇𝐻+1}\\) 𝑇_{𝐻}",
+          "text": "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{1}{𝑇𝐿𝑇𝐻+1}\\) 𝑇_{𝐻}",
+              "content": "\\(\\frac{1}{𝑇𝐿}\\) 𝑇_{𝐻}",
               "confidence": "VERIFIED"
             }
           ],
@@ -8874,75 +8861,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{2}{𝑡(𝛾-1)}\\)",
-        "\\(\\frac{𝛾}{𝑡2(𝛾-1)}\\)",
-        "\\(\\frac{𝛾}{𝑡(𝛾-1)}\\)",
-        "\\(\\frac{𝛾-1}{𝑡𝛾}\\)"
+        "2 𝑡 (𝛾-1)",
+        "𝛾 𝑡 2(𝛾-1)",
+        "𝛾 𝑡 (𝛾-1)",
+        "𝛾-1 𝑡 𝛾"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{2}{𝑡(𝛾-1)}\\)",
+          "text": "2 𝑡 (𝛾-1)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{2}{𝑡(𝛾-1)}",
-              "content": "\\(\\frac{2}{𝑡(𝛾-1)}\\)",
+              "type": "text",
+              "content": "2 𝑡 (𝛾-1)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(\\frac{𝛾}{𝑡2(𝛾-1)}\\)",
+          "text": "𝛾 𝑡 2(𝛾-1)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{𝛾}{𝑡2(𝛾-1)}",
-              "content": "\\(\\frac{𝛾}{𝑡2(𝛾-1)}\\)",
+              "type": "text",
+              "content": "𝛾 𝑡 2(𝛾-1)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(\\frac{𝛾}{𝑡(𝛾-1)}\\)",
+          "text": "𝛾 𝑡 (𝛾-1)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{𝛾}{𝑡(𝛾-1)}",
-              "content": "\\(\\frac{𝛾}{𝑡(𝛾-1)}\\)",
+              "type": "text",
+              "content": "𝛾 𝑡 (𝛾-1)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(\\frac{𝛾-1}{𝑡𝛾}\\)",
+          "text": "𝛾-1 𝑡 𝛾",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\frac{𝛾-1}{𝑡𝛾}",
-              "content": "\\(\\frac{𝛾-1}{𝑡𝛾}\\)",
+              "type": "text",
+              "content": "𝛾-1 𝑡 𝛾",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -12999,7 +12982,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(P_{N}\\)",
+        "\\(P_{N} ^{∆}↔ P_{D} ^{ \\nabla }↔ P_{A} ^{ \\nabla }↔ P_{G}\\)",
         "\\(P_{N} ^{∆}↔ P_{D} ^{∆}→ P_{A} ^{∆}→ P_{G}\\)",
         "\\(P_{N} ^{∆}↔ P_{D} ^{ \\nabla }→ P_{G}\\)",
         "\\(P_{N} ^{∆}↔ P_{A} ^{∆}→ P_{G}\\)"
@@ -13008,13 +12991,13 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(P_{N}\\)",
+          "text": "\\(P_{N} ^{∆}↔ P_{D} ^{ \\nabla }↔ P_{A} ^{ \\nabla }↔ P_{G}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "P_{N}",
-              "content": "\\(P_{N}\\)",
+              "latex": "P_{N} ^{∆}↔ P_{D} ^{ \\nabla }↔ P_{A} ^{ \\nabla }↔ P_{G}",
+              "content": "\\(P_{N} ^{∆}↔ P_{D} ^{ \\nabla }↔ P_{A} ^{ \\nabla }↔ P_{G}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -13112,22 +13095,22 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(= t_{p} + 0.42 t_{c}\\)",
-        "\\(= t_{p} + 0.30 t_{c}\\)",
-        "\\(= t_{p} + 0.50 t_{c}\\)",
-        "\\(= t_{p} + 0.25 t_{c}\\)"
+        "\\(B = t_{p} + 0.42 t_{c}\\)",
+        "\\(B = t_{p} + 0.30 t_{c}\\)",
+        "\\(B = t_{p} + 0.50 t_{c}\\)",
+        "\\(B = t_{p} + 0.25 t_{c}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(= t_{p} + 0.42 t_{c}\\)",
+          "text": "\\(B = t_{p} + 0.42 t_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= t_{p} + 0.42 t_{c}",
-              "content": "\\(= t_{p} + 0.42 t_{c}\\)",
+              "latex": "B = t_{p} + 0.42 t_{c}",
+              "content": "\\(B = t_{p} + 0.42 t_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -13137,13 +13120,13 @@
         },
         {
           "id": "B",
-          "text": "\\(= t_{p} + 0.30 t_{c}\\)",
+          "text": "\\(B = t_{p} + 0.30 t_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= t_{p} + 0.30 t_{c}",
-              "content": "\\(= t_{p} + 0.30 t_{c}\\)",
+              "latex": "B = t_{p} + 0.30 t_{c}",
+              "content": "\\(B = t_{p} + 0.30 t_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -13153,13 +13136,13 @@
         },
         {
           "id": "C",
-          "text": "\\(= t_{p} + 0.50 t_{c}\\)",
+          "text": "\\(B = t_{p} + 0.50 t_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= t_{p} + 0.50 t_{c}",
-              "content": "\\(= t_{p} + 0.50 t_{c}\\)",
+              "latex": "B = t_{p} + 0.50 t_{c}",
+              "content": "\\(B = t_{p} + 0.50 t_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -13169,13 +13152,13 @@
         },
         {
           "id": "D",
-          "text": "\\(= t_{p} + 0.25 t_{c}\\)",
+          "text": "\\(B = t_{p} + 0.25 t_{c}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "= t_{p} + 0.25 t_{c}",
-              "content": "\\(= t_{p} + 0.25 t_{c}\\)",
+              "latex": "B = t_{p} + 0.25 t_{c}",
+              "content": "\\(B = t_{p} + 0.25 t_{c}\\)",
               "confidence": "VERIFIED"
             }
           ],

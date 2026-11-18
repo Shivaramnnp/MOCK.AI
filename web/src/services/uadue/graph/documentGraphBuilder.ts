@@ -98,7 +98,7 @@ export class DocumentGraphBuilder {
     // 1. Extract Glyph Runs -> TEXT_RUN Nodes
     for (let idx = 0; idx < snapshot.glyphRuns.length; idx++) {
       const g = snapshot.glyphRuns[idx];
-      const nodeId = `node_p${g.pageNumber}_text_${idx}`;
+      const nodeId = `node_p${g.pageNumber}_text_${g.operatorIndex !== undefined ? g.operatorIndex : idx}`;
       const bbox = g.geometry.bbox;
 
       const isBboxValid =
@@ -211,7 +211,9 @@ export class DocumentGraphBuilder {
     // 3. Extract Vector Paths -> VECTOR_PATH Nodes
     for (let idx = 0; idx < snapshot.vectorPaths.length; idx++) {
       const path = snapshot.vectorPaths[idx];
-      const nodeId = `node_p${path.geometry.bbox.pageWidth || 1}_path_${idx}`;
+      const pageMatch = path.pathId.match(/_p(\d+)_/);
+      const pageNum = pageMatch ? parseInt(pageMatch[1], 10) : 1;
+      const nodeId = `node_p${pageNum}_path_${idx}`;
       const bbox = path.geometry.bbox;
 
       const isBboxValid =
@@ -223,7 +225,7 @@ export class DocumentGraphBuilder {
       if (!isBboxValid) {
         degradedNodes.push({
           nodeId,
-          pageNumber: 1,
+          pageNumber: pageNum,
           flags: ['INVALID_GEOMETRY', 'CORRUPT_COORDINATES'],
           reason: `Vector path ${path.pathId} contains non-finite bounding box`,
         });
@@ -232,7 +234,7 @@ export class DocumentGraphBuilder {
       const node: DocumentGraphNode = {
         nodeId,
         elementId: nodeId,
-        pageNumber: 1, // Vector paths in snapshot retain page info through geometry or index
+        pageNumber: pageNum,
         nodeType: 'VECTOR_PATH',
         bbox: isBboxValid
           ? bbox
@@ -240,8 +242,8 @@ export class DocumentGraphBuilder {
         geometry: path.geometry,
         style: {
           lineWidthPt: path.lineWidthPt,
-          strokeRgba: path.strokeRgba,
-          fillRgba: path.fillRgba,
+          strokeRgba: Array.isArray(path.strokeRgba) ? `rgba(${path.strokeRgba.join(',')})` : (path.strokeRgba || undefined),
+          fillRgba: Array.isArray(path.fillRgba) ? `rgba(${path.fillRgba.join(',')})` : (path.fillRgba || undefined),
         },
         evidenceClassification: 'DERIVED_PHYSICAL_OBSERVATION',
         sourceEvidence: {

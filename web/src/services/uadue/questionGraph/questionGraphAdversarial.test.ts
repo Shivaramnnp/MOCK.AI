@@ -21,6 +21,18 @@ import * as path from 'node:path';
 import { DocumentGraph, DocumentGraphNode } from '../contracts/documentGraph';
 import { QuestionGraphBuilder } from './questionGraphBuilder';
 import { QuestionGraphValidator } from './questionGraphValidator';
+import { createMockBbox, createMockDocGraphNode } from '../test/mockGeometry';
+
+export interface TestNodeDef {
+  nodeId: string;
+  nodeType: DocumentGraphNode['nodeType'];
+  pageNumber: number;
+  bbox: { x0: number; y0: number; x1: number; y1: number; pageWidth?: number; pageHeight?: number };
+  textContent?: string;
+  readingOrderIndex?: number;
+  confidence?: number;
+  sourceEvidence?: Partial<DocumentGraphNode['sourceEvidence']>;
+}
 
 export interface AdversarialScenarioResult {
   scenarioId: number;
@@ -38,14 +50,44 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
   const builder = new QuestionGraphBuilder();
   const adversarialAuditResults: AdversarialScenarioResult[] = [];
 
-  function makeMockGraph(nodes: DocumentGraphNode[], edges: any[] = []): DocumentGraph {
+  function makeMockGraph(nodes: (DocumentGraphNode | TestNodeDef)[], edges: any[] = []): DocumentGraph {
+    const fullNodes: DocumentGraphNode[] = nodes.map((n) => {
+      if ('elementId' in n && 'geometry' in n && 'unit' in (n.bbox as any)) {
+        return n as DocumentGraphNode;
+      }
+      const rawBbox = n.bbox;
+      const bbox = createMockBbox(
+        rawBbox.x0,
+        rawBbox.y0,
+        rawBbox.x1,
+        rawBbox.y1,
+        'pt',
+        rawBbox.pageWidth,
+        rawBbox.pageHeight
+      );
+      return createMockDocGraphNode(
+        n.nodeId,
+        n.nodeType,
+        n.pageNumber,
+        bbox,
+        n.textContent,
+        n.sourceEvidence ? { sourceEvidence: {
+          sourceSnapshotId: 'snap_adversarial_proof',
+          sourceDocumentId: 'doc_adversarial_proof',
+          resolutionStatus: 'EXACT_SOURCE_BYTE',
+          ...n.sourceEvidence,
+        } } : undefined
+      );
+    });
+
     const nodeMap = new Map<string, DocumentGraphNode>();
-    for (const n of nodes) nodeMap.set(n.nodeId, n);
+    for (const n of fullNodes) nodeMap.set(n.nodeId, n);
     return {
       schemaVersion: 'uadue_document_graph_v2b_schema',
       algorithmVersion: 'uadue_document_graph_builder_v2b_2026',
       configurationVersion: 'default_v2b_config_2026',
       graphId: 'dg_adv_mock',
+      documentId: 'doc_adversarial_proof',
       sourceDocumentId: 'doc_adversarial_proof',
       sourceSnapshotId: 'snap_adversarial_proof',
       sourceSha256: 'c'.repeat(64),
@@ -53,10 +95,10 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
       totalPages: 1,
       nodes: nodeMap,
       edges,
-      columns: [{ columnId: 'col_1', pageNumber: 1, columnIndex: 0, bbox: { x0: 0, y0: 0, x1: 595, y1: 842 }, elementIds: nodes.map(n => n.nodeId) }],
+      columns: [{ pageNumber: 1, columnIndex: 0, bounds: { minX: 0, minY: 0, maxX: 595, maxY: 842 }, elementIds: fullNodes.map(n => n.nodeId) }],
       spatialRegions: [],
-      readingFlow: nodes.map((n) => n.nodeId),
-      readingOrderDAG: { rootNodeIds: [nodes[0]?.nodeId || ''], terminalNodeIds: [nodes[nodes.length - 1]?.nodeId || ''], edges: [], topologicalOrder: nodes.map(n => n.nodeId), ambiguousRegions: [] },
+      readingFlow: fullNodes.map((n) => n.nodeId),
+      readingOrderDAG: { rootNodeIds: [fullNodes[0]?.nodeId || ''], terminalNodeIds: [fullNodes[fullNodes.length - 1]?.nodeId || ''], edges: [], topologicalOrder: fullNodes.map(n => n.nodeId), ambiguousRegions: [] },
       crossPageContinuations: [],
       degradedNodes: [],
       provenance: {
@@ -77,7 +119,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 1. Single simple MCQ
   it('Scenario 1: Single simple MCQ with 4 options', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115 }, textContent: 'What is the speed of light?', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'opt_a', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 130, x1: 250, y1: 145 }, textContent: '(A) 3 x 10^8 m/s', readingOrderIndex: 2, confidence: 0.95 },
@@ -106,7 +148,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 2. Multi-line stem
   it('Scenario 2: Question with multi-line stem', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q2_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.2', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q2_stem1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 450, y1: 115 }, textContent: 'Line 1 of a very long stem that wraps across multiple layout lines.', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'q2_stem2', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 120, x1: 400, y1: 135 }, textContent: 'Line 2 continuing the problem specification without interruption.', readingOrderIndex: 2, confidence: 0.99 },
@@ -132,7 +174,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 3 & 4: Whitespace variations (large vs tiny vertical whitespace)
   it('Scenario 3 & 4: Question with large vs tiny vertical whitespace', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q3_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.3', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q3_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115 }, textContent: 'Question with tiny gap.', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'q3_body', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 116, x1: 300, y1: 130 }, textContent: 'Followup line with 1pt gap.', readingOrderIndex: 2, confidence: 0.99 },
@@ -159,7 +201,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 5 & 6: Embedded image & visual option cards
   it('Scenario 5 & 6: Question with embedded diagram and image options', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q5_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.5', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q5_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115 }, textContent: 'Refer to figure:', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'q5_diag', nodeType: 'RASTER_IMAGE', pageNumber: 1, bbox: { x0: 90, y0: 125, x1: 250, y1: 180 }, textContent: '', readingOrderIndex: 2, confidence: 0.99, sourceEvidence: { sourceObjectId: 'img_diag_5' } },
@@ -188,7 +230,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 7 & 8: Question with equations and tables
   it('Scenario 7 & 8: Question with equation and structured table', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q7_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.7', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q7_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115 }, textContent: 'Match data in table:', readingOrderIndex: 1, confidence: 0.99 },
       { nodeId: 'tbl_c1', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 125, x1: 180, y1: 140 }, textContent: 'Column I', readingOrderIndex: 2, confidence: 0.95 },
@@ -217,7 +259,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 9 through 20: Number disambiguation, layout edge cases, headers/footers
   it('Scenario 9-20: Disambiguating Page, Year, Section, and Option Numbers from Question Numbers', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       // Running header
       { nodeId: 'hdr_node', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 20, x1: 450, y1: 35, pageHeight: 842 }, textContent: 'SECTION 1 - GENERAL APTITUDE (10:00 AM - 12:00 PM)', readingOrderIndex: 0, confidence: 0.95 },
       // Question 10
@@ -252,7 +294,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 21 through 35: Numbering restarts, unnumbered questions, assertion/reason, multi-select
   it('Scenario 21-35: Assertion/Reason, Unnumbered stems, and Shared Stimuli', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       // Shared passage
       { nodeId: 'stim_hdr', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 80, x1: 350, y1: 95 }, textContent: 'Directions: Read the passage for questions 1 to 2.', readingOrderIndex: 0, confidence: 0.95 },
       { nodeId: 'stim_body', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 500, y1: 140 }, textContent: 'Quantum entanglement is a physical phenomenon.', readingOrderIndex: 1, confidence: 0.95 },
@@ -286,7 +328,7 @@ describe('QuestionGraph Adversarial Validation Suite (50 Scenarios)', () => {
 
   // 36 through 50: Security, Malformed coordinates, and Ambiguity Records
   it('Scenario 36-50: Competing hypotheses, Ambiguity preservation, and Security bounds', async () => {
-    const nodes: DocumentGraphNode[] = [
+    const nodes: TestNodeDef[] = [
       { nodeId: 'q1_num', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 50, y0: 100, x1: 80, y1: 115 }, textContent: 'Q.1', readingOrderIndex: 0, confidence: 0.99 },
       { nodeId: 'q1_stem', nodeType: 'TEXT_RUN', pageNumber: 1, bbox: { x0: 90, y0: 100, x1: 300, y1: 115 }, textContent: 'Ambiguous boundary question stem.', readingOrderIndex: 1, confidence: 0.99 },
       // Weak boundary item with small delta

@@ -263,11 +263,11 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+      "questionText": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+          "content": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
           "confidence": "VERIFIED"
         }
       ],
@@ -277,41 +277,43 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑞𝑝= 𝑝𝑞",
-        "𝑞𝑝= 𝑝2𝑞",
+        "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
+        "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
         "\\sqrt 𝑞= \\sqrt 𝑝",
-        "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝"
+        "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑞𝑝= 𝑝𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑞𝑝= 𝑝2𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝2𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{2𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -331,12 +333,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+          "text": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+              "content": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
               "confidence": "VERIFIED"
             }
           ],
@@ -481,11 +483,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+      "questionText": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+          "content": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +606,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
-        "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
-        "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
-        "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots"
+        "(i) hold (ii) waits (iii) culminates (iv) pivot",
+        "(i) holds (ii) wait (iii) culminates (iv) pivot",
+        "(i) hold (ii) wait (iii) culminate (iv) pivots",
+        "(i) holds (ii) waits (iii) culminate (iv) pivots"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+          "text": "(i) hold (ii) waits (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+              "content": "(i) hold (ii) waits (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +630,12 @@
         },
         {
           "id": "B",
-          "text": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+          "text": "(i) holds (ii) wait (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+              "content": "(i) holds (ii) wait (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +645,12 @@
         },
         {
           "id": "C",
-          "text": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+          "text": "(i) hold (ii) wait (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+              "content": "(i) hold (ii) wait (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +660,12 @@
         },
         {
           "id": "D",
-          "text": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+          "text": "(i) holds (ii) waits (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+              "content": "(i) holds (ii) waits (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -808,11 +810,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
           "confidence": "VERIFIED"
         },
         {
@@ -1151,11 +1153,11 @@
       "questionNumber": 11,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "What is the value of the following complex line integral counter-clockwise?\n\n8 𝑑𝑧 ∮ 𝑧(𝑧-2)(𝑧-4) |𝑧|=3",
+      "questionText": "What is the value of the following complex line integral counter-clockwise?\n\n∮ \\(\\frac{8}{𝑧(𝑧-2)(𝑧-4)}\\) 𝑑𝑧 |𝑧|=3",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "What is the value of the following complex line integral counter-clockwise?\n\n8 𝑑𝑧 ∮ 𝑧(𝑧-2)(𝑧-4) |𝑧|=3",
+          "content": "What is the value of the following complex line integral counter-clockwise?\n\n∮ \\(\\frac{8}{𝑧(𝑧-2)(𝑧-4)}\\) 𝑑𝑧 |𝑧|=3",
           "confidence": "VERIFIED"
         }
       ],
@@ -1274,36 +1276,37 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑥𝑛+1 = 𝑥𝑛-𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
-        "𝑥𝑛+1 = 𝑥𝑛+ 𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
-        "𝑥𝑛+1 = 𝑥𝑛+ 1 + 2𝑠𝑖𝑛𝑥𝑛",
-        "𝑥𝑛+1 = 𝑥𝑛-1 + 2𝑠𝑖𝑛𝑥𝑛"
+        "\\(𝑥_{𝑛+1} = 𝑥_{𝑛}-𝑥^{𝑛}-2𝑐𝑜𝑠𝑥^{𝑛} 1 + 2𝑠𝑖𝑛𝑥_{𝑛}\\)",
+        "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}{1+2𝑠𝑖𝑛𝑥𝑛}\\)",
+        "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{1+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)",
+        "𝑥_{𝑛+1} = 𝑥_{𝑛} \\(\\frac{+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑥𝑛+1 = 𝑥𝑛-𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
+          "text": "\\(𝑥_{𝑛+1} = 𝑥_{𝑛}-𝑥^{𝑛}-2𝑐𝑜𝑠𝑥^{𝑛} 1 + 2𝑠𝑖𝑛𝑥_{𝑛}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑥𝑛+1 = 𝑥𝑛-𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
+              "type": "math",
+              "latex": "𝑥_{𝑛+1} = 𝑥_{𝑛}-𝑥^{𝑛}-2𝑐𝑜𝑠𝑥^{𝑛} 1 + 2𝑠𝑖𝑛𝑥_{𝑛}",
+              "content": "\\(𝑥_{𝑛+1} = 𝑥_{𝑛}-𝑥^{𝑛}-2𝑐𝑜𝑠𝑥^{𝑛} 1 + 2𝑠𝑖𝑛𝑥_{𝑛}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑥𝑛+1 = 𝑥𝑛+ 𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
+          "text": "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}{1+2𝑠𝑖𝑛𝑥𝑛}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑥𝑛+1 = 𝑥𝑛+ 𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛",
+              "content": "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}{1+2𝑠𝑖𝑛𝑥𝑛}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1313,12 +1316,12 @@
         },
         {
           "id": "C",
-          "text": "𝑥𝑛+1 = 𝑥𝑛+ 1 + 2𝑠𝑖𝑛𝑥𝑛",
+          "text": "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{1+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑥𝑛+1 = 𝑥𝑛+ 1 + 2𝑠𝑖𝑛𝑥𝑛",
+              "content": "𝑥_{𝑛+1} = 𝑥_{𝑛} + \\(\\frac{1+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1328,12 +1331,12 @@
         },
         {
           "id": "D",
-          "text": "𝑥𝑛+1 = 𝑥𝑛-1 + 2𝑠𝑖𝑛𝑥𝑛",
+          "text": "𝑥_{𝑛+1} = 𝑥_{𝑛} \\(\\frac{+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑥𝑛+1 = 𝑥𝑛-1 + 2𝑠𝑖𝑛𝑥𝑛",
+              "content": "𝑥_{𝑛+1} = 𝑥_{𝑛} \\(\\frac{+2𝑠𝑖𝑛𝑥𝑛}{𝑥𝑛-2𝑐𝑜𝑠𝑥𝑛}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1383,21 +1386,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "For every 3 Na+ transported out of the cell 2 K+ is transported into the cell.",
-        "For every 3 Na+ transported into the cell 2 K+ is transported out of the cell.",
-        "For every 2 Na+ transported out of the cell 3 K+ is transported into the cell.",
-        "The ratio of Na+ and K+ transport is always equal to one."
+        "For every 3 Na^{+} transported out of the cell 2 \\(K^{+}\\) is transported into the cell.",
+        "For every 3 Na^{+} transported into the cell 2 \\(K^{+}\\) is transported out of the cell.",
+        "For every 2 Na^{+} transported out of the cell 3 \\(K^{+}\\) is transported into the cell.",
+        "The ratio of Na^{+} and \\(K^{+}\\) transport is always equal to one."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "For every 3 Na+ transported out of the cell 2 K+ is transported into the cell.",
+          "text": "For every 3 Na^{+} transported out of the cell 2 \\(K^{+}\\) is transported into the cell.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For every 3 Na+ transported out of the cell 2 K+ is transported into the cell.",
+              "content": "For every 3 Na^{+} transported out of the cell 2 \\(K^{+}\\) is transported into the cell.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1407,12 +1410,12 @@
         },
         {
           "id": "B",
-          "text": "For every 3 Na+ transported into the cell 2 K+ is transported out of the cell.",
+          "text": "For every 3 Na^{+} transported into the cell 2 \\(K^{+}\\) is transported out of the cell.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For every 3 Na+ transported into the cell 2 K+ is transported out of the cell.",
+              "content": "For every 3 Na^{+} transported into the cell 2 \\(K^{+}\\) is transported out of the cell.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1422,12 +1425,12 @@
         },
         {
           "id": "C",
-          "text": "For every 2 Na+ transported out of the cell 3 K+ is transported into the cell.",
+          "text": "For every 2 Na^{+} transported out of the cell 3 \\(K^{+}\\) is transported into the cell.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For every 2 Na+ transported out of the cell 3 K+ is transported into the cell.",
+              "content": "For every 2 Na^{+} transported out of the cell 3 \\(K^{+}\\) is transported into the cell.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1437,12 +1440,12 @@
         },
         {
           "id": "D",
-          "text": "The ratio of Na+ and K+ transport is always equal to one.",
+          "text": "The ratio of Na^{+} and \\(K^{+}\\) transport is always equal to one.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The ratio of Na+ and K+ transport is always equal to one.",
+              "content": "The ratio of Na^{+} and \\(K^{+}\\) transport is always equal to one.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1710,21 +1713,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Two coincident photons of 511 keV energy are detected 180o apart.",
-        "Photons of 51.1 keV energy are detected 360o around the body.",
-        "Photons of energy 511 keV are detected 360o around the body.",
-        "Coincident photons with 51.1 keV energy are detected 180o apart."
+        "Two coincident photons of 511 keV energy are detected 180^{o} apart.",
+        "Photons of 51.1 keV energy are detected 360^{o}around the body.",
+        "Photons of energy 511 keV are detected 360^{o} around the body.",
+        "Coincident photons with 51.1 keV energy are detected 180^{o} apart."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Two coincident photons of 511 keV energy are detected 180o apart.",
+          "text": "Two coincident photons of 511 keV energy are detected 180^{o} apart.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Two coincident photons of 511 keV energy are detected 180o apart.",
+              "content": "Two coincident photons of 511 keV energy are detected 180^{o} apart.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1734,12 +1737,12 @@
         },
         {
           "id": "B",
-          "text": "Photons of 51.1 keV energy are detected 360o around the body.",
+          "text": "Photons of 51.1 keV energy are detected 360^{o}around the body.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Photons of 51.1 keV energy are detected 360o around the body.",
+              "content": "Photons of 51.1 keV energy are detected 360^{o}around the body.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1749,12 +1752,12 @@
         },
         {
           "id": "C",
-          "text": "Photons of energy 511 keV are detected 360o around the body.",
+          "text": "Photons of energy 511 keV are detected 360^{o} around the body.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Photons of energy 511 keV are detected 360o around the body.",
+              "content": "Photons of energy 511 keV are detected 360^{o} around the body.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1764,12 +1767,12 @@
         },
         {
           "id": "D",
-          "text": "Coincident photons with 51.1 keV energy are detected 180o apart.",
+          "text": "Coincident photons with 51.1 keV energy are detected 180^{o} apart.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Coincident photons with 51.1 keV energy are detected 180o apart.",
+              "content": "Coincident photons with 51.1 keV energy are detected 180^{o} apart.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1928,21 +1931,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "45 wt% SiO2 and 5:1 molar ratio of Calcium to Phosphorus.",
-        "45 wt% Hydroxyapatite and 5 wt% SiO2.",
-        "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca3(PO4)2.",
-        "45 wt% SiO2 and 5 wt% Hydroxyapatite."
+        "45 wt% SiO_{2} and 5:1 molar ratio of Calcium to Phosphorus.",
+        "45 wt% Hydroxyapatite and 5 wt% SiO_{2}.",
+        "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca_{3}(PO_{4})_{2}.",
+        "45 wt% SiO_{2}and 5 wt% Hydroxyapatite."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "45 wt% SiO2 and 5:1 molar ratio of Calcium to Phosphorus.",
+          "text": "45 wt% SiO_{2} and 5:1 molar ratio of Calcium to Phosphorus.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "45 wt% SiO2 and 5:1 molar ratio of Calcium to Phosphorus.",
+              "content": "45 wt% SiO_{2} and 5:1 molar ratio of Calcium to Phosphorus.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1952,12 +1955,12 @@
         },
         {
           "id": "B",
-          "text": "45 wt% Hydroxyapatite and 5 wt% SiO2.",
+          "text": "45 wt% Hydroxyapatite and 5 wt% SiO_{2}.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "45 wt% Hydroxyapatite and 5 wt% SiO2.",
+              "content": "45 wt% Hydroxyapatite and 5 wt% SiO_{2}.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1967,12 +1970,12 @@
         },
         {
           "id": "C",
-          "text": "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca3(PO4)2.",
+          "text": "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca_{3}(PO_{4})_{2}.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca3(PO4)2.",
+              "content": "45 wt% Hydroxyapatite and 5:1 molar ratio of CaO and Ca_{3}(PO_{4})_{2}.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1982,12 +1985,12 @@
         },
         {
           "id": "D",
-          "text": "45 wt% SiO2 and 5 wt% Hydroxyapatite.",
+          "text": "45 wt% SiO_{2}and 5 wt% Hydroxyapatite.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "45 wt% SiO2 and 5 wt% Hydroxyapatite.",
+              "content": "45 wt% SiO_{2}and 5 wt% Hydroxyapatite.",
               "confidence": "VERIFIED"
             }
           ],
@@ -2146,37 +2149,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{release}{time}\\)",
-        "\\(\\frac{release}{time}\\)",
-        "time % cumulative release",
-        "time % cumulative release"
+        "% cumulative release time",
+        "% cumulative release time",
+        "% cumulative release time",
+        "% cumulative release time"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2024/bm/q20_opt_a.png",
-        "/exam-assets/gate/2024/bm/q20_opt_b.png",
-        "/exam-assets/gate/2024/bm/q20_opt_c.png",
-        "/exam-assets/gate/2024/bm/q20_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{release}{time}\\)",
-          "imageUrl": "/exam-assets/gate/2024/bm/q20_opt_a.png"
+          "text": "% cumulative release time",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "% cumulative release time",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "\\(\\frac{release}{time}\\)",
-          "imageUrl": "/exam-assets/gate/2024/bm/q20_opt_b.png"
+          "text": "% cumulative release time",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "% cumulative release time",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "time % cumulative release",
-          "imageUrl": "/exam-assets/gate/2024/bm/q20_opt_c.png"
+          "text": "% cumulative release time",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "% cumulative release time",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "time % cumulative release",
-          "imageUrl": "/exam-assets/gate/2024/bm/q20_opt_d.png"
+          "text": "% cumulative release time",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "% cumulative release time",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2206,11 +2244,11 @@
       "questionNumber": 21,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The circuit shown in the figure functions as which one of the following digital circuit blocks?\n\n\n\n1 <u>Q</u> <u>D</u> 0\n\nclk",
+      "questionText": "The circuit shown in the figure functions as which one of the following digital circuit blocks?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The circuit shown in the figure functions as which one of the following digital circuit blocks?\n\n\n\n1 <u>Q</u> <u>D</u> 0\n\nclk",
+          "content": "The circuit shown in the figure functions as which one of the following digital circuit blocks?",
           "confidence": "VERIFIED"
         },
         {
@@ -2337,71 +2375,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "4\n4 -𝜔2",
-        "4\n4 + 𝜔2",
-        "2\n2 + 𝜔",
-        "2\n2 -𝜔"
+        "\\(\\frac{4}{4-𝜔2}\\)",
+        "\\(\\frac{4}{4+𝜔2}\\)",
+        "\\(\\frac{2}{2+𝜔}\\)",
+        "\\(\\frac{2}{2-𝜔}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "4\n4 -𝜔2",
+          "text": "\\(\\frac{4}{4-𝜔2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "4\n4 -𝜔2",
+              "type": "math",
+              "latex": "\\frac{4}{4-𝜔2}",
+              "content": "\\(\\frac{4}{4-𝜔2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "4\n4 + 𝜔2",
+          "text": "\\(\\frac{4}{4+𝜔2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "4\n4 + 𝜔2",
+              "type": "math",
+              "latex": "\\frac{4}{4+𝜔2}",
+              "content": "\\(\\frac{4}{4+𝜔2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "2\n2 + 𝜔",
+          "text": "\\(\\frac{2}{2+𝜔}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "2\n2 + 𝜔",
+              "type": "math",
+              "latex": "\\frac{2}{2+𝜔}",
+              "content": "\\(\\frac{2}{2+𝜔}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "2\n2 -𝜔",
+          "text": "\\(\\frac{2}{2-𝜔}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "2\n2 -𝜔",
+              "type": "math",
+              "latex": "\\frac{2}{2-𝜔}",
+              "content": "\\(\\frac{2}{2-𝜔}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2432,11 +2474,11 @@
       "questionNumber": 23,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The Bode plot of a 2^{nd} order low pass filter is shown in the figure below. What is the frequency at which the attenuation is 80 dB?\n\n0 dB\n\n1 kHz",
+      "questionText": "The Bode plot of a 2^{nd} order low pass filter is shown in the figure below. What is the frequency at which the attenuation is 80 dB?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The Bode plot of a 2^{nd} order low pass filter is shown in the figure below. What is the frequency at which the attenuation is 80 dB?\n\n0 dB\n\n1 kHz",
+          "content": "The Bode plot of a 2^{nd} order low pass filter is shown in the figure below. What is the frequency at which the attenuation is 80 dB?",
           "confidence": "VERIFIED"
         },
         {
@@ -2549,11 +2591,11 @@
       "questionNumber": 24,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The input 𝑥(𝑡) and the output 𝑦(𝑡) of a linear time invariant system are related as follows:\n\n+ 0.5 𝑑^{2}𝑦(𝑡) 𝑦(𝑡) + 𝑑𝑦(𝑡) = 𝑥(𝑡) + 0.1 𝑑𝑥(𝑡) 𝑑𝑡 𝑑𝑡2 𝑑𝑡 What is the Laplace transform of the impulse response of the system?",
+      "questionText": "The input 𝑥(𝑡) and the output 𝑦(𝑡) of a linear time invariant system are related as follows:\n\n𝑦(𝑡) + \\(\\frac{𝑑𝑦(𝑡)}{𝑑𝑡}\\) + 0.5 \\(\\frac{𝑑2𝑦(𝑡)}{𝑑𝑡2}\\) = 𝑥(𝑡) + 0.1 \\(\\frac{𝑑𝑥(𝑡)}{𝑑𝑡}\\)\n\nWhat is the Laplace transform of the impulse response of the system?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The input 𝑥(𝑡) and the output 𝑦(𝑡) of a linear time invariant system are related as follows:\n\n+ 0.5 𝑑^{2}𝑦(𝑡) 𝑦(𝑡) + 𝑑𝑦(𝑡) = 𝑥(𝑡) + 0.1 𝑑𝑥(𝑡) 𝑑𝑡 𝑑𝑡2 𝑑𝑡 What is the Laplace transform of the impulse response of the system?",
+          "content": "The input 𝑥(𝑡) and the output 𝑦(𝑡) of a linear time invariant system are related as follows:\n\n𝑦(𝑡) + \\(\\frac{𝑑𝑦(𝑡)}{𝑑𝑡}\\) + 0.5 \\(\\frac{𝑑2𝑦(𝑡)}{𝑑𝑡2}\\) = 𝑥(𝑡) + 0.1 \\(\\frac{𝑑𝑥(𝑡)}{𝑑𝑡}\\)\n\nWhat is the Laplace transform of the impulse response of the system?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2563,71 +2605,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "0.5𝑠2 + 𝑠+ 1",
-        "0.1𝑠+ 1\n0.5𝑠2 + 𝑠+ 1",
-        "0.1𝑠+ 𝑠2",
-        "𝑠2 + 𝑠+ 0.5"
+        "\\(\\frac{0.5𝑠2+𝑠+1}{0.1𝑠+1}\\)",
+        "\\(\\frac{0.1𝑠+1}{0.5𝑠2+𝑠+1}\\)",
+        "\\(\\frac{0.1𝑠+𝑠2}{𝑠2+𝑠+0.5}\\)",
+        "\\(\\frac{𝑠2+𝑠+0.5}{0.1𝑠2+𝑠}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "0.5𝑠2 + 𝑠+ 1",
+          "text": "\\(\\frac{0.5𝑠2+𝑠+1}{0.1𝑠+1}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "0.5𝑠2 + 𝑠+ 1",
+              "type": "math",
+              "latex": "\\frac{0.5𝑠2+𝑠+1}{0.1𝑠+1}",
+              "content": "\\(\\frac{0.5𝑠2+𝑠+1}{0.1𝑠+1}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "0.1𝑠+ 1\n0.5𝑠2 + 𝑠+ 1",
+          "text": "\\(\\frac{0.1𝑠+1}{0.5𝑠2+𝑠+1}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "0.1𝑠+ 1\n0.5𝑠2 + 𝑠+ 1",
+              "type": "math",
+              "latex": "\\frac{0.1𝑠+1}{0.5𝑠2+𝑠+1}",
+              "content": "\\(\\frac{0.1𝑠+1}{0.5𝑠2+𝑠+1}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "0.1𝑠+ 𝑠2",
+          "text": "\\(\\frac{0.1𝑠+𝑠2}{𝑠2+𝑠+0.5}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "0.1𝑠+ 𝑠2",
+              "type": "math",
+              "latex": "\\frac{0.1𝑠+𝑠2}{𝑠2+𝑠+0.5}",
+              "content": "\\(\\frac{0.1𝑠+𝑠2}{𝑠2+𝑠+0.5}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑠2 + 𝑠+ 0.5",
+          "text": "\\(\\frac{𝑠2+𝑠+0.5}{0.1𝑠2+𝑠}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑠2 + 𝑠+ 0.5",
+              "type": "math",
+              "latex": "\\frac{𝑠2+𝑠+0.5}{0.1𝑠2+𝑠}",
+              "content": "\\(\\frac{𝑠2+𝑠+0.5}{0.1𝑠2+𝑠}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2658,15 +2704,38 @@
       "questionNumber": 25,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Match the different chambers/locations of a healthy human heart in Column-1 to \\(\\frac{rangesofdiastolicpressuresinColumn-2}{Column-1}\\)",
+      "questionText": "Match the different chambers/locations of a healthy human heart in Column-1 to the ranges of diastolic pressures in Column-2.\n\n| Column-1 | Column-2 |\n| :--- | :--- |\n| (P) Arterial | (I) 2-6 mm Hg |\n| (Q) Pulmonary artery | (II) 8-12 mm Hg |\n| (R) Right ventricle | (III) 60-80 mm Hg |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Match the different chambers/locations of a healthy human heart in Column-1 to \\(\\frac{rangesofdiastolicpressuresinColumn-2}{Column-1}\\)",
+          "content": "Match the different chambers/locations of a healthy human heart in Column-1 to the ranges of diastolic pressures in Column-2.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column-1",
+            "Column-2"
+          ],
+          "rows": [
+            [
+              "(P) Arterial",
+              "(I) 2-6 mm Hg"
+            ],
+            [
+              "(Q) Pulmonary artery",
+              "(II) 8-12 mm Hg"
+            ],
+            [
+              "(R) Right ventricle",
+              "(III) 60-80 mm Hg"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2899,7 +2968,7 @@
         "The first half-value layer is thicker than the second half-value layer.",
         "The second half-value layer is thicker than the first half-value layer.",
         "All the half-value layers have equal thickness.",
-        "The ratio of thickness of the first and second half-value layers change based on the\nintensity of the incident beam."
+        "The ratio of thickness of the first and second half-value layers change based on the intensity of the incident beam."
       ],
       "optionImages": null,
       "richOptions": [
@@ -2950,12 +3019,12 @@
         },
         {
           "id": "D",
-          "text": "The ratio of thickness of the first and second half-value layers change based on the\nintensity of the incident beam.",
+          "text": "The ratio of thickness of the first and second half-value layers change based on the intensity of the incident beam.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The ratio of thickness of the first and second half-value layers change based on the\nintensity of the incident beam.",
+              "content": "The ratio of thickness of the first and second half-value layers change based on the intensity of the incident beam.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3087,21 +3156,15 @@
       "questionNumber": 30,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The trigonometric Fourier series expansion of the periodic function in the figure has coefficients {𝑎_{𝑛}} and {𝑏_{𝑛}} for cosine and sine terms, respectively. The value of 𝑎_{1}/𝑎_{3} is __________. Give your answer rounded off to 1 decimal place.\n\n\n\n+1\n\n\\(\\frac{seconds2}{1350}\\)\n\n-1",
+      "questionText": "The trigonometric Fourier series expansion of the periodic function in the figure has coefficients {𝑎_{𝑛}} and {𝑏_{𝑛}} for cosine and sine terms, respectively. The value of 𝑎_{1}/𝑎_{3} is __________. Give your answer rounded off to 1 decimal place.\n\n+1\n\n2 <u>seconds</u> 2 <u>seconds</u> 0 1 3 5 -1",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The trigonometric Fourier series expansion of the periodic function in the figure has coefficients {𝑎_{𝑛}} and {𝑏_{𝑛}} for cosine and sine terms, respectively. The value of 𝑎_{1}/𝑎_{3} is __________. Give your answer rounded off to 1 decimal place.\n\n\n\n+1\n\n\\(\\frac{seconds2}{1350}\\)\n\n-1",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/bm/q30_diag.png",
+          "content": "The trigonometric Fourier series expansion of the periodic function in the figure has coefficients {𝑎_{𝑛}} and {𝑏_{𝑛}} for cosine and sine terms, respectively. The value of 𝑎_{1}/𝑎_{3} is __________. Give your answer rounded off to 1 decimal place.\n\n+1\n\n2 <u>seconds</u> 2 <u>seconds</u> 0 1 3 5 -1",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3121,10 +3184,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IISc Bengaluru is -3.0 to -3.0.",
-      "diagramUrl": "/exam-assets/gate/2024/bm/q30_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/bm/q30_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -3379,11 +3440,11 @@
       "questionNumber": 36,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "If 𝐴= (1 -1 -2), the eigenvalues of 𝐴 are _____________. 2",
+      "questionText": "If 𝐴= (1 2 -1 -2), the eigenvalues of 𝐴 are _____________.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝐴= (1 -1 -2), the eigenvalues of 𝐴 are _____________. 2",
+          "content": "If 𝐴= (1 2 -1 -2), the eigenvalues of 𝐴 are _____________.",
           "confidence": "VERIFIED"
         }
       ],
@@ -3488,11 +3549,11 @@
       "questionNumber": 37,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Consider a system of the following two partial differential equations:\n\n𝜕𝛼 𝜕𝑥= -2 𝜕𝛽 𝜕𝑡 𝜕𝛽 𝜕𝑥= -2 𝜕𝛼 𝜕𝑡 Which one of the following choices is a possible solution for the system?",
+      "questionText": "Consider a system of the following two partial differential equations:\n\n<u>𝜕𝛼</u> 𝜕𝛽 <u>𝜕𝛼</u> 𝜕𝑥= -2 𝜕𝛽 𝜕𝑡 \\(\\frac{𝜕𝛽}{𝜕𝑡}\\)\n\n<u>𝜕𝛽</u> 𝜕𝛼 <u>𝜕𝛽</u> 𝜕𝑥= -2 𝜕𝛼 𝜕𝑡 \\(\\frac{𝜕𝛼}{𝜕𝑡}\\)\n\nWhich one of the following choices is a possible solution for the system?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider a system of the following two partial differential equations:\n\n𝜕𝛼 𝜕𝑥= -2 𝜕𝛽 𝜕𝑡 𝜕𝛽 𝜕𝑥= -2 𝜕𝛼 𝜕𝑡 Which one of the following choices is a possible solution for the system?",
+          "content": "Consider a system of the following two partial differential equations:\n\n<u>𝜕𝛼</u> 𝜕𝛽 <u>𝜕𝛼</u> 𝜕𝑥= -2 𝜕𝛽 𝜕𝑡 \\(\\frac{𝜕𝛽}{𝜕𝑡}\\)\n\n<u>𝜕𝛽</u> 𝜕𝛼 <u>𝜕𝛽</u> 𝜕𝑥= -2 𝜕𝛼 𝜕𝑡 \\(\\frac{𝜕𝛼}{𝜕𝑡}\\)\n\nWhich one of the following choices is a possible solution for the system?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3502,71 +3563,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝛼(𝑡, 𝑥) = (𝑥-𝑡)2 + (𝑥+ 𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)2 -(𝑥+ 𝑡)2.",
-        "𝛼(𝑡, 𝑥) = (𝑥-2𝑡)2 + (𝑥+ 2𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)2 -(𝑥+ 2𝑡)2.",
-        "𝛼(𝑡, 𝑥) = (𝑥-",
-        "𝛼(𝑡, 𝑥) = (𝑥-"
+        "\\(𝛼(𝑡, 𝑥) = (𝑥-𝑡)^{2} + (𝑥+ 𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)^{2} -(𝑥+ 𝑡)^{2}.\\)",
+        "\\(𝛼(𝑡, 𝑥) = (𝑥-2𝑡)^{2} + (𝑥+ 2𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)^{2} -(𝑥+ 2𝑡)^{2}.\\)",
+        "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)",
+        "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + 2 (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = 2 (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝛼(𝑡, 𝑥) = (𝑥-𝑡)2 + (𝑥+ 𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)2 -(𝑥+ 𝑡)2.",
+          "text": "\\(𝛼(𝑡, 𝑥) = (𝑥-𝑡)^{2} + (𝑥+ 𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)^{2} -(𝑥+ 𝑡)^{2}.\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝛼(𝑡, 𝑥) = (𝑥-𝑡)2 + (𝑥+ 𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)2 -(𝑥+ 𝑡)2.",
+              "type": "math",
+              "latex": "𝛼(𝑡, 𝑥) = (𝑥-𝑡)^{2} + (𝑥+ 𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)^{2} -(𝑥+ 𝑡)^{2}.",
+              "content": "\\(𝛼(𝑡, 𝑥) = (𝑥-𝑡)^{2} + (𝑥+ 𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-𝑡)^{2} -(𝑥+ 𝑡)^{2}.\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝛼(𝑡, 𝑥) = (𝑥-2𝑡)2 + (𝑥+ 2𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)2 -(𝑥+ 2𝑡)2.",
+          "text": "\\(𝛼(𝑡, 𝑥) = (𝑥-2𝑡)^{2} + (𝑥+ 2𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)^{2} -(𝑥+ 2𝑡)^{2}.\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝛼(𝑡, 𝑥) = (𝑥-2𝑡)2 + (𝑥+ 2𝑡)2 and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)2 -(𝑥+ 2𝑡)2.",
+              "type": "math",
+              "latex": "𝛼(𝑡, 𝑥) = (𝑥-2𝑡)^{2} + (𝑥+ 2𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)^{2} -(𝑥+ 2𝑡)^{2}.",
+              "content": "\\(𝛼(𝑡, 𝑥) = (𝑥-2𝑡)^{2} + (𝑥+ 2𝑡)^{2} and 𝛽(𝑡, 𝑥) = (𝑥-2𝑡)^{2} -(𝑥+ 2𝑡)^{2}.\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝛼(𝑡, 𝑥) = (𝑥-",
+          "text": "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝛼(𝑡, 𝑥) = (𝑥-",
+              "type": "math",
+              "latex": "𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .",
+              "content": "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝛼(𝑡, 𝑥) = (𝑥-",
+          "text": "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + 2 (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = 2 (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝛼(𝑡, 𝑥) = (𝑥-",
+              "type": "math",
+              "latex": "𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + 2 (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = 2 (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .",
+              "content": "\\(𝛼(𝑡, 𝑥) = (𝑥- _{2}) 𝑡 2 + 2 (𝑥+ _{2}) 𝑡 2 and 𝛽(𝑡, 𝑥) = 2 (𝑥- _{2}) 𝑡 2 -(𝑥+ _{2}) 𝑡 2 .\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3706,69 +3771,90 @@
       "questionNumber": 39,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "Which of the following waveforms represents the output V_{o} of the circuit given below? The Zener diode used has a Zener breakdown voltage of 1 V and can be assumed ideal while in forward bias.\n\n\n\n1Ω + -v^{o}\n\n$$\\text{V_}{s}=2sin(2\\pi_{\\text{t}}) \\text{V}$$\n\n1V",
+      "questionText": "Which of the following waveforms represents the output V_{o} of the circuit given below? The Zener diode used has a Zener breakdown voltage of 1 V and can be assumed ideal while in forward bias.\n\n1Ω\n\nV_{s}=2sin(2πt) V -v^{o} +\n\n1V",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following waveforms represents the output V_{o} of the circuit given below? The Zener diode used has a Zener breakdown voltage of 1 V and can be assumed ideal while in forward bias.\n\n\n\n1Ω + -v^{o}",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "relational_algebra",
-          "latex": "\\text{V_}{s}=2sin(2\\pi_{\\text{t}}) \\text{V}",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "text",
-          "content": "1V",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/bm/q39_diag.png",
+          "content": "Which of the following waveforms represents the output V_{o} of the circuit given below? The Zener diode used has a Zener breakdown voltage of 1 V and can be assumed ideal while in forward bias.\n\n1Ω\n\nV_{s}=2sin(2πt) V -v^{o} +\n\n1V",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
-        "math",
-        "relational_algebra",
         "text"
       ],
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1 -2 0 -1 vo t 1 2",
-        "1 -2 0 vo t 1 2",
-        "1 0 -1 vo t 1 2",
-        "1 0 -1 vo t 1 2"
+        "\\(v_{o} -1 1 0 1 2 t -2\\)",
+        "\\(1 v_{o} 0 1 2 t -2\\)",
+        "\\(v_{o} 0 1 t -1 1 2\\)",
+        "\\(1 v_{o} -1 0 1 2 t\\)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2024/bm/q39_opt_a.png",
-        "/exam-assets/gate/2024/bm/q39_opt_b.png",
-        "/exam-assets/gate/2024/bm/q39_opt_c.png",
-        "/exam-assets/gate/2024/bm/q39_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1 -2 0 -1 vo t 1 2",
-          "imageUrl": "/exam-assets/gate/2024/bm/q39_opt_a.png"
+          "text": "\\(v_{o} -1 1 0 1 2 t -2\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "v_{o} -1 1 0 1 2 t -2",
+              "content": "\\(v_{o} -1 1 0 1 2 t -2\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
-          "text": "1 -2 0 vo t 1 2",
-          "imageUrl": "/exam-assets/gate/2024/bm/q39_opt_b.png"
+          "text": "\\(1 v_{o} 0 1 2 t -2\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "1 v_{o} 0 1 2 t -2",
+              "content": "\\(1 v_{o} 0 1 2 t -2\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
-          "text": "1 0 -1 vo t 1 2",
-          "imageUrl": "/exam-assets/gate/2024/bm/q39_opt_c.png"
+          "text": "\\(v_{o} 0 1 t -1 1 2\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "v_{o} 0 1 t -1 1 2",
+              "content": "\\(v_{o} 0 1 t -1 1 2\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
-          "text": "1 0 -1 vo t 1 2",
-          "imageUrl": "/exam-assets/gate/2024/bm/q39_opt_d.png"
+          "text": "\\(1 v_{o} -1 0 1 2 t\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "1 v_{o} -1 0 1 2 t",
+              "content": "\\(1 v_{o} -1 0 1 2 t\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "C",
@@ -3780,10 +3866,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IISc Bengaluru is Option (C).",
-      "diagramUrl": "/exam-assets/gate/2024/bm/q39_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/bm/q39_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.66,
       "examId": "gate",
@@ -3814,71 +3898,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑇𝑅≫𝑇1 , 𝑇𝐸≪𝑇2",
-        "𝑇𝑅≫𝑇1 , 𝑇𝐸≫𝑇2",
-        "𝑇𝑅≪𝑇1 , 𝑇𝐸≪𝑇2",
-        "𝑇𝑅≪𝑇1 , 𝑇𝐸≫𝑇2"
+        "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
+        "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)",
+        "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
+        "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑇𝑅≫𝑇1 , 𝑇𝐸≪𝑇2",
+          "text": "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇𝑅≫𝑇1 , 𝑇𝐸≪𝑇2",
+              "type": "math",
+              "latex": "𝑇𝑅≫𝑇_{1}, 𝑇𝐸≪𝑇_{2}",
+              "content": "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑇𝑅≫𝑇1 , 𝑇𝐸≫𝑇2",
+          "text": "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇𝑅≫𝑇1 , 𝑇𝐸≫𝑇2",
+              "type": "math",
+              "latex": "𝑇𝑅≫𝑇_{1}, 𝑇𝐸≫𝑇_{2}",
+              "content": "\\(𝑇𝑅≫𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑇𝑅≪𝑇1 , 𝑇𝐸≪𝑇2",
+          "text": "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇𝑅≪𝑇1 , 𝑇𝐸≪𝑇2",
+              "type": "math",
+              "latex": "𝑇𝑅≪𝑇_{1}, 𝑇𝐸≪𝑇_{2}",
+              "content": "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≪𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑇𝑅≪𝑇1 , 𝑇𝐸≫𝑇2",
+          "text": "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇𝑅≪𝑇1 , 𝑇𝐸≫𝑇2",
+              "type": "math",
+              "latex": "𝑇𝑅≪𝑇_{1}, 𝑇𝐸≫𝑇_{2}",
+              "content": "\\(𝑇𝑅≪𝑇_{1}, 𝑇𝐸≫𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4135,128 +4223,11 @@
       "questionNumber": 43,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In a catheter-sensor system to measure blood pressure (P) as shown in the below figure, the liquid resistance (R_{L}) of the catheter is due to friction between shearing molecules flowing through the catheter. Which of the following is TRUE for R_{L}if only the radius of the catheter is doubled. Assume that the pressure difference across the catheter segment is fixed.\n\nP Diaphragm Liquid\n\nCatheter",
+      "questionText": "In a catheter-sensor system to measure blood pressure (P) as shown in the below figure, the liquid resistance (R_{L}) of the catheter is due to friction between shearing molecules flowing through the catheter. Which of the following is TRUE for R_{L}if only the radius of the catheter is doubled. Assume that the pressure difference across the catheter segment is fixed.\n\nP Liquid Diaphragm\n\nCatheter",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In a catheter-sensor system to measure blood pressure (P) as shown in the below figure, the liquid resistance (R_{L}) of the catheter is due to friction between shearing molecules flowing through the catheter. Which of the following is TRUE for R_{L}if only the radius of the catheter is doubled. Assume that the pressure difference across the catheter segment is fixed.\n\nP Diaphragm Liquid\n\nCatheter",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/bm/q43_diag.png",
-          "confidence": "VERIFIED"
-        }
-      ],
-      "contentTypes": [
-        "diagram",
-        "text"
-      ],
-      "confidence": "VERIFIED",
-      "questionType": "MCQ",
-      "options": [
-        "RL will decrease by 16 times",
-        "RL will decrease by 8 times",
-        "RL will decrease by 4 times",
-        "RL will decrease by 2 times"
-      ],
-      "optionImages": null,
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "RL will decrease by 16 times",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "text",
-              "content": "RL will decrease by 16 times",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "text"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "RL will decrease by 8 times",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "text",
-              "content": "RL will decrease by 8 times",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "text"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "RL will decrease by 4 times",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "text",
-              "content": "RL will decrease by 4 times",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "text"
-          ]
-        },
-        {
-          "id": "D",
-          "text": "RL will decrease by 2 times",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "text",
-              "content": "RL will decrease by 2 times",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "text"
-          ]
-        }
-      ],
-      "correctAnswer": "A",
-      "correctAnswerIndex": 0,
-      "correctAnswerSet": null,
-      "correctAnswerSets": null,
-      "correctAnswerIndices": null,
-      "answerRange": null,
-      "answerRanges": null,
-      "isMta": false,
-      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
-      "diagramUrl": "/exam-assets/gate/2024/bm/q43_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/bm/q43_diag.png"
-      ],
-      "marks": 2.0,
-      "negativeMarks": 0.66,
-      "examId": "gate",
-      "year": 2024,
-      "date": "2024-02-03",
-      "shift": "Single Session",
-      "tier": "Single Stage",
-      "paperCode": "BM",
-      "discipline": "Biomedical Engineering",
-      "language": "English"
-    },
-    {
-      "id": "gate-2024-bm-q44",
-      "questionNumber": 44,
-      "sectionId": "bm_core",
-      "sectionName": "Biomedical Engineering",
-      "questionText": "What is the value of the following integral using the residue integration method? \\infty 𝑑𝑥 \\int 1 + 𝑥4 - \\infty",
-      "contentBlocks": [
-        {
-          "type": "text",
-          "content": "What is the value of the following integral using the residue integration method? \\infty 𝑑𝑥 \\int 1 + 𝑥4 - \\infty",
+          "content": "In a catheter-sensor system to measure blood pressure (P) as shown in the below figure, the liquid resistance (R_{L}) of the catheter is due to friction between shearing molecules flowing through the catheter. Which of the following is TRUE for R_{L}if only the radius of the catheter is doubled. Assume that the pressure difference across the catheter segment is fixed.\n\nP Liquid Diaphragm\n\nCatheter",
           "confidence": "VERIFIED"
         }
       ],
@@ -4266,21 +4237,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝜋 \\sqrt 2",
-        "𝜋 2 \\sqrt 2",
-        "𝜋 4",
-        "𝜋 2"
+        "\\(R_{L}\\) will decrease by 16 times",
+        "\\(R_{L}\\) will decrease by 8 times",
+        "\\(R_{L}\\) will decrease by 4 times",
+        "\\(R_{L}\\) will decrease by 2 times"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝜋 \\sqrt 2",
+          "text": "\\(R_{L}\\) will decrease by 16 times",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜋 \\sqrt 2",
+              "content": "\\(R_{L}\\) will decrease by 16 times",
               "confidence": "VERIFIED"
             }
           ],
@@ -4290,12 +4261,12 @@
         },
         {
           "id": "B",
-          "text": "𝜋 2 \\sqrt 2",
+          "text": "\\(R_{L}\\) will decrease by 8 times",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜋 2 \\sqrt 2",
+              "content": "\\(R_{L}\\) will decrease by 8 times",
               "confidence": "VERIFIED"
             }
           ],
@@ -4305,12 +4276,12 @@
         },
         {
           "id": "C",
-          "text": "𝜋 4",
+          "text": "\\(R_{L}\\) will decrease by 4 times",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜋 4",
+              "content": "\\(R_{L}\\) will decrease by 4 times",
               "confidence": "VERIFIED"
             }
           ],
@@ -4320,12 +4291,12 @@
         },
         {
           "id": "D",
-          "text": "𝜋 2",
+          "text": "\\(R_{L}\\) will decrease by 2 times",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝜋 2",
+              "content": "\\(R_{L}\\) will decrease by 2 times",
               "confidence": "VERIFIED"
             }
           ],
@@ -4357,15 +4328,128 @@
       "language": "English"
     },
     {
+      "id": "gate-2024-bm-q44",
+      "questionNumber": 44,
+      "sectionId": "bm_core",
+      "sectionName": "Biomedical Engineering",
+      "questionText": "What is the value of the following integral using the residue integration method? \\infty \\int \\(\\frac{𝑑𝑥}{1+𝑥4}\\)\n\n- \\infty",
+      "contentBlocks": [
+        {
+          "type": "text",
+          "content": "What is the value of the following integral using the residue integration method? \\infty \\int \\(\\frac{𝑑𝑥}{1+𝑥4}\\)\n\n- \\infty",
+          "confidence": "VERIFIED"
+        }
+      ],
+      "contentTypes": [
+        "text"
+      ],
+      "confidence": "VERIFIED",
+      "questionType": "MCQ",
+      "options": [
+        "\\(\\frac{𝜋}{\\sqrt{2}}\\)",
+        "\\(\\frac{𝜋}{2\\sqrt{2}}\\)",
+        "\\(\\frac{𝜋}{4}\\)",
+        "\\(\\frac{𝜋}{2}\\)"
+      ],
+      "optionImages": null,
+      "richOptions": [
+        {
+          "id": "A",
+          "text": "\\(\\frac{𝜋}{\\sqrt{2}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝜋}{\\sqrt{2}}",
+              "content": "\\(\\frac{𝜋}{\\sqrt{2}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "\\(\\frac{𝜋}{2\\sqrt{2}}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝜋}{2\\sqrt{2}}",
+              "content": "\\(\\frac{𝜋}{2\\sqrt{2}}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "\\(\\frac{𝜋}{4}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝜋}{4}",
+              "content": "\\(\\frac{𝜋}{4}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "\\(\\frac{𝜋}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{𝜋}{2}",
+              "content": "\\(\\frac{𝜋}{2}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerIndex": 0,
+      "correctAnswerSet": null,
+      "correctAnswerSets": null,
+      "correctAnswerIndices": null,
+      "answerRange": null,
+      "answerRanges": null,
+      "isMta": false,
+      "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
+      "diagramUrl": null,
+      "diagramUrls": null,
+      "marks": 2.0,
+      "negativeMarks": 0.66,
+      "examId": "gate",
+      "year": 2024,
+      "date": "2024-02-03",
+      "shift": "Single Session",
+      "tier": "Single Stage",
+      "paperCode": "BM",
+      "discipline": "Biomedical Engineering",
+      "language": "English"
+    },
+    {
       "id": "gate-2024-bm-q45",
       "questionNumber": 45,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A neurologist needs to observe the alpha wave in EEG recordings of a patient. The system block diagram with ideal filter blocks is shown below. Which one of the following design choices is correct?\n\nEEG Signal High Pass Filter Low Pass Filter EEG Signal High Pass Filter Low Pass Filter EEG Signal High Pass Filter Low Pass Filter A/D Converter Cut Off Cut-Off Sampling at fs fl fh",
+      "questionText": "A neurologist needs to observe the alpha wave in EEG recordings of a patient. The system block diagram with ideal filter blocks is shown below. Which one of the following design choices is correct?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A neurologist needs to observe the alpha wave in EEG recordings of a patient. The system block diagram with ideal filter blocks is shown below. Which one of the following design choices is correct?\n\nEEG Signal High Pass Filter Low Pass Filter EEG Signal High Pass Filter Low Pass Filter EEG Signal High Pass Filter Low Pass Filter A/D Converter Cut Off Cut-Off Sampling at fs fl fh",
+          "content": "A neurologist needs to observe the alpha wave in EEG recordings of a patient. The system block diagram with ideal filter blocks is shown below. Which one of the following design choices is correct?",
           "confidence": "VERIFIED"
         },
         {
@@ -4478,11 +4562,11 @@
       "questionNumber": 46,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the circuit below, what is the value of 𝐼_{𝐿} to transfer the maximum power to load?\n\n\n\nI_{L} 1Ω 1A Load 5V",
+      "questionText": "In the circuit below, what is the value of 𝐼_{𝐿} to transfer the maximum power to load?\n\n1Ω 1A Load 5V",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the circuit below, what is the value of 𝐼_{𝐿} to transfer the maximum power to load?\n\n\n\nI_{L} 1Ω 1A Load 5V",
+          "content": "In the circuit below, what is the value of 𝐼_{𝐿} to transfer the maximum power to load?\n\n1Ω 1A Load 5V",
           "confidence": "VERIFIED"
         },
         {
@@ -4948,15 +5032,9 @@
           "type": "text",
           "content": "For 𝐹⃗= (𝑥+ 𝑦)𝑖̂ + (𝑥+ 𝑦)𝑗̂ the value of ∮𝐹⃗∙𝑑𝑟⃗ along the path shown in the figure is ______. Give your answer as an integer.\n\ny\n\n(0,1) (1,1)\n\n\\(\\frac{(1,0)}{x}\\)",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/bm/q50_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4976,10 +5054,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IISc Bengaluru is 0 to 0.",
-      "diagramUrl": "/exam-assets/gate/2024/bm/q50_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/bm/q50_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -4996,15 +5072,50 @@
       "questionNumber": 51,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The approximate total cross sectional areas of various types of blood vessels are given below. It was estimated that the velocity of blood in the aorta is 30 cms^{-1}. The time it will take for the blood to travel through a capillary of length 0.5 mm is _____ seconds. Give your answer rounded off to two decimal places.\n\n\n\nVessel Type Approximate total cross \\(\\frac{sectionalarea(cm2)}{4.5}\\)2\n\n\\(\\frac{Aorta}{Artery}\\)",
+      "questionText": "The approximate total cross sectional areas of various types of blood vessels are given below. It was estimated that the velocity of blood in the aorta is 30 cms^{-1}. The time it will take for the blood to travel through a capillary of length 0.5 mm is _____ seconds. Give your answer rounded off to two decimal places.\n\n| Vessel Type | Approximate total cross sectional area (cm2) |\n| :--- | :--- |\n| Aorta | 4.5 |\n| Artery | 20 |\n| Arteriole | 400 |\n| Capillary | 4500 |\n| Venule | 40 |\n| Vein | 15 |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The approximate total cross sectional areas of various types of blood vessels are given below. It was estimated that the velocity of blood in the aorta is 30 cms^{-1}. The time it will take for the blood to travel through a capillary of length 0.5 mm is _____ seconds. Give your answer rounded off to two decimal places.\n\n\n\nVessel Type Approximate total cross \\(\\frac{sectionalarea(cm2)}{4.5}\\)2\n\n\\(\\frac{Aorta}{Artery}\\)",
+          "content": "The approximate total cross sectional areas of various types of blood vessels are given below. It was estimated that the velocity of blood in the aorta is 30 cms^{-1}. The time it will take for the blood to travel through a capillary of length 0.5 mm is _____ seconds. Give your answer rounded off to two decimal places.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Vessel Type",
+            "Approximate total cross sectional area (cm2)"
+          ],
+          "rows": [
+            [
+              "Aorta",
+              "4.5"
+            ],
+            [
+              "Artery",
+              "20"
+            ],
+            [
+              "Arteriole",
+              "400"
+            ],
+            [
+              "Capillary",
+              "4500"
+            ],
+            [
+              "Venule",
+              "40"
+            ],
+            [
+              "Vein",
+              "15"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5180,11 +5291,11 @@
       "questionNumber": 55,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "If a circular ultrasound transducer of radius 𝑎 = 8 mm operating at a central frequency of 1 MHz has a pressure beam pattern in a medium as given below:\n\n𝑃(𝑟, 0) ∝sin 𝑘𝑎^{2} 4𝑟 Here, 𝑘 is the wave number, 𝑟 is the axial distance from the center of aperture. The speed of sound in the medium is 1600 ms^{-1}.\n\nThe reduction in intensity between 𝑟= 8 cm and 𝑟= 16 cm is ______ dB. Give your answer as a positive quantity rounded off to two decimal places.",
+      "questionText": "If a circular ultrasound transducer of radius 𝑎 = 8 mm operating at a central frequency of 1 MHz has a pressure beam pattern in a medium as given below:\n\n𝑃(𝑟, 0) ∝sin \\(\\frac{𝑘𝑎2}{4𝑟}\\)\n\nHere, 𝑘 is the wave number, 𝑟 is the axial distance from the center of aperture. The speed of sound in the medium is 1600 ms^{-1}.\n\nThe reduction in intensity between 𝑟= 8 cm and 𝑟= 16 cm is ______ dB. Give your answer as a positive quantity rounded off to two decimal places.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If a circular ultrasound transducer of radius 𝑎 = 8 mm operating at a central frequency of 1 MHz has a pressure beam pattern in a medium as given below:\n\n𝑃(𝑟, 0) ∝sin 𝑘𝑎^{2} 4𝑟 Here, 𝑘 is the wave number, 𝑟 is the axial distance from the center of aperture. The speed of sound in the medium is 1600 ms^{-1}.\n\nThe reduction in intensity between 𝑟= 8 cm and 𝑟= 16 cm is ______ dB. Give your answer as a positive quantity rounded off to two decimal places.",
+          "content": "If a circular ultrasound transducer of radius 𝑎 = 8 mm operating at a central frequency of 1 MHz has a pressure beam pattern in a medium as given below:\n\n𝑃(𝑟, 0) ∝sin \\(\\frac{𝑘𝑎2}{4𝑟}\\)\n\nHere, 𝑘 is the wave number, 𝑟 is the axial distance from the center of aperture. The speed of sound in the medium is 1600 ms^{-1}.\n\nThe reduction in intensity between 𝑟= 8 cm and 𝑟= 16 cm is ______ dB. Give your answer as a positive quantity rounded off to two decimal places.",
           "confidence": "VERIFIED"
         }
       ],
@@ -5226,21 +5337,15 @@
       "questionNumber": 56,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The source in the figure is a current source and the circuit is in steady state. At 𝑡=\n\nanswer rounded off to 2 decimal digits.\n\n<u>v</u>\n\nI=sin(t) A 1H 1F 2Ω",
+      "questionText": "The source in the figure is a current source and the circuit is in steady state. At 𝑡= 5𝜋 seconds, the value of v in the circuit given below is _____ volts. Give your answer rounded off to 2 decimal digits.\n\n<u>v</u>\n\nI=sin(t) A 1H 1F 2Ω",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The source in the figure is a current source and the circuit is in steady state. At 𝑡=\n\nanswer rounded off to 2 decimal digits.\n\n<u>v</u>\n\nI=sin(t) A 1H 1F 2Ω",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/bm/q56_diag.png",
+          "content": "The source in the figure is a current source and the circuit is in steady state. At 𝑡= 5𝜋 seconds, the value of v in the circuit given below is _____ volts. Give your answer rounded off to 2 decimal digits.\n\n<u>v</u>\n\nI=sin(t) A 1H 1F 2Ω",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5260,10 +5365,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IISc Bengaluru is 1.98 to 2.02.",
-      "diagramUrl": "/exam-assets/gate/2024/bm/q56_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/bm/q56_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -5280,11 +5383,11 @@
       "questionNumber": 57,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "The equivalent impedance, Z_{AB}, in the circuit given below is _____ Ω. Give your answer rounded off to one decimal place.\n\n1Ω 1Ω\n\n+ Z_{AB} + V 1Ω V - -",
+      "questionText": "The equivalent impedance, Z_{AB}, in the circuit given below is _____ Ω. Give your answer rounded off to one decimal place.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The equivalent impedance, Z_{AB}, in the circuit given below is _____ Ω. Give your answer rounded off to one decimal place.\n\n1Ω 1Ω\n\n+ Z_{AB} + V 1Ω V - -",
+          "content": "The equivalent impedance, Z_{AB}, in the circuit given below is _____ Ω. Give your answer rounded off to one decimal place.",
           "confidence": "VERIFIED"
         },
         {
@@ -5380,11 +5483,11 @@
       "questionNumber": 59,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "If 𝑥[𝑛] = 𝑢[𝑛] -𝑢[𝑛-5], and ℎ[𝑛] = 𝛿[𝑛] -𝛿[𝑛-1] and 𝑦[𝑛] = 𝑥[𝑛] ∗ℎ[𝑛], \\infty then the value of \\sum is ______. Give your answer rounded off to the nearest 𝑦[𝑛] 𝑛=- \\infty integer.",
+      "questionText": "If 𝑥[𝑛] = 𝑢[𝑛] -𝑢[𝑛-5], and ℎ[𝑛] = 𝛿[𝑛] -𝛿[𝑛-1] and 𝑦[𝑛] = 𝑥[𝑛] ∗ℎ[𝑛], then the value of \\sum integer. \\infty 𝑛=- \\infty 𝑦[𝑛] is ______. Give your answer rounded off to the nearest",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝑥[𝑛] = 𝑢[𝑛] -𝑢[𝑛-5], and ℎ[𝑛] = 𝛿[𝑛] -𝛿[𝑛-1] and 𝑦[𝑛] = 𝑥[𝑛] ∗ℎ[𝑛], \\infty then the value of \\sum is ______. Give your answer rounded off to the nearest 𝑦[𝑛] 𝑛=- \\infty integer.",
+          "content": "If 𝑥[𝑛] = 𝑢[𝑛] -𝑢[𝑛-5], and ℎ[𝑛] = 𝛿[𝑛] -𝛿[𝑛-1] and 𝑦[𝑛] = 𝑥[𝑛] ∗ℎ[𝑛], then the value of \\sum integer. \\infty 𝑛=- \\infty 𝑦[𝑛] is ______. Give your answer rounded off to the nearest",
           "confidence": "VERIFIED"
         }
       ],
@@ -5426,11 +5529,11 @@
       "questionNumber": 60,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the figure below, the diode is ideal. The current reading shown in the ammeter is _____ A. Give your answer rounded off to the nearest integer.\n\n1H 1Ω\n\nsin(t) V Ammeter 1F 1Ω",
+      "questionText": "In the figure below, the diode is ideal. The current reading shown in the ammeter is _____ A. Give your answer rounded off to the nearest integer.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the figure below, the diode is ideal. The current reading shown in the ammeter is _____ A. Give your answer rounded off to the nearest integer.\n\n1H 1Ω\n\nsin(t) V Ammeter 1F 1Ω",
+          "content": "In the figure below, the diode is ideal. The current reading shown in the ammeter is _____ A. Give your answer rounded off to the nearest integer.",
           "confidence": "VERIFIED"
         },
         {
@@ -5480,11 +5583,11 @@
       "questionNumber": 61,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "In the figure below, the Fourier series of 𝑣(𝑡), in volts, is given as:\n\n𝑣(𝑡) = 𝑣_{0} + 2 cos(𝜔_{0}𝑡) + 5 cos(3𝜔_{0}𝑡) + cos (5𝜔_{0}𝑡) The capacitor is a short circuit for all AC signals. The power absorbed by the 1Ω resistor is _____ W. Give your answer rounded off to the nearest integer.\n\nC= \\infty\n\n1Ω v(t)",
+      "questionText": "In the figure below, the Fourier series of 𝑣(𝑡), in volts, is given as:\n\n𝑣(𝑡) = 𝑣_{0} + 2 cos(𝜔_{0}𝑡) + 5 cos(3𝜔_{0}𝑡) + cos (5𝜔_{0}𝑡) The capacitor is a short circuit for all AC signals. The power absorbed by the 1Ω resistor is _____ W. Give your answer rounded off to the nearest integer.\n\nC= \\infty",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the figure below, the Fourier series of 𝑣(𝑡), in volts, is given as:\n\n𝑣(𝑡) = 𝑣_{0} + 2 cos(𝜔_{0}𝑡) + 5 cos(3𝜔_{0}𝑡) + cos (5𝜔_{0}𝑡) The capacitor is a short circuit for all AC signals. The power absorbed by the 1Ω resistor is _____ W. Give your answer rounded off to the nearest integer.\n\nC= \\infty\n\n1Ω v(t)",
+          "content": "In the figure below, the Fourier series of 𝑣(𝑡), in volts, is given as:\n\n𝑣(𝑡) = 𝑣_{0} + 2 cos(𝜔_{0}𝑡) + 5 cos(3𝜔_{0}𝑡) + cos (5𝜔_{0}𝑡) The capacitor is a short circuit for all AC signals. The power absorbed by the 1Ω resistor is _____ W. Give your answer rounded off to the nearest integer.\n\nC= \\infty",
           "confidence": "VERIFIED"
         },
         {
@@ -5672,11 +5775,11 @@
       "questionNumber": 65,
       "sectionId": "bm_core",
       "sectionName": "Biomedical Engineering",
-      "questionText": "A person creates an apparatus as shown in the figure to exercise the extensor muscle of the hand. It is given that OP = 0.15 m, OQ = 0.35 m, 𝜃 = 30^{∘}, the weight of the lower arm = 20 N, the center of mass of the lower arm is at point P, the magnitude of the applied tensile force F = 50 N. If the extensor muscle is acting with a moment arm of 0.25 m, the muscle force required to hold the hand at the position shown in the figure is _____ N. Give your answer rounded off to the nearest integer.",
+      "questionText": "A person creates an apparatus as shown in the figure to exercise the extensor muscle of the h and. It is given that OP = 0.15 m, OQ = 0.35 m, 𝜃 = 30^{∘}, the weight of the lower arm = 20 N, the center of mass of the lower arm is at point P, the magnitude of the applied tensile force F = 50 N. If the extensor muscle is acting with a moment arm of 0.25 m, the muscle force required to hold the h and at the position shown in the figure is _____ N. Give your answer rounded off to the nearest integer.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A person creates an apparatus as shown in the figure to exercise the extensor muscle of the hand. It is given that OP = 0.15 m, OQ = 0.35 m, 𝜃 = 30^{∘}, the weight of the lower arm = 20 N, the center of mass of the lower arm is at point P, the magnitude of the applied tensile force F = 50 N. If the extensor muscle is acting with a moment arm of 0.25 m, the muscle force required to hold the hand at the position shown in the figure is _____ N. Give your answer rounded off to the nearest integer.",
+          "content": "A person creates an apparatus as shown in the figure to exercise the extensor muscle of the h and. It is given that OP = 0.15 m, OQ = 0.35 m, 𝜃 = 30^{∘}, the weight of the lower arm = 20 N, the center of mass of the lower arm is at point P, the magnitude of the applied tensile force F = 50 N. If the extensor muscle is acting with a moment arm of 0.25 m, the muscle force required to hold the h and at the position shown in the figure is _____ N. Give your answer rounded off to the nearest integer.",
           "confidence": "VERIFIED"
         },
         {

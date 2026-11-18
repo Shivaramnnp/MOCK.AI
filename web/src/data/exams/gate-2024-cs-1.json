@@ -154,11 +154,11 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+      "questionText": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional 𝑥 to (𝑥-𝑦) then the value of 𝑦",
+          "content": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional to (𝑥-𝑦) then the value of \\(\\frac{𝑥}{𝑦}\\)",
           "confidence": "VERIFIED"
         }
       ],
@@ -387,7 +387,7 @@
       "questionType": "MCQ",
       "options": [
         "21%",
-        "14 2 7%",
+        "\\(14 2 _{7}%\\)",
         "10%",
         "30%"
       ],
@@ -410,17 +410,18 @@
         },
         {
           "id": "B",
-          "text": "14 2 7%",
+          "text": "\\(14 2 _{7}%\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "14 2 7%",
+              "type": "math",
+              "latex": "14 2 _{7}%",
+              "content": "\\(14 2 _{7}%\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -481,11 +482,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+      "questionText": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\n\\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) 𝑝2𝑞2",
+          "content": "For positive non-zero real variables 𝑝 and 𝑞, if log (𝑝^{2} + 𝑞^{2}) = log 𝑝+ log 𝑞+ 2 log 3 ,\n\nthen, the value of \\(\\frac{𝑝4+𝑞4}{𝑝2𝑞2}\\) is",
           "confidence": "VERIFIED"
         }
       ],
@@ -590,11 +591,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i) before heading (ii) to bat; \\(\\frac{(i)}{batting,he}\\) for, while he had a head (iii) batting, he could only do so with a cool head s (iv) his shoulders.",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +605,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) down\n(ii) down\n(iii) on\n(iv) for",
-        "(i) on\n(ii) down\n(iii) for\n(iv) on",
-        "(i) down\n(ii) out\n(iii) for\n(iv) on",
-        "(i) on\n(ii) out\n(iii) on\n(iv) for"
+        "(i) down (ii) down (iii) on (iv) for",
+        "(i) on (ii) down (iii) for (iv) on",
+        "(i) down (ii) out (iii) for (iv) on",
+        "(i) on (ii) out (iii) on (iv) for"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+          "text": "(i) down (ii) down (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+              "content": "(i) down (ii) down (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +629,12 @@
         },
         {
           "id": "B",
-          "text": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+          "text": "(i) on (ii) down (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+              "content": "(i) on (ii) down (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +644,12 @@
         },
         {
           "id": "C",
-          "text": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+          "text": "(i) down (ii) out (iii) for (iv) on",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+              "content": "(i) down (ii) out (iii) for (iv) on",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +659,12 @@
         },
         {
           "id": "D",
-          "text": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+          "text": "(i) on (ii) out (iii) on (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) on\n(ii) out\n(iii) on\n(iv) for",
+              "content": "(i) on (ii) out (iii) on (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -808,11 +809,46 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat 5% Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+      "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\n| Macronutrient | Energy density (kcal/g) |\n| :--- | :--- |\n| Carbohydrates | 4 |\n| Proteins | 4 |\n| Unsaturated fat | 9 |\n| Saturated fat | 9 |\n| Trans fat | 9 |\n\nThe total fat (all three types), in grams, this person consumes is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.\n\nMacronutrient energy contribution\n\nTrans fat 5% Saturated fat 20% Carbohydrates 35%\n\nUnsaturated fat 20% Proteins 20%\n\n\\(\\frac{typicalenergydensity(kcal/g)ofthese}{Macronutrient}\\)\n\n\\(\\frac{4}{9}\\)\n\n<u>Trans</u> <u>fat</u> <u>9</u>\n\nThe total fat (all three types), in grams, this person consumes is",
+          "content": "The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Macronutrient",
+            "Energy density (kcal/g)"
+          ],
+          "rows": [
+            [
+              "Carbohydrates",
+              "4"
+            ],
+            [
+              "Proteins",
+              "4"
+            ],
+            [
+              "Unsaturated fat",
+              "9"
+            ],
+            [
+              "Saturated fat",
+              "9"
+            ],
+            [
+              "Trans fat",
+              "9"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The total fat (all three types), in grams, this person consumes is",
           "confidence": "VERIFIED"
         },
         {
@@ -823,6 +859,7 @@
       ],
       "contentTypes": [
         "diagram",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -1260,11 +1297,11 @@
       "questionNumber": 12,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "The product of all eigenvalues of the matrix [ ] is 4 5 6 7 8 9",
+      "questionText": "The product of all eigenvalues of the matrix [ 4 5 6 ] is 7 8 9",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The product of all eigenvalues of the matrix [ ] is 4 5 6 7 8 9",
+          "content": "The product of all eigenvalues of the matrix [ 4 5 6 ] is 7 8 9",
           "confidence": "VERIFIED"
         }
       ],
@@ -1601,21 +1638,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "In the cycle stealing mode of DMA, one word of data is transferred between an I/O\ndevice and main memory in a stolen cycle",
-        "For bulk data transfer, the burst mode of DMA has a higher throughput than the\ncycle stealing mode",
-        "Programmed I/O mechanism has a better CPU utilization than the interrupt driven\nI/O mechanism",
-        "The CPU can start executing an interrupt service routine faster with vectored\ninterrupts than with non-vectored interrupts"
+        "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
+        "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
+        "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
+        "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O\ndevice and main memory in a stolen cycle",
+          "text": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O\ndevice and main memory in a stolen cycle",
+              "content": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
               "confidence": "VERIFIED"
             }
           ],
@@ -1625,12 +1662,12 @@
         },
         {
           "id": "B",
-          "text": "For bulk data transfer, the burst mode of DMA has a higher throughput than the\ncycle stealing mode",
+          "text": "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For bulk data transfer, the burst mode of DMA has a higher throughput than the\ncycle stealing mode",
+              "content": "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
               "confidence": "VERIFIED"
             }
           ],
@@ -1640,12 +1677,12 @@
         },
         {
           "id": "C",
-          "text": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven\nI/O mechanism",
+          "text": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven\nI/O mechanism",
+              "content": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
               "confidence": "VERIFIED"
             }
           ],
@@ -1655,12 +1692,12 @@
         },
         {
           "id": "D",
-          "text": "The CPU can start executing an interrupt service routine faster with vectored\ninterrupts than with non-vectored interrupts",
+          "text": "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The CPU can start executing an interrupt service routine faster with vectored\ninterrupts than with non-vectored interrupts",
+              "content": "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts",
               "confidence": "VERIFIED"
             }
           ],
@@ -1914,16 +1951,21 @@
       "questionNumber": 18,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nint main(){\nint a = 6;\nint b = 0;\nwhile(a < 10) {\na = a / 12 + 1;\na += b;\n}\nprintf(”%d”, a);\nreturn 0;\n}\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nint main(){\n   int a = 6;\n   int b = 0;\n   while(a < 10) {\n      a = a / 12 + 1;\n      a += b;}\n   printf(”%d”, a);\n   return 0;}\n```\n\nWhich one of the following statements is CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nint main(){\nint a = 6;\nint b = 0;\nwhile(a < 10) {\na = a / 12 + 1;\na += b;\n}\nprintf(”%d”, a);\nreturn 0;\n}\n```",
+          "content": "```text\n#include <stdio.h>\nint main(){\n   int a = 6;\n   int b = 0;\n   while(a < 10) {\n      a = a / 12 + 1;\n      a += b;}\n   printf(”%d”, a);\n   return 0;}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which one of the following statements is CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2029,16 +2071,21 @@
       "questionNumber": 19,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nvoid fX();\nint main(){\nfX();\nreturn 0;\n}\n                                void fX(){\n                                char a;\n                                if((a=getchar()) != ’\\n’)\n                                fX();\n                                if(a != ’\\n’)\n                                putchar(a);\n                                }\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nvoid fX();\nint main(){\n   fX();\n   return 0;}\n  void fX(){\n   char a;\n   if((a=getchar()) != ’\\n’)\n       fX();\n   if(a != ’\\n’)\n       putchar(a);}\n```\n\nAssume that the input to the program from the command line is 1234 followed by a newline character. Which one of the following statements is CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nvoid fX();\nint main(){\nfX();\nreturn 0;\n}\n                                void fX(){\n                                char a;\n                                if((a=getchar()) != ’\\n’)\n                                fX();\n                                if(a != ’\\n’)\n                                putchar(a);\n                                }\n```",
+          "content": "```text\n#include <stdio.h>\nvoid fX();\nint main(){\n   fX();\n   return 0;}\n  void fX(){\n   char a;\n   if((a=getchar()) != ’\\n’)\n       fX();\n   if(a != ’\\n’)\n       putchar(a);}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Assume that the input to the program from the comm and line is 1234 followed by a newline character. Which one of the following statements is CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2262,7 +2309,6 @@
         }
       ],
       "contentTypes": [
-        "math",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2478,11 +2524,11 @@
       "questionNumber": 23,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Let 𝐿1, 𝐿2 be two regular languages and 𝐿3 a language which is not regular. Which of the following statements is/are always TRUE?",
+      "questionText": "Let 𝐿_{1}, 𝐿_{2} be two regular languages and 𝐿_{3} a language which is not regular. Which of the following statements is/are always TRUE?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝐿1, 𝐿2 be two regular languages and 𝐿3 a language which is not regular. Which of the following statements is/are always TRUE?",
+          "content": "Let 𝐿_{1}, 𝐿_{2} be two regular languages and 𝐿_{3} a language which is not regular. Which of the following statements is/are always TRUE?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2492,21 +2538,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝐿1 = 𝐿2 if and only if 𝐿1 \\cap 𝐿2\n̅̅̅ = 𝜙",
-        "𝐿1 \\cup 𝐿3 is not regular",
-        "𝐿3\n̅̅̅ is not regular",
-        "𝐿1\n̅̅̅ \\cup 𝐿2\n̅̅̅ is regular"
+        "𝐿_{1} = 𝐿_{2\\(}^{if and only if}\\)𝐿_{1} \\cap 𝐿_{2} ̅̅̅ = 𝜙",
+        "𝐿_{1} \\cup 𝐿_{3\\(}^{is not regular}\\)",
+        "̅̅̅_{is not regular} 𝐿_{3}",
+        "\\(̅̅̅ \\cup 𝐿_{2} 𝐿_{1} ̅̅̅_{is regular}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝐿1 = 𝐿2 if and only if 𝐿1 \\cap 𝐿2\n̅̅̅ = 𝜙",
+          "text": "𝐿_{1} = 𝐿_{2\\(}^{if and only if}\\)𝐿_{1} \\cap 𝐿_{2} ̅̅̅ = 𝜙",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝐿1 = 𝐿2 if and only if 𝐿1 \\cap 𝐿2\n̅̅̅ = 𝜙",
+              "content": "𝐿_{1} = 𝐿_{2\\(}^{if and only if}\\)𝐿_{1} \\cap 𝐿_{2} ̅̅̅ = 𝜙",
               "confidence": "VERIFIED"
             }
           ],
@@ -2516,12 +2562,12 @@
         },
         {
           "id": "B",
-          "text": "𝐿1 \\cup 𝐿3 is not regular",
+          "text": "𝐿_{1} \\cup 𝐿_{3\\(}^{is not regular}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝐿1 \\cup 𝐿3 is not regular",
+              "content": "𝐿_{1} \\cup 𝐿_{3\\(}^{is not regular}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -2531,12 +2577,12 @@
         },
         {
           "id": "C",
-          "text": "𝐿3\n̅̅̅ is not regular",
+          "text": "̅̅̅_{is not regular} 𝐿_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝐿3\n̅̅̅ is not regular",
+              "content": "̅̅̅_{is not regular} 𝐿_{3}",
               "confidence": "VERIFIED"
             }
           ],
@@ -2546,17 +2592,18 @@
         },
         {
           "id": "D",
-          "text": "𝐿1\n̅̅̅ \\cup 𝐿2\n̅̅̅ is regular",
+          "text": "\\(̅̅̅ \\cup 𝐿_{2} 𝐿_{1} ̅̅̅_{is regular}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐿1\n̅̅̅ \\cup 𝐿2\n̅̅̅ is regular",
+              "type": "math",
+              "latex": "̅̅̅ \\cup 𝐿_{2} 𝐿_{1} ̅̅̅_{is regular}",
+              "content": "\\(̅̅̅ \\cup 𝐿_{2} 𝐿_{1} ̅̅̅_{is regular}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2952,8 +2999,8 @@
       "options": [
         "The two events 𝐴 and 𝐵 are independent",
         "𝑃(𝐴 \\cup 𝐵) = 0.7",
-        "𝑃(𝐴 \\cap 𝐵𝑐) = 0.2, where 𝐵𝑐 is the complement of the event 𝐵",
-        "𝑃(𝐴𝑐 \\cap 𝐵𝑐) = 0.4, where 𝐴𝑐 and 𝐵𝑐 are the complements of the events 𝐴 and 𝐵,\nrespectively"
+        "𝑃(𝐴 \\cap 𝐵^{𝑐}) = 0.2, where 𝐵^{𝑐} is the complement of the event 𝐵",
+        "𝑃(𝐴^{𝑐} \\cap 𝐵^{𝑐}) = 0.4, where 𝐴^{𝑐} and 𝐵^{𝑐} are the complements of the events 𝐴 and 𝐵, respectively"
       ],
       "optionImages": null,
       "richOptions": [
@@ -2989,12 +3036,12 @@
         },
         {
           "id": "C",
-          "text": "𝑃(𝐴 \\cap 𝐵𝑐) = 0.2, where 𝐵𝑐 is the complement of the event 𝐵",
+          "text": "𝑃(𝐴 \\cap 𝐵^{𝑐}) = 0.2, where 𝐵^{𝑐} is the complement of the event 𝐵",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑃(𝐴 \\cap 𝐵𝑐) = 0.2, where 𝐵𝑐 is the complement of the event 𝐵",
+              "content": "𝑃(𝐴 \\cap 𝐵^{𝑐}) = 0.2, where 𝐵^{𝑐} is the complement of the event 𝐵",
               "confidence": "VERIFIED"
             }
           ],
@@ -3004,12 +3051,12 @@
         },
         {
           "id": "D",
-          "text": "𝑃(𝐴𝑐 \\cap 𝐵𝑐) = 0.4, where 𝐴𝑐 and 𝐵𝑐 are the complements of the events 𝐴 and 𝐵,\nrespectively",
+          "text": "𝑃(𝐴^{𝑐} \\cap 𝐵^{𝑐}) = 0.4, where 𝐴^{𝑐} and 𝐵^{𝑐} are the complements of the events 𝐴 and 𝐵, respectively",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝑃(𝐴𝑐 \\cap 𝐵𝑐) = 0.4, where 𝐴𝑐 and 𝐵𝑐 are the complements of the events 𝐴 and 𝐵,\nrespectively",
+              "content": "𝑃(𝐴^{𝑐} \\cap 𝐵^{𝑐}) = 0.4, where 𝐴^{𝑐} and 𝐵^{𝑐} are the complements of the events 𝐴 and 𝐵, respectively",
               "confidence": "VERIFIED"
             }
           ],
@@ -3073,8 +3120,8 @@
       "options": [
         "With no propagation delays, the output 𝒀 is always logic Zero",
         "With no propagation delays, the output 𝒀 is always logic One",
-        "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿\ntransitions from logic Zero to logic One",
-        "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿\ntransitions from logic One to logic Zero"
+        "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 transitions from logic Zero to logic One",
+        "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 transitions from logic One to logic Zero"
       ],
       "optionImages": null,
       "richOptions": [
@@ -3110,12 +3157,12 @@
         },
         {
           "id": "C",
-          "text": "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿\ntransitions from logic Zero to logic One",
+          "text": "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 transitions from logic Zero to logic One",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿\ntransitions from logic Zero to logic One",
+              "content": "With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 transitions from logic Zero to logic One",
               "confidence": "VERIFIED"
             }
           ],
@@ -3125,12 +3172,12 @@
         },
         {
           "id": "D",
-          "text": "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿\ntransitions from logic One to logic Zero",
+          "text": "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 transitions from logic One to logic Zero",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿\ntransitions from logic One to logic Zero",
+              "content": "With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 transitions from logic One to logic Zero",
               "confidence": "VERIFIED"
             }
           ],
@@ -3188,21 +3235,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The sequence number 𝑁𝑃 is chosen randomly by P",
-        "The sequence number 𝑁𝑃 is always 0 for a new connection",
-        "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃",
-        "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃+ 1"
+        "The sequence number 𝑁_{𝑃} is chosen randomly by P",
+        "The sequence number 𝑁_{𝑃} is always 0 for a new connection",
+        "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}",
+        "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}+ 1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The sequence number 𝑁𝑃 is chosen randomly by P",
+          "text": "The sequence number 𝑁_{𝑃} is chosen randomly by P",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The sequence number 𝑁𝑃 is chosen randomly by P",
+              "content": "The sequence number 𝑁_{𝑃} is chosen randomly by P",
               "confidence": "VERIFIED"
             }
           ],
@@ -3212,12 +3259,12 @@
         },
         {
           "id": "B",
-          "text": "The sequence number 𝑁𝑃 is always 0 for a new connection",
+          "text": "The sequence number 𝑁_{𝑃} is always 0 for a new connection",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The sequence number 𝑁𝑃 is always 0 for a new connection",
+              "content": "The sequence number 𝑁_{𝑃} is always 0 for a new connection",
               "confidence": "VERIFIED"
             }
           ],
@@ -3227,12 +3274,12 @@
         },
         {
           "id": "C",
-          "text": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃",
+          "text": "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃",
+              "content": "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}",
               "confidence": "VERIFIED"
             }
           ],
@@ -3242,12 +3289,12 @@
         },
         {
           "id": "D",
-          "text": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃+ 1",
+          "text": "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}+ 1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The acknowledgement number 𝑁𝑄 is equal to 𝑁𝑃+ 1",
+              "content": "The acknowledgement number 𝑁_{𝑄} is equal to 𝑁_{𝑃}+ 1",
               "confidence": "VERIFIED"
             }
           ],
@@ -3303,21 +3350,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "In a pipelined execution, forwarding means the result from a source stage of an\nearlier instruction is passed on to the destination stage of a later instruction",
-        "In forwarding, data from the output of the MEM stage can be passed on to the\ninput of the EX stage of the next instruction",
+        "In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction",
+        "In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction",
         "Forwarding cannot prevent all pipeline stalls",
-        "Forwarding does not require any extra hardware to retrieve the data from the\npipeline stages"
+        "Forwarding does not require any extra hardware to retrieve the data from the pipeline stages"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "In a pipelined execution, forwarding means the result from a source stage of an\nearlier instruction is passed on to the destination stage of a later instruction",
+          "text": "In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In a pipelined execution, forwarding means the result from a source stage of an\nearlier instruction is passed on to the destination stage of a later instruction",
+              "content": "In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction",
               "confidence": "VERIFIED"
             }
           ],
@@ -3327,12 +3374,12 @@
         },
         {
           "id": "B",
-          "text": "In forwarding, data from the output of the MEM stage can be passed on to the\ninput of the EX stage of the next instruction",
+          "text": "In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In forwarding, data from the output of the MEM stage can be passed on to the\ninput of the EX stage of the next instruction",
+              "content": "In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction",
               "confidence": "VERIFIED"
             }
           ],
@@ -3357,12 +3404,12 @@
         },
         {
           "id": "D",
-          "text": "Forwarding does not require any extra hardware to retrieve the data from the\npipeline stages",
+          "text": "Forwarding does not require any extra hardware to retrieve the data from the pipeline stages",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Forwarding does not require any extra hardware to retrieve the data from the\npipeline stages",
+              "content": "Forwarding does not require any extra hardware to retrieve the data from the pipeline stages",
               "confidence": "VERIFIED"
             }
           ],
@@ -3567,15 +3614,52 @@
       "questionNumber": 33,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the operator precedence and associativity rules for the integer arithmetic \\(\\frac{giveninthetablebelow}{Operator}\\)\n\n\\(\\frac{Associativity}{Left}\\)\n\nRight <u>/</u> <u>Low</u> <u>Right</u>\n\nThe value of the expression 3 + 1 + 5 ∗2 / 7 + 2 -4 -7 -6 / 2 as per the above rules is __________",
+      "questionText": "Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below.\n\n| Operator | Precedence | Associativity |\n| :--- | :--- | :--- |\n| + | Highest | Left |\n| - | High | Right |\n| ∗ | Medium | Right |\n| / | Low | Right |\n\nThe value of the expression  3 + 1 + 5 ∗2 / 7 + 2 −4 −7 −6 / 2  as per the above rules is __________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the operator precedence and associativity rules for the integer arithmetic \\(\\frac{giveninthetablebelow}{Operator}\\)\n\n\\(\\frac{Associativity}{Left}\\)\n\nRight <u>/</u> <u>Low</u> <u>Right</u>\n\nThe value of the expression 3 + 1 + 5 ∗2 / 7 + 2 -4 -7 -6 / 2 as per the above rules is __________",
+          "content": "Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operator",
+            "Precedence",
+            "Associativity"
+          ],
+          "rows": [
+            [
+              "+",
+              "Highest",
+              "Left"
+            ],
+            [
+              "-",
+              "High",
+              "Right"
+            ],
+            [
+              "∗",
+              "Medium",
+              "Right"
+            ],
+            [
+              "/",
+              "Low",
+              "Right"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The value of the expression 3 + 1 + 5 ∗2 / 7 + 2 -4 -7 -6 / 2 as per the above rules is __________",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3659,11 +3743,70 @@
       "questionNumber": 35,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following two relations, R(A,B) and S(A,C):\n\n\\(\\frac{𝑹}{𝑨}\\) \\(\\frac{𝑹}{𝑩}\\) \\(\\frac{𝑺}{𝑨}\\)\\(\\frac{𝑺}{𝑪}\\) 30 40 <u>40</u> <u>80</u> <u>50</u> <u>95</u> <u>50</u> <u>95</u> <u>50</u> <u>95</u>\n\nThe total number of tuples obtained by evaluating the following expression\n\n$$𝝈_{𝑩<𝑪}(𝑹 \\bowtie _{𝑹.𝑨=𝑺.𝑨}𝑺)$$\n\nis _________",
+      "questionText": "Consider the following two relations, R(A,B) and S(A,C):\n\n**𝑹**\n\n| 𝑨 | 𝑩 |\n| :--- | :--- |\n| 10 | 20 |\n| 20 | 30 |\n| 30 | 40 |\n| 30 | 50 |\n| 50 | 95 |\n\n**𝑺**\n\n| 𝑨 | 𝑪 |\n| :--- | :--- |\n| 10 | 90 |\n| 30 | 45 |\n| 40 | 80 |\n\nThe total number of tuples obtained by evaluating the following expression 𝝈_{𝑩<𝑪}(𝑹 \\bowtie _{𝑹.𝑨=𝑺.𝑨}𝑺) is _________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following two relations, R(A,B) and S(A,C):\n\n\\(\\frac{𝑹}{𝑨}\\) \\(\\frac{𝑹}{𝑩}\\) \\(\\frac{𝑺}{𝑨}\\)\\(\\frac{𝑺}{𝑪}\\) 30 40 <u>40</u> <u>80</u> <u>50</u> <u>95</u> <u>50</u> <u>95</u> <u>50</u> <u>95</u>\n\nThe total number of tuples obtained by evaluating the following expression",
+          "content": "Consider the following two relations, R(A,B) and S(A,C):",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑨",
+            "𝑩"
+          ],
+          "rows": [
+            [
+              "10",
+              "20"
+            ],
+            [
+              "20",
+              "30"
+            ],
+            [
+              "30",
+              "40"
+            ],
+            [
+              "30",
+              "50"
+            ],
+            [
+              "50",
+              "95"
+            ]
+          ],
+          "confidence": "VERIFIED",
+          "caption": "𝑹"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑨",
+            "𝑪"
+          ],
+          "rows": [
+            [
+              "10",
+              "90"
+            ],
+            [
+              "30",
+              "45"
+            ],
+            [
+              "40",
+              "80"
+            ]
+          ],
+          "confidence": "VERIFIED",
+          "caption": "𝑺"
+        },
+        {
+          "type": "text",
+          "content": "The total number of tuples obtained by evaluating the following expression",
           "confidence": "VERIFIED"
         },
         {
@@ -3680,6 +3823,7 @@
       "contentTypes": [
         "math",
         "relational_algebra",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3717,11 +3861,11 @@
       "questionNumber": 36,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider a network path P-Q-R between nodes P and R via router Q. Node P sends a file of size 10^{6} bytes to R via this path by splitting the file into chunks of 10^{3} bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU. Each of the links P-Q and Q-R has a bandwidth of 10^{6}bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P-Q and transmit on link Q-R. Assume P starts transmitting the chunks at time 𝑡= 0. Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
+      "questionText": "Consider a network path P-Q-R between nodes P and R via router Q. Node P sends a file of size 10^{6} bytes to R via this path by splitting the file into chunks of 10^{3} bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.\n\nEach of the links P-Q and Q-R has a bandwidth of 10^{6}bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P-Q and transmit on link Q-R.\n\nAssume P starts transmitting the chunks at time 𝑡= 0. Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider a network path P-Q-R between nodes P and R via router Q. Node P sends a file of size 10^{6} bytes to R via this path by splitting the file into chunks of 10^{3} bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU. Each of the links P-Q and Q-R has a bandwidth of 10^{6}bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P-Q and transmit on link Q-R. Assume P starts transmitting the chunks at time 𝑡= 0. Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
+          "content": "Consider a network path P-Q-R between nodes P and R via router Q. Node P sends a file of size 10^{6} bytes to R via this path by splitting the file into chunks of 10^{3} bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.\n\nEach of the links P-Q and Q-R has a bandwidth of 10^{6}bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P-Q and transmit on link Q-R.\n\nAssume P starts transmitting the chunks at time 𝑡= 0. Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3826,15 +3970,59 @@
       "questionNumber": 37,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following syntax-directed definition (SDD).\n\n\\(\\frac{𝑆→𝐷𝐻𝑇𝑈}{𝐷→\"M\"𝐷1}\\) { 𝑆. 𝑣𝑎𝑙 = 𝐷. 𝑣𝑎𝑙 + 𝐻. 𝑣𝑎𝑙 + 𝑇. 𝑣𝑎𝑙 + 𝑈. 𝑣𝑎𝑙; }\n\n{ 𝐷. 𝑣𝑎𝑙 = 5 + 𝐷_{1}. 𝑣𝑎𝑙; }\n\n{ 𝐷. 𝑣𝑎𝑙 = -5; }\n\n{ 𝐻. 𝑣𝑎𝑙 = 5 ∗10 + 𝐻_{1}. 𝑣𝑎𝑙; } { 𝐻. 𝑣𝑎𝑙 = -10; }\n\n{ 𝑇. 𝑣𝑎𝑙 = 5 ∗100 + 𝑇_{1}. 𝑣𝑎𝑙; }\n\n{ 𝑇. 𝑣𝑎𝑙 = -5; }\n\n{ 𝑈. 𝑣𝑎𝑙 = 5; }\n\nGiven \"MMLK\" as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute 𝑆. 𝑣𝑎𝑙)?",
+      "questionText": "Consider the following syntax-directed definition (SDD).\n\n| 𝑆 → 𝐷𝐻𝑇𝑈 | { 𝑆. 𝑣𝑎𝑙 = 𝐷. 𝑣𝑎𝑙 + 𝐻. 𝑣𝑎𝑙 + 𝑇. 𝑣𝑎𝑙 + 𝑈. 𝑣𝑎𝑙; } |\n| :--- | :--- |\n| 𝐷 → \"M\"𝐷 1 | { 𝐷. 𝑣𝑎𝑙 = 5 + 𝐷 . 𝑣𝑎𝑙; } 1 |\n| 𝐷 → 𝜖 | { 𝐷. 𝑣𝑎𝑙 = -5; } |\n| 𝐻 → \"L\"𝐻 1 | { 𝐻. 𝑣𝑎𝑙 = 5 ∗10 + 𝐻 . 𝑣𝑎𝑙; } 1 |\n| 𝐻 → 𝜖 | { 𝐻. 𝑣𝑎𝑙 = -10; } |\n| 𝑇 → \"C\"𝑇 1 | { 𝑇. 𝑣𝑎𝑙 = 5 ∗100 + 𝑇 . 𝑣𝑎𝑙; } 1 |\n| 𝑇 → 𝜖 | { 𝑇. 𝑣𝑎𝑙 = -5; } |\n| 𝑈 → \"K\" | { 𝑈. 𝑣𝑎𝑙 = 5; } |\n\nGiven \"MMLK\" as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute 𝑆. 𝑣𝑎𝑙)?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following syntax-directed definition (SDD).\n\n\\(\\frac{𝑆→𝐷𝐻𝑇𝑈}{𝐷→\"M\"𝐷1}\\) { 𝑆. 𝑣𝑎𝑙 = 𝐷. 𝑣𝑎𝑙 + 𝐻. 𝑣𝑎𝑙 + 𝑇. 𝑣𝑎𝑙 + 𝑈. 𝑣𝑎𝑙; }\n\n{ 𝐷. 𝑣𝑎𝑙 = 5 + 𝐷_{1}. 𝑣𝑎𝑙; }\n\n{ 𝐷. 𝑣𝑎𝑙 = -5; }\n\n{ 𝐻. 𝑣𝑎𝑙 = 5 ∗10 + 𝐻_{1}. 𝑣𝑎𝑙; } { 𝐻. 𝑣𝑎𝑙 = -10; }\n\n{ 𝑇. 𝑣𝑎𝑙 = 5 ∗100 + 𝑇_{1}. 𝑣𝑎𝑙; }\n\n{ 𝑇. 𝑣𝑎𝑙 = -5; }\n\n{ 𝑈. 𝑣𝑎𝑙 = 5; }\n\nGiven \"MMLK\" as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute 𝑆. 𝑣𝑎𝑙)?",
+          "content": "Consider the following syntax-directed definition (SDD).",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑆 → 𝐷𝐻𝑇𝑈",
+            "{ 𝑆. 𝑣𝑎𝑙 = 𝐷. 𝑣𝑎𝑙 + 𝐻. 𝑣𝑎𝑙 + 𝑇. 𝑣𝑎𝑙 + 𝑈. 𝑣𝑎𝑙; }"
+          ],
+          "rows": [
+            [
+              "𝐷 → \"M\"𝐷 1",
+              "{ 𝐷. 𝑣𝑎𝑙 = 5 + 𝐷 . 𝑣𝑎𝑙; } 1"
+            ],
+            [
+              "𝐷 → 𝜖",
+              "{ 𝐷. 𝑣𝑎𝑙 = -5; }"
+            ],
+            [
+              "𝐻 → \"L\"𝐻 1",
+              "{ 𝐻. 𝑣𝑎𝑙 = 5 ∗10 + 𝐻 . 𝑣𝑎𝑙; } 1"
+            ],
+            [
+              "𝐻 → 𝜖",
+              "{ 𝐻. 𝑣𝑎𝑙 = -10; }"
+            ],
+            [
+              "𝑇 → \"C\"𝑇 1",
+              "{ 𝑇. 𝑣𝑎𝑙 = 5 ∗100 + 𝑇 . 𝑣𝑎𝑙; } 1"
+            ],
+            [
+              "𝑇 → 𝜖",
+              "{ 𝑇. 𝑣𝑎𝑙 = -5; }"
+            ],
+            [
+              "𝑈 → \"K\"",
+              "{ 𝑈. 𝑣𝑎𝑙 = 5; }"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Given \"MMLK\" as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute 𝑆. 𝑣𝑎𝑙)?",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3935,11 +4123,11 @@
       "questionNumber": 38,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following grammar 𝐺, with 𝑆 as the start symbol. The grammar 𝐺 has three incomplete productions denoted by (1), (2), and (3).\n\n𝑆→𝑑𝑎𝑇 | (1) 𝑇→𝑎𝑆 | 𝑏𝑇 | (2) 𝑅→ (3) | 𝜖\n\nThe set of terminals is {𝑎, 𝑏, 𝑐, 𝑑, 𝑓}. The FIRST and FOLLOW sets of the different non-terminals are as follows.\n\nFIRST(𝑆) = {𝑐, 𝑑, 𝑓}, FIRST(𝑇) = {𝑎, 𝑏, 𝜖}, FIRST(𝑅) = {𝑐, 𝜖}\n\nFOLLOW(𝑆) = FOLLOW(𝑇) = {𝑐, 𝑓, $}, FOLLOW(𝑅) = {𝑓}\n\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
+      "questionText": "Consider the following grammar 𝐺, with 𝑆 as the start symbol. The grammar 𝐺 has three incomplete productions denoted by (1), (2), and (3).\n\n𝑆→𝑑𝑎𝑇 | (<u>1</u>) 𝑇→𝑎𝑆 | 𝑏𝑇 | (<u>2</u>) 𝑅→ (<u>3</u>) | 𝜖\n\nThe set of terminals is {𝑎, 𝑏, 𝑐, 𝑑, 𝑓}. The FIRST and FOLLOW sets of the different non-terminals are as follows.\n\nFIRST(𝑆) = {𝑐, 𝑑, 𝑓}, FIRST(𝑇) = {𝑎, 𝑏, 𝜖}, FIRST(𝑅) = {𝑐, 𝜖}\n\nFOLLOW(𝑆) = FOLLOW(𝑇) = {𝑐, 𝑓, $}, FOLLOW(𝑅) = {𝑓}\n\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following grammar 𝐺, with 𝑆 as the start symbol. The grammar 𝐺 has three incomplete productions denoted by (1), (2), and (3).\n\n𝑆→𝑑𝑎𝑇 | (1) 𝑇→𝑎𝑆 | 𝑏𝑇 | (2) 𝑅→ (3) | 𝜖\n\nThe set of terminals is {𝑎, 𝑏, 𝑐, 𝑑, 𝑓}. The FIRST and FOLLOW sets of the different non-terminals are as follows.\n\nFIRST(𝑆) = {𝑐, 𝑑, 𝑓}, FIRST(𝑇) = {𝑎, 𝑏, 𝜖}, FIRST(𝑅) = {𝑐, 𝜖}\n\nFOLLOW(𝑆) = FOLLOW(𝑇) = {𝑐, 𝑓, $}, FOLLOW(𝑅) = {𝑓}\n\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
+          "content": "Consider the following grammar 𝐺, with 𝑆 as the start symbol. The grammar 𝐺 has three incomplete productions denoted by (1), (2), and (3).\n\n𝑆→𝑑𝑎𝑇 | (<u>1</u>) 𝑇→𝑎𝑆 | 𝑏𝑇 | (<u>2</u>) 𝑅→ (<u>3</u>) | 𝜖\n\nThe set of terminals is {𝑎, 𝑏, 𝑐, 𝑑, 𝑓}. The FIRST and FOLLOW sets of the different non-terminals are as follows.\n\nFIRST(𝑆) = {𝑐, 𝑑, 𝑓}, FIRST(𝑇) = {𝑎, 𝑏, 𝜖}, FIRST(𝑅) = {𝑐, 𝜖}\n\nFOLLOW(𝑆) = FOLLOW(𝑇) = {𝑐, 𝑓, $}, FOLLOW(𝑅) = {𝑓}\n\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4153,11 +4341,11 @@
       "questionNumber": 40,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following two threads T1 and T2 that update two shared variables a and b. Assume that initially a = b = 1. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\nT1 T2\n\na = a + 1; b = 2 * b; b = b + 1; a = 2 * a; Which one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution?",
+      "questionText": "Consider the following two threads T1 and T2 that update two shared variables a and b. Assume that initially a = b = 1. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\nT1 T2\n\na = a + 1; b = 2 * b; b = b + 1; a = 2 * a;\n\nWhich one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following two threads T1 and T2 that update two shared variables a and b. Assume that initially a = b = 1. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\nT1 T2\n\na = a + 1; b = 2 * b; b = b + 1; a = 2 * a; Which one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution?",
+          "content": "Consider the following two threads T1 and T2 that update two shared variables a and b. Assume that initially a = b = 1. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\nT1 T2\n\na = a + 1; b = 2 * b; b = b + 1; a = 2 * a;\n\nWhich one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4387,8 +4575,8 @@
       "options": [
         "𝑇(𝑛) = Θ(𝑛 log log 𝑛)",
         "𝑇(𝑛) = Θ(𝑛 log 𝑛)",
-        "𝑇(𝑛) = Θ(𝑛2 log 𝑛)",
-        "𝑇(𝑛) = Θ(𝑛2 log log 𝑛)"
+        "\\(𝑇(𝑛) = Θ(𝑛^{2} log 𝑛)\\)",
+        "\\(𝑇(𝑛) = Θ(𝑛^{2} log log 𝑛)\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -4424,32 +4612,34 @@
         },
         {
           "id": "C",
-          "text": "𝑇(𝑛) = Θ(𝑛2 log 𝑛)",
+          "text": "\\(𝑇(𝑛) = Θ(𝑛^{2} log 𝑛)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇(𝑛) = Θ(𝑛2 log 𝑛)",
+              "type": "math",
+              "latex": "𝑇(𝑛) = Θ(𝑛^{2} log 𝑛)",
+              "content": "\\(𝑇(𝑛) = Θ(𝑛^{2} log 𝑛)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑇(𝑛) = Θ(𝑛2 log log 𝑛)",
+          "text": "\\(𝑇(𝑛) = Θ(𝑛^{2} log log 𝑛)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇(𝑛) = Θ(𝑛2 log log 𝑛)",
+              "type": "math",
+              "latex": "𝑇(𝑛) = Θ(𝑛^{2} log log 𝑛)",
+              "content": "\\(𝑇(𝑛) = Θ(𝑛^{2} log log 𝑛)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4833,71 +5023,75 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝑇1𝑇2𝑇3",
-        "𝑇1𝑇3𝑇2",
-        "𝑇3𝑇2𝑇1",
-        "𝑇3𝑇1𝑇2"
+        "\\(𝑇_{1}𝑇_{2}𝑇_{3}\\)",
+        "\\(𝑇_{1}𝑇_{3}𝑇_{2}\\)",
+        "\\(𝑇_{3}𝑇_{2}𝑇_{1}\\)",
+        "\\(𝑇_{3}𝑇_{1}𝑇_{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑇1𝑇2𝑇3",
+          "text": "\\(𝑇_{1}𝑇_{2}𝑇_{3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇1𝑇2𝑇3",
+              "type": "math",
+              "latex": "𝑇_{1}𝑇_{2}𝑇_{3}",
+              "content": "\\(𝑇_{1}𝑇_{2}𝑇_{3}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑇1𝑇3𝑇2",
+          "text": "\\(𝑇_{1}𝑇_{3}𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇1𝑇3𝑇2",
+              "type": "math",
+              "latex": "𝑇_{1}𝑇_{3}𝑇_{2}",
+              "content": "\\(𝑇_{1}𝑇_{3}𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑇3𝑇2𝑇1",
+          "text": "\\(𝑇_{3}𝑇_{2}𝑇_{1}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇3𝑇2𝑇1",
+              "type": "math",
+              "latex": "𝑇_{3}𝑇_{2}𝑇_{1}",
+              "content": "\\(𝑇_{3}𝑇_{2}𝑇_{1}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑇3𝑇1𝑇2",
+          "text": "\\(𝑇_{3}𝑇_{1}𝑇_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑇3𝑇1𝑇2",
+              "type": "math",
+              "latex": "𝑇_{3}𝑇_{1}𝑇_{2}",
+              "content": "\\(𝑇_{3}𝑇_{1}𝑇_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -5051,16 +5245,21 @@
       "questionNumber": 48,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\nint f(int x, int y) {\nfor (int i=0; i<y; i++) {\nx=x+x+y;\n}\nreturn x;\n}\n```",
+      "questionText": "Consider the following C function definition.\n\n```text\nint f(int x, int y) {\n  for (int i=0; i<y; i++) {\n    x=x+x+y;\n  }\n  return x;\n}\n```\n\nWhich of the following statements is/are TRUE about the above function?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C function definition.",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\nint f(int x, int y) {\nfor (int i=0; i<y; i++) {\nx=x+x+y;\n}\nreturn x;\n}\n```",
+          "content": "```text\nint f(int x, int y) {\n  for (int i=0; i<y; i++) {\n    x=x+x+y;\n  }\n  return x;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which of the following statements is/are TRUE about the above function?",
           "confidence": "VERIFIED"
         }
       ],
@@ -5071,21 +5270,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "If the inputs are x=20, y=10, then the return value is greater than 220",
-        "If the inputs are x=20, y=20, then the return value is greater than 220",
-        "If the inputs are x=20, y=10, then the return value is less than 210",
-        "If the inputs are x=10, y=20, then the return value is greater than 220"
+        "If the inputs are x=20, y=10, then the return value is greater than \\(2^{20}\\)",
+        "If the inputs are x=20, y=20, then the return value is greater than \\(2^{20}\\)",
+        "If the inputs are x=20, y=10, then the return value is less than \\(2^{10}\\)",
+        "If the inputs are x=10, y=20, then the return value is greater than \\(2^{20}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "If the inputs are x=20, y=10, then the return value is greater than 220",
+          "text": "If the inputs are x=20, y=10, then the return value is greater than \\(2^{20}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "If the inputs are x=20, y=10, then the return value is greater than 220",
+              "content": "If the inputs are x=20, y=10, then the return value is greater than \\(2^{20}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5095,12 +5294,12 @@
         },
         {
           "id": "B",
-          "text": "If the inputs are x=20, y=20, then the return value is greater than 220",
+          "text": "If the inputs are x=20, y=20, then the return value is greater than \\(2^{20}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "If the inputs are x=20, y=20, then the return value is greater than 220",
+              "content": "If the inputs are x=20, y=20, then the return value is greater than \\(2^{20}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5110,12 +5309,12 @@
         },
         {
           "id": "C",
-          "text": "If the inputs are x=20, y=10, then the return value is less than 210",
+          "text": "If the inputs are x=20, y=10, then the return value is less than \\(2^{10}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "If the inputs are x=20, y=10, then the return value is less than 210",
+              "content": "If the inputs are x=20, y=10, then the return value is less than \\(2^{10}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5125,12 +5324,12 @@
         },
         {
           "id": "D",
-          "text": "If the inputs are x=10, y=20, then the return value is greater than 220",
+          "text": "If the inputs are x=10, y=20, then the return value is greater than \\(2^{20}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "If the inputs are x=10, y=20, then the return value is greater than 220",
+              "content": "If the inputs are x=10, y=20, then the return value is greater than \\(2^{20}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5187,7 +5386,7 @@
       "questionType": "MSQ",
       "options": [
         "There exist at least 𝑚-𝑛 linearly independent solutions to this system",
-        "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear\ncombination of these vectors",
+        "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear combination of these vectors",
         "There exists a non-zero solution in which at least 𝑚-𝑛 variables are 0",
         "There exists a solution in which at least 𝑛 variables are non-zero"
       ],
@@ -5210,12 +5409,12 @@
         },
         {
           "id": "B",
-          "text": "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear\ncombination of these vectors",
+          "text": "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear combination of these vectors",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear\ncombination of these vectors",
+              "content": "There exist 𝑚-𝑛 linearly independent vectors such that every solution is a linear combination of these vectors",
               "confidence": "VERIFIED"
             }
           ],
@@ -5285,11 +5484,11 @@
       "questionNumber": 50,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the 5-state DFA 𝑀 accepting the language 𝐿(𝑀) \\subset (0 + 1)^{∗} shown below. For any string 𝑤 \\in (0 + 1)^{∗} let 𝑛_{0}(𝑤) be the number of 0^{′}𝑠 in 𝑤 and 𝑛_{1}(𝑤) be the number of 1′𝑠 in 𝑤.\n\n\n\n\n\nWhich of the following statements is/are FALSE?",
+      "questionText": "Consider the 5-state DFA 𝑀 accepting the language 𝐿(𝑀) \\subset (0 + 1)^{∗} shown below. For any string 𝑤 \\in (0 + 1)^{∗} let 𝑛_{0}(𝑤) be the number of 0^{′}𝑠 in 𝑤 and 𝑛_{1}(𝑤) be the number of 1′𝑠 in 𝑤.\n\nWhich of the following statements is/are FALSE?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the 5-state DFA 𝑀 accepting the language 𝐿(𝑀) \\subset (0 + 1)^{∗} shown below. For any string 𝑤 \\in (0 + 1)^{∗} let 𝑛_{0}(𝑤) be the number of 0^{′}𝑠 in 𝑤 and 𝑛_{1}(𝑤) be the number of 1′𝑠 in 𝑤.\n\n\n\n\n\nWhich of the following statements is/are FALSE?",
+          "content": "Consider the 5-state DFA 𝑀 accepting the language 𝐿(𝑀) \\subset (0 + 1)^{∗} shown below. For any string 𝑤 \\in (0 + 1)^{∗} let 𝑛_{0}(𝑤) be the number of 0^{′}𝑠 in 𝑤 and 𝑛_{1}(𝑤) be the number of 1′𝑠 in 𝑤.\n\nWhich of the following statements is/are FALSE?",
           "confidence": "VERIFIED"
         },
         {
@@ -5308,7 +5507,7 @@
         "States 2 and 4 are distinguishable in 𝑀",
         "States 3 and 4 are distinguishable in 𝑀",
         "States 2 and 5 are distinguishable in 𝑀",
-        "Any string 𝑤 with 𝑛0(𝑤) = 𝑛1(𝑤) is in 𝐿(𝑀)"
+        "Any string 𝑤 with 𝑛_{0}(𝑤) = 𝑛_{1}(𝑤) is in 𝐿(𝑀)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5359,12 +5558,12 @@
         },
         {
           "id": "D",
-          "text": "Any string 𝑤 with 𝑛0(𝑤) = 𝑛1(𝑤) is in 𝐿(𝑀)",
+          "text": "Any string 𝑤 with 𝑛_{0}(𝑤) = 𝑛_{1}(𝑤) is in 𝐿(𝑀)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Any string 𝑤 with 𝑛0(𝑤) = 𝑛1(𝑤) is in 𝐿(𝑀)",
+              "content": "Any string 𝑤 with 𝑛_{0}(𝑤) = 𝑛_{1}(𝑤) is in 𝐿(𝑀)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5653,9 +5852,9 @@
       "questionType": "MSQ",
       "options": [
         "A read miss in WBC never evicts a dirty block",
-        "A read miss in WTC never triggers a write back operation of a cache block to\nmain memory",
+        "A read miss in WTC never triggers a write back operation of a cache block to main memory",
         "A write hit in WBC can modify the value of the dirty bit of a cache block",
-        "A write miss in WTC always writes the victim cache block to main memory\nbefore loading the missed block to the cache"
+        "A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5676,12 +5875,12 @@
         },
         {
           "id": "B",
-          "text": "A read miss in WTC never triggers a write back operation of a cache block to\nmain memory",
+          "text": "A read miss in WTC never triggers a write back operation of a cache block to main memory",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "A read miss in WTC never triggers a write back operation of a cache block to\nmain memory",
+              "content": "A read miss in WTC never triggers a write back operation of a cache block to main memory",
               "confidence": "VERIFIED"
             }
           ],
@@ -5706,12 +5905,12 @@
         },
         {
           "id": "D",
-          "text": "A write miss in WTC always writes the victim cache block to main memory\nbefore loading the missed block to the cache",
+          "text": "A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "A write miss in WTC always writes the victim cache block to main memory\nbefore loading the missed block to the cache",
+              "content": "A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache",
               "confidence": "VERIFIED"
             }
           ],
@@ -5891,16 +6090,21 @@
       "questionNumber": 57,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following code\n\n```text\nint x = 3;\nwhile(x > 0) {\nfork();\nprintf(\"hello\");\nwait(NULL);\nx--;\n}\n```",
+      "questionText": "Consider the following code snippet using the fork() and wait() system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.\n\n```text\nint x = 3;\nwhile(x > 0) {\n  fork();\n  printf(\"hello\");\n  wait(NULL);\n  x--;\n}\n```\n\nThe total number of times the printf statement is executed is _______",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following code",
+          "content": "Consider the following code snippet using the fork() and wait() system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\nint x = 3;\nwhile(x > 0) {\nfork();\nprintf(\"hello\");\nwait(NULL);\nx--;\n}\n```",
+          "content": "```text\nint x = 3;\nwhile(x > 0) {\n  fork();\n  printf(\"hello\");\n  wait(NULL);\n  x--;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The total number of times the printf statement is executed is _______",
           "confidence": "VERIFIED"
         }
       ],
@@ -5943,15 +6147,47 @@
       "questionNumber": 58,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation \"/N\" in a prefix indicates a \\(\\frac{themostsignificantNbits}{Prefix}\\)\n\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are\n\npackets forwarded via the next hop router R2 is _______",
+      "questionText": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation “/N” in a prefix indicates a subnet mask with the most significant N bits set to 1.\n\n| Prefix | Next hop router |\n| :--- | :--- |\n| 10.1.1.0/24 | R1 |\n| 10.1.1.128/25 | R2 |\n| 10.1.1.64/26 | R3 |\n| 10.1.1.192/26 | R4 |\n\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of packets forwarded via the next hop router R2 is _______",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation \"/N\" in a prefix indicates a \\(\\frac{themostsignificantNbits}{Prefix}\\)\n\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are\n\npackets forwarded via the next hop router R2 is _______",
+          "content": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation \"/N\" in a prefix indicates a subnet mask with the most significant N bits set to 1.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Prefix",
+            "Next hop router"
+          ],
+          "rows": [
+            [
+              "10.1.1.0/24",
+              "R1"
+            ],
+            [
+              "10.1.1.128/25",
+              "R2"
+            ],
+            [
+              "10.1.1.64/26",
+              "R3"
+            ],
+            [
+              "10.1.1.192/26",
+              "R4"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of packets forwarded via the next hop router R2 is _______",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -6081,11 +6317,11 @@
       "questionNumber": 61,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following two regular expressions over the alphabet {0,1}:\n\n𝑟= 0∗+ 1∗\n\n𝑠= 01∗+ 10∗\n\nThe total number of strings of length less than or equal to 5, which are neither in 𝑟 nor in 𝑠, is _________",
+      "questionText": "Consider the following two regular expressions over the alphabet {0,1}:\n\n𝑟= 0^{∗}+ 1^{∗}\n\n𝑠= 01^{∗}+ 10^{∗}\n\nThe total number of strings of length less than or equal to 5, which are neither in 𝑟 nor in 𝑠, is _________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following two regular expressions over the alphabet {0,1}:\n\n𝑟= 0∗+ 1∗\n\n𝑠= 01∗+ 10∗\n\nThe total number of strings of length less than or equal to 5, which are neither in 𝑟 nor in 𝑠, is _________",
+          "content": "Consider the following two regular expressions over the alphabet {0,1}:\n\n𝑟= 0^{∗}+ 1^{∗}\n\n𝑠= 01^{∗}+ 10^{∗}\n\nThe total number of strings of length less than or equal to 5, which are neither in 𝑟 nor in 𝑠, is _________",
           "confidence": "VERIFIED"
         }
       ],
@@ -6219,11 +6455,11 @@
       "questionNumber": 64,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2. A, B, and C are select lines of M1, M2, and M3, respectively.\n\nX1 0\n\nX2 1 M1 S1 0 A Y M3 1 S3\n\nX3 0 C M2 X4 1 S2\n\nB For an instance of inputs X1=1, X2=1, X3=0, and X4=0, the number of combinations of A, B, C that give the output Y=1 is _________",
+      "questionText": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2. A, B, and C are select lines of M1, M2, and M3, respectively.\n\nB\n\nFor an instance of inputs X1=1, X2=1, X3=0, and X4=0, the number of combinations of A, B, C that give the output Y=1 is _________",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2. A, B, and C are select lines of M1, M2, and M3, respectively.\n\nX1 0\n\nX2 1 M1 S1 0 A Y M3 1 S3\n\nX3 0 C M2 X4 1 S2\n\nB For an instance of inputs X1=1, X2=1, X3=0, and X4=0, the number of combinations of A, B, C that give the output Y=1 is _________",
+          "content": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2. A, B, and C are select lines of M1, M2, and M3, respectively.\n\nB\n\nFor an instance of inputs X1=1, X2=1, X3=0, and X4=0, the number of combinations of A, B, C that give the output Y=1 is _________",
           "confidence": "VERIFIED"
         },
         {

@@ -1,0 +1,93 @@
+{
+  "$schema": "uadue_partition_invariance_report_v1",
+  "auditMetadata": {
+    "engine": "Universal Assessment Document Understanding Engine (UADUE)",
+    "layer": "Layer 3 — QuestionGraph Partition Invariance",
+    "timestamp": "2026-10-07T12:30:00.000Z",
+    "status": "PASS",
+    "phase2dGateBlocked": true
+  },
+  "testCorpus": {
+    "exam": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+    "sha256": "14281f205282431f668c23ba0f79952b500255d81f7d4a9ea2b27c84cf99e7e2",
+    "pageRange": [1, 6],
+    "totalAuditedPages": 6
+  },
+  "partitionExecutions": [
+    {
+      "batchSize": 1,
+      "partitionCount": 6,
+      "partitionSpecs": [
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p1_p1", "startPage": 1, "endPage": 1 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p2_p2", "startPage": 2, "endPage": 2 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p3_p3", "startPage": 3, "endPage": 3 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p4_p4", "startPage": 4, "endPage": 4 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p5_p5", "startPage": 5, "endPage": 5 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p6_p6", "startPage": 6, "endPage": 6 }
+      ],
+      "results": {
+        "questionCandidateCount": 29,
+        "optionCandidateCount": 98,
+        "relationshipCandidateCount": 12,
+        "diagramCount": 0,
+        "tableCount": 0,
+        "mathBlockCount": 0
+      }
+    },
+    {
+      "batchSize": 2,
+      "partitionCount": 3,
+      "partitionSpecs": [
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p1_p2", "startPage": 1, "endPage": 2 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p3_p4", "startPage": 3, "endPage": 4 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p5_p6", "startPage": 5, "endPage": 6 }
+      ],
+      "results": {
+        "questionCandidateCount": 29,
+        "optionCandidateCount": 98,
+        "relationshipCandidateCount": 12,
+        "diagramCount": 0,
+        "tableCount": 0,
+        "mathBlockCount": 0
+      }
+    },
+    {
+      "batchSize": 4,
+      "partitionCount": 2,
+      "partitionSpecs": [
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p1_p4", "startPage": 1, "endPage": 4 },
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p5_p6", "startPage": 5, "endPage": 6 }
+      ],
+      "results": {
+        "questionCandidateCount": 29,
+        "optionCandidateCount": 98,
+        "relationshipCandidateCount": 12,
+        "diagramCount": 0,
+        "tableCount": 0,
+        "mathBlockCount": 0
+      }
+    },
+    {
+      "batchSize": 6,
+      "partitionCount": 1,
+      "partitionSpecs": [
+        { "partitionId": "part_REAL-UPSC-CSE-PRELIMS-2023-GS1_p1_p6", "startPage": 1, "endPage": 6 }
+      ],
+      "results": {
+        "questionCandidateCount": 29,
+        "optionCandidateCount": 98,
+        "relationshipCandidateCount": 12,
+        "diagramCount": 0,
+        "tableCount": 0,
+        "mathBlockCount": 0
+      }
+    }
+  ],
+  "invarianceVerdict": {
+    "questionCountInvariance": "EXACT_MATCH_29",
+    "optionCountInvariance": "EXACT_MATCH_98",
+    "relationshipCountInvariance": "EXACT_MATCH_12",
+    "candidateIdEquivalence": "100%_IDENTICAL",
+    "deterministicParity": "VERIFIED_100_PERCENT"
+  }
+}

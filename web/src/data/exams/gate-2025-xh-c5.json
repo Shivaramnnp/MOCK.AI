@@ -400,7 +400,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -409,12 +409,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -511,37 +511,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(0,1) x (0, -1)",
-        "(0,1) x (0, -1)",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/gate/2025/xh-c5/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(0,1) x (0, -1)",
-          "imageUrl": null
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "(0,1) x (0, -1)",
-          "imageUrl": null
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": null
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c5/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2640,7 +2675,7 @@
       "questionType": "MSQ",
       "options": [
         "There is no proof that India is affected by poor quality of water.",
-        "few European countries are suffering due to occurrence of drought.",
+        "A few European countries are suffering due to occurrence of drought.",
         "Lack of access to water can lead to social unrest.",
         "Intense shortage of water is visible in some states of India."
       ],
@@ -2663,12 +2698,12 @@
         },
         {
           "id": "B",
-          "text": "few European countries are suffering due to occurrence of drought.",
+          "text": "A few European countries are suffering due to occurrence of drought.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "few European countries are suffering due to occurrence of drought.",
+              "content": "A few European countries are suffering due to occurrence of drought.",
               "confidence": "VERIFIED"
             }
           ],

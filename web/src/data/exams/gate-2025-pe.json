@@ -1377,11 +1377,11 @@
       "questionNumber": 13,
       "sectionId": "pe_core",
       "sectionName": "Petroleum Engineering",
-      "questionText": "The value of 𝑙𝑖𝑚 𝑥→𝜋2 ⁄ ( \\(\\frac{𝑐𝑜𝑠𝑥}{𝑥-𝜋}\\) \\(\\frac{𝑐𝑜𝑠𝑥)}{2}\\) is",
+      "questionText": "The value of 𝑙𝑖𝑚 ( ) is 𝑥→𝜋2 The value of 𝑥→𝜋2 𝑙𝑖𝑚 ⁄ ( 𝑥-𝜋 ) is ( \\(\\frac{𝑐𝑜𝑠𝑥}{𝑥-𝜋}\\) The value of 𝑙𝑖𝑚 ( ) is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The value of 𝑙𝑖𝑚 𝑥→𝜋2 ⁄ ( \\(\\frac{𝑐𝑜𝑠𝑥}{𝑥-𝜋}\\) \\(\\frac{𝑐𝑜𝑠𝑥)}{2}\\) is",
+          "content": "The value of 𝑙𝑖𝑚 ( ) is 𝑥→𝜋2 The value of 𝑥→𝜋2 𝑙𝑖𝑚 ⁄ ( 𝑥-𝜋 ) is ( \\(\\frac{𝑐𝑜𝑠𝑥}{𝑥-𝜋}\\) The value of 𝑙𝑖𝑚 ( ) is",
           "confidence": "VERIFIED"
         }
       ],
@@ -2982,43 +2982,41 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(Amine solutions cannot be regenerated after removal of H_{2}S from natural gas.\\)",
-        "\\(Amine solutions in liquid form absorb H_{2}S from natural gas.\\)",
+        "Amine solutions cannot be regenerated after removal of \\(H_{2}\\)S from natural gas.",
+        "Amine solutions in liquid form absorb \\(H_{2}\\)S from natural gas.",
         "(C ) Glycols become corrosive in the presence of oxygen.",
-        "\\(Iron sponges cannot be used for H_{2}S removal.\\)"
+        "Iron sponges cannot be used for \\(H_{2}\\)S removal."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Amine solutions cannot be regenerated after removal of H_{2}S from natural gas.\\)",
+          "text": "Amine solutions cannot be regenerated after removal of \\(H_{2}\\)S from natural gas.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Amine solutions cannot be regenerated after removal of H_{2}S from natural gas.",
-              "content": "\\(Amine solutions cannot be regenerated after removal of H_{2}S from natural gas.\\)",
+              "type": "text",
+              "content": "Amine solutions cannot be regenerated after removal of \\(H_{2}\\)S from natural gas.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(Amine solutions in liquid form absorb H_{2}S from natural gas.\\)",
+          "text": "Amine solutions in liquid form absorb \\(H_{2}\\)S from natural gas.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Amine solutions in liquid form absorb H_{2}S from natural gas.",
-              "content": "\\(Amine solutions in liquid form absorb H_{2}S from natural gas.\\)",
+              "type": "text",
+              "content": "Amine solutions in liquid form absorb \\(H_{2}\\)S from natural gas.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3038,18 +3036,17 @@
         },
         {
           "id": "D",
-          "text": "\\(Iron sponges cannot be used for H_{2}S removal.\\)",
+          "text": "Iron sponges cannot be used for \\(H_{2}\\)S removal.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Iron sponges cannot be used for H_{2}S removal.",
-              "content": "\\(Iron sponges cannot be used for H_{2}S removal.\\)",
+              "type": "text",
+              "content": "Iron sponges cannot be used for \\(H_{2}\\)S removal.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3086,11 +3083,11 @@
       "questionNumber": 28,
       "sectionId": "pe_core",
       "sectionName": "Petroleum Engineering",
-      "questionText": "Consider the following diffusivity equation for the radial flow of a fluid in an infinite and homogeneous reservoir.\n\n\\(\\frac{1}{𝑟}\\) \\(\\frac{1𝜕}{𝑟}\\) (𝑟𝜕𝑃 𝜕𝑟) = 1 \\(\\frac{1𝜕𝑃}{𝜂𝜕𝑡}\\) \\(\\frac{1𝜕𝑃}{𝜂𝜕𝑡}\\)\n\nwhere, 𝑃 denotes pressure, r is the radial distance from the centre of the wellbore, 𝑡 denotes time, and, 𝜂 is the diffusivity constant. The initial pressure of the reservoir is 𝑃_{𝑖}. The condition(s) used in the derivation of analytical solution of the above equation for pressure transient analysis in an infinite acting reservoir is/are:",
+      "questionText": "Consider the following diffusivity equation for the radial flow of a fluid in an infinite and homogeneous reservoir.\n\n\\(\\frac{1}{𝑟}\\) 1 𝑟 𝜕𝑟(𝑟𝜕𝑃 <u>𝜕</u> 𝜕𝑟) = <u>1</u> 𝜂 <u>𝜕𝑃</u> 𝜕𝑡 1 <u>𝜕</u> <u>1</u> <u>𝜕𝑃</u> 1 𝑟 𝜕𝑟(𝑟𝜕𝑃 <u>𝜕</u> 𝜕𝑟) = <u>1</u> 𝜂 <u>𝜕𝑃</u> 𝜕𝑡 𝜂 1 <u>𝜕</u> <u>1</u> <u>𝜕𝑃</u> 𝜕𝑡\n\nwhere, 𝑃 denotes pressure, r is the radial distance from the centre of the wellbore, 𝑡 denotes time, and, 𝜂 is the diffusivity constant. The initial pressure of the reservoir is 𝑃_{𝑖}. The condition(s) used in the derivation of analytical solution of the above equation for pressure transient analysis in an infinite acting reservoir is/are:",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following diffusivity equation for the radial flow of a fluid in an infinite and homogeneous reservoir.\n\n\\(\\frac{1}{𝑟}\\) \\(\\frac{1𝜕}{𝑟}\\) (𝑟𝜕𝑃 𝜕𝑟) = 1 \\(\\frac{1𝜕𝑃}{𝜂𝜕𝑡}\\) \\(\\frac{1𝜕𝑃}{𝜂𝜕𝑡}\\)\n\nwhere, 𝑃 denotes pressure, r is the radial distance from the centre of the wellbore, 𝑡 denotes time, and, 𝜂 is the diffusivity constant. The initial pressure of the reservoir is 𝑃_{𝑖}. The condition(s) used in the derivation of analytical solution of the above equation for pressure transient analysis in an infinite acting reservoir is/are:",
+          "content": "Consider the following diffusivity equation for the radial flow of a fluid in an infinite and homogeneous reservoir.\n\n\\(\\frac{1}{𝑟}\\) 1 𝑟 𝜕𝑟(𝑟𝜕𝑃 <u>𝜕</u> 𝜕𝑟) = <u>1</u> 𝜂 <u>𝜕𝑃</u> 𝜕𝑡 1 <u>𝜕</u> <u>1</u> <u>𝜕𝑃</u> 1 𝑟 𝜕𝑟(𝑟𝜕𝑃 <u>𝜕</u> 𝜕𝑟) = <u>1</u> 𝜂 <u>𝜕𝑃</u> 𝜕𝑡 𝜂 1 <u>𝜕</u> <u>1</u> <u>𝜕𝑃</u> 𝜕𝑡\n\nwhere, 𝑃 denotes pressure, r is the radial distance from the centre of the wellbore, 𝑡 denotes time, and, 𝜂 is the diffusivity constant. The initial pressure of the reservoir is 𝑃_{𝑖}. The condition(s) used in the derivation of analytical solution of the above equation for pressure transient analysis in an infinite acting reservoir is/are:",
           "confidence": "VERIFIED"
         }
       ],
@@ -3100,7 +3097,7 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.\\)",
+        "At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.",
         "Wellbore is treated as a line source.",
         "\\(As 𝑟→ \\infty , 𝑃→𝑃_{𝑖} for all 𝑡.\\)",
         "At any radius 𝑟 and time 𝑡, the pressure gradient \\(\\frac{𝜕𝑃}{𝜕𝑟}\\) is constant."
@@ -3109,18 +3106,17 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.\\)",
+          "text": "At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.",
-              "content": "\\(At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.\\)",
+              "type": "text",
+              "content": "At time 𝑡= 0, 𝑃= 𝑃_{𝑖} for all 𝑟.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3789,7 +3785,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑓_{𝐹𝐷}\\)",
+        "\\(𝑓_{𝐹𝐷} ^{′} > 𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐵𝐷} ′\\)",
         "\\(𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐵𝐷} ^{′} > 𝑓_{𝐹𝐷} ′\\)",
         "\\(𝑓_{𝐵𝐷} ^{′} > 𝑓_{𝐹𝐷} ^{′} > 𝑓_{𝐶𝐷} ′\\)",
         "\\(𝑓_{𝐵𝐷} ^{′} > 𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐹𝐷} ′\\)"
@@ -3798,13 +3794,13 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑓_{𝐹𝐷}\\)",
+          "text": "\\(𝑓_{𝐹𝐷} ^{′} > 𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐵𝐷} ′\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "𝑓_{𝐹𝐷}",
-              "content": "\\(𝑓_{𝐹𝐷}\\)",
+              "latex": "𝑓_{𝐹𝐷} ^{′} > 𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐵𝐷} ′",
+              "content": "\\(𝑓_{𝐹𝐷} ^{′} > 𝑓_{𝐶𝐷} ^{′} > 𝑓_{𝐵𝐷} ′\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4169,11 +4165,11 @@
       "questionNumber": 40,
       "sectionId": "pe_core",
       "sectionName": "Petroleum Engineering",
-      "questionText": "A drilling fluid with time-dependent rheology is used for the rotary drilling of a reservoir. The following equation describes the dependence of shear stress (𝜏) on shear rate (𝛾̇).\n\n𝜏+ \\(\\frac{𝜇0}{𝛼𝑑𝑡}\\) \\(\\frac{𝜇0𝑑𝜏}{𝑑𝑡}\\) = 𝜇_{0}𝛾̇\n\nwhere, 𝜇_{0} and 𝛼 are constants. If the rotation of the drill pipe is stopped at time 𝑡= 0, then the relaxation behavior of the fluid stress with time is",
+      "questionText": "A drilling fluid with time-dependent rheology is used for the rotary drilling of a reservoir. The following equation describes the dependence of shear stress (𝜏) on shear rate (𝛾̇).\n\n𝜏+ <u>𝜇0</u> 𝑑𝜏 = 𝛼 𝑑𝑡 = 𝜇_{0}𝛾̇ 𝑑𝜏\n\nwhere, 𝜇_{0} and 𝛼 are constants. If the rotation of the drill pipe is stopped at time 𝑡= 0, then the relaxation behavior of the fluid stress with time is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A drilling fluid with time-dependent rheology is used for the rotary drilling of a reservoir. The following equation describes the dependence of shear stress (𝜏) on shear rate (𝛾̇).\n\n𝜏+ \\(\\frac{𝜇0}{𝛼𝑑𝑡}\\) \\(\\frac{𝜇0𝑑𝜏}{𝑑𝑡}\\) = 𝜇_{0}𝛾̇\n\nwhere, 𝜇_{0} and 𝛼 are constants. If the rotation of the drill pipe is stopped at time 𝑡= 0, then the relaxation behavior of the fluid stress with time is",
+          "content": "A drilling fluid with time-dependent rheology is used for the rotary drilling of a reservoir. The following equation describes the dependence of shear stress (𝜏) on shear rate (𝛾̇).\n\n𝜏+ <u>𝜇0</u> 𝑑𝜏 = 𝛼 𝑑𝑡 = 𝜇_{0}𝛾̇ 𝑑𝜏\n\nwhere, 𝜇_{0} and 𝛼 are constants. If the rotation of the drill pipe is stopped at time 𝑡= 0, then the relaxation behavior of the fluid stress with time is",
           "confidence": "VERIFIED"
         }
       ],
@@ -4186,7 +4182,7 @@
         "\\(𝜏∝ 𝑒- 𝜇_{0}𝑡 𝛼\\)",
         "\\(𝜏∝ 𝑒 𝜇_{0}𝑡 𝛼\\)",
         "𝜏∝ 𝑒 \\(\\frac{𝛼𝑡}{𝜇0}\\)",
-        "𝜏∝ 𝑒 \\(\\frac{𝛼𝑡}{𝑒𝜇0}\\)"
+        "\\(𝛼𝑡 𝜏∝ 𝑒 𝜇_{0}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -4239,17 +4235,18 @@
         },
         {
           "id": "D",
-          "text": "𝜏∝ 𝑒 \\(\\frac{𝛼𝑡}{𝑒𝜇0}\\)",
+          "text": "\\(𝛼𝑡 𝜏∝ 𝑒 𝜇_{0}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝜏∝ 𝑒 \\(\\frac{𝛼𝑡}{𝑒𝜇0}\\)",
+              "type": "math",
+              "latex": "𝛼𝑡 𝜏∝ 𝑒 𝜇_{0}",
+              "content": "\\(𝛼𝑡 𝜏∝ 𝑒 𝜇_{0}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],

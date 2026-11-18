@@ -408,15 +408,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/st/q4_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -500,10 +494,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
-      "diagramUrl": "/exam-assets/gate/2025/st/q4_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/st/q4_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -1318,8 +1310,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable\\)",
-        "The set {𝑥 \\in (0,1): 𝑥= \\sum \\infty 𝑛=1 \\(\\frac{𝑎𝑛}{10𝑛𝑛=1}\\), where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is uncountable",
+        "The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable",
+        "The set {𝑥 \\in (0,1): 𝑥= \\sum uncountable \\infty 𝑛=1 10^{𝑛} 𝑎_{𝑛}, where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is",
         "There exists an uncountable set whose elements are pairwise disjoint open intervals in ℝ",
         "The set of all intervals with rational end points is uncountable"
       ],
@@ -1327,28 +1319,27 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable",
-              "content": "\\(The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "The set {𝑥 \\in (0,1): 𝑥= \\sum \\infty 𝑛=1 \\(\\frac{𝑎𝑛}{10𝑛𝑛=1}\\), where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is uncountable",
+          "text": "The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The set {𝑥 \\in (0,1): 𝑥= \\sum \\infty 𝑛=1 \\(\\frac{𝑎𝑛}{10𝑛𝑛=1}\\), where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is uncountable",
+              "content": "The set ⋃ \\infty 𝑛=0 {𝑥 \\in ℝ: 𝑥= \\sum 𝑛 𝑖=0 10^{𝑖}𝑎_{𝑖}, where 𝑎_{𝑖} \\in {1, 2} for 𝑖= 0, 1, 2, …, 𝑛} is uncountable",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "The set {𝑥 \\in (0,1): 𝑥= \\sum uncountable \\infty 𝑛=1 10^{𝑛} 𝑎_{𝑛}, where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "The set {𝑥 \\in (0,1): 𝑥= \\sum uncountable \\infty 𝑛=1 10^{𝑛} 𝑎_{𝑛}, where 𝑎_{𝑛}= 1 or 2 for each 𝑛 \\in ℕ} is",
               "confidence": "VERIFIED"
             }
           ],
@@ -1428,7 +1419,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑆^{⊥} is not a subspace of ℝ^{3}\\)",
+        "𝑆^{⊥} is not a subspace of ℝ^{3}",
         "\\(𝑆^{⊥}= {(0,0,0)}\\)",
         "\\(dim(𝑆^{⊥}) = 1\\)",
         "\\(dim(𝑆^{⊥}) = 2\\)"
@@ -1437,18 +1428,17 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑆^{⊥} is not a subspace of ℝ^{3}\\)",
+          "text": "𝑆^{⊥} is not a subspace of ℝ^{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑆^{⊥} is not a subspace of ℝ^{3}",
-              "content": "\\(𝑆^{⊥} is not a subspace of ℝ^{3}\\)",
+              "type": "text",
+              "content": "𝑆^{⊥} is not a subspace of ℝ^{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -1636,11 +1626,11 @@
       "questionNumber": 15,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let (𝑋_{1}, 𝑋_{2}, 𝑋_{3}) follow the multinomial distribution with the number of trials being 100 and the probability vector ( \\(\\frac{multinomial^{3}}{10}\\) \\(\\frac{multinomial^{1}}{10}\\) 3 1 <u>3</u> _{5}). Then E(X_{2} | 𝑋_{3} = 40) equals",
+      "questionText": "Let (𝑋_{1}, 𝑋_{2}, 𝑋_{3}) follow the multinomial distribution with the number of trials being 100 and the probability vector ( \\(\\frac{3}{10}\\) \\(\\frac{1}{10}\\) 3 1 <u>3</u> _{5}). Then E(X_{2} | 𝑋_{3} = 40) equals",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let (𝑋_{1}, 𝑋_{2}, 𝑋_{3}) follow the multinomial distribution with the number of trials being 100 and the probability vector ( \\(\\frac{multinomial^{3}}{10}\\) \\(\\frac{multinomial^{1}}{10}\\) 3 1 <u>3</u> _{5}). Then E(X_{2} | 𝑋_{3} = 40) equals",
+          "content": "Let (𝑋_{1}, 𝑋_{2}, 𝑋_{3}) follow the multinomial distribution with the number of trials being 100 and the probability vector ( \\(\\frac{3}{10}\\) \\(\\frac{1}{10}\\) 3 1 <u>3</u> _{5}). Then E(X_{2} | 𝑋_{3} = 40) equals",
           "confidence": "VERIFIED"
         }
       ],
@@ -1745,11 +1735,11 @@
       "questionNumber": 16,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let {𝑋_{𝑛}}_{𝑛 \\ge 1} be a sequence of i.i.d. random variables with the common probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜋(1+𝑥2)}\\) , - \\infty < 𝑥< \\infty .\n\nDefine 𝑌_{𝑛}= options is correct? \\(\\frac{1}{2correct?}\\) + \\(\\frac{1}{πcorrect?}\\) tan^{-1}(𝑋_{𝑛}) for 𝑛= 1, 2, … . Then which one of the following",
+      "questionText": "Let {𝑋_{𝑛}}_{𝑛 \\ge 1} be a sequence of i.i.d. random variables with the common probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜋(1+𝑥2)}\\) , - \\infty < 𝑥< \\infty .\n\nDefine 𝑌_{𝑛}= options is correct? \\(\\frac{1}{2}\\) + \\(\\frac{1}{π}\\) tan^{-1}(𝑋_{𝑛}) for 𝑛= 1, 2, … . Then which one of the following",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let {𝑋_{𝑛}}_{𝑛 \\ge 1} be a sequence of i.i.d. random variables with the common probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜋(1+𝑥2)}\\) , - \\infty < 𝑥< \\infty .\n\nDefine 𝑌_{𝑛}= options is correct? \\(\\frac{1}{2correct?}\\) + \\(\\frac{1}{πcorrect?}\\) tan^{-1}(𝑋_{𝑛}) for 𝑛= 1, 2, … . Then which one of the following",
+          "content": "Let {𝑋_{𝑛}}_{𝑛 \\ge 1} be a sequence of i.i.d. random variables with the common probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜋(1+𝑥2)}\\) , - \\infty < 𝑥< \\infty .\n\nDefine 𝑌_{𝑛}= options is correct? \\(\\frac{1}{2}\\) + \\(\\frac{1}{π}\\) tan^{-1}(𝑋_{𝑛}) for 𝑛= 1, 2, … . Then which one of the following",
           "confidence": "VERIFIED"
         }
       ],
@@ -1977,8 +1967,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑇^{2} is a complete statistic for 𝒫\\)",
-        "\\(𝑇^{2} is a minimal sufficient statistic for 𝒫\\)",
+        "𝑇^{2} is a complete statistic for 𝒫",
+        "𝑇^{2} is a minimal sufficient statistic for 𝒫",
         "𝑇 is a function of 𝑈",
         "𝑈 is a function of 𝑇"
       ],
@@ -1986,34 +1976,32 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑇^{2} is a complete statistic for 𝒫\\)",
+          "text": "𝑇^{2} is a complete statistic for 𝒫",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑇^{2} is a complete statistic for 𝒫",
-              "content": "\\(𝑇^{2} is a complete statistic for 𝒫\\)",
+              "type": "text",
+              "content": "𝑇^{2} is a complete statistic for 𝒫",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑇^{2} is a minimal sufficient statistic for 𝒫\\)",
+          "text": "𝑇^{2} is a minimal sufficient statistic for 𝒫",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑇^{2} is a minimal sufficient statistic for 𝒫",
-              "content": "\\(𝑇^{2} is a minimal sufficient statistic for 𝒫\\)",
+              "type": "text",
+              "content": "𝑇^{2} is a minimal sufficient statistic for 𝒫",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -2088,7 +2076,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05\\)",
+        "𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05",
         "\\(E_{𝜃}(𝜙(𝑋_{1}, 𝑋_{2})) \\ge 0.05 \\forall 𝜃 \\in ℝ\\)",
         "There exists a uniformly most powerful test of size 0.05",
         "\\(E_{𝜃=0}(𝑋_{1}𝜙(𝑋_{1}, 𝑋_{2})) = 0.05\\)"
@@ -2097,18 +2085,17 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05\\)",
+          "text": "𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05",
-              "content": "\\(𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05\\)",
+              "type": "text",
+              "content": "𝜙(𝑋_{1}, 𝑋_{2}) is a uniformly most powerful test of size 0.05",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -2316,7 +2303,7 @@
         "𝜙 is the unique most powerful test of level 0.05",
         "\\(E_{𝑓1}(𝜙(𝑋)) \\ge 0.05\\)",
         "\\(E_{𝑓0}(𝜙(𝑋)) \\le 0.05\\)",
-        "\\(For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}\\)"
+        "For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -2369,18 +2356,17 @@
         },
         {
           "id": "D",
-          "text": "\\(For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}\\)",
+          "text": "For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}",
-              "content": "\\(For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}\\)",
+              "type": "text",
+              "content": "For some constant 𝑐 \\ge 0, 𝑃_{𝑓}(𝑓_{1}(𝑋) > 𝑐𝑓_{0}(𝑋)) \\le 𝑃_{𝑓}(𝜙(𝑋) = 1), \\forall 𝑓 \\in {𝑓_{0}, 𝑓_{1}}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -2426,7 +2412,7 @@
       "questionType": "MCQ",
       "options": [
         "\\(\\sqrt 𝑛(𝐹_{𝑛}(𝑥) -𝐹(𝑥)) ^{𝑃}→0 as 𝑛→ \\infty\\)",
-        "\\(\\frac{𝑛(𝐹𝑛(𝑥)-𝐹(𝑥))}{\\sqrt 𝐹(𝑥)(1-𝐹(𝑥))}\\) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1)",
+        "\\(𝑛(𝐹_{𝑛}(𝑥) -𝐹(𝑥)) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1) \\sqrt 𝐹(𝑥)(1 -𝐹(𝑥))\\)",
         "\\(𝐹_{𝑛}(𝑥) 𝑎.𝑠. → 𝐹(𝑥) as 𝑛→ \\infty\\)",
         "\\(_{𝑛→ \\infty }𝑛 Var(𝐹_{𝑛}(𝑥)) = 0 lim\\)"
       ],
@@ -2450,17 +2436,18 @@
         },
         {
           "id": "B",
-          "text": "\\(\\frac{𝑛(𝐹𝑛(𝑥)-𝐹(𝑥))}{\\sqrt 𝐹(𝑥)(1-𝐹(𝑥))}\\) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1)",
+          "text": "\\(𝑛(𝐹_{𝑛}(𝑥) -𝐹(𝑥)) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1) \\sqrt 𝐹(𝑥)(1 -𝐹(𝑥))\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\(\\frac{𝑛(𝐹𝑛(𝑥)-𝐹(𝑥))}{\\sqrt 𝐹(𝑥)(1-𝐹(𝑥))}\\) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1)",
+              "type": "math",
+              "latex": "𝑛(𝐹_{𝑛}(𝑥) -𝐹(𝑥)) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1) \\sqrt 𝐹(𝑥)(1 -𝐹(𝑥))",
+              "content": "\\(𝑛(𝐹_{𝑛}(𝑥) -𝐹(𝑥)) ^{𝑑}→𝑍 as 𝑛→ \\infty , where 𝑍∼𝑁(0,1) \\sqrt 𝐹(𝑥)(1 -𝐹(𝑥))\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -2971,11 +2958,11 @@
       "questionNumber": 30,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let 𝑋 follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define 𝑌= log_{𝑒} \\sqrt 𝑋^{𝑇}𝑋 and let 𝑀_{𝑌}(𝑡) denote the moment generating function of 𝑌 at 𝑡, 𝑡> -10. Then 𝑀_{𝑌}(2) equals ____________ (answer in integer).",
+      "questionText": "Q.30 Let 𝑋 follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define 𝑌= log_{𝑒} \\sqrt 𝑋^{𝑇}𝑋 and let 𝑀_{𝑌}(𝑡) denote the moment generating function of 𝑌 at 𝑡, 𝑡> -10. Then 𝑀_{𝑌}(2) equals ____________ (answer in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑋 follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define 𝑌= log_{𝑒} \\sqrt 𝑋^{𝑇}𝑋 and let 𝑀_{𝑌}(𝑡) denote the moment generating function of 𝑌 at 𝑡, 𝑡> -10. Then 𝑀_{𝑌}(2) equals ____________ (answer in integer).",
+          "content": "Q.30 Let 𝑋 follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define 𝑌= log_{𝑒} \\sqrt 𝑋^{𝑇}𝑋 and let 𝑀_{𝑌}(𝑡) denote the moment generating function of 𝑌 at 𝑡, 𝑡> -10. Then 𝑀_{𝑌}(2) equals ____________ (answer in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -3261,27 +3248,26 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦|^{2} for all 𝑥, 𝑦 \\in [𝑎, 𝑏]\\)",
+        "There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦\\(|^{2}\\) for all 𝑥, 𝑦 \\in [𝑎, 𝑏]",
         "If 𝑓 \\in ℱ and 𝑥_{0} \\in (𝑎, 𝑏), then there exist distinct 𝑥_{1}, 𝑥_{2} \\in [𝑎, 𝑏] such that \\(\\frac{𝑓(𝑥1)-𝑓(𝑥2)}{𝑥1-𝑥2}\\) = 𝑓^{′}(𝑥_{0})",
-        "\\(Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing\\)",
-        "\\(Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐\\)"
+        "Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing",
+        "Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦|^{2} for all 𝑥, 𝑦 \\in [𝑎, 𝑏]\\)",
+          "text": "There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦\\(|^{2}\\) for all 𝑥, 𝑦 \\in [𝑎, 𝑏]",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦|^{2} for all 𝑥, 𝑦 \\in [𝑎, 𝑏]",
-              "content": "\\(There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦|^{2} for all 𝑥, 𝑦 \\in [𝑎, 𝑏]\\)",
+              "type": "text",
+              "content": "There exists a non-constant 𝑓 \\in ℱ such that |𝑓(𝑥) -𝑓(𝑦)| \\le |𝑥-𝑦\\(|^{2}\\) for all 𝑥, 𝑦 \\in [𝑎, 𝑏]",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3301,34 +3287,32 @@
         },
         {
           "id": "C",
-          "text": "\\(Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing\\)",
+          "text": "Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing",
-              "content": "\\(Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing\\)",
+              "type": "text",
+              "content": "Let 𝑓 \\in ℱ and 𝑓^{′}(𝑥) \\ge 0 for all 𝑥 \\in (𝑎, 𝑏). If 𝑓^{′} is zero only at two distinct points, then 𝑓 is strictly increasing",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐\\)",
+          "text": "Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐",
-              "content": "\\(Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐\\)",
+              "type": "text",
+              "content": "Let 𝑓 \\in ℱ. If 𝑓^{′}(𝑥_{1}) < 𝑐< 𝑓^{′}(𝑥_{2}) for some 𝑥_{1}, 𝑥_{2} \\in (𝑎, 𝑏), then there may NOT exist an 𝑥_{0} \\in (𝑥_{1}, 𝑥_{2}) such that 𝑓^{′}(𝑥_{0}) = 𝑐",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3693,11 +3677,11 @@
       "questionNumber": 40,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let 𝑋 be a continuous random variable with probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜎𝑥\\sqrt{2}𝜋}\\) 𝑒 -1 2 \\(\\frac{𝑥-𝜇}{𝜎}\\) 2 , 𝑥> 0,\n\nwhere 𝜇 \\in ℝ, 𝜎> 0. If log_{e} \\(\\frac{E(𝑋2)}{(E(𝑋))}\\) ) = 4, then Var(log_{e} 𝑋) equals",
+      "questionText": "Let 𝑋 be a continuous random variable with probability density function\n\n𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, \\(\\frac{1}{𝜎𝑥\\sqrt{2}𝜋}\\) 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, -1 2 𝜎 \\(\\frac{𝑥-𝜇}{𝜎}\\) 2 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0,\n\nwhere 𝜇 \\in ℝ, 𝜎> 0. If log_{e} \\(\\frac{E(𝑋2)}{(E(𝑋))}\\) ) = 4, then Var(log_{e} 𝑋) equals",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑋 be a continuous random variable with probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{𝜎𝑥\\sqrt{2}𝜋}\\) 𝑒 -1 2 \\(\\frac{𝑥-𝜇}{𝜎}\\) 2 , 𝑥> 0,\n\nwhere 𝜇 \\in ℝ, 𝜎> 0. If log_{e} \\(\\frac{E(𝑋2)}{(E(𝑋))}\\) ) = 4, then Var(log_{e} 𝑋) equals",
+          "content": "Let 𝑋 be a continuous random variable with probability density function\n\n𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, \\(\\frac{1}{𝜎𝑥\\sqrt{2}𝜋}\\) 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, -1 2 𝜎 \\(\\frac{𝑥-𝜇}{𝜎}\\) 2 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0, 𝑓(𝑥) = 𝑒 2 𝜎 , 𝑥> 0,\n\nwhere 𝜇 \\in ℝ, 𝜎> 0. If log_{e} \\(\\frac{E(𝑋2)}{(E(𝑋))}\\) ) = 4, then Var(log_{e} 𝑋) equals",
           "confidence": "VERIFIED"
         }
       ],
@@ -3818,7 +3802,7 @@
       "options": [
         "The marginal distribution of 𝑋 is Poisson with mean 𝜆",
         "The marginal distribution of 𝑌 is Poisson with mean 2𝜆",
-        "\\(The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})\\)",
+        "The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})",
         "E(𝑌 | 𝑋= 2) = \\(\\frac{𝜆}{2}\\)"
       ],
       "optionImages": null,
@@ -3855,18 +3839,17 @@
         },
         {
           "id": "C",
-          "text": "\\(The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})\\)",
+          "text": "The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})",
-              "content": "\\(The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})\\)",
+              "type": "text",
+              "content": "The conditional distribution of 𝑋 given 𝑌= 3 is 𝐵𝑖𝑛(3, 1 _{2})",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3926,43 +3909,41 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic\\)",
-        "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic\\)",
+        "\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic",
+        "\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic",
         "( _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖}, \\(\\frac{1}{𝑛-1}\\) 𝑛 𝑗=1 (𝑋_{𝑗}- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} ) 2 ) is a complete statistic",
-        "\\(- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃\\)"
+        "- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic\\)",
+          "text": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic",
-              "content": "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic\\)",
+              "type": "text",
+              "content": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} is a minimal sufficient statistic",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic\\)",
+          "text": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic",
-              "content": "\\(\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic\\)",
+              "type": "text",
+              "content": "\\sum 𝑛 𝑖=1 𝑋_{𝑖} ^{2} is a minimal sufficient statistic",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3982,18 +3963,17 @@
         },
         {
           "id": "D",
-          "text": "\\(- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃\\)",
+          "text": "- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃",
-              "content": "\\(- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃\\)",
+              "type": "text",
+              "content": "- _{𝑛} \\sum 1 𝑛 𝑖=1 𝑋_{𝑖} is a uniformly minimum variance unbiased estimator of 𝜃",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4355,11 +4335,11 @@
       "questionNumber": 46,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Consider the simple linear regression model\n\n𝑦_{𝑖}= 𝛼+ 𝛽𝑥_{𝑖}+ 𝜖_{𝑖}, 𝑖= 1, 2, … ,24, where 𝛼 \\in ℝ and 𝛽 \\in ℝ are unknown parameters, the errors 𝜖_{𝑖}′𝑠 are i.i.d. random variables having 𝑁(0, 𝜎^{2}) distribution, where 𝜎> 0 is unknown. Suppose the following summary statistics are obtained from a data set of 24 observations (𝑥_{1}, 𝑦_{1}), … , (𝑥_{24}, 𝑦_{24}):\n\n24 24 𝑆_{𝑥𝑥}= \\sum (𝑥_{𝑖}-𝑥̅)^{2} = 22.82 , 𝑆_{𝑦𝑦}= \\sum (𝑦_{𝑖}-𝑦̅)^{2} = 43.62 , 𝑖=1 𝑖=1 24 and 𝑆_{𝑥𝑦}= \\sum (𝑥_{𝑖}-𝑥̅)(𝑦_{𝑖}-𝑦̅) = 15.48 , 𝑖=1\n\nwhere 𝑥̅ = 𝐻_{1}: 𝛽 \\ne 0, the value of the 𝐹- test statistic based on the least squares estimator of \\(\\frac{1}{24thevalue}\\) \\sum 24 𝑖=1 𝑥_{𝑖} and 𝑦̅ = \\(\\frac{1}{24teststatistic}\\) \\sum 24 𝑖=1 𝑦_{𝑖} . Then, for testing 𝐻_{0}: 𝛽= 0 against\n\n𝛽, whose distribution is 𝐹_{1,22} , equals (rounded off to two decimal places)",
+      "questionText": "Consider the simple linear regression model\n\n𝑦_{𝑖}= 𝛼+ 𝛽𝑥_{𝑖}+ 𝜖_{𝑖}, 𝑖= 1, 2, … ,24, where 𝛼 \\in ℝ and 𝛽 \\in ℝ are unknown parameters, the errors 𝜖_{𝑖}′𝑠 are i.i.d. random variables having 𝑁(0, 𝜎^{2}) distribution, where 𝜎> 0 is unknown. Suppose the following summary statistics are obtained from a data set of 24 observations (𝑥_{1}, 𝑦_{1}), … , (𝑥_{24}, 𝑦_{24}):\n\n24 24 𝑆_{𝑥𝑥}= \\sum (𝑥_{𝑖}-𝑥̅)^{2} = 22.82 , 𝑆_{𝑦𝑦}= \\sum (𝑦_{𝑖}-𝑦̅)^{2} = 43.62 , 𝑖=1 𝑖=1 24 and 𝑆_{𝑥𝑦}= \\sum (𝑥_{𝑖}-𝑥̅)(𝑦_{𝑖}-𝑦̅) = 15.48 , 𝑖=1\n\nwhere 𝑥̅ = 𝐻_{1}: 𝛽 \\ne 0, the value of the 𝐹- test statistic based on the least squares estimator of \\(\\frac{1}{24}\\) \\sum 24 𝑖=1 𝑥_{𝑖} and 𝑦̅ = \\(\\frac{1}{24}\\) \\sum 24 𝑖=1 𝑦_{𝑖} . Then, for testing 𝐻_{0}: 𝛽= 0 against\n\n𝛽, whose distribution is 𝐹_{1,22} , equals (rounded off to two decimal places)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the simple linear regression model\n\n𝑦_{𝑖}= 𝛼+ 𝛽𝑥_{𝑖}+ 𝜖_{𝑖}, 𝑖= 1, 2, … ,24, where 𝛼 \\in ℝ and 𝛽 \\in ℝ are unknown parameters, the errors 𝜖_{𝑖}′𝑠 are i.i.d. random variables having 𝑁(0, 𝜎^{2}) distribution, where 𝜎> 0 is unknown. Suppose the following summary statistics are obtained from a data set of 24 observations (𝑥_{1}, 𝑦_{1}), … , (𝑥_{24}, 𝑦_{24}):\n\n24 24 𝑆_{𝑥𝑥}= \\sum (𝑥_{𝑖}-𝑥̅)^{2} = 22.82 , 𝑆_{𝑦𝑦}= \\sum (𝑦_{𝑖}-𝑦̅)^{2} = 43.62 , 𝑖=1 𝑖=1 24 and 𝑆_{𝑥𝑦}= \\sum (𝑥_{𝑖}-𝑥̅)(𝑦_{𝑖}-𝑦̅) = 15.48 , 𝑖=1\n\nwhere 𝑥̅ = 𝐻_{1}: 𝛽 \\ne 0, the value of the 𝐹- test statistic based on the least squares estimator of \\(\\frac{1}{24thevalue}\\) \\sum 24 𝑖=1 𝑥_{𝑖} and 𝑦̅ = \\(\\frac{1}{24teststatistic}\\) \\sum 24 𝑖=1 𝑦_{𝑖} . Then, for testing 𝐻_{0}: 𝛽= 0 against\n\n𝛽, whose distribution is 𝐹_{1,22} , equals (rounded off to two decimal places)",
+          "content": "Consider the simple linear regression model\n\n𝑦_{𝑖}= 𝛼+ 𝛽𝑥_{𝑖}+ 𝜖_{𝑖}, 𝑖= 1, 2, … ,24, where 𝛼 \\in ℝ and 𝛽 \\in ℝ are unknown parameters, the errors 𝜖_{𝑖}′𝑠 are i.i.d. random variables having 𝑁(0, 𝜎^{2}) distribution, where 𝜎> 0 is unknown. Suppose the following summary statistics are obtained from a data set of 24 observations (𝑥_{1}, 𝑦_{1}), … , (𝑥_{24}, 𝑦_{24}):\n\n24 24 𝑆_{𝑥𝑥}= \\sum (𝑥_{𝑖}-𝑥̅)^{2} = 22.82 , 𝑆_{𝑦𝑦}= \\sum (𝑦_{𝑖}-𝑦̅)^{2} = 43.62 , 𝑖=1 𝑖=1 24 and 𝑆_{𝑥𝑦}= \\sum (𝑥_{𝑖}-𝑥̅)(𝑦_{𝑖}-𝑦̅) = 15.48 , 𝑖=1\n\nwhere 𝑥̅ = 𝐻_{1}: 𝛽 \\ne 0, the value of the 𝐹- test statistic based on the least squares estimator of \\(\\frac{1}{24}\\) \\sum 24 𝑖=1 𝑥_{𝑖} and 𝑦̅ = \\(\\frac{1}{24}\\) \\sum 24 𝑖=1 𝑦_{𝑖} . Then, for testing 𝐻_{0}: 𝛽= 0 against\n\n𝛽, whose distribution is 𝐹_{1,22} , equals (rounded off to two decimal places)",
           "confidence": "VERIFIED"
         }
       ],
@@ -4478,75 +4458,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded\\)",
-        "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing\\)",
-        "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge\\)",
-        "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges\\)"
+        "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded",
+        "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing",
+        "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge",
+        "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded\\)",
+          "text": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded",
-              "content": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded\\)",
+              "type": "text",
+              "content": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is unbounded",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing\\)",
+          "text": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing",
-              "content": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing\\)",
+              "type": "text",
+              "content": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is monotonically decreasing",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge\\)",
+          "text": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge",
-              "content": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge\\)",
+              "type": "text",
+              "content": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} is bounded but does not converge",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges\\)",
+          "text": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges",
-              "content": "\\(The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges\\)",
+              "type": "text",
+              "content": "The sequence {𝑥_{𝑛}}_{𝑛 \\ge 1} converges",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4712,38 +4688,37 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed\\)",
-        "\\(𝑌_{1} 2\\)",
+        "𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed",
+        "\\(𝑌_{1} 2 + 𝑌2 2 + 𝑌3 2 ∼𝜒3 2\\)",
         "\\(\\frac{2𝑌3}{\\sqrt{3}𝑌12+𝑌22}\\) ∼𝑡_{2}",
-        "\\(\\frac{3𝑌12+2𝑌32}{2𝑌22}\\) ∼𝐹_{1,1}"
+        "\\(\\frac{3𝑌1+2𝑌3}{2𝑌22}\\) ∼𝐹_{1,1}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed\\)",
+          "text": "𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed",
-              "content": "\\(𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed\\)",
+              "type": "text",
+              "content": "𝑌_{1}, 𝑌_{2} and 𝑌_{3} are independently distributed",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑌_{1} 2\\)",
+          "text": "\\(𝑌_{1} 2 + 𝑌2 2 + 𝑌3 2 ∼𝜒3 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "𝑌_{1} 2",
-              "content": "\\(𝑌_{1} 2\\)",
+              "latex": "𝑌_{1} 2 + 𝑌2 2 + 𝑌3 2 ∼𝜒3 2",
+              "content": "\\(𝑌_{1} 2 + 𝑌2 2 + 𝑌3 2 ∼𝜒3 2\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4768,12 +4743,12 @@
         },
         {
           "id": "D",
-          "text": "\\(\\frac{3𝑌12+2𝑌32}{2𝑌22}\\) ∼𝐹_{1,1}",
+          "text": "\\(\\frac{3𝑌1+2𝑌3}{2𝑌22}\\) ∼𝐹_{1,1}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{3𝑌12+2𝑌32}{2𝑌22}\\) ∼𝐹_{1,1}",
+              "content": "\\(\\frac{3𝑌1+2𝑌3}{2𝑌22}\\) ∼𝐹_{1,1}",
               "confidence": "VERIFIED"
             }
           ],
@@ -4951,7 +4926,7 @@
       "questionType": "MSQ",
       "options": [
         "𝜋 is a stationary distribution of 𝑃",
-        "\\(𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}\\)",
+        "𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}",
         "Pr(𝑋_{3} = 1 | 𝑋_{1} = 1) = \\(\\frac{11}{30}\\)",
         "At least one state is transient"
       ],
@@ -4974,18 +4949,17 @@
         },
         {
           "id": "B",
-          "text": "\\(𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}\\)",
+          "text": "𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}",
-              "content": "\\(𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}\\)",
+              "type": "text",
+              "content": "𝜋^{𝑇} is an eigen vector of 𝑃^{𝑇}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5054,11 +5028,11 @@
       "questionNumber": 52,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let , … , 𝑋_{𝑛} be a random sample from a uniform distribution over the interval (- \\(\\frac{Let𝑋1,𝜃}{2options}\\) \\(\\frac{𝑋1,…𝜃}{optionsis/are}\\) where 𝜃> 0 is an unknown parameter. Then which of the following options is/are correct?",
+      "questionText": "Let _{1}, … , 𝑋_{𝑛} be a random sample from a uniform distribution over the interval (- \\(\\frac{𝜃}{2}\\) 𝜃 <u>𝜃</u> _{2}), where 𝜃> 0 is an unknown parameter. Then which of the following options is/are correct?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let , … , 𝑋_{𝑛} be a random sample from a uniform distribution over the interval (- \\(\\frac{Let𝑋1,𝜃}{2options}\\) \\(\\frac{𝑋1,…𝜃}{optionsis/are}\\) where 𝜃> 0 is an unknown parameter. Then which of the following options is/are correct?",
+          "content": "Let _{1}, … , 𝑋_{𝑛} be a random sample from a uniform distribution over the interval (- \\(\\frac{𝜃}{2}\\) 𝜃 <u>𝜃</u> _{2}), where 𝜃> 0 is an unknown parameter. Then which of the following options is/are correct?",
           "confidence": "VERIFIED"
         }
       ],
@@ -5068,69 +5042,66 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃\\)",
-        "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic\\)",
-        "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic\\)",
-        "\\(\\frac{2(𝑛+1)}{𝑛estimator}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃"
+        "2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃",
+        "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic",
+        "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic",
+        "\\(\\frac{2(𝑛+1)}{𝑛}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃",
-              "content": "\\(2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic",
-              "content": "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic",
-              "content": "\\((min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "D",
-          "text": "\\(\\frac{2(𝑛+1)}{𝑛estimator}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃",
+          "text": "2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{2(𝑛+1)}{𝑛estimator}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃",
+              "content": "2 max{𝑋_{1}, …, 𝑋_{𝑛}} is the maximum likelihood estimator of 𝜃",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a sufficient statistic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "(min{𝑋_{1}, …, 𝑋_{𝑛}}, max{𝑋_{1}, …, 𝑋_{𝑛}}) is a complete statistic",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "\\(\\frac{2(𝑛+1)}{𝑛}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "\\(\\frac{2(𝑛+1)}{𝑛}\\) max{|𝑋_{1}|, …, |𝑋_{𝑛}|} is a uniformly minimum variance unbiased estimator of 𝜃",
               "confidence": "VERIFIED"
             }
           ],
@@ -5187,7 +5158,7 @@
       "questionType": "MSQ",
       "options": [
         "\\(E(trace(𝑋𝑋^{𝑇}𝛼𝛼^{𝑇})) = 20\\)",
-        "\\(Var(trace(𝑋𝛼^{𝑇})) = 20\\)",
+        "Var(trace(𝑋𝛼^{𝑇})) = 20",
         "\\(E(trace(𝑋𝑋^{𝑇})) = 17\\)",
         "\\(Cov(𝛼^{𝑇}𝑋, 𝛽^{𝑇}𝑋) = 3\\)"
       ],
@@ -5211,18 +5182,17 @@
         },
         {
           "id": "B",
-          "text": "\\(Var(trace(𝑋𝛼^{𝑇})) = 20\\)",
+          "text": "Var(trace(𝑋𝛼^{𝑇})) = 20",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Var(trace(𝑋𝛼^{𝑇})) = 20",
-              "content": "\\(Var(trace(𝑋𝛼^{𝑇})) = 20\\)",
+              "type": "text",
+              "content": "Var(trace(𝑋𝛼^{𝑇})) = 20",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5307,59 +5277,56 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(𝛽̂_{𝑛} is an unbiased estimator of 𝛽\\)",
-        "\\((𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix\\)",
-        "\\(𝛽̂_{𝑛} has a multivariate normal distribution\\)",
+        "𝛽\\(̂_{𝑛}\\) is an unbiased estimator of 𝛽",
+        "(𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix",
+        "𝛽\\(̂_{𝑛}\\) has a multivariate normal distribution",
         "\\(Var(𝛽̂_{𝑛}) = (𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) -1\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝛽̂_{𝑛} is an unbiased estimator of 𝛽\\)",
+          "text": "𝛽\\(̂_{𝑛}\\) is an unbiased estimator of 𝛽",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝛽̂_{𝑛} is an unbiased estimator of 𝛽",
-              "content": "\\(𝛽̂_{𝑛} is an unbiased estimator of 𝛽\\)",
+              "type": "text",
+              "content": "𝛽\\(̂_{𝑛}\\) is an unbiased estimator of 𝛽",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\((𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix\\)",
+          "text": "(𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix",
-              "content": "\\((𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix\\)",
+              "type": "text",
+              "content": "(𝑋^{𝑇}𝑋+ 𝜆𝐼_{𝑝}) is a positive definite matrix",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝛽̂_{𝑛} has a multivariate normal distribution\\)",
+          "text": "𝛽\\(̂_{𝑛}\\) has a multivariate normal distribution",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝛽̂_{𝑛} has a multivariate normal distribution",
-              "content": "\\(𝛽̂_{𝑛} has a multivariate normal distribution\\)",
+              "type": "text",
+              "content": "𝛽\\(̂_{𝑛}\\) has a multivariate normal distribution",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5688,11 +5655,11 @@
       "questionNumber": 61,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let 𝑋_{1}, 𝑋_{2}, … , 𝑋_{7} be a random sample from a population having the probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{2}\\) 𝜆^{3}𝑥^{2}𝑒^{-𝜆𝑥} , 𝑥> 0 ,\n\nwhere 𝜆> 0 is an unknown parameter. Let 𝜆̂ be the maximum likelihood estimator of 𝜆, and E(𝜆̂ -𝜆) = 𝛼𝜆 be the corresponding bias, where 𝛼 is a real constant. Then the value of \\(\\frac{E(𝜆̂-𝜆)1}{𝛼}\\) equals ____________ (answer in integer).",
+      "questionText": "Let 𝑋_{1}, 𝑋_{2}, … , 𝑋_{7} be a random sample from a population having the probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{2}\\) 𝜆^{3}𝑥^{2}𝑒^{-𝜆𝑥} , 𝑥> 0 ,\n\nwhere 𝜆> 0 is an unknown parameter. Let 𝜆̂ be the maximum likelihood estimator of 𝜆, and E(𝜆̂ -𝜆) = 𝛼𝜆 be the corresponding bias, where 𝛼 is a real constant. Then the value of \\(\\frac{1}{𝛼}\\) equals ____________ (answer in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑋_{1}, 𝑋_{2}, … , 𝑋_{7} be a random sample from a population having the probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{2}\\) 𝜆^{3}𝑥^{2}𝑒^{-𝜆𝑥} , 𝑥> 0 ,\n\nwhere 𝜆> 0 is an unknown parameter. Let 𝜆̂ be the maximum likelihood estimator of 𝜆, and E(𝜆̂ -𝜆) = 𝛼𝜆 be the corresponding bias, where 𝛼 is a real constant. Then the value of \\(\\frac{E(𝜆̂-𝜆)1}{𝛼}\\) equals ____________ (answer in integer).",
+          "content": "Let 𝑋_{1}, 𝑋_{2}, … , 𝑋_{7} be a random sample from a population having the probability density function\n\n𝑓(𝑥) = \\(\\frac{1}{2}\\) 𝜆^{3}𝑥^{2}𝑒^{-𝜆𝑥} , 𝑥> 0 ,\n\nwhere 𝜆> 0 is an unknown parameter. Let 𝜆̂ be the maximum likelihood estimator of 𝜆, and E(𝜆̂ -𝜆) = 𝛼𝜆 be the corresponding bias, where 𝛼 is a real constant. Then the value of \\(\\frac{1}{𝛼}\\) equals ____________ (answer in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5780,11 +5747,11 @@
       "questionNumber": 63,
       "sectionId": "st_core",
       "sectionName": "Statistics",
-      "questionText": "Let 𝑋∼𝐵𝑖𝑛(3, 𝜃), where 𝜃 \\in (0,1) is an unknown parameter. For testing 𝐻_{0} \\(\\frac{Let𝑋∼𝐵𝑖𝑛(3,1}{4}\\) \\le 𝜃 \\le 3 _{4} against 𝐻_{1}: 𝜃< 1 _{4} or 𝜃> \\(\\frac{is^{3}}{4}\\) , consider the test\n\n𝜙(𝑥) = {1 if 𝑥 \\in {0, 3} 0 if 𝑥 \\in {1, 2}.\n\nThe size of the test 𝜙 is __________ (rounded off to two decimal places).",
+      "questionText": "Let , where 𝜃 \\in (0,1) is an unknown parameter. For testing 𝐻_{0} \\(\\frac{1}{4}\\) \\le 𝜃 \\le \\(\\frac{3}{4}\\) against 𝐻_{1}: 𝜃< \\(\\frac{1}{4}\\) or 𝜃> \\(\\frac{3}{4}\\) , consider the test\n\n𝜙(𝑥) = {1 if 𝑥 \\in {0, 3} 0 if 𝑥 \\in {1, 2}.\n\nThe size of the test 𝜙 is __________ (rounded off to two decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑋∼𝐵𝑖𝑛(3, 𝜃), where 𝜃 \\in (0,1) is an unknown parameter. For testing 𝐻_{0} \\(\\frac{Let𝑋∼𝐵𝑖𝑛(3,1}{4}\\) \\le 𝜃 \\le 3 _{4} against 𝐻_{1}: 𝜃< 1 _{4} or 𝜃> \\(\\frac{is^{3}}{4}\\) , consider the test\n\n𝜙(𝑥) = {1 if 𝑥 \\in {0, 3} 0 if 𝑥 \\in {1, 2}.\n\nThe size of the test 𝜙 is __________ (rounded off to two decimal places).",
+          "content": "Let , where 𝜃 \\in (0,1) is an unknown parameter. For testing 𝐻_{0} \\(\\frac{1}{4}\\) \\le 𝜃 \\le \\(\\frac{3}{4}\\) against 𝐻_{1}: 𝜃< \\(\\frac{1}{4}\\) or 𝜃> \\(\\frac{3}{4}\\) , consider the test\n\n𝜙(𝑥) = {1 if 𝑥 \\in {0, 3} 0 if 𝑥 \\in {1, 2}.\n\nThe size of the test 𝜙 is __________ (rounded off to two decimal places).",
           "confidence": "VERIFIED"
         }
       ],

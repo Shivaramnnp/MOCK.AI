@@ -88,16 +88,23 @@ export class ColumnDetector {
     const footerNodeIds: string[] = [];
     const bodyNodes: DocumentGraphNode[] = [];
 
-    const footerThresholdY = pageHeight - this.config.maxFooterZoneHeightPt;
+    const footerThresholdY = pageHeight - Math.max(this.config.maxFooterZoneHeightPt, 100.0);
 
     for (const node of nodes) {
       const isHeaderY = node.bbox.y1 <= this.config.maxHeaderZoneHeightPt;
       const isFooterY = node.bbox.y0 >= footerThresholdY;
       const isWideSpanning = node.bbox.width >= pageWidth * this.config.spanningWidthRatio;
+      const isFullPageBackground =
+        node.bbox.width >= pageWidth * 0.60 && node.bbox.height >= pageHeight * 0.40;
+
+      if (isFullPageBackground) {
+        // Full page background images or watermarks do not participate in body column division
+        continue;
+      }
 
       if (isHeaderY && isWideSpanning) {
         headerNodeIds.push(node.nodeId);
-      } else if (isFooterY && isWideSpanning) {
+      } else if (isFooterY && (isWideSpanning || /^\d{1,4}$/.test((node.textContent || '').trim()))) {
         footerNodeIds.push(node.nodeId);
       } else {
         bodyNodes.push(node);
@@ -297,11 +304,19 @@ export class ColumnDetector {
     const binCount = Math.ceil(pageWidth / binSize);
     const occupancy = new Uint16Array(binCount);
 
-    // Margins (ignore outer 5% of page edges)
-    const minBin = Math.floor((pageWidth * 0.05) / binSize);
-    const maxBin = Math.floor((pageWidth * 0.95) / binSize);
+    // Margins (ignore outer 15% of page edges so margins are not mistaken for column gutters)
+    const minBin = Math.floor((pageWidth * 0.15) / binSize);
+    const maxBin = Math.floor((pageWidth * 0.85) / binSize);
 
-    for (const el of elements) {
+    // Only text and narrow body elements define text column gutters
+    const flowElements = elements.filter(
+      (el) =>
+        (el.nodeType === 'TEXT_RUN' || el.nodeType === 'GLYPH_RUN') &&
+        el.bbox.width < pageWidth * this.config.spanningWidthRatio
+    );
+    const targetElements = flowElements.length >= 3 ? flowElements : elements;
+
+    for (const el of targetElements) {
       const b0 = Math.max(0, Math.floor(el.bbox.x0 / binSize));
       const b1 = Math.min(binCount - 1, Math.ceil(el.bbox.x1 / binSize));
       for (let b = b0; b <= b1; b++) {

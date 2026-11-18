@@ -513,5 +513,86 @@ describe('GATE 2025 DA Forensic Content Fidelity', () => {
       expect(q13.diagramUrl).toBe('/exam-assets/gate/2024/ec/q13_diag.png');
     });
   });
+
+  describe('GATE 2023 Residual Defect Remediation (CS Q48, IN Q61, PH Q57)', () => {
+    it('GATE 2023 CS Q48: should eliminate non-printing control characters and footer leaks with canonical binomial expressions', () => {
+      const gate2023Cs = require('./gate-2023-cs.json');
+      const q48 = gate2023Cs.questions.find((q: any) => q.questionNumber === 48);
+      expect(q48).toBeDefined();
+      expect(q48.questionType).toBe('MCQ');
+      expect(q48.correctAnswer).toBe('D');
+
+      // No control characters
+      const allText = q48.questionText + ' ' + q48.options.join(' ');
+      expect(allText).not.toContain('\x0f');
+      expect(allText).not.toContain('\x10');
+      expect(allText).not.toContain('Page 44 of 83');
+
+      // Authentic options
+      expect(q48.options[0]).toBe('n!');
+      expect(q48.options[1]).toContain('\\binom{n}{2k}');
+      expect(q48.options[1]).toContain('(n -2k)!');
+      expect(q48.options[2]).toContain('\\binom{n}{2k}');
+      expect(q48.options[2]).toContain('(k!)^{2}');
+      expect(q48.options[3]).toContain('2 \\binom{n}{2k}');
+      expect(q48.options[3]).toContain('(k!)^{2}');
+
+      // KaTeX rendering verification
+      for (const opt of q48.options) {
+        const { container } = render(<LatexRenderer content={opt} />);
+        expect(container.querySelector('.katex-error')).toBeNull();
+      }
+    });
+
+    it('GATE 2023 IN Q61: should have closed fraction expressions and correct formula notation without KaTeX errors', () => {
+      const gate2023In = require('./gate-2023-in.json');
+      const q61 = gate2023In.questions.find((q: any) => q.questionNumber === 61);
+      expect(q61).toBeDefined();
+      expect(q61.questionType).toBe('NAT');
+      expect(q61.correctAnswer).toBe('2.1 to 2.5');
+
+      // Verify closed fractions in questionText
+      expect(q61.questionText).toContain('\\frac{230}{\\sqrt{2}}');
+      expect(q61.questionText).toContain('\\frac{1}{50\\sqrt{2}}');
+      expect(q61.questionText).not.toContain('\\frac{230}{\\sqrt{2}\\})');
+      expect(q61.questionText).not.toContain('\\frac{1}{50\\sqrt{2}\\})');
+
+      // KaTeX rendering verification
+      const { container } = render(<LatexRenderer content={q61.questionText} />);
+      expect(container.querySelector('.katex-error')).toBeNull();
+      expect(container.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(4);
+    });
+
+    it('GATE 2023 PH Q57: should eliminate fake subscripts and render unit vector circumflex accents and vector arrows with zero errors', () => {
+      const gate2023Ph = require('./gate-2023-ph.json');
+      const q57 = gate2023Ph.questions.find((q: any) => q.questionNumber === 57);
+      expect(q57).toBeDefined();
+      expect(q57.questionType).toBe('MSQ');
+      expect(q57.correctAnswer).toBe('A,C,D');
+
+      // No fake subscripts in questionText
+      expect(q57.questionText).not.toContain('_{Consider the vector field}');
+      expect(q57.questionText).not.toContain('_{consisting of the velocities');
+      expect(q57.questionText).toContain('Consider the vector field');
+
+      // Option C must not leak detached accents or fake subscripts
+      const optC = q57.options[2];
+      expect(optC).not.toContain('\\(̂');
+      expect(optC).not.toContain('_{is a unit vector');
+      expect(optC).not.toContain('_{plane}');
+      expect(optC).toContain('is a unit vector perpendicular to the');
+
+      // KaTeX rendering verification for stem and all options
+      const { container: stemContainer } = render(<LatexRenderer content={q57.questionText} />);
+      expect(stemContainer.querySelector('.katex-error')).toBeNull();
+
+      for (const opt of q57.options) {
+        const { container: optContainer } = render(<LatexRenderer content={opt} />);
+        expect(optContainer.querySelector('.katex-error')).toBeNull();
+        expect(optContainer.textContent).not.toContain('KATEX_TOKEN');
+      }
+    });
+  });
 });
+
 

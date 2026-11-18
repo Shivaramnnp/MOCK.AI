@@ -12,6 +12,7 @@ import {
   HelpCircle,
   FileCheck2,
   ChevronRight,
+  Target,
 } from 'lucide-react';
 import { ExamService } from '../services/examService';
 import { ExamPaper } from '../types';
@@ -22,12 +23,18 @@ interface ExamDetailScreenProps {
   examId: string;
   onBack: () => void;
   onStartPaper: (paper: ExamPaper) => void;
+  isStaff?: boolean;
+  onStaffTestPaper?: (paperId: string) => void;
+  onTopicPractice?: (examId: string) => void;
 }
 
 export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
   examId,
   onBack,
   onStartPaper,
+  isStaff = false,
+  onStaffTestPaper,
+  onTopicPractice,
 }) => {
   const exam = ExamService.getExamById(examId);
   const papers = ExamService.getPapersForExam(examId);
@@ -174,6 +181,16 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
           </div>
 
           <div className="flex flex-col gap-2 self-start md:self-center shrink-0 w-full sm:w-auto">
+            {onTopicPractice && (
+              <button
+                type="button"
+                onClick={() => onTopicPractice(examId)}
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-sm hover:bg-brand-primary/90 transition-all w-full"
+              >
+                <Target className="w-4 h-4" />
+                <span>Topic-wise Practice</span>
+              </button>
+            )}
             <button
               type="button"
               onClick={() => setShowInstructions(!showInstructions)}
@@ -478,6 +495,17 @@ export const ExamDetailScreen: React.FC<ExamDetailScreenProps> = ({
                           ({bestAttempt.result.percentage}%)
                         </span>
                       </div>
+                    )}
+
+                    {isStaff && onStaffTestPaper && (
+                      <button
+                        type="button"
+                        onClick={() => onStaffTestPaper(paper.id)}
+                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 transition-all shadow-sm"
+                      >
+                        <FileCheck2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                        <span>Staff Testing Mode</span>
+                      </button>
                     )}
 
                     <button

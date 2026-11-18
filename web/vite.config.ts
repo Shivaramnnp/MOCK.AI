@@ -1,10 +1,12 @@
+/// <reference types="vitest" />
 import { defineConfig, Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 
 function classroomDevPlugin(): Plugin {
-  const localDbFile = path.resolve(__dirname, '.classroom.local.json');
+  const dir = typeof __dirname !== 'undefined' ? __dirname : (import.meta.dirname || process.cwd());
+  const localDbFile = path.resolve(dir, '.classroom.local.json');
 
   const loadDb = (): { classes: any[]; assignments: any[] } => {
     try {
@@ -199,6 +201,16 @@ function classroomDevPlugin(): Plugin {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), classroomDevPlugin()],
+  test: {
+    testTimeout: 20000,
+    fileParallelism: false,
+    environmentMatchGlobs: [
+      ['src/screens/**', 'jsdom'],
+      ['src/components/**', 'jsdom'],
+      ['src/services/examService.test.ts', 'jsdom'],
+      ['src/services/uadue/**', 'node'],
+    ],
+  },
   server: {
     port: 3000,
     host: true,

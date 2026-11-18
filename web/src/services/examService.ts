@@ -9,6 +9,8 @@ import {
   ExamTestSession,
   ExamResultSummary,
   SectionResultSummary,
+  TopicResultSummary,
+  DifficultyResultSummary,
 } from '../types';
 import {
   COMPETITIVE_EXAMS_CATALOG,
@@ -19,6 +21,8 @@ import {
 } from '../data/exams/catalog';
 import { examRepository, paperRepository, questionRepository } from '../repositories';
 import { ExamSessionService } from './examSessionService';
+import { getQuestionTopicMetadata } from './taxonomy/topicClassifier';
+import { TopicPracticeCloudSync } from './practice/topicPracticeCloudSync';
 
 const ACTIVE_SESSION_STORAGE_KEY = 'mockai_active_exam_session';
 const ATTEMPT_HISTORY_STORAGE_KEY = 'mockai_exam_attempt_history';
@@ -105,9 +109,35 @@ export class ExamService {
   }
 
   /**
-   * Retrieve a specific paper by its unique ID. Sync — local.
+   * Retrieve a specific paper by its unique ID.
+   * For synthetic Topic-wise Practice papers (`practice_*`), strictly requires `userId`
+   * and fails closed if missing — never scans other users' localStorage namespaces.
    */
-  static getPaperById(paperId: string): ExamPaper | undefined {
+  static getPaperById(paperId: string, userId?: string): ExamPaper | undefined {
+    if (paperId.startsWith('practice_')) {
+      const effectiveUser = typeof userId === 'string' ? userId.trim() : '';
+      if (!effectiveUser) {
+        return undefined;
+      }
+      if (typeof localStorage !== 'undefined') {
+        try {
+          const raw = localStorage.getItem(`mockai_practice_papers_v1_${effectiveUser}`);
+          if (raw) {
+            const papers = JSON.parse(raw) as ExamPaper[];
+            const found = Array.isArray(papers)
+              ? papers.find((p) => p && p.id === paperId)
+              : undefined;
+            if (found) {
+              return found;
+            }
+          }
+        } catch {
+          // Non-fatal fallback
+        }
+      }
+      return undefined;
+    }
+
     return getPaperById(paperId);
   }
 
@@ -149,7 +179,39 @@ export class ExamService {
    * Assembles the ExamPaper object ready for the exam player.
    * Falls back to local JSON when Project 2 is unavailable.
    */
-  static async getPaperByIdAsync(paperId: string): Promise<ExamPaper | undefined> {
+  static async getPaperByIdAsync(paperId: string, userId?: string): Promise<ExamPaper | undefined> {
+    // Check synthetic Topic-wise Practice papers strictly within userId scope (fail closed if missing)
+    if (paperId.startsWith('practice_')) {
+      const effectiveUser = typeof userId === 'string' ? userId.trim() : '';
+      if (!effectiveUser) return undefined;
+
+      const localPractice = this.getPaperById(paperId, effectiveUser);
+      if (localPractice) return localPractice;
+
+      const remotePractice = await TopicPracticeCloudSync.fetchPracticePaperRemote(
+        paperId,
+        effectiveUser
+      );
+      if (remotePractice) {
+        if (typeof localStorage !== 'undefined') {
+          try {
+            const key = `mockai_practice_papers_v1_${effectiveUser}`;
+            const raw = localStorage.getItem(key);
+            const existing: ExamPaper[] = raw ? JSON.parse(raw) : [];
+            const updated = [
+              remotePractice,
+              ...existing.filter((p) => p.id !== remotePractice.id),
+            ].slice(0, 12);
+            localStorage.setItem(key, JSON.stringify(updated));
+          } catch {
+            // Non-fatal local cache write
+          }
+        }
+        return remotePractice;
+      }
+      return undefined;
+    }
+
     // Try remote: fetch meta and questions in parallel
     const [meta, questions] = await Promise.all([
       paperRepository.getPaperMeta(paperId),
@@ -259,6 +321,11 @@ export class ExamService {
     paper: ExamPaper | ExamPresentationPaper,
     manifest?: ExamSolutionManifest
   ): ExamResultSummary {
+    if ((paper as any).isPresentationOnly && (!manifest || !manifest.solutions || manifest.solutions.length === 0)) {
+      throw new Error(
+        'AUTHORITATIVE_EXAM_PROTECTION: Client-side scoring is strictly forbidden for presentation-only exam packages without an explicit server solution manifest. Submissions must proceed through CandidateDeliveryApi.'
+      );
+    }
     if (paper.paperType === 'DESCRIPTIVE') {
       const descriptiveAnswers = session.userDescriptiveAnswers || {};
       const questions = paper.questions;
@@ -354,6 +421,12 @@ export class ExamService {
 
     // Track per-section scores
     const sectionResults: Record<string, SectionResultSummary> = {};
+    const topicResults: Record<string, TopicResultSummary> = {};
+    const difficultyResults: Record<string, DifficultyResultSummary> = {
+      EASY: { difficulty: 'EASY', totalQuestions: 0, attempted: 0, correct: 0, wrong: 0, score: 0, accuracy: 0 },
+      MEDIUM: { difficulty: 'MEDIUM', totalQuestions: 0, attempted: 0, correct: 0, wrong: 0, score: 0, accuracy: 0 },
+      HARD: { difficulty: 'HARD', totalQuestions: 0, attempted: 0, correct: 0, wrong: 0, score: 0, accuracy: 0 },
+    };
 
     for (const sec of paper.sections) {
       sectionResults[sec.id] = {
@@ -434,24 +507,79 @@ export class ExamService {
       const qMarks = q.marks !== undefined ? q.marks : marksPerCorrect;
       const qNegative = q.negativeMarks !== undefined ? q.negativeMarks : negativeMarks;
 
+      // Topic attribution
+      const meta = getQuestionTopicMetadata(q, paper.examId, q.sectionName);
+      const topicId = meta.primaryTopicId || 'uncategorized';
+      const topicName = meta.primaryTopicName || 'Uncategorized';
+      if (!topicResults[topicId]) {
+        topicResults[topicId] = {
+          topicId,
+          topicName,
+          totalQuestions: 0,
+          maxMarks: 0,
+          attempted: 0,
+          correct: 0,
+          wrong: 0,
+          skipped: 0,
+          score: 0,
+          accuracy: 0,
+        };
+      }
+      const topSummary = topicResults[topicId];
+      topSummary.totalQuestions += 1;
+      topSummary.maxMarks += qMarks;
+
+      const diffKey = qMarks >= 2 ? 'HARD' : 'MEDIUM';
+      const diffSummary = difficultyResults[diffKey];
+      diffSummary.totalQuestions += 1;
+
+      const recordOutcome = (isCorrect: boolean, isAttempted: boolean) => {
+        if (!isAttempted) {
+          unansweredCount += 1;
+          if (secSummary) secSummary.skipped += 1;
+          topSummary.skipped += 1;
+          return;
+        }
+
+        if (secSummary) secSummary.attempted += 1;
+        topSummary.attempted += 1;
+        diffSummary.attempted += 1;
+
+        if (isCorrect) {
+          correctCount += 1;
+          totalScore += qMarks;
+          if (secSummary) {
+            secSummary.correct += 1;
+            secSummary.score += qMarks;
+          }
+          topSummary.correct += 1;
+          topSummary.score += qMarks;
+          diffSummary.correct += 1;
+          diffSummary.score += qMarks;
+        } else {
+          wrongCount += 1;
+          totalScore -= qNegative;
+          if (secSummary) {
+            secSummary.wrong += 1;
+            secSummary.score -= qNegative;
+          }
+          topSummary.wrong += 1;
+          topSummary.score -= qNegative;
+          diffSummary.wrong += 1;
+          diffSummary.score -= qNegative;
+        }
+      };
+
       if (q.isMta) {
         // Marks to All awarded by official committee
-        correctCount += 1;
-        totalScore += qMarks;
-        if (secSummary) {
-          secSummary.attempted += 1;
-          secSummary.correct += 1;
-          secSummary.score += qMarks;
-        }
+        recordOutcome(true, true);
         return;
       }
 
       if (q.questionType === 'MSQ') {
         const userMsq = session.userMsqAnswers?.[index] || [];
         if (userMsq.length > 0) {
-          if (secSummary) secSummary.attempted += 1;
-
-          const sortedUserLetters = [...userMsq].sort().map((idx) => ['A', 'B', 'C', 'D'][idx]);
+          const sortedUserLetters = [...userMsq].sort().map((idx) => q.richOptions?.[idx]?.id || ['A', 'B', 'C', 'D'][idx] || String.fromCharCode(65 + idx));
           let isCorrect = false;
 
           if (q.correctAnswerSets && q.correctAnswerSets.length > 0) {
@@ -475,34 +603,15 @@ export class ExamService {
               sortedIndices.every((val, i) => val === sortedUser[i]);
           }
 
-          if (isCorrect) {
-            correctCount += 1;
-            totalScore += qMarks;
-            if (secSummary) {
-              secSummary.correct += 1;
-              secSummary.score += qMarks;
-            }
-          } else {
-            wrongCount += 1;
-            totalScore -= qNegative; // 0 for MSQ in GATE
-            if (secSummary) {
-              secSummary.wrong += 1;
-              secSummary.score -= qNegative;
-            }
-          }
+          recordOutcome(isCorrect, true);
         } else {
-          unansweredCount += 1;
-          if (secSummary) {
-            secSummary.skipped += 1;
-          }
+          recordOutcome(false, false);
         }
       } else if (q.questionType === 'NAT') {
         const userNat = session.userNatAnswers?.[index];
         const hasEntered = userNat !== undefined && userNat !== null && userNat.trim().length > 0;
         if (hasEntered) {
-          if (secSummary) secSummary.attempted += 1;
           const numVal = parseFloat(userNat.trim());
-
           let isCorrect = false;
           if (!isNaN(numVal)) {
             const tolerance = 1e-4;
@@ -516,53 +625,17 @@ export class ExamService {
             }
           }
 
-          if (isCorrect) {
-            correctCount += 1;
-            totalScore += qMarks;
-            if (secSummary) {
-              secSummary.correct += 1;
-              secSummary.score += qMarks;
-            }
-          } else {
-            wrongCount += 1;
-            totalScore -= qNegative; // 0 for NAT in GATE
-            if (secSummary) {
-              secSummary.wrong += 1;
-              secSummary.score -= qNegative;
-            }
-          }
+          recordOutcome(isCorrect, true);
         } else {
-          unansweredCount += 1;
-          if (secSummary) {
-            secSummary.skipped += 1;
-          }
+          recordOutcome(false, false);
         }
       } else {
         // Standard MCQ
         const userChoice = session.userAnswers[index];
         if (userChoice !== undefined && userChoice !== null) {
-          if (secSummary) secSummary.attempted += 1;
-
-          if (userChoice === q.correctAnswerIndex) {
-            correctCount += 1;
-            totalScore += qMarks;
-            if (secSummary) {
-              secSummary.correct += 1;
-              secSummary.score += qMarks;
-            }
-          } else {
-            wrongCount += 1;
-            totalScore -= qNegative;
-            if (secSummary) {
-              secSummary.wrong += 1;
-              secSummary.score -= qNegative;
-            }
-          }
+          recordOutcome(userChoice === q.correctAnswerIndex, true);
         } else {
-          unansweredCount += 1;
-          if (secSummary) {
-            secSummary.skipped += 1;
-          }
+          recordOutcome(false, false);
         }
       }
     });
@@ -572,6 +645,20 @@ export class ExamService {
       const s = sectionResults[secId];
       s.accuracy = s.attempted > 0 ? Math.round((s.correct / s.attempted) * 100) : 0;
       s.score = Math.round(s.score * 100) / 100;
+    }
+
+    // Calculate accuracy percentage for each topic
+    for (const topId in topicResults) {
+      const t = topicResults[topId];
+      t.accuracy = t.attempted > 0 ? Math.round((t.correct / t.attempted) * 100) : 0;
+      t.score = Math.round(t.score * 100) / 100;
+    }
+
+    // Calculate accuracy percentage for difficulty
+    for (const dKey in difficultyResults) {
+      const d = difficultyResults[dKey];
+      d.accuracy = d.attempted > 0 ? Math.round((d.correct / d.attempted) * 100) : 0;
+      d.score = Math.round(d.score * 100) / 100;
     }
 
     const attemptedTotal = correctCount + wrongCount;
@@ -596,6 +683,8 @@ export class ExamService {
       timeSpentSeconds: session.elapsedSeconds,
       submittedAt: Date.now(),
       sectionResults,
+      topicResults,
+      difficultyResults,
       isScoreCalculated: true,
       scoreStatus: 'CALCULATED',
       answerKeyStatus: paper.answerKeyStatus || 'AVAILABLE',
@@ -612,6 +701,15 @@ export class ExamService {
     paper: ExamPaper | ExamPresentationPaper,
     manifest?: ExamSolutionManifest
   ): ExamTestSession {
+    if (
+      ((paper as any).isPresentationOnly && (!manifest || !manifest.solutions || manifest.solutions.length === 0)) ||
+      session.deliveryMode === 'AUTHORITATIVE' ||
+      (paper as any).deliveryMode === 'AUTHORITATIVE'
+    ) {
+      throw new Error(
+        'AUTHORITATIVE_EXAM_PROTECTION: Client-side submission and scoring is strictly forbidden for server-authoritative exam sessions. Submissions must proceed through CandidateDeliveryApi.'
+      );
+    }
     const result = this.calculateExamResult(session, paper, manifest);
 
     const completedSession: ExamTestSession = {
@@ -627,6 +725,13 @@ export class ExamService {
     ExamSessionService.submitSession(completedSession, result).catch((err) => {
       console.warn('Non-fatal: persistent submit sync error:', err);
     });
+    if ((paper as ExamPaper).isTopicPractice) {
+      TopicPracticeCloudSync.savePracticeHistoryRemote(completedSession, paper as ExamPaper).catch(
+        (err) => {
+          console.warn('Non-fatal: topic practice history cloud sync queued:', err);
+        }
+      );
+    }
     this.clearActiveSession(session.userId);
 
     return completedSession;

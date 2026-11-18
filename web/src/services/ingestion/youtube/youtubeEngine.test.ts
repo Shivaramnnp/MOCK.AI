@@ -14,7 +14,7 @@
  * 9. End-to-End Scale Verification (Short Video, Long Lecture, Fidelity & Latency Reporting)
  */
 
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { validateYouTubeUrl, extractYouTubeVideoId } from './urlValidator';
 import {
   parseJson3TimedText,
@@ -285,13 +285,18 @@ describe('Production YouTube Ingestion Engine (PROMPT 4/10)', () => {
 
     it('returns SOURCE_UNAVAILABLE when video has no captions and throws explicit error', async () => {
       // Call engine with a synthetic ID where fetch will fail to find transcripts
-      const res = await processYouTubeVideo('https://www.youtube.com/watch?v=NoCaption11');
-      expect(res.success).toBe(false);
-      expect(['SOURCE_UNAVAILABLE', 'TRANSCRIPT_DISABLED', 'PRIVATE_OR_DELETED']).toContain(
-        res.error?.code
-      );
-      // NEVER fallback to invented questions
-      expect(res.questions.length).toBe(0);
+      const fetchSpy = vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('No captions available'));
+      try {
+        const res = await processYouTubeVideo('https://www.youtube.com/watch?v=NoCaption11');
+        expect(res.success).toBe(false);
+        expect(['SOURCE_UNAVAILABLE', 'TRANSCRIPT_DISABLED', 'PRIVATE_OR_DELETED']).toContain(
+          res.error?.code
+        );
+        // NEVER fallback to invented questions
+        expect(res.questions.length).toBe(0);
+      } finally {
+        fetchSpy.mockRestore();
+      }
     });
   });
 

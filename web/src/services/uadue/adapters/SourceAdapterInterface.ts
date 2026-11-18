@@ -18,6 +18,8 @@ export interface SourceValidationResult {
 }
 
 export interface AdapterExtractionOptions {
+  startPage?: number; // 1-indexed start page (default: 1)
+  endPage?: number;   // 1-indexed end page inclusive
   maxPages?: number;
   extractImages?: boolean;
   ocrFallback?: boolean;

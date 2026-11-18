@@ -271,11 +271,11 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+      "questionText": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+          "content": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
           "confidence": "VERIFIED"
         }
       ],
@@ -285,41 +285,43 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑞𝑝= 𝑝𝑞",
-        "𝑞𝑝= 𝑝2𝑞",
+        "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
+        "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
         "\\sqrt 𝑞= \\sqrt 𝑝",
-        "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝"
+        "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑞𝑝= 𝑝𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑞𝑝= 𝑝2𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝2𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{2𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -339,12 +341,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+          "text": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+              "content": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
               "confidence": "VERIFIED"
             }
           ],
@@ -489,11 +491,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+      "questionText": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+          "content": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
           "confidence": "VERIFIED"
         }
       ],
@@ -612,21 +614,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
-        "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
-        "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
-        "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots"
+        "(i) hold (ii) waits (iii) culminates (iv) pivot",
+        "(i) holds (ii) wait (iii) culminates (iv) pivot",
+        "(i) hold (ii) wait (iii) culminate (iv) pivots",
+        "(i) holds (ii) waits (iii) culminate (iv) pivots"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+          "text": "(i) hold (ii) waits (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+              "content": "(i) hold (ii) waits (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -636,12 +638,12 @@
         },
         {
           "id": "B",
-          "text": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+          "text": "(i) holds (ii) wait (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+              "content": "(i) holds (ii) wait (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -651,12 +653,12 @@
         },
         {
           "id": "C",
-          "text": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+          "text": "(i) hold (ii) wait (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+              "content": "(i) hold (ii) wait (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -666,12 +668,12 @@
         },
         {
           "id": "D",
-          "text": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+          "text": "(i) holds (ii) waits (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+              "content": "(i) holds (ii) waits (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -816,11 +818,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
           "confidence": "VERIFIED"
         },
         {
@@ -2553,11 +2555,11 @@
       "questionNumber": 24,
       "sectionId": "gg_common",
       "sectionName": "Part A: Common (Geology and Geophysics)",
-      "questionText": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in W/m^{3}is ___________ (in integer).",
+      "questionText": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in \\(\\mu\\)W/m^{3}is ___________ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in W/m^{3}is ___________ (in integer).",
+          "content": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in \\(\\mu\\)W/m^{3}is ___________ (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -2923,71 +2925,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1 + 𝑍2 + 𝑍4",
-        "1 + 𝑍+ 𝑍2",
-        "𝑍+ 𝑍3 + 𝑍5",
-        "𝑍+ 𝑍2 + 𝑍3"
+        "\\(1 + 𝑍^{2} + 𝑍^{4}\\)",
+        "\\(1 + 𝑍+ 𝑍^{2}\\)",
+        "\\(𝑍+ 𝑍^{3} + 𝑍^{5}\\)",
+        "\\(𝑍+ 𝑍^{2} + 𝑍^{3}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1 + 𝑍2 + 𝑍4",
+          "text": "\\(1 + 𝑍^{2} + 𝑍^{4}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 + 𝑍2 + 𝑍4",
+              "type": "math",
+              "latex": "1 + 𝑍^{2} + 𝑍^{4}",
+              "content": "\\(1 + 𝑍^{2} + 𝑍^{4}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "1 + 𝑍+ 𝑍2",
+          "text": "\\(1 + 𝑍+ 𝑍^{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 + 𝑍+ 𝑍2",
+              "type": "math",
+              "latex": "1 + 𝑍+ 𝑍^{2}",
+              "content": "\\(1 + 𝑍+ 𝑍^{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑍+ 𝑍3 + 𝑍5",
+          "text": "\\(𝑍+ 𝑍^{3} + 𝑍^{5}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑍+ 𝑍3 + 𝑍5",
+              "type": "math",
+              "latex": "𝑍+ 𝑍^{3} + 𝑍^{5}",
+              "content": "\\(𝑍+ 𝑍^{3} + 𝑍^{5}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑍+ 𝑍2 + 𝑍3",
+          "text": "\\(𝑍+ 𝑍^{2} + 𝑍^{3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑍+ 𝑍2 + 𝑍3",
+              "type": "math",
+              "latex": "𝑍+ 𝑍^{2} + 𝑍^{3}",
+              "content": "\\(𝑍+ 𝑍^{2} + 𝑍^{3}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3018,11 +3024,11 @@
       "questionNumber": 30,
       "sectionId": "gg2_core",
       "sectionName": "Part B: Section 2 (Geophysics)",
-      "questionText": "Which one among the following events recorded in a land seismic reflection survey using vertical component geophones has the highest apparent slowness?",
+      "questionText": "Which one among the following events recorded in a l and seismic reflection survey using vertical component geophones has the highest apparent slowness?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which one among the following events recorded in a land seismic reflection survey using vertical component geophones has the highest apparent slowness?",
+          "content": "Which one among the following events recorded in a l and seismic reflection survey using vertical component geophones has the highest apparent slowness?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3141,71 +3147,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\sqrt ε1 - \\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2",
-        "\\sqrt ε1 + \\sqrt ε2\n\\sqrt ε1 - \\sqrt ε2",
-        "\\sqrt ε1\n\\sqrt ε1 + \\sqrt ε2",
-        "\\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2"
+        "\\(\\frac{\\sqrt{ε1}-\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
+        "\\(\\frac{\\sqrt{ε1}+\\sqrt{ε2}}{\\sqrt{ε1}-\\sqrt{ε2}}\\)",
+        "\\(\\frac{\\sqrt{ε1}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
+        "\\(\\frac{\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\sqrt ε1 - \\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2",
+          "text": "\\(\\frac{\\sqrt{ε1}-\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\sqrt ε1 - \\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2",
+              "type": "math",
+              "latex": "\\frac{\\sqrt{ε1}-\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}",
+              "content": "\\(\\frac{\\sqrt{ε1}-\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "\\sqrt ε1 + \\sqrt ε2\n\\sqrt ε1 - \\sqrt ε2",
+          "text": "\\(\\frac{\\sqrt{ε1}+\\sqrt{ε2}}{\\sqrt{ε1}-\\sqrt{ε2}}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\sqrt ε1 + \\sqrt ε2\n\\sqrt ε1 - \\sqrt ε2",
+              "type": "math",
+              "latex": "\\frac{\\sqrt{ε1}+\\sqrt{ε2}}{\\sqrt{ε1}-\\sqrt{ε2}}",
+              "content": "\\(\\frac{\\sqrt{ε1}+\\sqrt{ε2}}{\\sqrt{ε1}-\\sqrt{ε2}}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "\\sqrt ε1\n\\sqrt ε1 + \\sqrt ε2",
+          "text": "\\(\\frac{\\sqrt{ε1}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\sqrt ε1\n\\sqrt ε1 + \\sqrt ε2",
+              "type": "math",
+              "latex": "\\frac{\\sqrt{ε1}}{\\sqrt{ε1}+\\sqrt{ε2}}",
+              "content": "\\(\\frac{\\sqrt{ε1}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "\\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2",
+          "text": "\\(\\frac{\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "\\sqrt ε2\n\\sqrt ε1 + \\sqrt ε2",
+              "type": "math",
+              "latex": "\\frac{\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}",
+              "content": "\\(\\frac{\\sqrt{ε2}}{\\sqrt{ε1}+\\sqrt{ε2}}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3708,9 +3718,9 @@
       "questionType": "MCQ",
       "options": [
         "L",
-        "L2",
-        "L3",
-        "L2T-2"
+        "\\(L^{2}\\)",
+        "\\(L^{3}\\)",
+        "\\(L^{2}T^{-2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -3731,47 +3741,50 @@
         },
         {
           "id": "B",
-          "text": "L2",
+          "text": "\\(L^{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "L2",
+              "type": "math",
+              "latex": "L^{2}",
+              "content": "\\(L^{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "L3",
+          "text": "\\(L^{3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "L3",
+              "type": "math",
+              "latex": "L^{3}",
+              "content": "\\(L^{3}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "L2T-2",
+          "text": "\\(L^{2}T^{-2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "L2T-2",
+              "type": "math",
+              "latex": "L^{2}T^{-2}",
+              "content": "\\(L^{2}T^{-2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4146,7 +4159,7 @@
         "Seismic data consist of a single temporal frequency",
         "There are no sharp changes in the material properties in the subsurface",
         "Density is constant in the subsurface",
-        "The source waveform is stationary, that is, the source waveform does not change as\nit travels in the subsurface"
+        "The source waveform is stationary, that is, the source waveform does not change as it travels in the subsurface"
       ],
       "optionImages": null,
       "richOptions": [
@@ -4197,12 +4210,12 @@
         },
         {
           "id": "D",
-          "text": "The source waveform is stationary, that is, the source waveform does not change as\nit travels in the subsurface",
+          "text": "The source waveform is stationary, that is, the source waveform does not change as it travels in the subsurface",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The source waveform is stationary, that is, the source waveform does not change as\nit travels in the subsurface",
+              "content": "The source waveform is stationary, that is, the source waveform does not change as it travels in the subsurface",
               "confidence": "VERIFIED"
             }
           ],
@@ -4426,11 +4439,11 @@
       "questionNumber": 45,
       "sectionId": "gg2_core",
       "sectionName": "Part B: Section 2 (Geophysics)",
-      "questionText": "A stress tensor 𝝈, with elements in MPa, is as given. The maximum value of the principal stress in MPa is\n\n1 0 \\sqrt 2 𝝈= [ ] \\(\\frac{0}{ \\sqrt 2}\\) 1 0 \\sqrt 2 0 0",
+      "questionText": "A stress tensor 𝝈, with elements in MPa, is as given. The maximum value of the principal stress in MPa is\n\n1 0 \\sqrt{2} 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] \\sqrt{2} 0 0",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A stress tensor 𝝈, with elements in MPa, is as given. The maximum value of the principal stress in MPa is\n\n1 0 \\sqrt 2 𝝈= [ ] \\(\\frac{0}{ \\sqrt 2}\\) 1 0 \\sqrt 2 0 0",
+          "content": "A stress tensor 𝝈, with elements in MPa, is as given. The maximum value of the principal stress in MPa is\n\n1 0 \\sqrt{2} 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] 𝝈= [ 0 1 0 ] \\sqrt{2} 0 0",
           "confidence": "VERIFIED"
         }
       ],
@@ -4441,7 +4454,7 @@
       "questionType": "MCQ",
       "options": [
         "2.0",
-        "\\sqrt 2",
+        "\\sqrt{2}",
         "1.0",
         "0.0"
       ],
@@ -4464,12 +4477,12 @@
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
+          "text": "\\sqrt{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 2",
+              "content": "\\sqrt{2}",
               "confidence": "VERIFIED"
             }
           ],
@@ -4549,41 +4562,43 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝐆𝑇𝐆-𝑔",
-        "𝐆-𝑔 𝐆𝑇",
+        "\\(𝐆^{𝑇}𝐆^{-𝑔}\\)",
+        "\\(𝐆^{-𝑔} 𝐆^{𝑇}\\)",
         "\\(𝐆^{-𝑔}𝐆\\)",
-        "𝐆 𝐆-𝑔"
+        "\\(𝐆 𝐆^{-𝑔}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝐆𝑇𝐆-𝑔",
+          "text": "\\(𝐆^{𝑇}𝐆^{-𝑔}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐆𝑇𝐆-𝑔",
+              "type": "math",
+              "latex": "𝐆^{𝑇}𝐆^{-𝑔}",
+              "content": "\\(𝐆^{𝑇}𝐆^{-𝑔}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝐆-𝑔 𝐆𝑇",
+          "text": "\\(𝐆^{-𝑔} 𝐆^{𝑇}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐆-𝑔 𝐆𝑇",
+              "type": "math",
+              "latex": "𝐆^{-𝑔} 𝐆^{𝑇}",
+              "content": "\\(𝐆^{-𝑔} 𝐆^{𝑇}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -4604,17 +4619,18 @@
         },
         {
           "id": "D",
-          "text": "𝐆 𝐆-𝑔",
+          "text": "\\(𝐆 𝐆^{-𝑔}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝐆 𝐆-𝑔",
+              "type": "math",
+              "latex": "𝐆 𝐆^{-𝑔}",
+              "content": "\\(𝐆 𝐆^{-𝑔}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4645,11 +4661,11 @@
       "questionNumber": 47,
       "sectionId": "gg2_core",
       "sectionName": "Part B: Section 2 (Geophysics)",
-      "questionText": "A Wenner resistivity survey was performed with a spacing of 15 m between the current electrodes. Potential difference values of -25 mV and 225 mV were measured before and after injecting 100 mA current into the ground. The apparent resistivity in -m after correcting for the self-potential effect is",
+      "questionText": "A Wenner resistivity survey was performed with a spacing of 15 m between the current electrodes. Potential difference values of -25 mV and 225 mV were measured before and after injecting 100 mA current into the ground. The apparent resistivity in \\(\\Omega\\)-m after correcting for the self-potential effect is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A Wenner resistivity survey was performed with a spacing of 15 m between the current electrodes. Potential difference values of -25 mV and 225 mV were measured before and after injecting 100 mA current into the ground. The apparent resistivity in -m after correcting for the self-potential effect is",
+          "content": "A Wenner resistivity survey was performed with a spacing of 15 m between the current electrodes. Potential difference values of -25 mV and 225 mV were measured before and after injecting 100 mA current into the ground. The apparent resistivity in \\(\\Omega\\)-m after correcting for the self-potential effect is",
           "confidence": "VERIFIED"
         }
       ],
@@ -4972,11 +4988,11 @@
       "questionNumber": 50,
       "sectionId": "gg2_core",
       "sectionName": "Part B: Section 2 (Geophysics)",
-      "questionText": "2𝑚2 + 6𝑚2, where 𝑚1 A geophysical forward problem is expressed as 𝑑= 7𝑚1 and 𝑚_{2} represent the model parameters and 𝑑 represents the data. Then, the relationship between data and model parameters is",
+      "questionText": "A geophysical forward problem is expressed as 𝑑= 7𝑚_{1} 2𝑚2 + 6𝑚2, where 𝑚1 and 𝑚_{2} represent the model parameters and 𝑑 represents the data. Then, the relationship between data and model parameters is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "2𝑚2 + 6𝑚2, where 𝑚1 A geophysical forward problem is expressed as 𝑑= 7𝑚1 and 𝑚_{2} represent the model parameters and 𝑑 represents the data. Then, the relationship between data and model parameters is",
+          "content": "A geophysical forward problem is expressed as 𝑑= 7𝑚_{1} 2𝑚2 + 6𝑚2, where 𝑚1 and 𝑚_{2} represent the model parameters and 𝑑 represents the data. Then, the relationship between data and model parameters is",
           "confidence": "VERIFIED"
         }
       ],
@@ -5319,7 +5335,7 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "𝐁= -𝛁, where  is the scalar potential",
+        "𝐁= -𝛁\\(\\phi\\), where \\(\\phi\\) is the scalar potential",
         "𝐁 is rotational",
         "𝛁 \\times 𝐁= 𝟎",
         "𝛁∙𝐁= 𝟎"
@@ -5328,12 +5344,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "𝐁= -𝛁, where  is the scalar potential",
+          "text": "𝐁= -𝛁\\(\\phi\\), where \\(\\phi\\) is the scalar potential",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "𝐁= -𝛁, where  is the scalar potential",
+              "content": "𝐁= -𝛁\\(\\phi\\), where \\(\\phi\\) is the scalar potential",
               "confidence": "VERIFIED"
             }
           ],
@@ -5553,7 +5569,7 @@
       "options": [
         "Spatial aliasing can be reduced by increasing the geophone (group) spacing",
         "Spatial aliasing is more likely to occur for higher temporal frequencies in the data",
-        "Subsurface formations with higher interval velocities increase the likelihood of\nspatial aliasing",
+        "Subsurface formations with higher interval velocities increase the likelihood of spatial aliasing",
         "Reflections from steep dips are more likely to be spatially aliased"
       ],
       "optionImages": null,
@@ -5590,12 +5606,12 @@
         },
         {
           "id": "C",
-          "text": "Subsurface formations with higher interval velocities increase the likelihood of\nspatial aliasing",
+          "text": "Subsurface formations with higher interval velocities increase the likelihood of spatial aliasing",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Subsurface formations with higher interval velocities increase the likelihood of\nspatial aliasing",
+              "content": "Subsurface formations with higher interval velocities increase the likelihood of spatial aliasing",
               "confidence": "VERIFIED"
             }
           ],
@@ -5666,71 +5682,75 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "4.040 𝑉1 cos θ1 sin θ2 + 0.001211 𝑉1",
-        "7.503 𝑉2 cos θ1 sin θ2 + 0.004154 𝑉2",
-        "4.040 𝑉2 cos θ2 sin θ1 + 0.001211 𝑉2",
-        "7.503 𝑉1 cos θ1 sin θ2 + 0.004154 𝑉1"
+        "\\(4.040 𝑉_{1} cos θ_{1} sin θ_{2} + 0.001211 𝑉_{1} 2\\)",
+        "\\(7.503 𝑉_{2} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{2} 2\\)",
+        "\\(4.040 𝑉_{2} cos θ_{2} sin θ_{1} + 0.001211 𝑉_{2} 2\\)",
+        "\\(7.503 𝑉_{1} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{1} 2\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "4.040 𝑉1 cos θ1 sin θ2 + 0.001211 𝑉1",
+          "text": "\\(4.040 𝑉_{1} cos θ_{1} sin θ_{2} + 0.001211 𝑉_{1} 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "4.040 𝑉1 cos θ1 sin θ2 + 0.001211 𝑉1",
+              "type": "math",
+              "latex": "4.040 𝑉_{1} cos θ_{1} sin θ_{2} + 0.001211 𝑉_{1} 2",
+              "content": "\\(4.040 𝑉_{1} cos θ_{1} sin θ_{2} + 0.001211 𝑉_{1} 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "7.503 𝑉2 cos θ1 sin θ2 + 0.004154 𝑉2",
+          "text": "\\(7.503 𝑉_{2} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{2} 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "7.503 𝑉2 cos θ1 sin θ2 + 0.004154 𝑉2",
+              "type": "math",
+              "latex": "7.503 𝑉_{2} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{2} 2",
+              "content": "\\(7.503 𝑉_{2} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{2} 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "4.040 𝑉2 cos θ2 sin θ1 + 0.001211 𝑉2",
+          "text": "\\(4.040 𝑉_{2} cos θ_{2} sin θ_{1} + 0.001211 𝑉_{2} 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "4.040 𝑉2 cos θ2 sin θ1 + 0.001211 𝑉2",
+              "type": "math",
+              "latex": "4.040 𝑉_{2} cos θ_{2} sin θ_{1} + 0.001211 𝑉_{2} 2",
+              "content": "\\(4.040 𝑉_{2} cos θ_{2} sin θ_{1} + 0.001211 𝑉_{2} 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "7.503 𝑉1 cos θ1 sin θ2 + 0.004154 𝑉1",
+          "text": "\\(7.503 𝑉_{1} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{1} 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "7.503 𝑉1 cos θ1 sin θ2 + 0.004154 𝑉1",
+              "type": "math",
+              "latex": "7.503 𝑉_{1} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{1} 2",
+              "content": "\\(7.503 𝑉_{1} cos θ_{1} sin θ_{2} + 0.004154 𝑉_{1} 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -5783,7 +5803,7 @@
       "options": [
         "Overpressured shale shows very low neutron porosity",
         "Neutron log primarily measures liquid (water/oil) filled porosity",
-        "Neutron porosity for a gas-bearing clean sandstone formation is lower than the\nactual porosity of the same formation",
+        "Neutron porosity for a gas-bearing clean sandstone formation is lower than the actual porosity of the same formation",
         "A low neutron porosity indicates high Hydrogen Index of the formation"
       ],
       "optionImages": null,
@@ -5820,12 +5840,12 @@
         },
         {
           "id": "C",
-          "text": "Neutron porosity for a gas-bearing clean sandstone formation is lower than the\nactual porosity of the same formation",
+          "text": "Neutron porosity for a gas-bearing clean sandstone formation is lower than the actual porosity of the same formation",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Neutron porosity for a gas-bearing clean sandstone formation is lower than the\nactual porosity of the same formation",
+              "content": "Neutron porosity for a gas-bearing clean sandstone formation is lower than the actual porosity of the same formation",
               "confidence": "VERIFIED"
             }
           ],

@@ -61,11 +61,11 @@
       "questionNumber": 1,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n[smile → giggle → laugh] is analogous to [disapprove → ________ → chide].\nWhich one of the given options is appropriate to fill the blank?",
+      "questionText": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[smile → giggle → laugh] is analogous to [disapprove → ________ → chide].\n\nWhich one of the given options is appropriate to fill the blank?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If '→' denotes increasing order of intensity, then the meaning of the words\n[smile → giggle → laugh] is analogous to [disapprove → ________ → chide].\nWhich one of the given options is appropriate to fill the blank?",
+          "content": "If '→' denotes increasing order of intensity, then the meaning of the words\n\n[smile → giggle → laugh] is analogous to [disapprove → ________ → chide].\n\nWhich one of the given options is appropriate to fill the blank?",
           "confidence": "VERIFIED"
         }
       ],
@@ -279,11 +279,11 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the following series, identify the number that needs to be changed to form the\nFibonacci series.\n1, 1, 2, 3, 6, 8, 13, 21,…",
+      "questionText": "In the following series, identify the number that needs to be changed to form the Fibonacci series.\n\n1, 1, 2, 3, 6, 8, 13, 21,…",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the following series, identify the number that needs to be changed to form the\nFibonacci series.\n1, 1, 2, 3, 6, 8, 13, 21,…",
+          "content": "In the following series, identify the number that needs to be changed to form the Fibonacci series.\n\n1, 1, 2, 3, 6, 8, 13, 21,…",
           "confidence": "VERIFIED"
         }
       ],
@@ -388,11 +388,11 @@
       "questionNumber": 4,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The real variables 𝑥, 𝑦, 𝑧, and the real constants 𝑝, 𝑞, 𝑟 satisfy\n𝑥 𝑦 𝑧\n= =\n𝑝𝑞 -𝑟2 𝑞𝑟-𝑝2 𝑟𝑝-𝑞2\nGiven that the denominators are non-zero, the value of 𝑝𝑥 + 𝑞𝑦+ 𝑟𝑧 is",
+      "questionText": "The real variables 𝑥, 𝑦, 𝑧, and the real constants 𝑝, 𝑞, 𝑟 satisfy\n\n\\(\\frac{𝑥}{𝑝𝑞-𝑟2}\\) = \\(\\frac{𝑦}{𝑞𝑟-𝑝2}\\) = \\(\\frac{𝑧}{𝑟𝑝-𝑞2}\\)\n\nGiven that the denominators are non-zero, the value of 𝑝𝑥+ 𝑞𝑦+ 𝑟𝑧 is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The real variables 𝑥, 𝑦, 𝑧, and the real constants 𝑝, 𝑞, 𝑟 satisfy\n𝑥 𝑦 𝑧\n= =\n𝑝𝑞 -𝑟2 𝑞𝑟-𝑝2 𝑟𝑝-𝑞2\nGiven that the denominators are non-zero, the value of 𝑝𝑥 + 𝑞𝑦+ 𝑟𝑧 is",
+          "content": "The real variables 𝑥, 𝑦, 𝑧, and the real constants 𝑝, 𝑞, 𝑟 satisfy\n\n\\(\\frac{𝑥}{𝑝𝑞-𝑟2}\\) = \\(\\frac{𝑦}{𝑞𝑟-𝑝2}\\) = \\(\\frac{𝑧}{𝑟𝑝-𝑞2}\\)\n\nGiven that the denominators are non-zero, the value of 𝑝𝑥+ 𝑞𝑦+ 𝑟𝑧 is",
           "confidence": "VERIFIED"
         }
       ],
@@ -405,7 +405,7 @@
         "0",
         "1",
         "𝑝𝑞𝑟",
-        "𝑝2 + 𝑞2 + 𝑟2"
+        "\\(𝑝^{2} + 𝑞^{2} + 𝑟^{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
@@ -456,17 +456,18 @@
         },
         {
           "id": "D",
-          "text": "𝑝2 + 𝑞2 + 𝑟2",
+          "text": "\\(𝑝^{2} + 𝑞^{2} + 𝑟^{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑝2 + 𝑞2 + 𝑟2",
+              "type": "math",
+              "latex": "𝑝^{2} + 𝑞^{2} + 𝑟^{2}",
+              "content": "\\(𝑝^{2} + 𝑞^{2} + 𝑟^{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -497,11 +498,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Take two long dice (rectangular parallelepiped), each having four rectangular faces\nlabelled as 2, 3, 5, and 7. If thrown, the long dice cannot land on the square faces\nand has 1/4 probability of landing on any of the four rectangular faces. The label on\nthe top face of the dice is the score of the throw.\nIf thrown together, what is the probability of getting the sum of the two long dice\nscores greater than 11?",
+      "questionText": "Take two long dice (rectangular parallelepiped), each having four rectangular faces labelled as 2, 3, 5, and 7. If thrown, the long dice cannot l and on the square faces and has 1/4 probability of landing on any of the four rectangular faces. The label on the top face of the dice is the score of the throw.\n\nIf thrown together, what is the probability of getting the sum of the two long dice scores greater than 11?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Take two long dice (rectangular parallelepiped), each having four rectangular faces\nlabelled as 2, 3, 5, and 7. If thrown, the long dice cannot land on the square faces\nand has 1/4 probability of landing on any of the four rectangular faces. The label on\nthe top face of the dice is the score of the throw.\nIf thrown together, what is the probability of getting the sum of the two long dice\nscores greater than 11?",
+          "content": "Take two long dice (rectangular parallelepiped), each having four rectangular faces labelled as 2, 3, 5, and 7. If thrown, the long dice cannot l and on the square faces and has 1/4 probability of landing on any of the four rectangular faces. The label on the top face of the dice is the score of the throw.\n\nIf thrown together, what is the probability of getting the sum of the two long dice scores greater than 11?",
           "confidence": "VERIFIED"
         }
       ],
@@ -606,11 +607,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the\nblanks.\n(i) (ii)\nProf. P merely a man who narrated funny stories. in his blackest\nmoments he was capable of self-deprecating humor.\n(iii) (iv)\nProf. Q a man who hardly narrated funny stories. in his blackest\nmoments was he able to find humor.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nProf. P (i) merely a man who narrated funny stories. (ii) in his blackest moments he was capable of self-deprecating humor.\n\nProf. Q (iii) a man who hardly narrated funny stories. (iv) in his blackest moments was he able to find humor.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the\nblanks.\n(i) (ii)\nProf. P merely a man who narrated funny stories. in his blackest\nmoments he was capable of self-deprecating humor.\n(iii) (iv)\nProf. Q a man who hardly narrated funny stories. in his blackest\nmoments was he able to find humor.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nProf. P (i) merely a man who narrated funny stories. (ii) in his blackest moments he was capable of self-deprecating humor.\n\nProf. Q (iii) a man who hardly narrated funny stories. (iv) in his blackest moments was he able to find humor.",
           "confidence": "VERIFIED"
         }
       ],
@@ -715,11 +716,11 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "How many combinations of non-null sets A, B, C are possible from the subsets of\n{2, 3, 5} satisfying the conditions: (i) A is a subset of B, and (ii) B is a subset of C?",
+      "questionText": "How many combinations of non-null sets A, B, C are possible from the subsets of {2, 3, 5} satisfying the conditions: (i) A is a subset of B, and (ii) B is a subset of C?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "How many combinations of non-null sets A, B, C are possible from the subsets of\n{2, 3, 5} satisfying the conditions: (i) A is a subset of B, and (ii) B is a subset of C?",
+          "content": "How many combinations of non-null sets A, B, C are possible from the subsets of {2, 3, 5} satisfying the conditions: (i) A is a subset of B, and (ii) B is a subset of C?",
           "confidence": "VERIFIED"
         }
       ],
@@ -824,11 +825,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The bar chart gives the batting averages of VK and RS for 11 calendar years from\n2012 to 2022. Considering that 2015 and 2019 are world cup years, which one of\nthe following options is true?\n140\n120 Average\nVK RS\n100\n80\n60 Batting\n40\n20\n0\n2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022\nCalendar Year",
+      "questionText": "The bar chart gives the batting averages of VK and RS for 11 calendar years from 2012 to 2022. Considering that 2015 and 2019 are world cup years, which one of the following options is true?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The bar chart gives the batting averages of VK and RS for 11 calendar years from\n2012 to 2022. Considering that 2015 and 2019 are world cup years, which one of\nthe following options is true?\n140\n120 Average\nVK RS\n100\n80\n60 Batting\n40\n20\n0\n2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022\nCalendar Year",
+          "content": "The bar chart gives the batting averages of VK and RS for 11 calendar years from 2012 to 2022. Considering that 2015 and 2019 are world cup years, which one of the following options is true?",
           "confidence": "VERIFIED"
         },
         {
@@ -846,8 +847,8 @@
       "options": [
         "RS has a higher yearly batting average than that of VK in every world cup year.",
         "VK has a higher yearly batting average than that of RS in every world cup year.",
-        "VK's yearly batting average is consistently higher than that of RS between the two\nworld cup years.",
-        "RS's yearly batting average is consistently higher than that of VK in the last three\nyears."
+        "VK's yearly batting average is consistently higher than that of RS between the two world cup years.",
+        "RS's yearly batting average is consistently higher than that of VK in the last three years."
       ],
       "optionImages": null,
       "richOptions": [
@@ -883,12 +884,12 @@
         },
         {
           "id": "C",
-          "text": "VK's yearly batting average is consistently higher than that of RS between the two\nworld cup years.",
+          "text": "VK's yearly batting average is consistently higher than that of RS between the two world cup years.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "VK's yearly batting average is consistently higher than that of RS between the two\nworld cup years.",
+              "content": "VK's yearly batting average is consistently higher than that of RS between the two world cup years.",
               "confidence": "VERIFIED"
             }
           ],
@@ -898,12 +899,12 @@
         },
         {
           "id": "D",
-          "text": "RS's yearly batting average is consistently higher than that of VK in the last three\nyears.",
+          "text": "RS's yearly batting average is consistently higher than that of VK in the last three years.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "RS's yearly batting average is consistently higher than that of VK in the last three\nyears.",
+              "content": "RS's yearly batting average is consistently higher than that of VK in the last three years.",
               "confidence": "VERIFIED"
             }
           ],
@@ -941,11 +942,11 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A planar rectangular paper has two V-shaped pieces attached as shown below.\nThis piece of paper is folded to make the following closed three-dimensional object.\nThe number of folds required to form the above object is",
+      "questionText": "A planar rectangular paper has two V-shaped pieces attached as shown below.\n\nThe number of folds required to form the above object is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A planar rectangular paper has two V-shaped pieces attached as shown below.\nThis piece of paper is folded to make the following closed three-dimensional object.\nThe number of folds required to form the above object is",
+          "content": "A planar rectangular paper has two V-shaped pieces attached as shown below.\n\nThe number of folds required to form the above object is",
           "confidence": "VERIFIED"
         },
         {
@@ -1058,11 +1059,11 @@
       "questionNumber": 10,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Four equilateral triangles are used to form a regular closed three-dimensional object\nby joining along the edges. The angle between any two faces is",
+      "questionText": "Four equilateral triangles are used to form a regular closed three-dimensional object by joining along the edges. The angle between any two faces is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Four equilateral triangles are used to form a regular closed three-dimensional object\nby joining along the edges. The angle between any two faces is",
+          "content": "Four equilateral triangles are used to form a regular closed three-dimensional object by joining along the edges. The angle between any two faces is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1167,11 +1168,11 @@
       "questionNumber": 11,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following options best describes the \"uncertainty\" in a\nmeasurement?",
+      "questionText": "Which of the following options best describes the \"uncertainty\" in a measurement?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following options best describes the \"uncertainty\" in a\nmeasurement?",
+          "content": "Which of the following options best describes the \"uncertainty\" in a measurement?",
           "confidence": "VERIFIED"
         }
       ],
@@ -1276,11 +1277,11 @@
       "questionNumber": 12,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "A distance was measured as 200 m \\pm 0.1 m. The relative precision of this\nmeasurement is",
+      "questionText": "A distance was measured as 200 m \\pm 0.1 m. The relative precision of this measurement is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A distance was measured as 200 m \\pm 0.1 m. The relative precision of this\nmeasurement is",
+          "content": "A distance was measured as 200 m \\pm 0.1 m. The relative precision of this measurement is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1385,11 +1386,11 @@
       "questionNumber": 13,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following options describes the CORRECT relationship for a\nGaussian distributed random error?",
+      "questionText": "Which of the following options describes the CORRECT relationship for a Gaussian distributed random error?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following options describes the CORRECT relationship for a\nGaussian distributed random error?",
+          "content": "Which of the following options describes the CORRECT relationship for a Gaussian distributed random error?",
           "confidence": "VERIFIED"
         }
       ],
@@ -1511,7 +1512,7 @@
         "population variance with the sample variance for a given degree of freedom",
         "population mean with the sample mean for a given degree of freedom",
         "population median with the sample median for a given degree of freedom",
-        "population mean and standard deviation with the sample mean and standard\ndeviation for a given degree of freedom"
+        "population mean and standard deviation with the sample mean and standard deviation for a given degree of freedom"
       ],
       "optionImages": null,
       "richOptions": [
@@ -1562,12 +1563,12 @@
         },
         {
           "id": "D",
-          "text": "population mean and standard deviation with the sample mean and standard\ndeviation for a given degree of freedom",
+          "text": "population mean and standard deviation with the sample mean and standard deviation for a given degree of freedom",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "population mean and standard deviation with the sample mean and standard\ndeviation for a given degree of freedom",
+              "content": "population mean and standard deviation with the sample mean and standard deviation for a given degree of freedom",
               "confidence": "VERIFIED"
             }
           ],
@@ -1603,11 +1604,11 @@
       "questionNumber": 15,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Water bodies appear in dark tone in Near Infrared (NIR) image, because water\n________ most of the NIR radiations incident on it.",
+      "questionText": "Water bodies appear in dark tone in Near Infrared (NIR) image, because water ________ most of the NIR radiations incident on it.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Water bodies appear in dark tone in Near Infrared (NIR) image, because water\n________ most of the NIR radiations incident on it.",
+          "content": "Water bodies appear in dark tone in Near Infrared (NIR) image, because water ________ most of the NIR radiations incident on it.",
           "confidence": "VERIFIED"
         }
       ],
@@ -1712,11 +1713,11 @@
       "questionNumber": 16,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "The approximate altitude (above earth surface) of polar sun-synchronous orbits of\nISRO's remote sensing satellites is",
+      "questionText": "The approximate altitude (above earth surface) of polar sun-synchronous orbits of ISRO's remote sensing satellites is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The approximate altitude (above earth surface) of polar sun-synchronous orbits of\nISRO's remote sensing satellites is",
+          "content": "The approximate altitude (above earth surface) of polar sun-synchronous orbits of ISRO's remote sensing satellites is",
           "confidence": "VERIFIED"
         }
       ],
@@ -2039,11 +2040,11 @@
       "questionNumber": 19,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following mathematical principles is applied for finding a\ngeographic position on Earth's surface using GPS?",
+      "questionText": "Which of the following mathematical principles is applied for finding a geographic position on Earth's surface using GPS?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following mathematical principles is applied for finding a\ngeographic position on Earth's surface using GPS?",
+          "content": "Which of the following mathematical principles is applied for finding a geographic position on Earth's surface using GPS?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2257,11 +2258,11 @@
       "questionNumber": 21,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Dilution of Precision (DOP) in GPS based survey is primarily used to assess the\nquality of",
+      "questionText": "Dilution of Precision (DOP) in GPS based survey is primarily used to assess the quality of",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Dilution of Precision (DOP) in GPS based survey is primarily used to assess the\nquality of",
+          "content": "Dilution of Precision (DOP) in GPS based survey is primarily used to assess the quality of",
           "confidence": "VERIFIED"
         }
       ],
@@ -2366,11 +2367,11 @@
       "questionNumber": 22,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "How many NAVSTAR GPS satellites in standard constellation are operational\nand provide uninterrupted service?",
+      "questionText": "How many NAVSTAR GPS satellites in standard constellation are operational and provide uninterrupted service?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "How many NAVSTAR GPS satellites in standard constellation are operational\nand provide uninterrupted service?",
+          "content": "How many NAVSTAR GPS satellites in standard constellation are operational and provide uninterrupted service?",
           "confidence": "VERIFIED"
         }
       ],
@@ -2718,7 +2719,7 @@
         "Overlaying",
         "Contrast stretching",
         "Histogram equalization",
-        "Band ratioing"
+        "B and ratioing"
       ],
       "optionImages": null,
       "richOptions": [
@@ -2769,12 +2770,12 @@
         },
         {
           "id": "D",
-          "text": "Band ratioing",
+          "text": "B and ratioing",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Band ratioing",
+              "content": "B and ratioing",
               "confidence": "VERIFIED"
             }
           ],
@@ -2810,11 +2811,11 @@
       "questionNumber": 26,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "The wavelength at which maximum energy is radiated or emitted from the forest\nfire at temperature of 700 °C is ______ µm (rounded off to one decimal place).",
+      "questionText": "The wavelength at which maximum energy is radiated or emitted from the forest fire at temperature of 700 °C is ______ µm (rounded off to one decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The wavelength at which maximum energy is radiated or emitted from the forest\nfire at temperature of 700 °C is ______ µm (rounded off to one decimal place).",
+          "content": "The wavelength at which maximum energy is radiated or emitted from the forest fire at temperature of 700 °C is ______ µm (rounded off to one decimal place).",
           "confidence": "VERIFIED"
         }
       ],
@@ -2856,11 +2857,11 @@
       "questionNumber": 27,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "The standard error of a unit weight for a set of angle observations is 10″.\nThe minimum number of observations required to reduce the standard error of the\nmean for this set of observations to 2″ is ______ (in integer).",
+      "questionText": "The standard error of a unit weight for a set of angle observations is 10″. The minimum number of observations required to reduce the standard error of the mean for this set of observations to 2″ is ______ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The standard error of a unit weight for a set of angle observations is 10″.\nThe minimum number of observations required to reduce the standard error of the\nmean for this set of observations to 2″ is ______ (in integer).",
+          "content": "The standard error of a unit weight for a set of angle observations is 10″. The minimum number of observations required to reduce the standard error of the mean for this set of observations to 2″ is ______ (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -2902,11 +2903,11 @@
       "questionNumber": 28,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "An angle is observed independently twice, and the values are as follows:\n60°30′10′′ \\pm 10′′\n60°30′20′′ \\pm 20′′\nThe most probable value (MPV) of the angle is",
+      "questionText": "An angle is observed independently twice, and the values are as follows:\n\n60°30′10′′ \\pm 10′′\n\n60°30′20′′ \\pm 20′′\n\nThe most probable value (MPV) of the angle is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "An angle is observed independently twice, and the values are as follows:\n60°30′10′′ \\pm 10′′\n60°30′20′′ \\pm 20′′\nThe most probable value (MPV) of the angle is",
+          "content": "An angle is observed independently twice, and the values are as follows:\n\n60°30′10′′ \\pm 10′′\n\n60°30′20′′ \\pm 20′′\n\nThe most probable value (MPV) of the angle is",
           "confidence": "VERIFIED"
         }
       ],
@@ -3011,11 +3012,11 @@
       "questionNumber": 29,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "In the figure, d , d , d are three independently measured distances for estimating\n1 2 3\nthe unknown distances x and y. The correlation coefficient between the unknown\nestimates approximately equals to\nd =100 m  1 cm\n1\nd =150 m  2 cm\n2\nd =175 m  3 cm\n3",
+      "questionText": "In the figure, d_{1}, d_{2}, d_{3} are three independently measured distances for estimating the unknown distances x and y. The correlation coefficient between the unknown estimates approximately equals to",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the figure, d , d , d are three independently measured distances for estimating\n1 2 3\nthe unknown distances x and y. The correlation coefficient between the unknown\nestimates approximately equals to\nd =100 m  1 cm\n1\nd =150 m  2 cm\n2\nd =175 m  3 cm\n3",
+          "content": "In the figure, d_{1}, d_{2}, d_{3} are three independently measured distances for estimating the unknown distances x and y. The correlation coefficient between the unknown estimates approximately equals to",
           "confidence": "VERIFIED"
         },
         {
@@ -3128,11 +3129,11 @@
       "questionNumber": 30,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Independent angles AOB, BOC and AOC were observed as shown in figure. The\nstandard error of all observations is same. The adjusted values of these angles\nusing the least squares adjustment are\nAOB = 300020\nBOC = 300005\nAOC = 600010",
+      "questionText": "Independent angles AOB, BOC and AOC were observed as shown in figure. The standard error of all observations is same. The adjusted values of these angles using the least squares adjustment are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Independent angles AOB, BOC and AOC were observed as shown in figure. The\nstandard error of all observations is same. The adjusted values of these angles\nusing the least squares adjustment are\nAOB = 300020\nBOC = 300005\nAOC = 600010",
+          "content": "Independent angles AOB, BOC and AOC were observed as shown in figure. The standard error of all observations is same. The adjusted values of these angles using the least squares adjustment are",
           "confidence": "VERIFIED"
         },
         {
@@ -3245,11 +3246,11 @@
       "questionNumber": 31,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "To reduce the slope distance (S) to an equivalent horizontal distance (H) as shown\nin the figure given below, the following independent observations were taken.\n𝑆 = 29.95 m \\pm 0.01 m; 𝜃 = 430′ \\pm 10'\nThe required precision of computed horizontal distance is \\pm 0.005 m. Assume a\n\"balanced accuracy\" where the contribution to precision of the horizontal distance\ncomes equally from the slope distance and angle measurements. The minimum\nnumber of angle observations to achieve the desired precision is\n(Given 1 radian = 206265 seconds)",
+      "questionText": "To reduce the slope distance (S) to an equivalent horizontal distance (H) as shown in the figure given below, the following independent observations were taken. 𝑆= 29.95 m \\pm 0.01 m; 𝜃= 430′ \\pm 10'\n\nThe required precision of computed horizontal distance is \\pm 0.005 m. Assume a \"balanced accuracy\" where the contribution to precision of the horizontal distance comes equally from the slope distance and angle measurements. The minimum number of angle observations to achieve the desired precision is\n\n(Given 1 radian = 206265 seconds)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "To reduce the slope distance (S) to an equivalent horizontal distance (H) as shown\nin the figure given below, the following independent observations were taken.\n𝑆 = 29.95 m \\pm 0.01 m; 𝜃 = 430′ \\pm 10'\nThe required precision of computed horizontal distance is \\pm 0.005 m. Assume a\n\"balanced accuracy\" where the contribution to precision of the horizontal distance\ncomes equally from the slope distance and angle measurements. The minimum\nnumber of angle observations to achieve the desired precision is\n(Given 1 radian = 206265 seconds)",
+          "content": "To reduce the slope distance (S) to an equivalent horizontal distance (H) as shown in the figure given below, the following independent observations were taken. 𝑆= 29.95 m \\pm 0.01 m; 𝜃= 430′ \\pm 10'\n\nThe required precision of computed horizontal distance is \\pm 0.005 m. Assume a \"balanced accuracy\" where the contribution to precision of the horizontal distance comes equally from the slope distance and angle measurements. The minimum number of angle observations to achieve the desired precision is\n\n(Given 1 radian = 206265 seconds)",
           "confidence": "VERIFIED"
         },
         {
@@ -3362,22 +3363,53 @@
       "questionNumber": 32,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Find the best match between remote sensing sensors (Column A) with their\ncharacteristics (Column B)\nColumn A Column B\n(P) IRS LISS-III (1) 36 bands\n(Q) Landsat TM (2) along track scanner\n(R) MODIS (3) across track scanner\n(S) Hyperion (4) 18 bands\n(5) 242 bands",
+      "questionText": "Find the best match between remote sensing sensors (Column A) with their characteristics (Column B)\n\n| Column A | Column B |\n| :--- | :--- |\n| (P) IRS LISS-III | (1) 36 bands |\n| (Q) Landsat TM | (2) along track scanner |\n| (R) MODIS | (3) across track scanner |\n| (S) Hyperion | (4) 18 bands |\n| (5) | 242 bands |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Find the best match between remote sensing sensors (Column A) with their\ncharacteristics (Column B)\nColumn A Column B\n(P) IRS LISS-III (1) 36 bands\n(Q) Landsat TM (2) along track scanner\n(R) MODIS (3) across track scanner\n(S) Hyperion (4) 18 bands\n(5) 242 bands",
+          "content": "Find the best match between remote sensing sensors (Column A) with their characteristics (Column B)",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column A",
+            "Column B"
+          ],
+          "rows": [
+            [
+              "(P) IRS LISS-III",
+              "(1) 36 bands"
+            ],
+            [
+              "(Q) Landsat TM",
+              "(2) along track scanner"
+            ],
+            [
+              "(R) MODIS",
+              "(3) across track scanner"
+            ],
+            [
+              "(S) Hyperion",
+              "(4) 18 bands"
+            ],
+            [
+              "(5)",
+              "242 bands"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
         "P-1, Q-5, R-2, S-3",
-        "P-3, Q-2 , R-4, S-1",
+        "P-3, Q-2, R-4, S-1",
         "P-2, Q-3, R-1, S-5",
         "P-1, Q-3, R-4, S-5"
       ],
@@ -3400,12 +3432,12 @@
         },
         {
           "id": "B",
-          "text": "P-3, Q-2 , R-4, S-1",
+          "text": "P-3, Q-2, R-4, S-1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "P-3, Q-2 , R-4, S-1",
+              "content": "P-3, Q-2, R-4, S-1",
               "confidence": "VERIFIED"
             }
           ],
@@ -3471,15 +3503,46 @@
       "questionNumber": 33,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Find the best match between Column A and Column B\nColumn A Column B\n(P) Radiant flux (1) Dimensionless\n(Q) Radiant energy (2) Watts\n(R) Radiant Exitance (3) Joules\n(S) Reflectance (4) Watts m-2\n(5) Watts m-2 s-1",
+      "questionText": "Find the best match between Column A and Column B\n\n| Column A | Column B |\n| :--- | :--- |\n| (P) Radiant flux | (1) Dimensionless |\n| (Q) Radiant energy | (2) Watts |\n| (R) Radiant Exitance | (3) Joules |\n| (S) Reflectance | (4) Watts m-2 |\n| (5) | Watts m-2 s-1 |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Find the best match between Column A and Column B\nColumn A Column B\n(P) Radiant flux (1) Dimensionless\n(Q) Radiant energy (2) Watts\n(R) Radiant Exitance (3) Joules\n(S) Reflectance (4) Watts m-2\n(5) Watts m-2 s-1",
+          "content": "Find the best match between Column A and Column B",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Column A",
+            "Column B"
+          ],
+          "rows": [
+            [
+              "(P) Radiant flux",
+              "(1) Dimensionless"
+            ],
+            [
+              "(Q) Radiant energy",
+              "(2) Watts"
+            ],
+            [
+              "(R) Radiant Exitance",
+              "(3) Joules"
+            ],
+            [
+              "(S) Reflectance",
+              "(4) Watts m-2"
+            ],
+            [
+              "(5)",
+              "Watts m-2 s-1"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3580,11 +3643,11 @@
       "questionNumber": 34,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following factors is/are responsible for ionospheric delay in GNSS\nobservations?",
+      "questionText": "Which of the following factors is/are responsible for ionospheric delay in GNSS observations?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following factors is/are responsible for ionospheric delay in GNSS\nobservations?",
+          "content": "Which of the following factors is/are responsible for ionospheric delay in GNSS observations?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3695,11 +3758,11 @@
       "questionNumber": 35,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following statements is/are CORRECT in the context of GPS data\ncollection methods?",
+      "questionText": "Which of the following statements is/are CORRECT in the context of GPS data collection methods?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statements is/are CORRECT in the context of GPS data\ncollection methods?",
+          "content": "Which of the following statements is/are CORRECT in the context of GPS data collection methods?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3709,21 +3772,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "CORS (Continuously Operating Reference Station) can be used as a reference\n(base) GPS receiver",
-        "Reference (base) receiver should record the observations for longer period as\ncompared to remote (rover) GPS receiver for applying corrections",
-        "Remote (rover) GPS receiver must always be placed on a known location for\napplying the corrections of reference (base) GPS receiver",
-        "Reference (base) and remote (rover) GPS receivers must be placed on top of each\nother for applying corrections"
+        "CORS (Continuously Operating Reference Station) can be used as a reference (base) GPS receiver",
+        "Reference (base) receiver should record the observations for longer period as compared to remote (rover) GPS receiver for applying corrections",
+        "Remote (rover) GPS receiver must always be placed on a known location for applying the corrections of reference (base) GPS receiver",
+        "Reference (base) and remote (rover) GPS receivers must be placed on top of each other for applying corrections"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "CORS (Continuously Operating Reference Station) can be used as a reference\n(base) GPS receiver",
+          "text": "CORS (Continuously Operating Reference Station) can be used as a reference (base) GPS receiver",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CORS (Continuously Operating Reference Station) can be used as a reference\n(base) GPS receiver",
+              "content": "CORS (Continuously Operating Reference Station) can be used as a reference (base) GPS receiver",
               "confidence": "VERIFIED"
             }
           ],
@@ -3733,12 +3796,12 @@
         },
         {
           "id": "B",
-          "text": "Reference (base) receiver should record the observations for longer period as\ncompared to remote (rover) GPS receiver for applying corrections",
+          "text": "Reference (base) receiver should record the observations for longer period as compared to remote (rover) GPS receiver for applying corrections",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Reference (base) receiver should record the observations for longer period as\ncompared to remote (rover) GPS receiver for applying corrections",
+              "content": "Reference (base) receiver should record the observations for longer period as compared to remote (rover) GPS receiver for applying corrections",
               "confidence": "VERIFIED"
             }
           ],
@@ -3748,12 +3811,12 @@
         },
         {
           "id": "C",
-          "text": "Remote (rover) GPS receiver must always be placed on a known location for\napplying the corrections of reference (base) GPS receiver",
+          "text": "Remote (rover) GPS receiver must always be placed on a known location for applying the corrections of reference (base) GPS receiver",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Remote (rover) GPS receiver must always be placed on a known location for\napplying the corrections of reference (base) GPS receiver",
+              "content": "Remote (rover) GPS receiver must always be placed on a known location for applying the corrections of reference (base) GPS receiver",
               "confidence": "VERIFIED"
             }
           ],
@@ -3763,12 +3826,12 @@
         },
         {
           "id": "D",
-          "text": "Reference (base) and remote (rover) GPS receivers must be placed on top of each\nother for applying corrections",
+          "text": "Reference (base) and remote (rover) GPS receivers must be placed on top of each other for applying corrections",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Reference (base) and remote (rover) GPS receivers must be placed on top of each\nother for applying corrections",
+              "content": "Reference (base) and remote (rover) GPS receivers must be placed on top of each other for applying corrections",
               "confidence": "VERIFIED"
             }
           ],
@@ -4044,11 +4107,11 @@
       "questionNumber": 38,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "In GIS, buffer is a zone with a specified width surrounding a spatial feature. Which\nof the following statements regarding buffer is/are CORRECT?",
+      "questionText": "In GIS, buffer is a zone with a specified width surrounding a spatial feature. Which of the following statements regarding buffer is/are CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In GIS, buffer is a zone with a specified width surrounding a spatial feature. Which\nof the following statements regarding buffer is/are CORRECT?",
+          "content": "In GIS, buffer is a zone with a specified width surrounding a spatial feature. Which of the following statements regarding buffer is/are CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4058,21 +4121,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "For a point feature, buffer is an ellipse with minor and major axes as buffer\ndistances",
-        "For a line feature, buffer is a band with a specified distance created around the line\nconforming to the line's curve",
+        "For a point feature, buffer is an ellipse with minor and major axes as buffer distances",
+        "For a line feature, buffer is a b and with a specified distance created around the line conforming to the line's curve",
         "Buffer zones are polylines",
-        "For a polygon feature, buffer is a belt of a specified distance from the edge of the\npolygon and conforming to its shape"
+        "For a polygon feature, buffer is a belt of a specified distance from the edge of the polygon and conforming to its shape"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "For a point feature, buffer is an ellipse with minor and major axes as buffer\ndistances",
+          "text": "For a point feature, buffer is an ellipse with minor and major axes as buffer distances",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For a point feature, buffer is an ellipse with minor and major axes as buffer\ndistances",
+              "content": "For a point feature, buffer is an ellipse with minor and major axes as buffer distances",
               "confidence": "VERIFIED"
             }
           ],
@@ -4082,12 +4145,12 @@
         },
         {
           "id": "B",
-          "text": "For a line feature, buffer is a band with a specified distance created around the line\nconforming to the line's curve",
+          "text": "For a line feature, buffer is a b and with a specified distance created around the line conforming to the line's curve",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For a line feature, buffer is a band with a specified distance created around the line\nconforming to the line's curve",
+              "content": "For a line feature, buffer is a b and with a specified distance created around the line conforming to the line's curve",
               "confidence": "VERIFIED"
             }
           ],
@@ -4112,12 +4175,12 @@
         },
         {
           "id": "D",
-          "text": "For a polygon feature, buffer is a belt of a specified distance from the edge of the\npolygon and conforming to its shape",
+          "text": "For a polygon feature, buffer is a belt of a specified distance from the edge of the polygon and conforming to its shape",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For a polygon feature, buffer is a belt of a specified distance from the edge of the\npolygon and conforming to its shape",
+              "content": "For a polygon feature, buffer is a belt of a specified distance from the edge of the polygon and conforming to its shape",
               "confidence": "VERIFIED"
             }
           ],
@@ -4159,11 +4222,11 @@
       "questionNumber": 39,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following statements about the Triangulated Irregular Network\n(TIN) model is/are INCORRECT?",
+      "questionText": "Which of the following statements about the Triangulated Irregular Network (TIN) model is/are INCORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statements about the Triangulated Irregular Network\n(TIN) model is/are INCORRECT?",
+          "content": "Which of the following statements about the Triangulated Irregular Network (TIN) model is/are INCORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4288,7 +4351,7 @@
       "options": [
         "CLIP erases a part of one of the input layers.",
         "SPLIT overlays polygons and keeps all areas in both layers.",
-        "INTERSECT overlays polygons and keeps only the common portions of both\nlayers.",
+        "INTERSECT overlays polygons and keeps only the common portions of both layers.",
         "UNION overlays polygons and keeps all areas in both layers."
       ],
       "optionImages": null,
@@ -4325,12 +4388,12 @@
         },
         {
           "id": "C",
-          "text": "INTERSECT overlays polygons and keeps only the common portions of both\nlayers.",
+          "text": "INTERSECT overlays polygons and keeps only the common portions of both layers.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "INTERSECT overlays polygons and keeps only the common portions of both\nlayers.",
+              "content": "INTERSECT overlays polygons and keeps only the common portions of both layers.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4385,11 +4448,11 @@
       "questionNumber": 41,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following is/are method(s) used for compact storage of raster GIS\ndata?",
+      "questionText": "Which of the following is/are method(s) used for compact storage of raster GIS data?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following is/are method(s) used for compact storage of raster GIS\ndata?",
+          "content": "Which of the following is/are method(s) used for compact storage of raster GIS data?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4516,21 +4579,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on the same day.",
-        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on successive days.",
-        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on the same day.",
-        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on successive days."
+        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on the same day.",
+        "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on successive days.",
+        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on the same day.",
+        "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on successive days."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on the same day.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+              "content": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on the same day.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4540,12 +4603,12 @@
         },
         {
           "id": "B",
-          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+          "text": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on successive days.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+              "content": "CARTOSAT-1 satellite can acquire across-track stereoscopic pairs of images of a geographical region on successive days.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4555,12 +4618,12 @@
         },
         {
           "id": "C",
-          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on the same day.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on the same day.",
+              "content": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on the same day.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4570,12 +4633,12 @@
         },
         {
           "id": "D",
-          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+          "text": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on successive days.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a\ngeographical region on successive days.",
+              "content": "CARTOSAT-1 satellite can acquire along-track stereoscopic pairs of images of a geographical region on successive days.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4615,11 +4678,11 @@
       "questionNumber": 43,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following statements is/are CORRECT for satellite image\ninterpretation?",
+      "questionText": "Which of the following statements is/are CORRECT for satellite image interpretation?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statements is/are CORRECT for satellite image\ninterpretation?",
+          "content": "Which of the following statements is/are CORRECT for satellite image interpretation?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4629,21 +4692,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "SWIR band is sensitive to moisture in soil and vegetation",
-        "Blue band is not useful to discriminate between water and snow",
-        "NIR band is useful to discriminate between land and water",
-        "Green band is useful to discriminate between cloud and snow"
+        "SWIR b and is sensitive to moisture in soil and vegetation",
+        "Blue b and is not useful to discriminate between water and snow",
+        "NIR b and is useful to discriminate between l and and water",
+        "Green b and is useful to discriminate between cloud and snow"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "SWIR band is sensitive to moisture in soil and vegetation",
+          "text": "SWIR b and is sensitive to moisture in soil and vegetation",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "SWIR band is sensitive to moisture in soil and vegetation",
+              "content": "SWIR b and is sensitive to moisture in soil and vegetation",
               "confidence": "VERIFIED"
             }
           ],
@@ -4653,12 +4716,12 @@
         },
         {
           "id": "B",
-          "text": "Blue band is not useful to discriminate between water and snow",
+          "text": "Blue b and is not useful to discriminate between water and snow",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Blue band is not useful to discriminate between water and snow",
+              "content": "Blue b and is not useful to discriminate between water and snow",
               "confidence": "VERIFIED"
             }
           ],
@@ -4668,12 +4731,12 @@
         },
         {
           "id": "C",
-          "text": "NIR band is useful to discriminate between land and water",
+          "text": "NIR b and is useful to discriminate between l and and water",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "NIR band is useful to discriminate between land and water",
+              "content": "NIR b and is useful to discriminate between l and and water",
               "confidence": "VERIFIED"
             }
           ],
@@ -4683,12 +4746,12 @@
         },
         {
           "id": "D",
-          "text": "Green band is useful to discriminate between cloud and snow",
+          "text": "Green b and is useful to discriminate between cloud and snow",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Green band is useful to discriminate between cloud and snow",
+              "content": "Green b and is useful to discriminate between cloud and snow",
               "confidence": "VERIFIED"
             }
           ],
@@ -4730,11 +4793,11 @@
       "questionNumber": 44,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following CANNOT be used as visual interpretation key(s) for\nsatellite images?",
+      "questionText": "Which of the following CANNOT be used as visual interpretation key(s) for satellite images?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following CANNOT be used as visual interpretation key(s) for\nsatellite images?",
+          "content": "Which of the following CANNOT be used as visual interpretation key(s) for satellite images?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4843,11 +4906,11 @@
       "questionNumber": 45,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Which of the following parts of the electromagnetic spectrum is/are used in\nsatellite remote sensing for earth observation?",
+      "questionText": "Which of the following parts of the electromagnetic spectrum is/are used in satellite remote sensing for earth observation?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following parts of the electromagnetic spectrum is/are used in\nsatellite remote sensing for earth observation?",
+          "content": "Which of the following parts of the electromagnetic spectrum is/are used in satellite remote sensing for earth observation?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4958,11 +5021,11 @@
       "questionNumber": 46,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "Using the following data, the spatial resolution of a push-broom sensor\nis ______ m (in integer).\nData:\nOrbital altitude (above earth surface) = 1000 km\nNumber of spectral bands = 5\nNumber of detectors/CCDs (charged coupled devices) in a row = 4000\nGround swath = 20 km",
+      "questionText": "Using the following data, the spatial resolution of a push-broom sensor is ______ m (in integer).\n\n<u>Data:</u>\n\nOrbital altitude (above earth surface) = 1000 km\n\nNumber of spectral bands = 5\n\nNumber of detectors/CCDs (charged coupled devices) in a row = 4000\n\nGround swath = 20 km",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Using the following data, the spatial resolution of a push-broom sensor\nis ______ m (in integer).\nData:\nOrbital altitude (above earth surface) = 1000 km\nNumber of spectral bands = 5\nNumber of detectors/CCDs (charged coupled devices) in a row = 4000\nGround swath = 20 km",
+          "content": "Using the following data, the spatial resolution of a push-broom sensor is ______ m (in integer).\n\n<u>Data:</u>\n\nOrbital altitude (above earth surface) = 1000 km\n\nNumber of spectral bands = 5\n\nNumber of detectors/CCDs (charged coupled devices) in a row = 4000\n\nGround swath = 20 km",
           "confidence": "VERIFIED"
         }
       ],
@@ -5004,11 +5067,11 @@
       "questionNumber": 47,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "If the plotting accuracy of a map is 0.25 mm and the scale of the same map is\n1:100000, what will be the minimum ground distance that can be plotted on the\nmap?",
+      "questionText": "If the plotting accuracy of a map is 0.25 mm and the scale of the same map is 1:100000, what will be the minimum ground distance that can be plotted on the map?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If the plotting accuracy of a map is 0.25 mm and the scale of the same map is\n1:100000, what will be the minimum ground distance that can be plotted on the\nmap?",
+          "content": "If the plotting accuracy of a map is 0.25 mm and the scale of the same map is 1:100000, what will be the minimum ground distance that can be plotted on the map?",
           "confidence": "VERIFIED"
         }
       ],
@@ -5113,11 +5176,11 @@
       "questionNumber": 48,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "𝐷\nThe Survey of India toposheet number 43 covers ground area of\n6",
+      "questionText": "The Survey of India toposheet number 43 \\(\\frac{𝐷}{6}\\) covers ground area of",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝐷\nThe Survey of India toposheet number 43 covers ground area of\n6",
+          "content": "The Survey of India toposheet number 43 \\(\\frac{𝐷}{6}\\) covers ground area of",
           "confidence": "VERIFIED"
         }
       ],
@@ -5440,11 +5503,11 @@
       "questionNumber": 51,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "At a fixed instrument location in levelling, if the backsight reading at a point P is\nmore than the foresight reading at a point Q, then",
+      "questionText": "At a fixed instrument location in levelling, if the backsight reading at a point P is more than the foresight reading at a point Q, then",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "At a fixed instrument location in levelling, if the backsight reading at a point P is\nmore than the foresight reading at a point Q, then",
+          "content": "At a fixed instrument location in levelling, if the backsight reading at a point P is more than the foresight reading at a point Q, then",
           "confidence": "VERIFIED"
         }
       ],
@@ -5782,9 +5845,9 @@
       "questionType": "MCQ",
       "options": [
         "intersection of the optical axis of the aerial camera with the plane of the photograph",
-        "the point of aerial photograph where a plumb line dropped from exposure station\npierces the photograph",
+        "the point of aerial photograph where a plumb line dropped from exposure station pierces the photograph",
         "angle of tilt of the photograph",
-        "the point on the photograph where the bisector of the angle of tilt meets the\nphotograph"
+        "the point on the photograph where the bisector of the angle of tilt meets the photograph"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5805,12 +5868,12 @@
         },
         {
           "id": "B",
-          "text": "the point of aerial photograph where a plumb line dropped from exposure station\npierces the photograph",
+          "text": "the point of aerial photograph where a plumb line dropped from exposure station pierces the photograph",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "the point of aerial photograph where a plumb line dropped from exposure station\npierces the photograph",
+              "content": "the point of aerial photograph where a plumb line dropped from exposure station pierces the photograph",
               "confidence": "VERIFIED"
             }
           ],
@@ -5835,12 +5898,12 @@
         },
         {
           "id": "D",
-          "text": "the point on the photograph where the bisector of the angle of tilt meets the\nphotograph",
+          "text": "the point on the photograph where the bisector of the angle of tilt meets the photograph",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "the point on the photograph where the bisector of the angle of tilt meets the\nphotograph",
+              "content": "the point on the photograph where the bisector of the angle of tilt meets the photograph",
               "confidence": "VERIFIED"
             }
           ],
@@ -5876,11 +5939,11 @@
       "questionNumber": 55,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "The magnetic bearing of a line in the year 1990 was found to be N 40°30′ W and\nmagnetic declination was 3°30′ E. If the present magnetic declination is 2°10′ W,\nthe magnetic bearing now (in reduced bearing system) would be",
+      "questionText": "The magnetic bearing of a line in the year 1990 was found to be N 40°30′ W and magnetic declination was 3°30′ E. If the present magnetic declination is 2°10′ W, the magnetic bearing now (in reduced bearing system) would be",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The magnetic bearing of a line in the year 1990 was found to be N 40°30′ W and\nmagnetic declination was 3°30′ E. If the present magnetic declination is 2°10′ W,\nthe magnetic bearing now (in reduced bearing system) would be",
+          "content": "The magnetic bearing of a line in the year 1990 was found to be N 40°30′ W and magnetic declination was 3°30′ E. If the present magnetic declination is 2°10′ W, the magnetic bearing now (in reduced bearing system) would be",
           "confidence": "VERIFIED"
         }
       ],
@@ -5985,11 +6048,11 @@
       "questionNumber": 56,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "Map (A) represents all the roads, street lights, trees and buildings of a campus of\n5 km2. Another map (B) represents the forest and agricultural area of a district of\n10000 km2. Considering the physical size of both the maps (A) & (B) same, which\nof the following statements is/are CORRECT?",
+      "questionText": "Map (A) represents all the roads, street lights, trees and buildings of a campus of 5 km^{2}. Another map (B) represents the forest and agricultural area of a district of 10000 km^{2}. Considering the physical size of both the maps (A) & (B) same, which of the following statements is/are CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Map (A) represents all the roads, street lights, trees and buildings of a campus of\n5 km2. Another map (B) represents the forest and agricultural area of a district of\n10000 km2. Considering the physical size of both the maps (A) & (B) same, which\nof the following statements is/are CORRECT?",
+          "content": "Map (A) represents all the roads, street lights, trees and buildings of a campus of 5 km^{2}. Another map (B) represents the forest and agricultural area of a district of 10000 km^{2}. Considering the physical size of both the maps (A) & (B) same, which of the following statements is/are CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -6114,21 +6177,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly\nareas",
-        "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain\nareas",
-        "In triangulation, the angles are measured with greater accuracy, while in\ntrilateration, sides are measured with greater accuracy",
-        "In trilateration, the angles are measured with greater accuracy, while in\ntriangulation, sides of triangles are measured with greater accuracy"
+        "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly areas",
+        "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain areas",
+        "In triangulation, the angles are measured with greater accuracy, while in trilateration, sides are measured with greater accuracy",
+        "In trilateration, the angles are measured with greater accuracy, while in triangulation, sides of triangles are measured with greater accuracy"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly\nareas",
+          "text": "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly areas",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly\nareas",
+              "content": "Triangulation is preferred in plain areas, whereas trilateration is preferred in hilly areas",
               "confidence": "VERIFIED"
             }
           ],
@@ -6138,12 +6201,12 @@
         },
         {
           "id": "B",
-          "text": "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain\nareas",
+          "text": "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain areas",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain\nareas",
+              "content": "Triangulation is preferred in hilly areas, whereas trilateration is preferred in plain areas",
               "confidence": "VERIFIED"
             }
           ],
@@ -6153,12 +6216,12 @@
         },
         {
           "id": "C",
-          "text": "In triangulation, the angles are measured with greater accuracy, while in\ntrilateration, sides are measured with greater accuracy",
+          "text": "In triangulation, the angles are measured with greater accuracy, while in trilateration, sides are measured with greater accuracy",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In triangulation, the angles are measured with greater accuracy, while in\ntrilateration, sides are measured with greater accuracy",
+              "content": "In triangulation, the angles are measured with greater accuracy, while in trilateration, sides are measured with greater accuracy",
               "confidence": "VERIFIED"
             }
           ],
@@ -6168,12 +6231,12 @@
         },
         {
           "id": "D",
-          "text": "In trilateration, the angles are measured with greater accuracy, while in\ntriangulation, sides of triangles are measured with greater accuracy",
+          "text": "In trilateration, the angles are measured with greater accuracy, while in triangulation, sides of triangles are measured with greater accuracy",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In trilateration, the angles are measured with greater accuracy, while in\ntriangulation, sides of triangles are measured with greater accuracy",
+              "content": "In trilateration, the angles are measured with greater accuracy, while in triangulation, sides of triangles are measured with greater accuracy",
               "confidence": "VERIFIED"
             }
           ],
@@ -6229,21 +6292,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Bowditch rule in traverse adjustment is particularly useful, where angular and linear\nmeasurements are equally precise",
-        "Transit rule in traverse adjustment is particularly useful, where angular\nmeasurements are more precise than linear measurements",
-        "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes\nor departures of the traverse",
+        "Bowditch rule in traverse adjustment is particularly useful, where angular and linear measurements are equally precise",
+        "Transit rule in traverse adjustment is particularly useful, where angular measurements are more precise than linear measurements",
+        "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes or departures of the traverse",
         "In Transit rule, the traverse adjustment is done using perimeter of the traverse"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Bowditch rule in traverse adjustment is particularly useful, where angular and linear\nmeasurements are equally precise",
+          "text": "Bowditch rule in traverse adjustment is particularly useful, where angular and linear measurements are equally precise",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Bowditch rule in traverse adjustment is particularly useful, where angular and linear\nmeasurements are equally precise",
+              "content": "Bowditch rule in traverse adjustment is particularly useful, where angular and linear measurements are equally precise",
               "confidence": "VERIFIED"
             }
           ],
@@ -6253,12 +6316,12 @@
         },
         {
           "id": "B",
-          "text": "Transit rule in traverse adjustment is particularly useful, where angular\nmeasurements are more precise than linear measurements",
+          "text": "Transit rule in traverse adjustment is particularly useful, where angular measurements are more precise than linear measurements",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Transit rule in traverse adjustment is particularly useful, where angular\nmeasurements are more precise than linear measurements",
+              "content": "Transit rule in traverse adjustment is particularly useful, where angular measurements are more precise than linear measurements",
               "confidence": "VERIFIED"
             }
           ],
@@ -6268,12 +6331,12 @@
         },
         {
           "id": "C",
-          "text": "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes\nor departures of the traverse",
+          "text": "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes or departures of the traverse",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes\nor departures of the traverse",
+              "content": "In Bowditch rule, the traverse adjustment is done using arithmetic sum of latitudes or departures of the traverse",
               "confidence": "VERIFIED"
             }
           ],
@@ -6330,11 +6393,11 @@
       "questionNumber": 59,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "Consider a point A on the surface of Earth, its elevation with respect to EGM2008\n(geoid) is 95.5 m. The geoidal undulation at point A is 4.5 m. The orthometric height\nof point A is ______ m (rounded off to one decimal place).",
+      "questionText": "Consider a point A on the surface of Earth, its elevation with respect to EGM2008 (geoid) is 95.5 m. The geoidal undulation at point A is 4.5 m. The orthometric height of point A is ______ m (rounded off to one decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider a point A on the surface of Earth, its elevation with respect to EGM2008\n(geoid) is 95.5 m. The geoidal undulation at point A is 4.5 m. The orthometric height\nof point A is ______ m (rounded off to one decimal place).",
+          "content": "Consider a point A on the surface of Earth, its elevation with respect to EGM2008 (geoid) is 95.5 m. The geoidal undulation at point A is 4.5 m. The orthometric height of point A is ______ m (rounded off to one decimal place).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6376,11 +6439,11 @@
       "questionNumber": 60,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "If the longitudinal overlap in aerial photographs is kept as 65%, the common overlap\n(superlap) between three successive photographs is ________ % (in integer).",
+      "questionText": "If the longitudinal overlap in aerial photographs is kept as 65%, the common overlap (superlap) between three successive photographs is ________ % (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If the longitudinal overlap in aerial photographs is kept as 65%, the common overlap\n(superlap) between three successive photographs is ________ % (in integer).",
+          "content": "If the longitudinal overlap in aerial photographs is kept as 65%, the common overlap (superlap) between three successive photographs is ________ % (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6422,11 +6485,11 @@
       "questionNumber": 61,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "The Representative Fraction (RF) of the graphical scale given below is 1/X, where\nX is ______ (in integer).",
+      "questionText": "The Representative Fraction (RF) of the graphical scale given below is 1/X, where X is ______ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The Representative Fraction (RF) of the graphical scale given below is 1/X, where\nX is ______ (in integer).",
+          "content": "The Representative Fraction (RF) of the graphical scale given below is 1/X, where X is ______ (in integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -6476,11 +6539,11 @@
       "questionNumber": 62,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "The combined correction for curvature of Earth and refraction in levelling for a\ndistance of 6 km would be ______ m (rounded off to two decimal places).\nAssume the radius of earth is 6370 km.",
+      "questionText": "The combined correction for curvature of Earth and refraction in levelling for a distance of 6 km would be ______ m (rounded off to two decimal places).\n\nAssume the radius of earth is 6370 km.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The combined correction for curvature of Earth and refraction in levelling for a\ndistance of 6 km would be ______ m (rounded off to two decimal places).\nAssume the radius of earth is 6370 km.",
+          "content": "The combined correction for curvature of Earth and refraction in levelling for a distance of 6 km would be ______ m (rounded off to two decimal places).\n\nAssume the radius of earth is 6370 km.",
           "confidence": "VERIFIED"
         }
       ],
@@ -6531,11 +6594,11 @@
       "questionNumber": 63,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "In tangential method of tacheometry, two vanes in a staff were fixed at a distance\nof 1.0 m with the bottom vane fixed at 1.0 m. The levelling staff was held vertical\nat a point P and the vertical angles of the vanes observed were 5°30′ and 3°15′,\nrespectively. The vertical distance between the instrument axis and the bottom vane\nwould be _____ m (rounded off to two decimal places).",
+      "questionText": "In tangential method of tacheometry, two vanes in a staff were fixed at a distance of 1.0 m with the bottom vane fixed at 1.0 m. The levelling staff was held vertical at a point P and the vertical angles of the vanes observed were 5°30′ and 3°15′, respectively. The vertical distance between the instrument axis and the bottom vane would be _____ m (rounded off to two decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In tangential method of tacheometry, two vanes in a staff were fixed at a distance\nof 1.0 m with the bottom vane fixed at 1.0 m. The levelling staff was held vertical\nat a point P and the vertical angles of the vanes observed were 5°30′ and 3°15′,\nrespectively. The vertical distance between the instrument axis and the bottom vane\nwould be _____ m (rounded off to two decimal places).",
+          "content": "In tangential method of tacheometry, two vanes in a staff were fixed at a distance of 1.0 m with the bottom vane fixed at 1.0 m. The levelling staff was held vertical at a point P and the vertical angles of the vanes observed were 5°30′ and 3°15′, respectively. The vertical distance between the instrument axis and the bottom vane would be _____ m (rounded off to two decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6577,11 +6640,11 @@
       "questionNumber": 64,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "A line measures 15 cm on an aerial photograph, while it measures 5 cm on a map\nat 1:24000 scale. The photograph was taken using a camera lens of 20 cm focal\nlength. Average elevation of terrain is 240 m above mean sea level. The flying\nheight of the aircraft above mean sea level is______ m (in integer).",
+      "questionText": "A line measures 15 cm on an aerial photograph, while it measures 5 cm on a map at 1:24000 scale. The photograph was taken using a camera lens of 20 cm focal length. Average elevation of terrain is 240 m above mean sea level. The flying height of the aircraft above mean sea level is______ m (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A line measures 15 cm on an aerial photograph, while it measures 5 cm on a map\nat 1:24000 scale. The photograph was taken using a camera lens of 20 cm focal\nlength. Average elevation of terrain is 240 m above mean sea level. The flying\nheight of the aircraft above mean sea level is______ m (in integer).",
+          "content": "A line measures 15 cm on an aerial photograph, while it measures 5 cm on a map at 1:24000 scale. The photograph was taken using a camera lens of 20 cm focal length. Average elevation of terrain is 240 m above mean sea level. The flying height of the aircraft above mean sea level is______ m (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6623,11 +6686,11 @@
       "questionNumber": 65,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "A high tower appeared on an aerial photograph taken at 1000 m above mean sea\nlevel with a camera lens of 15 cm focal length. The radial distances of the top and\nbottom images of the tower from principal point of photograph are 92.6 mm and\n78.3 mm, respectively. If the average elevation of terrain is 300 m above mean sea\nlevel, then the height of the tower above ground is ______ m (rounded off to the\nnearest integer).",
+      "questionText": "A high tower appeared on an aerial photograph taken at 1000 m above mean sea level with a camera lens of 15 cm focal length. The radial distances of the top and bottom images of the tower from principal point of photograph are 92.6 mm and 3 mm, respectively. If the average elevation of terrain is 300 m above mean sea level, then the height of the tower above ground is ______ m (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A high tower appeared on an aerial photograph taken at 1000 m above mean sea\nlevel with a camera lens of 15 cm focal length. The radial distances of the top and\nbottom images of the tower from principal point of photograph are 92.6 mm and\n78.3 mm, respectively. If the average elevation of terrain is 300 m above mean sea\nlevel, then the height of the tower above ground is ______ m (rounded off to the\nnearest integer).",
+          "content": "A high tower appeared on an aerial photograph taken at 1000 m above mean sea level with a camera lens of 15 cm focal length. The radial distances of the top and bottom images of the tower from principal point of photograph are 92.6 mm and 3 mm, respectively. If the average elevation of terrain is 300 m above mean sea level, then the height of the tower above ground is ______ m (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6669,11 +6732,11 @@
       "questionNumber": 66,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "A four-band multispectral image of size 64 \\times 64 pixels has 560 header bytes. The\nper pixel depth of the image is 2 bytes. The total number of bytes required to store\nthis image on the disk in the Band Interleaved by Line (BIL) format will be",
+      "questionText": "per pixel depth of the image is 2 bytes. The total number of bytes required to store this image on the disk in the B and Interleaved by Line (BIL) format will be",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A four-band multispectral image of size 64 \\times 64 pixels has 560 header bytes. The\nper pixel depth of the image is 2 bytes. The total number of bytes required to store\nthis image on the disk in the Band Interleaved by Line (BIL) format will be",
+          "content": "per pixel depth of the image is 2 bytes. The total number of bytes required to store this image on the disk in the B and Interleaved by Line (BIL) format will be",
           "confidence": "VERIFIED"
         }
       ],
@@ -6778,11 +6841,11 @@
       "questionNumber": 67,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "1\nA one-dimensional normalized kernel 1 2 1 is convolved with an image to\n4\nproduce an intermediate result. The intermediate image of this operation is again\nconvolved with the same kernel to produce a final result. The equivalent kernel to\nachieve the same final result in one step from the original image is given as",
+      "questionText": "A one-dimensional normalized kernel \\(\\frac{1}{4}\\) 2 1  is convolved with an image to produce an intermediate result. The intermediate image of this operation is again convolved with the same kernel to produce a final result. The equivalent kernel to achieve the same final result in one step from the original image is given as",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "1\nA one-dimensional normalized kernel 1 2 1 is convolved with an image to\n4\nproduce an intermediate result. The intermediate image of this operation is again\nconvolved with the same kernel to produce a final result. The equivalent kernel to\nachieve the same final result in one step from the original image is given as",
+          "content": "A one-dimensional normalized kernel \\(\\frac{1}{4}\\) 2 1  is convolved with an image to produce an intermediate result. The intermediate image of this operation is again convolved with the same kernel to produce a final result. The equivalent kernel to achieve the same final result in one step from the original image is given as",
           "confidence": "VERIFIED"
         }
       ],
@@ -6792,21 +6855,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n1 4 6 4 1\n16",
-        "1\n1 2 1 2 1\n16",
-        "1\n1 2 4 2 1\n8",
-        "1\n1 2 4 2 1\n10"
+        "\\(\\frac{1}{16}\\) 4 6 4 1 ",
+        "\\(\\frac{1}{16}\\) 2 1 2 1 ",
+        "\\(\\frac{1}{8}\\) 2 4 2 1 ",
+        "\\(\\frac{1}{10}\\) 2 4 2 1 "
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n1 4 6 4 1\n16",
+          "text": "\\(\\frac{1}{16}\\) 4 6 4 1 ",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n1 4 6 4 1\n16",
+              "content": "\\(\\frac{1}{16}\\) 4 6 4 1 ",
               "confidence": "VERIFIED"
             }
           ],
@@ -6816,12 +6879,12 @@
         },
         {
           "id": "B",
-          "text": "1\n1 2 1 2 1\n16",
+          "text": "\\(\\frac{1}{16}\\) 2 1 2 1 ",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n1 2 1 2 1\n16",
+              "content": "\\(\\frac{1}{16}\\) 2 1 2 1 ",
               "confidence": "VERIFIED"
             }
           ],
@@ -6831,12 +6894,12 @@
         },
         {
           "id": "C",
-          "text": "1\n1 2 4 2 1\n8",
+          "text": "\\(\\frac{1}{8}\\) 2 4 2 1 ",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n1 2 4 2 1\n8",
+              "content": "\\(\\frac{1}{8}\\) 2 4 2 1 ",
               "confidence": "VERIFIED"
             }
           ],
@@ -6846,12 +6909,12 @@
         },
         {
           "id": "D",
-          "text": "1\n1 2 4 2 1\n10",
+          "text": "\\(\\frac{1}{10}\\) 2 4 2 1 ",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n1 2 4 2 1\n10",
+              "content": "\\(\\frac{1}{10}\\) 2 4 2 1 ",
               "confidence": "VERIFIED"
             }
           ],
@@ -6887,11 +6950,11 @@
       "questionNumber": 68,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "The histogram equalization applied to a digital image generally DOES NOT yield\na truly uniform histogram of the transformed image due to",
+      "questionText": "a truly uniform histogram of the transformed image due to",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The histogram equalization applied to a digital image generally DOES NOT yield\na truly uniform histogram of the transformed image due to",
+          "content": "a truly uniform histogram of the transformed image due to",
           "confidence": "VERIFIED"
         }
       ],
@@ -7222,11 +7285,11 @@
       "questionNumber": 71,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "______ is a raster image resampling technique that DOES NOT alter any of the\noutput cell values from the input raster dataset.",
+      "questionText": "______ is a raster image resampling technique that DOES NOT alter any of the output cell values from the input raster dataset.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "______ is a raster image resampling technique that DOES NOT alter any of the\noutput cell values from the input raster dataset.",
+          "content": "______ is a raster image resampling technique that DOES NOT alter any of the output cell values from the input raster dataset.",
           "confidence": "VERIFIED"
         }
       ],
@@ -7440,11 +7503,11 @@
       "questionNumber": 73,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "The figure given below shows the Fourier spectrum obtained by applying filter on\na remote sensing image in frequency domain. Zone A represents the location of\n______ components.",
+      "questionText": "The figure given below shows the Fourier spectrum obtained by applying filter on a remote sensing image in frequency domain. Zone A represents the location of ______ components.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The figure given below shows the Fourier spectrum obtained by applying filter on\na remote sensing image in frequency domain. Zone A represents the location of\n______ components.",
+          "content": "The figure given below shows the Fourier spectrum obtained by applying filter on a remote sensing image in frequency domain. Zone A represents the location of ______ components.",
           "confidence": "VERIFIED"
         },
         {
@@ -7557,11 +7620,11 @@
       "questionNumber": 74,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "For the following covariance matrix ( \\sum ) of a multispectral image, which of the\nstatements is/are INCORRECT?\nband-1 band-2 band-3\nband-134.14 46.71 40.68\n \n=band-2 46.71 68.83 69.59\n \nband-3 40.68 69.59 248.40 ",
+      "questionText": "For the following covariance matrix (_{ \\sum }) of a multispectral image, which of the statements is/are INCORRECT?\n\nb and-1 b and-2 b and-3\n\n\\(\\Sigma\\)= b and-2 b and-3 b and-1      14\n\n68 71 59 83 71\n\n40 59 68     ",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For the following covariance matrix ( \\sum ) of a multispectral image, which of the\nstatements is/are INCORRECT?\nband-1 band-2 band-3\nband-134.14 46.71 40.68\n \n=band-2 46.71 68.83 69.59\n \nband-3 40.68 69.59 248.40 ",
+          "content": "For the following covariance matrix (_{ \\sum }) of a multispectral image, which of the statements is/are INCORRECT?\n\nb and-1 b and-2 b and-3\n\n\\(\\Sigma\\)= b and-2 b and-3 b and-1      14\n\n68 71 59 83 71\n\n40 59 68     ",
           "confidence": "VERIFIED"
         }
       ],
@@ -7571,21 +7634,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "band-1 and band-2 have maximum correlation",
-        "band-2 and band-3 are least correlated",
-        "band-3 conveys the maximum information content",
-        "band-1 conveys the minimum information content"
+        "b and-1 and b and-2 have maximum correlation",
+        "b and-2 and b and-3 are least correlated",
+        "b and-3 conveys the maximum information content",
+        "b and-1 conveys the minimum information content"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "band-1 and band-2 have maximum correlation",
+          "text": "b and-1 and b and-2 have maximum correlation",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "band-1 and band-2 have maximum correlation",
+              "content": "b and-1 and b and-2 have maximum correlation",
               "confidence": "VERIFIED"
             }
           ],
@@ -7595,12 +7658,12 @@
         },
         {
           "id": "B",
-          "text": "band-2 and band-3 are least correlated",
+          "text": "b and-2 and b and-3 are least correlated",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "band-2 and band-3 are least correlated",
+              "content": "b and-2 and b and-3 are least correlated",
               "confidence": "VERIFIED"
             }
           ],
@@ -7610,12 +7673,12 @@
         },
         {
           "id": "C",
-          "text": "band-3 conveys the maximum information content",
+          "text": "b and-3 conveys the maximum information content",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "band-3 conveys the maximum information content",
+              "content": "b and-3 conveys the maximum information content",
               "confidence": "VERIFIED"
             }
           ],
@@ -7625,12 +7688,12 @@
         },
         {
           "id": "D",
-          "text": "band-1 conveys the minimum information content",
+          "text": "b and-1 conveys the minimum information content",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "band-1 conveys the minimum information content",
+              "content": "b and-1 conveys the minimum information content",
               "confidence": "VERIFIED"
             }
           ],
@@ -7666,11 +7729,11 @@
       "questionNumber": 75,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "Which of the following statistical measures CANNOT be computed from the\nmultispectral image histograms?",
+      "questionText": "multispectral image histograms?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statistical measures CANNOT be computed from the\nmultispectral image histograms?",
+          "content": "multispectral image histograms?",
           "confidence": "VERIFIED"
         }
       ],
@@ -7775,11 +7838,11 @@
       "questionNumber": 76,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "Which of the following statements about Principal Component Analysis (PCA)\nis/are CORRECT?",
+      "questionText": "Which of the following statements about Principal Component Analysis (PCA) is/are CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statements about Principal Component Analysis (PCA)\nis/are CORRECT?",
+          "content": "Which of the following statements about Principal Component Analysis (PCA) is/are CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -7790,9 +7853,9 @@
       "questionType": "MSQ",
       "options": [
         "A two-dimensional data set can have up to four principal components.",
-        "The first principal component accounts for the majority of conceivable data\nvariation.",
+        "The first principal component accounts for the majority of conceivable data variation.",
         "The second principal component attempts to encapsulate the mode of the data.",
-        "The transformed principal components are linear combinations of the original\nvariables and are orthogonal."
+        "The transformed principal components are linear combinations of the original variables and are orthogonal."
       ],
       "optionImages": null,
       "richOptions": [
@@ -7813,12 +7876,12 @@
         },
         {
           "id": "B",
-          "text": "The first principal component accounts for the majority of conceivable data\nvariation.",
+          "text": "The first principal component accounts for the majority of conceivable data variation.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The first principal component accounts for the majority of conceivable data\nvariation.",
+              "content": "The first principal component accounts for the majority of conceivable data variation.",
               "confidence": "VERIFIED"
             }
           ],
@@ -7843,12 +7906,12 @@
         },
         {
           "id": "D",
-          "text": "The transformed principal components are linear combinations of the original\nvariables and are orthogonal.",
+          "text": "The transformed principal components are linear combinations of the original variables and are orthogonal.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The transformed principal components are linear combinations of the original\nvariables and are orthogonal.",
+              "content": "The transformed principal components are linear combinations of the original variables and are orthogonal.",
               "confidence": "VERIFIED"
             }
           ],
@@ -7890,11 +7953,11 @@
       "questionNumber": 77,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "In the context of satellite image classification, which of the following statements\nis/are CORRECT?",
+      "questionText": "In the context of satellite image classification, which of the following statements is/are CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the context of satellite image classification, which of the following statements\nis/are CORRECT?",
+          "content": "In the context of satellite image classification, which of the following statements is/are CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -8005,11 +8068,11 @@
       "questionNumber": 78,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "Which of the following filters can be used to suppress the low frequency component\nof a raster image?",
+      "questionText": "Which of the following filters can be used to suppress the low frequency component of a raster image?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following filters can be used to suppress the low frequency component\nof a raster image?",
+          "content": "Which of the following filters can be used to suppress the low frequency component of a raster image?",
           "confidence": "VERIFIED"
         },
         {
@@ -8243,11 +8306,11 @@
       "questionNumber": 80,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "Which of the following statistical classification algorithms is/are represented by the\nfigure given below?",
+      "questionText": "Which of the following statistical classification algorithms is/are represented by the figure given below?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Which of the following statistical classification algorithms is/are represented by the\nfigure given below?",
+          "content": "Which of the following statistical classification algorithms is/are represented by the figure given below?",
           "confidence": "VERIFIED"
         },
         {
@@ -8364,11 +8427,11 @@
       "questionNumber": 81,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "Using the given 3 \\times 3 pixel kernel and original image and applying the concept of\nconvolution, the value of central pixel of the output image is ______ (in integer).",
+      "questionText": "Using the given 3 \\times 3 pixel kernel and original image and applying the concept of convolution, the value of central pixel of the output image is ______ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Using the given 3 \\times 3 pixel kernel and original image and applying the concept of\nconvolution, the value of central pixel of the output image is ______ (in integer).",
+          "content": "Using the given 3 \\times 3 pixel kernel and original image and applying the concept of convolution, the value of central pixel of the output image is ______ (in integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -8418,11 +8481,11 @@
       "questionNumber": 82,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "A four-band multispectral image with pixel size of 50 m \\times 50 m covers a ground\narea of 20 km \\times 20 km. If the radiometric resolution of the satellite data is 8 bits,\nthen the uncompressed satellite image contains ______ kilobytes (kB) of data (in\ninteger).",
+      "questionText": "A four-b and multispectral image with pixel size of 50 m \\times 50 m covers a ground area of 20 km \\times 20 km. If the radiometric resolution of the satellite data is 8 bits, then the uncompressed satellite image contains ______ kilobytes (kB) of data (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A four-band multispectral image with pixel size of 50 m \\times 50 m covers a ground\narea of 20 km \\times 20 km. If the radiometric resolution of the satellite data is 8 bits,\nthen the uncompressed satellite image contains ______ kilobytes (kB) of data (in\ninteger).",
+          "content": "A four-b and multispectral image with pixel size of 50 m \\times 50 m covers a ground area of 20 km \\times 20 km. If the radiometric resolution of the satellite data is 8 bits, then the uncompressed satellite image contains ______ kilobytes (kB) of data (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -8473,11 +8536,11 @@
       "questionNumber": 83,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "In spatial interpolation using coordinate transformations for image-to-map\nrectification, the minimum number of ground control points (GCPs) required to\nperform a third-order transformation is ______ (in integer).",
+      "questionText": "In spatial interpolation using coordinate transformations for image-to-map rectification, the minimum number of ground control points (GCPs) required to perform a third-order transformation is ______ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In spatial interpolation using coordinate transformations for image-to-map\nrectification, the minimum number of ground control points (GCPs) required to\nperform a third-order transformation is ______ (in integer).",
+          "content": "In spatial interpolation using coordinate transformations for image-to-map rectification, the minimum number of ground control points (GCPs) required to perform a third-order transformation is ______ (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -8519,11 +8582,11 @@
       "questionNumber": 84,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "In an image with 6-bit quantization level, the pixel values of a scene are between 25\nand 55. A linear contrast stretch is applied to the image covering the full dynamic\nrange. A pixel value 40 in the original image will be mapped to ______ (rounded\noff to nearest integer) in the stretched image.",
+      "questionText": "In an image with 6-bit quantization level, the pixel values of a scene are between 25 and 55. A linear contrast stretch is applied to the image covering the full dynamic range. A pixel value 40 in the original image will be mapped to ______ (rounded off to nearest integer) in the stretched image.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In an image with 6-bit quantization level, the pixel values of a scene are between 25\nand 55. A linear contrast stretch is applied to the image covering the full dynamic\nrange. A pixel value 40 in the original image will be mapped to ______ (rounded\noff to nearest integer) in the stretched image.",
+          "content": "In an image with 6-bit quantization level, the pixel values of a scene are between 25 and 55. A linear contrast stretch is applied to the image covering the full dynamic range. A pixel value 40 in the original image will be mapped to ______ (rounded off to nearest integer) in the stretched image.",
           "confidence": "VERIFIED"
         }
       ],

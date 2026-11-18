@@ -137,8 +137,9 @@ async function parseXmlString(xml: string): Promise<Document> {
   if (typeof DOMParser !== 'undefined') {
     return new DOMParser().parseFromString(xml, 'text/xml');
   }
-  const { JSDOM } = await import('jsdom');
-  const dom = new JSDOM(xml, { contentType: 'text/xml' });
+  // @ts-ignore
+  const jsdomModule: any = await import('jsdom');
+  const dom = new jsdomModule.JSDOM(xml, { contentType: 'text/xml' });
   return dom.window.document;
 }
 

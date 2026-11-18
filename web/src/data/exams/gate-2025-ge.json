@@ -408,7 +408,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -417,12 +417,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -519,37 +519,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "",
-        "",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/ge/q5_opt_a.png",
-        "/exam-assets/gate/2025/ge/q5_opt_b.png",
-        "/exam-assets/gate/2025/ge/q5_opt_c.png",
-        "/exam-assets/gate/2025/ge/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_a.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_b.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_c.png"
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ge/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -1187,11 +1222,11 @@
       "questionNumber": 11,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "For a sample drawn from normally distributed population, the statistic Y = \\(\\frac{()21ns-}{2\\(\\sigma\\)}\\) , where n = sample size, \\(\\sigma\\) = population standard deviation, s = sample standard deviation, has",
+      "questionText": "For a sample drawn from normally distributed population, the statistic Y = \\(\\frac{()1ns-}{2\\(\\sigma\\)}\\) , where n = sample size, \\(\\sigma\\) = population standard deviation, s = sample standard deviation, has",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For a sample drawn from normally distributed population, the statistic Y = \\(\\frac{()21ns-}{2\\(\\sigma\\)}\\) , where n = sample size, \\(\\sigma\\) = population standard deviation, s = sample standard deviation, has",
+          "content": "For a sample drawn from normally distributed population, the statistic Y = \\(\\frac{()1ns-}{2\\(\\sigma\\)}\\) , where n = sample size, \\(\\sigma\\) = population standard deviation, s = sample standard deviation, has",
           "confidence": "VERIFIED"
         }
       ],
@@ -1201,27 +1236,26 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(_{Chi-square distribution with}( n- 1 ) degrees of freedom\\)",
+        "_{Chi-square distribution with}( n- 1 ) degrees of freedom",
         "Chi-square distribution with n degrees of freedom",
-        "\\(_{Chi-square distribution with}( n + 1 ) degrees of freedom\\)",
+        "_{Chi-square distribution with}( n + 1 ) degrees of freedom",
         "Gaussian distribution with n degrees of freedom"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(_{Chi-square distribution with}( n- 1 ) degrees of freedom\\)",
+          "text": "_{Chi-square distribution with}( n- 1 ) degrees of freedom",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "_{Chi-square distribution with}( n- 1 ) degrees of freedom",
-              "content": "\\(_{Chi-square distribution with}( n- 1 ) degrees of freedom\\)",
+              "type": "text",
+              "content": "_{Chi-square distribution with}( n- 1 ) degrees of freedom",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -1241,18 +1275,17 @@
         },
         {
           "id": "C",
-          "text": "\\(_{Chi-square distribution with}( n + 1 ) degrees of freedom\\)",
+          "text": "_{Chi-square distribution with}( n + 1 ) degrees of freedom",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "_{Chi-square distribution with}( n + 1 ) degrees of freedom",
-              "content": "\\(_{Chi-square distribution with}( n + 1 ) degrees of freedom\\)",
+              "type": "text",
+              "content": "_{Chi-square distribution with}( n + 1 ) degrees of freedom",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -2075,7 +2108,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
+        "A raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
         "Vector data model represents the spatial features on Earth's surface in terms of points, lines or polygons",
         "Resampling is applied after georeferencing of vector datasets",
         "Topology is used in vector data models to ensure spatial data integrity"
@@ -2084,12 +2117,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
+          "text": "A raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
+              "content": "A raster data model makes use of grid of cells that are organized into rows and columns for representation of features on earth",
               "confidence": "VERIFIED"
             }
           ],
@@ -3226,15 +3259,9 @@
           "type": "text",
           "content": "Consider the nodes of a square grid A, B, C and D (shown in figure below), where a certain parameter is measured. The distances between the points is also indicated in the same figure. For example, the value observed at point A is 120 and is indicated as A (120), and the distance between points A and B is 1.0 units. The value at point 'X' computed using bilinear interpolation, using the values at points A, B, C and D is _________.",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/ge/q31_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3317,10 +3344,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
-      "diagramUrl": "/exam-assets/gate/2025/ge/q31_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/ge/q31_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.66,
       "examId": "gate",
@@ -3920,7 +3945,7 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "Voronoi polygon may contain more than one point, especially where the density of points is higher",
+        "A Voronoi polygon may contain more than one point, especially where the density of points is higher",
         "The center of a Voronoi polygon is a circumcenter of a Delaunay triangle",
         "Each intersection of Voronoi edges belongs to at least three Voronoi polygons",
         "Voronoi polygons and Delaunay triangles are geometric dual of each other"
@@ -3929,12 +3954,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "Voronoi polygon may contain more than one point, especially where the density of points is higher",
+          "text": "A Voronoi polygon may contain more than one point, especially where the density of points is higher",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Voronoi polygon may contain more than one point, especially where the density of points is higher",
+              "content": "A Voronoi polygon may contain more than one point, especially where the density of points is higher",
               "confidence": "VERIFIED"
             }
           ],
@@ -4184,11 +4209,11 @@
       "questionNumber": 40,
       "sectionId": "ge_a",
       "sectionName": "Part A: Common",
-      "questionText": "The residual error in a measurement comprises a bias of + 0.08 m and a random component given by the following density function:\n\nf x ( ) = \\(\\frac{1}{0.15}\\) \\(\\frac{2x-}{0.0072}\\) m - 1\n\nFor this system, the mean square error (MSE) is ________ m. (rounded off to 2 decimal places)",
+      "questionText": "The residual error in a measurement comprises a bias of + 0.08 m and a random component given by the following density function:\n\nf x = exp m - 1 f ( x ) = exp   m - 1 f x = exp m - 1 \\(\\frac{1}{0.15}\\) 1  <u>-</u> <u>x</u> 2  - 1   0072 1  <u>-</u> <u>x</u> 2  - 1 1  <u>-</u> <u>x</u> 2  - 1 2 1  <u>-</u> <u>x</u> 2  - 1   f x = exp m - 1 - 1 - 1\n\nFor this system, the mean square error (MSE) is ________ m. (rounded off to 2 decimal places)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The residual error in a measurement comprises a bias of + 0.08 m and a random component given by the following density function:\n\nf x ( ) = \\(\\frac{1}{0.15}\\) \\(\\frac{2x-}{0.0072}\\) m - 1\n\nFor this system, the mean square error (MSE) is ________ m. (rounded off to 2 decimal places)",
+          "content": "The residual error in a measurement comprises a bias of + 0.08 m and a random component given by the following density function:\n\nf x = exp m - 1 f ( x ) = exp   m - 1 f x = exp m - 1 \\(\\frac{1}{0.15}\\) 1  <u>-</u> <u>x</u> 2  - 1   0072 1  <u>-</u> <u>x</u> 2  - 1 1  <u>-</u> <u>x</u> 2  - 1 2 1  <u>-</u> <u>x</u> 2  - 1   f x = exp m - 1 - 1 - 1\n\nFor this system, the mean square error (MSE) is ________ m. (rounded off to 2 decimal places)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5523,21 +5548,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)",
-        "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
-        "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
-        "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)"
+        "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
+        "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
+        "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
+        "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)",
+          "text": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)",
+              "content": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5547,12 +5572,12 @@
         },
         {
           "id": "B",
-          "text": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
+          "text": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
+              "content": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5562,12 +5587,12 @@
         },
         {
           "id": "C",
-          "text": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
+          "text": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan2\\(\\alpha\\)-tan1\\(\\alpha\\)}\\)",
+              "content": "L = ( \\(\\frac{btan1\\(\\alpha\\)}{tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5577,12 +5602,12 @@
         },
         {
           "id": "D",
-          "text": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)",
+          "text": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan1\\(\\alpha\\)-tan2\\(\\alpha\\)}\\)",
+              "content": "L = ( \\(\\frac{btan2\\(\\alpha\\)}{(tan\\(\\alpha\\)-tan\\(\\alpha\\)}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -6074,11 +6099,11 @@
       "questionNumber": 61,
       "sectionId": "ge_b_s1",
       "sectionName": "Part B: Section I (Surveying and Mapping)",
-      "questionText": "A point is specified along the Greenwich Meridian at 60 N latitude on an ellipsoid. The parameters of the ellipsoid are semi-major axis a=6378137 m and flattening factor f= \\(\\frac{1}{298.224}\\) . The volume of the ellipsoid is given by \\(\\frac{24ab\\(\\pi\\)}{3}\\) , where b is the semi-minor axis. The latitude of the point on the sphere whose volume is the same as the volume of the ellipsoid of reference is _________ N (rounded off to 2 decimal places).",
+      "questionText": "A point is specified along the Greenwich Meridian at 60 N latitude on an ellipsoid. The parameters of the ellipsoid are semi-major axis a=6378137 m and flattening factor f= \\(\\frac{1}{298.224}\\) . The volume of the ellipsoid is given by \\(\\frac{4ab\\(\\pi\\)}{3}\\) , where b is the semi-minor axis. The latitude of the point on the sphere whose volume is the same as the volume of the ellipsoid of reference is _________ N (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A point is specified along the Greenwich Meridian at 60 N latitude on an ellipsoid. The parameters of the ellipsoid are semi-major axis a=6378137 m and flattening factor f= \\(\\frac{1}{298.224}\\) . The volume of the ellipsoid is given by \\(\\frac{24ab\\(\\pi\\)}{3}\\) , where b is the semi-minor axis. The latitude of the point on the sphere whose volume is the same as the volume of the ellipsoid of reference is _________ N (rounded off to 2 decimal places).",
+          "content": "A point is specified along the Greenwich Meridian at 60 N latitude on an ellipsoid. The parameters of the ellipsoid are semi-major axis a=6378137 m and flattening factor f= \\(\\frac{1}{298.224}\\) . The volume of the ellipsoid is given by \\(\\frac{4ab\\(\\pi\\)}{3}\\) , where b is the semi-minor axis. The latitude of the point on the sphere whose volume is the same as the volume of the ellipsoid of reference is _________ N (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -7169,11 +7194,11 @@
       "questionNumber": 76,
       "sectionId": "ge_b_s2",
       "sectionName": "Part B: Section II (Image Processing and Analysis)",
-      "questionText": "A remote sensing image is acquired from an IRS series satellite. Initially a two- dimensional filter with transfer function 𝐻(𝑢, 𝑣) = exp ( \\(\\frac{satellite.Initially-𝐷2(𝑢,𝑣)}{2𝐷02}\\) is applied to reduce scan line effects. Here 𝐷(𝑢, 𝑣) rectangle, and 𝐷_{0} is the cutoff frequency. Which one of the following will be the transfer function for the corresponding filter to detect the edges in the image?",
+      "questionText": "A remote sensing image is acquired from an IRS series satellite. Initially a two- dimensional filter with transfer function 𝐻(𝑢, 𝑣) = exp ( \\(\\frac{-𝐷2(𝑢,𝑣)}{2𝐷02}\\) is applied to reduce scan line effects. Here 𝐷(𝑢, 𝑣) rectangle, and 𝐷_{0} is the cutoff frequency. Which one of the following will be the transfer function for the corresponding filter to detect the edges in the image?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A remote sensing image is acquired from an IRS series satellite. Initially a two- dimensional filter with transfer function 𝐻(𝑢, 𝑣) = exp ( \\(\\frac{satellite.Initially-𝐷2(𝑢,𝑣)}{2𝐷02}\\) is applied to reduce scan line effects. Here 𝐷(𝑢, 𝑣) rectangle, and 𝐷_{0} is the cutoff frequency. Which one of the following will be the transfer function for the corresponding filter to detect the edges in the image?",
+          "content": "A remote sensing image is acquired from an IRS series satellite. Initially a two- dimensional filter with transfer function 𝐻(𝑢, 𝑣) = exp ( \\(\\frac{-𝐷2(𝑢,𝑣)}{2𝐷02}\\) is applied to reduce scan line effects. Here 𝐷(𝑢, 𝑣) rectangle, and 𝐷_{0} is the cutoff frequency. Which one of the following will be the transfer function for the corresponding filter to detect the edges in the image?",
           "confidence": "VERIFIED"
         }
       ],

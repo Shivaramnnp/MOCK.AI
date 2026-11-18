@@ -508,75 +508,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
-        "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
-        "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
-        "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)"
+        "𝑝_{1} + 𝑝_{2} is not a prime number.",
+        "𝑝_{1}𝑝_{2} is not a prime number.",
+        "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
+        "𝑝_{1}𝑝_{2} + 1 is a prime number."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
+          "text": "𝑝_{1} + 𝑝_{2} is not a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1} + 𝑝_{2} is not a prime number.",
-              "content": "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1} + 𝑝_{2} is not a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
+          "text": "𝑝_{1}𝑝_{2} is not a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1}𝑝_{2} is not a prime number.",
-              "content": "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1}𝑝_{2} is not a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
+          "text": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
-              "content": "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)",
+          "text": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
-              "content": "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3195,11 +3191,11 @@
       "questionNumber": 29,
       "sectionId": "tf_core",
       "sectionName": "Textile Engineering & Fibre Science",
-      "questionText": "Consider the partial differential equation\n\n\\(\\frac{𝜕2𝑢}{𝜕𝑥2}\\) \\(\\frac{1𝜕𝑢}{𝑘}\\) \\(\\frac{1𝜕𝑢}{𝑘}\\) + sin 𝑥, 𝑘> 0\n\nAmongst the following, the correct statement(s) for the above equation is/are",
+      "questionText": "Consider the partial differential equation\n\n\\(\\frac{𝜕2𝑢}{𝜕𝑥2}\\) 𝜕2𝑢 = <u>1</u> <u>𝜕𝑢</u> sin 𝑥, 𝑘> 0 𝑘 𝜕2𝑢 <u>1</u> <u>𝜕𝑢</u> 𝜕𝑡+ sin 𝑥, 𝑘> 0 Amongst the following, the correct statement(s) for the above equation is/are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the partial differential equation\n\n\\(\\frac{𝜕2𝑢}{𝜕𝑥2}\\) \\(\\frac{1𝜕𝑢}{𝑘}\\) \\(\\frac{1𝜕𝑢}{𝑘}\\) + sin 𝑥, 𝑘> 0\n\nAmongst the following, the correct statement(s) for the above equation is/are",
+          "content": "Consider the partial differential equation\n\n\\(\\frac{𝜕2𝑢}{𝜕𝑥2}\\) 𝜕2𝑢 = <u>1</u> <u>𝜕𝑢</u> sin 𝑥, 𝑘> 0 𝑘 𝜕2𝑢 <u>1</u> <u>𝜕𝑢</u> 𝜕𝑡+ sin 𝑥, 𝑘> 0 Amongst the following, the correct statement(s) for the above equation is/are",
           "confidence": "VERIFIED"
         }
       ],

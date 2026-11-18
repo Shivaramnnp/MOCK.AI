@@ -2602,75 +2602,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(one C_{3} axis\\)",
-        "\\(one C_{2} axis\\)",
-        "\\(one C_{4} axis\\)",
-        "\\(one C_{6} axis\\)"
+        "one \\(C_{3}\\) axis",
+        "one \\(C_{2}\\) axis",
+        "one \\(C_{4}\\) axis",
+        "one \\(C_{6}\\) axis"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(one C_{3} axis\\)",
+          "text": "one \\(C_{3}\\) axis",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "one C_{3} axis",
-              "content": "\\(one C_{3} axis\\)",
+              "type": "text",
+              "content": "one \\(C_{3}\\) axis",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(one C_{2} axis\\)",
+          "text": "one \\(C_{2}\\) axis",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "one C_{2} axis",
-              "content": "\\(one C_{2} axis\\)",
+              "type": "text",
+              "content": "one \\(C_{2}\\) axis",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(one C_{4} axis\\)",
+          "text": "one \\(C_{4}\\) axis",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "one C_{4} axis",
-              "content": "\\(one C_{4} axis\\)",
+              "type": "text",
+              "content": "one \\(C_{4}\\) axis",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(one C_{6} axis\\)",
+          "text": "one \\(C_{6}\\) axis",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "one C_{6} axis",
-              "content": "\\(one C_{6} axis\\)",
+              "type": "text",
+              "content": "one \\(C_{6}\\) axis",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -2726,7 +2722,7 @@
       ],
       "optionImages": [
         "/exam-assets/gate/2025/cy/q24_opt_a.png",
-        null,
+        "/exam-assets/gate/2025/cy/q24_opt_b.png",
         "/exam-assets/gate/2025/cy/q24_opt_c.png",
         "/exam-assets/gate/2025/cy/q24_opt_d.png"
       ],
@@ -2749,9 +2745,17 @@
         {
           "id": "B",
           "text": "",
-          "imageUrl": null,
-          "contentBlocks": null,
-          "contentTypes": null
+          "imageUrl": "/exam-assets/gate/2025/cy/q24_opt_b.png",
+          "contentBlocks": [
+            {
+              "type": "image",
+              "assetUrl": "/exam-assets/gate/2025/cy/q24_opt_b.png",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "image"
+          ]
         },
         {
           "id": "C",
@@ -2839,75 +2843,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\((i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH\\)",
-        "\\((i) m-CPBA; (ii) BF_{3}.Et_{2}O\\)",
-        "\\((i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)\\)",
-        "\\((i) dil. KMnO_{4}; (ii) NaIO_{4}\\)"
+        "(i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH",
+        "(i) m-CPBA; (ii) BF_{3}.Et_{2}O",
+        "(i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)",
+        "(i) dil. KMnO_{4}; (ii) NaIO_{4}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\((i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH\\)",
+          "text": "(i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH",
-              "content": "\\((i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH\\)",
+              "type": "text",
+              "content": "(i) NBS, (PhCOO)_{2}; (ii) aq. NaOH; (iii) active MnO_{2}; (iv) Li/liq.NH_{3}, t-BuOH",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\((i) m-CPBA; (ii) BF_{3}.Et_{2}O\\)",
+          "text": "(i) m-CPBA; (ii) BF_{3}.Et_{2}O",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(i) m-CPBA; (ii) BF_{3}.Et_{2}O",
-              "content": "\\((i) m-CPBA; (ii) BF_{3}.Et_{2}O\\)",
+              "type": "text",
+              "content": "(i) m-CPBA; (ii) BF_{3}.Et_{2}O",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\((i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)\\)",
+          "text": "(i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)",
-              "content": "\\((i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)\\)",
+              "type": "text",
+              "content": "(i) SeO_{2}; (ii) Dess-Martin periodinane; (iii) K[BH(s-Bu)_{3}] (K-selectride)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\((i) dil. KMnO_{4}; (ii) NaIO_{4}\\)",
+          "text": "(i) dil. KMnO_{4}; (ii) NaIO_{4}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "(i) dil. KMnO_{4}; (ii) NaIO_{4}",
-              "content": "\\((i) dil. KMnO_{4}; (ii) NaIO_{4}\\)",
+              "type": "text",
+              "content": "(i) dil. KMnO_{4}; (ii) NaIO_{4}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3209,75 +3209,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(The total energy is 𝐸_{1} + 𝐸_{2}\\)",
-        "\\(The total wavefunction is 𝜓_{1} + 𝜓_{2}\\)",
-        "\\(The total energy is 𝐸_{1}𝐸_{2}\\)",
-        "\\(The total wavefunction is 𝜓_{1}𝜓_{2}\\)"
+        "The total energy is 𝐸_{1} + 𝐸_{2}",
+        "The total wavefunction is 𝜓_{1} + 𝜓_{2}",
+        "The total energy is 𝐸_{1}𝐸_{2}",
+        "The total wavefunction is 𝜓_{1}𝜓_{2}"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(The total energy is 𝐸_{1} + 𝐸_{2}\\)",
+          "text": "The total energy is 𝐸_{1} + 𝐸_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The total energy is 𝐸_{1} + 𝐸_{2}",
-              "content": "\\(The total energy is 𝐸_{1} + 𝐸_{2}\\)",
+              "type": "text",
+              "content": "The total energy is 𝐸_{1} + 𝐸_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(The total wavefunction is 𝜓_{1} + 𝜓_{2}\\)",
+          "text": "The total wavefunction is 𝜓_{1} + 𝜓_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The total wavefunction is 𝜓_{1} + 𝜓_{2}",
-              "content": "\\(The total wavefunction is 𝜓_{1} + 𝜓_{2}\\)",
+              "type": "text",
+              "content": "The total wavefunction is 𝜓_{1} + 𝜓_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(The total energy is 𝐸_{1}𝐸_{2}\\)",
+          "text": "The total energy is 𝐸_{1}𝐸_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The total energy is 𝐸_{1}𝐸_{2}",
-              "content": "\\(The total energy is 𝐸_{1}𝐸_{2}\\)",
+              "type": "text",
+              "content": "The total energy is 𝐸_{1}𝐸_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(The total wavefunction is 𝜓_{1}𝜓_{2}\\)",
+          "text": "The total wavefunction is 𝜓_{1}𝜓_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The total wavefunction is 𝜓_{1}𝜓_{2}",
-              "content": "\\(The total wavefunction is 𝜓_{1}𝜓_{2}\\)",
+              "type": "text",
+              "content": "The total wavefunction is 𝜓_{1}𝜓_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3833,75 +3829,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(RhCl(PPh_{3})_{3}\\)",
-        "\\(HRuCl(PPh_{3})_{3}\\)",
-        "\\([Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)",
-        "\\([Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)"
+        "RhCl(PPh_{3})_{3}",
+        "HRuCl(PPh_{3})_{3}",
+        "[Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
+        "[Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(RhCl(PPh_{3})_{3}\\)",
+          "text": "RhCl(PPh_{3})_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "RhCl(PPh_{3})_{3}",
-              "content": "\\(RhCl(PPh_{3})_{3}\\)",
+              "type": "text",
+              "content": "RhCl(PPh_{3})_{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(HRuCl(PPh_{3})_{3}\\)",
+          "text": "HRuCl(PPh_{3})_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "HRuCl(PPh_{3})_{3}",
-              "content": "\\(HRuCl(PPh_{3})_{3}\\)",
+              "type": "text",
+              "content": "HRuCl(PPh_{3})_{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\([Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)",
+          "text": "[Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "[Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
-              "content": "\\([Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)",
+              "type": "text",
+              "content": "[Ir(COD)(PCy_{3})(Py)]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\([Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)",
+          "text": "[Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "[Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
-              "content": "\\([Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)\\)",
+              "type": "text",
+              "content": "[Rh(COD)(PPh_{3})_{2}]^{+}PF_{6} ^{-} (COD = cyclooctadiene)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4770,9 +4762,9 @@
       "questionType": "MCQ",
       "options": [
         "Time-independent Schrödinger equation can be exactly solved for Be2+.",
-        "\\((b) For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. (c) Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. (d) Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. (a) True (b) False (c) False (d) True (a) True (b) True (c) False (d) False\\)",
-        "(a) False (b) True (c) True (d) False",
-        "(a) False (b) True (c) True (d) True"
+        "For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. True (b) False (c) False (d) True True (b) True (c) False (d) False",
+        "False (b) True (c) True (d) False",
+        "False (b) True (c) True (d) True"
       ],
       "optionImages": null,
       "richOptions": [
@@ -4793,28 +4785,27 @@
         },
         {
           "id": "B",
-          "text": "\\((b) For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. (c) Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. (d) Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. (a) True (b) False (c) False (d) True (a) True (b) True (c) False (d) False\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "(b) For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. (c) Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. (d) Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. (a) True (b) False (c) False (d) True (a) True (b) True (c) False (d) False",
-              "content": "\\((b) For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. (c) Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. (d) Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. (a) True (b) False (c) False (d) True (a) True (b) True (c) False (d) False\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "C",
-          "text": "(a) False (b) True (c) True (d) False",
+          "text": "For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. True (b) False (c) False (d) True True (b) True (c) False (d) False",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a) False (b) True (c) True (d) False",
+              "content": "For a particle confined in a one-dimensional box of length l with infinite potential barriers, the trial variation function 𝜙= [( _{𝑙3}) 3 1/2 𝑥] is not an acceptable trial wavefunction for 0 \\le 𝑥 \\le 𝑙. Wavefunctions for system of Fermions must be anti-symmetric with respect to exchange of any two Fermions in the system. Born-Oppenheimer approximation can be used to separate the vibrational and rotational motion of a molecule. True (b) False (c) False (d) True True (b) True (c) False (d) False",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "False (b) True (c) True (d) False",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "False (b) True (c) True (d) False",
               "confidence": "VERIFIED"
             }
           ],
@@ -4824,12 +4815,12 @@
         },
         {
           "id": "D",
-          "text": "(a) False (b) True (c) True (d) True",
+          "text": "False (b) True (c) True (d) True",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a) False (b) True (c) True (d) True",
+              "content": "False (b) True (c) True (d) True",
               "confidence": "VERIFIED"
             }
           ],
@@ -5258,21 +5249,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "(a) → (ii)",
-        "(b) → (i)",
-        "(a) → (iii)",
-        "(c) → (iii)"
+        "→ (ii)",
+        "→ (i)",
+        "→ (iii)",
+        "→ (iii)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(a) → (ii)",
+          "text": "→ (ii)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a) → (ii)",
+              "content": "→ (ii)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5282,12 +5273,12 @@
         },
         {
           "id": "B",
-          "text": "(b) → (i)",
+          "text": "→ (i)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(b) → (i)",
+              "content": "→ (i)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5297,12 +5288,12 @@
         },
         {
           "id": "C",
-          "text": "(a) → (iii)",
+          "text": "→ (iii)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a) → (iii)",
+              "content": "→ (iii)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5312,12 +5303,12 @@
         },
         {
           "id": "D",
-          "text": "(c) → (iii)",
+          "text": "→ (iii)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(c) → (iii)",
+              "content": "→ (iii)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5375,8 +5366,8 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
-        "\\(While one of the oxygen atoms of O_{2} is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.\\)",
+        "A thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
+        "While one of the oxygen atoms of \\(O_{2}\\) is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.",
         "An imidazole group is coordinated to the Fe center at one of the axial positions around Fe.",
         "An iron-oxo species acts as a key oxidant in the catalytic cycle of CYP."
       ],
@@ -5384,12 +5375,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
+          "text": "A thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
+              "content": "A thiolate group is coordinated to the Fe center at one of the axial positions around Fe.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5399,18 +5390,17 @@
         },
         {
           "id": "B",
-          "text": "\\(While one of the oxygen atoms of O_{2} is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.\\)",
+          "text": "While one of the oxygen atoms of \\(O_{2}\\) is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "While one of the oxygen atoms of O_{2} is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.",
-              "content": "\\(While one of the oxygen atoms of O_{2} is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.\\)",
+              "type": "text",
+              "content": "While one of the oxygen atoms of \\(O_{2}\\) is inserted into a C‒H bond of a hydrocarbon, the other oxygen atom gets reduced to water.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5650,75 +5640,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})\\)",
-        "\\(s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)\\)",
-        "\\(p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)\\)",
-        "\\(p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)\\)"
+        "s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})",
+        "s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)",
+        "p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)",
+        "p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})\\)",
+          "text": "s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})",
-              "content": "\\(s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})\\)",
+              "type": "text",
+              "content": "s →σ(X = Cl); t →σ(X = OMe); u →σ(X = NH_{2}); r →σ(X = NO_{2})",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)\\)",
+          "text": "s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)",
-              "content": "\\(s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)\\)",
+              "type": "text",
+              "content": "s →σ(X = Me); u →σ(X = NH_{2}); t →σ(X = OMe); r →σ(X = Br)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)\\)",
+          "text": "p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)",
-              "content": "\\(p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)\\)",
+              "type": "text",
+              "content": "p →σ(X = Me); q →σ(X = CN); r →σ(X = NO_{2}); t →σ(X = OMe)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)\\)",
+          "text": "p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)",
-              "content": "\\(p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)\\)",
+              "type": "text",
+              "content": "p →σ(X = Cl); q →σ(X = NO_{2}); r →σ(X = CN); t →σ(X = Me)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],

@@ -154,11 +154,11 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Statements:\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
+      "questionText": "Statements:\n\nAll heroes are winners. All winners are lucky people.\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Statements:\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
+          "content": "Statements:\n\nAll heroes are winners. All winners are lucky people.\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
           "confidence": "VERIFIED"
         }
       ],
@@ -278,9 +278,9 @@
       "questionType": "MCQ",
       "options": [
         "5",
-        "\\sqrt 2",
+        "\\sqrt{2}",
         "2",
-        "\\sqrt 5"
+        "\\sqrt{5}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -301,12 +301,12 @@
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
+          "text": "\\sqrt{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 2",
+              "content": "\\sqrt{2}",
               "confidence": "VERIFIED"
             }
           ],
@@ -331,12 +331,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 5",
+          "text": "\\sqrt{5}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 5",
+              "content": "\\sqrt{5}",
               "confidence": "VERIFIED"
             }
           ],
@@ -590,11 +590,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands (i) as an author for standing (ii) as an honorary fellow, after she stood (iii) her writings that stand (iv) the freedom of speech.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands as an author for standing as an honorary \\(\\frac{(i)}{(iii)}\\) \\(\\frac{(ii)}{(iv)}\\) fellow, after she stood her writings that st and the freedom of speech.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands (i) as an author for standing (ii) as an honorary fellow, after she stood (iii) her writings that stand (iv) the freedom of speech.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands as an author for standing as an honorary \\(\\frac{(i)}{(iii)}\\) \\(\\frac{(ii)}{(iv)}\\) fellow, after she stood her writings that st and the freedom of speech.",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +604,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) out\n(ii) down\n(iii) in\n(iv) for",
-        "(i) down\n(ii) out\n(iii) by\n(iv) in",
-        "(i) down\n(ii) out\n(iii) for\n(iv) in",
-        "(i) out\n(ii) down\n(iii) by\n(iv) for"
+        "(i) out (ii) down (iii) in (iv) for",
+        "(i) down (ii) out (iii) by (iv) in",
+        "(i) down (ii) out (iii) for (iv) in",
+        "(i) out (ii) down (iii) by (iv) for"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) out\n(ii) down\n(iii) in\n(iv) for",
+          "text": "(i) out (ii) down (iii) in (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) out\n(ii) down\n(iii) in\n(iv) for",
+              "content": "(i) out (ii) down (iii) in (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +628,12 @@
         },
         {
           "id": "B",
-          "text": "(i) down\n(ii) out\n(iii) by\n(iv) in",
+          "text": "(i) down (ii) out (iii) by (iv) in",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) by\n(iv) in",
+              "content": "(i) down (ii) out (iii) by (iv) in",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +643,12 @@
         },
         {
           "id": "C",
-          "text": "(i) down\n(ii) out\n(iii) for\n(iv) in",
+          "text": "(i) down (ii) out (iii) for (iv) in",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) for\n(iv) in",
+              "content": "(i) down (ii) out (iii) for (iv) in",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +658,12 @@
         },
         {
           "id": "D",
-          "text": "(i) out\n(ii) down\n(iii) by\n(iv) for",
+          "text": "(i) out (ii) down (iii) by (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) out\n(ii) down\n(iii) by\n(iv) for",
+              "content": "(i) out (ii) down (iii) by (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -816,11 +816,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?\n\n1 Mortality Risk of Cardiovascular Disease 0 0 5000 10000 15000 20000 Steps/Day",
+      "questionText": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?\n\n1 Mortality Risk of Cardiovascular Disease 0 0 5000 10000 15000 20000 Steps/Day",
+          "content": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?",
           "confidence": "VERIFIED"
         },
         {
@@ -836,21 +836,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
-        "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
-        "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
-        "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000."
+        "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
+        "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
+        "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
+        "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
+          "text": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
+              "content": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -860,12 +860,12 @@
         },
         {
           "id": "B",
-          "text": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
+          "text": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
+              "content": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -875,12 +875,12 @@
         },
         {
           "id": "C",
-          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
+          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
+              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -890,12 +890,12 @@
         },
         {
           "id": "D",
-          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000.",
+          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000.",
+              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1289,8 +1289,8 @@
       "options": [
         "the exhaled air is released outside the apparatus.",
         "the exhaled air is wholly absorbed within the apparatus.",
-        "CO2 is released outside the apparatus after separating from exhaled air.",
-        "CO2 from exhaled air is absorbed with a chemical."
+        "CO_{2} is released outside the apparatus after separating from exhaled air.",
+        "CO_{2} from exhaled air is absorbed with a chemical."
       ],
       "optionImages": null,
       "richOptions": [
@@ -1326,12 +1326,12 @@
         },
         {
           "id": "C",
-          "text": "CO2 is released outside the apparatus after separating from exhaled air.",
+          "text": "CO_{2} is released outside the apparatus after separating from exhaled air.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CO2 is released outside the apparatus after separating from exhaled air.",
+              "content": "CO_{2} is released outside the apparatus after separating from exhaled air.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1341,12 +1341,12 @@
         },
         {
           "id": "D",
-          "text": "CO2 from exhaled air is absorbed with a chemical.",
+          "text": "CO_{2} from exhaled air is absorbed with a chemical.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "CO2 from exhaled air is absorbed with a chemical.",
+              "content": "CO_{2} from exhaled air is absorbed with a chemical.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1709,11 +1709,11 @@
       "questionNumber": 16,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "𝜋4 ⁄ 𝑐𝑜𝑠𝑥 𝑠𝑖𝑛^{3}𝑥 𝑑𝑥 The value of integral, 𝐼= \\int is 0",
+      "questionText": "The value of integral, 𝐼= \\int 0 𝜋4 ⁄ 𝑐𝑜𝑠𝑥 𝑠𝑖𝑛^{3}𝑥 𝑑𝑥 is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝜋4 ⁄ 𝑐𝑜𝑠𝑥 𝑠𝑖𝑛^{3}𝑥 𝑑𝑥 The value of integral, 𝐼= \\int is 0",
+          "content": "The value of integral, 𝐼= \\int 0 𝜋4 ⁄ 𝑐𝑜𝑠𝑥 𝑠𝑖𝑛^{3}𝑥 𝑑𝑥 is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1723,56 +1723,59 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1 64",
-        "1 16",
-        "1 4",
+        "\\(\\frac{1}{64}\\)",
+        "\\(\\frac{1}{16}\\)",
+        "\\(\\frac{1}{4}\\)",
         "1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1 64",
+          "text": "\\(\\frac{1}{64}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 64",
+              "type": "math",
+              "latex": "\\frac{1}{64}",
+              "content": "\\(\\frac{1}{64}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "1 16",
+          "text": "\\(\\frac{1}{16}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 16",
+              "type": "math",
+              "latex": "\\frac{1}{16}",
+              "content": "\\(\\frac{1}{16}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "1 4",
+          "text": "\\(\\frac{1}{4}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 4",
+              "type": "math",
+              "latex": "\\frac{1}{4}",
+              "content": "\\(\\frac{1}{4}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -1818,11 +1821,11 @@
       "questionNumber": 17,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "𝑛 𝑠𝑖𝑛5𝑥 The value of lim 𝑥→0 ( 𝑠𝑖𝑛3𝑥) is",
+      "questionText": "The value of lim _{𝑥→0} ( <u>𝑛</u> <u>𝑠𝑖𝑛5𝑥</u> _{𝑠𝑖𝑛3𝑥}) is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑛 𝑠𝑖𝑛5𝑥 The value of lim 𝑥→0 ( 𝑠𝑖𝑛3𝑥) is",
+          "content": "The value of lim _{𝑥→0} ( <u>𝑛</u> <u>𝑠𝑖𝑛5𝑥</u> _{𝑠𝑖𝑛3𝑥}) is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1927,11 +1930,11 @@
       "questionNumber": 18,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "The spherical semivariogram model ( ( ) ) is represented by the following  h expression, where h is the lag distance.\n\n=  C , for h 0 0    3   h h  = + - -     ( h ) C ( C C ) , for 0 h a    0 0 a a          C , for h a \n\nThe parameters 𝐶_{0}, 𝐶 and 𝑎 are respectively known as",
+      "questionText": "The spherical semivariogram model ( ( ) \\(\\gamma\\) h ) is represented by the following expression, where h is the lag distance.\n\n\\(\\gamma\\) ( h ) =    h  <u>h</u>  3      C\n\nC C\n\n0 , 0 , + ( C - C 0 )     1 \\(\\frac{h}{a}\\) - 0 h  <u>h</u>    a h  <u>h</u>  h  <u>h</u>    3     , for 0 for\n\nfor  h\n\nh h =\n\n  0\n\na a\n\nThe parameters 𝐶_{0}, 𝐶 and 𝑎 are respectively known as",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The spherical semivariogram model ( ( ) ) is represented by the following  h expression, where h is the lag distance.\n\n=  C , for h 0 0    3   h h  = + - -     ( h ) C ( C C ) , for 0 h a    0 0 a a          C , for h a \n\nThe parameters 𝐶_{0}, 𝐶 and 𝑎 are respectively known as",
+          "content": "The spherical semivariogram model ( ( ) \\(\\gamma\\) h ) is represented by the following expression, where h is the lag distance.\n\n\\(\\gamma\\) ( h ) =    h  <u>h</u>  3      C\n\nC C\n\n0 , 0 , + ( C - C 0 )     1 \\(\\frac{h}{a}\\) - 0 h  <u>h</u>    a h  <u>h</u>  h  <u>h</u>    3     , for 0 for\n\nfor  h\n\nh h =\n\n  0\n\na a\n\nThe parameters 𝐶_{0}, 𝐶 and 𝑎 are respectively known as",
           "confidence": "VERIFIED"
         }
       ],
@@ -2145,11 +2148,46 @@
       "questionNumber": 20,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "A project network with the sequence of five activities is shown.\n\n\n\n\\(\\frac{Thecrashingcostsofactivitiesare}{Activity}\\)\n\n\\(\\frac{A}{5}\\) \\(\\frac{B}{6}\\) \\(\\frac{C}{8}\\) \\(\\frac{D}{3}\\) \\(\\frac{E}{4}\\)\n\n<u>Crashing</u> <u>cost</u> <u>per</u> <u>week</u> (<u>lakh</u> <u>INR</u>) <u>4.0</u> <u>2.5</u> <u>2.0</u> <u>3.0</u> <u>4.0</u>\n\nIf the project is crashed by one week, the increase in project cost, in lakh INR, is",
+      "questionText": "A project network with the sequence of five activities is shown.\n\n| Activity | A | B | C | D | E |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| Duration (week) | 5 | 6 | 8 | 3 | 4 |\n| Crashing cost per week (lakh INR) | 4.0 | 2.5 | 2.0 | 3.0 | 4.0 |\n\nIf the project is crashed by one week, the increase in project cost, in lakh INR, is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A project network with the sequence of five activities is shown.\n\n\n\n\\(\\frac{Thecrashingcostsofactivitiesare}{Activity}\\)\n\n\\(\\frac{A}{5}\\) \\(\\frac{B}{6}\\) \\(\\frac{C}{8}\\) \\(\\frac{D}{3}\\) \\(\\frac{E}{4}\\)\n\n<u>Crashing</u> <u>cost</u> <u>per</u> <u>week</u> (<u>lakh</u> <u>INR</u>) <u>4.0</u> <u>2.5</u> <u>2.0</u> <u>3.0</u> <u>4.0</u>\n\nIf the project is crashed by one week, the increase in project cost, in lakh INR, is",
+          "content": "A project network with the sequence of five activities is shown.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Activity",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "rows": [
+            [
+              "Duration (week)",
+              "5",
+              "6",
+              "8",
+              "3",
+              "4"
+            ],
+            [
+              "Crashing cost per week (lakh INR)",
+              "4.0",
+              "2.5",
+              "2.0",
+              "3.0",
+              "4.0"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "If the project is crashed by one week, the increase in project cost, in lakh INR, is",
           "confidence": "VERIFIED"
         },
         {
@@ -2160,6 +2198,7 @@
       ],
       "contentTypes": [
         "diagram",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2262,11 +2301,41 @@
       "questionNumber": 21,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{Matchthefollowingfeatureswiththecorresponding}{Featureinmineplan}\\)\n\nFeature in mine plan <u>Symbol</u> Feature in mine plan <u>Symbol</u> P 1 Q 2 Staple shaft R 3 Abandoned shaft\n\nS 4 Abandoned staple shaft",
+      "questionText": "Match the following features with the corresponding symbols\n\n| Feature in mine plan | Symbol |\n| :--- | :--- |\n| P | Shaft | 1 |\n| Q | Staple shaft | 2 |\n| R | Abandoned shaft | 3 |\n| S | Abandoned staple shaft | 4 |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{Matchthefollowingfeatureswiththecorresponding}{Featureinmineplan}\\)\n\nFeature in mine plan <u>Symbol</u> Feature in mine plan <u>Symbol</u> P 1 Q 2 Staple shaft R 3 Abandoned shaft\n\nS 4 Abandoned staple shaft",
+          "content": "Match the following features with the corresponding symbols",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature in mine plan",
+            "Symbol"
+          ],
+          "rows": [
+            [
+              "P",
+              "Shaft",
+              "1"
+            ],
+            [
+              "Q",
+              "Staple shaft",
+              "2"
+            ],
+            [
+              "R",
+              "Abandoned shaft",
+              "3"
+            ],
+            [
+              "S",
+              "Abandoned staple shaft",
+              "4"
+            ]
+          ],
           "confidence": "VERIFIED"
         },
         {
@@ -2277,6 +2346,7 @@
       ],
       "contentTypes": [
         "diagram",
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2379,11 +2449,11 @@
       "questionNumber": 22,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "If the major (𝜎_{1}) and minor (𝜎_{3}) principal stresses for a rock element have a 1 relationship as 𝜎_{3} = - 2 𝜎1, the maximum shear stress is expressed by",
+      "questionText": "If the major (𝜎_{1})𝜎_{3}) principal stresses for a rock element have a relationship as 𝜎_{3} = - \\(\\frac{1}{2}\\) 𝜎_{1}, the maximum shear stress is expressed by",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If the major (𝜎_{1}) and minor (𝜎_{3}) principal stresses for a rock element have a 1 relationship as 𝜎_{3} = - 2 𝜎1, the maximum shear stress is expressed by",
+          "content": "If the major (𝜎_{1})𝜎_{3}) principal stresses for a rock element have a relationship as 𝜎_{3} = - \\(\\frac{1}{2}\\) 𝜎_{1}, the maximum shear stress is expressed by",
           "confidence": "VERIFIED"
         }
       ],
@@ -2393,21 +2463,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "4\n3 𝜎1",
-        "3\n4 𝜎1",
-        "1\n2 𝜎1",
-        "1\n4 𝜎1"
+        "\\(\\frac{4}{3}\\) 1",
+        "\\(\\frac{3}{4}\\) 1",
+        "\\(\\frac{1}{2}\\) 1",
+        "\\(\\frac{1}{4}\\) 1"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "4\n3 𝜎1",
+          "text": "\\(\\frac{4}{3}\\) 1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "4\n3 𝜎1",
+              "content": "\\(\\frac{4}{3}\\) 1",
               "confidence": "VERIFIED"
             }
           ],
@@ -2417,12 +2487,12 @@
         },
         {
           "id": "B",
-          "text": "3\n4 𝜎1",
+          "text": "\\(\\frac{3}{4}\\) 1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "3\n4 𝜎1",
+              "content": "\\(\\frac{3}{4}\\) 1",
               "confidence": "VERIFIED"
             }
           ],
@@ -2432,12 +2502,12 @@
         },
         {
           "id": "C",
-          "text": "1\n2 𝜎1",
+          "text": "\\(\\frac{1}{2}\\) 1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n2 𝜎1",
+              "content": "\\(\\frac{1}{2}\\) 1",
               "confidence": "VERIFIED"
             }
           ],
@@ -2447,12 +2517,12 @@
         },
         {
           "id": "D",
-          "text": "1\n4 𝜎1",
+          "text": "\\(\\frac{1}{4}\\) 1",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n4 𝜎1",
+              "content": "\\(\\frac{1}{4}\\) 1",
               "confidence": "VERIFIED"
             }
           ],
@@ -2706,15 +2776,39 @@
       "questionNumber": 25,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{andcorresponding}{Fe(%)}\\)\n\n\\(\\frac{Fe(%)}{58}\\)\n\nAssuming net value versus grade curve to be a straight line, and mining cost of waste is INR 1000 /m^{3}; the correct representation of stripping ratio, SR (m^{3}/tonne) versus Fe (%) grade curve is",
+      "questionText": "The percentage Fe and corresponding net value for an iron ore mine is given below\n\n| Fe (%) | Net value (INR per tonne) |\n| :--- | :--- |\n| 58 | 4000 |\n| 62 | 4500 |\n\nAssuming net value versus grade curve to be a straight line, and mining cost of waste is INR 1000 /m^{3}; the correct representation of stripping ratio, SR (m^{3}/tonne) versus Fe (%) grade curve is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{andcorresponding}{Fe(%)}\\)\n\n\\(\\frac{Fe(%)}{58}\\)\n\nAssuming net value versus grade curve to be a straight line, and mining cost of waste is INR 1000 /m^{3}; the correct representation of stripping ratio, SR (m^{3}/tonne) versus Fe (%) grade curve is",
+          "content": "The percentage Fe and corresponding net value for an iron ore mine is given below",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fe (%)",
+            "Net value (INR per tonne)"
+          ],
+          "rows": [
+            [
+              "58",
+              "4000"
+            ],
+            [
+              "62",
+              "4500"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Assuming net value versus grade curve to be a straight line, and mining cost of waste is INR 1000 /m^{3}; the correct representation of stripping ratio, SR (m^{3}/tonne) versus Fe (%) grade curve is",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3024,11 +3118,11 @@
       "questionNumber": 29,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "A coal washery discharges 300 m^{3}/day of contaminated water in a stream having a flow rate of 0.04 m^{3}/s. The DO level of the stream and the contaminated water are\n\nresultant DO, in mg/L, of the stream just after mixing is_______. (round off up to 2 decimals)",
+      "questionText": "A coal washery discharges 300 m^{3}/day of contaminated water in a stream having a flow rate of 0.04 m^{3}/s. The DO level of the stream and the contaminated water are 5 mg/L and 4 mg/L, respectively. Neglecting the impact of temperature, the resultant DO, in mg/L, of the stream just after mixing is_______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A coal washery discharges 300 m^{3}/day of contaminated water in a stream having a flow rate of 0.04 m^{3}/s. The DO level of the stream and the contaminated water are\n\nresultant DO, in mg/L, of the stream just after mixing is_______. (round off up to 2 decimals)",
+          "content": "A coal washery discharges 300 m^{3}/day of contaminated water in a stream having a flow rate of 0.04 m^{3}/s. The DO level of the stream and the contaminated water are 5 mg/L and 4 mg/L, respectively. Neglecting the impact of temperature, the resultant DO, in mg/L, of the stream just after mixing is_______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
@@ -3354,15 +3448,47 @@
       "questionNumber": 36,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{Datafromtwoproductionfacesofanopenpitiron}{Itemdescription}\\)\n\nOres from two different faces are blended and supplied with Fe grade not less than 60 %. Based on the demand, the combined production is limited to a maximum of 2500 tonne/day. If the selling price of blended iron ores is INR 4500 /tonne, the optimal production from two faces in tonne/day, for maximizing the profit, respectively are",
+      "questionText": "Data from two production faces of an open pit iron ore mine are given.\n\n| Item description | Face 1 | Face 2 |\n| :--- | :--- | :--- |\n| Maximum production capacity (tonne/day) | 1600 | 2000 |\n| Fe (%) | 63 | 58 |\n| Production cost of ores (in INR/tonne) | 1500 | 1200 |\n\nOres from two different faces are blended and supplied with Fe grade not less than 60 %. Based on the demand, the combined production is limited to a maximum of 2500 tonne/day. If the selling price of blended iron ores is INR 4500 /tonne, the optimal production from two faces in tonne/day, for maximizing the profit, respectively are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{Datafromtwoproductionfacesofanopenpitiron}{Itemdescription}\\)\n\nOres from two different faces are blended and supplied with Fe grade not less than 60 %. Based on the demand, the combined production is limited to a maximum of 2500 tonne/day. If the selling price of blended iron ores is INR 4500 /tonne, the optimal production from two faces in tonne/day, for maximizing the profit, respectively are",
+          "content": "Data from two production faces of an open pit iron ore mine are given.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Item description",
+            "Face 1",
+            "Face 2"
+          ],
+          "rows": [
+            [
+              "Maximum production capacity (tonne/day)",
+              "1600",
+              "2000"
+            ],
+            [
+              "Fe (%)",
+              "63",
+              "58"
+            ],
+            [
+              "Production cost of ores (in INR/tonne)",
+              "1500",
+              "1200"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Ores from two different faces are blended and supplied with Fe grade not less than 60 %. Based on the dem and, the combined production is limited to a maximum of 2500 tonne/day. If the selling price of blended iron ores is INR 4500 /tonne, the optimal production from two faces in tonne/day, for maximizing the profit, respectively are",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3572,11 +3698,11 @@
       "questionNumber": 38,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "  1 4 3   = - = T , thenB is Matrix , and B A A A 5 2 1     6 4 3  ",
+      "questionText": "Matrix A =      1 5 6 4 2 4 1 3\n\n3      , and B = A - A T , thenB is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "  1 4 3   = - = T , thenB is Matrix , and B A A A 5 2 1     6 4 3  ",
+          "content": "Matrix A =      1 5 6 4 2 4 1 3\n\n3      , and B = A - A T , thenB is",
           "confidence": "VERIFIED"
         }
       ],
@@ -3681,15 +3807,55 @@
       "questionNumber": 39,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "The roof convergence data for 30 days at a monitoring station in a coal mine gallery is given.\n\n\\(\\frac{Day}{0}\\) \\(\\frac{Convergencereading(mm)}{0}\\)\n\nThe management decides on a Trigger Action Response Plan (TARP) if the following two premises occur simultaneously.\n\nPremise 1: Rate of convergence exceeds 1.5 mm/day between two consecutive measurements. Premise 2: Rate of cumulative increase in convergence exceeds 1.0 mm/day.\n\nIdentify the day on which TARP is enforced in that gallery.",
+      "questionText": "The roof convergence data for 30 days at a monitoring station in a coal mine gallery is given.\n\n| Day | Convergence reading (mm) |\n| :--- | :--- |\n| 0 | 0 |\n| 5 | 4.7 |\n| 10 | 11.3 |\n| 16 | 19.6 |\n| 22 | 28.8 |\n| 30 | 34.8 |\n\nThe management decides on a Trigger Action Response Plan (TARP) if the following two premises occur simultaneously. Premise 1: Rate of convergence exceeds 1.5 mm/day between two consecutive measurements. Premise 2: Rate of cumulative increase in convergence exceeds 1.0 mm/day. Identify the day on which TARP is enforced in that gallery.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The roof convergence data for 30 days at a monitoring station in a coal mine gallery is given.\n\n\\(\\frac{Day}{0}\\) \\(\\frac{Convergencereading(mm)}{0}\\)\n\nThe management decides on a Trigger Action Response Plan (TARP) if the following two premises occur simultaneously.\n\nPremise 1: Rate of convergence exceeds 1.5 mm/day between two consecutive measurements. Premise 2: Rate of cumulative increase in convergence exceeds 1.0 mm/day.\n\nIdentify the day on which TARP is enforced in that gallery.",
+          "content": "The roof convergence data for 30 days at a monitoring station in a coal mine gallery is given.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Day",
+            "Convergence reading (mm)"
+          ],
+          "rows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "5",
+              "4.7"
+            ],
+            [
+              "10",
+              "11.3"
+            ],
+            [
+              "16",
+              "19.6"
+            ],
+            [
+              "22",
+              "28.8"
+            ],
+            [
+              "30",
+              "34.8"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The management decides on a Trigger Action Response Plan (TARP) if the following two premises occur simultaneously.\n\nPremise 1: Rate of convergence exceeds 1.5 mm/day between two consecutive measurements. Premise 2: Rate of cumulative increase in convergence exceeds 1.0 mm/day.\n\nIdentify the day on which TARP is enforced in that gallery.",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3790,11 +3956,11 @@
       "questionNumber": 40,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "Magnitude of error in the determination of the integral, I using Simpson's 1/3 rule, taking step length as 1.0 is\n\n3 𝐼= \\int (𝑥^{3} + 6)𝑑𝑥 1",
+      "questionText": "Magnitude of error in the determination of the integral, I using Simpson's 1/3 rule, taking step length as 1.0 is\n\n𝐼= \\int (𝑥^{3} + 6)𝑑𝑥 3\n\n1",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Magnitude of error in the determination of the integral, I using Simpson's 1/3 rule, taking step length as 1.0 is\n\n3 𝐼= \\int (𝑥^{3} + 6)𝑑𝑥 1",
+          "content": "Magnitude of error in the determination of the integral, I using Simpson's 1/3 rule, taking step length as 1.0 is\n\n𝐼= \\int (𝑥^{3} + 6)𝑑𝑥 3\n\n1",
           "confidence": "VERIFIED"
         }
       ],
@@ -3899,15 +4065,42 @@
       "questionNumber": 41,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{traverse,ABC,the}{Line}\\)\n\nThe length, in m and bearing of line CA, in degree, respectively, are",
+      "questionText": "In a closed traverse, ABC, the bearings of two lines AB and BC are given.\n\n| Line | Length (m) | Bearing |\n| :--- | :--- | :--- |\n| AB | 100 | 90° |\n| BC | 120 | 150° |\n\nThe length, in m and bearing of line CA, in degree, respectively, are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{traverse,ABC,the}{Line}\\)\n\nThe length, in m and bearing of line CA, in degree, respectively, are",
+          "content": "In a closed traverse, ABC, the bearings of two lines AB and BC are given.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Line",
+            "Length (m)",
+            "Bearing"
+          ],
+          "rows": [
+            [
+              "AB",
+              "100",
+              "90°"
+            ],
+            [
+              "BC",
+              "120",
+              "150°"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The length, in m and bearing of line CA, in degree, respectively, are",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4008,15 +4201,34 @@
       "questionNumber": 42,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "supports. \\(\\frac{Geometry}{P.Tabular&}\\) \\(\\frac{Strength}{L.Strong}\\) \\(\\frac{Support}{X.Unsupported}\\) \\(\\frac{Method}{1.CutandFill}\\)\n\nM. Moderate Y. Artificially Q. Tabular & Flat Supported N. Weak R. Massive and Steep Z. Self-supported",
+      "questionText": "supports.\n\n| Geometry | Strength | Support | Method |\n| :--- | :--- | :--- | :--- |\n| P. Tabular & Moderately Steep Q. Tabular & Flat R. Massive and Steep | L. Strong M. Moderate N. Weak | X. Unsupported Y. Artificially Supported Z. Self-supported | 1. Cut and Fill 2. Block Caving 3. Room and Pillar |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "supports. \\(\\frac{Geometry}{P.Tabular&}\\) \\(\\frac{Strength}{L.Strong}\\) \\(\\frac{Support}{X.Unsupported}\\) \\(\\frac{Method}{1.CutandFill}\\)\n\nM. Moderate Y. Artificially Q. Tabular & Flat Supported N. Weak R. Massive and Steep Z. Self-supported",
+          "content": "supports.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Geometry",
+            "Strength",
+            "Support",
+            "Method"
+          ],
+          "rows": [
+            [
+              "P. Tabular & Moderately Steep Q. Tabular & Flat R. Massive and Steep",
+              "L. Strong M. Moderate N. Weak",
+              "X. Unsupported Y. Artificially Supported Z. Self-supported",
+              "1. Cut and Fill 2. Block Caving 3. Room and Pillar"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4117,11 +4329,11 @@
       "questionNumber": 43,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "= + - = + + a 2 i 3 j 4 k b 4 i 2 j 3 k Vectors and represent the two adjacent sides of a triangle. The magnitude of the area of the triangle and the unit vector perpendicular to botha andb respectively, are",
+      "questionText": "Vectors a = 2 i + 3 j - 4 k and b = 4 i + 2 j + 3 k represent the two adjacent sides of a triangle. The magnitude of the area of the triangle and the unit vector perpendicular to botha andb respectively, are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "= + - = + + a 2 i 3 j 4 k b 4 i 2 j 3 k Vectors and represent the two adjacent sides of a triangle. The magnitude of the area of the triangle and the unit vector perpendicular to botha andb respectively, are",
+          "content": "Vectors a = 2 i + 3 j - 4 k and b = 4 i + 2 j + 3 k represent the two adjacent sides of a triangle. The magnitude of the area of the triangle and the unit vector perpendicular to botha andb respectively, are",
           "confidence": "VERIFIED"
         }
       ],
@@ -4380,11 +4592,11 @@
       "questionNumber": 47,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "Polluted air with particulate matters of diameter 50 µm enter with a horizontal velocity of 1.0 m/s at a height of 0.5 m from the bottom of a dry settling chamber. The density of the particle is 2000 kg/m^{3} and dynamic viscosity of the air is\n\nAssume streamline flow and the density of air is negligible as compared to particles and uniform horizontal velocity of 1.0 m/s of gas and particles within the chamber.\n\nConsidering particle settling follows Stoke's law, the minimum length in m, of the chamber required for settling of the particle at its bottom, is ______. (round off up to 2 decimals)",
+      "questionText": "Polluted air with particulate matters of diameter 50 µm enter with a horizontal velocity of 1.0 m/s at a height of 0.5 m from the bottom of a dry settling chamber. The density of the particle is 2000 kg/m^{3} and dynamic viscosity of the air is 8 \\times 10^{-5} kg/m-s. Assume streamline flow and the density of air is negligible as compared to particles and uniform horizontal velocity of 1.0 m/s of gas and particles within the chamber.\n\nConsidering particle settling follows Stoke's law, the minimum length in m, of the chamber required for settling of the particle at its bottom, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Polluted air with particulate matters of diameter 50 µm enter with a horizontal velocity of 1.0 m/s at a height of 0.5 m from the bottom of a dry settling chamber. The density of the particle is 2000 kg/m^{3} and dynamic viscosity of the air is\n\nAssume streamline flow and the density of air is negligible as compared to particles and uniform horizontal velocity of 1.0 m/s of gas and particles within the chamber.\n\nConsidering particle settling follows Stoke's law, the minimum length in m, of the chamber required for settling of the particle at its bottom, is ______. (round off up to 2 decimals)",
+          "content": "Polluted air with particulate matters of diameter 50 µm enter with a horizontal velocity of 1.0 m/s at a height of 0.5 m from the bottom of a dry settling chamber. The density of the particle is 2000 kg/m^{3} and dynamic viscosity of the air is 8 \\times 10^{-5} kg/m-s. Assume streamline flow and the density of air is negligible as compared to particles and uniform horizontal velocity of 1.0 m/s of gas and particles within the chamber.\n\nConsidering particle settling follows Stoke's law, the minimum length in m, of the chamber required for settling of the particle at its bottom, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
@@ -4426,15 +4638,47 @@
       "questionNumber": 48,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{Inatacheometrysurvey}{Instrument}\\)\n\n\\(\\frac{readings(m)}{1.2,1.7,2.2}\\)\n\n\\(\\frac{+8°}{+3°}\\)\n\nThe additive and multiplying constants of the instrument are 0 and 100, respectively. The length of the line AB in m, is ______. (round off up to 2 decimals)",
+      "questionText": "In a tacheometry survey, the readings observed are given.\n\n| Instrument Station | Staff Station | Bearing of line of sight | Vertical angle | Staff readings (m) |\n| :--- | :--- | :--- | :--- | :--- |\n| P | A | 145° | +8° | 1.2, 1.7, 2.2 |\n| B | 205° | +3° | 0.8, 1.2, 1.6 |\n\nThe additive and multiplying constants of the instrument are 0 and 100, respectively. The length of the line AB in m, is ______.  (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{Inatacheometrysurvey}{Instrument}\\)\n\n\\(\\frac{readings(m)}{1.2,1.7,2.2}\\)\n\n\\(\\frac{+8°}{+3°}\\)\n\nThe additive and multiplying constants of the instrument are 0 and 100, respectively. The length of the line AB in m, is ______. (round off up to 2 decimals)",
+          "content": "In a tacheometry survey, the readings observed are given.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Instrument Station",
+            "Staff Station",
+            "Bearing of line of sight",
+            "Vertical angle",
+            "Staff readings (m)"
+          ],
+          "rows": [
+            [
+              "P",
+              "A",
+              "145°",
+              "+8°",
+              "1.2, 1.7, 2.2"
+            ],
+            [
+              "B",
+              "205°",
+              "+3°",
+              "0.8, 1.2, 1.6"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The additive and multiplying constants of the instrument are 0 and 100, respectively. The length of the line AB in m, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4518,11 +4762,11 @@
       "questionNumber": 50,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "A rectangular face of 2.0 m x 2.5 m dimension is blasted with 20 kg explosive in a 1000 m long drive. One kilogram of explosive produces 2200 cm^{3} of nitrous fumes. The face is ventilated with a duct, located 10.0 m away from the face, to dilute the fumes. The quantity of air, in m^{3}/s to be circulated for reducing the concentration of nitrous fumes to 5 ppm within a period of 5 minutes, is ____. (round off up to 2 decimals)\n\n𝑉𝑚 𝑞 𝑉-𝑉𝑚 [Use the relation, 𝑡= 2.303 𝑄 log 𝑉_{𝑚}𝑐+ , where t = time, 𝑉_{𝑚} = volume 𝑄 of the tunnel over which the mixing of the gases produced at the face, and air delivered by the fan occurs, 𝑐 = concentration at time, t, 𝑉 = volume of tunnel, 𝑄 = quantity of air flow, 𝑞 = total volume of nitrous fumes produced]",
+      "questionText": "A rectangular face of 2.0 m x 2.5 m dimension is blasted with 20 kg explosive in a 1000 m long drive. One kilogram of explosive produces 2200 cm^{3} of nitrous fumes. The face is ventilated with a duct, located 10.0 m away from the face, to dilute the fumes. The quantity of air, in m^{3}/s to be circulated for reducing the concentration of nitrous fumes to 5 ppm within a period of 5 minutes, is ____. (round off up to 2 decimals)\n\n[Use the relation, 𝑡= 2.303 of the tunnel over which the mixing of the gases produced at the face, and air \\(\\frac{𝑉𝑚}{𝑄}\\) log 𝑉_{𝑚}𝑐+ 𝑉𝑚 <u>𝑞</u> 𝑉-𝑉𝑚 \\(\\frac{𝑉-𝑉𝑚}{𝑄}\\) , where t = time, 𝑉_{𝑚} = volume\n\ndelivered by the fan occurs, 𝑐 = concentration at time, t, 𝑉 = volume of tunnel, 𝑄 = quantity of air flow, 𝑞 = total volume of nitrous fumes produced]",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A rectangular face of 2.0 m x 2.5 m dimension is blasted with 20 kg explosive in a 1000 m long drive. One kilogram of explosive produces 2200 cm^{3} of nitrous fumes. The face is ventilated with a duct, located 10.0 m away from the face, to dilute the fumes. The quantity of air, in m^{3}/s to be circulated for reducing the concentration of nitrous fumes to 5 ppm within a period of 5 minutes, is ____. (round off up to 2 decimals)\n\n𝑉𝑚 𝑞 𝑉-𝑉𝑚 [Use the relation, 𝑡= 2.303 𝑄 log 𝑉_{𝑚}𝑐+ , where t = time, 𝑉_{𝑚} = volume 𝑄 of the tunnel over which the mixing of the gases produced at the face, and air delivered by the fan occurs, 𝑐 = concentration at time, t, 𝑉 = volume of tunnel, 𝑄 = quantity of air flow, 𝑞 = total volume of nitrous fumes produced]",
+          "content": "A rectangular face of 2.0 m x 2.5 m dimension is blasted with 20 kg explosive in a 1000 m long drive. One kilogram of explosive produces 2200 cm^{3} of nitrous fumes. The face is ventilated with a duct, located 10.0 m away from the face, to dilute the fumes. The quantity of air, in m^{3}/s to be circulated for reducing the concentration of nitrous fumes to 5 ppm within a period of 5 minutes, is ____. (round off up to 2 decimals)\n\n[Use the relation, 𝑡= 2.303 of the tunnel over which the mixing of the gases produced at the face, and air \\(\\frac{𝑉𝑚}{𝑄}\\) log 𝑉_{𝑚}𝑐+ 𝑉𝑚 <u>𝑞</u> 𝑉-𝑉𝑚 \\(\\frac{𝑉-𝑉𝑚}{𝑄}\\) , where t = time, 𝑉_{𝑚} = volume\n\ndelivered by the fan occurs, 𝑐 = concentration at time, t, 𝑉 = volume of tunnel, 𝑄 = quantity of air flow, 𝑞 = total volume of nitrous fumes produced]",
           "confidence": "VERIFIED"
         }
       ],
@@ -4702,11 +4946,11 @@
       "questionNumber": 54,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "sandstone rock is given as 𝜏= 7.5 + 0.84 𝜎𝑛 (unit of stresses is MPa) A sandstone sample is tested in triaxial mode with confining pressure of 5.0 MPa. The value of the shear stress, 𝜏 in MPa at the failure, is______. (round off up to 2 decimals)",
+      "questionText": "sandstone rock is given as\n\n𝜏= 7.5 + 0.84 𝜎_{𝑛} (unit of stresses is MPa)\n\nA sandstone sample is tested in triaxial mode with confining pressure of 5.0 MPa. The value of the shear stress, 𝜏 in MPa at the failure, is______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "sandstone rock is given as 𝜏= 7.5 + 0.84 𝜎𝑛 (unit of stresses is MPa) A sandstone sample is tested in triaxial mode with confining pressure of 5.0 MPa. The value of the shear stress, 𝜏 in MPa at the failure, is______. (round off up to 2 decimals)",
+          "content": "sandstone rock is given as\n\n𝜏= 7.5 + 0.84 𝜎_{𝑛} (unit of stresses is MPa)\n\nA sandstone sample is tested in triaxial mode with confining pressure of 5.0 MPa. The value of the shear stress, 𝜏 in MPa at the failure, is______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
@@ -4910,15 +5154,55 @@
       "questionNumber": 58,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "\\(\\frac{Mineral}{Gradeinterval}\\)\n\n5 \\(\\frac{5}{0}\\)\n\nConcentrating cost : INR 3,200/tonne of ore milled Smelting & refinery cost : INR 10,000/tonne of copper metal Selling price : INR 6,50,000/tonne of copper metal Overall recovery : 100% Maximum production capacity : 5 million tonne/annum The mine is operating at 5 million tonne in a year. Considering mining capacity being the only constraint, Lanes' algorithm (based on profit maximization) is used for determining mill cut-off grade. The total amount of copper produced in million tonne, in the life of the pit, is ______. (round off up to 2 decimals)",
+      "questionText": "**Mineral inventory**\n\n| Grade interval | Tonnage (in million tonne) |\n| :--- | :--- |\n| 0 < Cu% \\le 0.3 | 0 |\n| 0.3 < Cu% \\le 0.4 | 5 |\n| 0.4 < Cu% \\le 0.5 | 5 |\n| 0.5 < Cu% \\le 0.6 | 5 |\n| 0.6 < Cu% \\le 0.7 | 5 |\n| 0.7 < Cu% \\le 0.8 | 5 |\n| 0.8 < Cu% | 0 |\n\nConcentrating cost : INR 3,200/tonne of ore milled Smelting & refinery cost : INR 10,000/tonne of copper metal Selling price : INR 6,50,000/tonne of copper metal Overall recovery : 100% Maximum production capacity : 5 million tonne/annum The mine is operating at 5 million tonne in a year. Considering mining capacity being the only constraint, Lanes’ algorithm (based on profit maximization) is used for determining mill cut-off grade. The total amount of copper produced in million tonne, in the life of the pit, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
+          "type": "table",
+          "headers": [
+            "Grade interval",
+            "Tonnage (in million tonne)"
+          ],
+          "rows": [
+            [
+              "0 < Cu% \\le 0.3",
+              "0"
+            ],
+            [
+              "0.3 < Cu% \\le 0.4",
+              "5"
+            ],
+            [
+              "0.4 < Cu% \\le 0.5",
+              "5"
+            ],
+            [
+              "0.5 < Cu% \\le 0.6",
+              "5"
+            ],
+            [
+              "0.6 < Cu% \\le 0.7",
+              "5"
+            ],
+            [
+              "0.7 < Cu% \\le 0.8",
+              "5"
+            ],
+            [
+              "0.8 < Cu%",
+              "0"
+            ]
+          ],
+          "confidence": "VERIFIED",
+          "caption": "Mineral inventory"
+        },
+        {
           "type": "text",
-          "content": "\\(\\frac{Mineral}{Gradeinterval}\\)\n\n5 \\(\\frac{5}{0}\\)\n\nConcentrating cost : INR 3,200/tonne of ore milled Smelting & refinery cost : INR 10,000/tonne of copper metal Selling price : INR 6,50,000/tonne of copper metal Overall recovery : 100% Maximum production capacity : 5 million tonne/annum The mine is operating at 5 million tonne in a year. Considering mining capacity being the only constraint, Lanes' algorithm (based on profit maximization) is used for determining mill cut-off grade. The total amount of copper produced in million tonne, in the life of the pit, is ______. (round off up to 2 decimals)",
+          "content": "Concentrating cost : INR 3,200/tonne of ore milled Smelting & refinery cost : INR 10,000/tonne of copper metal Selling price : INR 6,50,000/tonne of copper metal Overall recovery : 100% Maximum production capacity : 5 million tonne/annum\n\nThe mine is operating at 5 million tonne in a year. Considering mining capacity being the only constraint, Lanes' algorithm (based on profit maximization) is used for determining mill cut-off grade. The total amount of copper produced in million tonne, in the life of the pit, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4956,11 +5240,11 @@
       "questionNumber": 59,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "shaded portion. For a uniform thickness of the stope block, the percentage of ore recovery, is ______. (round off up to 2 decimals)\n\n___",
+      "questionText": "shaded portion. For a uniform thickness of the stope block, the percentage of ore recovery, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "shaded portion. For a uniform thickness of the stope block, the percentage of ore recovery, is ______. (round off up to 2 decimals)\n\n___",
+          "content": "shaded portion. For a uniform thickness of the stope block, the percentage of ore recovery, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         },
         {
@@ -5056,11 +5340,11 @@
       "questionNumber": 61,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "simultaneously for a maximum charge per delay (Q) of 1200 kg as given. \\(\\frac{Location}{A}\\) \\(\\frac{Distancefromtheblastface,D(m)}{100}\\)\n\nAssume the relation -𝛽 𝑃𝑃𝑉= 𝐾[ 𝐷 ] \\sqrt 𝑄 where, 𝐾 and 𝛽 are site constants. The PPV in mm/s, at a distance of 200 m from the blast face, is ______. (round off up to 2 decimals)",
+      "questionText": "simultaneously for a maximum charge per delay (Q) of 1200 kg as given.\n\n\\(\\frac{Location}{A}\\) \\(\\frac{Distancefromtheblastface,D(m)}{100}\\) \\(\\frac{PPV(mm/s)}{112.5}\\) \\(\\frac{A}{B}\\) \\(\\frac{100}{300}\\) \\(\\frac{112.5}{20.3}\\)\n\nAssume the relation 𝑃𝑃𝑉= 𝐾[ \\(\\frac{𝐷}{ \\sqrt 𝑄}\\) -𝛽\n\nwhere, 𝐾 and 𝛽 are site constants. The PPV in mm/s, at a distance of 200 m from the blast face, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "simultaneously for a maximum charge per delay (Q) of 1200 kg as given. \\(\\frac{Location}{A}\\) \\(\\frac{Distancefromtheblastface,D(m)}{100}\\)\n\nAssume the relation -𝛽 𝑃𝑃𝑉= 𝐾[ 𝐷 ] \\sqrt 𝑄 where, 𝐾 and 𝛽 are site constants. The PPV in mm/s, at a distance of 200 m from the blast face, is ______. (round off up to 2 decimals)",
+          "content": "simultaneously for a maximum charge per delay (Q) of 1200 kg as given.\n\n\\(\\frac{Location}{A}\\) \\(\\frac{Distancefromtheblastface,D(m)}{100}\\) \\(\\frac{PPV(mm/s)}{112.5}\\) \\(\\frac{A}{B}\\) \\(\\frac{100}{300}\\) \\(\\frac{112.5}{20.3}\\)\n\nAssume the relation 𝑃𝑃𝑉= 𝐾[ \\(\\frac{𝐷}{ \\sqrt 𝑄}\\) -𝛽\n\nwhere, 𝐾 and 𝛽 are site constants. The PPV in mm/s, at a distance of 200 m from the blast face, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5148,11 +5432,11 @@
       "questionNumber": 63,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "replaced for the manwinding cage.\n\nConsider the following:\n\n1) A new rope is recapped once at least in every 6 months and a length of 2 m including existing capping is to be cut off from the rope before recapping. 2) The maximum life of a rope is 3.5 years and at least 2 rounds of rope should remain on the drum while the descending cage lands at the bottomost landing point. 3) No overwinding will take place during the maximum life of the new rope. Neglecting the impact of fleet angle on the length of the rope, the minimum length, in m, of new winding rope is ______. (round off up to 2 decimals)",
+      "questionText": "replaced for the manwinding cage.\n\nConsider the following:\n\n1) A new rope is recapped once at least in every 6 months and a length of 2 m including existing capping is to be cut off from the rope before recapping. 2) The maximum life of a rope is 3.5 years and at least 2 rounds of rope should remain on the drum while the descending cage lands at the bottomost landing point. 3) No overwinding will take place during the maximum life of the new rope.\n\nNeglecting the impact of fleet angle on the length of the rope, the minimum length, in m, of new winding rope is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "replaced for the manwinding cage.\n\nConsider the following:\n\n1) A new rope is recapped once at least in every 6 months and a length of 2 m including existing capping is to be cut off from the rope before recapping. 2) The maximum life of a rope is 3.5 years and at least 2 rounds of rope should remain on the drum while the descending cage lands at the bottomost landing point. 3) No overwinding will take place during the maximum life of the new rope. Neglecting the impact of fleet angle on the length of the rope, the minimum length, in m, of new winding rope is ______. (round off up to 2 decimals)",
+          "content": "replaced for the manwinding cage.\n\nConsider the following:\n\n1) A new rope is recapped once at least in every 6 months and a length of 2 m including existing capping is to be cut off from the rope before recapping. 2) The maximum life of a rope is 3.5 years and at least 2 rounds of rope should remain on the drum while the descending cage lands at the bottomost landing point. 3) No overwinding will take place during the maximum life of the new rope.\n\nNeglecting the impact of fleet angle on the length of the rope, the minimum length, in m, of new winding rope is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         },
         {
@@ -5202,11 +5486,11 @@
       "questionNumber": 64,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "For a continuous miner (CM) panel, the following data are given.\n\nData related to CM\n\nDimension of a working face : 5.0 m (width) x 3.0 m (height) Web depth, m : 0.6 Time for one web cut up to full height, min : 9\n\nData related to shuttle car\n\nBucket capacity of shuttle car, tonne : 10 Fill factor : 0.9 Number of cars : 2 Cycle time of each car including loading, travel and unloading, min : 6 Assume, unit weight of coal is 1.4 tonne/m^{3} and its swell factor is 1.2. Consider, 6 working hours per shift.\n\nThe non-working time in min, in working hours per shuttle car to dispatch all coal cut by the CM, is ______. (round off up to 2 decimals)",
+      "questionText": "For a continuous miner (CM) panel, the following data are given.\n\nData related to CM\n\nDimension of a working face : 5.0 m (width) x 3.0 m (height) Web depth, m : 0.6 Time for one web cut up to full height, min : 9\n\nData related to shuttle car\n\nBucket capacity of shuttle car, tonne : 10 Fill factor : 0.9 Number of cars : 2 Cycle time of each car including loading, travel and unloading, min : 6\n\nAssume, unit weight of coal is 1.4 tonne/m^{3} and its swell factor is 1.2. Consider, 6 working hours per shift.\n\nThe non-working time in min, in working hours per shuttle car to dispatch all coal cut by the CM, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For a continuous miner (CM) panel, the following data are given.\n\nData related to CM\n\nDimension of a working face : 5.0 m (width) x 3.0 m (height) Web depth, m : 0.6 Time for one web cut up to full height, min : 9\n\nData related to shuttle car\n\nBucket capacity of shuttle car, tonne : 10 Fill factor : 0.9 Number of cars : 2 Cycle time of each car including loading, travel and unloading, min : 6 Assume, unit weight of coal is 1.4 tonne/m^{3} and its swell factor is 1.2. Consider, 6 working hours per shift.\n\nThe non-working time in min, in working hours per shuttle car to dispatch all coal cut by the CM, is ______. (round off up to 2 decimals)",
+          "content": "For a continuous miner (CM) panel, the following data are given.\n\nData related to CM\n\nDimension of a working face : 5.0 m (width) x 3.0 m (height) Web depth, m : 0.6 Time for one web cut up to full height, min : 9\n\nData related to shuttle car\n\nBucket capacity of shuttle car, tonne : 10 Fill factor : 0.9 Number of cars : 2 Cycle time of each car including loading, travel and unloading, min : 6\n\nAssume, unit weight of coal is 1.4 tonne/m^{3} and its swell factor is 1.2. Consider, 6 working hours per shift.\n\nThe non-working time in min, in working hours per shuttle car to dispatch all coal cut by the CM, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5248,11 +5532,11 @@
       "questionNumber": 65,
       "sectionId": "mn_core",
       "sectionName": "Mining Engineering",
-      "questionText": "are initiated with electric delay detonators connected in series. The length of a detonator lead wire is 1.5 m. The length of the blasting cable is 120 m. Data are as given:\n\nResistance of each detonator : 1.48 Ω Resistance of lead wire : 0.04 Ω/m Resistance of one wire of the blasting cable : 0.009 Ω/m The total resistance of the circuit in Ω, is ______. (round off up to 2 decimals)",
+      "questionText": "are initiated with electric delay detonators connected in series. The length of a detonator lead wire is 1.5 m. The length of the blasting cable is 120 m.\n\nData are as given:\n\nResistance of each detonator : 1.48 Ω Resistance of lead wire : 0.04 Ω/m Resistance of one wire of the blasting cable : 0.009 Ω/m\n\nThe total resistance of the circuit in Ω, is ______. (round off up to 2 decimals)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "are initiated with electric delay detonators connected in series. The length of a detonator lead wire is 1.5 m. The length of the blasting cable is 120 m. Data are as given:\n\nResistance of each detonator : 1.48 Ω Resistance of lead wire : 0.04 Ω/m Resistance of one wire of the blasting cable : 0.009 Ω/m The total resistance of the circuit in Ω, is ______. (round off up to 2 decimals)",
+          "content": "are initiated with electric delay detonators connected in series. The length of a detonator lead wire is 1.5 m. The length of the blasting cable is 120 m.\n\nData are as given:\n\nResistance of each detonator : 1.48 Ω Resistance of lead wire : 0.04 Ω/m Resistance of one wire of the blasting cable : 0.009 Ω/m\n\nThe total resistance of the circuit in Ω, is ______. (round off up to 2 decimals)",
           "confidence": "VERIFIED"
         }
       ],

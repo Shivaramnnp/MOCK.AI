@@ -82,6 +82,22 @@ export class OptionClassifier {
       // Ensure it's not an explicit Question prefix (e.g. "Q.1")
       if (/^q/i.test(text)) continue;
 
+      // Ensure the option marker is not preceded on the same horizontal line by non-option text/formula
+      const precedingOther = nodesList.find(
+        (other) =>
+          other.pageNumber === node.pageNumber &&
+          other.nodeId !== node.nodeId &&
+          (other.nodeType === 'TEXT_RUN' || other.nodeType === 'GLYPH_RUN') &&
+          Math.abs(other.bbox.y0 - node.bbox.y0) <= 4.0 &&
+          other.bbox.x1 <= node.bbox.x0 &&
+          other.bbox.x1 >= node.bbox.x0 - 20.0 &&
+          !/^(?:Ans|Answer)\b/i.test((other.textContent || '').trim()) &&
+          !/^(\([A-Ea-e1-4ivx]+\)|\[[A-Ea-e1-4ivx]+\]|(?:[A-Ea-e]|[1-4]|[ivx]+)[\.\)])/i.test((other.textContent || '').trim()) &&
+          !/^[.\s\-_~:]+$/.test((other.textContent || '').trim()) &&
+          (other.textContent || '').trim().length > 0
+      );
+      if (precedingOther) continue;
+
       const rawMarker = markerMatch[1];
       const remainderText = markerMatch[2];
       const contentNodeIds: string[] = [];
@@ -95,23 +111,49 @@ export class OptionClassifier {
         // Combined marker + text in same node
         contentNodeIds.push(node.nodeId);
       } else {
-        // Marker is isolated; find adjacent content node (to the right or immediately below)
-        const nextNode = nodesList[i + 1];
-        if (nextNode && nextNode.pageNumber === node.pageNumber) {
-          const isRightAdjacent =
-            nextNode.bbox.x0 >= node.bbox.x1 - 5.0 &&
-            Math.abs(nextNode.bbox.y0 - node.bbox.y0) <= 8.0;
-          const isImmediateBelow =
-            nextNode.bbox.y0 >= node.bbox.y1 - 2.0 &&
-            nextNode.bbox.y0 <= node.bbox.y1 + 15.0;
+        // Marker is isolated; accumulate text/asset nodes on the same baseline or immediately below
+        let j = i + 1;
+        while (j < nodesList.length) {
+          const candNode = nodesList[j];
+          if (candNode.pageNumber !== node.pageNumber) break;
 
-          if (isRightAdjacent || isImmediateBelow) {
-            contentNodeIds.push(nextNode.nodeId);
-            visitedNodes.add(nextNode.nodeId);
+          const isRightOnLine =
+            candNode.bbox.x0 >= node.bbox.x1 - 5.0 &&
+            Math.abs(candNode.bbox.y0 - node.bbox.y0) <= 8.0;
 
-            if (nextNode.nodeType === 'RASTER_IMAGE' || nextNode.nodeType === 'VECTOR_PATH') {
+          if (isRightOnLine) {
+            const candText = (candNode.textContent || '').trim();
+            // Stop if encountering another option marker on the same line
+            if (
+              candText.length > 0 &&
+              /^(\([A-Ea-e1-4ivx]+\)|\[[A-Ea-e1-4ivx]+\]|(?:[A-Ea-e]|[1-4]|[ivx]+)[\.\)])(?:\s+.*)?$/i.test(candText)
+            ) {
+              break;
+            }
+            if (candText.length > 0 || candNode.nodeType === 'RASTER_IMAGE' || candNode.nodeType === 'VECTOR_PATH') {
+              contentNodeIds.push(candNode.nodeId);
+            }
+            if (candNode.nodeType === 'RASTER_IMAGE' || candNode.nodeType === 'VECTOR_PATH') {
               hasVisualAsset = true;
             }
+            j++;
+          } else {
+            // Not on same line; if nothing found on same line, check immediately below
+            if (contentNodeIds.length === 0) {
+              const isImmediateBelow =
+                candNode.bbox.y0 >= node.bbox.y1 - 2.0 &&
+                candNode.bbox.y0 <= node.bbox.y1 + 18.0;
+              if (isImmediateBelow) {
+                const candText = (candNode.textContent || '').trim();
+                if (candText.length > 0 || candNode.nodeType === 'RASTER_IMAGE' || candNode.nodeType === 'VECTOR_PATH') {
+                  contentNodeIds.push(candNode.nodeId);
+                }
+                if (candNode.nodeType === 'RASTER_IMAGE' || candNode.nodeType === 'VECTOR_PATH') {
+                  hasVisualAsset = true;
+                }
+              }
+            }
+            break;
           }
         }
       }

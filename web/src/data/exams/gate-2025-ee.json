@@ -416,15 +416,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/ee/q4_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -508,10 +502,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
-      "diagramUrl": "/exam-assets/gate/2025/ee/q4_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/ee/q4_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -528,11 +520,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "What is the value of ( <u>381</u> 3 27^{4} \\(\\frac{1}{274)3}\\) ?",
+      "questionText": "<u>1</u> What is the value of ( <u>381</u> 3 _{274}) What is the value of ( 3 ?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "What is the value of ( <u>381</u> 3 27^{4} \\(\\frac{1}{274)3}\\) ?",
+          "content": "<u>1</u> What is the value of ( <u>381</u> 3 _{274}) What is the value of ( 3 ?",
           "confidence": "VERIFIED"
         }
       ],
@@ -976,11 +968,11 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{distance𝑦}{𝑥}\\) is:",
+      "questionText": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{𝑦}{𝑥}\\) is:",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{distance𝑦}{𝑥}\\) is:",
+          "content": "Spheres of unit diameter are centered at (𝑙, 𝑚, 𝑛) where 𝑙, 𝑚, and 𝑛 take every possible integer values.\n\nThe distance between two spheres is computed from the center of one sphere to the center of the other sphere. For a given sphere, x is the distance to its nearest sphere and y is the distance to its next nearest sphere. The value of \\(\\frac{𝑦}{𝑥}\\) is:",
           "confidence": "VERIFIED"
         }
       ],
@@ -1982,21 +1974,15 @@
       "questionNumber": 18,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\nY",
+      "questionText": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\n1 A 1 kΩ\n\nY",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\nY",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/ee/q18_diag.png",
+          "content": "The I-V characteristics of the element between the nodes X and Y is best depicted by\n\nX I_{XY}\n\n1 A 1 kΩ\n\nY",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2007,32 +1993,71 @@
         "\\(I_{XY} 1 A 0 V_{XY}\\)",
         "\\(I_{XY} 1 A 0 V_{XY}\\)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/ee/q18_opt_a.png",
-        "/exam-assets/gate/2025/ee/q18_opt_b.png",
-        "/exam-assets/gate/2025/ee/q18_opt_c.png",
-        "/exam-assets/gate/2025/ee/q18_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
-          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_a.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "I_{XY} 1 A 0 V_{XY}",
+              "content": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
           "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
-          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_b.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "I_{XY} 1 A 0 V_{XY}",
+              "content": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
           "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
-          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_c.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "I_{XY} 1 A 0 V_{XY}",
+              "content": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
           "text": "\\(I_{XY} 1 A 0 V_{XY}\\)",
-          "imageUrl": "/exam-assets/gate/2025/ee/q18_opt_d.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "I_{XY} 1 A 0 V_{XY}",
+              "content": "\\(I_{XY} 1 A 0 V_{XY}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2044,10 +2069,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
-      "diagramUrl": "/exam-assets/gate/2025/ee/q18_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/ee/q18_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -2843,11 +2866,11 @@
       "questionNumber": 26,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\n\\(\\frac{F}{OE}\\) ω",
+      "questionText": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\nQ R\n\nP S\n\nT_{L}\n\nF O E ω",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\n\\(\\frac{F}{OE}\\) ω",
+          "content": "The operating region of the developed torque (𝑇_{𝑒𝑚}) and speed (𝜔) of an induction motor drive is given by the shaded region OQRE in the figure. The load torque (𝑇_{𝐿}) characteristic is also shown. The motor drive moves from the initial operating point O to the final operating point S. Which one of the following trajectories will take\n\nQ R\n\nP S\n\nT_{L}\n\nF O E ω",
           "confidence": "VERIFIED"
         },
         {
@@ -3605,7 +3628,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+        "\\(𝑃_{𝑌}(𝑦) = { 2 \\sqrt 𝑦 1, 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
         "\\(𝑃_{𝑌}(𝑦) = {1, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
         "\\(𝑃_{𝑌}(𝑦) = {1.5 \\sqrt 𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
         "\\(𝑃_{𝑌}(𝑦) = {2𝑦, 0, 𝑦 \\in (0,1] 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)"
@@ -3614,17 +3637,18 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+          "text": "\\(𝑃_{𝑌}(𝑦) = { 2 \\sqrt 𝑦 1, 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑃_{𝑌}(𝑦) = { \\(\\frac{1}{2 \\sqrt 𝑦}\\), 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "type": "math",
+              "latex": "𝑃_{𝑌}(𝑦) = { 2 \\sqrt 𝑦 1, 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒",
+              "content": "\\(𝑃_{𝑌}(𝑦) = { 2 \\sqrt 𝑦 1, 𝑦 \\in (0,1] 0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -3722,32 +3746,67 @@
         "v f x",
         "v f x"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/ee/q37_opt_a.png",
-        "/exam-assets/gate/2025/ee/q37_opt_b.png",
-        "/exam-assets/gate/2025/ee/q37_opt_c.png",
-        "/exam-assets/gate/2025/ee/q37_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "u f w",
-          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_a.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "u f w",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "u f w",
-          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_b.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "u f w",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "v f x",
-          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_c.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "v f x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "v f x",
-          "imageUrl": "/exam-assets/gate/2025/ee/q37_opt_d.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "v f x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3777,11 +3836,11 @@
       "questionNumber": 38,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>\n\nI_{DC}\n\n<u>VDC</u> M_{2} V_{out}\n\n<u>Vin</u> M_{1}",
+      "questionText": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>\n\nI_{DC}\n\n<u>VDC</u> M_{2} V_{out}\n\n<u>Vin</u> M_{1}",
+          "content": "In the circuit, I_{DC} is an ideal current source. The transistors M_{1} and M_{2} are assumed to be biased in saturation, wherein V_{in} is the input signal and V_{DC} is fixed DC voltage. Both transistors have a small signal resistance of 𝑟_{𝑑𝑠} and trans-conductance of 𝑔_{𝑚}. The small signal output impedance of this circuit is\n\n<u>VDD</u>",
           "confidence": "VERIFIED"
         },
         {
@@ -3799,7 +3858,7 @@
       "options": [
         "\\(2𝑟_{𝑑𝑠}\\)",
         "\\(\\frac{1}{𝑔𝑚}\\) + 𝑟_{𝑑𝑠}",
-        "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
+        "\\(𝑔_{𝑚}𝑟_{𝑑𝑠} 2 + 2𝑟𝑑𝑠\\)",
         "infinity"
       ],
       "optionImages": null,
@@ -3837,13 +3896,13 @@
         },
         {
           "id": "C",
-          "text": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
+          "text": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠} 2 + 2𝑟𝑑𝑠\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "𝑔_{𝑚}𝑟_{𝑑𝑠}",
-              "content": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠}\\)",
+              "latex": "𝑔_{𝑚}𝑟_{𝑑𝑠} 2 + 2𝑟𝑑𝑠",
+              "content": "\\(𝑔_{𝑚}𝑟_{𝑑𝑠} 2 + 2𝑟𝑑𝑠\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -5030,11 +5089,11 @@
       "questionNumber": 49,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?",
+      "questionText": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?\n\n\\(\\frac{F}{fault}\\) Gen fault Grid Gen fault Grid",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?",
+          "content": "A temporary LLLG bolted fault occurs at F very close to circuit breaker 1. The circuit breakers open to isolate the line. The fault self-clears. The circuit breakers reclose and restore the line. Which one of the following diagrams best indicates the rotor accelerating and decelerating areas?\n\n\\(\\frac{F}{fault}\\) Gen fault Grid Gen fault Grid",
           "confidence": "VERIFIED"
         },
         {
@@ -5264,11 +5323,11 @@
       "questionNumber": 51,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{whichof^{1}}{𝑅𝑛}\\) is independent of R?",
+      "questionText": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{1}{𝑅𝑛}\\) is independent of R?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{whichof^{1}}{𝑅𝑛}\\) is independent of R?",
+          "content": "Let 𝒂_{𝑹} be the unit radial vector in the spherical co-ordinate system. For which of the following value(s) of n, the divergence of the radial vector field 𝒇(𝑹) = 𝒂_{𝑹} \\(\\frac{1}{𝑅𝑛}\\) is independent of R?",
           "confidence": "VERIFIED"
         }
       ],
@@ -5586,11 +5645,11 @@
       "questionNumber": 55,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
+      "questionText": "Q.55 Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
+          "content": "Q.55 Let 𝐶 be a clockwise oriented closed curve in the complex plane defined by |𝑧| = 1. Further, let 𝑓(𝑧) = 𝑗𝑧 be a complex function, where 𝑗= \\sqrt -1. Then, ∮ 𝐶 𝑓(𝑧)𝑑𝑧 = _______ (round off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5632,11 +5691,11 @@
       "questionNumber": 56,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is <u>____</u> (round off to the nearest integer).",
+      "questionText": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is ____ (round off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is <u>____</u> (round off to the nearest integer).",
+          "content": "The op-amps in the following circuit are ideal. The voltage gain of the circuit is ____ (round off to the nearest integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5686,21 +5745,15 @@
       "questionNumber": 57,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F",
+      "questionText": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F\n\n100 V S 25 Ω 3 A\n\n2 Ω",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/ee/q57_diag.png",
+          "content": "The switch (S) closes at 𝑡= 0 sec. The time, in sec, the capacitor takes to charge to 50 V is _____ (round off to one decimal place).\n\n5 F\n\n100 V S 25 Ω 3 A\n\n2 Ω",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5720,10 +5773,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IIT Roorkee is 4.0 to 4.2.",
-      "diagramUrl": "/exam-assets/gate/2025/ee/q57_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/ee/q57_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -5740,11 +5791,11 @@
       "questionNumber": 58,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).",
+      "questionText": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).\n\n2 \\(\\Omega\\)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).",
+          "content": "In an experiment to measure the active power drawn by a single-phase RL Load connected to an AC source through a 2 Ω resistor, three voltmeters are connected as shown in the figure below. The voltmeter readings are as follows:\n\n𝑉_{𝑆𝑜𝑢𝑟𝑐𝑒}= 200 𝑉, 𝑉_{𝑅}= 9 𝑉, 𝑉_{𝐿𝑜𝑎𝑑}= 199 𝑉. Assuming perfect resistors and ideal voltmeters, the Load-active power measured in this experiment, in W, is ________ (round off to one decimal place).\n\n2 \\(\\Omega\\)",
           "confidence": "VERIFIED"
         },
         {
@@ -6095,11 +6146,11 @@
       "questionNumber": 65,
       "sectionId": "ee_core",
       "sectionName": "Electrical Engineering",
-      "questionText": "A controller 𝐷(𝑠) of the form (1 + 𝐾_{𝐷}𝑠) is to be designed for the plant \\(\\frac{𝐷(𝑠)}{1000\\sqrt{2}\\}) 𝐺(𝑠) = \\(\\frac{controller𝐷(𝑠)1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
+      "questionText": "Q.65 A controller 𝐷(𝑠) of the form (1 + 𝐾𝐷𝑠) is to be designed for the plant 𝐺(𝑠) = \\(\\frac{1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A controller 𝐷(𝑠) of the form (1 + 𝐾_{𝐷}𝑠) is to be designed for the plant \\(\\frac{𝐷(𝑠)}{1000\\sqrt{2}\\}) 𝐺(𝑠) = \\(\\frac{controller𝐷(𝑠)1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
+          "content": "Q.65 A controller 𝐷(𝑠) of the form (1 + 𝐾𝐷𝑠) is to be designed for the plant 𝐺(𝑠) = \\(\\frac{1000\\sqrt{2}{}𝑠(𝑠+10)2}\\) as shown in the figure. The value of 𝐾_{𝐷} that yields a phase margin of 45° at the gain cross-over frequency of 10 rad/sec is ________________ (round off to one decimal place).",
           "confidence": "VERIFIED"
         },
         {

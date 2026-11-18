@@ -1433,11 +1433,11 @@
       "questionNumber": 13,
       "sectionId": "es_core",
       "sectionName": "Environmental Science & Engineering",
-      "questionText": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛𝑛=1}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2𝑛=1}\\) 𝑛=1 Choose the correct option from the following",
+      "questionText": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2}\\) 𝑛=1 Choose the correct option from the following",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛𝑛=1}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2𝑛=1}\\) 𝑛=1 Choose the correct option from the following",
+          "content": "Consider the following two series \\infty P : \\sum \\(\\frac{1}{𝑛}\\) 𝑛=1 \\infty Q : \\sum \\(\\frac{1}{𝑛2}\\) 𝑛=1 Choose the correct option from the following",
           "confidence": "VERIFIED"
         }
       ],
@@ -1557,7 +1557,7 @@
       "questionType": "MCQ",
       "options": [
         "\\(H_{2}CO_{3} H^{+} + HCO_{3}^{-}\\)",
-        "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+        "Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}",
         "\\(C_{6}H_{12}O_{6} + 6 O_{2}  6 CO_{2} + 6 H_{2}O\\)",
         "\\(CaCO_{3} (s)  Ca^{2+} + CO_{3}^{2-}\\)"
       ],
@@ -1581,18 +1581,17 @@
         },
         {
           "id": "B",
-          "text": "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+          "text": "Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}",
-              "content": "\\(Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}\\)",
+              "type": "text",
+              "content": "Hg^{2+} + 2 OH^{-}  Hg(OH)_{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -2605,7 +2604,7 @@
       "questionType": "MCQ",
       "options": [
         "Almost all the nations of the world assembled for the first time in the history to discuss and find out the solution for a common environmental problem.",
-        "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+        "It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.",
         "It was for formulating the strategies and guidelines to control the release of acidic gases that can cause acid rains in another country.",
         "It was for formulating the strategies and guidelines for the trans-boundary movement of hazardous wastes."
       ],
@@ -2628,18 +2627,17 @@
         },
         {
           "id": "B",
-          "text": "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+          "text": "It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.",
-              "content": "\\(It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.\\)",
+              "type": "text",
+              "content": "It was for formulating the strategies and guidelines to reduce CO_{2} and CH_{4} emissions to control the global warming.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5094,21 +5092,21 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "management facility except for rural areas where common facility is not available.",
-        "may contain dangerous pathogenic organisms.",
-        "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+        "Bio-medical waste generated should be taken to a common bio-medical waste management facility except for rural areas where common facility is not available.",
+        "Bio-medical waste generated should not be taken out of the hospital premise as it may contain dangerous pathogenic organisms.",
+        "The red bag containing the human anatomical wastes like amputated body parts, cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
         "Increasing operational temperature of an autoclave from 121 C (pressure 15 psi) to 149 C (pressure 52 psi), the residence time requirement for treating bio-medical waste will be reduced by 15 minutes."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "management facility except for rural areas where common facility is not available.",
+          "text": "Bio-medical waste generated should be taken to a common bio-medical waste management facility except for rural areas where common facility is not available.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "management facility except for rural areas where common facility is not available.",
+              "content": "Bio-medical waste generated should be taken to a common bio-medical waste management facility except for rural areas where common facility is not available.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5118,12 +5116,12 @@
         },
         {
           "id": "B",
-          "text": "may contain dangerous pathogenic organisms.",
+          "text": "Bio-medical waste generated should not be taken out of the hospital premise as it may contain dangerous pathogenic organisms.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "may contain dangerous pathogenic organisms.",
+              "content": "Bio-medical waste generated should not be taken out of the hospital premise as it may contain dangerous pathogenic organisms.",
               "confidence": "VERIFIED"
             }
           ],
@@ -5133,12 +5131,12 @@
         },
         {
           "id": "C",
-          "text": "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+          "text": "The red bag containing the human anatomical wastes like amputated body parts, cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
+              "content": "The red bag containing the human anatomical wastes like amputated body parts, cotton and bandages contaminated with body fluids, etc. should be treated using autoclave or hydroclave to kill the pathogenic organisms.",
               "confidence": "VERIFIED"
             }
           ],

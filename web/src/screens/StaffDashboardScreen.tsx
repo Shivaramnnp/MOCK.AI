@@ -42,6 +42,8 @@ import {
   ArrowLeft,
   FileText,
   AlertCircle,
+  FileCheck,
+  BookOpen,
 } from 'lucide-react';
 import {
   UserProfile,
@@ -57,12 +59,15 @@ import {
 } from '../types';
 import { staffService } from '../services/staffService';
 import { communityService } from '../services/communityService';
+import { StaffPaperTestingCentre } from '../components/staff/StaffPaperTestingCentre';
+import { TopicReviewQueue } from '../components/staff/TopicReviewQueue';
 
 interface StaffDashboardScreenProps {
   user: UserProfile | null;
   onNavigate: (route: AppRoute) => void;
   onNavigateToQuestion?: (examId: string, paperId: string, questionNumber?: number) => void;
-  onNavigateToPaper?: (paperId: string) => void;
+  onNavigateToPaper?: (paperId: string | null) => void;
+  initialPaperId?: string | null;
 }
 
 export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
@@ -70,13 +75,95 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
   onNavigate,
   onNavigateToQuestion,
   onNavigateToPaper,
+  initialPaperId,
 }) => {
   // Authorization State
   const [authStatus, setAuthStatus] = useState<StaffAuthStatus | null>(null);
   const [isVerifyingAuth, setIsVerifyingAuth] = useState(true);
 
   // Active Tab
-  const [activeTab, setActiveTab] = useState<'queue' | 'reports' | 'restrictions' | 'audit'>('queue');
+  const [activeTab, setActiveTab] = useState<'queue' | 'reports' | 'restrictions' | 'audit' | 'uadue_review' | 'paper_testing' | 'topic_review'>(() => {
+    if (initialPaperId) return 'paper_testing';
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('paper-testing') || hash.includes('paper_testing') || hash.includes('testing')) {
+        return 'paper_testing';
+      }
+      if (hash.includes('topic') || hash.includes('classification')) return 'topic_review';
+      if (hash.includes('uadue')) return 'uadue_review';
+      if (hash.includes('audit')) return 'audit';
+      if (hash.includes('reports')) return 'reports';
+      if (hash.includes('restrictions')) return 'restrictions';
+    }
+    return 'queue';
+  });
+
+  const [selectedStaffPaperId, setSelectedStaffPaperId] = useState<string | null>(() => {
+    if (initialPaperId) return initialPaperId;
+    if (typeof window !== 'undefined') {
+      const match = window.location.hash.match(/paper[-_]testing[#/]([a-zA-Z0-9_-]+)/i) ||
+                    window.location.hash.match(/[?&]paperId=([a-zA-Z0-9_-]+)/i);
+      if (match && match[1]) return match[1];
+    }
+    return null;
+  });
+
+  useEffect(() => {
+    if (initialPaperId) {
+      setSelectedStaffPaperId((prev) => (prev === initialPaperId ? prev : initialPaperId));
+      setActiveTab((prev) => (prev === 'paper_testing' ? prev : 'paper_testing'));
+    }
+  }, [initialPaperId]);
+
+  useEffect(() => {
+    const handleHashSync = () => {
+      if (typeof window !== 'undefined') {
+        const hash = window.location.hash.toLowerCase();
+        if (hash.includes('paper-testing') || hash.includes('paper_testing') || hash.includes('testing')) {
+          setActiveTab((prev) => (prev === 'paper_testing' ? prev : 'paper_testing'));
+          const match = window.location.hash.match(/paper[-_]testing[#/]([a-zA-Z0-9_-]+)/i) ||
+                        window.location.hash.match(/[?&]paperId=([a-zA-Z0-9_-]+)/i);
+          if (match && match[1]) {
+            setSelectedStaffPaperId((prev) => (prev === match[1] ? prev : match[1]));
+          } else {
+            setSelectedStaffPaperId(null);
+          }
+        } else if (hash.includes('uadue')) {
+          setActiveTab((prev) => (prev === 'uadue_review' ? prev : 'uadue_review'));
+        } else if (hash.includes('audit')) {
+          setActiveTab((prev) => (prev === 'audit' ? prev : 'audit'));
+        } else if (hash.includes('reports')) {
+          setActiveTab((prev) => (prev === 'reports' ? prev : 'reports'));
+        } else if (hash.includes('restrictions')) {
+          setActiveTab((prev) => (prev === 'restrictions' ? prev : 'restrictions'));
+        }
+      }
+    };
+    window.addEventListener('hashchange', handleHashSync);
+    return () => window.removeEventListener('hashchange', handleHashSync);
+  }, []);
+
+  const handlePaperTestingNavigate = useCallback((paperId: string | null) => {
+    setSelectedStaffPaperId(paperId);
+    if (typeof window !== 'undefined') {
+      if (paperId) {
+        if (!window.location.hash.includes(paperId)) {
+          window.location.hash = `staff#paper-testing#${paperId}`;
+        }
+      } else {
+        window.location.hash = 'staff#paper-testing';
+      }
+    }
+    if (onNavigateToPaper) {
+      onNavigateToPaper(paperId);
+    }
+  }, [onNavigateToPaper]);
+
+  // UADUE 1% Review Queue State
+  const [reviewQueueItems, setReviewQueueItems] = useState<any[]>([]);
+  const [isLoadingReviewQueue, setIsLoadingReviewQueue] = useState(false);
+  const [reviewQueueFilter, setReviewQueueFilter] = useState<'ALL' | 'PENDING' | 'APPROVED' | 'RESOLVED'>('PENDING');
+  const [actionInProgressId, setActionInProgressId] = useState<string | null>(null);
 
   // Queue State
   const [posts, setPosts] = useState<CommunityPost[]>([]);
@@ -199,7 +286,39 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
     }
   }, [authStatus?.isStaff, activeTab, fetchAuditLogs]);
 
-  // 5. Fetch internal staff notes when a post is selected
+  // 5. Fetch UADUE 1% Review Queue items
+  const fetchReviewQueue = useCallback(async () => {
+    setIsLoadingReviewQueue(true);
+    try {
+      const items = await staffService.getReviewQueueItems(reviewQueueFilter as any);
+      setReviewQueueItems(items);
+    } finally {
+      setIsLoadingReviewQueue(false);
+    }
+  }, [reviewQueueFilter]);
+
+  useEffect(() => {
+    if (authStatus?.isStaff && activeTab === 'uadue_review') {
+      fetchReviewQueue();
+    }
+  }, [authStatus?.isStaff, activeTab, fetchReviewQueue]);
+
+  const handleResolveReviewItem = async (
+    itemId: string,
+    action: 'APPROVED' | 'REJECTED' | 'RESOLVED',
+    notes?: string
+  ) => {
+    if (!user?.uid) return;
+    setActionInProgressId(itemId);
+    try {
+      await staffService.resolveReviewQueueItem(itemId, action, user.uid, notes);
+      await fetchReviewQueue();
+    } finally {
+      setActionInProgressId(null);
+    }
+  };
+
+  // 6. Fetch internal staff notes when a post is selected
   useEffect(() => {
     if (selectedPost) {
       setNewStatus(selectedPost.status);
@@ -478,10 +597,48 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
       </div>
 
       {/* ── Operations Navigation Tabs ──────────────────────────────── */}
-      <div className="flex items-center gap-2 border-b border-surface-border dark:border-darkSurface-border pb-2 overflow-x-auto">
+      <div className="flex flex-wrap items-center gap-2 border-b border-surface-border dark:border-darkSurface-border pb-3">
         <button
           type="button"
-          onClick={() => setActiveTab('queue')}
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#paper-testing';
+            setActiveTab('paper_testing');
+          }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+            activeTab === 'paper_testing'
+              ? 'bg-emerald-600 text-white shadow-glow'
+              : 'text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30'
+          }`}
+        >
+          <FileCheck className="w-4 h-4 text-emerald-500" />
+          <span>Paper Testing Centre</span>
+          <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-800 dark:text-emerald-200 font-extrabold uppercase tracking-wider">
+            Stage 1
+          </span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#topic-review';
+            setActiveTab('topic_review');
+          }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+            activeTab === 'topic_review'
+              ? 'bg-brand-primary text-white shadow-glow'
+              : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2'
+          }`}
+        >
+          <BookOpen className="w-4 h-4 text-primary-500" />
+          <span>Topic Review Queue</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff';
+            setActiveTab('queue');
+          }}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'queue'
               ? 'bg-brand-primary text-white shadow-glow'
@@ -494,7 +651,26 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
 
         <button
           type="button"
-          onClick={() => setActiveTab('reports')}
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#uadue';
+            setActiveTab('uadue_review');
+          }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+            activeTab === 'uadue_review'
+              ? 'bg-brand-primary text-white shadow-glow'
+              : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2'
+          }`}
+        >
+          <AlertTriangle className="w-4 h-4 text-amber-500" />
+          <span>UADUE 1% Review Queue ({reviewQueueItems.length})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#reports';
+            setActiveTab('reports');
+          }}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'reports'
               ? 'bg-brand-primary text-white shadow-glow'
@@ -507,7 +683,10 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
 
         <button
           type="button"
-          onClick={() => setActiveTab('restrictions')}
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#restrictions';
+            setActiveTab('restrictions');
+          }}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'restrictions'
               ? 'bg-brand-primary text-white shadow-glow'
@@ -520,7 +699,10 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
 
         <button
           type="button"
-          onClick={() => setActiveTab('audit')}
+          onClick={() => {
+            if (typeof window !== 'undefined') window.location.hash = 'staff#audit';
+            setActiveTab('audit');
+          }}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'audit'
               ? 'bg-brand-primary text-white shadow-glow'
@@ -1184,6 +1366,204 @@ export const StaffDashboardScreen: React.FC<StaffDashboardScreenProps> = ({
             </div>
           )}
         </div>
+      )}
+
+      {/* ── Tab 5: UADUE 1% Review Queue ─────────────────────────────── */}
+      {activeTab === 'uadue_review' && (
+        <div className="space-y-4">
+          {/* Header & Filter Controls */}
+          <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border shadow-sm">
+            <div>
+              <h3 className="font-extrabold text-sm text-surface-text dark:text-darkSurface-text flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-500" />
+                <span>UADUE 1% Invariant Anomaly Isolation Queue</span>
+              </h3>
+              <p className="text-xs text-surface-muted dark:text-darkSurface-muted">
+                Items requiring human verification due to layout ambiguity, math delimiter parity, or option structural constraints.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <select
+                value={reviewQueueFilter}
+                onChange={(e) => setReviewQueueFilter(e.target.value as any)}
+                className="px-3 py-1.5 rounded-xl border border-surface-border dark:border-darkSurface-border bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-text dark:text-darkSurface-text text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+              >
+                <option value="ALL">All Items</option>
+                <option value="PENDING">Pending Review</option>
+                <option value="APPROVED">Approved Anomaly</option>
+                <option value="RESOLVED">Resolved</option>
+              </select>
+
+              <button
+                type="button"
+                onClick={fetchReviewQueue}
+                disabled={isLoadingReviewQueue}
+                className="p-2 rounded-xl border border-surface-border dark:border-darkSurface-border hover:bg-surface-elev2 dark:hover:bg-darkSurface-elev2 text-surface-muted dark:text-darkSurface-muted transition-colors"
+                title="Refresh Review Queue"
+              >
+                <RefreshCw className={`w-4 h-4 ${isLoadingReviewQueue ? 'animate-spin' : ''}`} />
+              </button>
+            </div>
+          </div>
+
+          {/* Items List */}
+          {isLoadingReviewQueue ? (
+            <div className="p-12 text-center text-xs text-surface-muted dark:text-darkSurface-muted">
+              <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-brand-primary" />
+              Loading Review Queue items...
+            </div>
+          ) : reviewQueueItems.length === 0 ? (
+            <div className="p-12 text-center rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border text-xs text-surface-muted dark:text-darkSurface-muted space-y-2">
+              <CheckCircle2 className="w-8 h-8 text-emerald-500 mx-auto" />
+              <p className="font-bold text-sm text-surface-text dark:text-darkSurface-text">
+                Zero Pending Review Queue Items
+              </p>
+              <p>All ingested assessment documents meet 100% invariant certification criteria.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-4">
+              {reviewQueueItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="p-5 rounded-2xl bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border space-y-4 shadow-sm hover:border-brand-primary/40 transition-colors"
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-3 border-b border-surface-border dark:border-darkSurface-border pb-3">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${
+                            item.severity === 'FATAL'
+                              ? 'bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20'
+                              : item.severity === 'REVIEW_REQUIRED'
+                              ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20'
+                              : 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20'
+                          }`}
+                        >
+                          {item.severity}
+                        </span>
+
+                        <span className="px-2 py-0.5 rounded-md bg-surface-elev2 dark:bg-darkSurface-elev2 text-[10px] font-mono font-bold text-surface-text dark:text-darkSurface-text">
+                          {item.anomalyCategory}
+                        </span>
+
+                        <span
+                          className={`px-2 py-0.5 rounded-md text-[10px] font-bold ${
+                            item.status === 'PENDING'
+                              ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300'
+                              : item.status === 'APPROVED'
+                              ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300'
+                              : item.status === 'RESOLVED'
+                              ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300'
+                              : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300'
+                          }`}
+                        >
+                          {item.status}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs font-mono text-surface-muted dark:text-darkSurface-muted">
+                        <span>Paper: {item.paperId}</span>
+                        <span>•</span>
+                        <span>Question: {item.questionId}</span>
+                      </div>
+                    </div>
+
+                    {/* Action buttons */}
+                    <div className="flex items-center gap-2">
+                      {item.status === 'PENDING' && (
+                        <>
+                          <button
+                            type="button"
+                            disabled={actionInProgressId === item.id}
+                            onClick={() => handleResolveReviewItem(item.id, 'APPROVED')}
+                            className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-sm transition-all active:scale-95 disabled:opacity-50"
+                          >
+                            Approve Anomaly
+                          </button>
+                          <button
+                            type="button"
+                            disabled={actionInProgressId === item.id}
+                            onClick={() => handleResolveReviewItem(item.id, 'RESOLVED')}
+                            className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-all active:scale-95 disabled:opacity-50"
+                          >
+                            Mark Resolved
+                          </button>
+                          <button
+                            type="button"
+                            disabled={actionInProgressId === item.id}
+                            onClick={() => handleResolveReviewItem(item.id, 'REJECTED')}
+                            className="px-3 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs shadow-sm transition-all active:scale-95 disabled:opacity-50"
+                          >
+                            Reject
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Details Breakdown */}
+                  <div className="space-y-2 text-xs">
+                    {item.details?.stemSnippet && (
+                      <div>
+                        <span className="font-bold text-surface-muted dark:text-darkSurface-muted block mb-0.5">
+                          Question Snippet:
+                        </span>
+                        <p className="p-2.5 rounded-xl bg-surface-elev2 dark:bg-darkSurface-elev2 font-mono text-[11px] text-surface-text dark:text-darkSurface-text">
+                          {String(item.details.stemSnippet)}
+                        </p>
+                      </div>
+                    )}
+
+                    {Array.isArray(item.details?.violations) && item.details.violations.length > 0 && (
+                      <div>
+                        <span className="font-bold text-surface-muted dark:text-darkSurface-muted block mb-0.5">
+                          Invariant Violations:
+                        </span>
+                        <ul className="list-disc list-inside space-y-1 text-red-600 dark:text-red-400 font-mono text-[11px]">
+                          {item.details.violations.map((v: string, vIdx: number) => (
+                            <li key={vIdx}>{v}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.cropUrl && (
+                      <div>
+                        <span className="font-bold text-surface-muted dark:text-darkSurface-muted block mb-0.5">
+                          Forensic Crop:
+                        </span>
+                        <img
+                          src={item.cropUrl}
+                          alt="Forensic crop"
+                          className="max-h-48 rounded-xl border border-surface-border dark:border-darkSurface-border"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Tab 6: Paper Testing Centre (Stage 1) ─────────────────────── */}
+      {activeTab === 'paper_testing' && (
+        <StaffPaperTestingCentre
+          user={user}
+          initialPaperId={selectedStaffPaperId || initialPaperId}
+          onNavigateToPaper={handlePaperTestingNavigate}
+          onReturnToDashboard={() => handlePaperTestingNavigate(null)}
+        />
+      )}
+
+      {/* ── Tab 7: Topic Classification Review Queue ───────────────────── */}
+      {activeTab === 'topic_review' && (
+        <TopicReviewQueue
+          reviewerId={user?.uid || null}
+          isVerifiedStaff={Boolean(authStatus?.isStaff)}
+        />
       )}
 
       {/* User Restriction Modal (Triggered from Post Drawer) */}

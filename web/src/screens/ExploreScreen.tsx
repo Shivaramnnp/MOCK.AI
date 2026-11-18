@@ -10,6 +10,7 @@ import {
   Filter,
   ShieldCheck,
   FileText,
+  Target,
 } from 'lucide-react';
 import { CompetitiveExam } from '../types';
 import { ExamService } from '../services/examService';
@@ -17,9 +18,10 @@ import { AdSlot } from '../components/ads/AdSlot';
 
 interface ExploreScreenProps {
   onSelectExam: (examId: string) => void;
+  onTopicPractice?: (examId: string) => void;
 }
 
-export const ExploreScreen: React.FC<ExploreScreenProps> = ({ onSelectExam }) => {
+export const ExploreScreen: React.FC<ExploreScreenProps> = ({ onSelectExam, onTopicPractice }) => {
   const exams = ExamService.getAvailableExams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -185,21 +187,34 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({ onSelectExam }) =>
               </div>
 
               {/* Action Button Footer */}
-              <div className="pt-5 mt-4 border-t border-surface-border/50 dark:border-darkSurface-border/50">
+              <div className="pt-5 mt-4 border-t border-surface-border/50 dark:border-darkSurface-border/50 flex items-center gap-2">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     onSelectExam(exam.id);
                   }}
-                  className={`w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-bold transition-all ${
+                  className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold transition-all ${
                     isAvailable
                       ? 'bg-brand-primary text-white shadow-sm hover:bg-brand-primary/90'
                       : 'bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-muted hover:text-surface-text'
                   }`}
                 >
-                  <span>{isAvailable ? 'View Previous-Year Papers' : 'View Pattern & Details'}</span>
+                  <span>{isAvailable ? 'Full Mock Papers' : 'View Details'}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
+                {isAvailable && onTopicPractice && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onTopicPractice(exam.id);
+                    }}
+                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-bold bg-primary-500/10 text-primary-600 dark:text-primary-400 hover:bg-primary-500/20 border border-primary-500/20 transition-all shrink-0"
+                  >
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Topic Practice</span>
+                  </button>
+                )}
               </div>
             </div>
           );

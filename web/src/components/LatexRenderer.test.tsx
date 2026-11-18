@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import React from 'react';
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react';
@@ -111,5 +112,173 @@ describe('LatexRenderer', () => {
     expect(c2.querySelector('.katex')).not.toBeNull();
     expect(c2.textContent).not.toContain('\\frac');
     expect(c2.textContent).not.toContain('\\(');
+  });
+
+  // --- GATE 2023 Mathematical Fidelity Regression Suite ---
+
+  it('P0-AUDIT-DEFECT-1: should never display raw \\displaystyle in red when rendering fractions or on error fallback', () => {
+    const { container } = render(
+      <LatexRenderer content="\\(\\frac{d^2 y}{dx^2} + 4x\\frac{dy}{dx} + 2y = 0\\)" />
+    );
+    expect(container.textContent).not.toContain('\\displaystyle');
+    expect(container.textContent).not.toContain('\\frac');
+    expect(container.querySelector('.katex-error')).toBeNull();
+    expect(container.querySelector('.katex')).not.toBeNull();
+  });
+
+  it('P0-AUDIT-DEFECT-2: should never leak KATEX_TOKEN placeholders on nested subscript math like k_{\\(\\theta\\)}', () => {
+    const { container } = render(
+      <LatexRenderer content="idealized by assuming a torsional spring of equivalent stiffness k_{\\(\\theta\\)} as shown" />
+    );
+    const text = container.textContent || '';
+    expect(text).not.toContain('KATEX_TOKEN');
+    expect(text).not.toContain('___KATEX_TOKEN');
+    expect(text).not.toContain('{{__KATEX_TOKEN');
+    expect(container.querySelector('.katex')).not.toBeNull();
+  });
+
+  it('P0-AUDIT-DEFECT-3: should render differential equations without repeating or duplicating mathematical terms', () => {
+    const { container } = render(
+      <LatexRenderer content="Consider the differential equation \\(\\frac{d^{2}y}{dx^{2}}\\) + 4x \\(\\frac{dy}{dx}\\) + 2y = 0 for x >= 1" />
+    );
+    const text = container.textContent || '';
+    // Count occurrences of 'for x >= 1' or '4x'
+    const matches = (text.match(/4x/g) || []).length;
+    expect(matches).toBe(1);
+    expect(container.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('P0-AUDIT-DEFECT-4: should normalize Symbol font infinity and MathType bracket pieces without crashing or rendering red errors', () => {
+    const { container } = render(
+      <LatexRenderer content="M_3 = M_\\infty \\left( \\frac{\\gamma - 1}{2} \\right)" />
+    );
+    expect(container.querySelector('.katex-error')).toBeNull();
+    expect(container.querySelector('.katex')).not.toBeNull();
+
+    // Even if Symbol font private use area glyphs (e.g. \uf0a5, \uf0e6) appear in legacy content:
+    const { container: cLegacy } = render(
+      <LatexRenderer content={'M 3 = M \uF0A5 \uF0E6 \uF0E7 \uF0E8 \\gamma 2 - 1 \uF0F6 \uF0F7 \uF0F8'} />
+    );
+    expect(cLegacy.textContent).not.toContain('\uF0A5');
+    expect(cLegacy.querySelector('.katex-error')).toBeNull();
+  });
+
+  it('P0-AUDIT-DEFECT-5: should fix corrupted scientific notation 10^{-} * 3 and render clean powers of 10', () => {
+    const { container } = render(
+      <LatexRenderer content="\\(( 7, - 6.5 10^{-} \uF0B4 3 )\\)" />
+    );
+    const text = container.textContent || '';
+    expect(text).not.toContain('10^{-}');
+    expect(text).not.toContain('\uF0B4');
+    expect(container.querySelector('.katex-error')).toBeNull();
+    expect(container.querySelector('.katex')).not.toBeNull();
+  });
+
+  it('should render derivatives, subscripts, superscripts, and Greek letters with 100% fidelity', () => {
+    const { container } = render(
+      <LatexRenderer content="Rate \\(\\frac{dT}{dh}\\) with altitude h, \\sigma^2, \\lambda_1, and \\alpha + \\beta" />
+    );
+    expect(container.textContent).not.toContain('\\frac');
+    expect(container.textContent).not.toContain('\\sigma');
+    expect(container.textContent).not.toContain('\\lambda');
+    expect(container.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(4);
+  });
+
+  it('P0-AUDIT-DEFECT-6: should normalize Symbol font degree, prime, R, oplus, angle, and combining overlines', () => {
+    const { container } = render(
+      <LatexRenderer content={'At 25\uF0B0 C with V\uF0A2 \\in \uF0C2 and \\(X\u0305_1 \\oplus Y\u0305_2\\) at \uF0D0 30\uF0B0'} />
+    );
+    const text = container.textContent || '';
+    expect(text).not.toContain('\uF0B0');
+    expect(text).not.toContain('\uF0A2');
+    expect(text).not.toContain('\uF0C2');
+    expect(text).not.toContain('\uF0D0');
+    expect(container.querySelector('.katex-error')).toBeNull();
+  });
+
+  it('P0-AUDIT-DEFECT-7 (GATE 2023 CS Q48): should normalize CMEX10 font binomial delimiters and strip non-printing control characters', () => {
+    // Test legacy extracted option with \x0f and \x10 control characters
+    const corruptedInput = '\x0f n 2k \x10 (n -2k)! \x10';
+    const { container } = render(<LatexRenderer content={corruptedInput} />);
+    const text = container.textContent || '';
+    expect(text).not.toContain('\x0f');
+    expect(text).not.toContain('\x10');
+    expect(container.querySelector('.katex-error')).toBeNull();
+    expect(container.querySelector('.katex')).not.toBeNull();
+
+    // Verify canonical binomial expression rendering
+    const { container: canonical } = render(<LatexRenderer content="\\(2 \\binom{n}{2k} (n -2k)! (k!)^{2}\\)" />);
+    expect(canonical.querySelector('.katex-error')).toBeNull();
+    expect(canonical.querySelector('.katex')).not.toBeNull();
+  });
+
+  it('P0-AUDIT-DEFECT-8 (GATE 2023 IN Q61): should gracefully render fractions with escaped braces or complex denominators', () => {
+    // Malformed unclosed fraction: \frac{230}{\sqrt{2}\})
+    const malformed = 'load impedance is \\(\\frac{230}{\\sqrt{2}\\}) + 𝑗 \\(\\frac{230}{\\sqrt{2}\\}) Ω';
+    const { container: c1 } = render(<LatexRenderer content={malformed} />);
+    expect(c1.querySelector('.katex-error')).toBeNull();
+    expect(c1.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(2);
+
+    // Canonical re-extracted fraction: \frac{230}{\sqrt{2}}
+    const canonical = 'load impedance is \\(\\frac{230}{\\sqrt{2}}\\) + 𝑗 \\(\\frac{230}{\\sqrt{2}}\\) Ω';
+    const { container: c2 } = render(<LatexRenderer content={canonical} />);
+    expect(c2.querySelector('.katex-error')).toBeNull();
+    expect(c2.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('P0-AUDIT-DEFECT-9 (GATE 2023 PH Q57): should normalize combining circumflex accents and vector arrows into authentic KaTeX math', () => {
+    // Option C with combining accents \u0302 and \u20d7
+    const optC = '\\vec{ \\nabla } \\times \\vec{𝑉} = 4\\hat{𝑧}, where \\hat{𝑧} is a unit vector perpendicular to the (𝑟, 𝜃) plane';
+    const { container } = render(<LatexRenderer content={optC} />);
+    expect(container.querySelector('.katex-error')).toBeNull();
+    expect(container.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(3);
+    const text = container.textContent || '';
+    expect(text).toContain('unit vector perpendicular to the');
+    expect(text).not.toContain('KATEX_TOKEN');
+
+    // Unicode combining characters in raw notation
+    const rawUnicode = '∇\u20D7 × V\u20D7 = 4z\u0302, where z\u0302 is a unit vector';
+    const { container: cRaw } = render(<LatexRenderer content={rawUnicode} />);
+    expect(cRaw.querySelector('.katex-error')).toBeNull();
+    expect(cRaw.querySelectorAll('.katex').length).toBeGreaterThanOrEqual(3);
+  });
+
+  describe('Semantic Inline Underline & Formatting Preservation', () => {
+    it('safely preserves <u> tags for single words and multi-word phrases', () => {
+      const singleWord = 'The skunk had a <u>conspicuous</u> spinal stripe.';
+      const { container: c1 } = render(<LatexRenderer content={singleWord} />);
+      const u1 = c1.querySelector('u');
+      expect(u1).not.toBeNull();
+      expect(u1!.textContent).toBe('conspicuous');
+      expect(c1.innerHTML).toContain('<u>conspicuous</u>');
+
+      const multiWord = 'It is a general belief that the female ostrich <u>guard the nest at night</u>.';
+      const { container: c2 } = render(<LatexRenderer content={multiWord} />);
+      const u2 = c2.querySelector('u');
+      expect(u2).not.toBeNull();
+      expect(u2!.textContent).toBe('guard the nest at night');
+      expect(c2.innerHTML).toContain('<u>guard the nest at night</u>');
+    });
+
+    it('renders <u> formatting cleanly alongside mathematical expressions and special characters', () => {
+      const mixed = 'Select the value of <u>x</u> when $\\sqrt{x} = 4$.';
+      const { container } = render(<LatexRenderer content={mixed} />);
+      const u = container.querySelector('u');
+      expect(u).not.toBeNull();
+      expect(u!.textContent).toBe('x');
+      expect(container.querySelector('.katex')).not.toBeNull();
+    });
+
+    it('renders GATE 2025 DA Q53 naked \\left\\{...\\right\\} wrapping pmatrix vectors without literal delimiters', () => {
+      const q53 =
+        'Class-1:\n\n\\left\\{ \\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}, \\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix} \\right\\}, Class-2:\n\n\\left\\{ \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix} \\right\\}';
+      const { container } = render(<LatexRenderer content={q53} />);
+      expect(container.querySelectorAll('.katex-display').length).toBe(2);
+      expect(container.textContent).not.toContain('\\left');
+      expect(container.textContent).not.toContain('\\right');
+      expect(container.textContent).not.toContain('\\begin{pmatrix}');
+      expect(container.textContent).toContain('Class-1:');
+      expect(container.textContent).toContain('Class-2:');
+    });
   });
 });

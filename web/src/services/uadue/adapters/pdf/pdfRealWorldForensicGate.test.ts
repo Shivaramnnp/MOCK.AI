@@ -318,7 +318,7 @@ describe('PdfNativeSourceAdapter — Real-World Forensic Certification Gate (Pha
           },
           sealedHash: snapshot.sealedHash,
           inspectorFindings: {
-            docSummary: docInspection.summary,
+            docSummary: docInspection,
             page1Counts: page1Inspection.physicalInventory,
           },
         });

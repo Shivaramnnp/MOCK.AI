@@ -207,7 +207,13 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
 
     const pdfDoc = await loadingTask.promise;
     const totalPagesInDoc = pdfDoc.numPages;
-    const maxPages = options?.maxPages ? Math.min(options.maxPages, totalPagesInDoc) : totalPagesInDoc;
+    const startPage = Math.max(1, options?.startPage || 1);
+    const endPage = options?.endPage
+      ? Math.min(options.endPage, totalPagesInDoc)
+      : options?.maxPages
+      ? Math.min(startPage + options.maxPages - 1, totalPagesInDoc)
+      : totalPagesInDoc;
+    const totalPagesToExtract = Math.max(0, endPage - startPage + 1);
 
     const pageGeometries: ForensicPageGeometry[] = [];
     const sourceObjects: ForensicSourceObjectEntry[] = [];
@@ -241,11 +247,11 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
       });
     }
 
-    for (let pageNum = 1; pageNum <= maxPages; pageNum++) {
+    for (let pageNum = startPage; pageNum <= endPage; pageNum++) {
       options?.onProgress?.({
-        percent: Math.round((pageNum / maxPages) * 100),
+        percent: Math.round(((pageNum - startPage + 1) / totalPagesToExtract) * 100),
         stage: 'EXTRACTING_FORENSIC_PAGES',
-        message: `Extracting physical evidence for page ${pageNum} of ${maxPages}...`,
+        message: `Extracting physical evidence for page ${pageNum} (${pageNum - startPage + 1} of ${totalPagesToExtract})...`,
       });
 
       const page = await pdfDoc.getPage(pageNum);
@@ -463,7 +469,7 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
               objectId: resolvedXObjectName,
               streamId,
               operatorIdentifier: `op_${opIdx}_Do`,
-              coordinateSpace: 'PDF_USER_SPACE',
+              coordinateSpace: 'PDF_PT_BOTTOM_LEFT',
               transformMatrix: currentCtm,
               sourceObjectType: 'RASTER_IMAGE',
               roleInDerivedObject: 'PRIMARY_SOURCE',
@@ -583,7 +589,7 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
               objectId: pathId,
               streamId,
               operatorIdentifier: `op_${opIdx}_path`,
-              coordinateSpace: 'PDF_USER_SPACE',
+              coordinateSpace: 'PDF_PT_BOTTOM_LEFT',
               transformMatrix: graphicsStack.ctm,
               sourceObjectType: 'VECTOR_PATH',
               roleInDerivedObject: 'PRIMARY_SOURCE',
@@ -750,7 +756,7 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
             objectId: fontName,
             streamId,
             operatorIdentifier: `op_${itemIdx}_Tj`,
-            coordinateSpace: 'PDF_USER_SPACE',
+            coordinateSpace: 'PDF_PT_BOTTOM_LEFT',
             transformMatrix: geometry.transformMatrix,
             sourceObjectType: 'GLYPH',
             roleInDerivedObject: 'PRIMARY_SOURCE',
@@ -822,7 +828,7 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
         parserVersion: pdfjs.version || '4.10.38',
         schemaVersion: '2.1.0',
         processingConfigHash: await computeSha256(
-          new TextEncoder().encode(`maxPages:${maxPages};format:PDF_NATIVE`)
+          new TextEncoder().encode(`startPage:${startPage};endPage:${endPage};format:PDF_NATIVE`)
         ),
       },
       pageGeometries,
@@ -834,7 +840,7 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
       vectorPaths,
       clippingStates,
       annotations,
-      coordinateSystems: ['PDF_USER_SPACE' as const, 'VIEWPORT_NORMALIZED' as const],
+      coordinateSystems: ['PDF_PT_BOTTOM_LEFT' as const, 'VIEWPORT_PT_TOP_LEFT' as const],
       sourceReferences,
       isSealed: true,
       sealedHash,
@@ -917,8 +923,8 @@ export class PdfNativeSourceAdapter implements UadueSourceAdapter<Uint8Array | A
           assetId: rx.xObjectId,
           sha256: rx.sourceByteHash,
           mimeType: (rx.mimeType || 'image/png') as any,
-          pageNumber: rx.pageNumber,
-          bbox: rx.geometry.bbox,
+          widthPx: rx.geometry?.bbox?.width ?? 0,
+          heightPx: rx.geometry?.bbox?.height ?? 0,
         });
       }
     }

@@ -127,47 +127,51 @@ export class GraphValidator {
   }
 
   /**
-   * Checks whether the reading order graph is strictly acyclic using DFS.
+   * Checks whether the reading order graph is strictly acyclic using iterative topological sort (Kahn's algorithm).
+   * Runs in O(V + E) time and O(V + E) space iteratively, eliminating recursive call-stack overflow on deep graphs.
    */
   private static checkDAGAcyclicity(graph: DocumentGraph): boolean {
+    const inDegree = new Map<string, number>();
     const adj = new Map<string, string[]>();
+
     for (const [id] of graph.nodes) {
+      inDegree.set(id, 0);
       adj.set(id, []);
     }
 
     for (const edge of graph.readingOrderDAG.edges) {
-      if (adj.has(edge.fromNodeId)) {
+      if (adj.has(edge.fromNodeId) && inDegree.has(edge.toNodeId)) {
         adj.get(edge.fromNodeId)!.push(edge.toNodeId);
+        inDegree.set(edge.toNodeId, (inDegree.get(edge.toNodeId) || 0) + 1);
       }
     }
 
-    const visited = new Set<string>();
-    const recStack = new Set<string>();
+    // Queue of nodes with 0 in-degree
+    const queue: string[] = [];
+    for (const [id, deg] of inDegree.entries()) {
+      if (deg === 0) {
+        queue.push(id);
+      }
+    }
 
-    const hasCycleDFS = (u: string): boolean => {
-      visited.add(u);
-      recStack.add(u);
+    let processedCount = 0;
+    while (queue.length > 0) {
+      const u = queue.pop()!;
+      processedCount++;
 
-      const neighbors = adj.get(u) || [];
-      for (const v of neighbors) {
-        if (!visited.has(v)) {
-          if (hasCycleDFS(v)) return true;
-        } else if (recStack.has(v)) {
-          return true; // Cycle found
+      const neighbors = adj.get(u);
+      if (neighbors) {
+        for (const v of neighbors) {
+          const currentDeg = (inDegree.get(v) || 1) - 1;
+          inDegree.set(v, currentDeg);
+          if (currentDeg === 0) {
+            queue.push(v);
+          }
         }
       }
-
-      recStack.delete(u);
-      return false;
-    };
-
-    for (const [id] of graph.nodes) {
-      if (!visited.has(id)) {
-        if (hasCycleDFS(id)) return false;
-      }
     }
 
-    return true;
+    return processedCount === graph.nodes.size;
   }
 
   /**

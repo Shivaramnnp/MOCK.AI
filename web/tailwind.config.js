@@ -1,6 +1,15 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    path.resolve(__dirname, 'index.html'),
+    path.resolve(__dirname, 'candidate-rehearsal.html'),
+    path.resolve(__dirname, 'src/**/*.{js,ts,jsx,tsx}'),
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -11,6 +20,19 @@ export default {
           green: '#1DB974',
           amber: '#FF9500',
           red: '#FF3B4E',
+        },
+        primary: {
+          50: '#EEF2FF',
+          100: '#E0E7FF',
+          200: '#C7D2FE',
+          300: '#A5B4FC',
+          400: '#818CF8',
+          500: '#6366F1',
+          600: '#4F6EF7',
+          700: '#4338CA',
+          800: '#3730A3',
+          900: '#312E81',
+          DEFAULT: '#4F6EF7',
         },
         surface: {
           DEFAULT: '#F5F7FF',

@@ -7,6 +7,7 @@ import { SyllabusModal } from '../components/exam/SyllabusModal';
 import { ReportQuestionModal, REPORT_REASONS } from '../components/exam/ReportQuestionModal';
 import { ExamService } from '../services/examService';
 import { communityService } from '../services/communityService';
+import { supabaseService } from '../services/supabase';
 import { storage } from '../services/storage';
 import { UserProfile, ExamPaper, CompetitiveExam } from '../types';
 
@@ -21,6 +22,7 @@ describe('MOCK.AI — Syllabus Access & In-Test Question Reporting', () => {
 
   beforeEach(() => {
     localStorage.clear();
+    vi.spyOn(supabaseService, 'getClient').mockReturnValue(null);
     storage.saveProfile(testUser);
   });
 

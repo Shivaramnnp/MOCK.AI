@@ -68,16 +68,19 @@ export type NumberCandidateType =
   | 'MATHEMATICAL_NUMBER'
   | 'STATEMENT_NUMBER'
   | 'METADATA_NUMBER'
+  | 'INSTRUCTION_NUMBER'
   | 'UNKNOWN_NUMBER';
 
 export type VisualCandidateRole =
   | 'DECORATIVE_VISUAL'
+  | 'PAGE_TEMPLATE'
   | 'PAGE_BACKGROUND'
   | 'WATERMARK'
   | 'BORDER'
   | 'LAYOUT_DIVIDER'
   | 'CHECKBOX'
   | 'ICON'
+  | 'DECORATION'
   | 'GLYPH_VECTOR'
   | 'TABLE_RULE'
   | 'MATH_VECTOR'
@@ -230,6 +233,17 @@ export interface MathCandidate {
 // 8. Question Candidate
 // ============================================================================
 
+export interface LanguageRepresentationCandidate {
+  languageScript: 'LATIN' | 'DEVANAGARI' | 'OTHER';
+  pageNumber: number;
+  columnIndex?: number;
+  numberNodeId?: string;
+  sourceQuestionNumber?: string;
+  stemNodeIds: string[];
+  bodyNodeIds: string[];
+  optionCandidateIds: string[];
+}
+
 export interface QuestionCandidate {
   candidateId: string;
   physicalInstanceId: string;
@@ -241,6 +255,8 @@ export interface QuestionCandidate {
   startPageNumber: number;
   endPageNumber: number;
   isMultiPage: boolean;
+  isBilingual?: boolean;
+  languageRepresentations?: LanguageRepresentationCandidate[];
   includedPhysicalNodeIds: string[];
   numberNodeId?: string;
   stemNodeIds: string[];
@@ -256,6 +272,82 @@ export interface QuestionCandidate {
   confidenceScore: number;
   evidenceList: SegmentationEvidence[];
   unresolvedAmbiguityIds: string[];
+}
+
+// ============================================================================
+// 8b. Question Identity Relationship Candidates & Formal Evidence Model
+// ============================================================================
+
+export type QuestionRelationshipType =
+  | 'LANGUAGE_REPRESENTATION_OF'
+  | 'CONTINUATION_OF'
+  | 'SHARED_STIMULUS_CHILD_OF'
+  | 'POSSIBLE_DUPLICATE_CANDIDATE'
+  | 'RELATED_BUT_DISTINCT'
+  | 'UNKNOWN_RELATIONSHIP';
+
+export type RelationshipEvidenceType =
+  // Hard Evidence
+  | 'FACING_PAGE_SPREAD_PAIR'
+  | 'MATCHING_PRINTED_NUMERAL'
+  | 'DISTINCT_SCRIPT_DETECTION'
+  | 'IDENTICAL_OPTION_CARDINALITY'
+  | 'MATCHING_SUB_CLAUSE_TOPOLOGY'
+  | 'EXPLICIT_OFFICIAL_QUESTION_ID'
+  // Supporting Evidence
+  | 'IDENTICAL_SECTION_CONTEXT'
+  | 'HOMOLOGOUS_SPATIAL_ORDER'
+  | 'SHARED_VISUAL_ASSET_REFERENCE'
+  | 'PARALLEL_COLUMN_LAYOUT'
+  // Weak / Contextual Evidence
+  | 'SAME_PRINTED_NUMBER_ONLY'
+  | 'ROUGH_TEXT_LENGTH_PROPORTION'
+  | 'COMMON_PUNCTUATION_PATTERN'
+  // Conflicting Evidence
+  | 'NUMERICAL_DISCONTINUITY'
+  | 'INCOMPATIBLE_OPTION_CARDINALITY'
+  | 'DIFFERENT_SECTION_CONTEXT'
+  | 'SAME_SCRIPT_ON_FACING_SPREAD'
+  | 'INCOMPATIBLE_SPATIAL_ORDER';
+
+export type RelationshipEvidenceStrength =
+  | 'HARD'
+  | 'SUPPORTING'
+  | 'WEAK'
+  | 'CONFLICTING';
+
+export interface RelationshipEvidence {
+  evidenceId: string;
+  evidenceType: RelationshipEvidenceType;
+  evidenceStrength: RelationshipEvidenceStrength;
+  sourceNodeIds: string[];
+  description: string;
+  confidence: number;
+}
+
+export type RelationshipVerificationStatus =
+  | 'RELATIONSHIP_UNVERIFIED'
+  | 'RELATIONSHIP_PROVEN'
+  | 'RELATIONSHIP_PLAUSIBLE'
+  | 'RELATIONSHIP_AMBIGUOUS'
+  | 'RELATIONSHIP_CONFLICTED'
+  | 'RELATIONSHIP_REJECTED';
+
+export interface QuestionRelationshipCandidate {
+  relationshipId: string;
+  sourceCandidateId: string;
+  targetCandidateId: string;
+  relationshipType: QuestionRelationshipType;
+  evidence: RelationshipEvidence[];
+  confidenceScore: number;
+  verificationStatus: RelationshipVerificationStatus;
+  isSymmetric: boolean;
+  provenance: {
+    sourceSnapshotId: string;
+    sourceDocumentId: string;
+    createdAt: number;
+  };
+  unresolvedReasons?: string[];
 }
 
 // ============================================================================
@@ -358,6 +450,7 @@ export interface QuestionGraph {
   hypotheses: SegmentationHypothesis[];
   activeHypothesisId: string;
   ambiguities: AmbiguityRecord[];
+  relationships?: QuestionRelationshipCandidate[];
   verificationState: QuestionGraphVerificationState;
   provenance: QuestionGraphProvenanceRecord;
   isSealed: boolean;

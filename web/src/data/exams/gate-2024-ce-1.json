@@ -263,11 +263,11 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+      "questionText": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+          "content": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
           "confidence": "VERIFIED"
         }
       ],
@@ -277,41 +277,43 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑞𝑝= 𝑝𝑞",
-        "𝑞𝑝= 𝑝2𝑞",
+        "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
+        "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
         "\\sqrt 𝑞= \\sqrt 𝑝",
-        "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝"
+        "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑞𝑝= 𝑝𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑞𝑝= 𝑝2𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝2𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{2𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -331,12 +333,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+          "text": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+              "content": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
               "confidence": "VERIFIED"
             }
           ],
@@ -481,11 +483,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+      "questionText": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+          "content": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +606,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
-        "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
-        "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
-        "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots"
+        "(i) hold (ii) waits (iii) culminates (iv) pivot",
+        "(i) holds (ii) wait (iii) culminates (iv) pivot",
+        "(i) hold (ii) wait (iii) culminate (iv) pivots",
+        "(i) holds (ii) waits (iii) culminate (iv) pivots"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+          "text": "(i) hold (ii) waits (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+              "content": "(i) hold (ii) waits (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +630,12 @@
         },
         {
           "id": "B",
-          "text": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+          "text": "(i) holds (ii) wait (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+              "content": "(i) holds (ii) wait (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +645,12 @@
         },
         {
           "id": "C",
-          "text": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+          "text": "(i) hold (ii) wait (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+              "content": "(i) hold (ii) wait (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +660,12 @@
         },
         {
           "id": "D",
-          "text": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+          "text": "(i) holds (ii) waits (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+              "content": "(i) holds (ii) waits (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -808,11 +810,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
           "confidence": "VERIFIED"
         },
         {
@@ -1260,11 +1262,11 @@
       "questionNumber": 12,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The second-order differential equation in an unknown function 𝑢: 𝑢(𝑥, 𝑦) is defined as\n\n\\partial ^{2}𝑢 \\partial 𝑥2 = 2 Assuming 𝑔: 𝑔(𝑥), 𝑓: 𝑓(𝑦), and ℎ: ℎ(𝑦), the general solution of the above differential equation is",
+      "questionText": "The second-order differential equation in an unknown function 𝑢: 𝑢(𝑥, 𝑦) is defined as\n\n\\(\\frac{ \\partial 2𝑢}{ \\partial 𝑥2}\\) = 2\n\nAssuming 𝑔: 𝑔(𝑥), 𝑓: 𝑓(𝑦), and ℎ: ℎ(𝑦), the general solution of the above differential equation is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The second-order differential equation in an unknown function 𝑢: 𝑢(𝑥, 𝑦) is defined as\n\n\\partial ^{2}𝑢 \\partial 𝑥2 = 2 Assuming 𝑔: 𝑔(𝑥), 𝑓: 𝑓(𝑦), and ℎ: ℎ(𝑦), the general solution of the above differential equation is",
+          "content": "The second-order differential equation in an unknown function 𝑢: 𝑢(𝑥, 𝑦) is defined as\n\n\\(\\frac{ \\partial 2𝑢}{ \\partial 𝑥2}\\) = 2\n\nAssuming 𝑔: 𝑔(𝑥), 𝑓: 𝑓(𝑦), and ℎ: ℎ(𝑦), the general solution of the above differential equation is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1274,71 +1276,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑔(𝑥)",
-        "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + ℎ(𝑦)",
-        "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + 𝑔(𝑥)",
-        "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑦 𝑔(𝑥)"
+        "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑔(𝑥)\\)",
+        "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + ℎ(𝑦)\\)",
+        "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + 𝑔(𝑥)\\)",
+        "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑦 𝑔(𝑥)\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑔(𝑥)",
+          "text": "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑔(𝑥)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑔(𝑥)",
+              "type": "math",
+              "latex": "𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑔(𝑥)",
+              "content": "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑔(𝑥)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + ℎ(𝑦)",
+          "text": "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + ℎ(𝑦)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + ℎ(𝑦)",
+              "type": "math",
+              "latex": "𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + ℎ(𝑦)",
+              "content": "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + ℎ(𝑦)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + 𝑔(𝑥)",
+          "text": "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + 𝑔(𝑥)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑢= 𝑥2 + 𝑥 𝑓(𝑦) + 𝑔(𝑥)",
+              "type": "math",
+              "latex": "𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + 𝑔(𝑥)",
+              "content": "\\(𝑢= 𝑥^{2} + 𝑥 𝑓(𝑦) + 𝑔(𝑥)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑦 𝑔(𝑥)",
+          "text": "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑦 𝑔(𝑥)\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑢= 𝑥2 + 𝑓(𝑦) + 𝑦 𝑔(𝑥)",
+              "type": "math",
+              "latex": "𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑦 𝑔(𝑥)",
+              "content": "\\(𝑢= 𝑥^{2} + 𝑓(𝑦) + 𝑦 𝑔(𝑥)\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -1369,11 +1375,11 @@
       "questionNumber": 13,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "1 The probability that a student passes only in Mathematics is 4 that the student passes only in English is 1 in both of these subjects is one of these two subjects is",
+      "questionText": "The probability that a student passes only in Mathematics is \\(\\frac{1}{3}\\) . The probability that the student passes only in English is \\(\\frac{4}{9}\\) . The probability that the student passes\n\nin both of these subjects is \\(\\frac{1}{6}\\) . The probability that the student will pass in at least one of these two subjects is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "1 The probability that a student passes only in Mathematics is 4 that the student passes only in English is 1 in both of these subjects is one of these two subjects is",
+          "content": "The probability that a student passes only in Mathematics is \\(\\frac{1}{3}\\) . The probability that the student passes only in English is \\(\\frac{4}{9}\\) . The probability that the student passes\n\nin both of these subjects is \\(\\frac{1}{6}\\) . The probability that the student will pass in at least one of these two subjects is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1383,71 +1389,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "17\n18",
-        "11\n18",
-        "14\n18",
-        "1 18"
+        "\\(\\frac{17}{18}\\)",
+        "\\(\\frac{11}{18}\\)",
+        "\\(\\frac{14}{18}\\)",
+        "\\(\\frac{1}{18}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "17\n18",
+          "text": "\\(\\frac{17}{18}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "17\n18",
+              "type": "math",
+              "latex": "\\frac{17}{18}",
+              "content": "\\(\\frac{17}{18}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "11\n18",
+          "text": "\\(\\frac{11}{18}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "11\n18",
+              "type": "math",
+              "latex": "\\frac{11}{18}",
+              "content": "\\(\\frac{11}{18}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "14\n18",
+          "text": "\\(\\frac{14}{18}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "14\n18",
+              "type": "math",
+              "latex": "\\frac{14}{18}",
+              "content": "\\(\\frac{14}{18}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "1 18",
+          "text": "\\(\\frac{1}{18}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "1 18",
+              "type": "math",
+              "latex": "\\frac{1}{18}",
+              "content": "\\(\\frac{1}{18}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -1478,11 +1488,11 @@
       "questionNumber": 14,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The three-dimensional state of stress at a point is given by\n\n10 0 0  = ( ) MPa. 0 40 0 0 0 0 The maximum shear stress at the point is",
+      "questionText": "The three-dimensional state of stress at a point is given by\n\n\\(\\sigma\\) = ( 10 0 40 0 0 0 ) MPa. 0 0 0 The maximum shear stress at the point is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The three-dimensional state of stress at a point is given by\n\n10 0 0  = ( ) MPa. 0 40 0 0 0 0 The maximum shear stress at the point is",
+          "content": "The three-dimensional state of stress at a point is given by\n\n\\(\\sigma\\) = ( 10 0 40 0 0 0 ) MPa. 0 0 0 The maximum shear stress at the point is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1805,11 +1815,11 @@
       "questionNumber": 17,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The following figure shows the arrangement of formwork for casting a cantilever RC beam.\n\nCantilever RC Beam\n\nRC Column S1 S2 S3 S4 S5\n\nS1, S2, S3, S4, S5 are Shores/Props\n\nCompacted Ground The correct sequence of removing the Shores/Props is",
+      "questionText": "The following figure shows the arrangement of formwork for casting a cantilever RC beam.\n\nThe correct sequence of removing the Shores/Props is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The following figure shows the arrangement of formwork for casting a cantilever RC beam.\n\nCantilever RC Beam\n\nRC Column S1 S2 S3 S4 S5\n\nS1, S2, S3, S4, S5 are Shores/Props\n\nCompacted Ground The correct sequence of removing the Shores/Props is",
+          "content": "The following figure shows the arrangement of formwork for casting a cantilever RC beam.\n\nThe correct sequence of removing the Shores/Props is",
           "confidence": "VERIFIED"
         },
         {
@@ -2249,15 +2259,35 @@
       "questionNumber": 21,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The following table gives various components of Municipal Solid Waste (MSW) \\(\\frac{listoftreatment/separationtechniques}{ComponentofMSW}\\)\n\nR - Food waste iii - Eddy current separator <u>S</u> <u>-</u> <u>Cardboard</u> <u>iv</u> <u>-</u> <u>Magnetic</u> <u>separator</u> <u>S</u> <u>-</u> <u>Cardboard</u> <u>iv</u> <u>-</u> <u>Magnetic</u> <u>separator</u>\n\nThe CORRECT match is",
+      "questionText": "The following table gives various components of Municipal Solid Waste (MSW) and a list of treatment/separation techniques.\n\n| Component of MSW | Treatment/separation technique |\n| :--- | :--- |\n| P - Ferrous metals Q - Aluminum and copper R - Food waste S - Cardboard | i - Incineration ii - Rapid composting iii - Eddy current separator iv - Magnetic separator |\n\nThe CORRECT match is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The following table gives various components of Municipal Solid Waste (MSW) \\(\\frac{listoftreatment/separationtechniques}{ComponentofMSW}\\)\n\nR - Food waste iii - Eddy current separator <u>S</u> <u>-</u> <u>Cardboard</u> <u>iv</u> <u>-</u> <u>Magnetic</u> <u>separator</u> <u>S</u> <u>-</u> <u>Cardboard</u> <u>iv</u> <u>-</u> <u>Magnetic</u> <u>separator</u>\n\nThe CORRECT match is",
+          "content": "The following table gives various components of Municipal Solid Waste (MSW) and a list of treatment/separation techniques.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Component of MSW",
+            "Treatment/separation technique"
+          ],
+          "rows": [
+            [
+              "P - Ferrous metals Q - Aluminum and copper R - Food waste S - Cardboard",
+              "i - Incineration ii - Rapid composting iii - Eddy current separator iv - Magnetic separator"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The CORRECT match is",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2358,11 +2388,11 @@
       "questionNumber": 22,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A car is travelling at a speed of 60 km/hr on a section of a National Highway having a downward gradient of 2%. The driver of the car suddenly observes a stopped vehicle on the car path at a distance 130 m ahead, and applies brake. If the brake efficiency is 60%, coefficient of friction is 0.7, driver's reaction time is\n\nby the driver to bring the car to a safe stop lies in the range",
+      "questionText": "A car is travelling at a speed of 60 km/hr on a section of a National Highway having a downward gradient of 2%. The driver of the car suddenly observes a stopped vehicle on the car path at a distance 130 m ahead, and applies brake. If the brake efficiency is 60%, coefficient of friction is 0.7, driver's reaction time is 5 s, and acceleration due to gravity is 9.81 m/s^{2}, the distance (in meters) required by the driver to bring the car to a safe stop lies in the range",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A car is travelling at a speed of 60 km/hr on a section of a National Highway having a downward gradient of 2%. The driver of the car suddenly observes a stopped vehicle on the car path at a distance 130 m ahead, and applies brake. If the brake efficiency is 60%, coefficient of friction is 0.7, driver's reaction time is\n\nby the driver to bring the car to a safe stop lies in the range",
+          "content": "A car is travelling at a speed of 60 km/hr on a section of a National Highway having a downward gradient of 2%. The driver of the car suddenly observes a stopped vehicle on the car path at a distance 130 m ahead, and applies brake. If the brake efficiency is 60%, coefficient of friction is 0.7, driver's reaction time is 5 s, and acceleration due to gravity is 9.81 m/s^{2}, the distance (in meters) required by the driver to bring the car to a safe stop lies in the range",
           "confidence": "VERIFIED"
         }
       ],
@@ -2590,21 +2620,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under\ngravity.",
+        "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under gravity.",
         "Softer grade bitumen possesses higher softening point than hard grade bitumen.",
-        "Flash point of bitumen is the lowest temperature at which application of a test flame\ncauses vapours of the bitumen to catch an instant fire in the form of flash under\nspecified test conditions.",
-        "Ductility test is carried out on bitumen to test its adhesive property and ability to\nstretch."
+        "Flash point of bitumen is the lowest temperature at which application of a test flame causes vapours of the bitumen to catch an instant fire in the form of flash under specified test conditions.",
+        "Ductility test is carried out on bitumen to test its adhesive property and ability to stretch."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under\ngravity.",
+          "text": "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under gravity.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under\ngravity.",
+              "content": "Kinematic viscosity is a measure of resistance to the flow of molten bitumen under gravity.",
               "confidence": "VERIFIED"
             }
           ],
@@ -2629,12 +2659,12 @@
         },
         {
           "id": "C",
-          "text": "Flash point of bitumen is the lowest temperature at which application of a test flame\ncauses vapours of the bitumen to catch an instant fire in the form of flash under\nspecified test conditions.",
+          "text": "Flash point of bitumen is the lowest temperature at which application of a test flame causes vapours of the bitumen to catch an instant fire in the form of flash under specified test conditions.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Flash point of bitumen is the lowest temperature at which application of a test flame\ncauses vapours of the bitumen to catch an instant fire in the form of flash under\nspecified test conditions.",
+              "content": "Flash point of bitumen is the lowest temperature at which application of a test flame causes vapours of the bitumen to catch an instant fire in the form of flash under specified test conditions.",
               "confidence": "VERIFIED"
             }
           ],
@@ -2644,12 +2674,12 @@
         },
         {
           "id": "D",
-          "text": "Ductility test is carried out on bitumen to test its adhesive property and ability to\nstretch.",
+          "text": "Ductility test is carried out on bitumen to test its adhesive property and ability to stretch.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Ductility test is carried out on bitumen to test its adhesive property and ability to\nstretch.",
+              "content": "Ductility test is carried out on bitumen to test its adhesive property and ability to stretch.",
               "confidence": "VERIFIED"
             }
           ],
@@ -2699,71 +2729,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "90o",
-        "180o",
-        "270o",
-        "360o"
+        "\\(90^{o}\\)",
+        "\\(180^{o}\\)",
+        "\\(270^{o}\\)",
+        "\\(360^{o}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "90o",
+          "text": "\\(90^{o}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "90o",
+              "type": "math",
+              "latex": "90^{o}",
+              "content": "\\(90^{o}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "180o",
+          "text": "\\(180^{o}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "180o",
+              "type": "math",
+              "latex": "180^{o}",
+              "content": "\\(180^{o}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "270o",
+          "text": "\\(270^{o}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "270o",
+              "type": "math",
+              "latex": "270^{o}",
+              "content": "\\(270^{o}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "360o",
+          "text": "\\(360^{o}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "360o",
+              "type": "math",
+              "latex": "360^{o}",
+              "content": "\\(360^{o}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2808,71 +2842,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "- 03o 00' 00\"",
-        "+ 03o 00' 00\"",
-        "- 87o 00' 00\"",
-        "+ 87o 00' 00\""
+        "\\(- 03^{o} 00' 00\"\\)",
+        "\\(+ 03^{o} 00' 00\"\\)",
+        "\\(- 87^{o} 00' 00\"\\)",
+        "\\(+ 87^{o} 00' 00\"\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "- 03o 00' 00\"",
+          "text": "\\(- 03^{o} 00' 00\"\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "- 03o 00' 00\"",
+              "type": "math",
+              "latex": "- 03^{o} 00' 00\"",
+              "content": "\\(- 03^{o} 00' 00\"\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "+ 03o 00' 00\"",
+          "text": "\\(+ 03^{o} 00' 00\"\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "+ 03o 00' 00\"",
+              "type": "math",
+              "latex": "+ 03^{o} 00' 00\"",
+              "content": "\\(+ 03^{o} 00' 00\"\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "- 87o 00' 00\"",
+          "text": "\\(- 87^{o} 00' 00\"\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "- 87o 00' 00\"",
+              "type": "math",
+              "latex": "- 87^{o} 00' 00\"",
+              "content": "\\(- 87^{o} 00' 00\"\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "+ 87o 00' 00\"",
+          "text": "\\(+ 87^{o} 00' 00\"\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "+ 87o 00' 00\"",
+              "type": "math",
+              "latex": "+ 87^{o} 00' 00\"",
+              "content": "\\(+ 87^{o} 00' 00\"\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2917,7 +2955,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "The line of collimation must be perpendicular to the horizontal axis at its\nintersection with the vertical axis.",
+        "The line of collimation must be perpendicular to the horizontal axis at its intersection with the vertical axis.",
         "The axis of altitude level must be perpendicular to the line of collimation.",
         "The axis of plate level must lie in a plane parallel to the vertical axis.",
         "The Vernier of vertical circle must read zero when the line of collimation is vertical."
@@ -2926,12 +2964,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "The line of collimation must be perpendicular to the horizontal axis at its\nintersection with the vertical axis.",
+          "text": "The line of collimation must be perpendicular to the horizontal axis at its intersection with the vertical axis.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The line of collimation must be perpendicular to the horizontal axis at its\nintersection with the vertical axis.",
+              "content": "The line of collimation must be perpendicular to the horizontal axis at its intersection with the vertical axis.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3012,11 +3050,11 @@
       "questionNumber": 28,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "For the following partial differential equation, 𝜕𝑦2 = 𝑥2 + 𝑦2 𝑥𝜕^{2}𝑓 𝜕𝑥_{2} + 𝑦𝜕^{2}𝑓 2\n\nwhich of the following option(s) is/are CORRECT?",
+      "questionText": "For the following partial differential equation,\n\n𝑥𝜕^{2}𝑓 𝜕𝑥_{2} + 𝑦𝜕^{2}𝑓 𝜕𝑦_{2} = 𝑥 \\(\\frac{𝑥2+𝑦2}{2}\\)\n\nwhich of the following option(s) is/are CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For the following partial differential equation, 𝜕𝑦2 = 𝑥2 + 𝑦2 𝑥𝜕^{2}𝑓 𝜕𝑥_{2} + 𝑦𝜕^{2}𝑓 2\n\nwhich of the following option(s) is/are CORRECT?",
+          "content": "For the following partial differential equation,\n\n𝑥𝜕^{2}𝑓 𝜕𝑥_{2} + 𝑦𝜕^{2}𝑓 𝜕𝑦_{2} = 𝑥 \\(\\frac{𝑥2+𝑦2}{2}\\)\n\nwhich of the following option(s) is/are CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3251,7 +3289,6 @@
         }
       ],
       "contentTypes": [
-        "math",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3473,15 +3510,45 @@
       "questionNumber": 32,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "\\(\\frac{dataof𝑓(𝑥)}{𝑖}\\)\\(\\frac{𝑓(𝑥)giveninthetable}{0}\\)\n\n\\(\\frac{2}{3}\\)\n\nThe value of 𝑓(1.5) estimated using second-order Newton's interpolation formula is ______________ (rounded off to 2 decimal places).",
+      "questionText": "Consider the data of 𝑓(𝑥) given in the table.\n\n| 𝑖 | 0 | 1 | 2 |\n| :--- | :--- | :--- | :--- |\n| 𝑥 𝑖 | 1 | 2 | 3 |\n| 𝑓(𝑥 ) 𝑖 | 0 | 0.3010 | 0.4771 |\n\nThe value of 𝑓(1.5) estimated using second-order Newton’s interpolation formula is ______________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{dataof𝑓(𝑥)}{𝑖}\\)\\(\\frac{𝑓(𝑥)giveninthetable}{0}\\)\n\n\\(\\frac{2}{3}\\)\n\nThe value of 𝑓(1.5) estimated using second-order Newton's interpolation formula is ______________ (rounded off to 2 decimal places).",
+          "content": "Consider the data of 𝑓(𝑥) given in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "𝑖",
+            "0",
+            "1",
+            "2"
+          ],
+          "rows": [
+            [
+              "𝑥 𝑖",
+              "1",
+              "2",
+              "3"
+            ],
+            [
+              "𝑓(𝑥 ) 𝑖",
+              "0",
+              "0.3010",
+              "0.4771"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The value of 𝑓(1.5) estimated using second-order Newton's interpolation formula is ______________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3665,11 +3732,11 @@
       "questionNumber": 36,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "2 1 1 What are the eigenvalues of the matrix [ ] ? 1 4 1 1 1 2",
+      "questionText": "2 1 1 What are the eigenvalues of the matrix [ 1 4 1 ] ? 1 1 2",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "2 1 1 What are the eigenvalues of the matrix [ ] ? 1 4 1 1 1 2",
+          "content": "2 1 1 What are the eigenvalues of the matrix [ 1 4 1 ] ? 1 1 2",
           "confidence": "VERIFIED"
         }
       ],
@@ -3883,11 +3950,11 @@
       "questionNumber": 38,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "Find the correct match between the plane stress states and the Mohr's circles.\n\n (P) (I)\n\n 10 10 -10\n\n(Q)  10 (II) 10  10 -10 10 (R) (III)  10 10 10  10 (S) (IV)  10 10 -10 10 10",
+      "questionText": "Find the correct match between the plane stress states and the Mohr's circles.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Find the correct match between the plane stress states and the Mohr's circles.\n\n (P) (I)\n\n 10 10 -10\n\n(Q)  10 (II) 10  10 -10 10 (R) (III)  10 10 10  10 (S) (IV)  10 10 -10 10 10",
+          "content": "Find the correct match between the plane stress states and the Mohr's circles.",
           "confidence": "VERIFIED"
         },
         {
@@ -4000,57 +4067,50 @@
       "questionNumber": 39,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The beam shown in the figure is subjected to a uniformly distributed downward load of intensity q between supports A and B.\n\nq\n\nA C B hinge\n\nl l l Considering the upward reactions as positive, the support reactions are",
+      "questionText": "The beam shown in the figure is subjected to a uniformly distributed downward load of intensity q between supports A and B.\n\nq\n\nA hinge B C\n\nl l l\n\nConsidering the upward reactions as positive, the support reactions are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The beam shown in the figure is subjected to a uniformly distributed downward load of intensity q between supports A and B.\n\nq\n\nA C B hinge\n\nl l l Considering the upward reactions as positive, the support reactions are",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/ce-1/q39_diag.png",
+          "content": "The beam shown in the figure is subjected to a uniformly distributed downward load of intensity q between supports A and B.\n\nq\n\nA hinge B C\n\nl l l\n\nConsidering the upward reactions as positive, the support reactions are",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = 5𝑞𝑙 _{2} ; R_{C}= - ql\\)",
-        "RA = - ql; RB =",
-        "RA = -𝑞𝑙",
-        "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = ql; R_{C}= 𝑞𝑙 2\\)"
+        "R_{A} \\(\\frac{𝑞𝑙}{2}\\) B ; \\(\\frac{5𝑞𝑙}{2}\\) _{C}= - ql ;",
+        "R_{A} = - ql; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) C ; = \\(\\frac{𝑞𝑙}{2}\\)",
+        "R_{A} = -^{𝑞𝑙} _{2}; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) _{C}= 0 ;",
+        "R_{A} \\(\\frac{𝑞𝑙}{2}\\) _{B} = ql; R_{C} ; = \\(\\frac{𝑞𝑙}{2}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = 5𝑞𝑙 _{2} ; R_{C}= - ql\\)",
-          "imageUrl": null,
-          "contentBlocks": [
-            {
-              "type": "math",
-              "latex": "R_{A} = 𝑞𝑙 _{2} ; R_{B} = 5𝑞𝑙 _{2} ; R_{C}= - ql",
-              "content": "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = 5𝑞𝑙 _{2} ; R_{C}= - ql\\)",
-              "confidence": "VERIFIED"
-            }
-          ],
-          "contentTypes": [
-            "math"
-          ]
-        },
-        {
-          "id": "B",
-          "text": "RA = - ql; RB =",
+          "text": "R_{A} \\(\\frac{𝑞𝑙}{2}\\) B ; \\(\\frac{5𝑞𝑙}{2}\\) _{C}= - ql ;",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "RA = - ql; RB =",
+              "content": "R_{A} \\(\\frac{𝑞𝑙}{2}\\) B ; \\(\\frac{5𝑞𝑙}{2}\\) _{C}= - ql ;",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "R_{A} = - ql; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) C ; = \\(\\frac{𝑞𝑙}{2}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "R_{A} = - ql; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) C ; = \\(\\frac{𝑞𝑙}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4060,12 +4120,12 @@
         },
         {
           "id": "C",
-          "text": "RA = -𝑞𝑙",
+          "text": "R_{A} = -^{𝑞𝑙} _{2}; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) _{C}= 0 ;",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "RA = -𝑞𝑙",
+              "content": "R_{A} = -^{𝑞𝑙} _{2}; R_{B} \\(\\frac{5𝑞𝑙}{2}\\) _{C}= 0 ;",
               "confidence": "VERIFIED"
             }
           ],
@@ -4075,18 +4135,17 @@
         },
         {
           "id": "D",
-          "text": "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = ql; R_{C}= 𝑞𝑙 2\\)",
+          "text": "R_{A} \\(\\frac{𝑞𝑙}{2}\\) _{B} = ql; R_{C} ; = \\(\\frac{𝑞𝑙}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "R_{A} = 𝑞𝑙 _{2} ; R_{B} = ql; R_{C}= 𝑞𝑙 2",
-              "content": "\\(R_{A} = 𝑞𝑙 _{2} ; R_{B} = ql; R_{C}= 𝑞𝑙 2\\)",
+              "type": "text",
+              "content": "R_{A} \\(\\frac{𝑞𝑙}{2}\\) _{B} = ql; R_{C} ; = \\(\\frac{𝑞𝑙}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4099,10 +4158,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IISc Bengaluru is Option (A).",
-      "diagramUrl": "/exam-assets/gate/2024/ce-1/q39_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/ce-1/q39_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.66,
       "examId": "gate",
@@ -4119,11 +4176,11 @@
       "questionNumber": 40,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A homogeneous shaft PQR with fixed supports at both ends is subjected to a torsional moment T at point Q, as shown in the figure. The polar moments of inertia of the portions PQ and QR of the shaft with circular cross-sections are J_{1} and J_{2}, respectively. The torsional moment reactions at the supports P and R are T_{P} and TR, respectively.\n\n(Figure NOT to scale)\n\nIf T_{P}/T_{R} = 4 and J_{1}/J_{2} = 2, the ratio of the lengths L_{1}/L_{2} is",
+      "questionText": "A homogeneous shaft PQR with fixed supports at both ends is subjected to a torsional moment T at point Q, as shown in the figure. The polar moments of inertia of the portions PQ and QR of the shaft with circular cross-sections are J_{1} and J_{2}, respectively. The torsional moment reactions at the supports P and R are T_{P} and T_{R}, respectively.\n\nIf T_{P}/T_{R} = 4 and J_{1}/J_{2} = 2, the ratio of the lengths L_{1}/L_{2} is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A homogeneous shaft PQR with fixed supports at both ends is subjected to a torsional moment T at point Q, as shown in the figure. The polar moments of inertia of the portions PQ and QR of the shaft with circular cross-sections are J_{1} and J_{2}, respectively. The torsional moment reactions at the supports P and R are T_{P} and TR, respectively.\n\n(Figure NOT to scale)\n\nIf T_{P}/T_{R} = 4 and J_{1}/J_{2} = 2, the ratio of the lengths L_{1}/L_{2} is",
+          "content": "A homogeneous shaft PQR with fixed supports at both ends is subjected to a torsional moment T at point Q, as shown in the figure. The polar moments of inertia of the portions PQ and QR of the shaft with circular cross-sections are J_{1} and J_{2}, respectively. The torsional moment reactions at the supports P and R are T_{P} and T_{R}, respectively.\n\nIf T_{P}/T_{R} = 4 and J_{1}/J_{2} = 2, the ratio of the lengths L_{1}/L_{2} is",
           "confidence": "VERIFIED"
         },
         {
@@ -4345,11 +4402,11 @@
       "questionNumber": 42,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A flow velocity field 𝑉⃗⃗: 𝑉⃗⃗(𝑥, 𝑦) for a fluid is represented by\n\n𝑉⃗⃗= 3 𝑖̂ + (5𝑥) 𝑗̂\n\nIn the context of the fluid and the flow, which one of the following statements is CORRECT?",
+      "questionText": "_{A flow velocity field}𝑉⃗⃗: 𝑉⃗⃗(𝑥, 𝑦) _{for a fluid is represented by}\n\n𝑉⃗⃗= 3 𝑖̂ + (5𝑥) 𝑗̂\n\nIn the context of the fluid and the flow, which one of the following statements is CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A flow velocity field 𝑉⃗⃗: 𝑉⃗⃗(𝑥, 𝑦) for a fluid is represented by\n\n𝑉⃗⃗= 3 𝑖̂ + (5𝑥) 𝑗̂\n\nIn the context of the fluid and the flow, which one of the following statements is CORRECT?",
+          "content": "_{A flow velocity field}𝑉⃗⃗: 𝑉⃗⃗(𝑥, 𝑦) _{for a fluid is represented by}\n\n𝑉⃗⃗= 3 𝑖̂ + (5𝑥) 𝑗̂\n\nIn the context of the fluid and the flow, which one of the following statements is CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -4469,8 +4526,8 @@
       "questionType": "MCQ",
       "options": [
         "No compliance, as the corrected HCl emission is greater than the emission standard.",
-        "Compliance is there, as the corrected HCl emission is lesser than the emission\nstandard.",
-        "Compliance is there, as there is no need to apply the correction since Oxygen is\ngreater than 11% and HCl emission is lesser than the emission standard.",
+        "Compliance is there, as the corrected HCl emission is lesser than the emission standard.",
+        "Compliance is there, as there is no need to apply the correction since Oxygen is greater than 11% and HCl emission is lesser than the emission standard.",
         "No compliance, as the Oxygen is greater than 11% in the flue gas."
       ],
       "optionImages": null,
@@ -4492,12 +4549,12 @@
         },
         {
           "id": "B",
-          "text": "Compliance is there, as the corrected HCl emission is lesser than the emission\nstandard.",
+          "text": "Compliance is there, as the corrected HCl emission is lesser than the emission standard.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Compliance is there, as the corrected HCl emission is lesser than the emission\nstandard.",
+              "content": "Compliance is there, as the corrected HCl emission is lesser than the emission standard.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4507,12 +4564,12 @@
         },
         {
           "id": "C",
-          "text": "Compliance is there, as there is no need to apply the correction since Oxygen is\ngreater than 11% and HCl emission is lesser than the emission standard.",
+          "text": "Compliance is there, as there is no need to apply the correction since Oxygen is greater than 11% and HCl emission is lesser than the emission standard.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Compliance is there, as there is no need to apply the correction since Oxygen is\ngreater than 11% and HCl emission is lesser than the emission standard.",
+              "content": "Compliance is there, as there is no need to apply the correction since Oxygen is greater than 11% and HCl emission is lesser than the emission standard.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4796,9 +4853,9 @@
       "questionType": "MSQ",
       "options": [
         "Swell potential of soil decreases with an increase in the shrinkage limit.",
-        "Both loose and dense sands with different initial void ratios can attain similar void\nratio at large strain during shearing.",
-        "Among the several corrections to be applied to the SPT-N value, the dilatancy\ncorrection is applied before all other corrections.",
-        "In electrical resistivity tomography, the depth of current penetration is half of the\nspacing between the electrodes."
+        "Both loose and dense sands with different initial void ratios can attain similar void ratio at large strain during shearing.",
+        "Among the several corrections to be applied to the SPT-N value, the dilatancy correction is applied before all other corrections.",
+        "In electrical resistivity tomography, the depth of current penetration is half of the spacing between the electrodes."
       ],
       "optionImages": null,
       "richOptions": [
@@ -4819,12 +4876,12 @@
         },
         {
           "id": "B",
-          "text": "Both loose and dense sands with different initial void ratios can attain similar void\nratio at large strain during shearing.",
+          "text": "Both loose and dense sands with different initial void ratios can attain similar void ratio at large strain during shearing.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Both loose and dense sands with different initial void ratios can attain similar void\nratio at large strain during shearing.",
+              "content": "Both loose and dense sands with different initial void ratios can attain similar void ratio at large strain during shearing.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4834,12 +4891,12 @@
         },
         {
           "id": "C",
-          "text": "Among the several corrections to be applied to the SPT-N value, the dilatancy\ncorrection is applied before all other corrections.",
+          "text": "Among the several corrections to be applied to the SPT-N value, the dilatancy correction is applied before all other corrections.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Among the several corrections to be applied to the SPT-N value, the dilatancy\ncorrection is applied before all other corrections.",
+              "content": "Among the several corrections to be applied to the SPT-N value, the dilatancy correction is applied before all other corrections.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4849,12 +4906,12 @@
         },
         {
           "id": "D",
-          "text": "In electrical resistivity tomography, the depth of current penetration is half of the\nspacing between the electrodes.",
+          "text": "In electrical resistivity tomography, the depth of current penetration is half of the spacing between the electrodes.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "In electrical resistivity tomography, the depth of current penetration is half of the\nspacing between the electrodes.",
+              "content": "In electrical resistivity tomography, the depth of current penetration is half of the spacing between the electrodes.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4942,11 +4999,11 @@
       "questionNumber": 48,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A 2 m \\times 2 m tank of 3 m height has inflow, outflow and stirring mechanisms. Initially, the tank was half-filled with fresh water. At t = 0, an inflow of a salt solution of concentration 5 g/m^{3} at the rate of 2 litre/s and an outflow of the well stirred mixture at the rate of 1 litre/s are initiated. This process can be modelled using the following differential equation:\n\n𝑑𝑚 𝑚 6000 + 𝑡= 0.01 𝑑𝑡+ where m is the mass (grams) of the salt at time t (seconds). The mass of the salt (in grams) in the tank at 75% of its capacity is _____________ (rounded off to 2 decimal places).",
+      "questionText": "A 2 m \\times 2 m tank of 3 m height has inflow, outflow and stirring mechanisms. Initially, the tank was half-filled with fresh water. At t = 0, an inflow of a salt solution of concentration 5 g/m^{3} at the rate of 2 litre/s and an outflow of the well stirred mixture at the rate of 1 litre/s are initiated. This process can be modelled using the following differential equation:\n\n<u>𝑑𝑚</u> 𝑚 𝑑𝑡+ \\(\\frac{𝑚}{6000+}\\) = 0.01\n\nwhere m is the mass (grams) of the salt at time t (seconds). The mass of the salt (in grams) in the tank at 75% of its capacity is _____________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A 2 m \\times 2 m tank of 3 m height has inflow, outflow and stirring mechanisms. Initially, the tank was half-filled with fresh water. At t = 0, an inflow of a salt solution of concentration 5 g/m^{3} at the rate of 2 litre/s and an outflow of the well stirred mixture at the rate of 1 litre/s are initiated. This process can be modelled using the following differential equation:\n\n𝑑𝑚 𝑚 6000 + 𝑡= 0.01 𝑑𝑡+ where m is the mass (grams) of the salt at time t (seconds). The mass of the salt (in grams) in the tank at 75% of its capacity is _____________ (rounded off to 2 decimal places).",
+          "content": "A 2 m \\times 2 m tank of 3 m height has inflow, outflow and stirring mechanisms. Initially, the tank was half-filled with fresh water. At t = 0, an inflow of a salt solution of concentration 5 g/m^{3} at the rate of 2 litre/s and an outflow of the well stirred mixture at the rate of 1 litre/s are initiated. This process can be modelled using the following differential equation:\n\n<u>𝑑𝑚</u> 𝑚 𝑑𝑡+ \\(\\frac{𝑚}{6000+}\\) = 0.01\n\nwhere m is the mass (grams) of the salt at time t (seconds). The mass of the salt (in grams) in the tank at 75% of its capacity is _____________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -4988,11 +5045,11 @@
       "questionNumber": 49,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The plane truss shown in the figure has 13 joints and 22 members. The truss is made of a homogeneous, prismatic, linearly elastic material. All members have identical axial rigidity. A to M indicate the joints of the truss. The truss has pin supports at joints A and L and roller support at joint K. The truss is subjected to a 10 kN vertically downward force at joint H and a 10 kN horizontal force in the rightward direction at joint B as shown.\n\n(Figure NOT to scale)\n\nThe magnitude of the reaction (in kN) at the pin support L is _____________ (rounded off to 1 decimal place).",
+      "questionText": "The plane truss shown in the figure has 13 joints and 22 members. The truss is made of a homogeneous, prismatic, linearly elastic material. All members have identical axial rigidity. A to M indicate the joints of the truss. The truss has pin supports at joints A and L and roller support at joint K. The truss is subjected to a 10 kN vertically downward force at joint H and a 10 kN horizontal force in the rightward direction at joint B as shown.\n\nThe magnitude of the reaction (in kN) at the pin support L is _____________ (rounded off to 1 decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The plane truss shown in the figure has 13 joints and 22 members. The truss is made of a homogeneous, prismatic, linearly elastic material. All members have identical axial rigidity. A to M indicate the joints of the truss. The truss has pin supports at joints A and L and roller support at joint K. The truss is subjected to a 10 kN vertically downward force at joint H and a 10 kN horizontal force in the rightward direction at joint B as shown.\n\n(Figure NOT to scale)\n\nThe magnitude of the reaction (in kN) at the pin support L is _____________ (rounded off to 1 decimal place).",
+          "content": "The plane truss shown in the figure has 13 joints and 22 members. The truss is made of a homogeneous, prismatic, linearly elastic material. All members have identical axial rigidity. A to M indicate the joints of the truss. The truss has pin supports at joints A and L and roller support at joint K. The truss is subjected to a 10 kN vertically downward force at joint H and a 10 kN horizontal force in the rightward direction at joint B as shown.\n\nThe magnitude of the reaction (in kN) at the pin support L is _____________ (rounded off to 1 decimal place).",
           "confidence": "VERIFIED"
         },
         {
@@ -5042,11 +5099,11 @@
       "questionNumber": 50,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "An inverted T-shaped concrete beam (B1) in the figure, with centroidal axis X -X, is subjected to an effective prestressing force of 1000 kN acting at the bottom kern point of the beam cross-section. Also consider an identical concrete beam (B2) with the same grade of concrete but without any prestressing force.\n\n(Figure NOT to scale)\n\nThe additional cracking moment (in kN. m) that can be carried by beam B1 in comparison to beam B2 is ____________ (rounded off to the nearest integer).",
+      "questionText": "An inverted T-shaped concrete beam (B1) in the figure, with centroidal axis X -X, is subjected to an effective prestressing force of 1000 kN acting at the bottom kern point of the beam cross-section. Also consider an identical concrete beam (B2) with the same grade of concrete but without any prestressing force.\n\nThe additional cracking moment (in kN. m) that can be carried by beam B1 in comparison to beam B2 is ____________ (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "An inverted T-shaped concrete beam (B1) in the figure, with centroidal axis X -X, is subjected to an effective prestressing force of 1000 kN acting at the bottom kern point of the beam cross-section. Also consider an identical concrete beam (B2) with the same grade of concrete but without any prestressing force.\n\n(Figure NOT to scale)\n\nThe additional cracking moment (in kN. m) that can be carried by beam B1 in comparison to beam B2 is ____________ (rounded off to the nearest integer).",
+          "content": "An inverted T-shaped concrete beam (B1) in the figure, with centroidal axis X -X, is subjected to an effective prestressing force of 1000 kN acting at the bottom kern point of the beam cross-section. Also consider an identical concrete beam (B2) with the same grade of concrete but without any prestressing force.\n\nThe additional cracking moment (in kN. m) that can be carried by beam B1 in comparison to beam B2 is ____________ (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5335,11 +5392,11 @@
       "questionNumber": 56,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "\\(\\frac{Theordinatesof}{Time}\\)\\(\\frac{ordinatesofa1-hour}{0}\\)\n\n5\n\n0 13 50 80 95 85\n\n<u>UH</u> (<u>m3/s</u>)\n\n\\(\\frac{(hours)}{Ordinates}\\) 6 7 8 9 10 11\n\n55 35 15 10 3 0\n\n<u>UH</u> (<u>m3/s</u>)\n\nThese ordinates are used to derive a 3-hour UH. The peak discharge (in m^{3}/s) for the derived 3-hour UH is _____________ (rounded off to the nearest integer).",
+      "questionText": "The ordinates of a 1-hour unit hydrograph (UH) are given below.\n\nTime 0 1 2 3 4 5 \\(\\frac{(hours)}{Ordinates}\\)\n\nof 1-hour 0 13 50 80 95 85\n\n<u>UH</u> (<u>m3/s</u>)\n\nTime 6 7 8 9 10 11 \\(\\frac{(hours)}{Ordinates}\\)\n\nof 1-hour 55 35 15 10 3 0\n\n<u>UH</u> (<u>m3/s</u>)\n\nThese ordinates are used to derive a 3-hour UH. The peak discharge (in m^{3}/s) for the derived 3-hour UH is _____________ (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{Theordinatesof}{Time}\\)\\(\\frac{ordinatesofa1-hour}{0}\\)\n\n5\n\n0 13 50 80 95 85\n\n<u>UH</u> (<u>m3/s</u>)\n\n\\(\\frac{(hours)}{Ordinates}\\) 6 7 8 9 10 11\n\n55 35 15 10 3 0\n\n<u>UH</u> (<u>m3/s</u>)\n\nThese ordinates are used to derive a 3-hour UH. The peak discharge (in m^{3}/s) for the derived 3-hour UH is _____________ (rounded off to the nearest integer).",
+          "content": "The ordinates of a 1-hour unit hydrograph (UH) are given below.\n\nTime 0 1 2 3 4 5 \\(\\frac{(hours)}{Ordinates}\\)\n\nof 1-hour 0 13 50 80 95 85\n\n<u>UH</u> (<u>m3/s</u>)\n\nTime 6 7 8 9 10 11 \\(\\frac{(hours)}{Ordinates}\\)\n\nof 1-hour 55 35 15 10 3 0\n\n<u>UH</u> (<u>m3/s</u>)\n\nThese ordinates are used to derive a 3-hour UH. The peak discharge (in m^{3}/s) for the derived 3-hour UH is _____________ (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5381,11 +5438,11 @@
       "questionNumber": 57,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A standard round bottom triangular canal section as shown in the figure has a bed slope of 1 in 200. Consider the Chezy's coefficient as 150 m^{1/2}/s.\n\n1 y y 1 90 90 y\n\n(Figure NOT to scale) The normal depth of flow, y (in meters) for carrying a discharge of 20 m^{3}/s is ____________ (rounded off to 2 decimal places).",
+      "questionText": "A standard round bottom triangular canal section as shown in the figure has a bed slope of 1 in 200. Consider the Chezy's coefficient as 150 m^{1/2}/s.\n\n(_{Figure NOT to scale}) The normal depth of flow, y (in meters) for carrying a discharge of 20 m^{3}/s is ____________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A standard round bottom triangular canal section as shown in the figure has a bed slope of 1 in 200. Consider the Chezy's coefficient as 150 m^{1/2}/s.\n\n1 y y 1 90 90 y\n\n(Figure NOT to scale) The normal depth of flow, y (in meters) for carrying a discharge of 20 m^{3}/s is ____________ (rounded off to 2 decimal places).",
+          "content": "A standard round bottom triangular canal section as shown in the figure has a bed slope of 1 in 200. Consider the Chezy's coefficient as 150 m^{1/2}/s.\n\n(_{Figure NOT to scale}) The normal depth of flow, y (in meters) for carrying a discharge of 20 m^{3}/s is ____________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -5481,21 +5538,15 @@
       "questionNumber": 59,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "A 5 m \\times 5 m closed tank of 10 m height contains water and oil, and is connected to an overhead water reservoir as shown in the figure. Use w = 10 kN/m^{3} and Specific gravity of oil = 0.8.\n\n8 m Water R\n\nOil 4 m 2 m Q\n\n4 m Water\n\n2 <u>m</u> P 5 m (Figure NOT to scale)\n\nThe total force (in kN) due to pressure on the side PQR of the tank is ______________ (rounded off to the nearest integer).",
+      "questionText": "A 5 m \\times 5 m closed tank of 10 m height contains water and oil, and is connected to an overhead water reservoir as shown in the figure. Use \\(\\gamma\\)w = 10 kN/m^{3} and Specific gravity of oil = 0.8.\n\n8 m Water R\n\n4 m Oil 2 m Q\n\n4 m Water\n\n2 <u>m</u> P 5 m\n\n(Figure NOT to scale)\n\nThe total force (in kN) due to pressure on the side PQR of the tank is ______________ (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A 5 m \\times 5 m closed tank of 10 m height contains water and oil, and is connected to an overhead water reservoir as shown in the figure. Use w = 10 kN/m^{3} and Specific gravity of oil = 0.8.\n\n8 m Water R\n\nOil 4 m 2 m Q\n\n4 m Water\n\n2 <u>m</u> P 5 m (Figure NOT to scale)\n\nThe total force (in kN) due to pressure on the side PQR of the tank is ______________ (rounded off to the nearest integer).",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/ce-1/q59_diag.png",
+          "content": "A 5 m \\times 5 m closed tank of 10 m height contains water and oil, and is connected to an overhead water reservoir as shown in the figure. Use \\(\\gamma\\)w = 10 kN/m^{3} and Specific gravity of oil = 0.8.\n\n8 m Water R\n\n4 m Oil 2 m Q\n\n4 m Water\n\n2 <u>m</u> P 5 m\n\n(Figure NOT to scale)\n\nThe total force (in kN) due to pressure on the side PQR of the tank is ______________ (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5515,10 +5566,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IISc Bengaluru is 5575 to 5585.",
-      "diagramUrl": "/exam-assets/gate/2024/ce-1/q59_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/ce-1/q59_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -5682,11 +5731,11 @@
       "questionNumber": 63,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The figure presents the trajectories of six vehicles within a time-space domain. The number in the parentheses represents unique identification of each vehicle.\n\n( ) ( ) ( )\n\n( ) ( )\n\nDistance (meters)\n\n( )\n\nTime (seconds)\n\n(Figure NOT to scale)\n\nThe mean speed (in km/hr) of the vehicles in the entire time-space domain is _______________ (rounded off to the nearest integer).",
+      "questionText": "The figure presents the trajectories of six vehicles within a time-space domain. The number in the parentheses represents unique identification of each vehicle.\n\n(Figure NOT to scale)\n\nThe mean speed (in km/hr) of the vehicles in the entire time-space domain is _______________ (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The figure presents the trajectories of six vehicles within a time-space domain. The number in the parentheses represents unique identification of each vehicle.\n\n( ) ( ) ( )\n\n( ) ( )\n\nDistance (meters)\n\n( )\n\nTime (seconds)\n\n(Figure NOT to scale)\n\nThe mean speed (in km/hr) of the vehicles in the entire time-space domain is _______________ (rounded off to the nearest integer).",
+          "content": "The figure presents the trajectories of six vehicles within a time-space domain. The number in the parentheses represents unique identification of each vehicle.\n\n(Figure NOT to scale)\n\nThe mean speed (in km/hr) of the vehicles in the entire time-space domain is _______________ (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5736,11 +5785,11 @@
       "questionNumber": 64,
       "sectionId": "ce1_core",
       "sectionName": "Civil Engineering (Session 1)",
-      "questionText": "The following data is obtained from an axle load survey at a site:\n\nAverage rear axle load = 12000 kg Number of commercial vehicles = 800 per day The pavement at this site would be reconstructed over a period of 5 years from the date of survey. The design life of the reconstructed pavement is 15 years. Use the standard axle load as 8160 kg and the annual average vehicle growth rate as 4.0%. Assume that Equivalent Wheel Load Factor (EWLF) and Vehicle Damage Factor (VDF) are equal. The cumulative standard axle (in msa) for the pavement design is ____________ (rounded off to 2 decimal places).",
+      "questionText": "The following data is obtained from an axle load survey at a site:\n\nAverage rear axle load = 12000 kg Number of commercial vehicles = 800 per day\n\nThe pavement at this site would be reconstructed over a period of 5 years from the date of survey. The design life of the reconstructed pavement is 15 years. Use the standard axle load as 8160 kg and the annual average vehicle growth rate as 4.0%. Assume that Equivalent Wheel Load Factor (EWLF) and Vehicle Damage Factor (VDF) are equal.\n\nThe cumulative standard axle (in msa) for the pavement design is ____________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The following data is obtained from an axle load survey at a site:\n\nAverage rear axle load = 12000 kg Number of commercial vehicles = 800 per day The pavement at this site would be reconstructed over a period of 5 years from the date of survey. The design life of the reconstructed pavement is 15 years. Use the standard axle load as 8160 kg and the annual average vehicle growth rate as 4.0%. Assume that Equivalent Wheel Load Factor (EWLF) and Vehicle Damage Factor (VDF) are equal. The cumulative standard axle (in msa) for the pavement design is ____________ (rounded off to 2 decimal places).",
+          "content": "The following data is obtained from an axle load survey at a site:\n\nAverage rear axle load = 12000 kg Number of commercial vehicles = 800 per day\n\nThe pavement at this site would be reconstructed over a period of 5 years from the date of survey. The design life of the reconstructed pavement is 15 years. Use the standard axle load as 8160 kg and the annual average vehicle growth rate as 4.0%. Assume that Equivalent Wheel Load Factor (EWLF) and Vehicle Damage Factor (VDF) are equal.\n\nThe cumulative standard axle (in msa) for the pavement design is ____________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],

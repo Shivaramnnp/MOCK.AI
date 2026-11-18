@@ -154,11 +154,11 @@
       "questionNumber": 2,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "Statements:\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
+      "questionText": "Statements:\n\nAll heroes are winners. All winners are lucky people.\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Statements:\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
+          "content": "Statements:\n\nAll heroes are winners. All winners are lucky people.\n\nInferences:\n\nI. All lucky people are heroes. II. Some lucky people are heroes. III. Some winners are heroes.\n\nWhich of the above inferences can be logically deduced from statements 1 and 2?",
           "confidence": "VERIFIED"
         }
       ],
@@ -278,9 +278,9 @@
       "questionType": "MCQ",
       "options": [
         "5",
-        "\\sqrt 2",
+        "\\sqrt{2}",
         "2",
-        "\\sqrt 5"
+        "\\sqrt{5}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -301,12 +301,12 @@
         },
         {
           "id": "B",
-          "text": "\\sqrt 2",
+          "text": "\\sqrt{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 2",
+              "content": "\\sqrt{2}",
               "confidence": "VERIFIED"
             }
           ],
@@ -331,12 +331,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 5",
+          "text": "\\sqrt{5}",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 5",
+              "content": "\\sqrt{5}",
               "confidence": "VERIFIED"
             }
           ],
@@ -590,11 +590,11 @@
       "questionNumber": 6,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands (i) as an author for standing (ii) as an honorary fellow, after she stood (iii) her writings that stand (iv) the freedom of speech.",
+      "questionText": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands as an author for standing as an honorary \\(\\frac{(i)}{(iii)}\\) \\(\\frac{(ii)}{(iv)}\\) fellow, after she stood her writings that st and the freedom of speech.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands (i) as an author for standing (ii) as an honorary fellow, after she stood (iii) her writings that stand (iv) the freedom of speech.",
+          "content": "In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\n\nYoko Roi stands as an author for standing as an honorary \\(\\frac{(i)}{(iii)}\\) \\(\\frac{(ii)}{(iv)}\\) fellow, after she stood her writings that st and the freedom of speech.",
           "confidence": "VERIFIED"
         }
       ],
@@ -604,21 +604,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) out\n(ii) down\n(iii) in\n(iv) for",
-        "(i) down\n(ii) out\n(iii) by\n(iv) in",
-        "(i) down\n(ii) out\n(iii) for\n(iv) in",
-        "(i) out\n(ii) down\n(iii) by\n(iv) for"
+        "(i) out (ii) down (iii) in (iv) for",
+        "(i) down (ii) out (iii) by (iv) in",
+        "(i) down (ii) out (iii) for (iv) in",
+        "(i) out (ii) down (iii) by (iv) for"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) out\n(ii) down\n(iii) in\n(iv) for",
+          "text": "(i) out (ii) down (iii) in (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) out\n(ii) down\n(iii) in\n(iv) for",
+              "content": "(i) out (ii) down (iii) in (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -628,12 +628,12 @@
         },
         {
           "id": "B",
-          "text": "(i) down\n(ii) out\n(iii) by\n(iv) in",
+          "text": "(i) down (ii) out (iii) by (iv) in",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) by\n(iv) in",
+              "content": "(i) down (ii) out (iii) by (iv) in",
               "confidence": "VERIFIED"
             }
           ],
@@ -643,12 +643,12 @@
         },
         {
           "id": "C",
-          "text": "(i) down\n(ii) out\n(iii) for\n(iv) in",
+          "text": "(i) down (ii) out (iii) for (iv) in",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) down\n(ii) out\n(iii) for\n(iv) in",
+              "content": "(i) down (ii) out (iii) for (iv) in",
               "confidence": "VERIFIED"
             }
           ],
@@ -658,12 +658,12 @@
         },
         {
           "id": "D",
-          "text": "(i) out\n(ii) down\n(iii) by\n(iv) for",
+          "text": "(i) out (ii) down (iii) by (iv) for",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) out\n(ii) down\n(iii) by\n(iv) for",
+              "content": "(i) out (ii) down (iii) by (iv) for",
               "confidence": "VERIFIED"
             }
           ],
@@ -816,11 +816,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?\n\n1 Mortality Risk of Cardiovascular Disease 0 0 5000 10000 15000 20000 Steps/Day",
+      "questionText": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?\n\n1 Mortality Risk of Cardiovascular Disease 0 0 5000 10000 15000 20000 Steps/Day",
+          "content": "The plot below shows the relationship between the mortality risk of cardiovascular disease and the number of steps a person walks per day. Based on the data, which one of the following options is true?",
           "confidence": "VERIFIED"
         },
         {
@@ -836,21 +836,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
-        "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
-        "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
-        "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000."
+        "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
+        "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
+        "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
+        "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
+          "text": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk\nreduction on increasing the steps/day from 10000 to 20000.",
+              "content": "The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk reduction on increasing the steps/day from 10000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -860,12 +860,12 @@
         },
         {
           "id": "B",
-          "text": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
+          "text": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk\nreduction on increasing the steps/day from 15000 to 20000.",
+              "content": "The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk reduction on increasing the steps/day from 15000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -875,12 +875,12 @@
         },
         {
           "id": "C",
-          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
+          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n0 to 5000.",
+              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 0 to 5000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -890,12 +890,12 @@
         },
         {
           "id": "D",
-          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000.",
+          "text": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from\n15000 to 20000.",
+              "content": "For any 5000 increment in steps/day the largest risk reduction occurs on going from 15000 to 20000.",
               "confidence": "VERIFIED"
             }
           ],
@@ -1164,11 +1164,11 @@
       "questionNumber": 11,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A partial differential equation\n\n\\partial ^{2}𝑇 \\partial 𝑥_{2} + \\partial ^{2}𝑇 \\partial 𝑦2 = 0\n\nis defined for the two-dimensional field 𝑇: 𝑇(𝑥, 𝑦), inside a planar square domain of size 2 m \\times 2 m. Three boundary edges of the square domain are maintained at value 𝑇= 50, whereas the fourth boundary edge is maintained at 𝑇= 100.\n\nThe value of 𝑇 at the center of the domain is",
+      "questionText": "A partial differential equation\n\n\\(\\frac{ \\partial 2𝑇}{ \\partial 𝑥2}\\) \\(\\frac{ \\partial 2𝑇}{ \\partial 𝑦2}\\) = 0\n\nis defined for the two-dimensional field 𝑇: 𝑇(𝑥, 𝑦), inside a planar square domain of size 2 m \\times 2 m. Three boundary edges of the square domain are maintained at value 𝑇= 50, whereas the fourth boundary edge is maintained at 𝑇= 100.\n\nThe value of 𝑇 at the center of the domain is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A partial differential equation\n\n\\partial ^{2}𝑇 \\partial 𝑥_{2} + \\partial ^{2}𝑇 \\partial 𝑦2 = 0\n\nis defined for the two-dimensional field 𝑇: 𝑇(𝑥, 𝑦), inside a planar square domain of size 2 m \\times 2 m. Three boundary edges of the square domain are maintained at value 𝑇= 50, whereas the fourth boundary edge is maintained at 𝑇= 100.\n\nThe value of 𝑇 at the center of the domain is",
+          "content": "A partial differential equation\n\n\\(\\frac{ \\partial 2𝑇}{ \\partial 𝑥2}\\) \\(\\frac{ \\partial 2𝑇}{ \\partial 𝑦2}\\) = 0\n\nis defined for the two-dimensional field 𝑇: 𝑇(𝑥, 𝑦), inside a planar square domain of size 2 m \\times 2 m. Three boundary edges of the square domain are maintained at value 𝑇= 50, whereas the fourth boundary edge is maintained at 𝑇= 100.\n\nThe value of 𝑇 at the center of the domain is",
           "confidence": "VERIFIED"
         }
       ],
@@ -1396,21 +1396,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
-        "1\n12ℎ2 [ 𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
-        "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 + 𝑓𝑖-2 ]",
-        "1\n12ℎ2 [-𝑓𝑖+2 -16 𝑓𝑖+1 + 30 𝑓𝑖-16 𝑓𝑖-1 - 𝑓𝑖-2 ]"
+        "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
+        "\\(\\frac{1}{12ℎ2}\\) [ 𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
+        "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} + 𝑓_{𝑖-2} ]",
+        "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} -16 𝑓_{𝑖+1} + 30 𝑓_{𝑖}-16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+          "text": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+              "content": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
               "confidence": "VERIFIED"
             }
           ],
@@ -1420,12 +1420,12 @@
         },
         {
           "id": "B",
-          "text": "1\n12ℎ2 [ 𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+          "text": "\\(\\frac{1}{12ℎ2}\\) [ 𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n12ℎ2 [ 𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+              "content": "\\(\\frac{1}{12ℎ2}\\) [ 𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
               "confidence": "VERIFIED"
             }
           ],
@@ -1435,12 +1435,12 @@
         },
         {
           "id": "C",
-          "text": "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 + 𝑓𝑖-2 ]",
+          "text": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} + 𝑓_{𝑖-2} ]",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n12ℎ2 [-𝑓𝑖+2 + 16 𝑓𝑖+1 -30 𝑓𝑖+ 16 𝑓𝑖-1 + 𝑓𝑖-2 ]",
+              "content": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} + 16 𝑓_{𝑖+1} -30 𝑓_{𝑖}+ 16 𝑓_{𝑖-1} + 𝑓_{𝑖-2} ]",
               "confidence": "VERIFIED"
             }
           ],
@@ -1450,12 +1450,12 @@
         },
         {
           "id": "D",
-          "text": "1\n12ℎ2 [-𝑓𝑖+2 -16 𝑓𝑖+1 + 30 𝑓𝑖-16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+          "text": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} -16 𝑓_{𝑖+1} + 30 𝑓_{𝑖}-16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "1\n12ℎ2 [-𝑓𝑖+2 -16 𝑓𝑖+1 + 30 𝑓𝑖-16 𝑓𝑖-1 - 𝑓𝑖-2 ]",
+              "content": "\\(\\frac{1}{12ℎ2}\\) [-𝑓_{𝑖+2} -16 𝑓_{𝑖+1} + 30 𝑓_{𝑖}-16 𝑓_{𝑖-1} - 𝑓_{𝑖-2} ]",
               "confidence": "VERIFIED"
             }
           ],
@@ -1600,11 +1600,11 @@
       "questionNumber": 15,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "Consider two Ordinary Differential Equations (ODEs):\n\n𝑥4+3𝑥2𝑦2+2𝑦4 𝑑𝑦 𝑑𝑥= P:\n\n𝑥^{3}𝑦\n\n-𝑦2 𝑑𝑦 Q:\n\n𝑑𝑥= 𝑥2 Which one of the following options is CORRECT?",
+      "questionText": "Consider two Ordinary Differential Equations (ODEs):\n\nP:\n\n<u>𝑑𝑦</u> _{𝑑𝑥}= \\(\\frac{𝑥4+3𝑥2𝑦2+2𝑦4}{𝑥3𝑦}\\)\n\nQ:\n\n<u>𝑑𝑦</u> _{𝑑𝑥}= \\(\\frac{-𝑦2}{𝑥2}\\)\n\nWhich one of the following options is CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider two Ordinary Differential Equations (ODEs):\n\n𝑥4+3𝑥2𝑦2+2𝑦4 𝑑𝑦 𝑑𝑥= P:\n\n𝑥^{3}𝑦\n\n-𝑦2 𝑑𝑦 Q:\n\n𝑑𝑥= 𝑥2 Which one of the following options is CORRECT?",
+          "content": "Consider two Ordinary Differential Equations (ODEs):\n\nP:\n\n<u>𝑑𝑦</u> _{𝑑𝑥}= \\(\\frac{𝑥4+3𝑥2𝑦2+2𝑦4}{𝑥3𝑦}\\)\n\nQ:\n\n<u>𝑑𝑦</u> _{𝑑𝑥}= \\(\\frac{-𝑦2}{𝑥2}\\)\n\nWhich one of the following options is CORRECT?",
           "confidence": "VERIFIED"
         }
       ],
@@ -1927,11 +1927,11 @@
       "questionNumber": 18,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "For a thin-walled section shown in the figure, points P, Q , and R are located on the major bending axis X -X of the section. Point Q is located on the web whereas point S is located at the intersection of the web and the top flange of the section.\n\n(Figure NOT to scale) Qualitatively, the shear center of the section lies at",
+      "questionText": "For a thin-walled section shown in the figure, points P, Q , and R are located on the major bending axis X -X of the section. Point Q is located on the web whereas point S is located at the intersection of the web and the top flange of the section.\n\nQualitatively, the shear center of the section lies at",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For a thin-walled section shown in the figure, points P, Q , and R are located on the major bending axis X -X of the section. Point Q is located on the web whereas point S is located at the intersection of the web and the top flange of the section.\n\n(Figure NOT to scale) Qualitatively, the shear center of the section lies at",
+          "content": "For a thin-walled section shown in the figure, points P, Q , and R are located on the major bending axis X -X of the section. Point Q is located on the web whereas point S is located at the intersection of the web and the top flange of the section.\n\nQualitatively, the shear center of the section lies at",
           "confidence": "VERIFIED"
         },
         {
@@ -2044,11 +2044,11 @@
       "questionNumber": 19,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "Consider the following data for a project of 300 days duration. Budgeted Cost of Work Scheduled (BCWS) = Rs. 200 Budgeted Cost of Work Performed (BCWP) = Rs. 150 Actual Cost of Work Performed (ACWP) = Rs. 190 The 'schedule variance' for the project is",
+      "questionText": "Consider the following data for a project of 300 days duration.\n\nBudgeted Cost of Work Scheduled (BCWS) = Rs. 200 Budgeted Cost of Work Performed (BCWP) = Rs. 150 Actual Cost of Work Performed (ACWP) = Rs. 190\n\nThe 'schedule variance' for the project is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following data for a project of 300 days duration. Budgeted Cost of Work Scheduled (BCWS) = Rs. 200 Budgeted Cost of Work Performed (BCWP) = Rs. 150 Actual Cost of Work Performed (ACWP) = Rs. 190 The 'schedule variance' for the project is",
+          "content": "Consider the following data for a project of 300 days duration.\n\nBudgeted Cost of Work Scheduled (BCWS) = Rs. 200 Budgeted Cost of Work Performed (BCWP) = Rs. 150 Actual Cost of Work Performed (ACWP) = Rs. 190\n\nThe 'schedule variance' for the project is",
           "confidence": "VERIFIED"
         }
       ],
@@ -2167,71 +2167,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑙x/𝑙y",
-        "𝑙y/𝑙x",
-        "(𝑙x/𝑙y)",
-        "(𝑙y/𝑙x)"
+        "\\(𝑙_{x}/𝑙_{y}\\)",
+        "\\(𝑙_{y}/𝑙_{x}\\)",
+        "\\((𝑙_{x}/𝑙_{y}) 2\\)",
+        "\\((𝑙_{y}/𝑙_{x}) 2\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑙x/𝑙y",
+          "text": "\\(𝑙_{x}/𝑙_{y}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑙x/𝑙y",
+              "type": "math",
+              "latex": "𝑙_{x}/𝑙_{y}",
+              "content": "\\(𝑙_{x}/𝑙_{y}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑙y/𝑙x",
+          "text": "\\(𝑙_{y}/𝑙_{x}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑙y/𝑙x",
+              "type": "math",
+              "latex": "𝑙_{y}/𝑙_{x}",
+              "content": "\\(𝑙_{y}/𝑙_{x}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "(𝑙x/𝑙y)",
+          "text": "\\((𝑙_{x}/𝑙_{y}) 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "(𝑙x/𝑙y)",
+              "type": "math",
+              "latex": "(𝑙_{x}/𝑙_{y}) 2",
+              "content": "\\((𝑙_{x}/𝑙_{y}) 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "(𝑙y/𝑙x)",
+          "text": "\\((𝑙_{y}/𝑙_{x}) 2\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "(𝑙y/𝑙x)",
+              "type": "math",
+              "latex": "(𝑙_{y}/𝑙_{x}) 2",
+              "content": "\\((𝑙_{y}/𝑙_{x}) 2\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -2371,11 +2375,11 @@
       "questionNumber": 22,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The contact pressure distribution shown in the figure belongs to a\n\nFooting",
+      "questionText": "The contact pressure distribution shown in the figure belongs to a",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The contact pressure distribution shown in the figure belongs to a\n\nFooting",
+          "content": "The contact pressure distribution shown in the figure belongs to a",
           "confidence": "VERIFIED"
         },
         {
@@ -2597,11 +2601,11 @@
       "questionNumber": 24,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The following figure shows a plot between shear stress and velocity gradient for materials/fluids P, Q, R, S, and T.\n\nQ P R\n\nS\n\nShear Stress\n\n\\(\\frac{T}{VelocityGradient}\\)\n\nWhich one of the following options is CORRECT?",
+      "questionText": "The following figure shows a plot between shear stress and velocity gradient for materials/fluids P, Q, R, S, and T.\n\nR\n\nS\n\nShear Stress\n\n\\(\\frac{T}{VelocityGradient}\\)\n\nWhich one of the following options is CORRECT?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The following figure shows a plot between shear stress and velocity gradient for materials/fluids P, Q, R, S, and T.\n\nQ P R\n\nS\n\nShear Stress\n\n\\(\\frac{T}{VelocityGradient}\\)\n\nWhich one of the following options is CORRECT?",
+          "content": "The following figure shows a plot between shear stress and velocity gradient for materials/fluids P, Q, R, S, and T.\n\nR\n\nS\n\nShear Stress\n\n\\(\\frac{T}{VelocityGradient}\\)\n\nWhich one of the following options is CORRECT?",
           "confidence": "VERIFIED"
         },
         {
@@ -2617,21 +2621,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; S → Newtonian fluid",
-        "P → Real solid; Q → Ideal Bingham plastic\nS → Newtonian fluid; T → Ideal Fluid",
-        "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; T → Real solid",
-        "P → Real solid; Q → Newtonian fluid\nR → Ideal Bingham plastic; T → Ideal Fluid"
+        "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; S → Newtonian fluid",
+        "P → Real solid; Q → Ideal Bingham plastic S → Newtonian fluid; T → Ideal Fluid",
+        "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; T → Real solid",
+        "P → Real solid; Q → Newtonian fluid R → Ideal Bingham plastic; T → Ideal Fluid"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; S → Newtonian fluid",
+          "text": "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; S → Newtonian fluid",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; S → Newtonian fluid",
+              "content": "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; S → Newtonian fluid",
               "confidence": "VERIFIED"
             }
           ],
@@ -2641,12 +2645,12 @@
         },
         {
           "id": "B",
-          "text": "P → Real solid; Q → Ideal Bingham plastic\nS → Newtonian fluid; T → Ideal Fluid",
+          "text": "P → Real solid; Q → Ideal Bingham plastic S → Newtonian fluid; T → Ideal Fluid",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "P → Real solid; Q → Ideal Bingham plastic\nS → Newtonian fluid; T → Ideal Fluid",
+              "content": "P → Real solid; Q → Ideal Bingham plastic S → Newtonian fluid; T → Ideal Fluid",
               "confidence": "VERIFIED"
             }
           ],
@@ -2656,12 +2660,12 @@
         },
         {
           "id": "C",
-          "text": "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; T → Real solid",
+          "text": "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; T → Real solid",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "P → Ideal Fluid; Q → Ideal Bingham plastic\nR → Non-Newtonian fluid; T → Real solid",
+              "content": "P → Ideal Fluid; Q → Ideal Bingham plastic R → Non-Newtonian fluid; T → Real solid",
               "confidence": "VERIFIED"
             }
           ],
@@ -2671,12 +2675,12 @@
         },
         {
           "id": "D",
-          "text": "P → Real solid; Q → Newtonian fluid\nR → Ideal Bingham plastic; T → Ideal Fluid",
+          "text": "P → Real solid; Q → Newtonian fluid R → Ideal Bingham plastic; T → Ideal Fluid",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "P → Real solid; Q → Newtonian fluid\nR → Ideal Bingham plastic; T → Ideal Fluid",
+              "content": "P → Real solid; Q → Newtonian fluid R → Ideal Bingham plastic; T → Ideal Fluid",
               "confidence": "VERIFIED"
             }
           ],
@@ -2714,15 +2718,30 @@
       "questionNumber": 25,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "What is the CORRECT match between the air pollutants and treatment techniques \\(\\frac{table?}{Airpollutants}\\)\n\n\\(\\frac{Treatmenttechniques}{i-Flaring}\\)\n\nQ - SO2 ii - Cyclonic separator R - CO iii - Lime scrubbing S - Particles iv - NH_{3} injection",
+      "questionText": "What is the CORRECT match between the air pollutants and treatment techniques given in the table?\n\n| Air pollutants | Treatment techniques |\n| :--- | :--- |\n| P - NO 2 Q - SO 2 R - CO S - Particles | i - Flaring ii - Cyclonic separator iii - Lime scrubbing iv - NH injection 3 |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "What is the CORRECT match between the air pollutants and treatment techniques \\(\\frac{table?}{Airpollutants}\\)\n\n\\(\\frac{Treatmenttechniques}{i-Flaring}\\)\n\nQ - SO2 ii - Cyclonic separator R - CO iii - Lime scrubbing S - Particles iv - NH_{3} injection",
+          "content": "What is the CORRECT match between the air pollutants and treatment techniques given in the table?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Air pollutants",
+            "Treatment techniques"
+          ],
+          "rows": [
+            [
+              "P - NO 2 Q - SO 2 R - CO S - Particles",
+              "i - Flaring ii - Cyclonic separator iii - Lime scrubbing iv - NH injection 3"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -2837,8 +2856,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "CO2",
-        "CH4",
+        "\\(CO_{2}\\)",
+        "\\(CH_{4}\\)",
         "\\(H_{2}S\\)",
         "\\(H_{2}O\\)"
       ],
@@ -2846,32 +2865,34 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "CO2",
+          "text": "\\(CO_{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "CO2",
+              "type": "math",
+              "latex": "CO_{2}",
+              "content": "\\(CO_{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "CH4",
+          "text": "\\(CH_{4}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "CH4",
+              "type": "math",
+              "latex": "CH_{4}",
+              "content": "\\(CH_{4}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -2934,15 +2955,51 @@
       "questionNumber": 27,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "\\(\\frac{longitudinalsectionsofarunwayhavegradientsas}{Endtoendforsectionsofrunway(m)}\\)\n\nConsider the reduced level (RL) at the starting point of the runway as 100 m.\n\nThe effective gradient of the runway is",
+      "questionText": "The longitudinal sections of a runway have gradients as shown in the table.\n\n| End to end for sections of runway (m) | Gradient (%) |\n| :--- | :--- |\n| 0 to 200 | +1.0 |\n| 200 to 600 | -1.0 |\n| 600 to 1200 | +0.8 |\n| 1200 to 1600 | +0.2 |\n| 1600 to 2000 | -0.5 |\n\nConsider the reduced level (RL) at the starting point of the runway as 100 m. The effective gradient of the runway is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{longitudinalsectionsofarunwayhavegradientsas}{Endtoendforsectionsofrunway(m)}\\)\n\nConsider the reduced level (RL) at the starting point of the runway as 100 m.\n\nThe effective gradient of the runway is",
+          "content": "The longitudinal sections of a runway have gradients as shown in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "End to end for sections of runway (m)",
+            "Gradient (%)"
+          ],
+          "rows": [
+            [
+              "0 to 200",
+              "+1.0"
+            ],
+            [
+              "200 to 600",
+              "-1.0"
+            ],
+            [
+              "600 to 1200",
+              "+0.8"
+            ],
+            [
+              "1200 to 1600",
+              "+0.2"
+            ],
+            [
+              "1600 to 2000",
+              "-0.5"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Consider the reduced level (RL) at the starting point of the runway as 100 m.\n\nThe effective gradient of the runway is",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3152,11 +3209,11 @@
       "questionNumber": 29,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "Various stresses in jointed plain concrete pavement with slab size of\n\n𝑖 Wheel load stress at interior = 𝑆𝑤𝑙 𝑒 Wheel load stress at edge = 𝑆𝑤𝑙 𝑐 Wheel load stress at corner = 𝑆𝑤𝑙 𝑖 Warping stress at interior = 𝑆𝑡 𝑒 Warping stress at edge = 𝑆𝑡 𝑐 Warping stress at corner = 𝑆𝑡 Frictional stress between slab and supporting layer = 𝑆𝑓\n\nThe critical stress combination in the concrete slab during a summer midnight is",
+      "questionText": "Various stresses in jointed plain concrete pavement with slab size of 5 m \\times 4.5 m are denoted as follows:\n\nWheel load stress at interior = 𝑆_{𝑤𝑙} Wheel load stress at edge = 𝑆_{𝑤𝑙} Wheel load stress at corner = 𝑆_{𝑤𝑙} Warping stress at interior = 𝑆_{𝑡} Warping stress at edge = 𝑆_{𝑡} Warping stress at corner = 𝑆_{𝑡} 𝑒 𝑐 𝑖 𝑒 𝑐 𝑖\n\nFrictional stress between slab and supporting layer = 𝑆_{𝑓}\n\nThe critical stress combination in the concrete slab during a summer midnight is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Various stresses in jointed plain concrete pavement with slab size of\n\n𝑖 Wheel load stress at interior = 𝑆𝑤𝑙 𝑒 Wheel load stress at edge = 𝑆𝑤𝑙 𝑐 Wheel load stress at corner = 𝑆𝑤𝑙 𝑖 Warping stress at interior = 𝑆𝑡 𝑒 Warping stress at edge = 𝑆𝑡 𝑐 Warping stress at corner = 𝑆𝑡 Frictional stress between slab and supporting layer = 𝑆𝑓\n\nThe critical stress combination in the concrete slab during a summer midnight is",
+          "content": "Various stresses in jointed plain concrete pavement with slab size of 5 m \\times 4.5 m are denoted as follows:\n\nWheel load stress at interior = 𝑆_{𝑤𝑙} Wheel load stress at edge = 𝑆_{𝑤𝑙} Wheel load stress at corner = 𝑆_{𝑤𝑙} Warping stress at interior = 𝑆_{𝑡} Warping stress at edge = 𝑆_{𝑡} Warping stress at corner = 𝑆_{𝑡} 𝑒 𝑐 𝑖 𝑒 𝑐 𝑖\n\nFrictional stress between slab and supporting layer = 𝑆_{𝑓}\n\nThe critical stress combination in the concrete slab during a summer midnight is",
           "confidence": "VERIFIED"
         }
       ],
@@ -3166,71 +3223,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐",
-        "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓",
-        "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓",
-        "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓"
+        "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐\\)",
+        "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓\\)",
+        "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓\\)",
+        "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐",
+          "text": "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐",
+              "type": "math",
+              "latex": "𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐",
+              "content": "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓",
+          "text": "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓",
+              "type": "math",
+              "latex": "𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓",
+              "content": "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒+ 𝑆𝑓\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓",
+          "text": "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑆𝑤𝑙 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓",
+              "type": "math",
+              "latex": "𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓",
+              "content": "\\(𝑆_{𝑤𝑙} 𝑒+ 𝑆𝑡 𝑒-𝑆𝑓\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓",
+          "text": "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑆𝑤𝑙 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓",
+              "type": "math",
+              "latex": "𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓",
+              "content": "\\(𝑆_{𝑤𝑙} 𝑐+ 𝑆𝑡 𝑐+ 𝑆𝑓\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3370,15 +3431,30 @@
       "questionNumber": 31,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "What is the CORRECT match between the survey instruments/parts of instruments \\(\\frac{inthetableandtheoperationscarriedout}{Instruments/Partsofinstruments}\\)\n\nQ - Plumb bob ii - Minor movements R - Tangent screw iii - Centering S - Stadia cross-wire iv - Levelling",
+      "questionText": "What is the CORRECT match between the survey instruments/parts of instruments shown in the table and the operations carried out with them?\n\n| Instruments/Parts of instruments | Operations |\n| :--- | :--- |\n| P - Bubble tube Q - Plumb bob R - Tangent screw S - Stadia cross-wire | i - Tacheometry ii - Minor movements iii - Centering iv - Levelling |",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "What is the CORRECT match between the survey instruments/parts of instruments \\(\\frac{inthetableandtheoperationscarriedout}{Instruments/Partsofinstruments}\\)\n\nQ - Plumb bob ii - Minor movements R - Tangent screw iii - Centering S - Stadia cross-wire iv - Levelling",
+          "content": "What is the CORRECT match between the survey instruments/parts of instruments shown in the table and the operations carried out with them?",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Instruments/Parts of instruments",
+            "Operations"
+          ],
+          "rows": [
+            [
+              "P - Bubble tube Q - Plumb bob R - Tangent screw S - Stadia cross-wire",
+              "i - Tacheometry ii - Minor movements iii - Centering iv - Levelling"
+            ]
+          ],
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -3479,11 +3555,11 @@
       "questionNumber": 32,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "To finalize the direction of a survey, four surveyors set up a theodolite at a station P and performed all the temporary adjustments. From the station P, each of the surveyors observed the bearing to a tower located at station Q with the same instrument without shifting it. The bearings observed by the surveyors are 30^{o} 30 00, 30^{o} 29 40, 30^{o} 30 20 and 30^{o} 31 20. Assuming that each measurement is taken with equal precision, the most probable value of the bearing is",
+      "questionText": "To finalize the direction of a survey, four surveyors set up a theodolite at a station P and performed all the temporary adjustments. From the station P, each of the surveyors observed the bearing to a tower located at station Q with the same instrument without shifting it. The bearings observed by the surveyors are 30^{o} 30 00, 30^{o} 29 40, 30^{o} 30 20 _{and}30^{o} 31 20. _{Assuming that} each measurement is taken with equal precision, the most probable value of the bearing is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "To finalize the direction of a survey, four surveyors set up a theodolite at a station P and performed all the temporary adjustments. From the station P, each of the surveyors observed the bearing to a tower located at station Q with the same instrument without shifting it. The bearings observed by the surveyors are 30^{o} 30 00, 30^{o} 29 40, 30^{o} 30 20 and 30^{o} 31 20. Assuming that each measurement is taken with equal precision, the most probable value of the bearing is",
+          "content": "To finalize the direction of a survey, four surveyors set up a theodolite at a station P and performed all the temporary adjustments. From the station P, each of the surveyors observed the bearing to a tower located at station Q with the same instrument without shifting it. The bearings observed by the surveyors are 30^{o} 30 00, 30^{o} 29 40, 30^{o} 30 20 _{and}30^{o} 31 20. _{Assuming that} each measurement is taken with equal precision, the most probable value of the bearing is",
           "confidence": "VERIFIED"
         }
       ],
@@ -3493,71 +3569,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "30o 29 40",
-        "30o 30 20",
-        "30o 30 00",
-        "30o 31 20"
+        "\\(30^{o} 29 40\\)",
+        "\\(30^{o} 30 20\\)",
+        "\\(30^{o} 30 00\\)",
+        "\\(30^{o} 31 20\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "30o 29 40",
+          "text": "\\(30^{o} 29 40\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "30o 29 40",
+              "type": "math",
+              "latex": "30^{o} 29 40",
+              "content": "\\(30^{o} 29 40\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "30o 30 20",
+          "text": "\\(30^{o} 30 20\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "30o 30 20",
+              "type": "math",
+              "latex": "30^{o} 30 20",
+              "content": "\\(30^{o} 30 20\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "30o 30 00",
+          "text": "\\(30^{o} 30 00\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "30o 30 00",
+              "type": "math",
+              "latex": "30^{o} 30 00",
+              "content": "\\(30^{o} 30 00\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "30o 31 20",
+          "text": "\\(30^{o} 31 20\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "30o 31 20",
+              "type": "math",
+              "latex": "30^{o} 31 20",
+              "content": "\\(30^{o} 31 20\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -3588,11 +3668,11 @@
       "questionNumber": 33,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The steel angle section shown in the figure has elastic section modulus of\n\nthe section.\n\n(Figure NOT to scale)\n\nThe shape factor of the section is ________ (rounded off to 2 decimal places).",
+      "questionText": "The steel angle section shown in the figure has elastic section modulus of 92 cm^{3} about the horizontal X -X axis, which passes through the centroid of the section.\n\nThe shape factor of the section is ________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The steel angle section shown in the figure has elastic section modulus of\n\nthe section.\n\n(Figure NOT to scale)\n\nThe shape factor of the section is ________ (rounded off to 2 decimal places).",
+          "content": "The steel angle section shown in the figure has elastic section modulus of 92 cm^{3} about the horizontal X -X axis, which passes through the centroid of the section.\n\nThe shape factor of the section is ________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -3843,11 +3923,11 @@
       "questionNumber": 37,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A linearly elastic beam of length 2l with flexural rigidity EI has negligible mass. A massless spring with a spring constant k and a rigid block of mass m are attached to the beam as shown in the figure.\n\nk\n\nl l\n\nm The natural frequency of this system is",
+      "questionText": "A linearly elastic beam of length 2l with flexural rigidity EI has negligible mass. A massless spring with a spring constant k and a rigid block of mass m are attached to the beam as shown in the figure.\n\nk\n\nl l\n\nThe natural frequency of this system is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A linearly elastic beam of length 2l with flexural rigidity EI has negligible mass. A massless spring with a spring constant k and a rigid block of mass m are attached to the beam as shown in the figure.\n\nk\n\nl l\n\nm The natural frequency of this system is",
+          "content": "A linearly elastic beam of length 2l with flexural rigidity EI has negligible mass. A massless spring with a spring constant k and a rigid block of mass m are attached to the beam as shown in the figure.\n\nk\n\nl l\n\nThe natural frequency of this system is",
           "confidence": "VERIFIED"
         },
         {
@@ -3863,22 +3943,22 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\sqrt 𝑘𝑙^{3} + 6𝐸𝐼 𝑚𝑙3\\)",
-        "\\(\\sqrt 𝑘𝑙^{3} + 48𝐸𝐼 𝑚𝑙3\\)",
-        "\\(\\sqrt 6𝐸𝐼𝑘 (𝑘𝑙^{3} + 6𝐸𝐼)𝑚\\)",
-        "\\(\\sqrt 48𝐸𝐼𝑘 (𝑘𝑙^{3} + 48𝐸𝐼)𝑚\\)"
+        "\\(\\frac{+6𝐸𝐼}{𝑚𝑙3}\\)",
+        "\\(\\frac{+48𝐸𝐼}{𝑚𝑙3}\\)",
+        "\\(\\frac{6𝐸𝐼𝑘}{(𝑘𝑙3+6𝐸𝐼)𝑚}\\)",
+        "\\(\\frac{48𝐸𝐼𝑘}{(𝑘𝑙3+48𝐸𝐼)𝑚}\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\sqrt 𝑘𝑙^{3} + 6𝐸𝐼 𝑚𝑙3\\)",
+          "text": "\\(\\frac{+6𝐸𝐼}{𝑚𝑙3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "\\sqrt 𝑘𝑙^{3} + 6𝐸𝐼 𝑚𝑙3",
-              "content": "\\(\\sqrt 𝑘𝑙^{3} + 6𝐸𝐼 𝑚𝑙3\\)",
+              "latex": "\\frac{+6𝐸𝐼}{𝑚𝑙3}",
+              "content": "\\(\\frac{+6𝐸𝐼}{𝑚𝑙3}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3888,13 +3968,13 @@
         },
         {
           "id": "B",
-          "text": "\\(\\sqrt 𝑘𝑙^{3} + 48𝐸𝐼 𝑚𝑙3\\)",
+          "text": "\\(\\frac{+48𝐸𝐼}{𝑚𝑙3}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "\\sqrt 𝑘𝑙^{3} + 48𝐸𝐼 𝑚𝑙3",
-              "content": "\\(\\sqrt 𝑘𝑙^{3} + 48𝐸𝐼 𝑚𝑙3\\)",
+              "latex": "\\frac{+48𝐸𝐼}{𝑚𝑙3}",
+              "content": "\\(\\frac{+48𝐸𝐼}{𝑚𝑙3}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3904,13 +3984,13 @@
         },
         {
           "id": "C",
-          "text": "\\(\\sqrt 6𝐸𝐼𝑘 (𝑘𝑙^{3} + 6𝐸𝐼)𝑚\\)",
+          "text": "\\(\\frac{6𝐸𝐼𝑘}{(𝑘𝑙3+6𝐸𝐼)𝑚}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "\\sqrt 6𝐸𝐼𝑘 (𝑘𝑙^{3} + 6𝐸𝐼)𝑚",
-              "content": "\\(\\sqrt 6𝐸𝐼𝑘 (𝑘𝑙^{3} + 6𝐸𝐼)𝑚\\)",
+              "latex": "\\frac{6𝐸𝐼𝑘}{(𝑘𝑙3+6𝐸𝐼)𝑚}",
+              "content": "\\(\\frac{6𝐸𝐼𝑘}{(𝑘𝑙3+6𝐸𝐼)𝑚}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -3920,13 +4000,13 @@
         },
         {
           "id": "D",
-          "text": "\\(\\sqrt 48𝐸𝐼𝑘 (𝑘𝑙^{3} + 48𝐸𝐼)𝑚\\)",
+          "text": "\\(\\frac{48𝐸𝐼𝑘}{(𝑘𝑙3+48𝐸𝐼)𝑚}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "math",
-              "latex": "\\sqrt 48𝐸𝐼𝑘 (𝑘𝑙^{3} + 48𝐸𝐼)𝑚",
-              "content": "\\(\\sqrt 48𝐸𝐼𝑘 (𝑘𝑙^{3} + 48𝐸𝐼)𝑚\\)",
+              "latex": "\\frac{48𝐸𝐼𝑘}{(𝑘𝑙3+48𝐸𝐼)𝑚}",
+              "content": "\\(\\frac{48𝐸𝐼𝑘}{(𝑘𝑙3+48𝐸𝐼)𝑚}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -4073,11 +4153,11 @@
       "questionNumber": 39,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A homogeneous, prismatic, linearly elastic steel bar fixed at both the ends has a slenderness ratio (l/r) of 105, where l is the bar length and r is the radius of gyration. The coefficient of thermal expansion of steel is 12 \\times 10-6 /oC. Consider the effective length of the steel bar as 0.5l and neglect the self-weight of the bar.\n\nThe differential increase in temperature (rounded off to the nearest integer) at which the bar buckles is",
+      "questionText": "A homogeneous, prismatic, linearly elastic steel bar fixed at both the ends has a slenderness ratio (l/r) of 105, where l is the bar length and r is the radius of gyration. The coefficient of thermal expansion of steel is 12 \\times 10^{-6} /^{o}C. Consider the effective length of the steel bar as 0.5l and neglect the self-weight of the bar.\n\nThe differential increase in temperature (rounded off to the nearest integer) at which the bar buckles is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A homogeneous, prismatic, linearly elastic steel bar fixed at both the ends has a slenderness ratio (l/r) of 105, where l is the bar length and r is the radius of gyration. The coefficient of thermal expansion of steel is 12 \\times 10-6 /oC. Consider the effective length of the steel bar as 0.5l and neglect the self-weight of the bar.\n\nThe differential increase in temperature (rounded off to the nearest integer) at which the bar buckles is",
+          "content": "A homogeneous, prismatic, linearly elastic steel bar fixed at both the ends has a slenderness ratio (l/r) of 105, where l is the bar length and r is the radius of gyration. The coefficient of thermal expansion of steel is 12 \\times 10^{-6} /^{o}C. Consider the effective length of the steel bar as 0.5l and neglect the self-weight of the bar.\n\nThe differential increase in temperature (rounded off to the nearest integer) at which the bar buckles is",
           "confidence": "VERIFIED"
         }
       ],
@@ -4087,71 +4167,75 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "298 oC",
-        "85 oC",
-        "400 oC",
-        "250 oC"
+        "\\(298 ^{o}C\\)",
+        "\\(85 ^{o}C\\)",
+        "\\(400 ^{o}C\\)",
+        "\\(250 ^{o}C\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "298 oC",
+          "text": "\\(298 ^{o}C\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "298 oC",
+              "type": "math",
+              "latex": "298 ^{o}C",
+              "content": "\\(298 ^{o}C\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "85 oC",
+          "text": "\\(85 ^{o}C\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "85 oC",
+              "type": "math",
+              "latex": "85 ^{o}C",
+              "content": "\\(85 ^{o}C\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "C",
-          "text": "400 oC",
+          "text": "\\(400 ^{o}C\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "400 oC",
+              "type": "math",
+              "latex": "400 ^{o}C",
+              "content": "\\(400 ^{o}C\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "D",
-          "text": "250 oC",
+          "text": "\\(250 ^{o}C\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "250 oC",
+              "type": "math",
+              "latex": "250 ^{o}C",
+              "content": "\\(250 ^{o}C\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         }
       ],
@@ -4291,11 +4375,11 @@
       "questionNumber": 41,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A round-bottom triangular lined canal is to be laid at a slope of 1 in 1500, to carry a discharge of 25 m^{3}/s. The side slopes of the canal cross-section are to be kept at\n\n(in meters) will be in the range of",
+      "questionText": "A round-bottom triangular lined canal is to be laid at a slope of 1 in 1500, to carry a discharge of 25 m^{3}/s. The side slopes of the canal cross-section are to be kept at 25H ∶1V. If Manning's roughness coefficient is 0.013, the flow depth (in meters) will be in the range of",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A round-bottom triangular lined canal is to be laid at a slope of 1 in 1500, to carry a discharge of 25 m^{3}/s. The side slopes of the canal cross-section are to be kept at\n\n(in meters) will be in the range of",
+          "content": "A round-bottom triangular lined canal is to be laid at a slope of 1 in 1500, to carry a discharge of 25 m^{3}/s. The side slopes of the canal cross-section are to be kept at 25H ∶1V. If Manning's roughness coefficient is 0.013, the flow depth (in meters) will be in the range of",
           "confidence": "VERIFIED"
         }
       ],
@@ -4400,11 +4484,11 @@
       "questionNumber": 42,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A hypothetical multimedia filter, consisting of anthracite particles (specific gravity:\n\nis to be designed for treating water/wastewater. After backwashing, the particles should settle forming three layers: coarse anthracite particles at the top of the bed, silica sand in the middle, and small ilmenite sand particles at the bottom of the bed.\n\nAssume (i) Slow discrete settling (Stoke's law is applicable) (ii) All particles are spherical (iii) Diameter of silica sand particles is 0.20 mm\n\nThe CORRECT option fulfilling the diameter requirements for this filter media is",
+      "questionText": "A hypothetical multimedia filter, consisting of anthracite particles (specific gravity:\n\n50), silica s and (specific gravity: 2.60), and ilmenite s and (specific gravity: 4.20), is to be designed for treating water/wastewater. After backwashing, the particles should settle forming three layers: coarse anthracite particles at the top of the bed, silica s and in the middle, and small ilmenite s and particles at the bottom of the bed.\n\nAssume (i) Slow discrete settling (Stoke's law is applicable) (ii) All particles are spherical (iii) Diameter of silica s and particles is 0.20 mm\n\nThe CORRECT option fulfilling the diameter requirements for this filter media is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A hypothetical multimedia filter, consisting of anthracite particles (specific gravity:\n\nis to be designed for treating water/wastewater. After backwashing, the particles should settle forming three layers: coarse anthracite particles at the top of the bed, silica sand in the middle, and small ilmenite sand particles at the bottom of the bed.\n\nAssume (i) Slow discrete settling (Stoke's law is applicable) (ii) All particles are spherical (iii) Diameter of silica sand particles is 0.20 mm\n\nThe CORRECT option fulfilling the diameter requirements for this filter media is",
+          "content": "A hypothetical multimedia filter, consisting of anthracite particles (specific gravity:\n\n50), silica s and (specific gravity: 2.60), and ilmenite s and (specific gravity: 4.20), is to be designed for treating water/wastewater. After backwashing, the particles should settle forming three layers: coarse anthracite particles at the top of the bed, silica s and in the middle, and small ilmenite s and particles at the bottom of the bed.\n\nAssume (i) Slow discrete settling (Stoke's law is applicable) (ii) All particles are spherical (iii) Diameter of silica s and particles is 0.20 mm\n\nThe CORRECT option fulfilling the diameter requirements for this filter media is",
           "confidence": "VERIFIED"
         }
       ],
@@ -4414,21 +4498,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite\nparticles is slightly greater than 0.141 mm.",
-        "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of\nilmenite particles is slightly less than 0.141 mm.",
-        "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite\nparticles is slightly less than 0.10 mm.",
-        "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of\nilmenite particles is slightly less than 0.10 mm."
+        "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite particles is slightly greater than 0.141 mm.",
+        "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of ilmenite particles is slightly less than 0.141 mm.",
+        "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm.",
+        "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite\nparticles is slightly greater than 0.141 mm.",
+          "text": "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite particles is slightly greater than 0.141 mm.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite\nparticles is slightly greater than 0.141 mm.",
+              "content": "diameter of anthracite particles is slightly less than 0.35 mm and diameter of ilmenite particles is slightly greater than 0.141 mm.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4438,12 +4522,12 @@
         },
         {
           "id": "B",
-          "text": "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of\nilmenite particles is slightly less than 0.141 mm.",
+          "text": "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of ilmenite particles is slightly less than 0.141 mm.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of\nilmenite particles is slightly less than 0.141 mm.",
+              "content": "diameter of anthracite particles is slightly greater than 0.35 mm and diameter of ilmenite particles is slightly less than 0.141 mm.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4453,12 +4537,12 @@
         },
         {
           "id": "C",
-          "text": "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite\nparticles is slightly less than 0.10 mm.",
+          "text": "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite\nparticles is slightly less than 0.10 mm.",
+              "content": "diameter of anthracite particles is slightly less than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4468,12 +4552,12 @@
         },
         {
           "id": "D",
-          "text": "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of\nilmenite particles is slightly less than 0.10 mm.",
+          "text": "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of\nilmenite particles is slightly less than 0.10 mm.",
+              "content": "diameter of anthracite particles is slightly greater than 0.64 mm and diameter of ilmenite particles is slightly less than 0.10 mm.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4509,15 +4593,71 @@
       "questionNumber": 43,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The consolidated data of a spot speed study for a certain stretch of a highway is given in the table.\n\n\\(\\frac{(kmph)}{0-10}\\) \\(\\frac{observations}{7}\\)\n\nThe \"upper speed limit\" (in kmph) for the traffic sign is",
+      "questionText": "The consolidated data of a spot speed study for a certain stretch of a highway is given in the table.\n\n| Speed range (kmph) | Number of observations |\n| :--- | :--- |\n| 0 - 10 | 7 |\n| 10 - 20 | 31 |\n| 20 - 30 | 76 |\n| 30 - 40 | 129 |\n| 40 - 50 | 104 |\n| 50 - 60 | 78 |\n| 60 - 70 | 29 |\n| 70 - 80 | 24 |\n| 80 - 90 | 13 |\n| 90 - 100 | 9 |\n\nThe “upper speed limit” (in kmph) for the traffic sign is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The consolidated data of a spot speed study for a certain stretch of a highway is given in the table.\n\n\\(\\frac{(kmph)}{0-10}\\) \\(\\frac{observations}{7}\\)\n\nThe \"upper speed limit\" (in kmph) for the traffic sign is",
+          "content": "The consolidated data of a spot speed study for a certain stretch of a highway is given in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Speed range (kmph)",
+            "Number of observations"
+          ],
+          "rows": [
+            [
+              "0 - 10",
+              "7"
+            ],
+            [
+              "10 - 20",
+              "31"
+            ],
+            [
+              "20 - 30",
+              "76"
+            ],
+            [
+              "30 - 40",
+              "129"
+            ],
+            [
+              "40 - 50",
+              "104"
+            ],
+            [
+              "50 - 60",
+              "78"
+            ],
+            [
+              "60 - 70",
+              "29"
+            ],
+            [
+              "70 - 80",
+              "24"
+            ],
+            [
+              "80 - 90",
+              "13"
+            ],
+            [
+              "90 - 100",
+              "9"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The \"upper speed limit\" (in kmph) for the traffic sign is",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4850,35 +4990,35 @@
       "questionNumber": 46,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "is/are",
+      "questionText": "In the context of pavement material characterization, the CORRECT statement(s) is/are",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "is/are",
+          "content": "In the context of pavement material characterization, the CORRECT statement(s) is/are",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
         "text"
       ],
-      "confidence": "HIGH_CONFIDENCE",
+      "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "The load penetration curve of CBR test may need origin correction due to the\nnon-vertical penetrating plunger of the loading machine.",
-        "The toughness and hardness of road aggregates are determined by Los Angeles\nabrasion test and aggregate impact test, respectively.",
-        "Grading of normal (unmodified) bitumen binders is done based on viscosity test\nresults.",
-        "\\(In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).\\)"
+        "The load penetration curve of CBR test may need origin correction due to the non-vertical penetrating plunger of the loading machine.",
+        "The toughness and hardness of road aggregates are determined by Los Angeles abrasion test and aggregate impact test, respectively.",
+        "Grading of normal (unmodified) bitumen binders is done based on viscosity test results.",
+        "In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏})."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "The load penetration curve of CBR test may need origin correction due to the\nnon-vertical penetrating plunger of the loading machine.",
+          "text": "The load penetration curve of CBR test may need origin correction due to the non-vertical penetrating plunger of the loading machine.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The load penetration curve of CBR test may need origin correction due to the\nnon-vertical penetrating plunger of the loading machine.",
+              "content": "The load penetration curve of CBR test may need origin correction due to the non-vertical penetrating plunger of the loading machine.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4888,12 +5028,12 @@
         },
         {
           "id": "B",
-          "text": "The toughness and hardness of road aggregates are determined by Los Angeles\nabrasion test and aggregate impact test, respectively.",
+          "text": "The toughness and hardness of road aggregates are determined by Los Angeles abrasion test and aggregate impact test, respectively.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The toughness and hardness of road aggregates are determined by Los Angeles\nabrasion test and aggregate impact test, respectively.",
+              "content": "The toughness and hardness of road aggregates are determined by Los Angeles abrasion test and aggregate impact test, respectively.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4903,12 +5043,12 @@
         },
         {
           "id": "C",
-          "text": "Grading of normal (unmodified) bitumen binders is done based on viscosity test\nresults.",
+          "text": "Grading of normal (unmodified) bitumen binders is done based on viscosity test results.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Grading of normal (unmodified) bitumen binders is done based on viscosity test\nresults.",
+              "content": "Grading of normal (unmodified) bitumen binders is done based on viscosity test results.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4918,18 +5058,17 @@
         },
         {
           "id": "D",
-          "text": "\\(In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).\\)",
+          "text": "In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).",
-              "content": "\\(In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).\\)",
+              "type": "text",
+              "content": "In compacted bituminous mix, Voids in the Mineral Aggregate (VMA) is equal to the sum of total volume of air voids (𝑉_{𝑣}) and total volume of bitumen (𝑉_{𝑏}).",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4978,11 +5117,11 @@
       "questionNumber": 47,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The expression for computing the effective interest rate (𝑖_{𝑒𝑓𝑓}) using continuous compounding for a nominal interest rate of 5% is\n\n𝑚 𝑚→ \\infty (1 + 0.05 -1 𝑖_{𝑒𝑓𝑓}= lim 𝑚)\n\nThe effective interest rate (in percentage) is ____________ (rounded off to 2 decimal places).",
+      "questionText": "The expression for computing the effective interest rate (𝑖_{𝑒𝑓𝑓}) using continuous compounding for a nominal interest rate of 5% is\n\n𝑖_{𝑒𝑓𝑓}= lim 𝑖𝑒𝑓𝑓= 𝑚→ \\infty (1 lim + <u>0.05</u> 𝑚) -1 𝑚) 𝑚 -1\n\nThe effective interest rate (in percentage) is ____________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The expression for computing the effective interest rate (𝑖_{𝑒𝑓𝑓}) using continuous compounding for a nominal interest rate of 5% is\n\n𝑚 𝑚→ \\infty (1 + 0.05 -1 𝑖_{𝑒𝑓𝑓}= lim 𝑚)\n\nThe effective interest rate (in percentage) is ____________ (rounded off to 2 decimal places).",
+          "content": "The expression for computing the effective interest rate (𝑖_{𝑒𝑓𝑓}) using continuous compounding for a nominal interest rate of 5% is\n\n𝑖_{𝑒𝑓𝑓}= lim 𝑖𝑒𝑓𝑓= 𝑚→ \\infty (1 lim + <u>0.05</u> 𝑚) -1 𝑚) 𝑚 -1\n\nThe effective interest rate (in percentage) is ____________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5024,11 +5163,11 @@
       "questionNumber": 48,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "-1 0 Consider two matrices 𝐀= [2 1 4 3] and 𝐁= [ ]. 2 3 1 0 1 4 The determinant of the matrix 𝐀𝐁 is __________(in integer).",
+      "questionText": "Consider two matrices 𝐀= [2 1 1 0 4 3] and 𝐁= [ -1 2 1 0 3 4 ].\n\nThe determinant of the matrix 𝐀𝐁 is __________(in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "-1 0 Consider two matrices 𝐀= [2 1 4 3] and 𝐁= [ ]. 2 3 1 0 1 4 The determinant of the matrix 𝐀𝐁 is __________(in integer).",
+          "content": "Consider two matrices 𝐀= [2 1 1 0 4 3] and 𝐁= [ -1 2 1 0 3 4 ].\n\nThe determinant of the matrix 𝐀𝐁 is __________(in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5070,11 +5209,11 @@
       "questionNumber": 49,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "For the 6 m long horizontal cantilever beam PQR shown in the figure, Q is the mid- point. Segment PQ of the beam has flexural rigidity EI = 2 \\times 10^{5} kN. m^{2} whereas the segment QR has infinite flexural rigidity. Segment QR is subjected to uniformly distributed, vertically downward load of 5 kN/m.\n\n(Figure NOT to scale)\n\nThe magnitude of the vertical displacement (in mm) at point Q is ________ (rounded off to 3 decimal places).",
+      "questionText": "For the 6 m long horizontal cantilever beam PQR shown in the figure, Q is the mid- point. Segment PQ of the beam has flexural rigidity EI = 2 \\times 10^{5} kN. m^{2} whereas the segment QR has infinite flexural rigidity. Segment QR is subjected to uniformly distributed, vertically downward load of 5 kN/m.\n\nThe magnitude of the vertical displacement (in mm) at point Q is ________ (rounded off to 3 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "For the 6 m long horizontal cantilever beam PQR shown in the figure, Q is the mid- point. Segment PQ of the beam has flexural rigidity EI = 2 \\times 10^{5} kN. m^{2} whereas the segment QR has infinite flexural rigidity. Segment QR is subjected to uniformly distributed, vertically downward load of 5 kN/m.\n\n(Figure NOT to scale)\n\nThe magnitude of the vertical displacement (in mm) at point Q is ________ (rounded off to 3 decimal places).",
+          "content": "For the 6 m long horizontal cantilever beam PQR shown in the figure, Q is the mid- point. Segment PQ of the beam has flexural rigidity EI = 2 \\times 10^{5} kN. m^{2} whereas the segment QR has infinite flexural rigidity. Segment QR is subjected to uniformly distributed, vertically downward load of 5 kN/m.\n\nThe magnitude of the vertical displacement (in mm) at point Q is ________ (rounded off to 3 decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -5124,11 +5263,11 @@
       "questionNumber": 50,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The horizontal beam PQRS shown in the figure has a fixed support at point P, an internal hinge at point Q, and a pin support at point R. A concentrated vertically downward load (V) of 10 kN can act at any point over the entire length of the beam.\n\n(Figure NOT to scale)\n\nThe maximum magnitude of the moment reaction (in kN. m) that can act at the support P due to V is ____________ (in integer).",
+      "questionText": "The horizontal beam PQRS shown in the figure has a fixed support at point P, an internal hinge at point Q, and a pin support at point R. A concentrated vertically downward load (V) of 10 kN can act at any point over the entire length of the beam.\n\nThe maximum magnitude of the moment reaction (in kN. m) that can act at the support P due to V is ____________ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The horizontal beam PQRS shown in the figure has a fixed support at point P, an internal hinge at point Q, and a pin support at point R. A concentrated vertically downward load (V) of 10 kN can act at any point over the entire length of the beam.\n\n(Figure NOT to scale)\n\nThe maximum magnitude of the moment reaction (in kN. m) that can act at the support P due to V is ____________ (in integer).",
+          "content": "The horizontal beam PQRS shown in the figure has a fixed support at point P, an internal hinge at point Q, and a pin support at point R. A concentrated vertically downward load (V) of 10 kN can act at any point over the entire length of the beam.\n\nThe maximum magnitude of the moment reaction (in kN. m) that can act at the support P due to V is ____________ (in integer).",
           "confidence": "VERIFIED"
         },
         {
@@ -5178,11 +5317,11 @@
       "questionNumber": 51,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A concrete column section of size 300 mm \\times 500 mm as shown in the figure is subjected to both axial compression and bending along the major axis. The depth of the neutral axis (xu) is 1.1 times the depth of the column, as shown.\n\nB = 300 mm c\n\nx_{u} = 1.1D D = 500 mm\n\nColumn section Strain distribution (Figure NOT to scale)\n\nThe maximum compressive strain (c) at highly compressive extreme fiber in concrete, where there is no tension in the section, is ______________ \\times 10-3 (rounded off to 2 decimal places).",
+      "questionText": "A concrete column section of size 300 mm \\times 500 mm as shown in the figure is subjected to both axial compression and bending along the major axis. The depth of the neutral axis (xu) is 1.1 times the depth of the column, as shown.\n\nB = 300 mm \\(\\epsilon\\)_{c}\n\nColumn section Strain distribution\n\n(Figure NOT to scale)\n\nThe maximum compressive strain (\\(\\epsilon\\)c) at highly compressive extreme fiber in concrete, where there is no tension in the section, is ______________ \\times 10-3 (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A concrete column section of size 300 mm \\times 500 mm as shown in the figure is subjected to both axial compression and bending along the major axis. The depth of the neutral axis (xu) is 1.1 times the depth of the column, as shown.\n\nB = 300 mm c\n\nx_{u} = 1.1D D = 500 mm\n\nColumn section Strain distribution (Figure NOT to scale)\n\nThe maximum compressive strain (c) at highly compressive extreme fiber in concrete, where there is no tension in the section, is ______________ \\times 10-3 (rounded off to 2 decimal places).",
+          "content": "A concrete column section of size 300 mm \\times 500 mm as shown in the figure is subjected to both axial compression and bending along the major axis. The depth of the neutral axis (xu) is 1.1 times the depth of the column, as shown.\n\nB = 300 mm \\(\\epsilon\\)_{c}\n\nColumn section Strain distribution\n\n(Figure NOT to scale)\n\nThe maximum compressive strain (\\(\\epsilon\\)c) at highly compressive extreme fiber in concrete, where there is no tension in the section, is ______________ \\times 10-3 (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         },
         {
@@ -5197,40 +5336,9 @@
       ],
       "confidence": "VERIFIED",
       "questionType": "NAT",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "optionImages": [
-        null,
-        null,
-        null,
-        "/exam-assets/gate/2024/ce-2/q51_opt_d.png"
-      ],
-      "richOptions": [
-        {
-          "id": "A",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "B",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "C",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2024/ce-2/q51_opt_d.png"
-        }
-      ],
+      "options": [],
+      "optionImages": null,
+      "richOptions": null,
       "correctAnswer": "3.20 to 3.40",
       "correctAnswerIndex": -1,
       "correctAnswerSet": null,
@@ -5263,11 +5371,11 @@
       "questionNumber": 52,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "\\(\\frac{showstheactivities}{Activity}\\)\n\n4 \\(\\frac{4}{6}\\)\n\nThe total duration (in days) of the project is___________ (in integer).",
+      "questionText": "The table shows the activities and their durations and dependencies in a project.\n\n\\(\\frac{Activity}{A}\\) \\(\\frac{Duration(Days)}{8}\\) \\(\\frac{Dependson}{-}\\) \\(\\frac{A}{B}\\) \\(\\frac{8}{4}\\) \\(\\frac{-}{A}\\) \\(\\frac{B}{C}\\) \\(\\frac{C}{D}\\) 4 \\(\\frac{A}{B}\\) \\(\\frac{B}{C,L}\\) \\(\\frac{D}{F}\\) 4 \\(\\frac{C,L}{A}\\) \\(\\frac{F}{G}\\) 4 \\(\\frac{A}{F}\\) \\(\\frac{G}{H}\\) \\(\\frac{4}{6}\\) \\(\\frac{F}{G,L}\\) \\(\\frac{H}{K}\\) \\(\\frac{6}{10}\\) \\(\\frac{G,L}{A}\\) \\(\\frac{K}{L}\\) \\(\\frac{10}{6}\\) \\(\\frac{A}{F,K}\\)\n\nThe total duration (in days) of the project is___________ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "\\(\\frac{showstheactivities}{Activity}\\)\n\n4 \\(\\frac{4}{6}\\)\n\nThe total duration (in days) of the project is___________ (in integer).",
+          "content": "The table shows the activities and their durations and dependencies in a project.\n\n\\(\\frac{Activity}{A}\\) \\(\\frac{Duration(Days)}{8}\\) \\(\\frac{Dependson}{-}\\) \\(\\frac{A}{B}\\) \\(\\frac{8}{4}\\) \\(\\frac{-}{A}\\) \\(\\frac{B}{C}\\) \\(\\frac{C}{D}\\) 4 \\(\\frac{A}{B}\\) \\(\\frac{B}{C,L}\\) \\(\\frac{D}{F}\\) 4 \\(\\frac{C,L}{A}\\) \\(\\frac{F}{G}\\) 4 \\(\\frac{A}{F}\\) \\(\\frac{G}{H}\\) \\(\\frac{4}{6}\\) \\(\\frac{F}{G,L}\\) \\(\\frac{H}{K}\\) \\(\\frac{6}{10}\\) \\(\\frac{G,L}{A}\\) \\(\\frac{K}{L}\\) \\(\\frac{10}{6}\\) \\(\\frac{A}{F,K}\\)\n\nThe total duration (in days) of the project is___________ (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5355,11 +5463,11 @@
       "questionNumber": 54,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The in-situ percentage of voids of a sand deposit is 50%. The maximum and minimum densities of sand determined from the laboratory tests are 1.8 g/cm^{3} and\n\nThe relative density index of the in-situ sand is ______________ (rounded off to 2 decimal places).",
+      "questionText": "The in-situ percentage of voids of a s and deposit is 50%. The maximum and minimum densities of s and determined from the laboratory tests are 1.8 g/cm^{3} and 3 g/cm^{3}, respectively. Assume the specific gravity of s and as 2.7.\n\nThe relative density index of the in-situ s and is ______________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The in-situ percentage of voids of a sand deposit is 50%. The maximum and minimum densities of sand determined from the laboratory tests are 1.8 g/cm^{3} and\n\nThe relative density index of the in-situ sand is ______________ (rounded off to 2 decimal places).",
+          "content": "The in-situ percentage of voids of a s and deposit is 50%. The maximum and minimum densities of s and determined from the laboratory tests are 1.8 g/cm^{3} and 3 g/cm^{3}, respectively. Assume the specific gravity of s and as 2.7.\n\nThe relative density index of the in-situ s and is ______________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5410,11 +5518,11 @@
       "questionNumber": 55,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A drained triaxial test was conducted on a saturated sand specimen using a stress-path triaxial testing system. The specimen failed when the axial stress reached a value of 100 kN/m^{2} from an initial confining pressure of 300 kN/m^{2}.\n\nThe angle of shearing plane (in degrees) with respect to horizontal is ________________ (rounded off to the nearest integer).",
+      "questionText": "A drained triaxial test was conducted on a saturated s and specimen using a stress-path triaxial testing system. The specimen failed when the axial stress reached a value of 100 kN/m^{2} from an initial confining pressure of 300 kN/m^{2}.\n\nThe angle of shearing plane (in degrees) with respect to horizontal is ________________ (rounded off to the nearest integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A drained triaxial test was conducted on a saturated sand specimen using a stress-path triaxial testing system. The specimen failed when the axial stress reached a value of 100 kN/m^{2} from an initial confining pressure of 300 kN/m^{2}.\n\nThe angle of shearing plane (in degrees) with respect to horizontal is ________________ (rounded off to the nearest integer).",
+          "content": "A drained triaxial test was conducted on a saturated s and specimen using a stress-path triaxial testing system. The specimen failed when the axial stress reached a value of 100 kN/m^{2} from an initial confining pressure of 300 kN/m^{2}.\n\nThe angle of shearing plane (in degrees) with respect to horizontal is ________________ (rounded off to the nearest integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5456,11 +5564,11 @@
       "questionNumber": 56,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A storm with a recorded precipitation of 11.0 cm, as shown in the table, produced a \\(\\frac{directrun-offof}{Timefrom}\\)6.0 cm.\n\n1 2 3 4 5 6 7 8 \\(\\frac{start(hours)}{Recorded}\\)\n\nprecipitation (<u>cm</u>)\n\nThe ∅-index of this storm is ____________ cm/hr (rounded off to 2 decimal places).",
+      "questionText": "A storm with a recorded precipitation of 11.0 cm, as shown in the table, produced a direct run-off of 6.0 cm.\n\nstart (hours) Time from 1 2 3 4 5 6 7 8\n\nRecorded\n\nprecipitation cumulative 5 5 1 5 3 9 2 0 (<u>cm</u>)\n\nThe ∅-index of this storm is ____________ cm/hr (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A storm with a recorded precipitation of 11.0 cm, as shown in the table, produced a \\(\\frac{directrun-offof}{Timefrom}\\)6.0 cm.\n\n1 2 3 4 5 6 7 8 \\(\\frac{start(hours)}{Recorded}\\)\n\nprecipitation (<u>cm</u>)\n\nThe ∅-index of this storm is ____________ cm/hr (rounded off to 2 decimal places).",
+          "content": "A storm with a recorded precipitation of 11.0 cm, as shown in the table, produced a direct run-off of 6.0 cm.\n\nstart (hours) Time from 1 2 3 4 5 6 7 8\n\nRecorded\n\nprecipitation cumulative 5 5 1 5 3 9 2 0 (<u>cm</u>)\n\nThe ∅-index of this storm is ____________ cm/hr (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5502,11 +5610,11 @@
       "questionNumber": 57,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "A 500 m long water distribution pipeline P with diameter 1.0 m, is used to convey\n\nP. The friction factors for P and Q are 0.04 and 0.01, respectively. The diameter of the pipeline Q (in meters) is ______________ (rounded off to 2 decimal places).",
+      "questionText": "A 500 m long water distribution pipeline P with diameter 1.0 m, is used to convey 1 m^{3}/s of flow. A new pipeline Q, with the same length and flow rate, is to replace P. The friction factors for P and Q are 0.04 and 0.01, respectively. The diameter of the pipeline Q (in meters) is ______________ (rounded off to 2 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A 500 m long water distribution pipeline P with diameter 1.0 m, is used to convey\n\nP. The friction factors for P and Q are 0.04 and 0.01, respectively. The diameter of the pipeline Q (in meters) is ______________ (rounded off to 2 decimal places).",
+          "content": "A 500 m long water distribution pipeline P with diameter 1.0 m, is used to convey 1 m^{3}/s of flow. A new pipeline Q, with the same length and flow rate, is to replace P. The friction factors for P and Q are 0.04 and 0.01, respectively. The diameter of the pipeline Q (in meters) is ______________ (rounded off to 2 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5686,11 +5794,11 @@
       "questionNumber": 61,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "An organic waste is represented as C_{240}O_{200}H_{180}N_{5}S.\n\n(Atomic weights: S-32, H-1, C-12, O-16, N-14).\n\nAssume complete conversion of S to SO_{2} while burning.\n\nSO2 generated (in grams) per kg of this waste is ___________ (rounded off to 1 decimal place).",
+      "questionText": "An organic waste is represented as C_{240}O_{200}H_{180}N_{5}S.\n\n(Atomic weights: S-32, H-1, C-12, O-16, N-14).\n\nAssume complete conversion of S to SO_{2} while burning.\n\nSO_{2} generated (in grams) per kg of this waste is ___________ (rounded off to 1 decimal place).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "An organic waste is represented as C_{240}O_{200}H_{180}N_{5}S.\n\n(Atomic weights: S-32, H-1, C-12, O-16, N-14).\n\nAssume complete conversion of S to SO_{2} while burning.\n\nSO2 generated (in grams) per kg of this waste is ___________ (rounded off to 1 decimal place).",
+          "content": "An organic waste is represented as C_{240}O_{200}H_{180}N_{5}S.\n\n(Atomic weights: S-32, H-1, C-12, O-16, N-14).\n\nAssume complete conversion of S to SO_{2} while burning.\n\nSO_{2} generated (in grams) per kg of this waste is ___________ (rounded off to 1 decimal place).",
           "confidence": "VERIFIED"
         }
       ],
@@ -5870,15 +5978,51 @@
       "questionNumber": 65,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "Differential levelling is carried out from point P (BM: +200.000 m) to point R. \\(\\frac{readingstaken}{Points}\\)\n\n\\(\\frac{Remarks}{BM:+200.000m}\\)\n\n<u>R</u> (<u>-)1.655</u> <u>R</u> (<u>-)1.655</u>\n\nReduced Level (in meters) of the point R is _____ (rounded off to 3 decimal places).",
+      "questionText": "Differential levelling is carried out from point P (BM: +200.000 m) to point R. The readings taken are given in the table.\n\n| Points | Staff readings (m) | Remarks |\n| :--- | :--- | :--- |\n| Back Sight | Fore Sight |\n| P | (-)2.050 | BM: +200.000 m |\n| Q | 1.050 | 0.950 | Q is a change point |\n| R | (-)1.655 |\n\nReduced Level (in meters) of the point R is _____ (rounded off to 3 decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Differential levelling is carried out from point P (BM: +200.000 m) to point R. \\(\\frac{readingstaken}{Points}\\)\n\n\\(\\frac{Remarks}{BM:+200.000m}\\)\n\n<u>R</u> (<u>-)1.655</u> <u>R</u> (<u>-)1.655</u>\n\nReduced Level (in meters) of the point R is _____ (rounded off to 3 decimal places).",
+          "content": "Differential levelling is carried out from point P (BM: +200.000 m) to point R. The readings taken are given in the table.",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Points",
+            "Staff readings (m)",
+            "Remarks"
+          ],
+          "rows": [
+            [
+              "Back Sight",
+              "Fore Sight"
+            ],
+            [
+              "P",
+              "(-)2.050",
+              "BM: +200.000 m"
+            ],
+            [
+              "Q",
+              "1.050",
+              "0.950",
+              "Q is a change point"
+            ],
+            [
+              "R",
+              "(-)1.655"
+            ]
+          ],
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Reduced Level (in meters) of the point R is _____ (rounded off to 3 decimal places).",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
+        "table",
         "text"
       ],
       "confidence": "VERIFIED",

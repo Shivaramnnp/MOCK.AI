@@ -13,6 +13,7 @@ import {
   LineChart,
   Compass,
   ShieldCheck,
+  FileCheck,
 } from 'lucide-react';
 import { AppRoute, UserRole, UserProfile } from '../types';
 import { NotificationBell } from './NotificationBell';
@@ -111,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={() => onNavigate('explore')}
             className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold transition-all ${
-              currentRoute === 'explore' || currentRoute === 'explore_exam' || currentRoute === 'exam_results'
+              currentRoute === 'explore' || currentRoute === 'explore_exam' || currentRoute === 'exam_results' || currentRoute === 'topic_practice'
                 ? 'bg-brand-primary/10 text-brand-primary shadow-sm'
                 : 'text-surface-muted dark:text-darkSurface-muted hover:text-surface-text dark:hover:text-darkSurface-text hover:bg-surface-elev2/60 dark:hover:bg-darkSurface-elev2/60'
             }`}
@@ -151,6 +152,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             Analytics
           </button>
+
+          {isStaff && (
+            <button
+              onClick={() => onNavigate('staff')}
+              className={`px-3.5 py-1.5 rounded-xl text-sm font-bold flex items-center gap-1.5 transition-all ${
+                currentRoute === 'staff'
+                  ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 shadow-sm'
+                  : 'text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10 border border-emerald-500/20'
+              }`}
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              <span>Staff Portal</span>
+            </button>
+          )}
         </nav>
 
         {/* Right Side Actions */}
@@ -235,13 +250,28 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
 
                 {isStaff && (
-                  <button
-                    onClick={() => onNavigate('staff')}
-                    className="w-full px-4 py-2 text-left text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2.5 hover:bg-emerald-500/10 transition-colors"
-                  >
-                    <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                    <span>Staff Operations Portal</span>
-                  </button>
+                  <div className="py-1 border-t border-b border-surface-border dark:border-darkSurface-border my-1 bg-emerald-500/5">
+                    <p className="px-4 py-1 text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                      Staff Operations
+                    </p>
+                    <button
+                      onClick={() => onNavigate('staff')}
+                      className="w-full px-4 py-1.5 text-left text-xs font-semibold text-surface-text dark:text-darkSurface-text flex items-center gap-2.5 hover:bg-emerald-500/10 transition-colors"
+                    >
+                      <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                      <span>Moderation Queue</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        window.location.hash = 'staff#paper-testing';
+                        onNavigate('staff');
+                      }}
+                      className="w-full px-4 py-1.5 text-left text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2.5 hover:bg-emerald-500/10 transition-colors"
+                    >
+                      <FileCheck className="w-4 h-4 text-emerald-500" />
+                      <span>Paper Testing Centre</span>
+                    </button>
+                  </div>
                 )}
 
                 {onSignOut && (

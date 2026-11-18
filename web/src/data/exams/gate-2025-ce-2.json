@@ -408,15 +408,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/ce-2/q4_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -500,10 +494,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (C).",
-      "diagramUrl": "/exam-assets/gate/2025/ce-2/q4_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/ce-2/q4_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -1209,21 +1201,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "[ 3 4 3 ] 4 5 2",
-        "[ 5 4 1 ] 2 3 4",
-        "[ 5 1 4 ] 2 4 3",
-        "[ 1 4 5 ] 4 3 2"
+        "2 1 4 [ 3 4 3 ] 4 5 2",
+        "4 3 2 [ 5 4 1 ] 2 3 4",
+        "4 2 3 [ 5 1 4 ] 2 4 3",
+        "2 3 4 [ 1 4 5 ] 4 3 2"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "[ 3 4 3 ] 4 5 2",
+          "text": "2 1 4 [ 3 4 3 ] 4 5 2",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "[ 3 4 3 ] 4 5 2",
+              "content": "2 1 4 [ 3 4 3 ] 4 5 2",
               "confidence": "VERIFIED"
             }
           ],
@@ -1233,12 +1225,12 @@
         },
         {
           "id": "B",
-          "text": "[ 5 4 1 ] 2 3 4",
+          "text": "4 3 2 [ 5 4 1 ] 2 3 4",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "[ 5 4 1 ] 2 3 4",
+              "content": "4 3 2 [ 5 4 1 ] 2 3 4",
               "confidence": "VERIFIED"
             }
           ],
@@ -1248,12 +1240,12 @@
         },
         {
           "id": "C",
-          "text": "[ 5 1 4 ] 2 4 3",
+          "text": "4 2 3 [ 5 1 4 ] 2 4 3",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "[ 5 1 4 ] 2 4 3",
+              "content": "4 2 3 [ 5 1 4 ] 2 4 3",
               "confidence": "VERIFIED"
             }
           ],
@@ -1263,12 +1255,12 @@
         },
         {
           "id": "D",
-          "text": "[ 1 4 5 ] 4 3 2",
+          "text": "2 3 4 [ 1 4 5 ] 4 3 2",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "[ 1 4 5 ] 4 3 2",
+              "content": "2 3 4 [ 1 4 5 ] 4 3 2",
               "confidence": "VERIFIED"
             }
           ],
@@ -1542,37 +1534,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "1.33 + P",
+        "P G I L O 6@6 m = 36 m 1.33 + P",
         "1.33 + G P",
         "+ 1.33 I P",
         "+ 1.33 I G 1.33 - P"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/ce-2/q14_opt_a.png",
-        "/exam-assets/gate/2025/ce-2/q14_opt_b.png",
-        "/exam-assets/gate/2025/ce-2/q14_opt_c.png",
-        "/exam-assets/gate/2025/ce-2/q14_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "1.33 + P",
-          "imageUrl": "/exam-assets/gate/2025/ce-2/q14_opt_a.png"
+          "text": "P G I L O 6@6 m = 36 m 1.33 + P",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "P G I L O 6@6 m = 36 m 1.33 + P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "1.33 + G P",
-          "imageUrl": "/exam-assets/gate/2025/ce-2/q14_opt_b.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "1.33 + G P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "+ 1.33 I P",
-          "imageUrl": "/exam-assets/gate/2025/ce-2/q14_opt_c.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "+ 1.33 I P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "+ 1.33 I G 1.33 - P",
-          "imageUrl": "/exam-assets/gate/2025/ce-2/q14_opt_d.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "+ 1.33 I G 1.33 - P",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -2272,75 +2299,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
-        "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
-        "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑥}+ _{𝜕𝑦})\\)",
-        "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑦}+ _{𝜕𝑥})\\)"
+        "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- 𝜕𝑣 𝜕𝑢 _{𝜕𝑦}) 𝑧",
+        "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}- _{𝜕𝑦}) 𝑧 𝜕𝑣",
+        "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}+ _{𝜕𝑦}) 𝜕𝑣",
+        "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑦}+ _{𝜕𝑥}) 𝜕𝑣"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
+          "text": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- 𝜕𝑣 𝜕𝑢 _{𝜕𝑦}) 𝑧",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧",
-              "content": "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
+              "type": "text",
+              "content": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- 𝜕𝑣 𝜕𝑢 _{𝜕𝑦}) 𝑧",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
+          "text": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}- _{𝜕𝑦}) 𝑧 𝜕𝑣",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧",
-              "content": "\\(z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( _{𝜕𝑥}- _{𝜕𝑦}) 𝑧\\)",
+              "type": "text",
+              "content": "z-component of Curl of velocity; \\nabla \\times 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}- _{𝜕𝑦}) 𝑧 𝜕𝑣",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑥}+ _{𝜕𝑦})\\)",
+          "text": "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}+ _{𝜕𝑦}) 𝜕𝑣",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑥}+ _{𝜕𝑦})",
-              "content": "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑥}+ _{𝜕𝑦})\\)",
+              "type": "text",
+              "content": "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑥}+ _{𝜕𝑦}) 𝜕𝑣",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑦}+ _{𝜕𝑥})\\)",
+          "text": "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑦}+ _{𝜕𝑥}) 𝜕𝑣",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑦}+ _{𝜕𝑥})",
-              "content": "\\(Divergence of velocity; \\nabla . 𝑉⃗ = ( _{𝜕𝑦}+ _{𝜕𝑥})\\)",
+              "type": "text",
+              "content": "Divergence of velocity; \\nabla . 𝑉⃗ = ( 𝜕𝑢 _{𝜕𝑦}+ _{𝜕𝑥}) 𝜕𝑣",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3851,11 +3874,11 @@
       "questionNumber": 39,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "Let the state of stress at a point in a body be the difference of two plane states of stress shown in the figure. Consider all the possible planes perpendicular to the x-y plane and passing through that point. The magnitude of the maximum compressive stress on any such plane is k𝜎_{0}, where k is equal to _____ (round off to one decimal place).",
+      "questionText": "Let the state of stress at a point in a body be the difference of two plane states of stress shown in the figure. Consider all the possible planes perpendicular to the x-y plane and passing through that point. The magnitude of the maximum compressive stress on any such plane is k𝜎_{0}, where k is equal to _____ (round off to one decimal place).\n\n3𝜎_{0}\n\n<u>45°</u> y\n\nx 3𝜎_{𝑜}",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let the state of stress at a point in a body be the difference of two plane states of stress shown in the figure. Consider all the possible planes perpendicular to the x-y plane and passing through that point. The magnitude of the maximum compressive stress on any such plane is k𝜎_{0}, where k is equal to _____ (round off to one decimal place).",
+          "content": "Let the state of stress at a point in a body be the difference of two plane states of stress shown in the figure. Consider all the possible planes perpendicular to the x-y plane and passing through that point. The magnitude of the maximum compressive stress on any such plane is k𝜎_{0}, where k is equal to _____ (round off to one decimal place).\n\n3𝜎_{0}\n\n<u>45°</u> y\n\nx 3𝜎_{𝑜}",
           "confidence": "VERIFIED"
         },
         {
@@ -5701,11 +5724,11 @@
       "questionNumber": 60,
       "sectionId": "ce2_core",
       "sectionName": "Civil Engineering (Session 2)",
-      "questionText": "The shaft of a 6 m wide gate in the figure will fail at a moment of 3924 kN.m about the hinge P. The maximum value of water depth h (in m) that the gate can hold is ________________ (round off to the nearest integer).\n\nNote:\n\nDensity of water = 1000 kg/m^{3} Acceleration due to gravity = 9.81 m/s^{2}",
+      "questionText": "The shaft of a 6 m wide gate in the figure will fail at a moment of 3924 kN.m about the hinge P. The maximum value of water depth h (in m) that the gate can hold is ________________ (round off to the nearest integer).\n\nNote:\n\nDensity of water = 1000 kg/m^{3} Acceleration due to gravity = 9.81 m/s^{2}\n\nh\n\nP\n\n3 m",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The shaft of a 6 m wide gate in the figure will fail at a moment of 3924 kN.m about the hinge P. The maximum value of water depth h (in m) that the gate can hold is ________________ (round off to the nearest integer).\n\nNote:\n\nDensity of water = 1000 kg/m^{3} Acceleration due to gravity = 9.81 m/s^{2}",
+          "content": "The shaft of a 6 m wide gate in the figure will fail at a moment of 3924 kN.m about the hinge P. The maximum value of water depth h (in m) that the gate can hold is ________________ (round off to the nearest integer).\n\nNote:\n\nDensity of water = 1000 kg/m^{3} Acceleration due to gravity = 9.81 m/s^{2}\n\nh\n\nP\n\n3 m",
           "confidence": "VERIFIED"
         },
         {

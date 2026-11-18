@@ -85,7 +85,7 @@ export class UniversalQuestionSegmenter {
     }
 
     // 2. Collect all elements in deterministic global reading order across all pages
-    const globalElements: DocumentIRElement[] = [];
+    const globalElements: any[] = [];
 
     for (const page of documentIR.pages) {
       const graph = pageGraphs.get(page.pageNumber);
@@ -241,7 +241,7 @@ export class UniversalQuestionSegmenter {
         key: opt.label.toUpperCase(),
         index: optIndex,
         text: opt.text.trim(),
-        contentBlocks: [{ type: 'TEXT', text: opt.text.trim() }],
+        contentBlocks: [{ type: 'text', text: opt.text.trim() }],
       }));
 
       // Evidence
@@ -274,7 +274,7 @@ export class UniversalQuestionSegmenter {
         questionType: qType,
         prompt: {
           text: stemText,
-          contentBlocks: [{ type: 'TEXT', text: stemText }],
+          contentBlocks: [{ type: 'text', content: stemText }],
         },
         options: canonicalOptions,
         answer: {

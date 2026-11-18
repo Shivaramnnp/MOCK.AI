@@ -392,7 +392,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -401,12 +401,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -503,37 +503,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "",
-        "",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/ey/q5_opt_a.png",
-        "/exam-assets/gate/2025/ey/q5_opt_b.png",
-        "/exam-assets/gate/2025/ey/q5_opt_c.png",
-        "/exam-assets/gate/2025/ey/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ey/q5_opt_a.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ey/q5_opt_b.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": "/exam-assets/gate/2025/ey/q5_opt_c.png"
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/ey/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -3309,32 +3344,67 @@
         "Larger groups reduce the per capita risk of predation",
         "Individuals of some species feed on the substrate, while others feed on the invertebrates that are flushed out by the substrate-feeder"
       ],
-      "optionImages": [
-        null,
-        "/exam-assets/gate/2025/ey/q30_opt_b.png",
-        null,
-        null
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
           "text": "Individuals of some species draw the attention of predators away from the school, thereby sacrificing themselves for the survival of the group",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Individuals of some species draw the attention of predators away from the school, thereby sacrificing themselves for the survival of the group",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
           "text": "Some species join mixed-species groups in order to hybridize",
-          "imageUrl": "/exam-assets/gate/2025/ey/q30_opt_b.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Some species join mixed-species groups in order to hybridize",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
           "text": "Larger groups reduce the per capita risk of predation",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Larger groups reduce the per capita risk of predation",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
           "text": "Individuals of some species feed on the substrate, while others feed on the invertebrates that are flushed out by the substrate-feeder",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "Individuals of some species feed on the substrate, while others feed on the invertebrates that are flushed out by the substrate-feeder",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "C;D",
@@ -5449,11 +5519,11 @@
       "questionNumber": 51,
       "sectionId": "ey_core",
       "sectionName": "Ecology and Evolution",
-      "questionText": "The numbers of rabbits (𝑅) and their predators, foxes (𝐹), in an ecosystem are modelled by the Lotka-Volterra equations as follows:\n\n<u>𝑑𝑅</u> 𝑑𝑡= 2𝑅-0.01 𝑅 𝐹 <u>𝑑𝐹</u> 𝑑𝑡= -𝐹+ 0.005 𝑅 𝐹 where the time is measured in months.\n\nIf there are currently 100 rabbits and 10 foxes, the number of rabbits is changing at the rate of per month and the number of foxes is changing at the rate \\(\\frac{currently^{100}}{foxespermonth}\\)",
+      "questionText": "The numbers of rabbits (𝑅) and their predators, foxes (𝐹), in an ecosystem are modelled by the Lotka-Volterra equations as follows:\n\n<u>𝑑𝑅</u> 𝑑𝑡= 2𝑅-0.01 𝑅 𝐹 <u>𝑑𝐹</u> 𝑑𝑡= -𝐹+ 0.005 𝑅 𝐹 where the time is measured in months.\n\nIf there are currently 100 rabbits and 10 foxes, the number of rabbits is changing at the rate of per month and the number of foxes is changing at the rate of _______ foxes per month.",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The numbers of rabbits (𝑅) and their predators, foxes (𝐹), in an ecosystem are modelled by the Lotka-Volterra equations as follows:\n\n<u>𝑑𝑅</u> 𝑑𝑡= 2𝑅-0.01 𝑅 𝐹 <u>𝑑𝐹</u> 𝑑𝑡= -𝐹+ 0.005 𝑅 𝐹 where the time is measured in months.\n\nIf there are currently 100 rabbits and 10 foxes, the number of rabbits is changing at the rate of per month and the number of foxes is changing at the rate \\(\\frac{currently^{100}}{foxespermonth}\\)",
+          "content": "The numbers of rabbits (𝑅) and their predators, foxes (𝐹), in an ecosystem are modelled by the Lotka-Volterra equations as follows:\n\n<u>𝑑𝑅</u> 𝑑𝑡= 2𝑅-0.01 𝑅 𝐹 <u>𝑑𝐹</u> 𝑑𝑡= -𝐹+ 0.005 𝑅 𝐹 where the time is measured in months.\n\nIf there are currently 100 rabbits and 10 foxes, the number of rabbits is changing at the rate of per month and the number of foxes is changing at the rate of _______ foxes per month.",
           "confidence": "VERIFIED"
         }
       ],
@@ -6176,8 +6246,8 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(Increasing levels of N_{2} in the atmosphere due to increased denitrification\\)",
-        "\\(Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels\\)",
+        "Increasing levels of \\(N_{2}\\) in the atmosphere due to increased denitrification",
+        "Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels",
         "Increased release of methane into the atmosphere due to livestock",
         "Increased release of methane from wetlands soil"
       ],
@@ -6185,34 +6255,32 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Increasing levels of N_{2} in the atmosphere due to increased denitrification\\)",
+          "text": "Increasing levels of \\(N_{2}\\) in the atmosphere due to increased denitrification",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Increasing levels of N_{2} in the atmosphere due to increased denitrification",
-              "content": "\\(Increasing levels of N_{2} in the atmosphere due to increased denitrification\\)",
+              "type": "text",
+              "content": "Increasing levels of \\(N_{2}\\) in the atmosphere due to increased denitrification",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels\\)",
+          "text": "Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels",
-              "content": "\\(Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels\\)",
+              "type": "text",
+              "content": "Increased release of CO_{2} into the atmosphere due to the burning of fossil fuels",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {

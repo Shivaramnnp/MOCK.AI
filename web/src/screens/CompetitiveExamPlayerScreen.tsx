@@ -39,12 +39,14 @@ import {
   calculateTopicProgress,
   getQuestionTopicMetadata,
 } from '../services/taxonomy/topicClassifier';
+import { CandidateApiClient } from '../services/uadue/delivery/candidateApiClient';
 
 interface CompetitiveExamPlayerScreenProps {
   paper: ExamPaper | ExamPresentationPaper;
   initialSession?: ExamTestSession | null;
   userId?: string;
   user?: UserProfile | null;
+  deliveryApiClient?: CandidateApiClient;
   onExit: () => void;
   onSubmit: (completedSession: ExamTestSession) => void;
 }
@@ -54,6 +56,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   initialSession,
   userId = 'guest',
   user,
+  deliveryApiClient,
   onExit,
   onSubmit,
 }) => {
@@ -139,6 +142,23 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   const [isReportModalOpen, setIsReportModalOpen] = useState<boolean>(false);
   const reportButtonRef = useRef<HTMLButtonElement>(null);
 
+  // Phase 3.6C / 3.6V: Authoritative Delivery Gateway & Fail-Closed Protection
+  // CRITICAL ROLLBACK SAFEGUARD: If a session was initiated under authoritative delivery,
+  // it is strictly locked into AUTHORITATIVE mode. Disabling VITE_ENABLE_AUTHORITATIVE_DELIVERY
+  // or omitting deliveryApiClient will FAIL CLOSED rather than silently degrading to client-side evaluation.
+  const isAuthoritativeMode = Boolean(
+    deliveryApiClient ||
+    (paper as any).isPresentationOnly ||
+    (paper as any).deliveryMode === 'AUTHORITATIVE' ||
+    initialSession?.deliveryMode === 'AUTHORITATIVE' ||
+    session?.deliveryMode === 'AUTHORITATIVE'
+  );
+  const [deliverySyncStatus, setDeliverySyncStatus] = useState<'SYNCED' | 'PENDING' | 'ERROR' | 'TERMINAL'>('SYNCED');
+  const [pendingSyncCount, setPendingSyncCount] = useState<number>(0);
+  const [terminalError, setTerminalError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   // SEC-003: Sanitize questions in memory to withhold answer keys, options, and explanations during the active test session
   const sanitizedQuestions: CompetitiveQuestion[] = useMemo(() => {
     return paper.questions.map((q) => {
@@ -184,6 +204,22 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
       setSaveStatus(status);
     });
   }, []);
+
+  // Session Recovery & Gateway Initialization Hook
+  useEffect(() => {
+    if (deliveryApiClient && !deliveryApiClient.getActiveSessionId()) {
+      deliveryApiClient
+        .initializeSession(paper.id, initialSession?.sessionId)
+        .catch((err) => {
+          if (CandidateApiClient.isTerminalError(err)) {
+            setTerminalError(err.message || 'Session authorization failed');
+            setDeliverySyncStatus('TERMINAL');
+          } else {
+            console.warn('Initial session sync warning:', err);
+          }
+        });
+    }
+  }, [deliveryApiClient, paper.id, initialSession?.sessionId]);
 
   // Reference container to prevent stale closures and timer dependency churn
   const stateRef = useRef({
@@ -331,10 +367,11 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
         canonicalQuestionStatuses: canonicalStatuses,
         timeRemainingSeconds: cur.timeRemaining,
         elapsedSeconds: cur.elapsedSeconds,
+        deliveryMode: isAuthoritativeMode ? 'AUTHORITATIVE' : (cur.session.deliveryMode || 'CLIENT'),
         ...overrides,
       };
     },
-    [questions, paper.paperType]
+    [questions, paper.paperType, isAuthoritativeMode]
   );
 
   // Auto-sync session state to storage (kept for backwards-compatibility without dependency churn)
@@ -359,8 +396,15 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
   }, [getCurrentSessionSnapshot]);
 
-  // Timer countdown with authoritative wall-clock calculation
+  // Timer countdown with authoritative wall-clock calculation (or untimed practice elapsed timer)
   useEffect(() => {
+    if ((paper as any).isUntimed) {
+      const timer = setInterval(() => {
+        setElapsedSeconds((prev) => prev + 1);
+      }, 1000);
+      return () => clearInterval(timer);
+    }
+
     const timer = setInterval(() => {
       const remaining = ExamSessionService.calculateRemainingSeconds(session);
       const safeRemaining = Number.isFinite(remaining) ? remaining : 0;
@@ -374,7 +418,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [session]);
+  }, [session, (paper as any).isUntimed]);
 
   // Scalable adaptive heartbeat: 60 seconds with ±10s randomized jitter (ONLY fires if isDirty === true)
   useEffect(() => {
@@ -455,7 +499,35 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
   // Select option (MCQ)
   const handleSelectOption = (optionIndex: number) => {
+    if (terminalError) {
+      console.warn('Action blocked: Exam session is locked due to terminal condition:', terminalError);
+      return;
+    }
     ExamSessionService.markDirty();
+    const q = questions[currentIndex];
+    if (deliveryApiClient && q?.id) {
+      const optId = q.richOptions?.[optionIndex]?.id || `opt_${optionIndex}`;
+      setDeliverySyncStatus('PENDING');
+      setPendingSyncCount((prev) => prev + 1);
+      deliveryApiClient
+        .selectOption(q.id, optId)
+        .then(() => {
+          const count = deliveryApiClient.getPendingAnswersCount();
+          setPendingSyncCount(count);
+          if (count === 0) {
+            setDeliverySyncStatus('SYNCED');
+          }
+        })
+        .catch((err) => {
+          if (CandidateApiClient.isTerminalError(err)) {
+            setTerminalError(err.message || 'Session lease revoked or expired.');
+            setDeliverySyncStatus('TERMINAL');
+          } else {
+            setDeliverySyncStatus('PENDING');
+            setPendingSyncCount(deliveryApiClient.getPendingAnswersCount());
+          }
+        });
+    }
     setUserAnswers((prev) => {
       const next = { ...prev, [currentIndex]: optionIndex };
       ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userAnswers: next }));
@@ -465,19 +537,63 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
   // Toggle MSQ option
   const handleToggleMsqOption = (optionIndex: number) => {
+    if (terminalError) {
+      console.warn('Action blocked: Exam session is locked due to terminal condition:', terminalError);
+      return;
+    }
     ExamSessionService.markDirty();
+    const current = userMsqAnswers[currentIndex] || [];
+    const exists = current.includes(optionIndex);
+    const updatedSelection = exists
+      ? current.filter((i) => i !== optionIndex)
+      : [...current, optionIndex].sort((a, b) => a - b);
+
     setUserMsqAnswers((prev) => {
-      const current = prev[currentIndex] || [];
-      const exists = current.includes(optionIndex);
-      const next = exists ? current.filter((i) => i !== optionIndex) : [...current, optionIndex].sort();
-      const updated = { ...prev, [currentIndex]: next };
+      const updated = { ...prev, [currentIndex]: updatedSelection };
       ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userMsqAnswers: updated }));
       return updated;
     });
+
+    const q = questions[currentIndex];
+    if (deliveryApiClient && q?.id) {
+      setDeliverySyncStatus('PENDING');
+      setPendingSyncCount((prev) => prev + 1);
+
+      const optionIds = updatedSelection.map(
+        (idx) => q.richOptions?.[idx]?.id || ['A', 'B', 'C', 'D'][idx] || `opt_${idx}`
+      );
+
+      const dispatchPromise =
+        optionIds.length > 0
+          ? deliveryApiClient.selectMsqOptions(q.id, optionIds)
+          : deliveryApiClient.clearOption(q.id);
+
+      dispatchPromise
+        .then(() => {
+          const count = deliveryApiClient.getPendingAnswersCount();
+          setPendingSyncCount(count);
+          if (count === 0) {
+            setDeliverySyncStatus('SYNCED');
+          }
+        })
+        .catch((err) => {
+          if (CandidateApiClient.isTerminalError(err)) {
+            setTerminalError(err.message || 'Session lease revoked or expired.');
+            setDeliverySyncStatus('TERMINAL');
+          } else {
+            setDeliverySyncStatus('PENDING');
+            setPendingSyncCount(deliveryApiClient.getPendingAnswersCount());
+          }
+        });
+    }
   };
 
   // NAT input change
   const handleNatChange = (value: string) => {
+    if (terminalError) {
+      console.warn('Action blocked: Exam session is locked due to terminal condition:', terminalError);
+      return;
+    }
     ExamSessionService.markDirty();
     setUserNatAnswers((prev) => {
       const updated = {
@@ -487,6 +603,36 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
       ExamSessionService.saveSessionLocal(getCurrentSessionSnapshot({ userNatAnswers: updated }));
       return updated;
     });
+
+    const q = questions[currentIndex];
+    if (deliveryApiClient && q?.id) {
+      const trimmed = value.trim();
+      setDeliverySyncStatus('PENDING');
+      setPendingSyncCount((prev) => prev + 1);
+
+      const dispatchPromise =
+        trimmed !== ''
+          ? deliveryApiClient.recordNatAnswer(q.id, trimmed)
+          : deliveryApiClient.clearOption(q.id);
+
+      dispatchPromise
+        .then(() => {
+          const count = deliveryApiClient.getPendingAnswersCount();
+          setPendingSyncCount(count);
+          if (count === 0) {
+            setDeliverySyncStatus('SYNCED');
+          }
+        })
+        .catch((err) => {
+          if (CandidateApiClient.isTerminalError(err)) {
+            setTerminalError(err.message || 'Session lease revoked or expired.');
+            setDeliverySyncStatus('TERMINAL');
+          } else {
+            setDeliverySyncStatus('PENDING');
+            setPendingSyncCount(deliveryApiClient.getPendingAnswersCount());
+          }
+        });
+    }
   };
 
   // Check if current question has an answer
@@ -507,10 +653,35 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
   // Clear response
   const handleClearResponse = () => {
+    if (terminalError) return;
     ExamSessionService.markDirty();
     let updatedAnswers = userAnswers;
     let updatedMsq = userMsqAnswers;
     let updatedNat = userNatAnswers;
+
+    const q = questions[currentIndex];
+    if (deliveryApiClient && q?.id) {
+      setDeliverySyncStatus('PENDING');
+      setPendingSyncCount((prev) => prev + 1);
+      deliveryApiClient
+        .clearOption(q.id)
+        .then(() => {
+          const count = deliveryApiClient.getPendingAnswersCount();
+          setPendingSyncCount(count);
+          if (count === 0) {
+            setDeliverySyncStatus('SYNCED');
+          }
+        })
+        .catch((err) => {
+          if (CandidateApiClient.isTerminalError(err)) {
+            setTerminalError(err.message || 'Session lease revoked or expired.');
+            setDeliverySyncStatus('TERMINAL');
+          } else {
+            setDeliverySyncStatus('PENDING');
+            setPendingSyncCount(deliveryApiClient.getPendingAnswersCount());
+          }
+        });
+    }
 
     setUserAnswers((prev) => {
       const next = { ...prev };
@@ -682,18 +853,78 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   };
 
   // Final Submission
-  const handleFinalSubmit = useCallback(() => {
+  const handleFinalSubmit = useCallback(async () => {
     const snapshot = getCurrentSessionSnapshot();
+
+    if (isAuthoritativeMode) {
+      if (!deliveryApiClient) {
+        setSubmitError(
+          'AUTHORITATIVE_DELIVERY_REQUIRED: This exam attempt was initiated under Server-Authoritative delivery. Silent fallback to client-side scoring is strictly prohibited. Your responses are preserved in the authoritative cloud ledger. Please contact administrator or re-enable authoritative delivery.'
+        );
+        return;
+      }
+      if (terminalError) {
+        setSubmitError(
+          `Cannot submit: Examination session is locked due to terminal condition (${terminalError}).`
+        );
+        return;
+      }
+
+      setIsSubmitting(true);
+      setSubmitError(null);
+      try {
+        await deliveryApiClient.submitExam();
+        const authoritativeResult = await deliveryApiClient.getResult();
+        snapshot.result = authoritativeResult;
+        snapshot.status = 'COMPLETED';
+        snapshot.completedAt = Date.now();
+        setIsSubmitting(false);
+        setShowSubmitModal(false);
+        onSubmit(snapshot);
+        return;
+      } catch (err: any) {
+        setIsSubmitting(false);
+        if (CandidateApiClient.isTerminalError(err)) {
+          const errMsg = err.message || 'Session terminated on server.';
+          setTerminalError(errMsg);
+          setDeliverySyncStatus('TERMINAL');
+          setSubmitError(`Session error: ${errMsg}`);
+        } else {
+          setSubmitError(
+            `Submission synchronization failed: ${err.message || 'Network error'}. Your local answers are preserved. Please verify network connectivity and click Retry Submission.`
+          );
+        }
+        return;
+      }
+    }
+
     const completed = ExamService.submitExamSession(snapshot, paper);
     setShowSubmitModal(false);
     onSubmit(completed);
-  }, [getCurrentSessionSnapshot, paper, onSubmit]);
+  }, [getCurrentSessionSnapshot, paper, onSubmit, deliveryApiClient, isAuthoritativeMode, terminalError]);
 
   // Save & Exit handler: Flushes pending changes, sets status to 'PAUSED', persists and exits
   const handleSaveAndExit = useCallback(async () => {
     setIsSavingExit(true);
     setSaveExitError(null);
     try {
+      if (isAuthoritativeMode && deliveryApiClient) {
+        try {
+          await deliveryApiClient.pauseSession();
+        } catch (pauseErr: any) {
+          if (CandidateApiClient.isTerminalError(pauseErr)) {
+            if (pauseErr.message?.includes('PAUSE_LIMIT_EXCEEDED') || pauseErr.code === 'PAUSE_LIMIT_EXCEEDED') {
+              setIsSavingExit(false);
+              setSaveExitError('Pause limit exceeded: Maximum 3 pauses allowed for this official exam.');
+              return;
+            }
+            setIsSavingExit(false);
+            setSaveExitError(`Cannot pause session: ${pauseErr.message || 'Session locked'}`);
+            return;
+          }
+          console.warn('Authoritative pause sync deferred due to network:', pauseErr);
+        }
+      }
       const snapshot = getCurrentSessionSnapshot();
       await ExamSessionService.saveAndExit(snapshot);
       setIsSavingExit(false);
@@ -702,10 +933,9 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
     } catch (err: any) {
       console.error('Failed to save & exit test session:', err);
       setIsSavingExit(false);
-      setShowExitConfirm(false);
-      onExit();
+      setSaveExitError(err?.message || 'Failed to save session state');
     }
-  }, [getCurrentSessionSnapshot, onExit]);
+  }, [getCurrentSessionSnapshot, onExit, isAuthoritativeMode, deliveryApiClient]);
 
   // Status statistics for palette and modal
   const paletteStats = useMemo(() => {
@@ -728,19 +958,30 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
   }, [statuses, questions.length]);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0F19] text-surface-text dark:text-darkSurface-text flex flex-col select-none">
+    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0F19] text-surface-text dark:text-darkSurface-text flex flex-col select-none overflow-x-hidden">
+      {/* Fail-Closed Terminal Lock Banner */}
+      {terminalError && (
+        <div className="bg-red-600 text-white px-4 py-2.5 flex items-center justify-between text-xs font-semibold sticky top-0 z-50 shadow-md">
+          <div className="flex items-center gap-2">
+            <ShieldAlert className="w-4 h-4 shrink-0" />
+            <span>SESSION LOCKED: {terminalError}</span>
+          </div>
+          <span className="text-[10px] uppercase tracking-wider bg-red-700/80 px-2 py-0.5 rounded font-mono">Fail-Closed Protected</span>
+        </div>
+      )}
+
       {/* ── Official Examination Header ─────────────────────────────── */}
-      <header className="sticky top-0 z-30 bg-white dark:bg-darkSurface-elev1 border-b border-surface-border dark:border-darkSurface-border px-4 py-2.5 shadow-sm">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-xs uppercase">
+      <header className="sticky top-0 z-30 bg-white dark:bg-darkSurface-elev1 border-b border-surface-border dark:border-darkSurface-border px-3 sm:px-4 py-2.5 shadow-sm">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-xs uppercase shrink-0">
               {paper.examId === 'gate' ? 'GATE' : 'SSC'}
             </div>
-            <div>
-              <h1 className="text-xs sm:text-sm font-bold font-display line-clamp-1">
+            <div className="min-w-0 flex-1">
+              <h1 className="text-xs sm:text-sm font-bold font-display truncate">
                 {paper.title}
               </h1>
-              <p className="text-[10px] text-surface-muted dark:text-darkSurface-muted hidden sm:block">
+              <p className="text-[10px] text-surface-muted dark:text-darkSurface-muted hidden sm:block truncate">
                 {paper.examId === 'gate'
                   ? 'IIT Roorkee / IISc • Graduate Aptitude Test in Engineering'
                   : 'Staff Selection Commission • Computer Based Examination'}
@@ -748,7 +989,40 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Authoritative Delivery Sync Status */}
+            {isAuthoritativeMode && (
+              <>
+                {!deliveryApiClient && (
+                  <div
+                    className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20"
+                    title="Authoritative Delivery Gateway required. Client evaluation locked."
+                  >
+                    <ShieldAlert className="w-3.5 h-3.5 text-red-500" />
+                    <span className="hidden sm:inline">Gateway Locked</span>
+                  </div>
+                )}
+                {deliverySyncStatus === 'PENDING' && (
+                  <div
+                    className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
+                    title={`${pendingSyncCount} answer selection(s) queued for synchronization`}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping" />
+                    <span>Syncing ({pendingSyncCount})</span>
+                  </div>
+                )}
+                {deliverySyncStatus === 'TERMINAL' && (
+                  <div
+                    className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20"
+                    title="Session is locked due to terminal condition"
+                  >
+                    <ShieldAlert className="w-3.5 h-3.5 text-red-500" />
+                    <span className="hidden sm:inline">Session Locked</span>
+                  </div>
+                )}
+              </>
+            )}
+
             {/* Autosave Status Indicator */}
             <div className="hidden sm:flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-lg bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
               {saveStatus === 'saving' && (
@@ -777,18 +1051,35 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
               )}
             </div>
 
-            {/* Countdown Timer */}
+            {/* Countdown / Elapsed Timer */}
             <div
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-xl font-mono text-xs sm:text-sm font-extrabold transition-all ${
-                timeRemaining < 300
+              className={`flex items-center gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl font-mono text-xs sm:text-sm font-extrabold transition-all shrink-0 ${
+                (paper as any).isUntimed
+                  ? 'bg-brand-primary/10 text-brand-primary border border-brand-primary/20'
+                  : timeRemaining < 300
                   ? 'bg-red-500/10 text-red-600 border border-red-500/30 animate-pulse'
                   : timeRemaining < 600
                   ? 'bg-amber-500/10 text-amber-600 border border-amber-500/30'
                   : 'bg-surface-elev2 dark:bg-darkSurface-elev2 text-surface-text dark:text-darkSurface-text border border-surface-border dark:border-darkSurface-border'
               }`}
             >
-              <Clock className="w-4 h-4 text-brand-primary shrink-0" />
-              <span>Time Left: {formatTime(timeRemaining)}</span>
+              <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-primary shrink-0" />
+              <span>
+                {(paper as any).isUntimed ? (
+                  <>
+                    <span className="hidden sm:inline">Elapsed: </span>
+                    {formatTime(elapsedSeconds)}
+                    <span className="ml-1 text-[10px] font-sans font-bold uppercase tracking-wider text-brand-primary/80 hidden md:inline">
+                      (Untimed)
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="hidden sm:inline">Time Left: </span>
+                    {formatTime(timeRemaining)}
+                  </>
+                )}
+              </span>
             </div>
 
             <button
@@ -802,7 +1093,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
             {/* UX-001: Mobile Question Palette Trigger */}
             <button
               onClick={() => setIsMobilePaletteOpen(true)}
-              className="lg:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-primary border border-brand-primary/20 text-xs font-bold transition-colors cursor-pointer"
+              className="lg:hidden flex items-center gap-1 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-xl bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-primary border border-brand-primary/20 text-xs font-bold transition-colors cursor-pointer shrink-0"
               title="Open Question Palette"
             >
               <LayoutGrid className="w-3.5 h-3.5" />
@@ -811,7 +1102,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
             <button
               onClick={() => setShowExitConfirm(true)}
-              className="px-3 py-1.5 rounded-xl border border-surface-border dark:border-darkSurface-border text-xs font-semibold text-surface-muted hover:text-red-500 hover:border-red-500/30 transition-colors"
+              className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-surface-border dark:border-darkSurface-border text-xs font-semibold text-surface-muted hover:text-red-500 hover:border-red-500/30 transition-colors shrink-0"
             >
               Exit
             </button>
@@ -843,7 +1134,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
       </div>
 
       {/* ── Main Examination Workspace (Two Columns) ─────────────────── */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:items-start">
         {/* Left 3 Columns: Active Question Area */}
         <div className="lg:col-span-3 flex flex-col justify-between bg-white dark:bg-darkSurface-elev1 border border-surface-border dark:border-darkSurface-border rounded-2xl p-6 shadow-sm min-h-[560px]">
           {paper.paperType === 'DESCRIPTIVE' ? (
@@ -1167,10 +1458,10 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                       Select one or more correct options. No negative marks for wrong answers.
                     </div>
                     {currentQuestion.options.map((optionText, optIdx) => {
-                      const optLetter = ['A', 'B', 'C', 'D'][optIdx];
+                      const richOpt = currentQuestion.richOptions?.[optIdx];
+                      const optLetter = richOpt?.id || ['A', 'B', 'C', 'D'][optIdx] || String.fromCharCode(65 + optIdx);
                       const currentSelected = userMsqAnswers[currentIndex] || [];
                       const isSelected = currentSelected.includes(optIdx);
-                      const richOpt = currentQuestion.richOptions?.[optIdx];
                       const optImage = richOpt?.imageUrl || currentQuestion.optionImages?.[optIdx] || null;
                       const optBlocks = richOpt?.contentBlocks;
 
@@ -1211,9 +1502,9 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                   /* Standard MCQ Radio Options */
                   <div className="space-y-3 pt-2">
                     {currentQuestion.options.map((optionText, optIdx) => {
-                      const optLetter = ['A', 'B', 'C', 'D'][optIdx];
-                      const isSelected = userAnswers[currentIndex] === optIdx;
                       const richOpt = currentQuestion.richOptions?.[optIdx];
+                      const optLetter = richOpt?.id || ['A', 'B', 'C', 'D'][optIdx] || String.fromCharCode(65 + optIdx);
+                      const isSelected = userAnswers[currentIndex] === optIdx;
                       const optImage = richOpt?.imageUrl || currentQuestion.optionImages?.[optIdx] || null;
                       const optBlocks = richOpt?.contentBlocks;
 
@@ -1266,7 +1557,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
                   <button
                     onClick={handleClearResponse}
-                    disabled={userAnswers[currentIndex] === undefined}
+                    disabled={!checkHasAnswer(currentIndex)}
                     className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-surface-border dark:border-darkSurface-border text-surface-muted hover:text-surface-text disabled:opacity-40 text-xs font-semibold transition-colors"
                   >
                     <Eraser className="w-3.5 h-3.5" />
@@ -1298,7 +1589,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
         </div>
 
         {/* Right 1 Column: Question Palette or Descriptive Modules */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:sticky lg:top-[116px]">
           {paper.paperType !== 'DESCRIPTIVE' && (
             <TopicNavigationMenu
               selectedTopicId={selectedTopicId}
@@ -1439,7 +1730,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                 )}
 
                 {/* Question Buttons Grid for Current Section */}
-                <div className="grid grid-cols-5 gap-2 max-h-[300px] overflow-y-auto pr-1">
+                <div className="grid grid-cols-5 gap-2 max-h-[220px] sm:max-h-[260px] overflow-y-auto overscroll-contain pr-1 custom-scrollbar">
                   {questions
                     .slice(currentSection.startIndex, currentSection.endIndex + 1)
                     .map((q, idx) => {
@@ -1609,18 +1900,44 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
               </>
             )}
 
+            {submitError && (
+              <div className="p-3.5 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs space-y-1">
+                <div className="flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold block">Submission Blocked (Fail-Closed)</span>
+                    <p className="mt-0.5 leading-relaxed">{submitError}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="flex items-center justify-end gap-3 pt-2">
               <button
-                onClick={() => setShowSubmitModal(false)}
-                className="px-4 py-2 rounded-xl border border-surface-border text-xs font-bold text-surface-muted hover:text-surface-text transition-colors"
+                onClick={() => {
+                  setShowSubmitModal(false);
+                  setSubmitError(null);
+                }}
+                disabled={isSubmitting}
+                className="px-4 py-2 rounded-xl border border-surface-border text-xs font-bold text-surface-muted hover:text-surface-text transition-colors disabled:opacity-50"
               >
                 Return to Test
               </button>
               <button
                 onClick={handleFinalSubmit}
-                className="px-5 py-2 rounded-xl bg-brand-primary hover:bg-brand-primary/90 text-white text-xs font-bold transition-all shadow-sm"
+                disabled={isSubmitting || Boolean(terminalError)}
+                className="px-5 py-2 rounded-xl bg-brand-primary hover:bg-brand-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold transition-all shadow-sm flex items-center gap-2"
               >
-                Confirm & Submit
+                {isSubmitting ? (
+                  <>
+                    <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Submitting to Server...</span>
+                  </>
+                ) : submitError ? (
+                  <span>Retry Submission</span>
+                ) : (
+                  <span>Confirm & Submit</span>
+                )}
               </button>
             </div>
           </div>
@@ -1676,10 +1993,10 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
               <div className="p-3.5 rounded-2xl bg-surface-elev1 dark:bg-darkSurface-elev2 border border-surface-border dark:border-darkSurface-border">
                 <span className="text-[11px] font-semibold text-surface-muted uppercase block">
-                  Time left:
+                  {(paper as any).isUntimed ? 'Time Elapsed:' : 'Time left:'}
                 </span>
                 <span className="text-base font-extrabold font-mono text-surface-text dark:text-darkSurface-text mt-0.5 block">
-                  {formatTime(timeRemaining)}
+                  {(paper as any).isUntimed ? formatTime(elapsedSeconds) : formatTime(timeRemaining)}
                 </span>
               </div>
             </div>
@@ -1830,7 +2147,7 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
 
             {/* Topic Filter inside Mobile Drawer */}
             {paper.paperType !== 'DESCRIPTIVE' && (
-              <div className="p-3 border-b border-surface-border dark:border-darkSurface-border">
+              <div className="p-3 border-b border-surface-border dark:border-darkSurface-border shrink-0">
                 <TopicNavigationMenu
                   selectedTopicId={selectedTopicId}
                   onSelectTopic={setSelectedTopicId}
@@ -1843,12 +2160,13 @@ export const CompetitiveExamPlayerScreen: React.FC<CompetitiveExamPlayerScreenPr
                     setIsMobilePaletteOpen(false);
                   }}
                   isCompact={true}
+                  defaultExpanded={false}
                 />
               </div>
             )}
 
             {/* Palette Grid */}
-            <div className="p-4 overflow-y-auto max-h-[45vh]">
+            <div className="p-4 overflow-y-auto overscroll-contain flex-1 min-h-0 custom-scrollbar">
               <div className="grid grid-cols-6 gap-2">
                 {questions
                   .slice(currentSection.startIndex, currentSection.endIndex + 1)

@@ -1,0 +1,149 @@
+{
+  "auditMetadata": {
+    "systemComponent": "UADUE QuestionGraph (Layer 3)",
+    "engineVersion": "2.0.0-identity-evidence-final",
+    "evaluationStandard": "UADUE Phase 2C Identity Relationship Evidence & False-Link Forensic Audit",
+    "timestamp": 1728284278000,
+    "auditDate": "2026-10-07T12:17:58+05:30",
+    "contractVerdict": "RELATIONSHIP_CONTRACT_PROVEN",
+    "provenContractOption": "OPTION_C_DUAL_REPRESENTATION_WITH_EVIDENCE_GRAPH",
+    "phase2DGateStatus": "STRICTLY_BLOCKED"
+  },
+  "relationshipVocabulary": {
+    "documentGraphLayer2": [
+      "ABOVE", "BELOW", "LEFT_OF", "RIGHT_OF",
+      "INSIDE_COLUMN_ZONE", "READING_FLOW_NEXT", "CONTINUES_ACROSS_PAGE", "SPATIALLY_NEAR"
+    ],
+    "questionGraphLayer3": [
+      "LANGUAGE_REPRESENTATION_OF",
+      "CONTINUATION_OF",
+      "SHARED_STIMULUS_CHILD_OF",
+      "POSSIBLE_DUPLICATE_CANDIDATE",
+      "RELATED_BUT_DISTINCT",
+      "UNKNOWN_RELATIONSHIP"
+    ],
+    "canonicalQuestionIrLayer4_Phase2D": [
+      "SAME_LOGICAL_QUESTION",
+      "VARIANT_OF",
+      "REVISED_KEY_FOR"
+    ]
+  },
+  "evidenceMatrix": {
+    "hardEvidence": [
+      "FACING_PAGE_SPREAD_PAIR",
+      "MATCHING_PRINTED_NUMERAL",
+      "DISTINCT_SCRIPT_DETECTION",
+      "IDENTICAL_OPTION_CARDINALITY",
+      "MATCHING_SUB_CLAUSE_TOPOLOGY",
+      "EXPLICIT_OFFICIAL_QUESTION_ID"
+    ],
+    "supportingEvidence": [
+      "IDENTICAL_SECTION_CONTEXT",
+      "HOMOLOGOUS_SPATIAL_ORDER",
+      "SHARED_VISUAL_ASSET_REFERENCE",
+      "PARALLEL_COLUMN_LAYOUT"
+    ],
+    "weakEvidence": [
+      "SAME_PRINTED_NUMBER_ONLY",
+      "ROUGH_TEXT_LENGTH_PROPORTION",
+      "COMMON_PUNCTUATION_PATTERN"
+    ],
+    "insufficientEvidence_BannedAsProof": [
+      "NAIVE_TEXT_SIMILARITY",
+      "LLM_HEURISTIC_GUESS",
+      "BLIND_SEQUENTIAL_ASSUMPTION"
+    ],
+    "conflictingEvidence": [
+      "NUMERICAL_DISCONTINUITY",
+      "INCOMPATIBLE_OPTION_COUNT",
+      "SAME_SCRIPT_ON_FACING_SPREAD",
+      "INCOMPATIBLE_SPATIAL_ORDER"
+    ]
+  },
+  "noGuessingVerificationStates": [
+    {
+      "status": "RELATIONSHIP_PROVEN",
+      "condition": ">= 2 Hard Evidence items + 0 Conflicting Evidence",
+      "behavior": "Safe for downstream canonical unification in Phase 2D"
+    },
+    {
+      "status": "RELATIONSHIP_PLAUSIBLE",
+      "condition": "1 Hard Evidence item + Supporting Evidence with minor discrepancy",
+      "behavior": "Both physical candidates preserved; uncertainty logged; flagged for review"
+    },
+    {
+      "status": "RELATIONSHIP_UNRESOLVED",
+      "condition": "Conflicting evidence or unverified topology",
+      "behavior": "Both physical candidates preserved; zero physical collapse; ambiguity logged"
+    },
+    {
+      "status": "RELATIONSHIP_REJECTED",
+      "condition": "Proven distinct questions (e.g. section resets, non-facing, same script)",
+      "behavior": "Zero relationship candidate formed"
+    }
+  ],
+  "realWorldUpscCaseStudies": {
+    "standardMatchingPairs": [
+      { "questionNum": 1, "hindiPage": 2, "englishPage": 3, "status": "RELATIONSHIP_PROVEN", "hardEvidence": 4 },
+      { "questionNum": 2, "hindiPage": 2, "englishPage": 3, "status": "RELATIONSHIP_PROVEN", "hardEvidence": 4 },
+      { "questionNum": 3, "hindiPage": 2, "englishPage": 3, "status": "RELATIONSHIP_PROVEN", "hardEvidence": 4 },
+      { "questionNum": 8, "hindiPage": 4, "englishPage": 5, "status": "RELATIONSHIP_PROVEN", "hardEvidence": 4 },
+      { "questionNum": 9, "hindiPage": 4, "englishPage": 5, "status": "RELATIONSHIP_PROVEN", "hardEvidence": 4 }
+    ],
+    "page6TypoAnomaly": {
+      "physicalSourceDefect": "UPSC CSE 2023 GS1 Page 6 (Hindi) misprints Q15 as 16 (two 16 questions on Page 6)",
+      "hindiPage6Candidates": ["13.", "14.", "16.", "16.", "17."],
+      "englishPage7Candidates": ["13.", "14.", "15.", "16.", "17."],
+      "handling": {
+        "sourceTruthPreserved": true,
+        "coercedTo15InLayer3": false,
+        "falseLinkWithEnglish16Rejected": true,
+        "trueMatchMushroomsProven": true,
+        "waggleDancePlausibleWithAmbiguity": true
+      }
+    }
+  },
+  "adversarialScenarios": {
+    "totalScenarios": 19,
+    "scenariosPassing": 19,
+    "falseUnificationRate": 0.0,
+    "scenarios": [
+      { "id": "A", "name": "Same number in unrelated sections", "result": "PASS" },
+      { "id": "B", "name": "Same number after section reset", "result": "PASS" },
+      { "id": "C", "name": "Same number in different paper variant", "result": "PASS" },
+      { "id": "D", "name": "Hindi Q15 printed as Q16 vs English Q15", "result": "PASS" },
+      { "id": "E", "name": "Missing question number (sub-question marker)", "result": "PASS" },
+      { "id": "F", "name": "Duplicate question number on same page", "result": "PASS" },
+      { "id": "G", "name": "Two adjacent pages with same language script", "result": "PASS" },
+      { "id": "H", "name": "Similar wording but different questions", "result": "PASS" },
+      { "id": "I", "name": "Same options but different stems", "result": "PASS" },
+      { "id": "J", "name": "Same stem but different options", "result": "PASS" },
+      { "id": "K", "name": "Same question number, different stimulus", "result": "PASS" },
+      { "id": "L", "name": "Same language, different question", "result": "PASS" },
+      { "id": "M", "name": "Different languages, unrelated questions", "result": "PASS" },
+      { "id": "N", "name": "Three-language representation", "result": "PASS" },
+      { "id": "O", "name": "Four-language representation", "result": "PASS" },
+      { "id": "P", "name": "One logical question with dual physical candidates", "result": "PASS" },
+      { "id": "Q", "name": "Two logical questions sharing one stimulus", "result": "PASS" },
+      { "id": "R", "name": "Question continuing onto another page", "result": "PASS" },
+      { "id": "S", "name": "Question number repeated in new section", "result": "PASS" }
+    ]
+  },
+  "testExecutionStats": {
+    "totalTestFiles": 18,
+    "passedTestFiles": 18,
+    "totalUnitTests": 197,
+    "passedUnitTests": 197,
+    "failedUnitTests": 0,
+    "durationSeconds": 16.64,
+    "testCommand": "npx vitest run src/services/uadue/"
+  },
+  "losslessInvariantsVerified": {
+    "independentAddressability": true,
+    "sourceNodeTraceability": true,
+    "nonMutatingRelationships": true,
+    "nonDestructiveRelationshipDeletion": true,
+    "zeroCanonicalLeakage": true,
+    "nonTransitivityEnforced": true
+  }
+}

@@ -96,7 +96,23 @@ export function resolveAssetUrl(localPath: string | null | undefined): string | 
     return localPath.startsWith('/') ? localPath : `/${localPath}`;
   }
 
+  // In development, serve local static assets directly from Vite dev server
+  if (typeof import.meta !== 'undefined' && import.meta.env?.DEV) {
+    return localPath.startsWith('/') ? localPath : `/${localPath}`;
+  }
+
   if (!isContentBackendAvailable()) return localPath;
+
+  // Only SSC CHSL 2023 & 2024 assets are uploaded to Supabase Storage bucket 'exam-assets'.
+  // SSC CHSL 2019, 2020, 2021, 2022, 2025 are bundled and served statically by Vercel CDN.
+  const normalized = localPath.startsWith('/') ? localPath.slice(1) : localPath;
+  const isRemoteStorageAsset =
+    normalized.startsWith('exam-assets/ssc/chsl/2023/') ||
+    normalized.startsWith('exam-assets/ssc/chsl/2024/');
+
+  if (!isRemoteStorageAsset) {
+    return localPath.startsWith('/') ? localPath : `/${localPath}`;
+  }
 
   // Strip leading '/exam-assets/' or 'exam-assets/' prefix since bucket is 'exam-assets'
   const stripped = localPath.replace(/^\/?exam-assets\//, '');

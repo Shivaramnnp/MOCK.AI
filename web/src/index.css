@@ -6,6 +6,26 @@
   body {
     @apply font-sans;
   }
+  u {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+  }
+  mark,
+  .replacement-target,
+  .mock-highlight {
+    background-color: #fef08a; /* amber/yellow-200 */
+    color: #0f172a; /* slate-900 */
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+  .dark mark,
+  .dark .replacement-target,
+  .dark .mock-highlight {
+    background-color: rgba(245, 158, 11, 0.35); /* amber-500/35 */
+    color: #fef08a; /* amber-200 */
+  }
 }
 
 /* Custom subtle scrollbar */

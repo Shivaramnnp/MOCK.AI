@@ -5,6 +5,8 @@
 import { describe, it, expect } from 'vitest';
 import {
   checkMathInvariants,
+  checkEncodingAndMojibakeInvariants,
+  checkStemCompletenessInvariants,
   checkOptionInvariants,
   checkScoringInvariants,
   checkAnswerInvariants,
@@ -301,6 +303,96 @@ describe('UADUE Invariant Validation Engine', () => {
       const verdict = evaluateUadueInvariants(q);
       expect(verdict.status).toBe('REVIEW_REQUIRED');
       expect(verdict.confidenceVector.ownershipConfidence).toBeLessThan(0.5);
+    });
+
+    it('sets textConfidence to 0.0 when mojibake corruption is detected in stem or options', () => {
+      const q = createMockUadueQuestion({
+        prompt: {
+          text: 'ȵनÏनȷलȺखत में से कौन सा विकल्प सही है?',
+          contentBlocks: [],
+        },
+      });
+      const verdict = evaluateUadueInvariants(q);
+      expect(verdict.status).toBe('REVIEW_REQUIRED');
+      expect(verdict.confidenceVector.textConfidence).toBe(0.0);
+    });
+
+    it('sets mathConfidence to 0.0 when OCR corruption symbol @ is present in math expression', () => {
+      const q = createMockUadueQuestion({
+        prompt: {
+          text: 'If $\\cot @ + \\tan @ = 2$, find the value of $\\sin @$.',
+          contentBlocks: [],
+        },
+      });
+      const verdict = evaluateUadueInvariants(q);
+      expect(verdict.status).toBe('REVIEW_REQUIRED');
+      expect(verdict.confidenceVector.mathConfidence).toBe(0.0);
+    });
+
+    it('fails with fatal veto when stem is empty and has no diagram asset', () => {
+      const q = createMockUadueQuestion({
+        prompt: {
+          text: '',
+          contentBlocks: [],
+        },
+        associatedAssetIds: [],
+      });
+      const verdict = evaluateUadueInvariants(q);
+      expect(verdict.status).toBe('FAILED');
+      expect(verdict.fatalVetoTriggered).toBe(true);
+      expect(verdict.vetoReason).toContain('empty and possesses no visual diagram');
+    });
+  });
+
+  describe('Encoding & Mojibake Invariants (Phase 13 Ingestion Invariants)', () => {
+    it('passes clean English, numbers, and legitimate Devanagari Hindi text', () => {
+      const reports = checkEncodingAndMojibakeInvariants('निम्नलिखित में से कौन सा विकल्प सही है?');
+      expect(reports.every((r) => r.passed)).toBe(true);
+    });
+
+    it('flags corrupted 8-bit CMap mojibake characters', () => {
+      const reports = checkEncodingAndMojibakeInvariants('सÏमान और ȵनÏन');
+      const mojiReport = reports.find((r) => r.invariantName === 'MOJIBAKE_ENCODING_DETECTED');
+      expect(mojiReport?.passed).toBe(false);
+      expect(mojiReport?.severity).toBe('REVIEW_REQUIRED');
+    });
+
+    it('flags OCR artifact @ in trigonometric expressions', () => {
+      const reports = checkEncodingAndMojibakeInvariants('coté . (1-sin @) = x');
+      const mathReport = reports.find((r) => r.invariantName === 'OCR_MATH_CORRUPTION_DETECTED');
+      expect(mathReport?.passed).toBe(false);
+    });
+  });
+
+  describe('Stem Completeness & Placeholder Invariants', () => {
+    it('passes complete stem text', () => {
+      const q = createMockUadueQuestion({ prompt: { text: 'What is the capital of India?', contentBlocks: [] } });
+      const reports = checkStemCompletenessInvariants(q);
+      expect(reports.find((r) => r.invariantName === 'COMPLETE_STEM_VERIFIED')?.passed).toBe(true);
+    });
+
+    it('flags placeholder strings as REVIEW_REQUIRED', () => {
+      const q = createMockUadueQuestion({
+        prompt: {
+          text: '[Question text omitted in official candidate sheet; reconstructed from options: 14:15:16:21]',
+          contentBlocks: [],
+        },
+      });
+      const reports = checkStemCompletenessInvariants(q);
+      const rep = reports.find((r) => r.invariantName === 'PLACEHOLDER_STEM_DETECTED');
+      expect(rep?.passed).toBe(false);
+      expect(rep?.severity).toBe('REVIEW_REQUIRED');
+    });
+
+    it('fails completely empty stem without assets as FATAL', () => {
+      const q = createMockUadueQuestion({
+        prompt: { text: '   ', contentBlocks: [] },
+        associatedAssetIds: [],
+      });
+      const reports = checkStemCompletenessInvariants(q);
+      const rep = reports.find((r) => r.invariantName === 'EMPTY_STEM_NO_ASSET');
+      expect(rep?.passed).toBe(false);
+      expect(rep?.severity).toBe('FATAL');
     });
   });
 });

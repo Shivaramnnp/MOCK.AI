@@ -15,6 +15,7 @@ import {
   AssetGraphNode,
   PhysicalGeometry,
   SourceEvidenceChain,
+  SourceReference,
 } from './index';
 
 describe('UADUE — Universal Assessment Document Understanding Engine (Phase 1 Contract Hardening & Features)', () => {
@@ -571,11 +572,14 @@ describe('UADUE — Universal Assessment Document Understanding Engine (Phase 1 
         representations: [
           {
             representationId: 'rep_circuit_svg',
+            assetId: 'asset_circuit_q14',
             type: 'VECTOR_SVG',
             contentPayload: '<svg><circle cx="50" cy="50" r="40"/></svg>',
             confidence: 1.0,
-            engine: 'PDF_VECTOR_EXTRACTOR',
+            engineId: 'PDF_VECTOR_EXTRACTOR',
+            engineVersion: '1.0.0',
             isAuthoritative: true,
+            createdAt: 1700000000000,
           },
         ],
         associatedQuestionInstanceIds: ['q_inst_14'],
@@ -625,6 +629,7 @@ describe('UADUE — Universal Assessment Document Understanding Engine (Phase 1 
         pageNumber: 4,
         coordinateSpace: 'PDF_PT_BOTTOM_LEFT',
         bbox: geom.bbox,
+        sourceReferences: [],
         sourceStreamOffsets: { startOffset: 10244, endOffset: 10892 },
         sourceObjectIds: ['page_4', 'font_f3', 'content_stream_22'],
         losslessRasterCropHash: '9e3c11a2f4',
@@ -732,7 +737,7 @@ describe('UADUE — Universal Assessment Document Understanding Engine (Phase 1 
         roleInDerivedObject: 'DIAGRAM_OVERLAY' as const,
       };
 
-      const compositeRefs = [refPage, refXObject];
+      const compositeRefs: SourceReference[] = [refPage, refXObject];
       expect(compositeRefs.length).toBe(2);
       expect(compositeRefs[1].byteRange?.startByte).toBe(45020);
       expect(compositeRefs[1].roleInDerivedObject).toBe('DIAGRAM_OVERLAY');

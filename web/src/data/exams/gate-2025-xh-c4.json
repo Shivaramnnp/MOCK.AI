@@ -400,7 +400,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -409,12 +409,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -511,37 +511,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "",
-        "",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/xh-c4/q5_opt_a.png",
-        "/exam-assets/gate/2025/xh-c4/q5_opt_b.png",
-        "/exam-assets/gate/2025/xh-c4/q5_opt_c.png",
-        "/exam-assets/gate/2025/xh-c4/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c4/q5_opt_a.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c4/q5_opt_b.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": "/exam-assets/gate/2025/xh-c4/q5_opt_c.png"
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c4/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2640,7 +2675,7 @@
       "questionType": "MSQ",
       "options": [
         "There is no proof that India is affected by poor quality of water.",
-        "few European countries are suffering due to occurrence of drought.",
+        "A few European countries are suffering due to occurrence of drought.",
         "Lack of access to water can lead to social unrest.",
         "Intense shortage of water is visible in some states of India."
       ],
@@ -2663,12 +2698,12 @@
         },
         {
           "id": "B",
-          "text": "few European countries are suffering due to occurrence of drought.",
+          "text": "A few European countries are suffering due to occurrence of drought.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "few European countries are suffering due to occurrence of drought.",
+              "content": "A few European countries are suffering due to occurrence of drought.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3835,21 +3870,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "particular",
-        "universal that helps in identifying the particular",
+        "A particular",
+        "A universal that helps in identifying the particular",
         "The particular which defies the presence of itself",
-        "universal that represents the Whole"
+        "A universal that represents the Whole"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "particular",
+          "text": "A particular",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "particular",
+              "content": "A particular",
               "confidence": "VERIFIED"
             }
           ],
@@ -3859,12 +3894,12 @@
         },
         {
           "id": "B",
-          "text": "universal that helps in identifying the particular",
+          "text": "A universal that helps in identifying the particular",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "universal that helps in identifying the particular",
+              "content": "A universal that helps in identifying the particular",
               "confidence": "VERIFIED"
             }
           ],
@@ -3889,12 +3924,12 @@
         },
         {
           "id": "D",
-          "text": "universal that represents the Whole",
+          "text": "A universal that represents the Whole",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "universal that represents the Whole",
+              "content": "A universal that represents the Whole",
               "confidence": "VERIFIED"
             }
           ],
@@ -4381,7 +4416,7 @@
       "questionType": "MCQ",
       "options": [
         "The satyagrahi",
-        "rebel with an evil motive",
+        "A rebel with an evil motive",
         "The state",
         "The other"
       ],
@@ -4404,12 +4439,12 @@
         },
         {
           "id": "B",
-          "text": "rebel with an evil motive",
+          "text": "A rebel with an evil motive",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "rebel with an evil motive",
+              "content": "A rebel with an evil motive",
               "confidence": "VERIFIED"
             }
           ],
@@ -5544,7 +5579,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "democratic society need not ensure a contentful life of leisure and culture for all its citizens",
+        "A democratic society need not ensure a contentful life of leisure and culture for all its citizens",
         "Gandhism cannot help in freeing all the people from drudgery and exploitation",
         "Mechanization is not necessary for democratic civilization",
         "Democracy and Gandhism complement each other"
@@ -5553,12 +5588,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "democratic society need not ensure a contentful life of leisure and culture for all its citizens",
+          "text": "A democratic society need not ensure a contentful life of leisure and culture for all its citizens",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "democratic society need not ensure a contentful life of leisure and culture for all its citizens",
+              "content": "A democratic society need not ensure a contentful life of leisure and culture for all its citizens",
               "confidence": "VERIFIED"
             }
           ],

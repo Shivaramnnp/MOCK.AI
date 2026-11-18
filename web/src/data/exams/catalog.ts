@@ -601,3 +601,12 @@ export function registerExamPaper(paper: ExamPaper): void {
   }
 }
 
+// Clear dynamically registered synthetic practice papers on logout/account switch
+export function clearDynamicPracticePapers(): void {
+  for (const key of Object.keys(EXAM_PAPERS_MAP)) {
+    if (key.startsWith('practice_')) {
+      delete EXAM_PAPERS_MAP[key];
+    }
+  }
+}
+

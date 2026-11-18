@@ -424,7 +424,7 @@ describe('SSC CHSL 2024 Stem-Wipe & Fidelity Regression Suite (Phase 12)', () =>
       const q37 = paper.questions.find((q) => q.questionNumber === 37);
       expect(q37).toBeDefined();
       expect(q37!.optionImages).toBeNull();
-      expect(q37!.options).toEqual(['TVW : YAB', 'FHI : EGH', 'WYZ: GI', 'PST : KHG']);
+      expect(q37!.options).toEqual(['TVW: YAB', 'FHI : EGH', 'WYZ: GI', 'PST : KHG']);
       expect(q37!.diagramUrl).toBeNull();
 
       render(
@@ -445,7 +445,7 @@ describe('SSC CHSL 2024 Stem-Wipe & Fidelity Regression Suite (Phase 12)', () =>
 
       expect(screen.getByText(/Question 37 of 100/i)).toBeDefined();
       // Clean native text option rendering
-      expect(screen.getByText('TVW : YAB')).toBeDefined();
+      expect(screen.getByText('TVW: YAB')).toBeDefined();
       expect(screen.getByText('FHI : EGH')).toBeDefined();
       expect(screen.getByText('WYZ: GI')).toBeDefined();
       expect(screen.getByText('PST : KHG')).toBeDefined();

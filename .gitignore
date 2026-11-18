@@ -82,3 +82,17 @@ dist/
 *.local.json
 .agents/
 prompt*.txt
+.vercel
+.env*
+
+# Root scratch artifacts and forensics bundles
+*.zip
+q25_options.png
+q9_all_options.png
+q9_opt1_clip.png
+chsl_phase_*.json
+ssc-chsl-2023-option-*.json
+
+# External recruitment PDFs (superseded / unreferenced)
+cgept/
+

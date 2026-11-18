@@ -1439,8 +1439,8 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "F s ( - b )",
-        "F s ( + b )",
+        "F s ( - )",
+        "F s ( + )",
         "- F s ( )",
         "F b ( - s )"
       ],
@@ -1448,12 +1448,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "F s ( - b )",
+          "text": "F s ( - )",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "F s ( - b )",
+              "content": "F s ( - )",
               "confidence": "VERIFIED"
             }
           ],
@@ -1463,12 +1463,12 @@
         },
         {
           "id": "B",
-          "text": "F s ( + b )",
+          "text": "F s ( + )",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "F s ( + b )",
+              "content": "F s ( + )",
               "confidence": "VERIFIED"
             }
           ],
@@ -1549,9 +1549,9 @@
       "questionType": "MCQ",
       "options": [
         "\\(\\frac{dy}{dx}\\) 2 x = y 2",
-        "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+        "x 3 y x + xy = x 2",
         "\\(\\frac{dy}{2dx}\\) 2 \\(\\frac{dy}{dx}\\) 0 2",
-        "\\(\\frac{dy}{dx}\\) 2 x = y"
+        "   y x +   2 2 x = y"
       ],
       "optionImages": null,
       "richOptions": [
@@ -1572,12 +1572,12 @@
         },
         {
           "id": "B",
-          "text": "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+          "text": "x 3 y x + xy = x 2",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "x \\(\\frac{3dy}{dx}\\) xy = x 2",
+              "content": "x 3 y x + xy = x 2",
               "confidence": "VERIFIED"
             }
           ],
@@ -1602,12 +1602,12 @@
         },
         {
           "id": "D",
-          "text": "\\(\\frac{dy}{dx}\\) 2 x = y",
+          "text": "   y x +   2 2 x = y",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\(\\frac{dy}{dx}\\) 2 x = y",
+              "content": "   y x +   2 2 x = y",
               "confidence": "VERIFIED"
             }
           ],
@@ -2100,37 +2100,76 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(\\frac{2x}{3n}\\)",
+        "\\(\\frac{x}{3n}\\)",
         "\\(\\frac{()xnx-}{3n}\\)",
         "\\(\\frac{()xnx-}{2n}\\)",
         "\\(\\frac{x}{n}\\)"
       ],
-      "optionImages": [
-        null,
-        "/exam-assets/gate/2025/pi/q19_opt_b.png",
-        "/exam-assets/gate/2025/pi/q19_opt_c.png",
-        null
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(\\frac{2x}{3n}\\)",
-          "imageUrl": null
+          "text": "\\(\\frac{x}{3n}\\)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{x}{3n}",
+              "content": "\\(\\frac{x}{3n}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "B",
           "text": "\\(\\frac{()xnx-}{3n}\\)",
-          "imageUrl": "/exam-assets/gate/2025/pi/q19_opt_b.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{()xnx-}{3n}",
+              "content": "\\(\\frac{()xnx-}{3n}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "C",
           "text": "\\(\\frac{()xnx-}{2n}\\)",
-          "imageUrl": "/exam-assets/gate/2025/pi/q19_opt_c.png"
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{()xnx-}{2n}",
+              "content": "\\(\\frac{()xnx-}{2n}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         },
         {
           "id": "D",
           "text": "\\(\\frac{x}{n}\\)",
-          "imageUrl": null
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "math",
+              "latex": "\\frac{x}{n}",
+              "content": "\\(\\frac{x}{n}\\)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "math"
+          ]
         }
       ],
       "correctAnswer": "B",
@@ -3021,15 +3060,9 @@
             ]
           ],
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/pi/q27_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "table",
         "text"
       ],
@@ -3114,10 +3147,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (A).",
-      "diagramUrl": "/exam-assets/gate/2025/pi/q27_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/pi/q27_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 1.0,
       "negativeMarks": 0.33,
       "examId": "gate",
@@ -4055,11 +4086,11 @@
       "questionNumber": 40,
       "sectionId": "pi_core",
       "sectionName": "Production and Industrial Engineering",
-      "questionText": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope \\(\\frac{dy}{dx}\\) of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
+      "questionText": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope  <u>d</u> <u>y</u>  of the straight line created by the cutter is 1.25.  <u>d</u> <u>y</u>    d  <u>d</u> <u>y</u>  x  <u>d</u> <u>y</u>    of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope \\(\\frac{dy}{dx}\\) of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
+          "content": "A CNC vertical milling is used for cutting a straight line slot in x-y plane. Cutter is located at point P. The slope  <u>d</u> <u>y</u>  of the straight line created by the cutter is 1.25.  <u>d</u> <u>y</u>    d  <u>d</u> <u>y</u>  x  <u>d</u> <u>y</u>    of the straight line created by the cutter is 1.25. Feed rate of x-axis is 120 mm/min. The new position of the cutter after 20 seconds is",
           "confidence": "VERIFIED"
         },
         {

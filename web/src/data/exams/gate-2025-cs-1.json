@@ -707,11 +707,11 @@
       "questionNumber": 7,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?\n\nNote: The figure shown is representative.",
+      "questionText": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?\n\nNote: The figure shown is representative.\n\nP\n\nR",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?\n\nNote: The figure shown is representative.",
+          "content": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?\n\nNote: The figure shown is representative.\n\nP\n\nR",
           "confidence": "VERIFIED"
         },
         {
@@ -941,11 +941,11 @@
       "questionNumber": 9,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?\n\nNote: The figures shown are representative.",
+      "questionText": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?\n\nNote: The figures shown are representative.\n\n(IV)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?\n\nNote: The figures shown are representative.",
+          "content": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?\n\nNote: The figures shown are representative.\n\n(IV)",
           "confidence": "VERIFIED"
         },
         {
@@ -1629,7 +1629,7 @@
         "\\(Only 𝑇_{2}\\)",
         "\\(Only 𝑇_{3}\\)",
         "\\(Both 𝑇_{2} and 𝑇_{3}\\)",
-        "\\(Neither 𝑇_{2} nor 𝑇_{3}\\)"
+        "Neither 𝑇_{2} nor 𝑇_{3}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -1683,18 +1683,17 @@
         },
         {
           "id": "D",
-          "text": "\\(Neither 𝑇_{2} nor 𝑇_{3}\\)",
+          "text": "Neither 𝑇_{2} nor 𝑇_{3}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Neither 𝑇_{2} nor 𝑇_{3}",
-              "content": "\\(Neither 𝑇_{2} nor 𝑇_{3}\\)",
+              "type": "text",
+              "content": "Neither 𝑇_{2} nor 𝑇_{3}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -1762,21 +1761,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(a)-(I), (b)-(II), (c)-(III)",
-        "(a)-(I), (b)-(III), (c)-(II)",
-        "(a)-(II), (b)-(I), (c)-(III)",
-        "(a)-(III), (b)-(II), (c)-(I)"
+        "-(I), (b)-(II), (c)-(III)",
+        "-(I), (b)-(III), (c)-(II)",
+        "-(II), (b)-(I), (c)-(III)",
+        "-(III), (b)-(II), (c)-(I)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(a)-(I), (b)-(II), (c)-(III)",
+          "text": "-(I), (b)-(II), (c)-(III)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a)-(I), (b)-(II), (c)-(III)",
+              "content": "-(I), (b)-(II), (c)-(III)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1786,12 +1785,12 @@
         },
         {
           "id": "B",
-          "text": "(a)-(I), (b)-(III), (c)-(II)",
+          "text": "-(I), (b)-(III), (c)-(II)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a)-(I), (b)-(III), (c)-(II)",
+              "content": "-(I), (b)-(III), (c)-(II)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1801,12 +1800,12 @@
         },
         {
           "id": "C",
-          "text": "(a)-(II), (b)-(I), (c)-(III)",
+          "text": "-(II), (b)-(I), (c)-(III)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a)-(II), (b)-(I), (c)-(III)",
+              "content": "-(II), (b)-(I), (c)-(III)",
               "confidence": "VERIFIED"
             }
           ],
@@ -1816,12 +1815,12 @@
         },
         {
           "id": "D",
-          "text": "(a)-(III), (b)-(II), (c)-(I)",
+          "text": "-(III), (b)-(II), (c)-(I)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(a)-(III), (b)-(II), (c)-(I)",
+              "content": "-(III), (b)-(II), (c)-(I)",
               "confidence": "VERIFIED"
             }
           ],
@@ -2904,7 +2903,7 @@
       "options": [
         "The maximum length of a path from the root node to any other node is (𝑛-1).",
         "An inorder traversal will always produce a sorted sequence of elements.",
-        "\\(Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.\\)",
+        "Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.",
         "Every BST is also a Min-Heap."
       ],
       "optionImages": null,
@@ -2941,18 +2940,17 @@
         },
         {
           "id": "C",
-          "text": "\\(Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.\\)",
+          "text": "Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.",
-              "content": "\\(Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.\\)",
+              "type": "text",
+              "content": "Finding an element takes 𝑂(log_{2} 𝑛) time in the worst case.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -3145,8 +3143,8 @@
       "options": [
         "𝐿 may have an accepting NFA with < 𝑛 states.",
         "𝐿 may have an accepting DFA with < 𝑛 states.",
-        "\\(There exists a DFA with \\le 2^{𝑛} states that accepts 𝐿.\\)",
-        "\\(Every DFA that accepts 𝐿 has > 2^{𝑛} states.\\)"
+        "There exists a DFA with \\le \\(2^{𝑛}\\) states that accepts 𝐿.",
+        "Every DFA that accepts 𝐿 has > \\(2^{𝑛}\\) states."
       ],
       "optionImages": null,
       "richOptions": [
@@ -3182,34 +3180,32 @@
         },
         {
           "id": "C",
-          "text": "\\(There exists a DFA with \\le 2^{𝑛} states that accepts 𝐿.\\)",
+          "text": "There exists a DFA with \\le \\(2^{𝑛}\\) states that accepts 𝐿.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "There exists a DFA with \\le 2^{𝑛} states that accepts 𝐿.",
-              "content": "\\(There exists a DFA with \\le 2^{𝑛} states that accepts 𝐿.\\)",
+              "type": "text",
+              "content": "There exists a DFA with \\le \\(2^{𝑛}\\) states that accepts 𝐿.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Every DFA that accepts 𝐿 has > 2^{𝑛} states.\\)",
+          "text": "Every DFA that accepts 𝐿 has > \\(2^{𝑛}\\) states.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Every DFA that accepts 𝐿 has > 2^{𝑛} states.",
-              "content": "\\(Every DFA that accepts 𝐿 has > 2^{𝑛} states.\\)",
+              "type": "text",
+              "content": "Every DFA that accepts 𝐿 has > \\(2^{𝑛}\\) states.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -3244,16 +3240,16 @@
       "questionNumber": 29,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\nint main()\n{\nint x=0,i=0;\nscanf(\"%d\",&x);\nfor(i=0; i<20; i++)\n{\nx = x+20;\nprintf(\"%d\\n\",x);\n}\nreturn 0;\n}\n```",
+      "questionText": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is _______. (Answer in integer)\n\n```text\nint main()\n{\n    int x=0,i=0;\n    scanf(\"%d\",&x);\n    for(i=0; i<20; i++)\n    {\n        x = x+20;\n        printf(\"%d\\n\",x);\n    }\n    return 0;\n}\n```",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is _______. (Answer in integer)",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\nint main()\n{\nint x=0,i=0;\nscanf(\"%d\",&x);\nfor(i=0; i<20; i++)\n{\nx = x+20;\nprintf(\"%d\\n\",x);\n}\nreturn 0;\n}\n```",
+          "content": "```text\nint main()\n{\n    int x=0,i=0;\n    scanf(\"%d\",&x);\n    for(i=0; i<20; i++)\n    {\n        x = x+20;\n        printf(\"%d\\n\",x);\n    }\n    return 0;\n}\n```",
           "confidence": "VERIFIED"
         }
       ],
@@ -3434,16 +3430,21 @@
       "questionNumber": 33,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\nfun(int A[0,…,n-1]){\nfor i=0 to n-2\nfor j=0 to n-i-2\nif (A[j]>A[j+1])\nthen swap A[j] and A[j+1]\n```",
+      "questionText": "The pseudocode of a function fun() is given below:\n\n```text\nfun(int A[0,…,n-1]){\n    for i=0 to n-2\n        for j=0 to n-i-2\n            if (A[j]>A[j+1])\n                then swap A[j] and A[j+1]\n```\n\n} Let 𝐴[0, … ,29] be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with 𝐴[0, … ,29] as argument, is __________. (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "The pseudocode of a function fun() is given below:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\nfun(int A[0,…,n-1]){\nfor i=0 to n-2\nfor j=0 to n-i-2\nif (A[j]>A[j+1])\nthen swap A[j] and A[j+1]\n```",
+          "content": "```text\nfun(int A[0,…,n-1]){\n    for i=0 to n-2\n        for j=0 to n-i-2\n            if (A[j]>A[j+1])\n                then swap A[j] and A[j+1]\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "} Let 𝐴[0, … ,29] be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with 𝐴[0, … ,29] as argument, is __________. (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -3486,16 +3487,21 @@
       "questionNumber": 34,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nvoid foo(int *p, int x){\n*p=x;\n}\nint main(){\nint *z;\nint a = 20, b = 25;\nz = &a;\nfoo(z,b);\nprintf(\"%d\",a);\nreturn 0;\n}\n```",
+      "questionText": "Consider the following code:\n\n```text\n#include <stdio.h>\nvoid foo(int *p, int x){\n    *p=x;\n}\nint main(){\n    int *z;\n    int a = 20, b = 25;\n    z = &a;\n    foo(z,b);\n    printf(\"%d\",a);\n    return 0;\n}\n```\n\nThe output of the given C program is __________. (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following code:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nvoid foo(int *p, int x){\n*p=x;\n}\nint main(){\nint *z;\nint a = 20, b = 25;\nz = &a;\nfoo(z,b);\nprintf(\"%d\",a);\nreturn 0;\n}\n```",
+          "content": "```text\n#include <stdio.h>\nvoid foo(int *p, int x){\n    *p=x;\n}\nint main(){\n    int *z;\n    int a = 20, b = 25;\n    z = &a;\n    foo(z,b);\n    printf(\"%d\",a);\n    return 0;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The output of the given C program is __________. (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -4490,75 +4496,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(Both 𝐿_{1} and 𝐿_{2} are regular languages.\\)",
-        "\\(𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.\\)",
-        "\\(𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.\\)",
-        "\\(Neither 𝐿_{1} nor 𝐿_{2} is a regular language.\\)"
+        "Both 𝐿_{1} and 𝐿_{2} are regular languages.",
+        "𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.",
+        "𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.",
+        "Neither 𝐿_{1} nor 𝐿_{2} is a regular language."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Both 𝐿_{1} and 𝐿_{2} are regular languages.\\)",
+          "text": "Both 𝐿_{1} and 𝐿_{2} are regular languages.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Both 𝐿_{1} and 𝐿_{2} are regular languages.",
-              "content": "\\(Both 𝐿_{1} and 𝐿_{2} are regular languages.\\)",
+              "type": "text",
+              "content": "Both 𝐿_{1} and 𝐿_{2} are regular languages.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.\\)",
+          "text": "𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.",
-              "content": "\\(𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.\\)",
+              "type": "text",
+              "content": "𝐿_{1} is a regular language but 𝐿_{2} is not a regular language.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.\\)",
+          "text": "𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.",
-              "content": "\\(𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.\\)",
+              "type": "text",
+              "content": "𝐿_{1} is not a regular language but 𝐿_{2} is a regular language.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Neither 𝐿_{1} nor 𝐿_{2} is a regular language.\\)",
+          "text": "Neither 𝐿_{1} nor 𝐿_{2} is a regular language.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Neither 𝐿_{1} nor 𝐿_{2} is a regular language.",
-              "content": "\\(Neither 𝐿_{1} nor 𝐿_{2} is a regular language.\\)",
+              "type": "text",
+              "content": "Neither 𝐿_{1} nor 𝐿_{2} is a regular language.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4603,75 +4605,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(Both 𝐿_{1} and 𝐿_{2} are context-free languages.\\)",
-        "\\(𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.\\)",
-        "\\(𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.\\)",
-        "\\(Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.\\)"
+        "Both 𝐿_{1} and 𝐿_{2} are context-free languages.",
+        "𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.",
+        "𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.",
+        "Neither 𝐿_{1} nor 𝐿_{2} are context-free languages."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Both 𝐿_{1} and 𝐿_{2} are context-free languages.\\)",
+          "text": "Both 𝐿_{1} and 𝐿_{2} are context-free languages.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Both 𝐿_{1} and 𝐿_{2} are context-free languages.",
-              "content": "\\(Both 𝐿_{1} and 𝐿_{2} are context-free languages.\\)",
+              "type": "text",
+              "content": "Both 𝐿_{1} and 𝐿_{2} are context-free languages.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.\\)",
+          "text": "𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.",
-              "content": "\\(𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.\\)",
+              "type": "text",
+              "content": "𝐿_{1} is a context-free language but 𝐿_{2} is not a context-free language.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.\\)",
+          "text": "𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.",
-              "content": "\\(𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.\\)",
+              "type": "text",
+              "content": "𝐿_{1} is not a context-free language but 𝐿_{2} is a context-free language.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.\\)",
+          "text": "Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.",
-              "content": "\\(Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.\\)",
+              "type": "text",
+              "content": "Neither 𝐿_{1} nor 𝐿_{2} are context-free languages.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -5331,11 +5329,11 @@
       "questionNumber": 52,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n1001: i = 1\n1002: j = 1\n1003: t1 = 10*i\n1004: t2 = t1+j\n1005: t3 = 8*t2\n1006: t4 = t3-88\n1007: a[t4] = 0.0\n1008: j = j+1\n1009: if j <= 10 goto 1003\n1010: i = i+1\n1011: if i <= 10 goto 1002\n1012: i = 1\n1013: t5 = i-1\n1014: t6 = 88*t5\n1015: a[t6] = 1.0\n1016: i = i+1\n1017: if i <= 10 goto 1013\n```",
+      "questionText": "Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is ________. (Answer in integer)\n\n```text\n1001: i = 1\n1002: j = 1\n1003: t1 = 10*i\n1004: t2 = t1+j\n1005: t3 = 8*t2\n1006: t4 = t3-88\n1007: a[t4] = 0.0\n1008: j = j+1\n1009: if j <= 10 goto 1003\n1010: i = i+1\n1011: if i <= 10 goto 1002\n1012: i = 1\n1013: t5 = i-1\n1014: t6 = 88*t5\n1015: a[t6] = 1.0\n1016: i = i+1\n1017: if i <= 10 goto 1013\n```",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is ________. (Answer in integer)",
           "confidence": "VERIFIED"
         },
         {
@@ -5483,16 +5481,11 @@
       "questionNumber": 55,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\nplayer(pid,pname,age)\ncoach(cid,cname)\n                                                team(tid,tname,city,cid)\n                                                members(pid,tid)\nSELECT MIN(P.age)\nFROM player P\nWHERE P.pid IN (\nSELECT M.pid\nFROM team T, coach C, members M\nWHERE C.cname = 'Mark'\nAND T.cid = C.cid\nAND M.tid = T.tid\n)\n```",
+      "questionText": "Consider the following database tables of a sports league.\n\nplayer(pid,pname,age) team(tid,tname,city,cid) coach(cid,cname) members(pid,tid)\n\nAn instance of the table and an SQL query are given.\n\nplayer coach team members\n\nThe value returned by the given SQL query is ______ . (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "pseudocode",
-          "content": "```text\nplayer(pid,pname,age)\ncoach(cid,cname)\n                                                team(tid,tname,city,cid)\n                                                members(pid,tid)\nSELECT MIN(P.age)\nFROM player P\nWHERE P.pid IN (\nSELECT M.pid\nFROM team T, coach C, members M\nWHERE C.cname = 'Mark'\nAND T.cid = C.cid\nAND M.tid = T.tid\n)\n```",
+          "content": "Consider the following database tables of a sports league.\n\nplayer(pid,pname,age) team(tid,tname,city,cid) coach(cid,cname) members(pid,tid)\n\nAn instance of the table and an SQL query are given.\n\nplayer coach team members\n\nThe value returned by the given SQL query is ______ . (Answer in integer)",
           "confidence": "VERIFIED"
         },
         {
@@ -5503,7 +5496,6 @@
       ],
       "contentTypes": [
         "diagram",
-        "pseudocode",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5689,11 +5681,11 @@
       "questionNumber": 59,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider a finite state machine (FSM) with one input 𝑋 and one output 𝑓, represented by the given state transition table. The minimum number of states required to realize this FSM is ________. (Answer in integer)\n\n<u>Present</u> <u>state</u> Next state Output 𝑓 \\(\\frac{Nextstate}{𝑋=0}\\) \\(\\frac{Nextstate}{𝑋=1}\\) \\(\\frac{Output}{𝑋=0}\\) \\(\\frac{Output𝑓}{𝑋=1}\\)\n\n\\(\\frac{𝑋=0}{F}\\) \\(\\frac{𝑋=1}{B}\\) \\(\\frac{𝑋=0}{0}\\) \\(\\frac{𝑋=1}{0}\\)\n\n\\(\\frac{A}{B}\\) \\(\\frac{B}{C}\\) D C 0 0\n\n\\(\\frac{C}{D}\\) F E \\(\\frac{0}{1}\\) 0\n\n\\(\\frac{D}{E}\\) G A \\(\\frac{1}{0}\\) 0\n\n\\(\\frac{E}{F}\\) D C \\(\\frac{0}{1}\\) \\(\\frac{0}{1}\\) \\(\\frac{F}{G}\\) F B \\(\\frac{1}{0}\\) \\(\\frac{G}{H}\\) G H \\(\\frac{0}{1}\\) \\(\\frac{1}{0}\\) <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u> <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u>",
+      "questionText": "Consider a finite state machine (FSM) with one input 𝑋 and one output 𝑓, represented by the given state transition table. The minimum number of states required to realize this FSM is ________. (Answer in integer)\n\n<u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u> <u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u> <u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u>\n\n\\(\\frac{𝑋=0}{F}\\) \\(\\frac{𝑋=1}{B}\\) \\(\\frac{𝑋=0}{0}\\) \\(\\frac{𝑋=1}{0}\\)\n\n\\(\\frac{A}{B}\\) \\(\\frac{B}{C}\\) \\(\\frac{F}{D}\\) \\(\\frac{D}{F}\\) \\(\\frac{B}{C}\\) \\(\\frac{C}{E}\\) 0 0\n\n\\(\\frac{C}{D}\\) \\(\\frac{F}{G}\\) \\(\\frac{E}{A}\\) \\(\\frac{0}{1}\\) 0\n\n\\(\\frac{D}{E}\\) \\(\\frac{G}{D}\\) \\(\\frac{A}{C}\\) \\(\\frac{1}{0}\\) 0\n\n\\(\\frac{E}{F}\\) \\(\\frac{D}{F}\\) \\(\\frac{C}{B}\\) \\(\\frac{0}{1}\\) \\(\\frac{0}{1}\\) \\(\\frac{F}{G}\\) \\(\\frac{F}{G}\\) \\(\\frac{B}{H}\\) \\(\\frac{1}{0}\\) \\(\\frac{G}{H}\\) <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u> \\(\\frac{H}{A}\\) \\(\\frac{0}{1}\\) \\(\\frac{1}{0}\\)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider a finite state machine (FSM) with one input 𝑋 and one output 𝑓, represented by the given state transition table. The minimum number of states required to realize this FSM is ________. (Answer in integer)\n\n<u>Present</u> <u>state</u> Next state Output 𝑓 \\(\\frac{Nextstate}{𝑋=0}\\) \\(\\frac{Nextstate}{𝑋=1}\\) \\(\\frac{Output}{𝑋=0}\\) \\(\\frac{Output𝑓}{𝑋=1}\\)\n\n\\(\\frac{𝑋=0}{F}\\) \\(\\frac{𝑋=1}{B}\\) \\(\\frac{𝑋=0}{0}\\) \\(\\frac{𝑋=1}{0}\\)\n\n\\(\\frac{A}{B}\\) \\(\\frac{B}{C}\\) D C 0 0\n\n\\(\\frac{C}{D}\\) F E \\(\\frac{0}{1}\\) 0\n\n\\(\\frac{D}{E}\\) G A \\(\\frac{1}{0}\\) 0\n\n\\(\\frac{E}{F}\\) D C \\(\\frac{0}{1}\\) \\(\\frac{0}{1}\\) \\(\\frac{F}{G}\\) F B \\(\\frac{1}{0}\\) \\(\\frac{G}{H}\\) G H \\(\\frac{0}{1}\\) \\(\\frac{1}{0}\\) <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u> <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u>",
+          "content": "Consider a finite state machine (FSM) with one input 𝑋 and one output 𝑓, represented by the given state transition table. The minimum number of states required to realize this FSM is ________. (Answer in integer)\n\n<u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u> <u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u> <u>Present</u> <u>state</u> <u>Next</u> <u>state</u> <u>Output</u> <u>𝑓</u>\n\n\\(\\frac{𝑋=0}{F}\\) \\(\\frac{𝑋=1}{B}\\) \\(\\frac{𝑋=0}{0}\\) \\(\\frac{𝑋=1}{0}\\)\n\n\\(\\frac{A}{B}\\) \\(\\frac{B}{C}\\) \\(\\frac{F}{D}\\) \\(\\frac{D}{F}\\) \\(\\frac{B}{C}\\) \\(\\frac{C}{E}\\) 0 0\n\n\\(\\frac{C}{D}\\) \\(\\frac{F}{G}\\) \\(\\frac{E}{A}\\) \\(\\frac{0}{1}\\) 0\n\n\\(\\frac{D}{E}\\) \\(\\frac{G}{D}\\) \\(\\frac{A}{C}\\) \\(\\frac{1}{0}\\) 0\n\n\\(\\frac{E}{F}\\) \\(\\frac{D}{F}\\) \\(\\frac{C}{B}\\) \\(\\frac{0}{1}\\) \\(\\frac{0}{1}\\) \\(\\frac{F}{G}\\) \\(\\frac{F}{G}\\) \\(\\frac{B}{H}\\) \\(\\frac{1}{0}\\) \\(\\frac{G}{H}\\) <u>H</u> <u>G</u> <u>A</u> <u>1</u> <u>0</u> \\(\\frac{H}{A}\\) \\(\\frac{0}{1}\\) \\(\\frac{1}{0}\\)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5789,16 +5781,21 @@
       "questionNumber": 61,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nint foo(int S[],int size){\nif(size == 0) return 0;\nif(size == 1) return 1;\nif(S[0] != S[1]) return 1+foo(S+1,size-1);\nreturn foo(S+1,size-1);\n}\nint main(){\nint A[]={0,1,2,2,2,0,0,1,1};\nprintf(\"%d\",foo(A,9));\nreturn 0;\n}\n```",
+      "questionText": "Consider the following code:\n\n```text\n#include <stdio.h>\nint foo(int S[],int size){\n    if(size == 0) return 0;\n    if(size == 1) return 1;\n    if(S[0] != S[1]) return 1+foo(S+1,size-1);\n    return foo(S+1,size-1);\n}\nint main(){\n    int A[]={0,1,2,2,2,0,0,1,1};\n    printf(\"%d\",foo(A,9));\n    return 0;\n}\n```\n\nThe value printed by the given C program is _______ . (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following code:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nint foo(int S[],int size){\nif(size == 0) return 0;\nif(size == 1) return 1;\nif(S[0] != S[1]) return 1+foo(S+1,size-1);\nreturn foo(S+1,size-1);\n}\nint main(){\nint A[]={0,1,2,2,2,0,0,1,1};\nprintf(\"%d\",foo(A,9));\nreturn 0;\n}\n```",
+          "content": "```text\n#include <stdio.h>\nint foo(int S[],int size){\n    if(size == 0) return 0;\n    if(size == 1) return 1;\n    if(S[0] != S[1]) return 1+foo(S+1,size-1);\n    return foo(S+1,size-1);\n}\nint main(){\n    int A[]={0,1,2,2,2,0,0,1,1};\n    printf(\"%d\",foo(A,9));\n    return 0;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The value printed by the given C program is _______ . (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5841,26 +5838,20 @@
       "questionNumber": 62,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\ntypedef struct list {\nint data;\nstruct list *next;\n} LIST;\nint find (int query, LIST *list) {\nwhile (list != NULL){\nif(list->data == query) return 1;\nlist = list->next;\n}\nreturn 0;\n}\nint main () {\n        … … …\nptr1=L1; ptr2=L2;\nwhile (ptr1->next != NULL){\nquery = ptr1->next->data;\nif (find (query, L2))\nptr1->next = ptr1->next->next;\nelse ptr1 = ptr1->next;\n}\n        … … …\nreturn 0;\n}\n```",
+      "questionText": "Let LIST be a datatype for an implementation of linked list defined as follows:\n\n```text\ntypedef struct list {\n    int data;\n    struct list *next;\n} LIST;\nint find (int query, LIST *list) {\n    while (list != NULL){\n        if(list->data == query) return 1;\n        list = list->next;\n    }\n    return 0;\n}\nint main () {\n… … …\n    ptr1=L1; ptr2=L2;\n    while (ptr1->next != NULL){\n        query = ptr1->next->data;\n        if (find (query, L2))\n            ptr1->next = ptr1->next->next;\n        else ptr1 = ptr1->next;\n    }\n… … …\n    return 0;\n}\n```",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Let LIST be a datatype for an implementation of linked list defined as follows:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\ntypedef struct list {\nint data;\nstruct list *next;\n} LIST;\nint find (int query, LIST *list) {\nwhile (list != NULL){\nif(list->data == query) return 1;\nlist = list->next;\n}\nreturn 0;\n}\nint main () {\n        … … …\nptr1=L1; ptr2=L2;\nwhile (ptr1->next != NULL){\nquery = ptr1->next->data;\nif (find (query, L2))\nptr1->next = ptr1->next->next;\nelse ptr1 = ptr1->next;\n}\n        … … …\nreturn 0;\n}\n```",
-          "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/cs-1/q62_diag.png",
+          "content": "```text\ntypedef struct list {\n    int data;\n    struct list *next;\n} LIST;\nint find (int query, LIST *list) {\n    while (list != NULL){\n        if(list->data == query) return 1;\n        list = list->next;\n    }\n    return 0;\n}\nint main () {\n… … …\n    ptr1=L1; ptr2=L2;\n    while (ptr1->next != NULL){\n        query = ptr1->next->data;\n        if (find (query, L2))\n            ptr1->next = ptr1->next->next;\n        else ptr1 = ptr1->next;\n    }\n… … …\n    return 0;\n}\n```",
           "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "pseudocode",
         "text"
       ],
@@ -5881,10 +5872,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official accepted numerical range provided by IIT Roorkee is 5 to 5.",
-      "diagramUrl": "/exam-assets/gate/2025/cs-1/q62_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/cs-1/q62_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -5901,16 +5890,21 @@
       "questionNumber": 63,
       "sectionId": "cs1_core",
       "sectionName": "Computer Science & IT (Session 1)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nint gate (int n) {\nint d, t, newnum, turn;\nnewnum = turn = 0; t=1;\nwhile (n>=t) t *= 10;\nt /=10;\nwhile (t>0) {\nd = n/t;\nn = n%t;\nt /= 10;\nif (turn) newnum = 10*newnum + d;\nturn = (turn + 1) % 2;\n}\nreturn newnum;\n}\nint main () {\nprintf (\"%d\", gate(14362));\nreturn 0;\n}\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nint gate (int n) {\n    int d, t, newnum, turn;\n    newnum = turn = 0; t=1;\n    while (n>=t) t *= 10;\n    t /=10;\n    while (t>0) {\n        d = n/t;\n        n = n%t;\n        t /= 10;\n        if (turn) newnum = 10*newnum + d;\n        turn = (turn + 1) % 2;\n    }\n    return newnum;\n}\nint main () {\n    printf (\"%d\", gate(14362));\n    return 0;\n}\n```\n\nThe value printed by the given C program is _______ . (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nint gate (int n) {\nint d, t, newnum, turn;\nnewnum = turn = 0; t=1;\nwhile (n>=t) t *= 10;\nt /=10;\nwhile (t>0) {\nd = n/t;\nn = n%t;\nt /= 10;\nif (turn) newnum = 10*newnum + d;\nturn = (turn + 1) % 2;\n}\nreturn newnum;\n}\nint main () {\nprintf (\"%d\", gate(14362));\nreturn 0;\n}\n```",
+          "content": "```text\n#include <stdio.h>\nint gate (int n) {\n    int d, t, newnum, turn;\n    newnum = turn = 0; t=1;\n    while (n>=t) t *= 10;\n    t /=10;\n    while (t>0) {\n        d = n/t;\n        n = n%t;\n        t /= 10;\n        if (turn) newnum = 10*newnum + d;\n        turn = (turn + 1) % 2;\n    }\n    return newnum;\n}\nint main () {\n    printf (\"%d\", gate(14362));\n    return 0;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The value printed by the given C program is _______ . (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],

@@ -508,75 +508,71 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
-        "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
-        "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
-        "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)"
+        "𝑝_{1} + 𝑝_{2} is not a prime number.",
+        "𝑝_{1}𝑝_{2} is not a prime number.",
+        "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
+        "𝑝_{1}𝑝_{2} + 1 is a prime number."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
+          "text": "𝑝_{1} + 𝑝_{2} is not a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1} + 𝑝_{2} is not a prime number.",
-              "content": "\\(𝑝_{1} + 𝑝_{2} is not a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1} + 𝑝_{2} is not a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
+          "text": "𝑝_{1}𝑝_{2} is not a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1}𝑝_{2} is not a prime number.",
-              "content": "\\(𝑝_{1}𝑝_{2} is not a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1}𝑝_{2} is not a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
+          "text": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
-              "content": "\\(𝑝_{1} + 𝑝_{2} + 1 is a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1} + 𝑝_{2} + 1 is a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)",
+          "text": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
-              "content": "\\(𝑝_{1}𝑝_{2} + 1 is a prime number.\\)",
+              "type": "text",
+              "content": "𝑝_{1}𝑝_{2} + 1 is a prime number.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -2108,16 +2104,21 @@
       "questionNumber": 19,
       "sectionId": "cs2_core",
       "sectionName": "Computer Science & IT (Session 2)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main(){\n        char a[30] = \"@#Hello World!\";\n        stringcopy(a, a + 2);\n        printf(\"%s\\n\", a);\n        return 0;\n}\nvoid stringcopy(char *s, char *t) {\n        while(*t)\n                *s++ = *t++;\n}\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main(){\n        char a[30] = \"@#Hello World!\";\n        stringcopy(a, a + 2);\n        printf(\"%s\\n\", a);\n        return 0;\n}\nvoid stringcopy(char *s, char *t) {\n        while(*t)\n                *s++ = *t++;\n}\n```\n\nWhich ONE of the following will be the output of the program?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
           "content": "```text\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main(){\n        char a[30] = \"@#Hello World!\";\n        stringcopy(a, a + 2);\n        printf(\"%s\\n\", a);\n        return 0;\n}\nvoid stringcopy(char *s, char *t) {\n        while(*t)\n                *s++ = *t++;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "Which ONE of the following will be the output of the program?",
           "confidence": "VERIFIED"
         }
       ],
@@ -3232,7 +3233,7 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
+        "A DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
         "Every non-tree edge of G with respect to a DFS tree is a forward/back edge.",
         "If (𝑢, 𝑣) is a non-tree edge of G with respect to a BFS tree, then the distances from the source vertex 𝑠 to 𝑢 and 𝑣 in the BFS tree are within \\pm 1 of each other.",
         "Both BFS and DFS can be used to find the connected components of G."
@@ -3241,12 +3242,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
+          "text": "A DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
+              "content": "A DFS tree of 𝐺 is a Shortest Path tree of 𝐺.",
               "confidence": "VERIFIED"
             }
           ],
@@ -3649,16 +3650,21 @@
       "questionNumber": 33,
       "sectionId": "cs2_core",
       "sectionName": "Computer Science & IT (Session 2)",
-      "questionText": "Consider the following pseudocode:\n\n```text\nint x=126,y=105;\ndo {\nif(x>y) x=x-y;\nelse y=y-x;\n} while(x!=y);\nprintf(\"%d\",x);\n```",
+      "questionText": "Consider the following code:\n\n```text\n    int x=126,y=105;\n    do {\n         if(x>y) x=x-y;\n         else y=y-x;\n    } while(x!=y);\n    printf(\"%d\",x);\n```\n\nThe output of the given C code segment is ________. (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following code:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\nint x=126,y=105;\ndo {\nif(x>y) x=x-y;\nelse y=y-x;\n} while(x!=y);\nprintf(\"%d\",x);\n```",
+          "content": "```text\n    int x=126,y=105;\n    do {\n         if(x>y) x=x-y;\n         else y=y-x;\n    } while(x!=y);\n    printf(\"%d\",x);\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The output of the given C code segment is ________. (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -5239,75 +5245,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(Aborting 𝑃_{1} makes the system deadlock free.\\)",
-        "\\(Aborting 𝑃_{3} makes the system deadlock free.\\)",
-        "\\(Aborting 𝑃_{2} makes the system deadlock free.\\)",
-        "\\(Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.\\)"
+        "Aborting 𝑃_{1} makes the system deadlock free.",
+        "Aborting 𝑃_{3} makes the system deadlock free.",
+        "Aborting 𝑃_{2} makes the system deadlock free.",
+        "Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(Aborting 𝑃_{1} makes the system deadlock free.\\)",
+          "text": "Aborting 𝑃_{1} makes the system deadlock free.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Aborting 𝑃_{1} makes the system deadlock free.",
-              "content": "\\(Aborting 𝑃_{1} makes the system deadlock free.\\)",
+              "type": "text",
+              "content": "Aborting 𝑃_{1} makes the system deadlock free.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(Aborting 𝑃_{3} makes the system deadlock free.\\)",
+          "text": "Aborting 𝑃_{3} makes the system deadlock free.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Aborting 𝑃_{3} makes the system deadlock free.",
-              "content": "\\(Aborting 𝑃_{3} makes the system deadlock free.\\)",
+              "type": "text",
+              "content": "Aborting 𝑃_{3} makes the system deadlock free.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(Aborting 𝑃_{2} makes the system deadlock free.\\)",
+          "text": "Aborting 𝑃_{2} makes the system deadlock free.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Aborting 𝑃_{2} makes the system deadlock free.",
-              "content": "\\(Aborting 𝑃_{2} makes the system deadlock free.\\)",
+              "type": "text",
+              "content": "Aborting 𝑃_{2} makes the system deadlock free.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.\\)",
+          "text": "Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.",
-              "content": "\\(Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.\\)",
+              "type": "text",
+              "content": "Aborting 𝑃_{1} and 𝑃_{4} makes the system deadlock free.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -5592,75 +5594,71 @@
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
-        "\\(𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).\\)",
-        "\\(𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).\\)",
-        "\\(𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).\\)",
-        "\\(𝐺_{1} and 𝐺_{2} are ambiguous.\\)"
+        "𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).",
+        "𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).",
+        "𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).",
+        "𝐺_{1} and 𝐺_{2} are ambiguous."
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).\\)",
+          "text": "𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).",
-              "content": "\\(𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).\\)",
+              "type": "text",
+              "content": "𝐺_{1} is not 𝐿𝐿(1) and 𝐺_{2} is 𝐿𝐿(1).",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).\\)",
+          "text": "𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).",
-              "content": "\\(𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).\\)",
+              "type": "text",
+              "content": "𝐺_{1} is 𝐿𝐿(1) and 𝐺_{2} is not 𝐿𝐿(1).",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).\\)",
+          "text": "𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).",
-              "content": "\\(𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).\\)",
+              "type": "text",
+              "content": "𝐺_{1} and 𝐺_{2} are not 𝐿𝐿(1).",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(𝐺_{1} and 𝐺_{2} are ambiguous.\\)",
+          "text": "𝐺_{1} and 𝐺_{2} are ambiguous.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝐺_{1} and 𝐺_{2} are ambiguous.",
-              "content": "\\(𝐺_{1} and 𝐺_{2} are ambiguous.\\)",
+              "type": "text",
+              "content": "𝐺_{1} and 𝐺_{2} are ambiguous.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -6416,16 +6414,21 @@
       "questionNumber": 62,
       "sectionId": "cs2_core",
       "sectionName": "Computer Science & IT (Session 2)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nint main(){\n        int a;\n        int arr[5] = {30,50,10};\n        int *ptr;\n        ptr = &arr[0] + 1;\n        a = *ptr;\n        (*ptr)++;\n        ptr++;\n        printf(\"%d\", a + (*ptr) + arr[1]);\n        return 0;\n}\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nint main(){\n        int a;\n        int arr[5] = {30,50,10};\n        int *ptr;\n        ptr = &arr[0] + 1;\n        a = *ptr;\n        (*ptr)++;\n        ptr++;\n        printf(\"%d\", a + (*ptr) + arr[1]);\n        return 0;\n}\n```\n\nThe output of the above program is ___________. (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
           "content": "```text\n#include <stdio.h>\nint main(){\n        int a;\n        int arr[5] = {30,50,10};\n        int *ptr;\n        ptr = &arr[0] + 1;\n        a = *ptr;\n        (*ptr)++;\n        ptr++;\n        printf(\"%d\", a + (*ptr) + arr[1]);\n        return 0;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The output of the above program is ___________. (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -6468,16 +6471,21 @@
       "questionNumber": 63,
       "sectionId": "cs2_core",
       "sectionName": "Computer Science & IT (Session 2)",
-      "questionText": "Consider the following pseudocode:\n\n```text\n#include <stdio.h>\nint g(int n) {\nreturn (n+10);\n}\nint f(int n) {\nreturn g(n*2);\n}\nint main() {\nint sum, n;\nsum=0;\nfor (n=1; n<3; n++)\nsum += g(f(n));\nprintf (\"%d\", sum);\nreturn 0;\n}\n```",
+      "questionText": "Consider the following C program:\n\n```text\n#include <stdio.h>\nint g(int n) {\n    return (n+10);\n}\nint f(int n) {\n    return g(n*2);\n}\nint main() {\n    int sum, n;\n    sum=0;\n    for (n=1; n<3; n++)\n        sum += g(f(n));\n    printf (\"%d\", sum);\n    return 0;\n}\n```\n\nThe output of the given C program is ________. (Answer in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the following pseudocode:",
+          "content": "Consider the following C program:",
           "confidence": "VERIFIED"
         },
         {
           "type": "pseudocode",
-          "content": "```text\n#include <stdio.h>\nint g(int n) {\nreturn (n+10);\n}\nint f(int n) {\nreturn g(n*2);\n}\nint main() {\nint sum, n;\nsum=0;\nfor (n=1; n<3; n++)\nsum += g(f(n));\nprintf (\"%d\", sum);\nreturn 0;\n}\n```",
+          "content": "```text\n#include <stdio.h>\nint g(int n) {\n    return (n+10);\n}\nint f(int n) {\n    return g(n*2);\n}\nint main() {\n    int sum, n;\n    sum=0;\n    for (n=1; n<3; n++)\n        sum += g(f(n));\n    printf (\"%d\", sum);\n    return 0;\n}\n```",
+          "confidence": "VERIFIED"
+        },
+        {
+          "type": "text",
+          "content": "The output of the given C program is ________. (Answer in integer)",
           "confidence": "VERIFIED"
         }
       ],

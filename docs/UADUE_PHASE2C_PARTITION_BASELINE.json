@@ -1,0 +1,65 @@
+{
+  "baselineMetadata": {
+    "engineComponent": "UADUE QuestionGraph Reference Baseline (Phase 2C)",
+    "gitCommitSha": "2c3699047fcf2503b7f8797f0c1e3034b83468dd",
+    "gitTag": "uadue-phase-2c-remediation-v1",
+    "runtime": "Node.js v20+ / Darwin",
+    "schemaVersion": "uadue_question_graph_v2c_schema",
+    "algorithmVersion": "uadue_question_graph_builder_v2c_2026",
+    "configurationVersion": "default_v2c_config_2026",
+    "timestamp": 1728284746000,
+    "createdAt": "2026-10-07T12:25:46+05:30"
+  },
+  "sampleBaselineMetrics_24Pages": {
+    "totalPagesAudited": 24,
+    "pagesPerDocument": 6,
+    "totalPhysicalCandidates": 69,
+    "totalOptions": 234,
+    "totalDiagrams": 1,
+    "totalMathBlocks": 125,
+    "totalRelationships": 14,
+    "documents": {
+      "REAL-UPSC-CSE-PRELIMS-2023-GS1": {
+        "pagesAudited": [1, 2, 3, 4, 5, 6],
+        "physicalCandidates": 29,
+        "conceptualQuestions": 17,
+        "options": 98,
+        "diagrams": 0,
+        "relationships": 14,
+        "sealedHash": "d2f4a108e49b819f390098f98e6c9dbd562fa5342a19c118742fbcfb982189d4"
+      },
+      "REAL-SSC-CHSL-2023-TIER1-02AUG-S2": {
+        "pagesAudited": [1, 2, 3, 4, 5, 6],
+        "physicalCandidates": 19,
+        "conceptualQuestions": 19,
+        "options": 76,
+        "diagrams": 0,
+        "relationships": 0,
+        "sealedHash": "8e3fb92c10b7145e7f12e879a834b6510d9e71028374a58b8f249018e4726581"
+      },
+      "REAL-GATE-2024-CSIT": {
+        "pagesAudited": [1, 2, 3, 4, 5, 6],
+        "physicalCandidates": 8,
+        "conceptualQuestions": 8,
+        "options": 32,
+        "diagrams": 1,
+        "relationships": 0,
+        "sealedHash": "51b29ce459068019e9176fb976210087a19543e8824efb489d816a12b4e72301"
+      },
+      "REAL-JEE-ADVANCED-2023-PAPER1": {
+        "pagesAudited": [1, 2, 3, 4, 5, 6],
+        "physicalCandidates": 13,
+        "conceptualQuestions": 13,
+        "options": 28,
+        "diagrams": 0,
+        "relationships": 0,
+        "sealedHash": "c498ae23769910d84358607185e49051873138fb65418195a864e29bca171092"
+      }
+    }
+  },
+  "provenanceInvariants": {
+    "unresolvedLinks": 0,
+    "degradedNodes": 0,
+    "deterministicBitwiseMatch": true
+  }
+}

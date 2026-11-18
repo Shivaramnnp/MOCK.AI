@@ -2,7 +2,7 @@
   "auditMetadata": {
     "engine": "UADUE Universal Assessment Document Understanding Engine",
     "phase": "Phase 2C Final Forensic Certification & Adversarial Validation",
-    "timestamp": "2026-10-06T11:04:03.207Z",
+    "timestamp": "2026-10-18T15:18:48.896Z",
     "totalCorpusDocuments": 4,
     "totalCorpusPages": 147,
     "totalAuditedPages": 24,
@@ -16,11 +16,11 @@
       "sourceProvenanceVerification": "VERIFIED (100% physically grounded)"
     },
     "corpusTotals": {
-      "totalQuestionsAudited": 54,
-      "totalOptionsAudited": 312,
-      "totalDiagramsAudited": 124,
-      "totalMathBlocksAudited": 146,
-      "totalAmbiguitiesRecorded": 2
+      "totalQuestionsAudited": 69,
+      "totalOptionsAudited": 234,
+      "totalDiagramsAudited": 1,
+      "totalMathBlocksAudited": 155,
+      "totalAmbiguitiesRecorded": 50
     }
   },
   "documents": [
@@ -33,67 +33,67 @@
       "totalPagesInSource": 48,
       "auditedPagesCount": 6,
       "auditedPageCoverage": "12.50%",
-      "sealedHash": "8cd54c26d968424bfd725f287057fa2973a9f96b447466b0729dd7e9acad6c90",
+      "sealedHash": "88b0245853472732b9fec0d0ee0e92bcd32f74bc8fea8d976f70ee60739fd20a",
       "validationResult": {
         "isValid": true,
         "errorsCount": 0
       },
       "counts": {
-        "questionCandidates": 10,
-        "optionCandidates": 144,
+        "questionCandidates": 29,
+        "optionCandidates": 98,
         "stimuli": 0,
         "tables": 0,
         "diagrams": 0,
-        "mathBlocks": 58,
-        "hypotheses": 2,
-        "ambiguities": 2
+        "mathBlocks": 62,
+        "hypotheses": 3,
+        "ambiguities": 50
       },
       "forensicTraces": [
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p1_text_43",
-          "physicalInstanceId": "inst_doc_14281f205282431f_p1_y260_x55",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_0",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p2_y61_x79",
           "sourceQuestionNumber": "1.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
-            "start": 1,
-            "end": 1,
+            "start": 2,
+            "end": 2,
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
-            "step1_sourcePage": 1,
+            "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p1_text_43",
+                "nodeId": "node_p2_text_0",
                 "text": "1.",
                 "bbox": {
-                  "x0": 55.48,
-                  "y0": 260.07099999999997,
-                  "x1": 64.33695999999999,
-                  "y1": 270.371,
-                  "width": 8.856959999999997,
-                  "height": 10.3,
-                  "pageWidth": 613.344,
-                  "pageHeight": 763.021,
+                  "x0": 78.66,
+                  "y0": 61.29870000000003,
+                  "x1": 87.49568,
+                  "y1": 71.69870000000003,
+                  "width": 8.835679999999995,
+                  "height": 10.4,
+                  "pageWidth": 610.9539,
+                  "pageHeight": 761.2287,
                   "unit": "pt"
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 92
+              "stemPreview": "Pi\"'1iBf&d",
+              "totalIncludedPhysicalNodes": 103
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"1.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Initial question",
-                  "confidence": 0.88
+                  "decisionBasis": "First question on page",
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -104,64 +104,79 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
+              "optionsCount": 3,
+              "optionLabels": [
+                "(c)",
+                "(d)",
+                "(c)"
+              ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 5,
+              "mathBlockCount": 6,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_79_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_83_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_348_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_382_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_388_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_398_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_446_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_189_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_450_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_454_c"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p1_text_122",
-          "physicalInstanceId": "inst_doc_14281f205282431f_p1_y287_x55",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_87",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p2_y236_x80",
           "sourceQuestionNumber": "2.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
-            "start": 1,
-            "end": 1,
+            "start": 2,
+            "end": 2,
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
-            "step1_sourcePage": 1,
+            "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p1_text_122",
+                "nodeId": "node_p2_text_87",
                 "text": "2.",
                 "bbox": {
-                  "x0": 54.6,
-                  "y0": 286.85099999999994,
-                  "x1": 64.69752,
-                  "y1": 297.55099999999993,
-                  "width": 10.097520000000003,
-                  "height": 10.7,
-                  "pageWidth": 613.344,
-                  "pageHeight": 763.021,
+                  "x0": 80.28,
+                  "y0": 236.0687,
+                  "x1": 89.80208,
+                  "y1": 246.4687,
+                  "width": 9.522079999999997,
+                  "height": 10.4,
+                  "pageWidth": 610.9539,
+                  "pageHeight": 761.2287,
                   "unit": "pt"
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 83
+              "stemPreview": "Pi\"'1~f&d",
+              "totalIncludedPhysicalNodes": 119
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"2.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.1",
-                  "confidence": 0.88
+                  "decisionBasis": "Follows Q.1",
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -172,7 +187,94 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 7,
+              "optionLabels": [
+                "(a)",
+                "(b)",
+                "(d)",
+                "(a)",
+                "(c)",
+                "(b)",
+                "(c)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 4,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_79_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_83_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_348_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_382_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_388_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_398_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_446_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_189_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_450_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_454_c"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_196",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p2_y494_x86",
+          "sourceQuestionNumber": "3.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 2,
+            "end": 2,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 2,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p2_text_196",
+                "text": "3.",
+                "bbox": {
+                  "x0": 86.29,
+                  "y0": 494.2887,
+                  "x1": 96.12312,
+                  "y1": 504.5887,
+                  "width": 9.833120000000001,
+                  "height": 10.3,
+                  "pageWidth": 610.9539,
+                  "pageHeight": 761.2287,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Pl\"'1~f&d",
+              "totalIncludedPhysicalNodes": 64
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"3.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Follows Q.2",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 29.6 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
               "optionsCount": 0,
@@ -186,118 +288,50 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p1_text_207",
-          "physicalInstanceId": "inst_doc_14281f205282431f_p1_y329_x55",
-          "sourceQuestionNumber": "3.",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 1,
-            "end": 1,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
-          "chain": {
-            "step1_sourcePage": 1,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p1_text_207",
-                "text": "3.",
-                "bbox": {
-                  "x0": 54.82,
-                  "y0": 328.78099999999995,
-                  "x1": 65.15568,
-                  "y1": 339.08099999999996,
-                  "width": 10.335680000000004,
-                  "height": 10.3,
-                  "pageWidth": 613.344,
-                  "pageHeight": 763.021,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 59
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"3.\"",
-                  "confidence": 0.88
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.2",
-                  "confidence": 0.88
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.4",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 0,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p1_text_259",
-          "physicalInstanceId": "inst_doc_14281f205282431f_p1_y356_x55",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_262",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p2_y60_x342",
           "sourceQuestionNumber": "4.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
-            "start": 1,
-            "end": 1,
+            "start": 2,
+            "end": 2,
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
-            "step1_sourcePage": 1,
+            "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p1_text_259",
+                "nodeId": "node_p2_text_262",
                 "text": "4.",
                 "bbox": {
-                  "x0": 55.22,
-                  "y0": 356.46099999999996,
-                  "x1": 64.96656,
-                  "y1": 367.16099999999994,
-                  "width": 9.746560000000002,
-                  "height": 10.7,
-                  "pageWidth": 613.344,
-                  "pageHeight": 763.021,
+                  "x0": 341.99,
+                  "y0": 60.498700000000056,
+                  "x1": 351.79280000000006,
+                  "y1": 70.79870000000005,
+                  "width": 9.802800000000024,
+                  "height": 10.3,
+                  "pageWidth": 610.9539,
+                  "pageHeight": 761.2287,
                   "unit": "pt"
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 72
+              "stemPreview": "Pl\"'1iBf&d",
+              "totalIncludedPhysicalNodes": 114
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"4.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.3",
-                  "confidence": 0.88
+                  "decisionBasis": "Follows Q.3",
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -308,69 +342,66 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
               "optionsCount": 0,
               "optionLabels": [],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 6,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_348_c"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p1_text_339",
-          "physicalInstanceId": "inst_doc_14281f205282431f_p1_y397_x56",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_358",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p2_y269_x346",
           "sourceQuestionNumber": "5.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
-            "start": 1,
+            "start": 2,
             "end": 2,
-            "isMultiPage": true
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
-            "step1_sourcePage": 1,
+            "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p1_text_339",
+                "nodeId": "node_p2_text_358",
                 "text": "5.",
                 "bbox": {
-                  "x0": 55.73,
-                  "y0": 396.90099999999995,
-                  "x1": 65.5758152,
-                  "y1": 406.90099999999995,
-                  "width": 9.845815200000004,
-                  "height": 10,
-                  "pageWidth": 613.344,
-                  "pageHeight": 763.021,
+                  "x0": 345.54,
+                  "y0": 268.7287,
+                  "x1": 355.36168000000004,
+                  "y1": 279.0287,
+                  "width": 9.82168,
+                  "height": 10.3,
+                  "pageWidth": 610.9539,
+                  "pageHeight": 761.2287,
                   "unit": "pt"
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 786
+              "stemPreview": "Pi\"'1fBf&d",
+              "totalIncludedPhysicalNodes": 48
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"5.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.4",
-                  "confidence": 0.88
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 53.2 pt between nodes",
-                  "confidence": 0.85
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -381,25 +412,23 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 3,
-              "optionLabels": [
-                "(i)",
-                "(ii)",
-                "(iii)"
-              ],
+              "optionsCount": 0,
+              "optionLabels": [],
               "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 0,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_398_d"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_1177",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_406",
           "physicalInstanceId": "inst_doc_14281f205282431f_p2_y392_x348",
           "sourceQuestionNumber": "6.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -409,12 +438,12 @@
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_1177",
+                "nodeId": "node_p2_text_406",
                 "text": "6.",
                 "bbox": {
                   "x0": 347.62,
@@ -429,20 +458,20 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 98
+              "stemPreview": "\\l'l«f",
+              "totalIncludedPhysicalNodes": 64
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"6.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.5",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -453,44 +482,49 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 7,
+              "optionsCount": 1,
               "optionLabels": [
-                "(a)",
-                "(c)",
-                "(b)",
-                "(c)",
-                "(d)",
-                "3.",
-                "1."
+                "(d)"
               ],
               "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 2,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_79_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_83_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_348_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_382_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_388_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_398_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_446_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_189_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_450_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_454_c"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_1233",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p2_text_462",
           "physicalInstanceId": "inst_doc_14281f205282431f_p2_y516_x350",
           "sourceQuestionNumber": "7.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 2,
-            "end": 5,
-            "isMultiPage": true
+            "end": 2,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_1233",
+                "nodeId": "node_p2_text_462",
                 "text": "7.",
                 "bbox": {
                   "x0": 350.03,
@@ -505,52 +539,35 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 1320
+              "stemPreview": "mm",
+              "totalIncludedPhysicalNodes": 61
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"7.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.6",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 29.6 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 61.5 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 32.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 31.3 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.8",
-                  "confidence": 0.95
                 }
               ]
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 7,
+              "optionsCount": 5,
               "optionLabels": [
-                "2.",
-                "3.",
                 "(b)",
                 "(c)",
                 "(c)",
@@ -562,11 +579,955 @@
               "mathBlockCount": 1,
               "stimulusReferences": []
             },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p2_node_p2_text_79_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_83_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_348_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_382_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_388_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_398_d",
+              "ambig_opt_owner_opt_p2_node_p2_text_446_a",
+              "ambig_opt_owner_opt_p2_node_p2_text_189_c",
+              "ambig_opt_owner_opt_p2_node_p2_text_450_b",
+              "ambig_opt_owner_opt_p2_node_p2_text_454_c"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_0",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y62_x61",
+          "sourceQuestionNumber": "1.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_0",
+                "text": "1.",
+                "bbox": {
+                  "x0": 60.53,
+                  "y0": 61.888500000000064,
+                  "x1": 70.04296000000001,
+                  "y1": 72.58850000000007,
+                  "width": 9.512960000000001,
+                  "height": 10.7,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 108
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"1.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Follows Q.7",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.2",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 7,
+              "optionLabels": [
+                "(a)",
+                "(b)",
+                "(a)",
+                "(c)",
+                "(b)",
+                "(d)",
+                "(c)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_404_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_410_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_416_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_422_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_466_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_472_b"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_94",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y257_x61",
+          "sourceQuestionNumber": "2.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_94",
+                "text": "2.",
+                "bbox": {
+                  "x0": 60.87,
+                  "y0": 256.5785,
+                  "x1": 70.66152,
+                  "y1": 267.9785,
+                  "width": 9.791519999999998,
+                  "height": 11.4,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 75
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"2.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Follows Q.1",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.3",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 3,
+              "optionLabels": [
+                "(d)",
+                "(a)",
+                "(b)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_404_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_410_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_416_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_422_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_466_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_472_b"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_159",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y356_x51",
+          "sourceQuestionNumber": "3.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_159",
+                "text": "3.",
+                "bbox": {
+                  "x0": 50.95,
+                  "y0": 355.56850000000003,
+                  "x1": 60.032880000000006,
+                  "y1": 365.9685,
+                  "width": 9.082880000000003,
+                  "height": 10.4,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Visakhapatnam",
+              "totalIncludedPhysicalNodes": 146
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"3.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Follows Q.2",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 32.0 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_2510",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_305",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y63_x326",
+          "sourceQuestionNumber": "4.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_305",
+                "text": "4.",
+                "bbox": {
+                  "x0": 325.59,
+                  "y0": 62.78849999999998,
+                  "x1": 334.72744,
+                  "y1": 73.18849999999998,
+                  "width": 9.137440000000026,
+                  "height": 10.4,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 120
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"4.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Follows Q.3",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.5",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_425",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y282_x325",
+          "sourceQuestionNumber": "5.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_425",
+                "text": "5.",
+                "bbox": {
+                  "x0": 325.47,
+                  "y0": 282.0785,
+                  "x1": 335.45712000000003,
+                  "y1": 292.7785,
+                  "width": 9.987119999999987,
+                  "height": 10.7,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Which",
+              "totalIncludedPhysicalNodes": 100
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"5.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.4",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.6",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 2,
+              "optionLabels": [
+                "(c)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_404_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_410_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_416_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_422_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_466_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_472_b"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_493",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y402_x325",
+          "sourceQuestionNumber": "6.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_493",
+                "text": "6.",
+                "bbox": {
+                  "x0": 325.48,
+                  "y0": 402.4785,
+                  "x1": 335.65176,
+                  "y1": 413.1785,
+                  "width": 10.171760000000011,
+                  "height": 10.7,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Ilmenite",
+              "totalIncludedPhysicalNodes": 59
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"6.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.5",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.7",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 8,
+              "optionLabels": [
+                "(a)",
+                "(b)",
+                "(a)",
+                "(c)",
+                "(d)",
+                "(b)",
+                "(c)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 0,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_404_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_410_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_416_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_422_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_466_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_472_b"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p3_text_548",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p3_y523_x326",
+          "sourceQuestionNumber": "7.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_548",
+                "text": "7.",
+                "bbox": {
+                  "x0": 326.11,
+                  "y0": 522.8685,
+                  "x1": 335.9736,
+                  "y1": 533.8685,
+                  "width": 9.86359999999998,
+                  "height": 11,
+                  "pageWidth": 616.9300000000001,
+                  "pageHeight": 768.3985,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "About",
+              "totalIncludedPhysicalNodes": 82
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"7.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.6",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 32.6 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 8,
+              "optionLabels": [
+                "(a)",
+                "(a)",
+                "(b)",
+                "(b)",
+                "(c)",
+                "(c)",
+                "(d)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 1,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p3_node_p3_text_73_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_79_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_404_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_85_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_410_b",
+              "ambig_opt_owner_opt_p3_node_p3_text_91_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_416_c",
+              "ambig_opt_owner_opt_p3_node_p3_text_422_d",
+              "ambig_opt_owner_opt_p3_node_p3_text_466_a",
+              "ambig_opt_owner_opt_p3_node_p3_text_472_b"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p4_text_0",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p4_y55_x81",
+          "sourceQuestionNumber": "8.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 4,
+            "end": 4,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 4,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p4_text_0",
+                "text": "s.",
+                "bbox": {
+                  "x0": 81.45,
+                  "y0": 55.307989999999975,
+                  "x1": 90.98856,
+                  "y1": 68.10798999999997,
+                  "width": 9.538560000000007,
+                  "height": 12.8,
+                  "pageWidth": 607.96699,
+                  "pageHeight": 756.44799,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "~\"'1~R9tt",
+              "totalIncludedPhysicalNodes": 74
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"8.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.7",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.9",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 3,
+              "optionLabels": [
+                "(a)",
+                "(b)",
+                "(c)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 8,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p4_node_p4_text_22_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_28_b",
+              "ambig_opt_owner_opt_p4_node_p4_text_36_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_361_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_404_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_127_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_133_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p4_text_44",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p4_y171_x81",
+          "sourceQuestionNumber": "9.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 4,
+            "end": 4,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 4,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p4_text_44",
+                "text": "9.",
+                "bbox": {
+                  "x0": 81.41,
+                  "y0": 171.13799000000006,
+                  "x1": 91.58568,
+                  "y1": 181.63799000000006,
+                  "width": 10.175680000000003,
+                  "height": 10.5,
+                  "pageWidth": 607.96699,
+                  "pageHeight": 756.44799,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "~\"'1~R9tt",
+              "totalIncludedPhysicalNodes": 143
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"9.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.8",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.10",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 4,
+              "optionLabels": [
+                "(a)",
+                "(c)",
+                "(c)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 9,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p4_node_p4_text_22_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_28_b",
+              "ambig_opt_owner_opt_p4_node_p4_text_36_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_361_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_404_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_127_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_133_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p4_text_139",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p4_y386_x76",
+          "sourceQuestionNumber": "10.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 4,
+            "end": 4,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 4,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p4_text_139",
+                "text": "10.",
+                "bbox": {
+                  "x0": 76.38,
+                  "y0": 386.02799000000005,
+                  "x1": 92.713416,
+                  "y1": 399.42799,
+                  "width": 16.333416000000007,
+                  "height": 13.4,
+                  "pageWidth": 607.96699,
+                  "pageHeight": 756.44799,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "\\lffif",
+              "totalIncludedPhysicalNodes": 168
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"10.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.9",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 32.5 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 4,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": []
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p4_text_261",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p4_y84_x361",
+          "sourceQuestionNumber": "11.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 4,
+            "end": 4,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.85,
+          "chain": {
+            "step1_sourcePage": 4,
+            "step2_documentGraphEvidence": {
+              "numberNode": null,
+              "stemNodeCount": 1,
+              "stemPreview": "~-I:",
+              "totalIncludedPhysicalNodes": 205
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified inferred question boundary from statement directive",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.12",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 11,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p4_node_p4_text_28_b",
+              "ambig_opt_owner_opt_p4_node_p4_text_36_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_127_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_133_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p4_text_434",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p4_y363_x340",
+          "sourceQuestionNumber": "12.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 4,
+            "end": 4,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 4,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p4_text_434",
+                "text": "12.",
+                "bbox": {
+                  "x0": 340.17,
+                  "y0": 363.03799000000004,
+                  "x1": 356.25741,
+                  "y1": 373.73799,
+                  "width": 16.087409999999956,
+                  "height": 10.7,
+                  "pageWidth": 607.96699,
+                  "pageHeight": 756.44799,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "f-i\"'1~R9tt",
+              "totalIncludedPhysicalNodes": 196
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"12.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.10",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 30.8 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 4,
+              "optionLabels": [
+                "(a)",
+                "(b)",
+                "(c)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 6,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p4_node_p4_text_22_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_28_b",
+              "ambig_opt_owner_opt_p4_node_p4_text_36_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_361_a",
+              "ambig_opt_owner_opt_p4_node_p4_text_404_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_127_c",
+              "ambig_opt_owner_opt_p4_node_p4_text_133_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_0",
           "physicalInstanceId": "inst_doc_14281f205282431f_p5_y73_x69",
           "sourceQuestionNumber": "8.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -576,12 +1537,12 @@
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_2510",
+                "nodeId": "node_p5_text_0",
                 "text": "8.",
                 "bbox": {
                   "x0": 68.8,
@@ -596,20 +1557,20 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 109
+              "stemPreview": "Which",
+              "totalIncludedPhysicalNodes": 50
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"8.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.7",
-                  "confidence": 0.88
+                  "decisionBasis": "Sequential successor to Q.12",
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -620,7 +1581,7 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
               "optionsCount": 4,
@@ -635,11 +1596,24 @@
               "mathBlockCount": 0,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p5_node_p5_text_25_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_29_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_33_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_39_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_384_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_412_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_443_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_124_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_130_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_458_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_136_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_142_d"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_2552",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_42",
           "physicalInstanceId": "inst_doc_14281f205282431f_p5_y173_x68",
           "sourceQuestionNumber": "9.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -649,12 +1623,12 @@
             "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_2552",
+                "nodeId": "node_p5_text_42",
                 "text": "9.",
                 "bbox": {
                   "x0": 67.98,
@@ -669,20 +1643,20 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 234
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 120
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"9.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.8",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
@@ -693,15 +1667,12 @@
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 11,
+              "optionsCount": 8,
               "optionLabels": [
-                "1.",
                 "(a)",
-                "2.",
-                "3.",
                 "(b)",
                 "(c)",
                 "(a)",
@@ -715,26 +1686,39 @@
               "mathBlockCount": 0,
               "stimulusReferences": []
             },
-            "step6_unresolvedAmbiguities": []
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p5_node_p5_text_25_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_29_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_33_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_39_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_384_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_412_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_443_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_124_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_130_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_458_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_136_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_142_d"
+            ]
           }
         },
         {
-          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_2656",
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_146",
           "physicalInstanceId": "inst_doc_14281f205282431f_p5_y398_x61",
           "sourceQuestionNumber": "10.",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 5,
-            "end": 6,
-            "isMultiPage": true
+            "end": 5,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.88,
+          "confidenceScore": 0.92,
           "chain": {
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_2656",
+                "nodeId": "node_p5_text_146",
                 "text": "10.",
                 "bbox": {
                   "x0": 60.54,
@@ -749,43 +1733,179 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 761
+              "stemPreview": "With",
+              "totalIncludedPhysicalNodes": 141
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
                 {
                   "evidenceType": "BOUNDARY_BEFORE",
                   "decisionBasis": "Identified Question Anchor: \"10.\"",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.9",
-                  "confidence": 0.88
+                  "confidence": 0.92
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 29.5 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 30.9 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 31.3 pt between nodes",
                   "confidence": 0.85
                 }
               ]
             },
             "step4_segmentationHypothesis": {
               "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
-              "hypothesisCount": 2
+              "hypothesisCount": 3
             },
             "step5_semanticComponents": {
-              "optionsCount": 10,
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 0,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": []
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_289",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p5_y73_x326",
+          "sourceQuestionNumber": "11.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 5,
+            "end": 5,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 5,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p5_text_289",
+                "text": "11.",
+                "bbox": {
+                  "x0": 326.13,
+                  "y0": 72.84540000000007,
+                  "x1": 341.90205000000003,
+                  "y1": 83.94540000000006,
+                  "width": 15.772050000000045,
+                  "height": 11.1,
+                  "pageWidth": 611.5524099999999,
+                  "pageHeight": 766.6054,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 183
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"11.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.10",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.12",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 0,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p5_node_p5_text_25_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_29_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_33_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_39_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_124_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_130_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_458_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p5_text_472",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p5_y381_x323",
+          "sourceQuestionNumber": "12.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 5,
+            "end": 5,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 5,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p5_text_472",
+                "text": "12.",
+                "bbox": {
+                  "x0": 323.14,
+                  "y0": 381.4554,
+                  "x1": 339.22740999999996,
+                  "y1": 392.5554,
+                  "width": 16.087409999999956,
+                  "height": 11.1,
+                  "pageWidth": 611.5524099999999,
+                  "pageHeight": 766.6054,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "Consider",
+              "totalIncludedPhysicalNodes": 165
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"12.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.11",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 31.4 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 7,
               "optionLabels": [
-                "1.",
-                "2.",
-                "3.",
                 "(a)",
                 "(b)",
                 "(a)",
@@ -800,8 +1920,441 @@
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": [
-              "ambig_cross_page_cont_p5_node_p5_text_3141__p6_node_p6_text_3406",
-              "ambig_cross_page_cont_p5_node_p5_text_3141__p6_node_p6_text_3407"
+              "ambig_opt_owner_opt_p5_node_p5_text_25_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_29_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_33_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_39_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_384_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_412_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_443_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_124_a",
+              "ambig_opt_owner_opt_p5_node_p5_text_130_b",
+              "ambig_opt_owner_opt_p5_node_p5_text_458_d",
+              "ambig_opt_owner_opt_p5_node_p5_text_136_c",
+              "ambig_opt_owner_opt_p5_node_p5_text_142_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p6_text_4",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p6_y70_x81",
+          "sourceQuestionNumber": "13.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 6,
+            "end": 6,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 6,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p6_text_4",
+                "text": "13.",
+                "bbox": {
+                  "x0": 80.85,
+                  "y0": 69.75569999999996,
+                  "x1": 96.93741,
+                  "y1": 80.35569999999996,
+                  "width": 16.087410000000013,
+                  "height": 10.6,
+                  "pageWidth": 610.9544000000001,
+                  "pageHeight": 759.4357,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "·~",
+              "totalIncludedPhysicalNodes": 139
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"13.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.12",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 21.5 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.14",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 4,
+              "optionLabels": [
+                "(a)",
+                "(c)",
+                "(a)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 5,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p6_node_p6_text_42_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_64_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_333_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_100_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_341_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_345_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_158_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_166_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_172_d",
+              "ambig_cross_page_cont_p5_node_p5_text_631__p6_node_p6_text_264"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p6_text_118",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p6_y304_x84",
+          "sourceQuestionNumber": "14.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 6,
+            "end": 6,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 6,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p6_text_118",
+                "text": "14.",
+                "bbox": {
+                  "x0": 83.83,
+                  "y0": 304.3757,
+                  "x1": 100.23290500000002,
+                  "y1": 315.7757,
+                  "width": 16.40290500000001,
+                  "height": 11.4,
+                  "pageWidth": 610.9544000000001,
+                  "pageHeight": 759.4357,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "f.t\"\"tfftf€id",
+              "totalIncludedPhysicalNodes": 90
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"14.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.13",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 20.9 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.16",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 5,
+              "optionLabels": [
+                "(c)",
+                "(d)",
+                "(a)",
+                "(c)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 9,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p6_node_p6_text_42_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_64_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_333_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_100_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_341_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_345_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_158_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_166_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_172_d"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p6_text_176",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p6_y523_x89",
+          "sourceQuestionNumber": "16.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 6,
+            "end": 6,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 6,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p6_text_176",
+                "text": "16.",
+                "bbox": {
+                  "x0": 88.61,
+                  "y0": 522.7657,
+                  "x1": 105.01290500000002,
+                  "y1": 534.1657,
+                  "width": 16.40290500000001,
+                  "height": 11.4,
+                  "pageWidth": 610.9544000000001,
+                  "pageHeight": 759.4357,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "f.tAQ:tffsJd",
+              "totalIncludedPhysicalNodes": 66
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"16.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.14",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 30.9 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.16",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 3,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": []
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p6_text_239",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p6_y69_x345",
+          "sourceQuestionNumber": "16.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 6,
+            "end": 6,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 6,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p6_text_239",
+                "text": "16.",
+                "bbox": {
+                  "x0": 344.65,
+                  "y0": 68.95569999999995,
+                  "x1": 360.73740999999995,
+                  "y1": 80.35569999999996,
+                  "width": 16.087409999999956,
+                  "height": 11.4,
+                  "pageWidth": 610.9544000000001,
+                  "pageHeight": 759.4357,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "f.t\"\"tfftffsld",
+              "totalIncludedPhysicalNodes": 157
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"16.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.16",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 57.1 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 32.9 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "BOUNDARY_AFTER",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.17",
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 0,
+              "optionLabels": [],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 10,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p6_node_p6_text_42_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_64_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_341_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_345_d",
+              "ambig_cross_page_cont_p5_node_p5_text_631__p6_node_p6_text_264",
+              "ambig_cross_page_cont_p5_node_p5_text_631__p6_node_p6_text_265"
+            ]
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_14281f205282431f_node_p6_text_351",
+          "physicalInstanceId": "inst_doc_14281f205282431f_p6_y378_x350",
+          "sourceQuestionNumber": "17.",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 6,
+            "end": 6,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.92,
+          "chain": {
+            "step1_sourcePage": 6,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p6_text_351",
+                "text": "~7.",
+                "bbox": {
+                  "x0": 350.15,
+                  "y0": 378.2205,
+                  "x1": 365.0879,
+                  "y1": 388.9757,
+                  "width": 14.9379,
+                  "height": 10.7552,
+                  "pageWidth": 610.9544000000001,
+                  "pageHeight": 759.4357,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "~",
+              "totalIncludedPhysicalNodes": 150
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"17.\"",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.16",
+                  "confidence": 0.92
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 57.4 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_14281f205282431f_H1_STANDARD",
+              "hypothesisCount": 3
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 8,
+              "optionLabels": [
+                "(a)",
+                "(a)",
+                "(b)",
+                "(b)",
+                "(c)",
+                "(c)",
+                "(d)",
+                "(d)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 10,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": [
+              "ambig_opt_owner_opt_p6_node_p6_text_42_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_64_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_333_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_100_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_341_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_345_d",
+              "ambig_opt_owner_opt_p6_node_p6_text_158_a",
+              "ambig_opt_owner_opt_p6_node_p6_text_166_c",
+              "ambig_opt_owner_opt_p6_node_p6_text_172_d"
             ]
           }
         }
@@ -816,18 +2369,18 @@
       "totalPagesInSource": 33,
       "auditedPagesCount": 6,
       "auditedPageCoverage": "18.18%",
-      "sealedHash": "f75a30da9e19e870fd031f6c920d05ded0d75d48c19395005155a359f802a07c",
+      "sealedHash": "a2cebc88516da5e5f4ab6a3773dea618cdaf9accd50f3f480c2585627d3063b2",
       "validationResult": {
         "isValid": true,
         "errorsCount": 0
       },
       "counts": {
         "questionCandidates": 19,
-        "optionCandidates": 85,
+        "optionCandidates": 76,
         "stimuli": 0,
         "tables": 0,
-        "diagrams": 50,
-        "mathBlocks": 39,
+        "diagrams": 0,
+        "mathBlocks": 41,
         "hypotheses": 1,
         "ambiguities": 0
       },
@@ -863,8 +2416,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 43
+              "stemPreview": "Select the correctly spelt word.",
+              "totalIncludedPhysicalNodes": 37
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -936,8 +2489,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 44
+              "stemPreview": "Select the most appropriate synonym of the word ‘Keen’ from the given sentence.",
+              "totalIncludedPhysicalNodes": 37
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -985,8 +2538,8 @@
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 1,
-            "end": 3,
-            "isMultiPage": true
+            "end": 1,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -1009,8 +2562,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 57
+              "stemPreview": "Select the most appropriate ANTONYM for ‘scarcity’ in the given sentence.",
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1023,11 +2576,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Perfect sequential successor to Q.2",
                   "confidence": 0.99
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.4",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -1045,14 +2593,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 2,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_88",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_0",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p3_y109_x59",
           "sourceQuestionNumber": "Q.4",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1067,7 +2615,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_88",
+                "nodeId": "node_p3_text_0",
                 "text": "Q.4",
                 "bbox": {
                   "x0": 59.339966,
@@ -1082,8 +2630,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 72
+              "stemPreview": "Select the option that expresses the given sentence in passive voice.",
+              "totalIncludedPhysicalNodes": 97
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1116,7 +2664,7 @@
                 "3.",
                 "4."
               ],
-              "diagramCount": 1,
+              "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 8,
               "stimulusReferences": []
@@ -1125,7 +2673,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_111",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_23",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p3_y258_x59",
           "sourceQuestionNumber": "Q.5",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1140,7 +2688,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_111",
+                "nodeId": "node_p3_text_23",
                 "text": "Q.5",
                 "bbox": {
                   "x0": 59.34218800000002,
@@ -1155,8 +2703,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 29
+              "stemPreview": "Select the most appropriate option that can substitute the underlined segment in the",
+              "totalIncludedPhysicalNodes": 41
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1198,7 +2746,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_135",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_47",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p3_y426_x59",
           "sourceQuestionNumber": "Q.6",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1213,7 +2761,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_135",
+                "nodeId": "node_p3_text_47",
                 "text": "Q.6",
                 "bbox": {
                   "x0": 59.34218800000002,
@@ -1228,8 +2776,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 30
+              "stemPreview": "Select the option with the correct spellings to replace the underlined words in the",
+              "totalIncludedPhysicalNodes": 42
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1271,14 +2819,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_160",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p3_text_72",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p3_y584_x59",
           "sourceQuestionNumber": "Q.7",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 3,
-            "end": 4,
-            "isMultiPage": true
+            "end": 3,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -1286,7 +2834,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_160",
+                "nodeId": "node_p3_text_72",
                 "text": "Q.7",
                 "bbox": {
                   "x0": 59.34218800000002,
@@ -1301,8 +2849,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 31
+              "stemPreview": "Select the option that expresses the given sentence in active voice.",
+              "totalIncludedPhysicalNodes": 43
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1315,11 +2863,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Perfect sequential successor to Q.6",
                   "confidence": 0.99
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.8",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -1337,14 +2880,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 2,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_184",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_0",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p4_y109_x59",
           "sourceQuestionNumber": "Q.8",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1359,7 +2902,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_184",
+                "nodeId": "node_p4_text_0",
                 "text": "Q.8",
                 "bbox": {
                   "x0": 59.339966,
@@ -1374,8 +2917,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 34
+              "stemPreview": "Parts of a sentence are given below in jumbled order. Arrange the parts in the correct",
+              "totalIncludedPhysicalNodes": 54
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1401,13 +2944,8 @@
               "hypothesisCount": 1
             },
             "step5_semanticComponents": {
-              "optionsCount": 9,
+              "optionsCount": 4,
               "optionLabels": [
-                "A.",
-                "B.",
-                "C.",
-                "D.",
-                "E.",
                 "1.",
                 "2.",
                 "3.",
@@ -1422,7 +2960,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_213",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_29",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p4_y304_x59",
           "sourceQuestionNumber": "Q.9",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1437,7 +2975,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_213",
+                "nodeId": "node_p4_text_29",
                 "text": "Q.9",
                 "bbox": {
                   "x0": 59.34218800000002,
@@ -1452,8 +2990,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 28
+              "stemPreview": "Select the most appropriate homophones to fill in the blanks.",
+              "totalIncludedPhysicalNodes": 40
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1495,7 +3033,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_236",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_52",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p4_y454_x57",
           "sourceQuestionNumber": "Q.10",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1510,7 +3048,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_236",
+                "nodeId": "node_p4_text_52",
                 "text": "Q.10 Parts of a sentence are given below in jumbled order. Select the option that arranges",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -1526,7 +3064,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.10 Parts of a sentence are given below in jumbled order. Select the option that arranges",
-              "totalIncludedPhysicalNodes": 31
+              "totalIncludedPhysicalNodes": 45
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1552,12 +3090,8 @@
               "hypothesisCount": 1
             },
             "step5_semanticComponents": {
-              "optionsCount": 8,
+              "optionsCount": 4,
               "optionLabels": [
-                "A.",
-                "B.",
-                "C.",
-                "D.",
                 "1.",
                 "2.",
                 "3.",
@@ -1572,14 +3106,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_262",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p4_text_78",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p4_y649_x57",
           "sourceQuestionNumber": "Q.11",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 4,
-            "end": 5,
-            "isMultiPage": true
+            "end": 4,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -1587,7 +3121,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_262",
+                "nodeId": "node_p4_text_78",
                 "text": "Q.11 Select the most appropriate ANTONYM of the word in brackets to fill in the blank.",
                 "bbox": {
                   "x0": 57.362188,
@@ -1603,7 +3137,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.11 Select the most appropriate ANTONYM of the word in brackets to fill in the blank.",
-              "totalIncludedPhysicalNodes": 29
+              "totalIncludedPhysicalNodes": 34
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1616,11 +3150,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Perfect sequential successor to Q.10",
                   "confidence": 0.99
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.12",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -1638,14 +3167,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 2,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_284",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_0",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p5_y109_x57",
           "sourceQuestionNumber": "Q.12",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1660,7 +3189,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_284",
+                "nodeId": "node_p5_text_0",
                 "text": "Q.12 Select the most appropriate synonym for the underlined word in the given sentence.",
                 "bbox": {
                   "x0": 57.119991,
@@ -1676,7 +3205,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.12 Select the most appropriate synonym for the underlined word in the given sentence.",
-              "totalIncludedPhysicalNodes": 67
+              "totalIncludedPhysicalNodes": 92
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1709,7 +3238,7 @@
                 "3.",
                 "4."
               ],
-              "diagramCount": 1,
+              "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 8,
               "stimulusReferences": []
@@ -1718,7 +3247,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_305",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_21",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p5_y258_x57",
           "sourceQuestionNumber": "Q.13",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1733,7 +3262,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_305",
+                "nodeId": "node_p5_text_21",
                 "text": "Q.13 Select the option that can be used as a one-word substitute for the given group of",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -1749,7 +3278,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.13 Select the option that can be used as a one-word substitute for the given group of",
-              "totalIncludedPhysicalNodes": 27
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1791,7 +3320,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_327",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_43",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p5_y426_x57",
           "sourceQuestionNumber": "Q.14",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1806,7 +3335,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_327",
+                "nodeId": "node_p5_text_43",
                 "text": "Q.14 Select the most appropriate option that can substitute the underlined words in the",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -1822,7 +3351,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.14 Select the most appropriate option that can substitute the underlined words in the",
-              "totalIncludedPhysicalNodes": 27
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1864,14 +3393,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_349",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p5_text_65",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p5_y594_x57",
           "sourceQuestionNumber": "Q.15",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 5,
-            "end": 6,
-            "isMultiPage": true
+            "end": 5,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -1879,7 +3408,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_349",
+                "nodeId": "node_p5_text_65",
                 "text": "Q.15 Select the most appropriate ANTONYM of the given word.",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -1895,7 +3424,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.15 Select the most appropriate ANTONYM of the given word.",
-              "totalIncludedPhysicalNodes": 29
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -1908,11 +3437,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Perfect sequential successor to Q.14",
                   "confidence": 0.99
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.16",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -1930,14 +3454,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 2,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_371",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_0",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p6_y109_x57",
           "sourceQuestionNumber": "Q.16",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -1952,7 +3476,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_371",
+                "nodeId": "node_p6_text_0",
                 "text": "Q.16 Select the most appropriate meaning of the underlined idiom.",
                 "bbox": {
                   "x0": 57.119991,
@@ -1968,7 +3492,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.16 Select the most appropriate meaning of the underlined idiom.",
-              "totalIncludedPhysicalNodes": 66
+              "totalIncludedPhysicalNodes": 91
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2001,7 +3525,7 @@
                 "3.",
                 "4."
               ],
-              "diagramCount": 1,
+              "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 8,
               "stimulusReferences": []
@@ -2010,7 +3534,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_392",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_21",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p6_y268_x57",
           "sourceQuestionNumber": "Q.17",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -2025,7 +3549,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_392",
+                "nodeId": "node_p6_text_21",
                 "text": "Q.17 Select the most appropriate option that can substitute the underlined segment in the",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -2041,7 +3565,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.17 Select the most appropriate option that can substitute the underlined segment in the",
-              "totalIncludedPhysicalNodes": 27
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2083,7 +3607,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_414",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_43",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p6_y426_x57",
           "sourceQuestionNumber": "Q.18",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -2098,7 +3622,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_414",
+                "nodeId": "node_p6_text_43",
                 "text": "Q.18 Select the most appropriate idiom for the following statement.",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -2114,7 +3638,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.18 Select the most appropriate idiom for the following statement.",
-              "totalIncludedPhysicalNodes": 27
+              "totalIncludedPhysicalNodes": 38
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2156,7 +3680,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_436",
+          "questionCandidateId": "qb_doc_79911f24f2ca3438_node_p6_text_65",
           "physicalInstanceId": "inst_doc_79911f24f2ca3438_p6_y584_x57",
           "sourceQuestionNumber": "Q.19",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -2171,7 +3695,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_436",
+                "nodeId": "node_p6_text_65",
                 "text": "Q.19 Select the option that expresses the following sentence in superlative degree of",
                 "bbox": {
                   "x0": 57.116668000000004,
@@ -2187,7 +3711,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "Q.19 Select the option that expresses the following sentence in superlative degree of",
-              "totalIncludedPhysicalNodes": 26
+              "totalIncludedPhysicalNodes": 39
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2234,158 +3758,22 @@
       "totalPagesInSource": 36,
       "auditedPagesCount": 6,
       "auditedPageCoverage": "16.67%",
-      "sealedHash": "6d5678bd13b07612b619da727b58ce13372840a1241dbfcfbf280d8743073575",
+      "sealedHash": "d9e8c13bb8533fb9757183588394b94361602bc606033a40d7f0fea0bfed9d89",
       "validationResult": {
         "isValid": true,
         "errorsCount": 0
       },
       "counts": {
-        "questionCandidates": 12,
-        "optionCandidates": 53,
+        "questionCandidates": 8,
+        "optionCandidates": 32,
         "stimuli": 0,
         "tables": 0,
-        "diagrams": 67,
+        "diagrams": 1,
         "mathBlocks": 8,
         "hypotheses": 1,
         "ambiguities": 0
       },
       "forensicTraces": [
-        {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p1_text_19",
-          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p1_y97_x72",
-          "sourceQuestionNumber": "Q.1",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 1,
-            "end": 1,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.98,
-          "chain": {
-            "step1_sourcePage": 1,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p1_text_19",
-                "text": "Q.1",
-                "bbox": {
-                  "x0": 72.024,
-                  "y0": 96.5,
-                  "x1": 90.36,
-                  "y1": 108.5,
-                  "width": 18.336,
-                  "height": 12,
-                  "pageWidth": 595.32,
-                  "pageHeight": 841.92,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 5
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q.1\"",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Explicit question prefix",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.5",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 1,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p1_text_23",
-          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p1_y97_x102",
-          "sourceQuestionNumber": "Q.5",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 1,
-            "end": 1,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.98,
-          "chain": {
-            "step1_sourcePage": 1,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p1_text_23",
-                "text": "Q.5 Carry ONE mark Each",
-                "bbox": {
-                  "x0": 102.38,
-                  "y0": 96.5,
-                  "x1": 243.88400000000001,
-                  "y1": 108.5,
-                  "width": 141.50400000000002,
-                  "height": 12,
-                  "pageWidth": 595.32,
-                  "pageHeight": 841.92,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": "Q.5 Carry ONE mark Each",
-              "totalIncludedPhysicalNodes": 101
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q.5\"",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Explicit question prefix",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.1",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 2,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
         {
           "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p1_text_25",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p1_y131_x77",
@@ -2417,8 +3805,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 144
+              "stemPreview": "If ‘→’ denotes increasing order of intensity, then the meaning of the words",
+              "totalIncludedPhysicalNodes": 55
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2471,8 +3859,8 @@
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 1,
-            "end": 2,
-            "isMultiPage": true
+            "end": 1,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.98,
@@ -2496,7 +3884,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "2",
-              "totalIncludedPhysicalNodes": 125
+              "totalIncludedPhysicalNodes": 95
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2512,7 +3900,17 @@
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 37.3 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 25.9 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
                   "confidence": 0.85
                 },
                 {
@@ -2524,16 +3922,6 @@
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 101.6 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 36.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.3",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -2558,7 +3946,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p2_text_138",
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p2_text_17",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p2_y83_x77",
           "sourceQuestionNumber": "Q. 3",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -2573,7 +3961,7 @@
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_138",
+                "nodeId": "node_p2_text_17",
                 "text": "Q.",
                 "bbox": {
                   "x0": 77.424,
@@ -2589,7 +3977,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "3",
-              "totalIncludedPhysicalNodes": 28
+              "totalIncludedPhysicalNodes": 65
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2610,22 +3998,7 @@
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 63.6 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 21.7 pt between nodes",
                   "confidence": 0.85
                 },
                 {
@@ -2656,14 +4029,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p2_text_166",
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p2_text_45",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p2_y399_x77",
           "sourceQuestionNumber": "Q. 4",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 2,
-            "end": 3,
-            "isMultiPage": true
+            "end": 2,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.98,
@@ -2671,7 +4044,7 @@
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_166",
+                "nodeId": "node_p2_text_45",
                 "text": "Q.",
                 "bbox": {
                   "x0": 77.424,
@@ -2687,7 +4060,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "4",
-              "totalIncludedPhysicalNodes": 45
+              "totalIncludedPhysicalNodes": 53
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2700,11 +4073,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Sequential successor to Q.3",
                   "confidence": 0.98
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 63.6 pt between nodes",
-                  "confidence": 0.85
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
@@ -2725,16 +4093,6 @@
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 158.5 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 36.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.5",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -2759,14 +4117,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p3_text_210",
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p3_text_17",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p3_y83_x77",
           "sourceQuestionNumber": "Q. 5",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 3,
-            "end": 4,
-            "isMultiPage": true
+            "end": 3,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.98,
@@ -2774,7 +4132,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_210",
+                "nodeId": "node_p3_text_17",
                 "text": "Q.",
                 "bbox": {
                   "x0": 77.424,
@@ -2790,7 +4148,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "5",
-              "totalIncludedPhysicalNodes": 96
+              "totalIncludedPhysicalNodes": 159
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -2816,28 +4174,8 @@
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 169.2 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 424.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 24.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.6",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -2862,155 +4200,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p4_text_305",
-          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p4_y71_x72",
-          "sourceQuestionNumber": "Q.6",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 4,
-            "end": 4,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.99,
-          "chain": {
-            "step1_sourcePage": 4,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p4_text_305",
-                "text": "Q.6",
-                "bbox": {
-                  "x0": 72.024,
-                  "y0": 71.15999999999997,
-                  "x1": 90.36,
-                  "y1": 83.15999999999997,
-                  "width": 18.336,
-                  "height": 12,
-                  "pageWidth": 595.32,
-                  "pageHeight": 841.92,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 4
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q.6\"",
-                  "confidence": 0.99
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Perfect sequential successor to Q.5",
-                  "confidence": 0.99
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.10",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 0,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p4_text_309",
-          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p4_y71_x102",
-          "sourceQuestionNumber": "Q.10",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 4,
-            "end": 4,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.98,
-          "chain": {
-            "step1_sourcePage": 4,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p4_text_309",
-                "text": "Q.10 Carry TWO marks Each",
-                "bbox": {
-                  "x0": 102.38,
-                  "y0": 71.15999999999997,
-                  "x1": 257.924,
-                  "y1": 83.15999999999997,
-                  "width": 155.544,
-                  "height": 12,
-                  "pageWidth": 595.32,
-                  "pageHeight": 841.92,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": "Q.10 Carry TWO marks Each",
-              "totalIncludedPhysicalNodes": 2
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q.10\"",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Explicit question prefix",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 22.9 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.6",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 0,
-              "optionLabels": [],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 0,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p4_text_311",
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p4_text_23",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p4_y106_x77",
           "sourceQuestionNumber": "Q. 6",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 4,
-            "end": 5,
-            "isMultiPage": true
+            "end": 4,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.98,
@@ -3018,7 +4215,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_311",
+                "nodeId": "node_p4_text_23",
                 "text": "Q.",
                 "bbox": {
                   "x0": 77.424,
@@ -3034,7 +4231,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "6",
-              "totalIncludedPhysicalNodes": 127
+              "totalIncludedPhysicalNodes": 186
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3045,172 +4242,18 @@
                 },
                 {
                   "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.10",
+                  "decisionBasis": "Sequential successor to Q.5",
                   "confidence": 0.98
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 20.3 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 30.8 pt between nodes",
                   "confidence": 0.85
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 64.5 pt between nodes",
+                  "decisionBasis": "Vertical physical gap of 169.2 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 32.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 32.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 32.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 356.1 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 36.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.7",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 25,
-              "optionLabels": [
-                "(i)",
-                "(i)",
-                "(ii)",
-                "(iii)",
-                "(iv)",
-                "(A)",
-                "(i)",
-                "(ii)",
-                "(iii)",
-                "(iv)",
-                "(B)",
-                "(i)",
-                "(ii)",
-                "(iii)",
-                "(iv)",
-                "(C)",
-                "(i)",
-                "(ii)",
-                "(iii)",
-                "(iv)",
-                "(D)",
-                "(i)",
-                "(ii)",
-                "(iii)",
-                "(iv)"
-              ],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 0,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p5_text_437",
-          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p5_y83_x77",
-          "sourceQuestionNumber": "Q. 7",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 5,
-            "end": 6,
-            "isMultiPage": true
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.98,
-          "chain": {
-            "step1_sourcePage": 5,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p5_text_437",
-                "text": "Q.",
-                "bbox": {
-                  "x0": 77.424,
-                  "y0": 83.17999999999995,
-                  "x1": 89.06400000000001,
-                  "y1": 95.17999999999995,
-                  "width": 11.639999999999999,
-                  "height": 12,
-                  "pageWidth": 595.32,
-                  "pageHeight": 841.92,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": "7",
-              "totalIncludedPhysicalNodes": 53
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q. 7\"",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Sequential successor to Q.6",
-                  "confidence": 0.98
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 89.4 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 415.5 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 36.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.8",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -3228,14 +4271,102 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 1,
+              "mathBlockCount": 0,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p6_text_489",
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p5_text_17",
+          "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p5_y83_x77",
+          "sourceQuestionNumber": "Q. 7",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 5,
+            "end": 5,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.98,
+          "chain": {
+            "step1_sourcePage": 5,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p5_text_17",
+                "text": "Q.",
+                "bbox": {
+                  "x0": 77.424,
+                  "y0": 83.17999999999995,
+                  "x1": 89.06400000000001,
+                  "y1": 95.17999999999995,
+                  "width": 11.639999999999999,
+                  "height": 12,
+                  "pageWidth": 595.32,
+                  "pageHeight": 841.92,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "7",
+              "totalIncludedPhysicalNodes": 98
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"Q. 7\"",
+                  "confidence": 0.98
+                },
+                {
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Sequential successor to Q.6",
+                  "confidence": 0.98
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 83.4 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 34.5 pt between nodes",
+                  "confidence": 0.85
+                },
+                {
+                  "evidenceType": "SPATIAL_GAP",
+                  "decisionBasis": "Vertical physical gap of 169.2 pt between nodes",
+                  "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_18cf9ac15c01bdbf_H1_STANDARD",
+              "hypothesisCount": 1
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 4,
+              "optionLabels": [
+                "(A)",
+                "(B)",
+                "(C)",
+                "(D)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 5,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": []
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_18cf9ac15c01bdbf_node_p6_text_17",
           "physicalInstanceId": "inst_doc_18cf9ac15c01bdbf_p6_y83_x77",
           "sourceQuestionNumber": "Q. 8",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -3250,7 +4381,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_489",
+                "nodeId": "node_p6_text_17",
                 "text": "Q.",
                 "bbox": {
                   "x0": 77.424,
@@ -3266,7 +4397,7 @@
               },
               "stemNodeCount": 1,
               "stemPreview": "8",
-              "totalIncludedPhysicalNodes": 92
+              "totalIncludedPhysicalNodes": 152
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3283,21 +4414,6 @@
                 {
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 21.3 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 45.5 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 63.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 25.8 pt between nodes",
                   "confidence": 0.85
                 },
                 {
@@ -3348,18 +4464,18 @@
       "totalPagesInSource": 30,
       "auditedPagesCount": 6,
       "auditedPageCoverage": "20.00%",
-      "sealedHash": "b6f27ecbb78e1d2f23e97802ced9559542d7408a5872f7d222d52c128fa818df",
+      "sealedHash": "35c63690aad493643bec8079bbb0a6f227f4774d5e1171844b546470bd971943",
       "validationResult": {
         "isValid": true,
         "errorsCount": 0
       },
       "counts": {
         "questionCandidates": 13,
-        "optionCandidates": 30,
+        "optionCandidates": 28,
         "stimuli": 0,
         "tables": 0,
-        "diagrams": 7,
-        "mathBlocks": 41,
+        "diagrams": 0,
+        "mathBlocks": 44,
         "hypotheses": 1,
         "ambiguities": 0
       },
@@ -3371,8 +4487,8 @@
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 1,
-            "end": 2,
-            "isMultiPage": true
+            "end": 1,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.98,
@@ -3395,8 +4511,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 74
+              "stemPreview": "S",
+              "totalIncludedPhysicalNodes": 65
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3412,18 +4528,8 @@
                 },
                 {
                   "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 21.0 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 199.0 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.2",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -3441,14 +4547,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 1,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p2_text_199",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p2_text_4",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p2_y62_x87",
           "sourceQuestionNumber": "Q.2",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -3463,7 +4569,7 @@
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_199",
+                "nodeId": "node_p2_text_4",
                 "text": "Q.2",
                 "bbox": {
                   "x0": 86.8202,
@@ -3478,8 +4584,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 174
+              "stemPreview": "x",
+              "totalIncludedPhysicalNodes": 185
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3526,14 +4632,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p2_text_368",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p2_text_173",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p2_y252_x87",
           "sourceQuestionNumber": "Q.3",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 2,
-            "end": 3,
-            "isMultiPage": true
+            "end": 2,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -3541,7 +4647,7 @@
             "step1_sourcePage": 2,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p2_text_368",
+                "nodeId": "node_p2_text_173",
                 "text": "Q.3",
                 "bbox": {
                   "x0": 86.8207,
@@ -3556,8 +4662,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 336
+              "stemPreview": "x",
+              "totalIncludedPhysicalNodes": 284
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3575,20 +4681,78 @@
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 218.2 pt between nodes",
                   "confidence": 0.85
+                }
+              ]
+            },
+            "step4_segmentationHypothesis": {
+              "activeHypothesisId": "hyp_doc_7823ad451ebd269f_H1_STANDARD",
+              "hypothesisCount": 1
+            },
+            "step5_semanticComponents": {
+              "optionsCount": 4,
+              "optionLabels": [
+                "(A)",
+                "(B)",
+                "(C)",
+                "(D)"
+              ],
+              "diagramCount": 0,
+              "tableCount": 0,
+              "mathBlockCount": 3,
+              "stimulusReferences": []
+            },
+            "step6_unresolvedAmbiguities": []
+          }
+        },
+        {
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_64",
+          "physicalInstanceId": "inst_doc_7823ad451ebd269f_p3_y237_x87",
+          "sourceQuestionNumber": "Q.4",
+          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
+          "pageRange": {
+            "start": 3,
+            "end": 3,
+            "isMultiPage": false
+          },
+          "verificationStatus": "SUPPORTED",
+          "confidenceScore": 0.99,
+          "chain": {
+            "step1_sourcePage": 3,
+            "step2_documentGraphEvidence": {
+              "numberNode": {
+                "nodeId": "node_p3_text_64",
+                "text": "Q.4",
+                "bbox": {
+                  "x0": 86.8202,
+                  "y0": 237.4093,
+                  "x1": 102.0615471,
+                  "y1": 247.7396,
+                  "width": 15.2413471,
+                  "height": 10.3303,
+                  "pageWidth": 612,
+                  "pageHeight": 792,
+                  "unit": "pt"
+                }
+              },
+              "stemNodeCount": 1,
+              "stemPreview": "",
+              "totalIncludedPhysicalNodes": 131
+            },
+            "step3_candidateBoundary": {
+              "boundaryEvidence": [
+                {
+                  "evidenceType": "BOUNDARY_BEFORE",
+                  "decisionBasis": "Identified Question Anchor: \"Q.4\"",
+                  "confidence": 0.99
                 },
                 {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 34.5 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 39.0 pt between nodes",
-                  "confidence": 0.85
+                  "evidenceType": "NUMBERING_PATTERN",
+                  "decisionBasis": "Perfect sequential successor to Q.3",
+                  "confidence": 0.99
                 },
                 {
                   "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.4",
+                  "decisionBasis": "Terminated prior question boundary by arrival of Q.5",
                   "confidence": 0.95
                 }
               ]
@@ -3614,85 +4778,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_704",
-          "physicalInstanceId": "inst_doc_7823ad451ebd269f_p3_y237_x87",
-          "sourceQuestionNumber": "Q.4",
-          "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
-          "pageRange": {
-            "start": 3,
-            "end": 3,
-            "isMultiPage": false
-          },
-          "verificationStatus": "SUPPORTED",
-          "confidenceScore": 0.99,
-          "chain": {
-            "step1_sourcePage": 3,
-            "step2_documentGraphEvidence": {
-              "numberNode": {
-                "nodeId": "node_p3_text_704",
-                "text": "Q.4",
-                "bbox": {
-                  "x0": 86.8202,
-                  "y0": 237.4093,
-                  "x1": 102.0615471,
-                  "y1": 247.7396,
-                  "width": 15.2413471,
-                  "height": 10.3303,
-                  "pageWidth": 612,
-                  "pageHeight": 792,
-                  "unit": "pt"
-                }
-              },
-              "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 131
-            },
-            "step3_candidateBoundary": {
-              "boundaryEvidence": [
-                {
-                  "evidenceType": "BOUNDARY_BEFORE",
-                  "decisionBasis": "Identified Question Anchor: \"Q.4\"",
-                  "confidence": 0.99
-                },
-                {
-                  "evidenceType": "NUMBERING_PATTERN",
-                  "decisionBasis": "Perfect sequential successor to Q.3",
-                  "confidence": 0.99
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 34.6 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.5",
-                  "confidence": 0.95
-                }
-              ]
-            },
-            "step4_segmentationHypothesis": {
-              "activeHypothesisId": "hyp_doc_7823ad451ebd269f_H1_STANDARD",
-              "hypothesisCount": 1
-            },
-            "step5_semanticComponents": {
-              "optionsCount": 4,
-              "optionLabels": [
-                "(A)",
-                "(B)",
-                "(C)",
-                "(D)"
-              ],
-              "diagramCount": 0,
-              "tableCount": 0,
-              "mathBlockCount": 2,
-              "stimulusReferences": []
-            },
-            "step6_unresolvedAmbiguities": []
-          }
-        },
-        {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_824",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_184",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p3_y415_x87",
           "sourceQuestionNumber": "Q.5",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -3707,7 +4793,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_824",
+                "nodeId": "node_p3_text_184",
                 "text": "Q.5",
                 "bbox": {
                   "x0": 86.8172764,
@@ -3722,8 +4808,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 165
+              "stemPreview": "Let",
+              "totalIncludedPhysicalNodes": 178
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3765,14 +4851,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_992",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p3_text_352",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p3_y600_x87",
           "sourceQuestionNumber": "Q.6",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 3,
-            "end": 4,
-            "isMultiPage": true
+            "end": 3,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -3780,7 +4866,7 @@
             "step1_sourcePage": 3,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p3_text_992",
+                "nodeId": "node_p3_text_352",
                 "text": "Q.6",
                 "bbox": {
                   "x0": 86.8212,
@@ -3795,7 +4881,7 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": "",
+              "stemPreview": "",
               "totalIncludedPhysicalNodes": 102
             },
             "step3_candidateBoundary": {
@@ -3814,11 +4900,6 @@
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 54.9 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.7",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -3836,21 +4917,21 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 4,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p4_text_1094",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p4_text_4",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p4_y62_x87",
           "sourceQuestionNumber": "Q.7",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 4,
-            "end": 5,
-            "isMultiPage": true
+            "end": 4,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -3858,7 +4939,7 @@
             "step1_sourcePage": 4,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p4_text_1094",
+                "nodeId": "node_p4_text_4",
                 "text": "Q.7",
                 "bbox": {
                   "x0": 86.8202,
@@ -3873,8 +4954,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 125
+              "stemPreview": "P",
+              "totalIncludedPhysicalNodes": 81
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -3897,16 +4978,6 @@
                   "evidenceType": "SPATIAL_GAP",
                   "decisionBasis": "Vertical physical gap of 584.6 pt between nodes",
                   "confidence": 0.85
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 35.4 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.8",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -3924,14 +4995,14 @@
               ],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 1,
+              "mathBlockCount": 2,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_1173",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_4",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p5_y238_x87",
           "sourceQuestionNumber": "Q.8",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -3946,7 +5017,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_1173",
+                "nodeId": "node_p5_text_4",
                 "text": "Q.8",
                 "bbox": {
                   "x0": 86.8202,
@@ -3961,8 +5032,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
-              "totalIncludedPhysicalNodes": 141
+              "stemPreview": "",
+              "totalIncludedPhysicalNodes": 142
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -4004,7 +5075,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_1314",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_145",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p5_y356_x87",
           "sourceQuestionNumber": "Q.9",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -4019,7 +5090,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_1314",
+                "nodeId": "node_p5_text_145",
                 "text": "Q.9",
                 "bbox": {
                   "x0": 86.82951679999996,
@@ -4034,7 +5105,7 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
+              "stemPreview": "Let",
               "totalIncludedPhysicalNodes": 191
             },
             "step3_candidateBoundary": {
@@ -4066,10 +5137,8 @@
               "hypothesisCount": 1
             },
             "step5_semanticComponents": {
-              "optionsCount": 1,
-              "optionLabels": [
-                "1)"
-              ],
+              "optionsCount": 0,
+              "optionLabels": [],
               "diagramCount": 0,
               "tableCount": 0,
               "mathBlockCount": 2,
@@ -4079,14 +5148,14 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_1490",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p5_text_321",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p5_y579_x87",
           "sourceQuestionNumber": "Q.10",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
           "pageRange": {
             "start": 5,
-            "end": 6,
-            "isMultiPage": true
+            "end": 5,
+            "isMultiPage": false
           },
           "verificationStatus": "SUPPORTED",
           "confidenceScore": 0.99,
@@ -4094,7 +5163,7 @@
             "step1_sourcePage": 5,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p5_text_1490",
+                "nodeId": "node_p5_text_321",
                 "text": "Q.10",
                 "bbox": {
                   "x0": 86.82292459999996,
@@ -4109,8 +5178,8 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": "",
-              "totalIncludedPhysicalNodes": 96
+              "stemPreview": "",
+              "totalIncludedPhysicalNodes": 92
             },
             "step3_candidateBoundary": {
               "boundaryEvidence": [
@@ -4123,16 +5192,6 @@
                   "evidenceType": "NUMBERING_PATTERN",
                   "decisionBasis": "Perfect sequential successor to Q.9",
                   "confidence": 0.99
-                },
-                {
-                  "evidenceType": "SPATIAL_GAP",
-                  "decisionBasis": "Vertical physical gap of 68.3 pt between nodes",
-                  "confidence": 0.85
-                },
-                {
-                  "evidenceType": "BOUNDARY_AFTER",
-                  "decisionBasis": "Terminated prior question boundary by arrival of Q.11",
-                  "confidence": 0.95
                 }
               ]
             },
@@ -4141,20 +5200,18 @@
               "hypothesisCount": 1
             },
             "step5_semanticComponents": {
-              "optionsCount": 1,
-              "optionLabels": [
-                "2)"
-              ],
+              "optionsCount": 0,
+              "optionLabels": [],
               "diagramCount": 0,
               "tableCount": 0,
-              "mathBlockCount": 0,
+              "mathBlockCount": 3,
               "stimulusReferences": []
             },
             "step6_unresolvedAmbiguities": []
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_1632",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_4",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p6_y62_x87",
           "sourceQuestionNumber": "Q.11",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -4169,7 +5226,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_1632",
+                "nodeId": "node_p6_text_4",
                 "text": "Q.11",
                 "bbox": {
                   "x0": 86.8202,
@@ -4184,7 +5241,7 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
+              "stemPreview": "",
               "totalIncludedPhysicalNodes": 57
             },
             "step3_candidateBoundary": {
@@ -4222,7 +5279,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_1689",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_61",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p6_y137_x87",
           "sourceQuestionNumber": "Q.12",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -4237,7 +5294,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_1689",
+                "nodeId": "node_p6_text_61",
                 "text": "Q.12",
                 "bbox": {
                   "x0": 86.81548340000002,
@@ -4252,7 +5309,7 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
+              "stemPreview": "Let",
               "totalIncludedPhysicalNodes": 184
             },
             "step3_candidateBoundary": {
@@ -4290,7 +5347,7 @@
           }
         },
         {
-          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_1873",
+          "questionCandidateId": "qb_doc_7823ad451ebd269f_node_p6_text_245",
           "physicalInstanceId": "inst_doc_7823ad451ebd269f_p6_y264_x87",
           "sourceQuestionNumber": "Q.13",
           "officialQuestionId": "UNAVAILABLE_IN_SOURCE",
@@ -4305,7 +5362,7 @@
             "step1_sourcePage": 6,
             "step2_documentGraphEvidence": {
               "numberNode": {
-                "nodeId": "node_p6_text_1873",
+                "nodeId": "node_p6_text_245",
                 "text": "Q.13",
                 "bbox": {
                   "x0": 86.81694619999996,
@@ -4320,7 +5377,7 @@
                 }
               },
               "stemNodeCount": 1,
-              "stemPreview": " ",
+              "stemPreview": "Let",
               "totalIncludedPhysicalNodes": 74
             },
             "step3_candidateBoundary": {

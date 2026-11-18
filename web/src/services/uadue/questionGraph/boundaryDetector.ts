@@ -63,14 +63,25 @@ export class BoundaryDetector {
     let currentBodyNodeIds: string[] = [];
     let currentIncludedNodeIds: string[] = [];
     let currentEvidence: SegmentationEvidence[] = [];
+    let previousDetectedNumber: number | undefined = undefined;
+    let currentHasCompletedOptions = false;
 
     const flushCurrentQuestion = (endNode: DocumentGraphNode) => {
       if (!currentStartNode || currentIncludedNodeIds.length === 0) return;
 
       const boundaryId = `qb_${graph.documentId}_${currentStartNode.nodeId}`;
-      const detectedNumber = currentTokenInfo?.detectedNumber;
-      const printedLabel = currentTokenInfo?.rawLabel;
-      const numberType = currentTokenInfo?.tokenType || 'UNKNOWN_NUMBER';
+      let detectedNumber = currentTokenInfo?.detectedNumber;
+      let printedLabel = currentTokenInfo?.rawLabel;
+      let numberType = currentTokenInfo?.tokenType || 'UNKNOWN_NUMBER';
+
+      if (detectedNumber === undefined && previousDetectedNumber !== undefined) {
+        detectedNumber = previousDetectedNumber + 1;
+        printedLabel = `${detectedNumber}.`;
+        numberType = 'QUESTION_NUMBER';
+      }
+      if (detectedNumber !== undefined) {
+        previousDetectedNumber = detectedNumber;
+      }
 
       // Physical instance identity: deterministic combination of document, coordinates, page
       const physicalInstanceId = `inst_${graph.sourceDocumentId}_p${currentStartNode.pageNumber}_y${Math.round(currentStartNode.bbox.y0)}_x${Math.round(currentStartNode.bbox.x0)}`;
@@ -114,6 +125,7 @@ export class BoundaryDetector {
       currentBodyNodeIds = [];
       currentIncludedNodeIds = [];
       currentEvidence = [];
+      currentHasCompletedOptions = false;
     };
 
     let previousNode: DocumentGraphNode | null = null;
@@ -140,7 +152,11 @@ export class BoundaryDetector {
         currentStartNode = node;
         currentNumberNode = node;
         currentTokenInfo = token;
+        if (token.detectedNumber !== undefined) {
+          previousDetectedNumber = token.detectedNumber;
+        }
         currentIncludedNodeIds.push(node.nodeId);
+        currentHasCompletedOptions = false;
 
         // If the number node also carries trailing stem text in the same run
         if ((node.textContent || '').trim().length > (token.rawLabel || '').trim().length) {
@@ -164,6 +180,90 @@ export class BoundaryDetector {
         });
       } else {
         if (currentStartNode) {
+          // Track option termination (e.g. option (d) or 4.)
+          const nodeText = (node.textContent || '').trim();
+          if (/\([dD]\)|^[dD][\.\)]|^4[\.\)]/.test(nodeText)) {
+            currentHasCompletedOptions = true;
+          }
+
+          // Enforce P0 Page Isolation: Flush question across page boundary unless verified continuation exists
+          if (previousNode && node.pageNumber !== previousNode.pageNumber) {
+            const hasCrossPage = graph.crossPageContinuations.some(
+              (c) => c.fromNodeId === previousNode!.nodeId && c.toNodeId === node.nodeId
+            );
+            if (!hasCrossPage) {
+              flushCurrentQuestion(previousNode);
+            }
+          }
+
+          // Enforce Column Isolation: Flush question when moving to next column if previous question finished its options
+          if (previousNode && node.pageNumber === previousNode.pageNumber) {
+            const pageCols = graph.columns.filter((c) => c.pageNumber === node.pageNumber);
+            if (pageCols.length > 1) {
+              const prevCol = pageCols.find((c) => {
+                const b = (c as any).bounds || (c as any).bbox;
+                const minX = b ? (b.minX ?? b.x0 ?? 0) : 0;
+                const maxX = b ? (b.maxX ?? b.x1 ?? 600) : 600;
+                return previousNode!.bbox.x0 >= minX - 10.0 && previousNode!.bbox.x0 <= maxX + 10.0;
+              });
+              const currCol = pageCols.find((c) => {
+                const b = (c as any).bounds || (c as any).bbox;
+                const minX = b ? (b.minX ?? b.x0 ?? 0) : 0;
+                const maxX = b ? (b.maxX ?? b.x1 ?? 600) : 600;
+                return node.bbox.x0 >= minX - 10.0 && node.bbox.x0 <= maxX + 10.0;
+              });
+              if (prevCol && currCol && currCol.columnIndex > prevCol.columnIndex) {
+                // If options were already completed, or if moving back up to top of column (y <= 120 pt)
+                if (currentHasCompletedOptions || node.bbox.y0 <= 100.0) {
+                  flushCurrentQuestion(previousNode);
+                }
+              }
+            }
+          }
+        }
+
+        // If no question is currently open:
+        // A question candidate can only start without a numeric anchor if it begins with an
+        // unambiguous question stimulus/statement directive (e.g. "Statement-I", "Consider the following", "कथन-I")
+        // and is NOT metadata, section header, instruction, or cover page.
+        if (!currentStartNode) {
+          const text = (node.textContent || '').trim();
+          const isStatementTrigger =
+            /(?:^(?:Statement\s*[-–:]?\s*[I1]|कथन\s*[-–:]?\s*[I1]|~-I:?)|consider\s+(?:the\s+)?following|निम्नलिखित\s+कथनों)/i.test(
+              text
+            );
+          const isNotMetadataOrHeader =
+            !/^(?:SECTION|PART|INSTRUCTIONS|DO\s+NOT\s+OPEN|Test\s+Booklet|Question\s+Paper)/i.test(text);
+
+          if (isStatementTrigger && isNotMetadataOrHeader) {
+            currentStartNode = node;
+            currentNumberNode = null;
+            currentTokenInfo = {
+              nodeId: node.nodeId,
+              rawLabel: text.slice(0, 10),
+              tokenType: 'UNKNOWN_NUMBER',
+              confidence: 0.85,
+              evidence: {
+                spatialLocationBasis: `Inferred start of question at (${node.bbox.x0.toFixed(1)}, ${node.bbox.y0.toFixed(1)}) pt`,
+                typographicBasis: 'Top-of-column statement sequence without explicit numeric anchor',
+                lexicalBasis: `Inferred question start: "${(node.textContent || '').slice(0, 30)}"`,
+              },
+            };
+            currentIncludedNodeIds.push(node.nodeId);
+            currentStemNodeIds.push(node.nodeId);
+            currentEvidence.push({
+              evidenceId: `ev_b_before_${node.nodeId}`,
+              evidenceType: 'BOUNDARY_BEFORE',
+              sourceGraphNodeIds: [node.nodeId],
+              confidence: 0.85,
+              decisionBasis: `Identified inferred question boundary from statement directive`,
+            });
+            previousNode = node;
+            continue;
+          }
+        }
+
+        if (currentStartNode) {
           // Accumulate into current question
           currentIncludedNodeIds.push(node.nodeId);
 
@@ -175,8 +275,12 @@ export class BoundaryDetector {
             }
           }
 
-          // Check if this node is part of the stem (first few text nodes after number)
-          if (currentStemNodeIds.length === 0 && (node.nodeType === 'TEXT_RUN' || node.nodeType === 'GLYPH_RUN')) {
+          // Check if this node is part of the stem (first text node after number)
+          if (
+            currentStemNodeIds.length === 0 &&
+            (node.nodeType === 'TEXT_RUN' || node.nodeType === 'GLYPH_RUN') &&
+            (node.textContent || '').trim().length > 0
+          ) {
             currentStemNodeIds.push(node.nodeId);
           } else {
             currentBodyNodeIds.push(node.nodeId);

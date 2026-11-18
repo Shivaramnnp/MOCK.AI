@@ -271,11 +271,11 @@
       "questionNumber": 3,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+      "questionText": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "𝑝 (𝑝 𝑞 -1). Then, 𝑝 𝑝 𝑞= 𝑝 _{𝑞} \\ne 1 , ( 𝑞) For positive integers 𝑝 and 𝑞, with",
+          "content": "For positive integers 𝑝 and 𝑞, with <u>𝑝</u> <u>𝑝</u> _{𝑞} \\ne 1 , ( <u>𝑝</u> <u>𝑝</u> _{𝑞}) <u>𝑝</u> For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 Then, <u>𝑝</u> <u>𝑝</u> (𝑝 For positive integers 𝑝 and 𝑞, with <u>𝑝</u> , ( <u>𝑝</u> 𝑞= 𝑝 𝑞 -1). Then,",
           "confidence": "VERIFIED"
         }
       ],
@@ -285,41 +285,43 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "𝑞𝑝= 𝑝𝑞",
-        "𝑞𝑝= 𝑝2𝑞",
+        "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
+        "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
         "\\sqrt 𝑞= \\sqrt 𝑝",
-        "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝"
+        "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "𝑞𝑝= 𝑝𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
           "id": "B",
-          "text": "𝑞𝑝= 𝑝2𝑞",
+          "text": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "text",
-              "content": "𝑞𝑝= 𝑝2𝑞",
+              "type": "math",
+              "latex": "𝑞^{𝑝}= 𝑝^{2𝑞}",
+              "content": "\\(𝑞^{𝑝}= 𝑝^{2𝑞}\\)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "text"
+            "math"
           ]
         },
         {
@@ -339,12 +341,12 @@
         },
         {
           "id": "D",
-          "text": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+          "text": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "\\sqrt 𝑞\n𝑝\n= \\sqrt 𝑝",
+              "content": "𝑝 \\sqrt 𝑞 = \\sqrt 𝑝 𝑞",
               "confidence": "VERIFIED"
             }
           ],
@@ -489,11 +491,11 @@
       "questionNumber": 5,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+      "questionText": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "On a given day, how many times will the second-hand and the minute-hand of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
+          "content": "On a given day, how many times will the second-h and and the minute-h and of a clock cross each other during the clock time 12:05:00 hours to 12:55:00 hours?",
           "confidence": "VERIFIED"
         }
       ],
@@ -612,21 +614,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
-        "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
-        "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
-        "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots"
+        "(i) hold (ii) waits (iii) culminates (iv) pivot",
+        "(i) holds (ii) wait (iii) culminates (iv) pivot",
+        "(i) hold (ii) wait (iii) culminate (iv) pivots",
+        "(i) holds (ii) waits (iii) culminate (iv) pivots"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+          "text": "(i) hold (ii) waits (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) waits\n(iii) culminates\n(iv) pivot",
+              "content": "(i) hold (ii) waits (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -636,12 +638,12 @@
         },
         {
           "id": "B",
-          "text": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+          "text": "(i) holds (ii) wait (iii) culminates (iv) pivot",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) wait\n(iii) culminates\n(iv) pivot",
+              "content": "(i) holds (ii) wait (iii) culminates (iv) pivot",
               "confidence": "VERIFIED"
             }
           ],
@@ -651,12 +653,12 @@
         },
         {
           "id": "C",
-          "text": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+          "text": "(i) hold (ii) wait (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) hold\n(ii) wait\n(iii) culminate\n(iv) pivots",
+              "content": "(i) hold (ii) wait (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -666,12 +668,12 @@
         },
         {
           "id": "D",
-          "text": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+          "text": "(i) holds (ii) waits (iii) culminate (iv) pivots",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(i) holds\n(ii) waits\n(iii) culminate\n(iv) pivots",
+              "content": "(i) holds (ii) waits (iii) culminate (iv) pivots",
               "confidence": "VERIFIED"
             }
           ],
@@ -816,11 +818,11 @@
       "questionNumber": 8,
       "sectionId": "ga",
       "sectionName": "General Aptitude",
-      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+      "questionText": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, T1, T2, T3, and T4, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nInstalled Capacity Electricity Generation 14000 70 13000 65 12000 60 Electricity Generation (MWh) 11000 55 Installed Capacity (MW) 10000 50 9000 45 8000 40 7000 35 6000 30 5000 25 4000 20 3000 15 2000 10 1000 5 0 0 T1 T2 T3 T4 Power Generation Technology The Capacity Factor of a power generation technology is:\n\nElectricity Generation (MWh) Installed Capacity (MW) \\times 1000 (h) Capacity Factor =\n\nWhich one of the given technologies has the highest Capacity Factor?",
+          "content": "The chart given below compares the Installed Capacity (MW) of four power generation technologies, _{T1}, _{T2}, _{T3}, and _{T4}, and their Electricity Generation (MWh) in a time of 1000 hours (h).\n\nThe Capacity Factor of a power generation technology is:\n\nCapacity Factor = \\(\\frac{ElectricityGeneration(MWh)}{InstalledCapacity(MW) \\times 1000(h)}\\)\n\nWhich one of the given technologies has the highest Capacity Factor?",
           "confidence": "VERIFIED"
         },
         {
@@ -2553,11 +2555,11 @@
       "questionNumber": 24,
       "sectionId": "gg_common",
       "sectionName": "Part A: Common (Geology and Geophysics)",
-      "questionText": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in W/m^{3}is ___________ (in integer).",
+      "questionText": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in \\(\\mu\\)W/m^{3}is ___________ (in integer).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in W/m^{3}is ___________ (in integer).",
+          "content": "Assume heat producing elements are uniformly distributed within a 16 km thick layer in the crust in a heat flow province. Given that the surface heat flow and reduced heat flow are 54 mW/m^{2} and 22 mW/m^{2}, respectively, the radiogenic heat production in the given crustal layer in \\(\\mu\\)W/m^{3}is ___________ (in integer).",
           "confidence": "VERIFIED"
         }
       ],
@@ -4358,11 +4360,11 @@
       "questionNumber": 42,
       "sectionId": "gg1_core",
       "sectionName": "Part B: Section 1 (Geology)",
-      "questionText": "Consider the solubility product of barite (BaSO_{4}) at 25 C and 1 bar to be 10^{-10}. ^{2-} ions are 0.5 \\times 10^{-5} and 10^{-𝑋}, respectively, then If the activities of Ba^{2+} and SO_{4} the absolute value of '𝑋' is ________ (rounded off to one decimal place).",
+      "questionText": "Consider the solubility product of barite (BaSO_{4}) at 25 C and 1 bar to be 10^{-10}. If the activities of Ba^{2+} and SO_{4} the absolute value of '𝑋' is ________ (rounded off to one decimal place). ^{2-} ions are 0.5 \\times 10^{-5} and 10^{-𝑋}, respectively, then",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Consider the solubility product of barite (BaSO_{4}) at 25 C and 1 bar to be 10^{-10}. ^{2-} ions are 0.5 \\times 10^{-5} and 10^{-𝑋}, respectively, then If the activities of Ba^{2+} and SO_{4} the absolute value of '𝑋' is ________ (rounded off to one decimal place).",
+          "content": "Consider the solubility product of barite (BaSO_{4}) at 25 C and 1 bar to be 10^{-10}. If the activities of Ba^{2+} and SO_{4} the absolute value of '𝑋' is ________ (rounded off to one decimal place). ^{2-} ions are 0.5 \\times 10^{-5} and 10^{-𝑋}, respectively, then",
           "confidence": "VERIFIED"
         }
       ],
@@ -4954,21 +4956,21 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "Muscovite + Quartz = Sillimanite + K-feldspar + H2O",
-        "Staurolite + Quartz = Garnet + Sillimanite + H2O",
-        "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + H2O",
+        "Muscovite + Quartz = Sillimanite + K-feldspar + \\(H_{2}\\)O",
+        "Staurolite + Quartz = Garnet + Sillimanite + \\(H_{2}\\)O",
+        "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + \\(H_{2}\\)O",
         "Kyanite = Sillimanite"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "Muscovite + Quartz = Sillimanite + K-feldspar + H2O",
+          "text": "Muscovite + Quartz = Sillimanite + K-feldspar + \\(H_{2}\\)O",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Muscovite + Quartz = Sillimanite + K-feldspar + H2O",
+              "content": "Muscovite + Quartz = Sillimanite + K-feldspar + \\(H_{2}\\)O",
               "confidence": "VERIFIED"
             }
           ],
@@ -4978,12 +4980,12 @@
         },
         {
           "id": "B",
-          "text": "Staurolite + Quartz = Garnet + Sillimanite + H2O",
+          "text": "Staurolite + Quartz = Garnet + Sillimanite + \\(H_{2}\\)O",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Staurolite + Quartz = Garnet + Sillimanite + H2O",
+              "content": "Staurolite + Quartz = Garnet + Sillimanite + \\(H_{2}\\)O",
               "confidence": "VERIFIED"
             }
           ],
@@ -4993,12 +4995,12 @@
         },
         {
           "id": "C",
-          "text": "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + H2O",
+          "text": "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + \\(H_{2}\\)O",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + H2O",
+              "content": "Staurolite + Muscovite + Quartz = Garnet + Biotite + Sillimanite + \\(H_{2}\\)O",
               "confidence": "VERIFIED"
             }
           ],
@@ -5275,11 +5277,11 @@
       "questionNumber": 52,
       "sectionId": "gg1_core",
       "sectionName": "Part B: Section 1 (Geology)",
-      "questionText": "If 'X' represents the initial composition of a melt, which one of the trends indicated by arrows in the schematic diagram corresponds to the evolution of the residual melt composition during crystallization of diopside?",
+      "questionText": ". If 'X' represents the initial composition of a melt, which one of the trends indicated by arrows in the schematic diagram corresponds to the evolution of the residual melt composition during crystallization of diopside?",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 'X' represents the initial composition of a melt, which one of the trends indicated by arrows in the schematic diagram corresponds to the evolution of the residual melt composition during crystallization of diopside?",
+          "content": ". If 'X' represents the initial composition of a melt, which one of the trends indicated by arrows in the schematic diagram corresponds to the evolution of the residual melt composition during crystallization of diopside?",
           "confidence": "VERIFIED"
         },
         {
@@ -5392,11 +5394,11 @@
       "questionNumber": 53,
       "sectionId": "gg1_core",
       "sectionName": "Part B: Section 1 (Geology)",
-      "questionText": "Match the following copper deposits in Group-I with their host rocks in Group-II.\n\nGroup-I Group-II\n\nP. Khetri Chlorite-biotite schist and soda-granite\n\nQ. Mosabani Garnetiferous chlorite schist\n\nR. Malanjkhand Metachert\n\nS. Kalyadi Tonalite-granodiorite-granite",
+      "questionText": "Match the following copper deposits in Group-I with their host rocks in Group-II.\n\nGroup-I Group-II\n\nP. Khetri Chlorite-biotite schist and soda-granite\n\nQ. Mosabani Garnetiferous chlorite schist\n\nR. Malanjkh and Metachert\n\nS. Kalyadi Tonalite-granodiorite-granite",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Match the following copper deposits in Group-I with their host rocks in Group-II.\n\nGroup-I Group-II\n\nP. Khetri Chlorite-biotite schist and soda-granite\n\nQ. Mosabani Garnetiferous chlorite schist\n\nR. Malanjkhand Metachert\n\nS. Kalyadi Tonalite-granodiorite-granite",
+          "content": "Match the following copper deposits in Group-I with their host rocks in Group-II.\n\nGroup-I Group-II\n\nP. Khetri Chlorite-biotite schist and soda-granite\n\nQ. Mosabani Garnetiferous chlorite schist\n\nR. Malanjkh and Metachert\n\nS. Kalyadi Tonalite-granodiorite-granite",
           "confidence": "VERIFIED"
         }
       ],
@@ -5736,7 +5738,7 @@
         "Both replacement and exhalative ores are possible in SEDEX type deposits",
         "Rampura-Agucha Pb-Zn deposit is a Mississippi Valley Type deposit",
         "Orogenic gold deposit is an epigenetic type deposit",
-        "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu-\n(Mo) deposits"
+        "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu- (Mo) deposits"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5787,12 +5789,12 @@
         },
         {
           "id": "D",
-          "text": "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu-\n(Mo) deposits",
+          "text": "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu- (Mo) deposits",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu-\n(Mo) deposits",
+              "content": "Fluid boiling in the early stage of magmatic crystallization is responsible for Cu- (Mo) deposits",
               "confidence": "VERIFIED"
             }
           ],
@@ -6189,24 +6191,18 @@
           "type": "text",
           "content": "The diagram given below shows phase relations between components P and Q at 1 bar pressure. If 'X' represents the initial liquid composition, which of the following statements is/are CORRECT during equilibrium crystallization?",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2024/gg-1/q60_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
       "questionType": "MSQ",
       "options": [
         "Initial liquid composition is 60 wt.% of P and 40 wt.% of Q",
-        "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P\nand 90 wt.% of Q",
+        "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P and 90 wt.% of Q",
         "The bulk composition of the final solid product is 40 wt.% of P and 60 wt.% of Q",
-        "The proportion (on the basis of wt.%) of two phases, MSS : NSS is 1 : 2 at 750 C"
+        "The proportion (on the basis of wt.%) of two phases, \\(M_{SS}\\): \\(N_{SS}\\) is 1 : 2 at 750 C"
       ],
       "optionImages": null,
       "richOptions": [
@@ -6227,12 +6223,12 @@
         },
         {
           "id": "B",
-          "text": "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P\nand 90 wt.% of Q",
+          "text": "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P and 90 wt.% of Q",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P\nand 90 wt.% of Q",
+              "content": "The composition of the solid in equilibrium with the liquid at 'Y' is 10 wt.% of P and 90 wt.% of Q",
               "confidence": "VERIFIED"
             }
           ],
@@ -6257,12 +6253,12 @@
         },
         {
           "id": "D",
-          "text": "The proportion (on the basis of wt.%) of two phases, MSS : NSS is 1 : 2 at 750 C",
+          "text": "The proportion (on the basis of wt.%) of two phases, \\(M_{SS}\\): \\(N_{SS}\\) is 1 : 2 at 750 C",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "The proportion (on the basis of wt.%) of two phases, MSS : NSS is 1 : 2 at 750 C",
+              "content": "The proportion (on the basis of wt.%) of two phases, \\(M_{SS}\\): \\(N_{SS}\\) is 1 : 2 at 750 C",
               "confidence": "VERIFIED"
             }
           ],
@@ -6288,10 +6284,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IISc Bengaluru for this MSQ is B;C;D.",
-      "diagramUrl": "/exam-assets/gate/2024/gg-1/q60_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2024/gg-1/q60_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -6542,11 +6536,11 @@
       "questionNumber": 63,
       "sectionId": "gg1_core",
       "sectionName": "Part B: Section 1 (Geology)",
-      "questionText": "The in situ stress at a point in a dry sandstone terrain is as follows: _{1} = 12 MPa and _{3} = 4 MPa. The pore water pressure (𝑝_{𝑤}) increases by the construction of a ′ = 3.48 MPa + 33 reservoir. The failure criterion of the sandstone is given by _{1} ′, where _{1} ′ and 3 ′ are the effective maximum and minimum principal stresses, respectively. Assuming that the failure occurs at peak stress, the minimum value of 𝑝_{𝑤} (in MPa) that will cause the sandstone to fail in situ is __________ (rounded off to two decimal places).",
+      "questionText": "The in situ stress at a point in a dry sandstone terrain is as follows: \\(\\sigma\\)_{1} = 12 MPa and \\(\\sigma\\)_{3} = 4 MPa. The pore water pressure (𝑝_{𝑤}) increases by the construction of a reservoir. The failure criterion of the sandstone is given by \\(\\sigma\\)_{1} where \\(\\sigma\\)_{1} respectively. Assuming that the failure occurs at peak stress, the minimum value of ^{′} and \\(\\sigma\\)_{3} ^{′} are the effective maximum and minimum principal stresses, ^{′} = 3.48 MPa + 3\\(\\sigma\\)_{3} ^{′},\n\n𝑝_{𝑤} (in MPa) that will cause the sandstone to fail in situ is __________ (rounded off to two decimal places).",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "The in situ stress at a point in a dry sandstone terrain is as follows: _{1} = 12 MPa and _{3} = 4 MPa. The pore water pressure (𝑝_{𝑤}) increases by the construction of a ′ = 3.48 MPa + 33 reservoir. The failure criterion of the sandstone is given by _{1} ′, where _{1} ′ and 3 ′ are the effective maximum and minimum principal stresses, respectively. Assuming that the failure occurs at peak stress, the minimum value of 𝑝_{𝑤} (in MPa) that will cause the sandstone to fail in situ is __________ (rounded off to two decimal places).",
+          "content": "The in situ stress at a point in a dry sandstone terrain is as follows: \\(\\sigma\\)_{1} = 12 MPa and \\(\\sigma\\)_{3} = 4 MPa. The pore water pressure (𝑝_{𝑤}) increases by the construction of a reservoir. The failure criterion of the sandstone is given by \\(\\sigma\\)_{1} where \\(\\sigma\\)_{1} respectively. Assuming that the failure occurs at peak stress, the minimum value of ^{′} and \\(\\sigma\\)_{3} ^{′} are the effective maximum and minimum principal stresses, ^{′} = 3.48 MPa + 3\\(\\sigma\\)_{3} ^{′},\n\n𝑝_{𝑤} (in MPa) that will cause the sandstone to fail in situ is __________ (rounded off to two decimal places).",
           "confidence": "VERIFIED"
         }
       ],
@@ -6588,11 +6582,11 @@
       "questionNumber": 64,
       "sectionId": "gg1_core",
       "sectionName": "Part B: Section 1 (Geology)",
-      "questionText": "If the Rb-Sr isochron formed by a suite of gabbro samples has a slope of 0.0265, then the calculated age of the gabbro in million years is _________ (in integer).\n\n87 ) = 1.42 \\times 10-11 year-1] [Use λ( Rb",
+      "questionText": "If the Rb-Sr isochron formed by a suite of gabbro samples has a slope of 0.0265, then the calculated age of the gabbro in million years is _________ (in integer).\n\n[Use λ( 87 Rb ) = 1.42 \\times 10^{-11} year^{-1}]",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If the Rb-Sr isochron formed by a suite of gabbro samples has a slope of 0.0265, then the calculated age of the gabbro in million years is _________ (in integer).\n\n87 ) = 1.42 \\times 10-11 year-1] [Use λ( Rb",
+          "content": "If the Rb-Sr isochron formed by a suite of gabbro samples has a slope of 0.0265, then the calculated age of the gabbro in million years is _________ (in integer).\n\n[Use λ( 87 Rb ) = 1.42 \\times 10^{-11} year^{-1}]",
           "confidence": "VERIFIED"
         }
       ],

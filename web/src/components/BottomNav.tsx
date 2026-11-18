@@ -1,19 +1,21 @@
 import React from 'react';
-import { Home, School, LineChart, Compass, MessageSquare } from 'lucide-react';
+import { Home, School, LineChart, Compass, MessageSquare, ShieldCheck } from 'lucide-react';
 import { AppRoute } from '../types';
 
 interface BottomNavProps {
   currentRoute: AppRoute;
   onNavigate: (route: AppRoute) => void;
+  isStaff?: boolean;
 }
 
-export const BottomNav: React.FC<BottomNavProps> = ({ currentRoute, onNavigate }) => {
+export const BottomNav: React.FC<BottomNavProps> = ({ currentRoute, onNavigate, isStaff = false }) => {
   const items: { label: string; route: AppRoute; icon: React.ComponentType<{ className?: string }> }[] = [
     { label: 'Home', route: 'home', icon: Home },
     { label: 'Explore', route: 'explore', icon: Compass },
     { label: 'Community', route: 'community', icon: MessageSquare },
     { label: 'Classroom', route: 'classroom', icon: School },
     { label: 'Analytics', route: 'analytics', icon: LineChart },
+    ...(isStaff ? [{ label: 'Staff', route: 'staff' as AppRoute, icon: ShieldCheck }] : []),
   ];
 
   return (
@@ -24,7 +26,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentRoute, onNavigate }
           const isSelected =
             currentRoute === item.route ||
             (item.route === 'explore' &&
-              (currentRoute === 'explore_exam' || currentRoute === 'exam_results'));
+              (currentRoute === 'explore_exam' || currentRoute === 'exam_results' || currentRoute === 'topic_practice'));
 
           return (
             <button

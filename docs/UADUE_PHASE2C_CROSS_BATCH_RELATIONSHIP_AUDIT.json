@@ -1,0 +1,116 @@
+{
+  "$schema": "uadue_cross_batch_relationship_audit_v1",
+  "auditMetadata": {
+    "engine": "Universal Assessment Document Understanding Engine (UADUE)",
+    "layer": "Layer 3 — Cross-Batch Identity Relationships",
+    "timestamp": "2026-10-07T12:30:00.000Z",
+    "status": "PASS",
+    "phase2dGateBlocked": true
+  },
+  "crossBatchSpreadReconciliation": {
+    "scenario": "Verso Page 2 in Partition 0, Recto Page 3 in Partition 1",
+    "testedExam": "REAL-UPSC-CSE-PRELIMS-2023-GS1",
+    "reconciledPairs": [
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_1_qb_doc_14281f205282431f_node_p3_text_1",
+        "questionNumber": 1,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_14_qb_doc_14281f205282431f_node_p3_text_14",
+        "questionNumber": 2,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_27_qb_doc_14281f205282431f_node_p3_text_27",
+        "questionNumber": 3,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_40_qb_doc_14281f205282431f_node_p3_text_40",
+        "questionNumber": 4,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_53_qb_doc_14281f205282431f_node_p3_text_53",
+        "questionNumber": 5,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_66_qb_doc_14281f205282431f_node_p3_text_66",
+        "questionNumber": 6,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      },
+      {
+        "relationshipId": "rel_qb_doc_14281f205282431f_node_p2_text_79_qb_doc_14281f205282431f_node_p3_text_79",
+        "questionNumber": 7,
+        "sourcePartition": "P0 (Page 2)",
+        "targetPartition": "P1 (Page 3)",
+        "relationshipType": "LANGUAGE_REPRESENTATION_OF",
+        "evidenceList": [
+          "FACING_PAGE_SPREAD_PAIR",
+          "MATCHING_PRINTED_NUMERAL",
+          "IDENTICAL_OPTION_CARDINALITY"
+        ],
+        "confidenceScore": 0.98,
+        "verificationStatus": "RELATIONSHIP_PROVEN"
+      }
+    ],
+    "falsePositiveCrossLinksCount": 0,
+    "crossBatchIntegrityVerdict": "100%_PASS"
+  }
+}

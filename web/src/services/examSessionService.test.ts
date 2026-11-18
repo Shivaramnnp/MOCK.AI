@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ExamSessionService, isRemoteUser } from './examSessionService';
 import { ExamService } from './examService';

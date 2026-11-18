@@ -400,7 +400,7 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+        "(5 3 \\(\\frac{𝑛}{2}\\)",
         "(5 3) 𝑛",
         "(5 3) 2𝑛",
         "(5 3) 𝑛(2𝑛-1)"
@@ -409,12 +409,12 @@
       "richOptions": [
         {
           "id": "A",
-          "text": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+          "text": "(5 3 \\(\\frac{𝑛}{2}\\)",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "(5 3 \\(\\frac{𝑛}{3)2}\\)",
+              "content": "(5 3 \\(\\frac{𝑛}{2}\\)",
               "confidence": "VERIFIED"
             }
           ],
@@ -511,37 +511,72 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "",
-        "",
-        "(1,0) (-1,0) x",
-        ""
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (0,1) x (0, -1)",
+        "f(x) (1,0) (-1,0) x",
+        "f(x) (0,1) x (0, -1)"
       ],
-      "optionImages": [
-        "/exam-assets/gate/2025/xh-c1/q5_opt_a.png",
-        "/exam-assets/gate/2025/xh-c1/q5_opt_b.png",
-        "/exam-assets/gate/2025/xh-c1/q5_opt_c.png",
-        "/exam-assets/gate/2025/xh-c1/q5_opt_d.png"
-      ],
+      "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_a.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_b.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "C",
-          "text": "(1,0) (-1,0) x",
-          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_c.png"
+          "text": "f(x) (1,0) (-1,0) x",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (1,0) (-1,0) x",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/exam-assets/gate/2025/xh-c1/q5_opt_d.png"
+          "text": "f(x) (0,1) x (0, -1)",
+          "imageUrl": null,
+          "contentBlocks": [
+            {
+              "type": "text",
+              "content": "f(x) (0,1) x (0, -1)",
+              "confidence": "VERIFIED"
+            }
+          ],
+          "contentTypes": [
+            "text"
+          ]
         }
       ],
       "correctAnswer": "A",
@@ -2640,7 +2675,7 @@
       "questionType": "MSQ",
       "options": [
         "There is no proof that India is affected by poor quality of water.",
-        "few European countries are suffering due to occurrence of drought.",
+        "A few European countries are suffering due to occurrence of drought.",
         "Lack of access to water can lead to social unrest.",
         "Intense shortage of water is visible in some states of India."
       ],
@@ -2663,12 +2698,12 @@
         },
         {
           "id": "B",
-          "text": "few European countries are suffering due to occurrence of drought.",
+          "text": "A few European countries are suffering due to occurrence of drought.",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "few European countries are suffering due to occurrence of drought.",
+              "content": "A few European countries are suffering due to occurrence of drought.",
               "confidence": "VERIFIED"
             }
           ],
@@ -4087,8 +4122,8 @@
       "options": [
         "The CES utility function is homothetic but the QL utility function is non- homothetic.",
         "For 𝛿= 1, the CES utility function is not strictly convex.",
-        "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
-        "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)"
+        "The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.",
+        "If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions."
       ],
       "optionImages": null,
       "richOptions": [
@@ -4124,34 +4159,32 @@
         },
         {
           "id": "C",
-          "text": "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
+          "text": "The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.",
-              "content": "\\(The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.\\)",
+              "type": "text",
+              "content": "The Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) for the CES utility function and the QL utility function are dependent on both 𝑧_{1} and 𝑧_{2}.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "D",
-          "text": "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)",
+          "text": "If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.",
-              "content": "\\(If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.\\)",
+              "type": "text",
+              "content": "If 𝑧_{1} = 𝑧_{2}, the Marginal Rate of Substitution (𝑀𝑅𝑆_{𝑧1𝑧2}) is 2 for both the CES and the QL utility functions.",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -4312,11 +4345,11 @@
       "questionNumber": 41,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { \\(\\frac{1}{{𝑥2}\\) for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
+      "questionText": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { 𝑥^{2} <u>1</u> for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { \\(\\frac{1}{{𝑥2}\\) for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
+          "content": "If 𝑋 is a continuous random variable whose probability density function is given by\n\n𝑓_{𝑋}(𝑥) = { 𝑥^{2} <u>1</u> for 1 < 𝑥< \\infty\n\n0 elsewhere\n\nThen the median of 𝑋 is _____________ (in integer)",
           "confidence": "VERIFIED"
         }
       ],
@@ -4502,15 +4535,9 @@
           "type": "text",
           "content": "Consider a three-firms oligopoly market with a linear dem and function given by\n\n𝑃= 25 -𝑄\n\nwhere 𝑃 is the unit price and 𝑄 is the total quantity supplied. The total quantity 𝑄= (𝑞_{1} + 𝑞_{2} + 𝑞_{3}), where 𝑞_{𝑖} is the output from the 𝑖^{th} firm with 𝑖= 1,2,3.\n\nThe total cost (𝑇𝐶) curve of firm 𝑖 is given by 𝑇𝐶_{𝑖}= (𝛼_{𝑖}+ 5𝑞_{𝑖}) , where 𝛼_{𝑖}'s are positive real numbers.\n\nAssuming a Cournot solution exists, the value of 𝑄 is",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/xh-c1/q45_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -4593,10 +4620,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee is Option (B).",
-      "diagramUrl": "/exam-assets/gate/2025/xh-c1/q45_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/xh-c1/q45_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.66,
       "examId": "gate",
@@ -4981,59 +5006,56 @@
       "confidence": "VERIFIED",
       "questionType": "MCQ",
       "options": [
-        "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
-        "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
-        "\\(𝑅^{2} is any positive real number greater than 1\\)",
+        "𝑅^{2} can be any real number in (0, 0.5]",
+        "𝑅^{2} can be any real number in (0.5, 1)",
+        "𝑅^{2} is any positive real number greater than 1",
         "\\(𝑅^{2} = 0\\)"
       ],
       "optionImages": null,
       "richOptions": [
         {
           "id": "A",
-          "text": "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
+          "text": "𝑅^{2} can be any real number in (0, 0.5]",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑅^{2} can be any real number in (0, 0.5]",
-              "content": "\\(𝑅^{2} can be any real number in (0, 0.5]\\)",
+              "type": "text",
+              "content": "𝑅^{2} can be any real number in (0, 0.5]",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "B",
-          "text": "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
+          "text": "𝑅^{2} can be any real number in (0.5, 1)",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑅^{2} can be any real number in (0.5, 1)",
-              "content": "\\(𝑅^{2} can be any real number in (0.5, 1)\\)",
+              "type": "text",
+              "content": "𝑅^{2} can be any real number in (0.5, 1)",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
           "id": "C",
-          "text": "\\(𝑅^{2} is any positive real number greater than 1\\)",
+          "text": "𝑅^{2} is any positive real number greater than 1",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "𝑅^{2} is any positive real number greater than 1",
-              "content": "\\(𝑅^{2} is any positive real number greater than 1\\)",
+              "type": "text",
+              "content": "𝑅^{2} is any positive real number greater than 1",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         },
         {
@@ -5207,7 +5229,7 @@
         "The short-run marginal cost is \\(\\frac{6𝑞}{𝐾̅}\\)",
         "The short-run average variable cost is \\(\\frac{3𝑞}{𝐾̅}\\)",
         "To produce 10 units of the output, required 𝐿 is \\(\\frac{25}{𝐾̅}\\)",
-        "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)"
+        "For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5258,18 +5280,17 @@
         },
         {
           "id": "D",
-          "text": "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)",
+          "text": "For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}",
           "imageUrl": null,
           "contentBlocks": [
             {
-              "type": "math",
-              "latex": "For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}",
-              "content": "\\(For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}\\)",
+              "type": "text",
+              "content": "For 𝐾̅ = 3 and 𝑟= 4, the total cost is 12 + 3𝑞^{2}",
               "confidence": "VERIFIED"
             }
           ],
           "contentTypes": [
-            "math"
+            "text"
           ]
         }
       ],
@@ -5314,15 +5335,9 @@
           "type": "text",
           "content": "A simple Keynesian open economy model is given by\n\n𝑆+ 𝑇+ 𝑀= 𝐺+ 𝐼+ 𝑋\n\nwhere 𝑆, 𝐼, 𝐺, 𝑇, 𝑋, and 𝑀 stands for saving, investment, government expenditure, taxes, exports and imports, respectively.\n\nIf the country has trade surplus, which strategy/strategies among the following will reduce the trade imbalance?",
           "confidence": "VERIFIED"
-        },
-        {
-          "type": "diagram",
-          "assetUrl": "/exam-assets/gate/2025/xh-c1/q52_diag.png",
-          "confidence": "VERIFIED"
         }
       ],
       "contentTypes": [
-        "diagram",
         "text"
       ],
       "confidence": "VERIFIED",
@@ -5411,10 +5426,8 @@
       "answerRanges": null,
       "isMta": false,
       "explanation": "The official answer key provided by IIT Roorkee for this MSQ is A;B.",
-      "diagramUrl": "/exam-assets/gate/2025/xh-c1/q52_diag.png",
-      "diagramUrls": [
-        "/exam-assets/gate/2025/xh-c1/q52_diag.png"
-      ],
+      "diagramUrl": null,
+      "diagramUrls": null,
       "marks": 2.0,
       "negativeMarks": 0.0,
       "examId": "gate",
@@ -5698,9 +5711,9 @@
       "questionType": "MSQ",
       "options": [
         "High workforce participation in agriculture",
-        "predominant formal sector employment",
+        "A predominant formal sector employment",
         "Increasing Gig and contractual employment",
-        "dual structure comprising organised and unorganised sector"
+        "A dual structure comprising organised and unorganised sector"
       ],
       "optionImages": null,
       "richOptions": [
@@ -5721,12 +5734,12 @@
         },
         {
           "id": "B",
-          "text": "predominant formal sector employment",
+          "text": "A predominant formal sector employment",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "predominant formal sector employment",
+              "content": "A predominant formal sector employment",
               "confidence": "VERIFIED"
             }
           ],
@@ -5751,12 +5764,12 @@
         },
         {
           "id": "D",
-          "text": "dual structure comprising organised and unorganised sector",
+          "text": "A dual structure comprising organised and unorganised sector",
           "imageUrl": null,
           "contentBlocks": [
             {
               "type": "text",
-              "content": "dual structure comprising organised and unorganised sector",
+              "content": "A dual structure comprising organised and unorganised sector",
               "confidence": "VERIFIED"
             }
           ],
@@ -6007,11 +6020,11 @@
       "questionNumber": 59,
       "sectionId": "xh_c1",
       "sectionName": "Section C1: Economics",
-      "questionText": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅place}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
+      "questionText": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
       "contentBlocks": [
         {
           "type": "text",
-          "content": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅place}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
+          "content": "Let 𝑌 be income, 𝑟 be interest rate, G be government expenditure and 𝑀^{𝑠} be money supply.\n\nConsider the following closed economy IS-LM equations with fixed general price level (𝑃̅)\n\nIS equation:\n\n𝑌= 490 + 0.6 𝑌-4 𝑟+ 𝐺\n\nLM equation:\n\n\\(\\frac{𝑀𝑠}{𝑃̅}\\) ̅ = 20 + 0.25 𝑌-10 𝑟\n\nIf 𝐺 is 330 and \\(\\frac{𝑀𝑠}{𝑃̅}\\) is 500, then the equilibrium 𝑌 is _____________ (round off to one decimal place",
           "confidence": "VERIFIED"
         }
       ],
